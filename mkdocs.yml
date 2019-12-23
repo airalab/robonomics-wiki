@@ -42,6 +42,8 @@ nav:
 theme:
   name: 'material'
   favicon: 'img/favicon.ico'
+repo_url: 'https://github.com/airalab/robonomics-wiki'
+repo_name: 'airalab/robonomics-wiki'
 markdown_extensions:
   - codehilite:
       guess_lang: false
