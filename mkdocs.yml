@@ -1,10 +1,14 @@
 site_name: Robonomics
 nav:
   - "Getting Started": index.md
+  - "R&D based on Robonomics Network": r_and_d.md
+  - "Community": community.md
   - "Try it out":
-    - "Get Open Data from Sensor": try_it_out/get_open_data_from_sensor.md
+    - "AIRA Installation on VirtualBox": try_it_out/aira_installation.md
+    - "Robonomics DApp Overview": try_it_out/robonomics_dapp_overview.md
+    - "Get Weather on Fuji Mountain": try_it_out/get_weather_on_fuji_mountain.md
   - Cases:
-    - "Connect SEN0233 Sensor to Robonomics": cases/connect_sen0233_to_robonomics.md
+    - "Open Sensor Network Run by IPFS": cases/open_sensor_network_run_by_ipfs.md
   - Learn:
     - "AIRA":
       - Overview: aira/overview.md
