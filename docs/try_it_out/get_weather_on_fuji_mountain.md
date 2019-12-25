@@ -4,7 +4,7 @@ Let's start from a quick example of what Robonomics is able to do within 5 minut
 
 > Requirements: [Metamask extension](https://metamask.io/)
 
-Open <a href="https://dapp.robonomics.network/#/sensors/airalab/QmWjvXGfVUDBNR15BBH5ERGP3SzEKbeLZWx7Fcp4kwwaw9/0xc705CcCEd9035A5a93B0a47173521ece6d8C1772/" target="_blank">sensor demo</a> website and follow instructions below
+Open <a href="https://dapp.robonomics.network/#/sensors/airalab/QmbQT8cj9TJKfYVaidfShnrEX1g14yTC9bdG1XbcRX73wY/0x4D8a26e1f055c0b28D71cf1deA05f0f595a6975d/" target="_blank">sensor demo</a> website and follow instructions below
 
 ### 1. Open the Dapp
 
