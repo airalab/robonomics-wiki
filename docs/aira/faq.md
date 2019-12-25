@@ -10,13 +10,22 @@ and Liability::
 
     journalctl -u liability -f
 
-$$ How to check the quantity of IPFS peers?
+## How to check the quantity of IPFS peers?
 
-    ipfs pubsub peers airalab.lighthouse.5.robonomics.eth
+    ipfs pubsub peers 
 
 ## IPFS can't connect to the daemon, what should I do?
 
 Try to specify `--api` option
 
     ipfs swarm peers --api=/ip4/127.0.0.1/tcp/5001/
+
+## How to change ethereum address of AIRA?
+
+Delete `keyfile` and `keyfile-psk` in `/var/lib/liability` and restart the service
+
+```
+systemctl restart liability
+```
+
 
