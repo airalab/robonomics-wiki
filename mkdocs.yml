@@ -35,10 +35,7 @@ nav:
         - "Connect the Simplest CPS": agent_development/hardware_examples/connect_simple_cps.md
         - "Passing Dynamic Parameters": agent_development/hardware_examples/passing_dynamic_parameters.md
         - "Connect an Air Pollution Sensor": agent_development/hardware_examples/connect_sensor.md
-    - "Robonomics-js":
-      - Introduction: robonomics-js/beginning.md
-      - "How to": robonomics-js/howto.md
-      - "Creating Dapp": robonomics-js/creating_dapp.md
+    - "Robonomics-js": robonomics-js.md
 theme:
   name: 'material'
   favicon: 'img/favicon.ico'
