@@ -21,7 +21,7 @@ Try out existing [services](https://dapp.robonomics.network/#/services)
 
 There are [Robonomics-js](https://github.com/airalab/robonomics-js) library and [dapp template](https://github.com/airalab/vue-dapp-robonomics-template)
 
-The documentation is in [Learn](robonomics-js/beginning.md) section
+The documentation is in [Learn](robonomics-js.md) section
 
 ### I'm a robotics engineer
 
