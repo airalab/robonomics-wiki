@@ -174,17 +174,17 @@ The message specification
 ```JavaScript
 const demand = {
   // REQUIRED
-  model: "QmSt69qQqGka1qwRRHbdmAWk4nCbsV1mqJwd8cWbEyhf1M", // ipfs hash of the model 
-  objective: "QmSt69qQqGka1qwRRHbdmAWk4nCbsV1mqJwd8cWbEyhf2M", // ipfs hash of the objective
-  token: robonomics.xrt.address, // payment token address
-  cost: 1, // cost
-  deadline: 9999999, // until which block demand is valid
+  model: "QmSt69qQqGka1qwRRHbdmAWk4nCbsV1mqJwd8cWbEyhf1M",      // ipfs hash of the model 
+  objective: "QmSt69qQqGka1qwRRHbdmAWk4nCbsV1mqJwd8cWbEyhf2M",  // ipfs hash of the objective
+  token: robonomics.xrt.address,                                // payment token address
+  cost: 1,                                                      // cost
+  deadline: 9999999,                                            // until which block demand is valid
 
   // NOT REQUIRED 
-  lighthouse: "0x0000000000000000000000000000000000000000", // lighthouse address, by default the initialization address
-  validator: "0x0000000000000000000000000000000000000000", // validator address if necessary
-  validatorFee: 0, // validator fee 
-  nonce: 1 // index number 
+  lighthouse: "0x0000000000000000000000000000000000000000",     // lighthouse address, by default the initialization address
+  validator: "0x0000000000000000000000000000000000000000",      // validator address if necessary
+  validatorFee: 0,                                              // validator fee 
+  nonce: 1                                                      // index number 
 };
 ```
 
@@ -200,8 +200,7 @@ robonomics.sendDemand(demand).then(liability => {
 
 `robonomics.onDemand`
 
-Слушает сообщения с спросом по указаной модели в качестве первого параметра.
-Если первым параметром указать `null`, то будут получены все сообщения спроса на маяке.
+Listens to demand messages with a defined model. If model is `null` returns any demand message.
 
 ```JavaScript
 robonomics.onDemand(model, message => {
@@ -215,24 +214,24 @@ The message specification
 
 ```JavaScript
 const offer = {
-  // ОБЯЗАТЕЛЬНЫЕ параметры
-  model: "QmSt69qQqGka1qwRRHbdmAWk4nCbsV1mqJwd8cWbEyhf1M", // модель в виде ipfs хеша на rosbag файл
-  objective: "QmSt69qQqGka1qwRRHbdmAWk4nCbsV1mqJwd8cWbEyhf2M", // задача в виде ipfs хеша на rosbag файл
-  token: robonomics.xrt.address, // адрес токена для оплата
-  cost: 1, // стоимость
-  deadline: 9999999, // номер блока после которого спрос будет не действителен
+  // REQUIRED 
+  model: "QmSt69qQqGka1qwRRHbdmAWk4nCbsV1mqJwd8cWbEyhf1M",      // ipfs hash of the model 
+  objective: "QmSt69qQqGka1qwRRHbdmAWk4nCbsV1mqJwd8cWbEyhf2M",  // ipfs hash of the objective
+  token: robonomics.xrt.address,                                // payment token address
+  cost: 1,                                                      // cost 
+  deadline: 9999999,                                            // until which block demand is valid
 
-  // НЕ ОБЯЗАТЕЛЬНЫЕ параметры
-  lighthouse: "0x0000000000000000000000000000000000000000", // адрес маяка, по умолчанию указан адрес маяка при инициализации
-  lighthouseFee: 0, // комиссия маяка
-  validator: "0x0000000000000000000000000000000000000000", // адрес валидатора, если требуется проверка результата
-  nonce: 1 // порядковый номер
+  // NOT REQUIRED
+  lighthouse: "0x0000000000000000000000000000000000000000",     // lighthouse address, by default the initialization address
+  lighthouseFee: 0,                                             // lighthouse fee
+  validator: "0x0000000000000000000000000000000000000000",      // validator address if necessary
+  nonce: 1                                                      // index number 
 };
 ```
 
 `robonomics.sendOffer`
 
-Подпись и отправка сообщения предложения. В качестве результата получаем обязательство.
+Signs and broadcasts an offer message. A liability is returned as promise
 
 ```JavaScript
 robonomics.sendOffer(offer).then(liability => {
@@ -242,8 +241,7 @@ robonomics.sendOffer(offer).then(liability => {
 
 `robonomics.onOffer`
 
-Слушает сообщения с предложениями по указаной модели в качестве первого параметра.
-Если первым параметром указать `null`, то будут получены все сообщения предложений на маяке.
+Listens to offer messages with a defined model. If model is `null` returns any offer message
 
 ```JavaScript
 robonomics.onOffer(model, message => {
@@ -251,22 +249,22 @@ robonomics.onOffer(model, message => {
 });
 ```
 
-#### Результат
+#### Result 
 
-Фотмат сообщения.
+The message specification
 
 ```JavaScript
 const result = {
-  // ОБЯЗАТЕЛЬНЫЕ параметры
-  liability: "0x0000000000000000000000000000000000000000", // адрес контракта обязательства
-  success: true, // признак результата работы
-  result: "QmWXk8D1Fh5XFJvBodcWbwgyw9htjc6FJg8qi1YYEoPnrg" // результат в виде ipfs хеша на rosbag файл
+  // REQUIRED 
+  liability: "0x0000000000000000000000000000000000000000",  // liability contract address
+  success: true,                                            // status of the task
+  result: "QmWXk8D1Fh5XFJvBodcWbwgyw9htjc6FJg8qi1YYEoPnrg"  // ipfs hash of the rosbag log file
 };
 ```
 
 `robonomics.sendResult`
 
-Подпись и отправка сообщения предложения.
+Signs and broadcasts a result message
 
 ```JavaScript
 robonomics.sendResult(result).then(() => {
@@ -276,7 +274,7 @@ robonomics.sendResult(result).then(() => {
 
 `robonomics.onResult`
 
-Слушает сообщения с результатами в сети. Результат в этих сообщениях нельзя считать валидным. Валидный результат нужно получать из контракта обязательства
+Listens to result messages. These results may be not valid. Valid results are stored in a liability contract
 
 ```JavaScript
 robonomics.onResult(result => {
@@ -284,13 +282,13 @@ robonomics.onResult(result => {
 });
 ```
 
-### Контракты
+### Smart Contracts 
 
-#### Обязательство
+#### Liability 
 
 `liability.getInfo`
 
-Вернет объект всех свойств контракта.
+Return a property object of the contract
 
 ```JavaScript
 liability.getInfo().then(data => {
@@ -319,7 +317,7 @@ liability.getInfo().then(data => {
 
 `liability.onResult`
 
-Ожидает закрытия контрата, вернет результат.
+Waits until a liability is finished. Returns a result
 
 ```JavaScript
 liability.onResult().then(result => {
@@ -327,11 +325,11 @@ liability.onResult().then(result => {
 });
 ```
 
-#### Маяк
+#### Lighthouse 
 
 `robonomics.lighthouse.getInfo`
 
-Вернет объект всех свойств контракта.
+Returns a property object of the contract
 
 ```JavaScript
 robonomics.lighthouse.getInfo().then(data => {
@@ -350,7 +348,7 @@ robonomics.lighthouse.getInfo().then(data => {
 
 `robonomics.lighthouse.getProviders`
 
-Вернет список адресов провайдеров работающих на маяке.
+Returns a list of providers on the lighthouse
 
 ```JavaScript
 robonomics.lighthouse.getProviders().then(list => {
@@ -358,12 +356,12 @@ robonomics.lighthouse.getProviders().then(list => {
 });
 ```
 
-##### Создание нового маяка
+##### Creation of a new lighthouse
 
 ```JavaScript
-const minimalFreeze = 1000 // Wn
-const timeout = 25 // blocks
-const name = 'mylighthouse' // название маяка
+const minimalFreeze = 1000      // Wn
+const timeout = 25              // blocks
+const name = 'mylighthouse'     // lighthouse name
 robonomics.factory.methods.createLighthouse(minimalFreeze, timeout, name).send({ from: robonomics.account.address })
     .then((tx) => console.log(tx))
 
@@ -372,24 +370,24 @@ robonomics.factory.onLighthouse((lighthouse) => {
 })
 ```
 
-##### Стать провайдером маяка
+##### Become a provider 
 
-Предварительно необходимо выполнить `approve` токенов `XRT`
+Preliminarily you must call `approve` for the tokens `XRT`
 
 ```JavaScript
-const name = "mylighthouse"; // название маяка
-const stake = 1000; // Wn
+const name = "mylighthouse";    // lighthouse name
+const stake = 1000;             // Wn
 robonomics.lighthouse.methods
   .refill(stake)
   .send({ from: robonomics.account.address })
   .then(tx => console.log(tx));
 ```
 
-#### Токен
+#### Token 
 
 `robonomics.xrt.getInfo`
 
-Вернет объект всех свойств контракта.
+Returns property object of the token
 
 ```JavaScript
 robonomics.xrt.getInfo().then(data => {
@@ -405,7 +403,7 @@ robonomics.xrt.getInfo().then(data => {
 });
 ```
 
-##### Проверить баланс
+##### Check balance 
 
 ```JavaScript
 robonomics.xrt.methods
@@ -414,7 +412,7 @@ robonomics.xrt.methods
   .then(balance => console.log(balance));
 ```
 
-##### Проверить кол-во одобренных токенов на адрес фабрики
+##### Check allowance 
 
 ```JavaScript
 robonomics.xrt.methods
@@ -423,7 +421,7 @@ robonomics.xrt.methods
   .then(allowance => console.log(allowance));
 ```
 
-##### Approve токенов на адрес маяка
+##### Approve 
 
 ```JavaScript
 robonomics.xrt.methods

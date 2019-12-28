@@ -50,4 +50,12 @@ Finally press Start and you'll see AIRA welcoming you with generated Ethereum ad
 
 ![Welcome](../img/try_it_out/aira_installation/ready.png "Welcome")
 
+There is a walkthrough video you may wish to check it out
+
+<iframe width="756" height="425" src="https://www.youtube.com/embed/cDcaypYPBhI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Troubleshooting
+
+If you have a fresh installed VirtualBox you need to install the [extension](https://www.virtualbox.org/wiki/Downloads) pack
+
 
