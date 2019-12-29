@@ -1,12 +1,14 @@
 # Robonomics DApp Overview
 
+There is [The Dapp](https://dapp.robonomics.network/#/) of Robonomics Network. The first page looks like shown below:
+
 ![Robonomics DApp](../img/try_it_out/dapp_overview/dapp.png "Robonomics DApp")
 
-Let's have a look at the bottom table "Robonomics Telemetry"
+Let's have a look at the bottom table "Robonomics Telemetry".
 
 Every time an instance of AIRA is launched it broadcasts a piece of information about itself.
 
-Have a brief look at the [previous](aira_installation.md) page to understand where `IPNS` and `Address Eth` came from
+Have a brief look at the [previous](aira_installation.md) page to understand where `IPNS` and `Address Eth` came from.
 
 ### IPNS
 
