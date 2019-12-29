@@ -1,4 +1,4 @@
-# Connect SEN0233 Sensor to Robonomics Network
+# Open Sensor Network Run by IPFS
 
 Robonomics allows you to build a peer-to-peer communication between you and a sensor. So it becomes possible to get data from your sensor all around the world.
 Those data is not stored in a blockchain but packed in [rosbag](http://wiki.ros.org/rosbag) format which is convenient to work with and transfered via IPFS network.
@@ -150,6 +150,9 @@ Run the agent:
 source result/setup.bash
 roslaunch sensors_pack_agent agent.launch
 ```
+
+!!! note
+    Don't hesitate to check [the repository](https://github.com/Vourhey/sen0233_sensor_agent/) out. You'll see how easily the sensor can be replaced with any other
 
 ## 4. Test
 
