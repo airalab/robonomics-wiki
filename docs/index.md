@@ -1,16 +1,12 @@
 # Getting Started
-
-![Robonomics Logo](img/robonomics_logo.png "Robonomics Logo")
-
-Web3 Framework for smart cities and industry 4.0 app developers
-
 The idea of the network is to connect a particular service and a Dapp user interface. The following chart describes what place Robonmics takes in the scenario.
 
 ![Robonomics Chart](img/robonomics-sheme.png "Robonomics Chart")
 
-Try it out yourself [here](try_it_out/get_weather_on_fuji_mountain.md)!
-
 ## What the documentation contains
+
+### Get Weather on Fuji Mountain Demo
+Try Robonomics yourself [here](try_it_out/get_weather_on_fuji_mountain.md)!
 
 ### I'm interested in using Robonomics services
 
@@ -26,5 +22,3 @@ The documentation is in [Learn](robonomics-js.md) section
 ### I'm a robotics engineer
 
 Check out [cases](cases/open_sensor_network_run_by_ipfs.md) section and start developing by [examples](agent_development/examples.md)
-
-
