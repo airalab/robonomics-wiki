@@ -1,4 +1,4 @@
-site_name: Robonomics
+site_name: Robonomics wiki
 nav:
   - "Getting Started": index.md
   - "R&D based on Robonomics Network": r_and_d.md
