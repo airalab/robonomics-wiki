@@ -18,7 +18,6 @@ nav:
       - "Basic Usage": aira/basic_usage.md
       - "Connecting via SSH": aira/connecting_via_ssh.md
       - FAQ: aira/faq.md
-      - Contributing: aira/contributing.md
     - "Agent Development":
       - "Robonomics Network":
         - "How It Works": agent_development/robonomics_network/how_it_works.md
@@ -39,6 +38,8 @@ nav:
         - "Connect an Air Pollution Sensor": agent_development/hardware_examples/connect_sensor.md
     - "Robonomics-js": robonomics-js.md
     - Glossary: glossary.md
+  - Contributing: contributing.md
+
 theme:
   name: 'material'
   favicon: 'img/favicon.ico'
