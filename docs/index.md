@@ -1,5 +1,5 @@
 # Getting Started
-The idea of the network is to connect a particular service and a Dapp user interface. The following chart describes what place Robonmics takes in the scenario.
+The idea of the network is to connect a particular [service](glossary.md#cyber-physical-system) and a [Dapp](glossary.md#dapp) user interface. The following chart describes what place Robonmics takes in the scenario.
 
 ![Robonomics Chart](img/robonomics-sheme.png "Robonomics Chart")
 

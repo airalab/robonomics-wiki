@@ -4,8 +4,6 @@
 
 ## Cyber-physical system
 
-CPS
-
 ## Dapp
 
 ## IPFS
