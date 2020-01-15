@@ -18,6 +18,7 @@
 Необходимо заполнить следующие поля:
 
 ![Offset fields](../img/offset_electricity_consumption/start_dapp.png "Offset fields")
+взято с сайта voltaware (c)
 
 В зависимости от страны, берется renewable energy factor который означает, какой процент электроэнергии получено с помощью возобновляемых источников. 
 
