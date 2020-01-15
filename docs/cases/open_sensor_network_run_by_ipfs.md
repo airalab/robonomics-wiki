@@ -6,6 +6,11 @@ Those data is not stored in a blockchain but packed in [rosbag](http://wiki.ros.
 At this page you'll find step-by-step instruction to connect [SEN0233](https://wiki.dfrobot.com/Air_Quality_Monitor__PM_2.5,_Formaldehyde,_Temperature_&_Humidity_Sensor__SKU__SEN0233) sensor
 to [Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) and make it publish data on demand.
 
+After reading this article you should get the main idea and be able to connect any desired sensor.
+
+!!! note
+    All of the following steps are done on Linux
+
 ## Requirements
 
 * SEN0233
