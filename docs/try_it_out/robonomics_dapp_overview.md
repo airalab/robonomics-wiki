@@ -6,7 +6,7 @@ There is [The Dapp](https://dapp.robonomics.network/#/) of Robonomics Network. T
 
 Let's have a look at the bottom table "Robonomics Telemetry".
 
-Every time an instance of AIRA is launched it broadcasts a piece of information about itself.
+Every time an instance of AIRA is launched it broadcasts a piece of information about itself. Usually it takes some time for the Dapp to receive data from an instance of AIRA.
 
 Have a brief look at the [previous](aira_installation.md) page to understand where `IPNS` and `Address Eth` came from.
 
