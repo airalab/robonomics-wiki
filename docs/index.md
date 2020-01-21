@@ -1,12 +1,16 @@
 # Getting Started
-The idea of the network is to connect a particular [service](glossary.md#cyber-physical-system) and a [Dapp](glossary.md#dapp) user interface. The following chart describes what place Robonmics takes in the scenario.
+Robonomics platform provides tools for working with the robot economy network. Robonomics allow designers of smart cities and industry 4.0 zones to build trust among the [autonomous robots services](glossary.md#cyber-physical-system), provide [direct user access via dapp](glossary.md#dapp) for ordering products from autonomous factories and services of urban sensor networks. This in turn will allow us to put in place a decentralized system that globally monitors the activities of cyber physical systems.
+
+Find more in [Robonomics whitepaper](https://github.com/airalab/robonomics_specs/blob/master/pdf/whitepaper_en.pdf)
+
+The following chart describes what place Robonomics takes in the scenario.
 
 ![Robonomics Chart](img/robonomics-sheme.png "Robonomics Chart")
 
 ## What the documentation contains
 
 ### Get Weather on Fuji Mountain Demo
-Try Robonomics yourself [here](try_it_out/get_weather_on_fuji_mountain.md)!
+Easy way to try Robonomics yourself [here](try_it_out/get_weather_on_fuji_mountain.md)!
 
 ### I'm interested in using Robonomics services
 
