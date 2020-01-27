@@ -4,13 +4,14 @@ nav:
   - "R&D based on Robonomics Network": r_and_d.md
   - "Community": community.md
   - "Try it out":
-    - "AIRA Installation on VirtualBox": try_it_out/aira_installation.md
-    - "Robonomics DApp Overview": try_it_out/robonomics_dapp_overview.md
     - "Get Weather on Fuji Mountain": try_it_out/get_weather_on_fuji_mountain.md
+    - "Robonomics DApp Overview": try_it_out/robonomics_dapp_overview.md
+    - "AIRA Installation on VirtualBox": try_it_out/aira_installation.md
   - Cases:
     - "Open Sensor Network Run by IPFS": cases/open_sensor_network_run_by_ipfs.md
-    - "Offset Electricity Consumption Rub by Ethereum": cases/offset_electricity_consumption_run_by_ethereum.md
-    - "Run by Substrate": cases/substrate_demo.md
+    - "Create Digital Identity Run by Ethereum": cases/digital_identity.md
+    # - "Offset Electricity Consumption Rub by Ethereum": cases/offset_electricity_consumption_run_by_ethereum.md
+    # - "Run by Substrate": cases/substrate_demo.md
   - Learn:
     - "AIRA":
       - Overview: aira/overview.md
