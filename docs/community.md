@@ -9,7 +9,7 @@ There are many ways to contribute to Robonomics Network: you can contribute dire
 - [Robonomics' code base and new realeses on GitHub](https://github.com/airalab)
 - [Ask your technical question on Riot](https://riot.im/app/#/room/#robonomics:matrix.org)
 
-## For Researchers & Academics##
+## For Researchers & Academics
 
 - [Read Robonomics White Paper and our scientific articles](https://robonomics.network/en/documents/)
 
