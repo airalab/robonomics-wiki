@@ -17,7 +17,7 @@ If you have a background in mathematics, cryptography, or economics you might be
 
 ## For All, even non-technical
 
--[Get familiar with Robonomics services and statistics in dApp - open in browser with Metamask](https://dapp.robonomics.network)
+- [Get familiar with Robonomics services and statistics in dApp - open in browser with Metamask](https://dapp.robonomics.network)
 - [Read our blog](https://blog.aira.life)
 - [Stay tuned by following us on Twitter](https://twitter.com/AIRA_Robonomics)
 
