@@ -1,5 +1,4 @@
-Basic Usage
-===========
+# Basic Usage
 
 To get familiar with AIRA, let's see what is under the hood.
 

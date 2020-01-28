@@ -7,6 +7,7 @@ nav:
     - "Get Weather on Fuji Mountain": try_it_out/get_weather_on_fuji_mountain.md
     - "Robonomics DApp Overview": try_it_out/robonomics_dapp_overview.md
     - "AIRA Installation on VirtualBox": try_it_out/aira_installation.md
+    - "Interact With AIRA": try_it_out/interact_with_aira.md
   - Cases:
     - "Open Sensor Network Run by IPFS": cases/open_sensor_network_run_by_ipfs.md
     - "Create Digital Identity Run by Ethereum": cases/digital_identity.md

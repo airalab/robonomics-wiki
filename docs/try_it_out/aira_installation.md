@@ -54,6 +54,8 @@ Then go to the image's settings, Network and add the second network adapter
 
 ![Second adapter](../img/try_it_out/aira_installation/add_second_adapter.png "Second adapter")
 
+For more details look at the standalone [lesson](../aira/connecting_via_ssh.md)
+
 Optionally you can increase the amount of video memory and switch `Graphics Controller` to `VMSVGA`.
 
 ## Launch the machine
