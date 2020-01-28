@@ -299,6 +299,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../try_it_out/interact_with_aira/" title="Interact With AIRA" class="md-nav__link">
+      Interact With AIRA
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -444,9 +456,59 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Connecting via SSH
+      </label>
+    
     <a href="./" title="Connecting via SSH" class="md-nav__link md-nav__link--active">
       Connecting via SSH
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-host-adapter" class="md-nav__link">
+    Add Host Adapter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-second-adapter-to-the-vm" class="md-nav__link">
+    Add the Second Adapter to the VM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populate-authorized-keys" class="md-nav__link">
+    Populate Authorized Keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-in-via-ssh" class="md-nav__link">
+    Log in via SSH
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -790,6 +852,43 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-host-adapter" class="md-nav__link">
+    Add Host Adapter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-second-adapter-to-the-vm" class="md-nav__link">
+    Add the Second Adapter to the VM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populate-authorized-keys" class="md-nav__link">
+    Populate Authorized Keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-in-via-ssh" class="md-nav__link">
+    Log in via SSH
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -810,36 +909,33 @@
 <p>It's required to have your ssh public key on Github.com
 In case you don't have one, please follow the <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">link</a></p>
 </div>
-<p>First, launch AIRA client and run a command replacing <username> with your own:</p>
-<div class="codehilite"><pre><span></span>$ mkdir .ssh
-$ chmod 700 .ssh
-$ curl -sSL https://github.com/&lt;username&gt;.keys &gt;&gt; .ssh/authorized_keys
+<p>Below is the walkthrough video:</p>
+<iframe width="756" height="425" src="https://www.youtube.com/embed/R6waDG5iwm0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="add-host-adapter">Add Host Adapter</h2>
+<p>Go to <code>File</code> -&gt; <code>Host Network Manager...</code> or press <code>Ctrl+H</code></p>
+<p><img alt="VirtualBox Network Manager" src="../../img/virtualbox_network_manager.png" title="VirtualBox Network Manager" /></p>
+<p>Click <code>Create</code> button.</p>
+<h2 id="add-the-second-adapter-to-the-vm">Add the Second Adapter to the VM</h2>
+<p>Select imported VM and click <code>Settings</code>. Go to <code>Network</code> tab and enable the second adapter</p>
+<p><img alt="Add Second Adapter" src="../../img/add_second_adapter_to_vm.png" title="Add Second Adapter" /></p>
+<h2 id="populate-authorized-keys">Populate Authorized Keys</h2>
+<p>Launch the VM and run the following command replacing <code>&lt;username&gt;</code> with your Github user name:</p>
+<div class="codehilite"><pre><span></span>mkdir .ssh
+chmod 700 .ssh
+curl -sSL https://github.com/&lt;username&gt;.keys &gt;&gt; .ssh/authorized_keys
 </pre></div>
 
 
-<p>Now go to machine settings, network, open Advanced and then Port Forwarding</p>
-<p><img alt="Port forwarding" src="../../img/4.png" title="Port forwarding" /></p>
-<p>Add a new rule:</p>
-<table>
-<thead>
-<tr>
-<th>Host IP</th>
-<th>Host Port</th>
-<th>Guest IP</th>
-<th>Guest Port</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>127.0.1.1</td>
-<td>2202</td>
-<td>10.0.2.15</td>
-<td>22</td>
-</tr>
-</tbody>
-</table>
-<p>Reboot the machine and you are able to connect to AIRA client via ssh::</p>
-<div class="codehilite"><pre><span></span>$ ssh -p 2202 root@127.0.1.1
+<p>Find out the VM's IP address by running:</p>
+<div class="codehilite"><pre><span></span>ip a
+</pre></div>
+
+
+<p>You should look for an address which starts with <code>192.168.xx.xx</code></p>
+<h2 id="log-in-via-ssh">Log in via SSH</h2>
+<p>Now open your terminal and log in via SSH as usual using the address from the previous step:</p>
+<div class="codehilite"><pre><span></span>ssh root@192.168.xx.xx
 </pre></div>
                 
                   
