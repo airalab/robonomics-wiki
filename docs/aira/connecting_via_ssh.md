@@ -1,5 +1,4 @@
-Connecting via SSH
-==================
+# Connecting via SSH
 
 It is more convenient to work with virtual machine via ssh connection. In this section we will configure VM.
 
@@ -7,22 +6,47 @@ It is more convenient to work with virtual machine via ssh connection. In this s
     It's required to have your ssh public key on Github.com
     In case you don't have one, please follow the [link](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
-First, launch AIRA client and run a command replacing <username> with your own:
+Below is the walkthrough video:
 
-    $ mkdir .ssh
-    $ chmod 700 .ssh
-    $ curl -sSL https://github.com/<username>.keys >> .ssh/authorized_keys
+<iframe width="756" height="425" src="https://www.youtube.com/embed/R6waDG5iwm0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Now go to machine settings, network, open Advanced and then Port Forwarding
+## Add Host Adapter
 
-![Port forwarding](../img/4.png "Port forwarding")
+Go to `File` -> `Host Network Manager...` or press `Ctrl+H`
 
-Add a new rule:
+![VirtualBox Network Manager](../img/virtualbox_network_manager.png "VirtualBox Network Manager")
 
-| Host IP       | Host Port     | Guest IP      | Guest Port    |
-|-----------    |-----------    |-----------    |------------   |
-| 127.0.1.1     | 2202          | 10.0.2.15     | 22            |
+Click `Create` button.
 
-Reboot the machine and you are able to connect to AIRA client via ssh::
+## Add the Second Adapter to the VM
 
-    $ ssh -p 2202 root@127.0.1.1
+Select imported VM and click `Settings`. Go to `Network` tab and enable the second adapter
+
+![Add Second Adapter](../img/add_second_adapter_to_vm.png "Add Second Adapter")
+
+## Populate Authorized Keys
+
+Launch the VM and run the following command replacing `<username>` with your Github user name:
+
+```
+mkdir .ssh
+chmod 700 .ssh
+curl -sSL https://github.com/<username>.keys >> .ssh/authorized_keys
+```
+
+Find out the VM's IP address by running:
+
+```
+ip a
+```
+
+You should look for an address which starts with `192.168.xx.xx`
+
+## Log in via SSH
+
+Now open your terminal and log in via SSH as usual using the address from the previous step:
+
+```
+ssh root@192.168.xx.xx
+```
+
