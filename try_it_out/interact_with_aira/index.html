@@ -347,6 +347,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#you-click-request-current-values-but-see-no-greeting" class="md-nav__link">
+    You click "Request current values" but see no greeting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-see-response-hash-but-the-data-doesnt-appear" class="md-nav__link">
+    I see response hash but the data doesn't appear
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-task-optional" class="md-nav__link">
+    Home Task (optional)
+  </a>
+  
+</li>
+      
       
       
       
@@ -853,6 +887,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#you-click-request-current-values-but-see-no-greeting" class="md-nav__link">
+    You click "Request current values" but see no greeting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-see-response-hash-but-the-data-doesnt-appear" class="md-nav__link">
+    I see response hash but the data doesn't appear
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-task-optional" class="md-nav__link">
+    Home Task (optional)
+  </a>
+  
+</li>
+      
       
       
       
@@ -873,28 +941,56 @@
                 
                 
                 <h1 id="interact-with-aira">Interact With AIRA</h1>
-<p>До этого момента вы уже успели поработать отдельно с DApp и прошли установку образа AIRA как виртуальную машину.</p>
-<p>В этом разделе мы рассмотрим один из способов установки ПО в аиру и свяжем его с существующим DApp</p>
+<p>At this point you should be familiar with a <a href="../get_weather_on_fuji_mountain/">DApp</a> and how to launch <a href="../aira_installation/">AIRA image</a>.
+Now you are ready to do more complicated stuff like installing a package and interacting with it via DApp.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Вы должны пройти урок установки аиры прежде чем продолжить</p>
+<p>Make sure you have covered previous lessons before you continue</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Копировать команды в виртуальную машину аира невозможно, только набирать вручную. Либо можно настроить подключение по ssh</p>
+<p>During the lesson you will type few commands in a terminal. AIRA image doesn't support clipboard so to make life easier have a look at <a href="../../aira/connecting_via_ssh/">Connect via SSH</a> and log in via SSH to the VM</p>
 </div>
+<p>Walkthrough video:
+<iframe width="756" height="425" src="https://www.youtube.com/embed/QM06l07_wuA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 <h2 id="package-installation">Package installation</h2>
-<div class="codehilite"><pre><span></span>git clone https://github.com/vourhey/....
-cd &lt;package&gt;
+<p>After you launched AIRA and logged in using your terminal do the following:</p>
+<div class="codehilite"><pre><span></span>su liability &amp;&amp; cd
+git clone https://github.com/vourhey/hello_aira
+cd hello_aira
 nix build -f release.nix
-source result/setup.zsh
-rosrun &lt;jsj&gt; hello
+source result/setup.bash
+rosrun hello_aira hello_aira
 </pre></div>
 
 
+<p>Run one by one commands above. After the last one you should see a link to DApp generated specifically for your instance.</p>
+<p><img alt="Terminal" src="../../img/hello_aira_terminal.png" title="Terminal" /></p>
+<p>Click on the link, the DApp should be shown.</p>
 <h2 id="dapp">DApp</h2>
-<p>save your account</p>
-<p>go to https://dapp.robonomics.network/#/sensors/airalab/MODEL/ACCOUNT/</p>
+<p>Connect <a href="http://metamask.io/">MetaMask</a> if prompted and click on the button</p>
+<p><img alt="Request" src="../../img/hello_aira_dapp.png" title="Request" /></p>
+<p>Sign the message as usual and wait for the result</p>
+<p><img alt="Wait for Result" src="../../img/hello_aira_dapp_2.png" title="Wait for Result" /></p>
+<p>Meanwhile have a look at the terminal. You should see the greeting</p>
+<p><img alt="Greeting" src="../../img/hello_aira_terminal_2.png" title="Greeting" /></p>
+<p>In the end the greeting will appear in the DApp</p>
+<p><img alt="DApp Greeting" src="../../img/hello_aira_dapp_3.png" title="DApp Greeting" /></p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="you-click-request-current-values-but-see-no-greeting">You click "Request current values" but see no greeting</h3>
+<p>Probably you have just launched AIRA and IPFS hasn't finished initialization. Wait a minute or so and try again</p>
+<h3 id="i-see-response-hash-but-the-data-doesnt-appear">I see response hash but the data doesn't appear</h3>
+<p>Again most probably the issue comes from IPFS connection. Click and the hash and you'll see the result. It's not necessary to download the file</p>
+<h2 id="home-task-optional">Home Task (optional)</h2>
+<p>If you are familiar with <a href="https://www.python.org/">Python</a> change the shown text to something different and complete the lesson with your version of <code>hello_aira</code></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Make a fork of the <a href="https://github.com/vourhey/hello_aira">repository</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The output text is located <a href="https://github.com/Vourhey/hello_aira/blob/master/scripts/hello_aira#L45">here</a></p>
+</div>
                 
                   
                 
