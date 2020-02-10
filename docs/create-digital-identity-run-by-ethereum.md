@@ -41,6 +41,6 @@ The service charges a small fee. But first you must approve the required amount 
 
 ### 6. Have a look at the created passport
 
-<!-- ![The Digital Identity](./images/case_digital_passport_5.jpg "The Digital Identity") -->
+![The Digital Identity](./images/case_digital_passport_6.jpg "The Digital Identity") 
 
 The process of registration takes some time. In the end you will see a link to the created identity.
