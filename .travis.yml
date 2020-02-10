@@ -1,22 +1,21 @@
-language: python
-python: 3.6
+language: node_js
+node_js:
+    - 10
 branches: master
-
-install:
-    - pip install -r requirements.txt
 
 script: true
 
 before_deploy:
-    - mkdocs build --verbose --clean --strict # Build a local version of the docs
-    - echo "wiki.robonomics.network" > ./site/CNAME
+    - npm install --global @gridsome/cli
+    - npm ci
+    - gridsome build
 
 deploy:
     provider: pages
     token: $github_token
     cleanup: false
     keep_history: true
-    local_dir: site
+    local_dir: dist
     edge: true
     on:
         branch: master
