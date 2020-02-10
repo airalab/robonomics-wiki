@@ -1,0 +1,65 @@
+// Default variables
+html {
+	--base-font-size: 18px;
+}
+
+// Light default theme
+body {
+	--color-dark: #162128;
+	--color-light: rgb(252, 250, 239); //#fcfaef
+
+ 	--body-bg: var(--color-light);
+ 	--text-color: 68, 68, 68; //#444
+ 	--text-color-invert: #fff;
+
+ 	--code-bg: #162128;
+ 	--code-bg-inline: rgba(179, 37, 133, 0.06);
+ 	--code-text: #fff;
+ 	--code-text-inline: rgb(179, 37, 133);
+
+ 	--title-color: #111;
+ 	--link-color: #449ff2;
+ 	--border-color:  rgba(0,0,0,.1);
+
+ 	--table-bg: transparent;
+ 	--table-thead-bg: #ede1a0;
+ 	--table-tr-hover: #f6f1d2;
+
+ 	--header-bg: #0e161a;
+ 	--header-link: #ced8de;
+ 	
+
+  --space: 3.5rem;
+  --space-text: 1.25rem;
+  --content-width: 960px;
+  --page-width: 1440px;
+  --radius: 4px;
+}
+
+// Make  things smaller for mobile
+@media screen and (max-width: 1280px) {
+	html {
+		--base-font-size: 16px;
+	}
+	body {
+		--space: 2rem;
+	}
+}
+
+
+// Override variables for Dark theme
+body[data-theme="dark"] {
+ 	--body-bg: #162128;
+ 	--text-color: #ced8de;
+ 	--text-color-invert: #162128;
+
+ 	--code-bg: var(--color-dark:);
+
+ 	--title-color: #fff;
+ 	--link-color: #fceb8f;
+ 	--border-color:  rgba(255,255,255,.1);
+
+ 	--table-bg: var(--color-dark:);
+ 	--table-thead-bg: #0d1b26;
+ 	--table-tr-hover: #122636;
+}

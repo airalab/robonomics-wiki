@@ -1,0 +1,94 @@
+- title: Getting Started
+  items:
+    - title: Introduction
+      link: /docs/
+    - title: R&D Based on Robonomics Network
+      link: /docs/r-and-d-based-on-robonomics-network/
+
+- title: Try it out
+  items:
+    - title: DEMO "Get Weather on Fuji Mountain"
+      link: /docs/get-weather-on-fuji-mountain/
+    - title: Robonomics DApp Overview
+      link: /docs/robonomics-dapp-overview/
+    - title: AIRA installation
+      link: /docs/aira-installation-on-vb/
+    - title: Interact with AIRA
+      link: /docs/interact-with-aira/
+
+
+- title: Cases
+  items:
+    - title: Open Sensor Network Run by IPFS
+      link: /docs/open-sensor-network-run-by-ipfs/
+    - title: Create digital identity run by Ethereum
+      link: /docs/create-digital-identity-run-by-ethereum/
+    
+
+- title: Learn
+  items:
+    - title: Robonomics-js
+      link: /docs/robonomics-js/
+    - title: Glossary
+      link: /docs/glossary/
+
+    - title: AIRA
+      items:
+        - title: Overview
+          link: /docs/aira-overview/
+        - title: Installation
+          link: /docs/aira-installation/
+        - title: Basic usage
+          link: /docs/aira-basic-usage/
+        - title: Connecting via SSH
+          link: /docs/aira-connecting-via-ssh/
+        - title: F.A.Q.
+          link: /docs/aira-faq/
+
+    - title: Agent Development
+      items:
+        - title: Market messages
+          link: /docs/market-messages/
+        - title: Examples
+          link: /docs/agent-development-examples/
+        
+        - title: Robonomics Network
+          items:
+            - title: How it works
+              link: /docs/robonomics-how-it-works/
+            - title: Contracts deployment
+              link: /docs/robonomics-contracts-deployment/
+            - title: Become a Provider
+              link: /docs/robonomics-become-a-provider/
+
+        - title: ROS API Reference
+          items:
+            - title: Robonomics Liability
+              link: /docs/robonomics-liability/
+            - title: Robonomics Liability Messages
+              link: /docs/robonomics-liability-messages/
+            - title: Ethereum Common
+              link: /docs/ethereum-common/
+            - title: Ethereum Common Messages
+              link: /docs/ethereum-common-messages/
+            - title: IPFS Common
+              link: /docs/ipfs-common/
+            - title: IPFS Common Messages
+              link: /docs/ipfs-common-messages/
+
+        - title: Hardware Examples
+          items:
+              - title: Connect the simplest CPS
+                link: /docs/connect-simple-cps/
+              - title: Passing dynamic parameters
+                link: /docs/hardware-passing-dynamic-parameters/
+              - title: Connect an air pollution sensor
+                link: /docs/hardware-connect-sensor/
+
+
+- title: Contribute
+  items:
+    - title: Community
+      link: /docs/community/
+    - title: How to contribute
+      link: /docs/contributing/

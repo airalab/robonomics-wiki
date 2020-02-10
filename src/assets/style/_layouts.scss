@@ -1,0 +1,15 @@
+.layout__content, .layout__page {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: var(--space);
+	padding-right: var(--space);
+}
+
+.layout__content {
+	max-width: var(--content-width);
+}
+
+.layout__page {
+	max-width: var(--page-width);
+}

@@ -1,0 +1,40 @@
+.menu {
+	list-style: none;
+	margin: 0;
+	font-size: .9rem;
+
+	border-left: 2px solid var(--border-color);
+	padding-left: calc( var(--space) / 4);
+
+	margin-bottom: 1.6rem;
+
+	&__link{
+		color: currentColor !important;
+		line-height: 1;
+		text-decoration: none;
+
+		&.active{
+			color: var(--link-color) !important;
+		}
+	}
+
+	&__item-depth-2{
+		margin-bottom: 0;
+		padding: .4rem 0;
+	}
+
+	&__item-depth-3, &__item-depth-4{
+		margin-bottom: 0;
+		margin-top: -.4rem;
+		padding: .5rem .4rem;
+		font-size: .8rem;
+		opacity: .6;
+	}
+
+	&__item-depth-4{
+		padding: .2rem 1.4rem;
+	}
+
+	h4 { font-size: 1rem; margin-bottom: .5rem; }
+	.menu h4{ font-size: 0.8rem; }
+}

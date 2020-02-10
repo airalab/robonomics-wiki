@@ -7,11 +7,11 @@ Usually it's represented as a ROS package and it may connect (but not necessaril
 
 ## Cyber-physical system
 
-It is a combination of a physical mechanism that is usually called a robot and a program algorithm that controls the behavior of the mechanism
+It is a combination of a physical mechanism that is usually called a robot and a program algorithm that controls the behavior of the mechanism.
 
 ## Dapp
 
-It is a short form for Decentralized application. Usually it is a single page web based application that helps to interact with an agent
+It is a short form for Decentralized application. Usually it is a single page web based application that helps to interact with an agent.
 
 ## IPFS
 
@@ -21,9 +21,10 @@ For more detail how it works go to the official website.
 ## Lighthouse
 
 A lighthouse is an autonomous workflow that allows us to distribute the running time of providers that serve a single broadcast channel.
-For more information read [Robonomics Whitepaper](https://robonomics.network/robonomics_white_paper_en.pdf) section 5.2
+
+For more information read [Robonomics Whitepaper](https://robonomics.network/robonomics_white_paper_en.pdf) section 5.2.
 
 ## Sidechain
 
-Ethereum based blockchain network with Proof-of-Authority consensus owned by Airalab
+Ethereum based blockchain network with Proof-of-Authority consensus owned by Airalab.
 
