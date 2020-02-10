@@ -1,5 +1,5 @@
-import plugin_gridsome_vue_remark_5 from "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki-local/node_modules/@gridsome/vue-remark/gridsome.client.js"
-import plugin_gridsome_plugin_flexsearch_6 from "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki-local/node_modules/gridsome-plugin-flexsearch/gridsome.client.js"
+import plugin_gridsome_vue_remark_5 from "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/node_modules/@gridsome/vue-remark/gridsome.client.js"
+import plugin_gridsome_plugin_flexsearch_6 from "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/node_modules/gridsome-plugin-flexsearch/gridsome.client.js"
 
 export default [
   {

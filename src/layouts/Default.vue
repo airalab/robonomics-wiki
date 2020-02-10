@@ -13,9 +13,9 @@
 
             <div class="header__section flex-line header__nav">
               
-              <div class="header__nav__section">
-                <g-link class="links" to="https://robonomics.network">Website</g-link>
-                <g-link class="links" to="https://github.com/airalab/robonomics_specs/blob/master/pdf/whitepaper_en.pdf">White Paper</g-link>
+              <div class="header__nav__links header__nav__section">
+                <g-link to="https://robonomics.network">Website</g-link>
+                <g-link to="https://github.com/airalab/robonomics_specs/blob/master/pdf/whitepaper_en.pdf">White Paper</g-link>
               </div>
 
               <div class="header__nav__search header__nav__section">
@@ -130,14 +130,21 @@ query {
       &:last-child{ margin-right: 0; }
     }
 
-    .links {
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      text-decoration: none;
-      font-weight: 700;
 
-      margin-right: calc(var(--space) / 4);
+    &__links{
+      white-space: nowrap;
+      overflow-x: auto;
+
+      a {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        font-weight: 700;
+
+        margin-right: calc(var(--space) / 4);
+      }
     }
+
 
     &__search{
       position: relative;
@@ -234,6 +241,58 @@ query {
 
   a {
     color: currentColor;
+  }
+}
+
+
+
+@media screen and (max-width: 1080px) {
+    .header {
+      padding: calc(var(--space) / 2) 0;
+    }
+
+    .searchresults{
+      left: 0;
+    }
+}
+
+
+@media screen and (max-width: 860px) {
+  .header{
+    & > .flex-line{
+      flex-wrap: wrap;
+
+      .header__section{
+        min-width: 100%;
+        margin-bottom: calc(var(--space)/2);
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .header__nav__search{
+      flex-grow: 1;
+
+      input[type="text"]{
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .header__nav{
+    flex-wrap: wrap;
+
+    &__search{
+      order: 10;
+      min-width: 100%;
+      margin-top: calc(var(--space)/2);
+    }
   }
 }
 

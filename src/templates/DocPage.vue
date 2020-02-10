@@ -101,9 +101,6 @@
 
 
 @media screen and (max-width: 1080px) {
-    .header {
-      padding: calc(var(--space) / 2) 0;
-    }
 
     .page{
       flex-wrap: wrap;
@@ -141,28 +138,6 @@
 
 
 @media screen and (max-width: 860px) {
-  .header{
-    & > .flex-line{
-      flex-wrap: wrap;
-
-      .header__section{
-        min-width: 100%;
-        margin-bottom: calc(var(--space)/2);
-
-        &:last-child{
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    .header__nav__search{
-      flex-grow: 1;
-
-      input[type="text"]{
-        width: 100%;
-      }
-    }
-  }
 
   .sidebarMobileToggle{
     top: 108px;
@@ -173,6 +148,18 @@
     top: 108px + 40px;
   }
 }
+
+
+@media screen and (max-width: 500px) {
+  .sidebarMobileToggle{
+    top: 153px;
+  }
+
+  .page__sidebar{
+    top: 153px + 40px;
+  }
+}
+
 </style>
 
 <page-query>
