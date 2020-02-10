@@ -1,0 +1,19 @@
+.text-center {
+	text-align: center;
+}
+
+.space-bottom {
+	margin-bottom: var(--space);
+}
+
+.flex-line {
+	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+}
+
+.ui-caption{
+	font-size: 0.800em;
+	color: rgba(var(--body-bg), 0.6);
+	font-style: italic;
+}

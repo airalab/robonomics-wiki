@@ -1,0 +1,26 @@
+{
+  "name": "robonomics-wiki",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/remark-prismjs": "^0.2.0",
+    "@gridsome/source-filesystem": "^0.6.0",
+    "@gridsome/transformer-remark": "^0.3.0",
+    "@gridsome/vue-remark": "^0.1.9",
+    "@noxify/gridsome-plugin-remark-embed": "^1.1.5",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-flexsearch": "^0.1.12",
+    "prismjs": "^1.19.0",
+    "remark-autolink-headings": "^5.2.1",
+    "remark-highlight.js": "^5.2.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "vue-svg-loader": "^0.15.0"
+  }
+}

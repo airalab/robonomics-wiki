@@ -1,0 +1,11 @@
+.button
+	{
+		padding: .5rem .8rem;
+		text-decoration: none;
+		font-weight: 700;
+
+		&__primary{
+			background-color: var(--link-color);
+			color: var(--body-bg) !important;
+		}
+	}

@@ -1,0 +1,95 @@
+pre, code {
+	font-family: Space Mono,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+	font-feature-settings: "liga" 0;
+	font-size: 0.85rem;
+	line-height: 1.5;
+
+	border-radius: 3px;
+	direction: ltr;
+	text-align: left;
+	word-spacing: normal;
+	word-break: normal;
+	tab-size: 2;
+	hyphens: none;
+}
+
+
+pre{
+	padding: 1rem;
+	overflow: auto;
+	margin-bottom: var(--space-text);
+
+	background-color: var(--code-bg);
+	color: var(--code-text);
+}
+
+
+:not(pre)>code{
+	padding: 0 0.25rem;
+
+	color: var(--code-text-inline);
+	background: var(--code-bg-inline);
+}
+
+
+// pre::-moz-selection, pre ::-moz-selection,
+// code::-moz-selection, code ::-moz-selection {
+// text-shadow: none;
+// }
+
+// pre::selection, pre ::selection,
+// code::selection, code ::selection {
+// text-shadow: none;
+// }
+
+
+
+.language-html {
+  font-variant-ligatures: none;
+}
+
+.hljs-comment
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #585858;
+}
+
+.hljs-comment {
+  color: #8aa1b4;
+}
+
+.hljs-string {
+  color: #7ec699;
+}
+
+.token.entity,
+.token.url,
+.language-css .hljs-string,
+.style .hljs-string {
+  color: #86c1b9;
+}
+
+
+.hljs-keyword, .hljs-built_in {
+  color: #cc99cd;
+}
+
+.hljs-function {
+  color: #dd9a6d;
+}
+
+.hljs-attr {
+  color: lighten(#e2777a, 7);
+}
+.hljs-literal {
+  color: #7ec699;
+}
+
+.hljs-params {
+  color: #86c1b9;
+}
+
+.hljs-number{
+	color: #e2777a;
+}
