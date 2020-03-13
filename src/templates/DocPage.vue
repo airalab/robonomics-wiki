@@ -71,6 +71,7 @@
   .sidebarMobileToggle{
     transition: opacity 0.2s ease;
     opacity: 0;
+    visibility: hidden;
 
     position: fixed;
     background-color: var(--header-bg);
@@ -133,6 +134,7 @@
 
     .sidebarMobileToggle{
       opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -204,6 +206,9 @@ export default {
       return items
     }
   },
+  // mounted: function(){
+  //       this.hideTitles();
+  // },
   methods: {
     showBlock: function(bID, event){
       var element = document.getElementById(bID),
@@ -220,7 +225,13 @@ export default {
         closeI.style.display = 'none';
         menuI.style.display = 'block';
       }
-    }
+    },
+
+    // hideTitles: function(){
+    //   var titles = document.getElementById('#sidebarDocs .menu__title');
+
+    //   titles
+    // }
   },
 	metaInfo () {
 	    const { title, headings } = this.$page.doc
@@ -228,6 +239,33 @@ export default {
 	      title: title || (headings.length ? headings[0].value : undefined)
 	    }
 	  }
+  // updated: function(){
+    
+
+  //   //open current menu in SidebarDocs
+  //    var links = document.querySelectorAll('.menu-tree a'),
+  //    currentPath = this.$route.path,
+  //    path;
+
+
+  //    links.forEach(function(item, i, arr) {
+
+  //       path = item.href.replace(/.*\/\/[^\/]*/, '');
+
+  //       if (path == currentPath){
+
+  //         for ( ; item && item !== document; item = item.parentNode ) {
+  //           if(item.classList.contains('menu-tree')){
+  //             item.style.display = "block";
+  //           }
+  //         }
+  //       }
+
+  //     });
+  //   //end of open current menu in SidebarDocs
+
+
+  // }
 }
 
 

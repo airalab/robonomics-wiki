@@ -7,6 +7,13 @@ export default [
     }
   },
   {
+    path: "/docs/robonomics-become-a-provider/",
+    component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
+    meta: {
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--robonomics-become-a-provider-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/robonomics-become-a-provider.md")
+    }
+  },
+  {
     path: "/docs/robonomics-how-it-works/",
     component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
     meta: {
@@ -14,10 +21,10 @@ export default [
     }
   },
   {
-    path: "/docs/robonomics-become-a-provider/",
+    path: "/docs/open-sensor-network-run-by-ipfs/",
     component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
     meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--robonomics-become-a-provider-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/robonomics-become-a-provider.md")
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--open-sensor-network-run-by-ipfs-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/open-sensor-network-run-by-ipfs.md")
     }
   },
   {
@@ -42,13 +49,6 @@ export default [
     }
   },
   {
-    path: "/docs/open-sensor-network-run-by-ipfs/",
-    component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
-    meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--open-sensor-network-run-by-ipfs-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/open-sensor-network-run-by-ipfs.md")
-    }
-  },
-  {
     path: "/docs/robonomics-js/",
     component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
     meta: {
@@ -70,17 +70,17 @@ export default [
     }
   },
   {
+    path: "/docs/ipfs-common-messages/",
+    component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
+    meta: {
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--ipfs-common-messages-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/ipfs-common-messages.md")
+    }
+  },
+  {
     path: "/docs/get-weather-on-fuji-mountain/",
     component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
     meta: {
       $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--get-weather-on-fuji-mountain-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/get-weather-on-fuji-mountain.md")
-    }
-  },
-  {
-    path: "/docs/hardware-passing-dynamic-parameters/",
-    component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
-    meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--hardware-passing-dynamic-parameters-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/hardware-passing-dynamic-parameters.md")
     }
   },
   {
@@ -91,17 +91,10 @@ export default [
     }
   },
   {
-    path: "/docs/ipfs-common-messages/",
+    path: "/docs/hardware-passing-dynamic-parameters/",
     component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
     meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--ipfs-common-messages-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/ipfs-common-messages.md")
-    }
-  },
-  {
-    path: "/docs/hardware-connect-sensor/",
-    component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
-    meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--hardware-connect-sensor-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/hardware-connect-sensor.md")
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--hardware-passing-dynamic-parameters-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/hardware-passing-dynamic-parameters.md")
     }
   },
   {
@@ -112,6 +105,13 @@ export default [
     }
   },
   {
+    path: "/docs/hardware-connect-sensor/",
+    component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
+    meta: {
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--hardware-connect-sensor-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/hardware-connect-sensor.md")
+    }
+  },
+  {
     path: "/docs/create-digital-identity-run-by-ethereum/",
     component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
     meta: {
@@ -119,17 +119,17 @@ export default [
     }
   },
   {
-    path: "/docs/glossary/",
-    component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
-    meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--glossary-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/glossary.md")
-    }
-  },
-  {
     path: "/docs/ethereum-common-messages/",
     component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
     meta: {
       $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--ethereum-common-messages-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/ethereum-common-messages.md")
+    }
+  },
+  {
+    path: "/docs/glossary/",
+    component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
+    meta: {
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--glossary-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/glossary.md")
     }
   },
   {
@@ -161,10 +161,10 @@ export default [
     }
   },
   {
-    path: "/docs/agent-development-examples/",
+    path: "/docs/contributing/",
     component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
     meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--agent-development-examples-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/agent-development-examples.md")
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--contributing-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/contributing.md")
     }
   },
   {
@@ -175,10 +175,10 @@ export default [
     }
   },
   {
-    path: "/docs/contributing/",
+    path: "/docs/agent-development-examples/",
     component: () => import(/* webpackChunkName: "page--src--templates--doc-page-vue" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/src/templates/DocPage.vue"),
     meta: {
-      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--contributing-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/contributing.md")
+      $vueRemark: () => import(/* webpackChunkName: "vue-remark--docs--agent-development-examples-md" */ "/Users/nicetea/-WORK/Projects/Airalab/FRONT-END/robonomics-wiki/docs/agent-development-examples.md")
     }
   },
   {
