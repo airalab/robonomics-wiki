@@ -2,7 +2,7 @@
   <Layout>
 
   <div class="sidebarMobileToggle">
-    <div class="layout__content flex-line">
+    <div class="layout__page flex-line">
       <div class="sidebarMobileToggle__tog" v-on:click="showBlock('sidebarDocs', $event)">
         <IconMenu height="20px" class="mobileMenu"/>
         <IconClose height="20px" class="mobileMenuClose" style="display: none;"/>
@@ -116,7 +116,7 @@
       &__sidebar{
 
         position: fixed;
-        top: 58px + 40px;
+        top: calc( (2rem + (var(--header-padding))*2 ) *2 );
         left: 0;
         right: 0;
         bottom: 0;
@@ -135,32 +135,12 @@
     .sidebarMobileToggle{
       opacity: 1;
       visibility: visible;
+
+      top: calc( 2rem + (var(--header-padding))*2 );
+
+      border-top: 2px solid var(--body-bg);
     }
   }
-
-
-@media screen and (max-width: 860px) {
-
-  .sidebarMobileToggle{
-    top: 108px;
-  }
-
-
-  .page__sidebar{
-    top: 108px + 40px;
-  }
-}
-
-
-@media screen and (max-width: 500px) {
-  .sidebarMobileToggle{
-    top: 153px;
-  }
-
-  .page__sidebar{
-    top: 153px + 40px;
-  }
-}
 
 </style>
 
