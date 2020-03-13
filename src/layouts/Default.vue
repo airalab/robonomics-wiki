@@ -4,14 +4,18 @@
       <div class="footerPusher">
         <header class="header">
           <div class="layout__page flex-line">
-            <div class="header__section">
-              <g-link class="header__logo" to="/">
+            <div class="header__section header__logo">
+              <g-link to="/">
                 <g-image :alt="$static.metadata.siteName" src="~/assets/images/robonomics-logo-sign-sm.svg"/>
                 <span>{{ $static.metadata.siteName }}</span>
               </g-link>
             </div>
 
             <div class="header__section flex-line header__nav">
+
+              <g-link class="header__nav__logo" to="/">
+                <g-image :alt="$static.metadata.siteName" src="~/assets/images/robonomics-logo-sign-sm.svg"/>
+              </g-link>
               
               <div class="header__nav__links header__nav__section">
                 <g-link to="https://robonomics.network">Website</g-link>
@@ -90,7 +94,7 @@ query {
   }
   
 .header {
-  padding: calc(var(--space) / 6) 0;
+  padding: var(--header-padding) 0;
   background-color: var(--header-bg);
 
   top:0;
@@ -107,9 +111,12 @@ query {
 
   &__logo{
     text-transform: uppercase;
-    text-decoration: none;
     letter-spacing: 1.5px;
     font-weight: 700;
+
+    a {
+      text-decoration: none;
+    }
 
     img, span {
       display: inline-block;
@@ -117,7 +124,8 @@ query {
     }
 
     img{
-        width: 30px;
+        // width: 30px;
+        height: var(--header-logo-height);
         margin-right: 15px;
       }
     }
@@ -128,6 +136,15 @@ query {
     &__section {
       margin-right: calc(var(--space) / 2);
       &:last-child{ margin-right: 0; }
+    }
+
+    &__logo{
+      display: none;
+      margin-right: 0.7rem;
+
+      img{
+        width: 2rem;
+      }
     }
 
 
@@ -259,6 +276,21 @@ query {
 
 @media screen and (max-width: 860px) {
   .header{
+    &__logo{
+        display: none;
+      }
+
+    &__nav{
+
+      flex-wrap: nowrap;
+      
+      &__logo{
+        display: block;
+      }
+
+    }
+
+
     & > .flex-line{
       flex-wrap: wrap;
 
@@ -285,17 +317,28 @@ query {
 
 
 @media screen and (max-width: 500px) {
-  .header__nav{
-    flex-wrap: wrap;
+  .header{
 
-    &__search{
-      order: 10;
-      min-width: 100%;
-      margin-top: calc(var(--space)/2);
+    &__nav{
+
+      // flex-wrap: wrap;
+    
+      // &__search{
+      //   order: 10;
+      //   min-width: 100%;
+      //   margin-top: calc(var(--space)/2);
+      // }
+
+      flex-wrap: nowrap;
+
+      &__search{
+        display: none;
+      }
+
     }
   }
-}
 
+}
 </style>
 
 
