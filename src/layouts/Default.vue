@@ -90,7 +90,7 @@ query {
   }
   
 .header {
-  padding: calc(var(--space) / 4) 0;
+  padding: calc(var(--space) / 6) 0;
   background-color: var(--header-bg);
 
   top:0;

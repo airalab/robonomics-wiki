@@ -18,6 +18,16 @@
 		}
 	}
 
+	&__title{
+		cursor: pointer;
+		font-size: 1rem;
+		margin-bottom: .5rem;
+	}
+
+	.menu .menu__title{
+		font-size: 0.8rem;
+	}
+
 	&__item-depth-2{
 		margin-bottom: 0;
 		padding: .4rem 0;
@@ -35,6 +45,4 @@
 		padding: .2rem 1.4rem;
 	}
 
-	h4 { font-size: 1rem; margin-bottom: .5rem; }
-	.menu h4{ font-size: 0.8rem; }
 }
