@@ -40,8 +40,20 @@
 import ToggleTheme from '~/components/ToggleTheme.vue'
 
 export default {
+  
   components: {
     ToggleTheme
+  },
+
+  mounted: function(){
+
+    if( localStorage.intro == 'skip' ){
+      document.location.href = '/docs/'
+    }
+    else{
+      localStorage.intro = 'skip';
+    }
+
   }
 }
 </script>
