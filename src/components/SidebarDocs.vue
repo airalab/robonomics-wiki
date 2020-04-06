@@ -18,14 +18,11 @@
 <script>
 
 import Vue from 'vue'
-import items from '@/data/doc-links.yaml'
 
 export default {
   props: {
     items: {
-      default: items.map(item => {
-        return {...item, isOpen: true}
-      })
+      default: []
     }
   },
   components: {
@@ -40,5 +37,5 @@ export default {
       // console.log(event.currentTarget.innerHTML);
     }
   }
-} 
+}
 </script>
