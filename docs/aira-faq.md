@@ -27,3 +27,20 @@ Delete `keyfile` and `keyfile-psk` in `/var/lib/liability` and restart the servi
 ```
 systemctl restart liability
 ```
+
+## IPFS daemon doesn't start
+
+The error mostly occurs on single-board computers like Raspberry Pi or LattePanda after unexpected electricity lost.
+
+Usually the file `/var/lib/ipfs/api` is corrupted and one may see error:
+
+```
+Error: Failed to parse '/var/lib/ipfs/api' file.
+  error: failed to parse multiaddr "": empty multiaddr
+If you're sure go-ipfs isn't running, you can just delete it.
+Otherwise check:
+  ps aux | grep ipfs
+```
+
+You can delete `/var/lib/ipfs/api` file and restart the service
+
