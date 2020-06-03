@@ -23,7 +23,9 @@
       link: /docs/open-sensor-network-run-by-ipfs/
     - title: Create digital identity run by Ethereum
       link: /docs/create-digital-identity-run-by-ethereum/
-    
+    - title: Sensors Connectivity
+      link: /docs/sensors-connectivity/
+
 
 - title: Learn
   items:
@@ -51,7 +53,7 @@
           link: /docs/market-messages/
         - title: Examples
           link: /docs/agent-development-examples/
-        
+
         - title: Robonomics Network
           items:
             - title: How it works
