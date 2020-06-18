@@ -105,6 +105,8 @@ datalog:
   suri: ""              # private key of publisher account
   remote: "wss://substrate.ipci.io"
   dump_interval: 3600   # time between two transactions in seconds
+  temporal_username:    # set to pin files in Temporal.Cloud
+  temporal_password:
 dev:
   sentry: ""
 ```

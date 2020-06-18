@@ -11,21 +11,29 @@
       link: /docs/get-weather-on-fuji-mountain/
     - title: Robonomics DApp Overview
       link: /docs/robonomics-dapp-overview/
-    - title: AIRA installation
+    - title: AIRA installation on VirtualBox
       link: /docs/aira-installation-on-vb/
     - title: Interact with AIRA
       link: /docs/interact-with-aira/
-
+      # - title: Aira installation on Nuc
+      # link: /docs/aira-installation-on-nuc/
+      # - title: Aira installation on Hetzner
+      #   link:
 
 - title: Cases
   items:
-    - title: Open Sensor Network Run by IPFS
-      link: /docs/open-sensor-network-run-by-ipfs/
+    - title: Open Sensors Network
+      items:
+        - title: IoT Sensors Connectivity
+          link: /docs/iot-sensors-connectivity/
+        - title: Firmware Upload
+          link: /docs/iot-firmware-upload/
+        - title: Install Connectivity on Aira
+          link: /docs/sensors-connectivity-on-aira/
+        - title: Configuration Options Description
+          link: /docs/configuration-options-description/
     - title: Create digital identity run by Ethereum
       link: /docs/create-digital-identity-run-by-ethereum/
-    - title: Sensors Connectivity
-      link: /docs/sensors-connectivity/
-
 
 - title: Learn
   items:
@@ -33,6 +41,9 @@
       link: /docs/robonomics-js/
     - title: Glossary
       link: /docs/glossary/
+
+    - title: Sensors Connectivity
+      link: /docs/sensors-connectivity/
 
     - title: AIRA
       items:
