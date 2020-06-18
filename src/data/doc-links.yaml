@@ -11,14 +11,14 @@
       link: /docs/get-weather-on-fuji-mountain/
     - title: Robonomics DApp Overview
       link: /docs/robonomics-dapp-overview/
-    - title: AIRA installation
+    - title: AIRA installation on VirtualBox
       link: /docs/aira-installation-on-vb/
-      # - title: Aira installation on Nuc
-      #   link:
-      # - title: Aira installation on Hetzner
-      #   link:
     - title: Interact with AIRA
       link: /docs/interact-with-aira/
+      # - title: Aira installation on Nuc
+      # link: /docs/aira-installation-on-nuc/
+      # - title: Aira installation on Hetzner
+      #   link:
 
 - title: Cases
   items:
@@ -26,10 +26,12 @@
       items:
         - title: IoT Sensors Connectivity
           link: /docs/iot-sensors-connectivity/
+        - title: Firmware Upload
+          link: /docs/iot-firmware-upload/
         - title: Install Connectivity on Aira
-          link:
-        - title: Fork
-          link:
+          link: /docs/sensors-connectivity-on-aira/
+        - title: Configuration Options Description
+          link: /docs/configuration-options-description/
     - title: Create digital identity run by Ethereum
       link: /docs/create-digital-identity-run-by-ethereum/
 

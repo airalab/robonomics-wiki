@@ -69,5 +69,5 @@ cd boards/esp/ESP_PING
 ./flash_firmware.py
 ```
 
-The board should be ready. 
+The board should be ready. Go to [Sensors Connectivity Dapp](https://sensors.robonomics.network/#/) and look for your board at the specified GPS location. It could take up to 1 min for the board to appear on the map. 
 
