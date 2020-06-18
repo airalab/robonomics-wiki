@@ -1,7 +1,7 @@
 # Configuration Options Description
 
-Basically you can think of the package as a black box with one input (sensor data) and many outputs.
-For now only SDS011 sensor is supported but if you are familiar with Python it'd be easy to add other sensors as well.
+Basically, you can think of the package as a black box with one input (sensor data) and many outputs.
+For now only SDS011 sensor is supported, but if you are familiar with Python it'd be easy to add other sensors as well.
 
 Have a look at [configuration](https://github.com/airalab/sensors-connectivity/blob/master/config/default.yaml) file:
 
@@ -58,9 +58,9 @@ Explanation of options:
 | `comstation/geo`                   | `lat,lon` a string with two floats separated by a comma. It represents latitude and longitude of a sensor     |
 | `comstation/public_key`            | Ed25519 verifying key in hex format. If not provided connectivity generates a new one      |
 | `tcpstation/enable`                | true/false. Enabling/disabling the station   |
-| `tcpstation/address`               | what address and port listen to. If you are willing to make it open for external connections put `0.0.0.0` as an address. `31313` is a port chosen by developers. You can pick any port you want but don't forget to change the port in an ESP firmware.     |
+| `tcpstation/address`               | what address and port listen to. If you are willing to make it open for external connections put `0.0.0.0` as an address. `31313` is a port chosen by the developers. You can pick any port you want, but don't forget to change the port in an ESP firmware.     |
 | `tcpstation/acl`                   | a list of known public keys in hex format   |
-| `luftdaten/enable`                 | true/false. Whether or not publish data to [Luftdaten](https://devices.sensor.community/). Don't forget to register sensor's mac address on the site         |
+| `luftdaten/enable`                 | true/false. Whether or not publish data to [Luftdaten](https://devices.sensor.community/). Don't forget to register the sensor's mac address on the site         |
 | `robonomics/enable`                | true/false. Whether or not publish data to IPFS topic according to Robonomics communication protocol      |
 | `robonomics/ipfs_proveder`         | an endpoint for IPFS daemon. By default it's `/ip4/127.0.0.1/tcp/5001/http` that means local daemon. The endpoint must by in multiaddr format. For example for [Infura.io](https://infura.io/) it would be `/dns/ipfs.infura.io/tcp/5001/https`       |
 | `robonomics/ipfs_topic`            | IPFS topic's name. If you want to use [DApp](https://sensors.robonomics.network) provided by Robonomics team leave it untouched                 |
@@ -75,7 +75,7 @@ Explanation of options:
 
 ## Scenario #1: Connect SDS011 to serial port
 
-The easiest and the most straight forward way to connect your sensor to the network is using serial port
+The easiest and the most straightforward way to connect your sensor to the network is using the serial port
 
 Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` address
 
