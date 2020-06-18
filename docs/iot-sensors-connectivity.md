@@ -1,8 +1,8 @@
 # IoT Sensors Connectivity
 
-Robonomics Network allows you to communicate with any sensor you wish and get data from the sensor all around the world. This data can be transfered to different distenations.
+Robonomics Network allows you to communicate with any sensor you wish and get data from the sensor all around the world. This data can be transferred to different destinations.
 
-At this page you'll find step-by-step instruction to connect a ESP board to the connectivity server provided by AiraLab.
+On this page you'll find step-by-step instructions to connect an ESP board to the connectivity server provided by AiraLab.
 
 ## Requirements
 
@@ -52,7 +52,7 @@ source result/setup.bash
 
 ## Flash Firmware
 
-Let's start from a ping firmware. Plug a ESP like board in. Edit firmware's configuration file `sensors-connectivity/boards/esp/ESP_PING/config.my`:
+Let's start from a ping firmware. Plug an ESP like board in. Edit firmware's configuration file `sensors-connectivity/boards/esp/ESP_PING/config.my`:
 
 ```yaml
 stassid:                # put your wifi name
