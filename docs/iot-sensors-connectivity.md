@@ -41,6 +41,13 @@ cd sensors-connectivity
 pip3 install -r requirements.txt
 ```
 
+> You can ignore such warnings:
+>
+> ```
+> The script ... is installed in '...' which is not on PATH.
+> Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+> ```
+
 ### On NixOS
 
 ```
@@ -55,11 +62,11 @@ source result/setup.bash
 Let's start from a ping firmware. Plug an ESP like board in. Edit firmware's configuration file `sensors-connectivity/boards/esp/ESP_PING/config.my`:
 
 ```yaml
-stassid:                # put your wifi name
-stapsk:                 # wifi password
-host: "34.90.113.108"   # leave it for now
-port: 31313             # leave it for now
-geo:                    # put your "latitude,longitude"
+stassid: "ESSID"            # put your wifi name
+stapsk: "PASSWORD"          # wifi password
+host: "34.90.113.108"       # leave it for now
+port: 31313                 # leave it for now
+geo: "53.507520,49.252999"  # put your "latitude,longitude"
 ```
 
 Then from firmware's root folder run the script:
