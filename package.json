@@ -14,7 +14,7 @@
     "@noxify/gridsome-plugin-remark-embed": "^1.1.5",
     "gridsome": "^0.7.0",
     "gridsome-plugin-flexsearch": "^0.1.12",
-    "prismjs": "^1.19.0",
+    "prismjs": "^1.21.0",
     "remark-autolink-headings": "^5.2.1",
     "remark-highlight.js": "^5.2.0"
   },
