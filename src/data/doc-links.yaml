@@ -19,8 +19,8 @@
       items:
         - title: Overview
           link: /docs/rio-overview/
-          #  - title: IPFS
-          #    link: /docs/rio-ipfs/
+        - title: IPFS
+          link: /docs/rio-ipfs/
           #  - title: Datalog
           #    link: /docs/rio-datalog/
           #  - title: Launch
