@@ -1,6 +1,6 @@
 # Robonomics IO Overview
 
-The [crate](https://crates.robonomics.network/robonomics_io/index.html) provides a convenient way to interact with blockchain and includes a set of tools.
+The [crate](https://crates.robonomics.network/robonomics_io/index.html) provides a convenient way to interact with blockchain and includes a set of tools. The latest release can be found [here](https://github.com/airalab/robonomics/releases)
 
 ```
 % ./robonomics io
@@ -99,4 +99,18 @@ SUBCOMMANDS:
     launch     CPS launch subsystem command
     pubsub     Broadcast data into PubSub topic
 ```
+
+## Local Testnet
+
+For testing purpose it's possible to run the development environment:
+
+```
+% ./robonomics --dev --rpc-cors all
+```
+
+`--rpc-cors all` allows the [Dapp](https://parachain.robonomics.network/) to be connected to local node. After launching the node, go to the dapp, click on Robonomics icon in the upper left corner, choose Development and put node's local address
+
+![Robonomics Dapp Connect to Local Node](./images/robonomics-dapp-connect-local.jpg "Robonomics Dapp Connect to Local Node")
+
+Finally click Switch and you should be connected to the local node. Check out Accounts tab. There you can create new accounts and transfer tokens.
 

@@ -21,11 +21,15 @@
           link: /docs/rio-overview/
         - title: IPFS
           link: /docs/rio-ipfs/
-          #  - title: Datalog
-          #    link: /docs/rio-datalog/
-          #  - title: Launch
-          #    link: /docs/rio-launch/
-      # - title: Aira installation on Nuc
+        - title: Launch
+          link: /docs/rio-launch/
+        - title: PubSub
+          link: /docs/rio-pubsub/
+        - title: Datalog
+          link: /docs/rio-datalog/
+        - title: SDS011
+          link: /docs/rio-sds011/
+                # - title: Aira installation on Nuc
       # link: /docs/aira-installation-on-nuc/
       # - title: Aira installation on Hetzner
       #   link:

@@ -4,7 +4,7 @@ It serves downloading and uploading files from/to IPFS network
 
 ## Requirements
 
-* `robonomics` executable
+* `robonomics` [executable](https://github.com/airalab/robonomics/releases)
 * Running [IPFS](https://ipfs.io/#install) daemon 
 
 ## Write
