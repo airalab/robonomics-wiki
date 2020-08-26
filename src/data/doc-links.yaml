@@ -15,6 +15,16 @@
       link: /docs/aira-installation-on-vb/
     - title: Interact with AIRA
       link: /docs/interact-with-aira/
+    - title: Robonomics IO
+      items:
+        - title: Overview
+          link: /docs/rio-overview/
+          #  - title: IPFS
+          #    link: /docs/rio-ipfs/
+          #  - title: Datalog
+          #    link: /docs/rio-datalog/
+          #  - title: Launch
+          #    link: /docs/rio-launch/
       # - title: Aira installation on Nuc
       # link: /docs/aira-installation-on-nuc/
       # - title: Aira installation on Hetzner
