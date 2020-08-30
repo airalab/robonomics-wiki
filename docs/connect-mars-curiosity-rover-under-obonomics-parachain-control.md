@@ -33,12 +33,12 @@ catkin build
 We need to adjust starting conditions to make our rover spawn smoothly:
 - Go to
 
-`/simulations_ws/src/master/curiosity_mars_rover_description/worlds` and change line 14 of the file` mars_curiosity.world` to 
+`/robonomics_ws/src/master/curiosity_mars_rover_description/worlds` and change line 14 of the file` mars_curiosity.world` to 
 `<pose>0 0 9 0 0 0</pose>`.
 
 - Go to
 
-`/simulations_ws/src/master/curiosity_mars_rover_description/launch` and change line 4 of the file `mars_curiosity_world.launch` to 
+`/robonomics_ws/src/master/curiosity_mars_rover_description/launch` and change line 4 of the file `mars_curiosity_world.launch` to 
 `<arg name="paused" default="false"/>`.
 
 Don’t forget to add ROS environment variables to the `~/.bashrc`:
