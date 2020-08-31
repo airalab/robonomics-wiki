@@ -33,6 +33,8 @@
       # link: /docs/aira-installation-on-nuc/
       # - title: Aira installation on Hetzner
       #   link:
+    - title: Connect Mars Curiosity rover under Robonomics parachain control
+      link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control/
 
 - title: Cases
   items:
