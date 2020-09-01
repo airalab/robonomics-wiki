@@ -23,7 +23,7 @@ https://youtu.be/pl3eIEC_T2o
 Download Curiosity rover package:
 ```
 mkdir -p robonomics_ws/src
-cd robomonics_ws/src
+cd robonomics_ws/src
 git clone https://bitbucket.org/theconstructcore/curiosity_mars_rover/src/master/
 cd ..
 ```
