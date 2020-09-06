@@ -36,7 +36,11 @@
     - title: Connect Mars Curiosity rover under Robonomics parachain control
       link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control/
     - title: Connect any ROS-compatitable robot under Robonomics parachain control
-      link: /docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control/
+      items:
+        - title: Part 1. Simple controller
+          link: /docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-1/
+        - title: Part 2. Saving data
+          link: /docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-2/
 
 - title: Cases
   items:
