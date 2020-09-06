@@ -1,18 +1,16 @@
-# Connect any ROS-compatitable robot under Robonomics parachain control
+# Connect any ROS-compatitable robot under Robonomics parachain control. Part 1: simple connection
 
 **In this article we will show that with the help of Robonomics tools you can control any ROS-compatitable device. We will find a random drone simulation package on the web and adjust it to run with Robonomics.**
 **Requirements:**
 - Ubuntu 18.04 LTS
 - ROS Melodic + Gazebo + RViz (installation manual [here](http://wiki.ros.org/melodic/Installation))
 - Robonomics node (binary file) (download latest release [here](https://github.com/airalab/robonomics/releases))
-
-Here is the video showing successful launch:
 ## 1. Find a simulation
-Let's surf the web. Google for `ROS drone simulator`. The first link will most likely show you the `tum_simulator` page on [http://wiki.ros.org/tum_simulator](http://wiki.ros.org/tum_simulator)
+Let's surf the web. Google for `ROS drone simulator`. The first link will mostly likely show you the `tum_simulator` page on [http://wiki.ros.org/tum_simulator](http://wiki.ros.org/tum_simulator)
 
 ![tum_simulator](./images/drone-demo/tum_simulator.jpg "tum_simulator")
 
-It's pretty outdated, so we better find a fork for our system. Google for `tum_simulator Ubuntu 18 Gazebo 9 fork`. This will result in a GitHub [repo](https://github.com/tahsinkose/sjtu-drone) with an appropriate package. Dowload it
+It's pretty outdated, so we better find a fork for our system. Google for `tum_simulator Ubuntu 18 Gazebo 9 fork`. The first result is a GitHub [repo](https://github.com/tahsinkose/sjtu-drone) with an appropriate package. Dowload it
 ```
 mkdir -p drone_simulator_ws/src
 cd drone_simulator_ws/src
@@ -45,7 +43,7 @@ rostopic info /drone/land
 ![topics_info](./images/drone-demo/topics_info.jpg "topics_info")
 
 Shut the simulation for a while.
-## 3. Create a new package 
+## 3. Create a new package
 Let's create a package and a script file inside `~/drone_simulator_ws/src`. As seen from topics' info we need `Twist` and `Empty` message types. Since they are parts of `std_msgs` and `geometry_msgs`, mention them as dependencies:
 ```
 cd ~/drone_simulator_ws/src
@@ -80,7 +78,7 @@ def takeoff():
         if stop_takingoff:
             break
         rate.sleep()
-        
+
 def land():
 
     rospy.loginfo("Landing")
@@ -193,7 +191,7 @@ Save the file and go on to managing parachain accounts
 ## 4. Manage accounts in DAPP
 Since we are testing, let's create a local robonomics network node with robonomics binary file:
 ```
-./robonomics --dev 
+./robonomics --dev
 ```
 **Important!** Before next launches it is necessary to remove a directory `db` with
 
@@ -224,12 +222,8 @@ Now you can send a transaction triggering the drone to start flying. To do so, y
 echo "ON" | ./robonomics io write launch -r <DRONE_ADDRESS> -s <EMPLOYER’S_KEY>
 ```
 Where `<DRONE_ADDRESS>`  and `<EMPLOYER’S_KEY>` are replaced with  previously saved strings accordingly.
-You should see the log `"Taking Off"` and the drone should start Flying:
+You should see the log `"Taking Off"` and the drone should start flying:
 
 ![flying](./images/drone-demo/flying.jpg "flying")
 
-That's how any ROS-compatitable robot can be controlled by Robonomics parachain control.
-
-
-
-
+That's how any ROS-compatitable robot can be controlled by Robonomics parachain control. Proceed to part 2 to learn more

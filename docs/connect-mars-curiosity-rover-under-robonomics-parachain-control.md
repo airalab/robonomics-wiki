@@ -103,7 +103,7 @@ You should see the log `"Arming..."` and the robot should start moving its camer
 
 ![Datalog](./images/curiosity-demo/hash_in_chain.jpg "Datalog")
 
-The IPFS hash of the telemetry has been saved in the blockchain. To see the data simply copy the hash and add it to the Gateway address `gateway.ipfs.io/ipfs/`:
+The IPFS hash of the telemetry has been saved in the blockchain. To see the data simply copy the hash and add it to the local [gateway](https://gateway.ipfs.io/ipfs/QmeYYwD4y4DgVVdAzhT7wW5vrvmbKPQj8wcV2pAzjbj886/docs/getting-started/) address `localhost:8080/ipfs/`:
 
 ![Voila](./images/curiosity-demo/datalog.jpg "Voila")
 
