@@ -25,4 +25,5 @@ Try out existing [services](https://dapp.robonomics.network/#/services)
 
 ### I'm a robotics engineer
 
-Check out [cases](/docs/open-sensor-network-run-by-ipfs) section and start developing by [examples](/docs/examples).
+Check out [cases](/docs/iot-sensors-connectivity/) section and start developing by [examples](/docs/agent-development-examples).
+
