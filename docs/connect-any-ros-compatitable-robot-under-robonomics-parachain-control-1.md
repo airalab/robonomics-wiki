@@ -1,4 +1,4 @@
-# Connect any ROS-compatitable robot under Robonomics parachain control. Part 1: simple connection
+# Connect ROS-compatibale Drone To Robonomics Parachain. Part 1. Launch by Transaction
 
 **In this article we will show that with the help of Robonomics tools you can control any ROS-compatitable device. We will find a random drone simulation package on the web and adjust it to run with Robonomics.**
 **Requirements:**
@@ -42,152 +42,17 @@ rostopic info /drone/land
 
 ![topics_info](./images/drone-demo/topics_info.jpg "topics_info")
 
-Shut the simulation for a while.
-## 3. Create a new package
-Let's create a package and a script file inside `~/drone_simulator_ws/src`. As seen from topics' info we need `Twist` and `Empty` message types. Since they are parts of `std_msgs` and `geometry_msgs`, mention them as dependencies:
+As may be seen, there should be messages of `Twist` and `Empty` types, they are parts of `std_msgs` and `geometry_msgs`, we'll use this in the controller. Shut the simulation for a while.
+## 3. Download controller package
+Globally, the main difference from the casual ROS robot controller is a block of code, which checks all the transactions in the network using [Robonomics IO](https://wiki.robonomics.network/docs/rio-overview/). The package itself is available on GitHub. Download it and build the workspace:
 ```
 cd ~/drone_simulator_ws/src
-catkin_create_pkg drone_simulator_controller rospy std_msgs geometry_msgs
+git clone https://github.com/PaTara43/drone_simulator_controller
 cd drone_simulator_controller/src
-touch drone_sample_controller.py
-chmod +x drone_sample_controller.py
+chmod +x *.py
+cd ~/drone_simulator_ws/src
+catkin build
 ```
-Open the file and let's make the drone fly. First things first, modules.
-```python
-#!/usr/bin/env python
-
-import ConfigParser #to parse config file with drone and employer's addresses and keys
-import os #to locate files
-import rospy #Python client library for ROS
-import subprocess #to call shell commands from terminal and use robonomics binary
-import threading #threading to publish topics
-import time #to sleep
-
-from geometry_msgs.msg import Twist #message type for /cmd_vel
-from std_msgs.msg import Empty #message type for /drone/takeoff and /drone/land
-```
-Let's then specify `takeoff` and `land` functions. Basically, they are the simpliest [ROS publishers](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29):
-```python
-def takeoff():
-    rospy.loginfo("Taking Off")
-    takeoff = rospy.Publisher('drone/takeoff', Empty, queue_size=10)
-
-    rate = rospy.Rate(10)
-    while not rospy.is_shutdown():
-        takeoff.publish()
-        if stop_takingoff:
-            break
-        rate.sleep()
-
-def land():
-
-    rospy.loginfo("Landing")
-    land = rospy.Publisher('drone/land', Empty, queue_size=10)
-
-    rate = rospy.Rate(10)
-    while not rospy.is_shutdown():
-        land.publish()
-        if stop_landing:
-            break
-        rate.sleep()
-```
-Fly function is a little tircky, we need to specify all the parameters of the message and add a stop option when we finish the motion.
-```python
-def fly():
-
-    rospy.loginfo("Flying")
-    move = rospy.Publisher('cmd_vel', Twist, queue_size=10)
-
-    circle_command = Twist()
-    circle_command.linear.x = 1.0
-    circle_command.linear.y = 0.0
-    circle_command.linear.z = 0.0
-
-    circle_command.angular.x = 0.0
-    circle_command.angular.y = 0.0
-    circle_command.angular.z = 0.4
-
-    rate = rospy.Rate(10)
-    while not rospy.is_shutdown():
-        move.publish(circle_command)
-        if stop_flying:
-            circle_command.linear.x = 0.0
-            circle_command.angular.z = 0.0
-            move.publish(circle_command)
-            break
-        rate.sleep()
-```
-Before going further, let's create a config file next to the python script in the src folder:
-```
-touch config.config
-```
-It should contain the name of the block of parameters and the parameters themselves:
-```
-[key_and_addresses]
-DRONE_ADDRESS =  #get it from Robonomics portal
-DRONE_KEY =  #get it from Robonomics portal
-EMPLOYER_ADDRESS =  #get it from Robonomics portal
-EMPLOEYR_KEY =  #get it from Robonomics portal
-ROBONOMICS_DIR =  #path to robonomics_binary
-```
-We'll fill in the file later. Now let's go back to the script. The first step of main body is to initialize the node to enable logs and parse the config file.
-```python
-rospy.init_node('drone_controller', anonymous = False)
-rospy.loginfo('Node initialized')
-
-#waiting for transaction
-rospy.loginfo("Parsing Config")
-dirname = os.path.dirname(__file__) + '/../'
-configParser = ConfigParser.RawConfigParser()
-configFilePath = dirname + 'src/config.config'
-configParser.read(configFilePath)
-rospy.loginfo("Parsing Completed")
-```
-Then we implement the transaction checking block using [Robonomics IO](https://wiki.robonomics.network/docs/rio-overview/) features. The script won't run furhter, until the `"if"` condition is met:
-```python
-rospy.loginfo("Waiting for flight payment")
-
-program = configParser.get('key_and_addresses', 'ROBONOMICS_DIR') + "/robonomics io read launch" #that's the bash command to launch Robonomics IO and read the transactions
-process = subprocess.Popen(program, shell=True, stdout=subprocess.PIPE)
-while True:
-    try:
-        output = process.stdout.readline()
-        if output.strip() == configParser.get('key_and_addresses', 'EMPLOYER_ADDRESS') + " >> " + configParser.get('key_and_addresses', 'DRONE_ADDRESS') + " : true": #checking the correct payment to the drone address
-            rospy.loginfo("Flight Paid!")
-            process.kill()
-            break #after that the script will continue running
-        if output.strip():
-            rospy.loginfo("Not my flight is paid!")
-    except KeyboardInterrupt:
-        process.kill()
-        exit
-```
-And last but not least is the simple motion script. We will use threading module to face the ROS publisher and subscriber function requirements.
-```python
-takingoff = threading.Thread(target=takeoff)
-flying = threading.Thread(target=fly)
-landing = threading.Thread(target=land)
-
-stop_takingoff = False
-stop_flying = False
-stop_landing = False #flages used to stop threads
-
-takingoff.start()
-time.sleep(1)
-stop_takingoff = True
-takingoff.join()
-
-flying.start()
-time.sleep(10)
-stop_flying = True
-flying.join()
-
-landing.start()
-time.sleep(1)
-stop_landing = True
-landing.join()
-```
-Save the file and go on to managing parachain accounts
 ## 4. Manage accounts in DAPP
 Since we are testing, let's create a local robonomics network node with robonomics binary file:
 ```
