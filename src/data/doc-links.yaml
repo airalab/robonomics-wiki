@@ -33,13 +33,13 @@
       # link: /docs/aira-installation-on-nuc/
       # - title: Aira installation on Hetzner
       #   link:
-    - title: Connect Mars Curiosity rover under Robonomics parachain control
+    - title: Connect Mars Curiosity Rover To Robonomics Parachain
       link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control/
-    - title: Connect any ROS-compatitable robot under Robonomics parachain control
+    - title: Connect ROS-compatibale Drone To Robonomics Parachain
       items:
-        - title: Part 1. Simple controller
+        - title: Part 1. Launch by Transaction
           link: /docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-1/
-        - title: Part 2. Saving data
+        - title: Part 2. Saving Data To Blockchain
           link: /docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-2/
 
 - title: Cases

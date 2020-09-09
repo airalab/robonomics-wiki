@@ -15,108 +15,8 @@ If we launch a simulation and look at the topic list (see previous tutorial), we
 
 ![front_camera](./images/drone-demo/front_camera.jpg "front_camera")
 
-Let's try to take a picture every 1 second and after the flight publish these photos to IPFS. To do so, we need ato add a new dependency to our `CMakeList.txt` and `package.xml` in `drone_simulator_controller` package. 
-Add  `sensor_msgs` to `find_package` block
-and `<build_depend>sensor_msgs</build_depend>`, 
-`<build_export_depend>sensor_msgs</build_export_depend>`, 
-`<exec_depend>sensor_msgs</exec_depend>` to `package.xml` dependencies block.
-
-![added_package](./images/drone-demo/added_package.jpg "added_package")
-
-Build the package after editing files:
-```
-cd ~/drone_simulator_controller
-catkin build
-```
-## 2. Edit controller script
-Open `drone_sample_controller.py` and add lines to imports block:
-```python
-import cv2 #for image converting
-import ipfshttpclient #to send data to IPFS
-
-from cv_bridge import CvBridge, CvBridgeError
-from sensor_msgs.msg import Image #message type for /drone/front_camera/image_rawfrom cv_bridge import CvBridge, CvBridgeError
-```
-In the functions defining block add two new fuctions, made for reading image data from topic and saving them once a second:
-```python
-def image_callback(msg):
-    global dirname
-    global i
-    if (i - time.time() <-1):
-        i = time.time()
-        try:
-            # Convert your ROS Image message to OpenCV2
-            cv2_img = bridge.imgmsg_to_cv2(msg, "bgr8")
-            cv2.imwrite(dirname + 'src/drone_images/front_camera_image' + str(time.time()) + '.jpeg', cv2_img)
-            rospy.loginfo("Image Saved")
-        except CvBridgeError, e:
-            print(e)
-
-
-def take_pictures():
-    # Define your image topic
-    image_topic = "drone/front_camera/image_raw"
-    # Set up your subscriber and define its callback
-    rate = rospy.Rate(2)
-    while not rospy.is_shutdown():
-        if stop_taking_pictures:
-            break
-        rospy.Subscriber(image_topic, Image, image_callback)
-        rate.sleep()
-```
-In the main body add global variables and class instance initializing:
-```python
-global i
-global dirname
-i = time.time()
-bridge = CvBridge()
-```
-After parsing block add folder creating lines:
-```python
-rospy.loginfo("Creating directory for pictures")
-os.mkdir(dirname + 'src/drone_images')
-```
-A new thread, flag for it and thread start method:
-```python
-taking_pictures = threading.Thread(target=take_pictures)
-stop_taking_pictures = False #flages used to stop threads
-taking_pictures.start()
-rospy.loginfo("Started taking pictures")
-```
-And the last large block to push files to IPFS and send the IPFS hash to chain:
-```python
-stop_taking_pictures = True
-taking_pictures.join()
-
-rospy.loginfo("Pushing files to IPFS")
-try:
-    client = ipfshttpclient.connect()
-    res = client.add(dirname + 'src/drone_images', recursive=True)
-except Exception, e:
-    print(e)
-rospy.loginfo ("Files pushed. IPFS hash is " + res[-1].values()[0].encode('utf8'))
-
-rospy.loginfo("Removing directory")
-try:
-    piclist = [f for f in os.listdir(dirname + 'src/drone_images')]
-    for f in piclist:
-        os.remove(os.path.join(dirname + 'src/drone_images', f))
-    os.rmdir(dirname + 'src/drone_images')
-except Exception, e:
-    print(e)
-
-rospy.loginfo ("Publishing IPFS hash to chain")
-try:
-    program = "echo \"" + res[-1].values()[0].encode('utf8') + "\" | " + configParser.get('key_and_addresses', 'ROBONOMICS_DIR') + "/robonomics io write datalog -s " + configParser.get('key_and_addresses', 'DRONE_KEY')
-    process = subprocess.Popen(program, shell=True, stdout=subprocess.PIPE)
-    output = process.stdout.readline()
-    rospy.loginfo("Published data to chain. Transaction hash is " + output.strip())
-except Exception, e:
-    print(e)
-rospy.loginfo("Job done. Check DAPP for IPFS data hash")
-```
-The full code is available in a [GitHub repository.](https://github.com/PaTara43/robonomics_drone_controller)
-## 4. Launch
+Let's try to take a picture every 1 second and after the flight publish these photos to IPFS. If you have completed the first tutorial, you don't need to download anything else. It's the `drone_sample_controller_pictures.py` script.
+## 2. Manage accounts in DAPP
 As done in a previous tutorial, create a local robonomics network node with robonomics binary file:
 ```
 ./robonomics --dev
@@ -132,8 +32,8 @@ After a successful launch go to https://parachain.robonomics.network and switch 
 Go to Accounts. There should be previously saved **DRONE** and **EMPLOYER** ones. They should have the same key and address as obtained in part 1, so just transfer some money (units) to these accounts:
 
 ![balances](./images/drone-demo/balances.jpg "balances")
-
-In a separate terminal launch drone simulation:
+## 3. Launch
+Up to now the **only thing running** should be the robonomics local node. In a separate terminal launch drone simulation:
 ```
 roslaunch sjtu_drone simple.launch
 ```
@@ -144,7 +44,7 @@ ipfs daemon
 ```
 Run the script:
 ```
-rosrun drone_simulator_controller drone_sample_controller.py
+rosrun drone_simulator_controller drone_sample_controller_pictures.py
 ```
 Now you can send a transaction triggering the drone to start flying and taking pictures. To do so, you should use the Robonomics IO `write` subcommand of robonomics binary file:
 ```
