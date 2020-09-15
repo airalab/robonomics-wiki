@@ -41,6 +41,8 @@
           link: /docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-1/
         - title: Part 2. Saving Data To Blockchain
           link: /docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-2/
+    - title: Connect Baxter robot under Robonomics parachain control
+      link: /docs/baxter/
 
 - title: Cases
   items:
