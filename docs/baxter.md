@@ -1,6 +1,8 @@
 # Control Baxter robot with robonomics
 
-Example of how it works is available on [YouTube.][db1]
+Example of how it works:
+
+https://youtu.be/AeufQmaNRWk
 
 ## Requirements:
 
@@ -110,7 +112,6 @@ Click  __View on Gateway__ and that's all!
 ![result1][im12]
 ![result2][im13]
 
-[db1]: <https://youtu.be/AeufQmaNRWk>
 [db2]: <http://wiki.ros.org/melodic/Installation>
 [db3]: <https://dist.ipfs.io/go-ipfs/v0.4.22/go-ipfs_v0.4.22_linux-386.tar.gz>
 [db4]: <https://github.com/airalab/robonomics/releases>
