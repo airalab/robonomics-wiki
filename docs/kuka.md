@@ -73,7 +73,11 @@ In kuka_control package path you need to edit move_arm_client.py.
 cd src/
 nano move_arm_client.py
 ```
-Change kuka_address, kuka_key and work_address to you addresses and key, then change robonomics_path to your path to file robonomics. Now you can run control script:
+Change kuka_address, kuka_key and work_address to you addresses and key, then change robonomics_path to your path to file robonomics.
+
+![code](./images/kuka-demo/code.jpg)
+
+Now you can run control script:
 ```bash
 python move_arm_client.py
 ```
