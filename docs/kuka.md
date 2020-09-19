@@ -55,7 +55,7 @@ Go to https://parachain.robonomics.network and switch to local node
 
 ![local](./images/kuka-demo/local.jpg)
 
-Then go to Accounts and create KUKA and WORK accounts. Save account's names and keys, you will need them later
+Then go to Accounts and create KUKA and WORK accounts. Save account's addresses and keys, you will need them later
 
 ![acc](./images/kuka-demo/create_account.jpg)
 
@@ -68,12 +68,16 @@ ipfs daemon
 ```
 ***
 ## Running control package
-In kuka_control package path:
+In kuka_control package path you need to edit move_arm_client.py. 
 ```bash
 cd src/
+nano move_arm_client.py
+```
+Change kuka_address, kuka_key and work_address to you addresses and key, then change robonomics_path to your path to file robonomics. Now you can run control script:
+```bash
 python move_arm_client.py
 ```
-![control](./images/kuka-demo/move_arm.jpg)
+![control](./images/kuka-demo/control.jpg)
 
 Then in a new window send a transaction to make Kuka move:
 ```bash
