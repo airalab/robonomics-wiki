@@ -1,5 +1,7 @@
 # Control Kuka manipulator with robonomics.
-Video with an example of work can be found [here](https://youtu.be/Fhf9LIt6zXQ)
+Video with an example of work can be found here:
+
+[https://youtu.be/Fhf9LIt6zXQ](https://youtu.be/Fhf9LIt6zXQ)
 ***
 ## Requirements
 * ROS melodic, Gazebo (installation instraction [here](http://wiki.ros.org/melodic/Installation/Ubuntu))
@@ -39,7 +41,7 @@ In a new window
 ```bash
 rosrun manipulator_gazebo move_arm_server
 ```
-![model](https://github.com/LoSk-p/media/blob/master/1.png)
+![model](./images/kuka-demo/gazebo.jpg)
 ***
 ## Running robonomics
 Go to the folder with robonomics file ad create a local robonomics network:
@@ -47,17 +49,17 @@ Go to the folder with robonomics file ad create a local robonomics network:
 ./robonomics --dev --rpc-cors all
 ```
 
-![robonomics](https://github.com/LoSk-p/media/blob/master/2.png)
+![robonomics](./images/kuka-demo/robonomics.jpg)
 
 Go to https://parachain.robonomics.network and switch to local node
 
-![local](https://github.com/LoSk-p/media/blob/master/3.png)
+![local](./images/kuka-demo/local.jpg)
 
 Then go to Accounts and create KUKA and WORK accounts. Save account's names and keys, you will need them later
 
-![acc](https://github.com/LoSk-p/media/blob/master/4.png)
+![acc](./images/kuka-demo/create_account.jpg)
 
-![accs](https://github.com/LoSk-p/media/blob/master/Screenshot%20from%202020-09-18%2001-07-56.png)
+![accs](./images/kuka-demo/accounts.jpg)
 ***
 ## Running ipfs
 Run ipfs daemon:
@@ -71,7 +73,7 @@ In kuka_control package path:
 cd src/
 python move_arm_client.py
 ```
-![control](https://github.com/LoSk-p/media/blob/master/6.png)
+![control](./images/kuka-demo/move_arm.jpg)
 
 Then in a new window send a transaction to make Kuka move:
 ```bash
@@ -79,21 +81,21 @@ echo "ON" | ./robonomics io write launch -r <KUKA_ADDRESS> -s <WORK_KEY>
 ```
 Where <KUKA_ADDRESS> and <WORK_KEY> are address and key from your accounts:
 
-![transaction](https://github.com/LoSk-p/media/blob/master/7.png)
+![transaction](./images/kuka-demo/transaction.jpg)
 
 In the window with kuka_control package you will see:
 
-![done](https://github.com/LoSk-p/media/blob/master/8.png)
+![done](./images/kuka-demo/done.jpg)
 
 Then go Developer/Chain state on the Robonomics portal, select datalog in query and add KUKA datalog with button '+':
 
-![datalog](https://github.com/LoSk-p/media/blob/master/9.png)
+![datalog](./images/kuka-demo/datalog.jpg)
 
 Now you can find Kuka's telemetry using this hash in IPFS Companion:
 
-![ipfs](https://github.com/LoSk-p/media/blob/master/10.png)
+![ipfs](./images/kuka-demo/ipfs.jpg)
 
-![telemetry](https://github.com/LoSk-p/media/blob/master/11.png)
+![telemetry](./images/kuka-demo/telemetry.jpg)
 
 
 
