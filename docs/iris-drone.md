@@ -1,7 +1,8 @@
 # Drone control with robonomics 
 ## Description
 Drone starts moving after transcation and store file with the coordinates in IPFS.  
-**The control script is based on the [GAAS demo script](https://github.com/generalized-intelligence/GAAS)**
+**The control script is based on the [GAAS demo script](https://github.com/generalized-intelligence/GAAS)**  
+Video example is available on [YouTube](https://youtu.be/4CwtGAX1OwM)
 
 ## Requirements
 * dependencies for control:
@@ -60,14 +61,24 @@ git clone https://github.com/PX4/Firmware.git
 cd Firmware
 make posix_sitl_default gazebo
 ```
+```bash
+cd ~/catkin_ws/src
+git clone https://github.com/generalized-intelligence/GAAS.git
+cp -r ~/catkin_ws/src/simulator/models/* ~/catkin_ws/src/Firmware/Tools/sitl_gazebo/models/
+cp -r ~/catkin_ws/src/GAAS/simulator/worlds/* ~/catkin_ws/src/Firmware/Tools/sitl_gazebo/worlds/
+cp -r ~/catkin_ws/src/GAAS/simulator/posix-config/* ~/catkin_ws/src/Firmware/posix-configs/SITL/init/ekf2/
+```
+
 Modifying your `.bashrc` file, adding the following lines to the bottom:  
 
 `source ~/catkin_ws/devel/setup.bash `  
-`source ~/catkin_ws/src/Firmware/Tools/setup_gazebo.bash ~/catkin_ws/src/Firmware/ ~/catkin_ws/src/Firmware/build posix_sitl_default `    
+`source ~/catkin_ws/src/Firmware/Tools/setup_gazebo.bash ~/catkin_ws/src/Firmware/ ~/catkin_ws/src/Firmware/build posix_sitl_default `   
+`export GAZEBO_MODEL_PATH=:~/catkin_ws/src/simulator/models`  
 `export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/Firmware`  
 `export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/Firmware/Tools/sitl_gazebo`  
-  
+`export GAZEBO_MODEL_PATH=:~/catkin_ws/src/simulator/models:~/catkin_ws/src/GAAS/simulator/models`  
 
+  
 ## Control Package Installation
 ```bash
 cd catkin_ws/src
@@ -77,7 +88,9 @@ catkin build
 ```
 ## Robonomics Network
 To create a local robonomics network go to the folder with the robonomic binary file and run:  
-`./robonomics --dev --rpc-cors all`
+`./robonomics --dev --rpc-cors all`  
+
+Add robonomic's path to `config.py`
 
 ![IPFS](./images/iris-drone-demo/IPFS.jpg)
 
@@ -117,6 +130,3 @@ You can find drone's telemetry running `https://gateway.ipfs.io/ipfs/<hash>` ins
 
 It's important to remove `db` derictory before next launches using  
 ` rm -rf ~/.local/share/robonomics/chains/dev/db`
-
-
-
