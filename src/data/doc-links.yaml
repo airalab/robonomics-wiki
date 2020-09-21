@@ -43,6 +43,8 @@
           link: /docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-2/
     - title: Connect Baxter robot under Robonomics parachain control
       link: /docs/baxter/
+    - title: Connect Kuka under Robonomics Parachain Control
+      link: /docs/kuka/
 
 - title: Cases
   items:
