@@ -37,6 +37,8 @@
       link: /docs/baxter/
     - title: Connect Kuka under Robonomics Parachain Control
       link: /docs/kuka/
+    - title: Connect Iris Drone under Robonomics Parachain Control
+      link: /docs/iris-drone/
 
 - title: Cases
   items:
