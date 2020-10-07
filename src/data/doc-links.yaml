@@ -39,6 +39,8 @@
       link: /docs/kuka/
     - title: Connect Iris Drone under Robonomics Parachain Control
       link: /docs/iris-drone/
+    - title: Robonomics test network manual
+      link: /docs/robonomics-test-network-manual/
 
 - title: Cases
   items:
@@ -61,7 +63,7 @@
       link: /docs/robonomics-js/
     - title: Glossary
       link: /docs/glossary/
-
+      
     - title: Sensors Connectivity
       link: /docs/sensors-connectivity/
 
