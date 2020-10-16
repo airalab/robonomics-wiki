@@ -7,7 +7,7 @@
 - 3 servers with root shell. Their ip-addresses in the current instruction will be **165.227.171.127**, **159.89.25.75** and **159.89.30.50**
 
 ## Prepare directories
-Need to download 2 archives from the links above and open the folder with them in the terminal.
+Download 2 archives from the links above and open the folder with them in the terminal.
 Then create a directory for the project, unpack the archives into it and go to the created folder:
 ```
 $ mkdir robonomics_test_network
@@ -16,25 +16,25 @@ $ tar -xf ./subkey-ubuntu-0.21.0-x86_64.tar.xz -C ./robonomics_test_network/
 $ cd ./robonomics_test_network/
 ```
 
-Next, need to create a separate **uploads** directory and the necessary subdirectories for each server. All files intended for uploading to a specific server will be stored in these subdirectories:
+Next, create a separate **uploads** directory and the necessary subdirectories for each server. All files intended for uploading to a specific server will be stored in these subdirectories:
 ```
 $ mkdir -p uploads/165.227.171.127/keystore && mkdir -p uploads/165.227.171.127/network
 $ mkdir -p uploads/159.89.25.75/keystore && mkdir -p uploads/159.89.25.75/network
 $ mkdir -p uploads/159.89.30.50/keystore && mkdir -p uploads/159.89.30.50/network
 ```
 
-Also, need to create a **local** folder with **validators** and **sudo** folders, which will store the validators and sudo keys locally.
+Also, create a **local** folder with **validators** and **sudo** folders, which will store the validators and sudo keys locally.
 ```
 $ mkdir -p local/validators && mkdir -p local/sudo
 ```
 
 ## Prepare spec.json
-Using the robonomics binary, need to generate a **spec.json** file, which will use as the basis:
+Using the robonomics binary, generate a **spec.json** file, which will use as the basis:
 ```
 $ ./robonomics build-spec --chain dev > uploads/spec.json
 ```
 
-Next, have to edit this file. At first need to correct the first three fields, make them look like this:
+Next, edit this file. At first correct the first three fields, make them look like this:
 ```json
 "name": "Test Robonomics Network",
 "id": "dev",
@@ -43,7 +43,7 @@ Next, have to edit this file. At first need to correct the first three fields, m
 
 ### bootNodes
 The **bootNodes** field is a list of strings of special format. For each of the bootnodes must write the corresponding string here.
-To do this, must first create a key file for each bootnode using **subkey**:
+To do this, first create a key file for each bootnode using **subkey**:
 ```
 $ ./subkey generate-node-key uploads/165.227.171.127/network/secret_ed25519  
 12D3KooWBPq1fDLQC2iqQ4FpM2mUpiXjBRcb8ptk7tbaqr2B6HZN
@@ -80,7 +80,7 @@ Further up to the **palletBalances** field leave unchanged.
 
 
 ### palletBalances
-To fill the palletBalances field need to create **the number of nodes + 1** (the last key is for **sudo**) keys. This can be done using **subkey**, in the file name must specify **SS58 Address** from the generated key, in the file content must specify **seed** phrase in quotes. 
+To fill the palletBalances field create **the number of nodes + 1** (the last key is for **sudo**) keys. This can be done using **subkey**, in the file name must specify **SS58 Address** from the generated key, in the file content must specify **seed** phrase in quotes. 
 
 Example creating one key.
  - Generate key:
@@ -104,7 +104,7 @@ Command template for creating a validator key file:
 Command template for creating a sudo key file:   
 > touch ./local/sudo/**SS58_Address** && echo '"**seed**"' | tee ./local/sudo/**SS58_Address**
 
-Three keys need to store in the **local/validators** folder and one in the **local/sudo** folder. As a result, the following content should appear in the **local** directory:
+Three keys are stored in the **local/validators** folder and one in the **local/sudo** folder. As a result, the following content should appear in the **local** directory:
 ```
 ./local/
 ├── sudo
@@ -115,7 +115,7 @@ Three keys need to store in the **local/validators** folder and one in the **loc
     └── 5FPRYfSVqwaX39vXZ78tT3DPBT9FmFXvdQDD7y5UQKncJGu1
 ```
 
-Now need to fill the palletBalances section in the spec.json file with these keys.
+Now fill the palletBalances section in the spec.json file with these keys.
 As a result, it should look like this:
 ```
 "palletBalances": {
@@ -139,12 +139,11 @@ As a result, it should look like this:
   ]
 },
 ```
-The values that were previously present in the palletBalances section must to delete.
-
+The values that were previously presented in the palletBalances section must be deleted.
 
 ### palletSession
-Next step is the **palletSession** section in file **spec.json**. First need to describe its format. 
-This section contains the "keys" field, which will contain a list of three lists (equals of nodes count). Each of these lists will be look like follows:
+Next step is the **palletSession** section in file **spec.json**. First let's describe its format. 
+This section contains the "keys" field, that contains a list of three lists (equals of nodes count). Each of these lists looks like follows:
 ```
 [
     "%validator_SS58_address%",
@@ -157,10 +156,10 @@ This section contains the "keys" field, which will contain a list of three lists
     }
 ]
 ```
-**%validator_SS58_address%** is the validator key that was generated for each node in the **palletBalances** section of this manual. Just need to copy it twice for each node.  
+**%validator_SS58_address%** is the validator key that was generated for each node in the **palletBalances** section of this manual. Just copy it twice for each node.
 
-To fill in the remaining 4 lines for each node, you will first need to create 4 key files for each node and store them in the **keystore** folders.
-As key files are generated, you can also populate **palletSession**.  
+To fill in the remaining 4 lines for each node, you need to create 4 key files for each node and store them in the **keystore** folders.
+As key files are generated, you can also populate **palletSession**.
 
 Each key file must contain a **seed** phrase in quotes.
 Making of the name of each key file require separate consideration.
@@ -192,7 +191,7 @@ An example of creating keys for one node:
  **babe** key file creation command template:  
   > touch ./uploads/**node_ip**/keystore/62616265+**Account_ID** && echo '"**seed**"' | tee ./uploads/**node_ip**/keystore/62616265+**Account_ID**  
 
-  As you can see, the name of the babe key file is the sum of two substrings: **babe prefix ('62616265')**, and the **account_id** of the generated key, without the leading zero (**fa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43**). 
+As you can see, the name of the babe key file is the sum of two substrings: **babe prefix ('62616265')**, and the **account_id** of the generated key, without the leading zero (**fa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43**). 
   Note that the keys **babe, im_online, authority_discovery** are generated with the indication **--sr25519**.  
   **grandpa** key have to generate with the indication **--ed25519**.
  
@@ -400,12 +399,12 @@ In the rest of the **spec.json** file, you need to change only the contents of *
 ```
 
 ## systemd unit file
-Now need to create systemd unit file:
+Now create systemd unit file:
 ```
 $ touch ./uploads/robonomics.service
 ```
 
-And to fill it like this:
+And fill it like this:
 ```
 [Unit]
 Description=robonomics
@@ -422,7 +421,7 @@ ExecStart=/usr/bin/robonomics  --chain /etc/substrate/spec.json --name ${HOSTNAM
 [Install]
 WantedBy=multi-user.target
 ```
-As you can see from the "ExecStart" line, the **robonomics** binary  need to upload to the **/usr/bin/** directory, and the **spec.json** file need to upload to the **/etc/substrate/** directory.
+As you can see from the "ExecStart" line, the **robonomics** binary is stored in the **/usr/bin/** directory, and the **spec.json** file is stored in the **/etc/substrate/** directory.
 
 ## Uploading files
 The following one-line command uploads all files to the required directories on the servers. It is important that there are no other folders in the **uploads** directory, except for the folders with the ip-addresses of the nodes:
@@ -439,7 +438,7 @@ for IP in `ls -l ./uploads/ | grep '^d' | awk '{print $9}'`; do \
 ```
 
 ## Network launch
-Now need to connect to all nodes, enable and start the **robonomics.service** unit:
+Now connect to all nodes, enable and start the **robonomics.service** unit:
 ```
 $  \
 for IP in `ls -l ./uploads/ | grep '^d' | awk '{print $9}'`; do \
