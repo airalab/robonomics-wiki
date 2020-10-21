@@ -18,8 +18,8 @@
               </g-link>
               
               <div class="header__nav__links header__nav__section">
-                <g-link to="https://robonomics.network">Website</g-link>
-                <g-link to="https://github.com/airalab/robonomics_specs/blob/master/pdf/whitepaper_en.pdf">White Paper</g-link>
+                <g-link to="https://discourse.robonomics.network">Forum</g-link>
+                <g-link to="https://github.com/airalab/">Github</g-link>
               </div>
 
               <div class="header__nav__search header__nav__section">
@@ -58,7 +58,7 @@
       <footer class="footer">
         <div class="layout__page">
           <nav>
-            <g-link to="https://github.com/airalab">Github</g-link>
+            <g-link to="https://robonomics.network">Website</g-link>
             <g-link to="https://riot.im/app/#/room/#robonomics:matrix.org">Riot chat</g-link>
             <g-link to="https://twitter.com/AIRA_Robonomics">Twitter</g-link>
           </nav>
