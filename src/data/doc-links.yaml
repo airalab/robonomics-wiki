@@ -2,44 +2,33 @@
   items:
     - title: Introduction
       link: /docs/
-    - title: R&D Based on Robonomics Network
-      link: /docs/r-and-d-based-on-robonomics-network/
-
-- title: Try it out
-  items:
     - title: DEMO "Get Weather on Fuji Mountain"
       link: /docs/get-weather-on-fuji-mountain/
     - title: Robonomics DApp Overview
       link: /docs/robonomics-dapp-overview/
-    - title: AIRA installation on VirtualBox
-      link: /docs/aira-installation-on-vb/
-    - title: Interact with AIRA
-      link: /docs/interact-with-aira/
-    - title: Robonomics IO
-      items:
-        - title: Overview
-          link: /docs/rio-overview/
-        - title: IPFS
-          link: /docs/rio-ipfs/
-        - title: Launch
-          link: /docs/rio-launch/
-        - title: Datalog
-          link: /docs/rio-datalog/
-    - title: Connect Mars Curiosity Rover To Robonomics Parachain
+    - title: R&D Based on Robonomics Network
+      link: /docs/r-and-d-based-on-robonomics-network/
+
+- title: Playground
+  items:
+    - title: Connect Mars Curiosity Rover
       link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control/
-    - title: Connect ROS-compatibale Drone To Robonomics Parachain
+    - title: Connect ROS-compatibale Drone
       items:
         - title: Part 1. Launch by Transaction
           link: /docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-1/
         - title: Part 2. Saving Data To Blockchain
           link: /docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-2/
-    - title: Connect Baxter robot under Robonomics parachain control
+    - title: Connect Industrial Robot
       link: /docs/baxter/
-    - title: Connect Kuka under Robonomics Parachain Control
+    - title: Connect Manipulator
       link: /docs/kuka/
-    - title: Connect Iris Drone under Robonomics Parachain Control
+    - title: Connect Unmanned Aerial Vehicle
       link: /docs/iris-drone/
-    - title: Robonomics test network manual
+
+- title: Maintain
+  items:
+    - title: Deploy Robonomics Test Network
       link: /docs/robonomics-test-network-manual/
 
 - title: Cases
@@ -59,11 +48,21 @@
 
 - title: Learn
   items:
+    - title: Robonomics IO
+      items:
+        - title: Overview
+          link: /docs/rio-overview/
+        - title: IPFS
+          link: /docs/rio-ipfs/
+        - title: Launch
+          link: /docs/rio-launch/
+        - title: Datalog
+          link: /docs/rio-datalog/
     - title: Robonomics-js
       link: /docs/robonomics-js/
     - title: Glossary
       link: /docs/glossary/
-      
+
     - title: Sensors Connectivity
       link: /docs/sensors-connectivity/
 
@@ -73,8 +72,12 @@
           link: /docs/aira-overview/
         - title: Installation
           link: /docs/aira-installation/
+        - title: AIRA installation on VirtualBox
+          link: /docs/aira-installation-on-vb/
         - title: Basic usage
           link: /docs/aira-basic-usage/
+        - title: Interact with AIRA
+          link: /docs/interact-with-aira/
         - title: Connecting via SSH
           link: /docs/aira-connecting-via-ssh/
         - title: F.A.Q.
@@ -127,3 +130,4 @@
       link: /docs/community/
     - title: How to contribute
       link: /docs/contributing/
+
