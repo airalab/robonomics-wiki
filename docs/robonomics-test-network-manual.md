@@ -6,6 +6,9 @@
 - Subkey tool, download latest here: https://github.com/airalab/robonomics/releases/
 - 3 servers with root shell. Their ip-addresses in the current instruction will be **165.227.171.127**, **159.89.25.75** and **159.89.30.50**
 
+## Introduction
+In this tutorial, we will first create all key files locally, and then upload them to their corresponding nodes. 
+
 ## Prepare directories
 Download 2 archives from the links above and open the folder with them in the terminal.
 Then create a directory for the project, unpack the archives into it and go to the created folder:
@@ -35,7 +38,7 @@ $ ./robonomics build-spec --chain dev > uploads/spec.json
 ```
 
 Next, edit this file. At first correct the first three fields, make them look like this:
-```json
+```
 "name": "Test Robonomics Network",
 "id": "dev",
 "chainType": "Live",
@@ -85,17 +88,17 @@ To fill the palletBalances field create **the number of nodes + 1** (the last ke
 Example creating one key.
  - Generate key:
     ```
-    $ ./subkey generate
+    $ ./subkey -n robonomics generate
     Secret phrase `display cargo domain april joy still bundle notice bridge pencil fat approve` is account:
       Network ID/version: substrate
       Secret seed:        0x0275ab9bce53e4359184f02112943162c708f483009e0b7b3ba63549c5c2e514
       Public key (hex):   0xd0996b85dd1b2876080b26123f9c27097d698f871c5978c3cb9c299253e7a530
       Account ID:         0xd0996b85dd1b2876080b26123f9c27097d698f871c5978c3cb9c299253e7a530
-      SS58 Address:       5CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx
+      SS58 Address:       4CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx
     ```
  - Create key file:
     ```
-    $ touch ./local/validators/5CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx && echo '"display cargo domain april joy still bundle notice bridge pencil fat approve"' | tee ./local/validators/5CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx
+    $ touch ./local/validators/4CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx && echo '"display cargo domain april joy still bundle notice bridge pencil fat approve"' | tee ./local/validators/4CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx
     ```
   
 Command template for creating a validator key file:  
@@ -108,11 +111,11 @@ Three keys are stored in the **local/validators** folder and one in the **local/
 ```
 ./local/
 ├── sudo
-│   └── 5Dy6bzrvoApwjLaAjfrtvtX3tthCw6fnCU1Ym5KNyRGt3kKb
+│   └── 4Dy6bzrvoApwjLaAjfrtvtX3tthCw6fnCU1Ym5KNyRGt3kKb
 └── validators
-    ├── 5CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx
-    ├── 5EeMi84pk5P5nQpyupQeCZ1C4NhUFtMF7Xh1MXJLANkZ3BTd
-    └── 5FPRYfSVqwaX39vXZ78tT3DPBT9FmFXvdQDD7y5UQKncJGu1
+    ├── 4CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx
+    ├── 4EeMi84pk5P5nQpyupQeCZ1C4NhUFtMF7Xh1MXJLANkZ3BTd
+    └── 4FPRYfSVqwaX39vXZ78tT3DPBT9FmFXvdQDD7y5UQKncJGu1
 ```
 
 Now fill the palletBalances section in the spec.json file with these keys.
@@ -121,19 +124,19 @@ As a result, it should look like this:
 "palletBalances": {
   "balances": [
     [
-      "5CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx",    <-- Generated validator 1 key
+      "4CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx",    <-- Generated validator 1 key
       1000000000000000000
     ],
     [
-      "5EeMi84pk5P5nQpyupQeCZ1C4NhUFtMF7Xh1MXJLANkZ3BTd",    <-- Generated validator 2 key
+      "4EeMi84pk5P5nQpyupQeCZ1C4NhUFtMF7Xh1MXJLANkZ3BTd",    <-- Generated validator 2 key
       1000000000000000000
     ],
     [
-      "5FPRYfSVqwaX39vXZ78tT3DPBT9FmFXvdQDD7y5UQKncJGu1",    <-- Generated validator 3 key
+      "4FPRYfSVqwaX39vXZ78tT3DPBT9FmFXvdQDD7y5UQKncJGu1",    <-- Generated validator 3 key
       1000000000000000000
     ],
     [
-      "5Dy6bzrvoApwjLaAjfrtvtX3tthCw6fnCU1Ym5KNyRGt3kKb",    <-- Generated sudo key
+      "4Dy6bzrvoApwjLaAjfrtvtX3tthCw6fnCU1Ym5KNyRGt3kKb",    <-- Generated sudo key
       1000000000000000000
     ],
   ]
@@ -159,7 +162,7 @@ This section contains the "keys" field, that contains a list of three lists (equ
 **%validator_SS58_address%** is the validator key that was generated for each node in the **palletBalances** section of this manual. Just copy it twice for each node.
 
 To fill in the remaining 4 lines for each node, you need to create 4 key files for each node and store them in the **keystore** folders.
-As key files are generated, you can also populate **palletSession**.
+As key files are generated, you can fill **palletSession**.
 
 Each key file must contain a **seed** phrase in quotes.
 Making of the name of each key file require separate consideration.
@@ -174,19 +177,19 @@ Prefixes matching:
 An example of creating keys for one node:
 - Creating a **babe** (prefix *62616265*) key file.   
   ```
-  $ ./subkey --sr25519 generate
+  $ ./subkey --sr25519 -n robonomics generate
   ```
   >  Secret phrase **cover once garment syrup income chair elder business diary frozen rack damage** is account:  
   >  Network ID/version: substrate  
   >  Secret seed:        0x90ddeee3a9a0c464572021d311c245eefc41f9a59c739faefda47efcf4755677  
   >  Public key (hex):   0xfa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43  
   >  Account ID:         0x**fa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43**  
-  >  SS58 Address:       *5HirHF5BVHxkRBtqptFxBSmnAiZir1qQLs6pL9Utmm4eF77C*
+  >  SS58 Address:       *4HirHF5BVHxkRBtqptFxBSmnAiZir1qQLs6pL9Utmm4eF77C*
   
  ```
  $ touch uploads/165.227.171.127/keystore/62616265fa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43 && echo '"cover once garment syrup income chair elder business diary frozen rack damage"' | tee ./uploads/165.227.171.127/keystore/62616265fa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43 
  ```
- This command creates a **babe** key file for the **165.227.171.127** node. To fill in **spec.json**, need to take from this output the value **SS58 Address**: *5HirHF5BVHxkRBtqptFxBSmnAiZir1qQLs6pL9Utmm4eF77C*. This address need to insert instead of **%sr25519_babe_SS58_address%** in the above **palletSession** template.
+ This command creates a **babe** key file for the **165.227.171.127** node. To fill in **spec.json**, need to take from this output the value **SS58 Address**: *4HirHF5BVHxkRBtqptFxBSmnAiZir1qQLs6pL9Utmm4eF77C*. This address need to insert instead of **%sr25519_babe_SS58_address%** in the above **palletSession** template.
    
  **babe** key file creation command template:  
   > touch ./uploads/**node_ip**/keystore/62616265+**Account_ID** && echo '"**seed**"' | tee ./uploads/**node_ip**/keystore/62616265+**Account_ID**  
@@ -198,14 +201,14 @@ As you can see, the name of the babe key file is the sum of two substrings: **ba
 
 - Creating an **im_online** (prefix *696d6f6e*) key file.  
   ```
-  $ ./subkey --sr25519 generate
+  $ ./subkey --sr25519 -n robonomics generate
   ```
   > Secret phrase **envelope truly balance turkey undo casual waste skill average ordinary gun split** is account:  
   >   Network ID/version: substrate  
   >   Secret seed:        0x8a19df08feeff9f1fa3581902ca22a305252aea32e284d32f10e990d00bb8926  
   >   Public key (hex):   0x6c13ff8e37d91b80fe3b03f9b92a91a1ef7db741434cf12cc44d5ed29257ab09  
   >   Account ID:         0x**6c13ff8e37d91b80fe3b03f9b92a91a1ef7db741434cf12cc44d5ed29257ab09**  
-  >   SS58 Address:       *5EWQyBRoucH4Wjd4JtGoSEYYCw4bbkonjoFy9hNUX5fbmMEt*
+  >   SS58 Address:       *4EWQyBRoucH4Wjd4JtGoSEYYCw4bbkonjoFy9hNUX5fbmMEt*
    
   ```
   $ touch uploads/165.227.171.127/keystore/696d6f6e6c13ff8e37d91b80fe3b03f9b92a91a1ef7db741434cf12cc44d5ed29257ab09 && echo '"envelope truly balance turkey undo casual waste skill average ordinary gun split"' | tee uploads/165.227.171.127/keystore/696d6f6e6c13ff8e37d91b80fe3b03f9b92a91a1ef7db741434cf12cc44d5ed29257ab09
@@ -213,19 +216,19 @@ As you can see, the name of the babe key file is the sum of two substrings: **ba
   **im_online** key file creation command template:  
   > touch ./uploads/**node_ip**/keystore/696d6f6e+**Account_ID** && echo '"**seed**"' | tee ./uploads/**node_ip**/keystore/696d6f6e+**Account_ID**  
   
-  **spec.json**: *5EWQyBRoucH4Wjd4JtGoSEYYCw4bbkonjoFy9hNUX5fbmMEt* need to insert instead of **%sr25519_im_online_SS58_address%** in the above **palletSession** template.
+  **spec.json**: *4EWQyBRoucH4Wjd4JtGoSEYYCw4bbkonjoFy9hNUX5fbmMEt* need to insert instead of **%sr25519_im_online_SS58_address%** in the above **palletSession** template.
 
 
 - Creating an **authority_discovery** (prefix *61756469*) key file.
    ```
-   $ ./subkey --sr25519 generate
+   $ ./subkey --sr25519 -n robonomics generate
    ```
    > Secret phrase **boy harsh because omit equip atom apart spring undo explain walnut crystal** is account:  
    > Network ID/version: substrate  
    >   Secret seed:        0x27838c9ea0524353da3717862ef0ecef123f40e81b73bb5ef377d12b47d1c543  
    >   Public key (hex):   0x4e33ccfd4105d30dfd93c5ef4658e2585a749508ea7c7abe754efc36dd634c07  
    >   Account ID:         0x**4e33ccfd4105d30dfd93c5ef4658e2585a749508ea7c7abe754efc36dd634c07**  
-   >   SS58 Address:       *5DqEyoefRSz746sjaonxJ7KZQz8MUq4cKFA87DfoLzQgWk8t*
+   >   SS58 Address:       *4DqEyoefRSz746sjaonxJ7KZQz8MUq4cKFA87DfoLzQgWk8t*
    
    ```
    $ touch uploads/165.227.171.127/keystore/617564694e33ccfd4105d30dfd93c5ef4658e2585a749508ea7c7abe754efc36dd634c07 && echo '"boy harsh because omit equip atom apart spring undo explain walnut crystal"' | tee uploads/165.227.171.127/keystore/617564694e33ccfd4105d30dfd93c5ef4658e2585a749508ea7c7abe754efc36dd634c07
@@ -233,29 +236,27 @@ As you can see, the name of the babe key file is the sum of two substrings: **ba
   **authority_discovery** key file creation command template:  
   > touch ./uploads/**node_ip**/keystore/61756469+**Account_ID** && echo '"**seed**"' | tee ./uploads/**node_ip**/keystore/61756469+**Account_ID**  
   
-   **spec.json**: *5DqEyoefRSz746sjaonxJ7KZQz8MUq4cKFA87DfoLzQgWk8t* need to insert instead of **%sr25519_authority_discovery_SS58_address%** in the above **palletSession** template.
+   **spec.json**: *4DqEyoefRSz746sjaonxJ7KZQz8MUq4cKFA87DfoLzQgWk8t* need to insert instead of **%sr25519_authority_discovery_SS58_address%** in the above **palletSession** template.
 
 
 - Creating a **grandpa** (prefix *6772616e*) key file.
    ```
-   $ ./subkey --ed25519 generate
+   $ ./subkey --ed25519 -n robonomics generate
    ```
    > Secret phrase **squeeze nature off vendor comic pause tattoo seek omit spatial regular cattle** is account:  
    >   Network ID/version: substrate  
    >   Secret seed:        0xef0a9f51a4da7b789c0a25d39b44428d4da7262cc3fe013d4383b45216e8b83e  
    >   Public key (hex):   0x7ea1beed13fb66a333b50b1ae417ebfd152bab99b223be2d4d886adb5fa7f009  
    >   Account ID:         0x**7ea1beed13fb66a333b50b1ae417ebfd152bab99b223be2d4d886adb5fa7f009**  
-   >   SS58 Address:       *5EvjwRdgUg6YtdUDjq6Z3PoTKtzH5cgFgwnzArMSbw3RzYTa*
+   >   SS58 Address:       *4EvjwRdgUg6YtdUDjq6Z3PoTKtzH5cgFgwnzArMSbw3RzYTa*
     
    ```
-   $ touch uploads/165.227.171.127/keystore/6772616e7ea1beed13fb66a333b50b1ae417ebfd152bab99b223be2d4d886adb5fa7f009
-    
-   $ echo '"squeeze nature off vendor comic pause tattoo seek omit spatial regular cattle"' | tee uploads/165.227.171.127/keystore/6772616e7ea1beed13fb66a333b50b1ae417ebfd152bab99b223be2d4d886adb5fa7f009
+   $ touch uploads/165.227.171.127/keystore/6772616e7ea1beed13fb66a333b50b1ae417ebfd152bab99b223be2d4d886adb5fa7f009 && echo '"squeeze nature off vendor comic pause tattoo seek omit spatial regular cattle"' | tee uploads/165.227.171.127/keystore/6772616e7ea1beed13fb66a333b50b1ae417ebfd152bab99b223be2d4d886adb5fa7f009
    ```
    **grandpa** key file creation command template:  
   > touch ./uploads/**node_ip**/keystore/6772616e+**Account_ID** && echo '"**seed**"' | tee ./uploads/**node_ip**/keystore/6772616e+**Account_ID** 
    
-   **spec.json**: *5EvjwRdgUg6YtdUDjq6Z3PoTKtzH5cgFgwnzArMSbw3RzYTa* need to insert instead of **%sr25519_grandpa_SS58_address%** in the above **palletSession** template.
+   **spec.json**: *4EvjwRdgUg6YtdUDjq6Z3PoTKtzH5cgFgwnzArMSbw3RzYTa* need to insert instead of **%sr25519_grandpa_SS58_address%** in the above **palletSession** template.
    
    
 **Now 4 key files have been created for one node. Need to repeat this actions for the remaining two nodes.**
@@ -295,33 +296,33 @@ The palletSession section should look like this:
 "palletSession": {
     "keys": [
         [
-            "5CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx",
-            "5CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx",
+            "4CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx",    <-- Validator 1 SS58 Address
+            "4CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx",    <-- Validator 1 SS58 Address
             {
-                "authority_discovery": "5DqEyoefRSz746sjaonxJ7KZQz8MUq4cKFA87DfoLzQgWk8t",
-                "babe": "5HirHF5BVHxkRBtqptFxBSmnAiZir1qQLs6pL9Utmm4eF77C",
-                "grandpa": "5EvjwRdgUg6YtdUDjq6Z3PoTKtzH5cgFgwnzArMSbw3RzYTa",
-                "im_online": "5EWQyBRoucH4Wjd4JtGoSEYYCw4bbkonjoFy9hNUX5fbmMEt"
+                "authority_discovery": "4DqEyoefRSz746sjaonxJ7KZQz8MUq4cKFA87DfoLzQgWk8t",
+                "babe": "4HirHF5BVHxkRBtqptFxBSmnAiZir1qQLs6pL9Utmm4eF77C",
+                "grandpa": "4EvjwRdgUg6YtdUDjq6Z3PoTKtzH5cgFgwnzArMSbw3RzYTa",
+                "im_online": "4EWQyBRoucH4Wjd4JtGoSEYYCw4bbkonjoFy9hNUX5fbmMEt"
             }
         ],
         [
-            "5EeMi84pk5P5nQpyupQeCZ1C4NhUFtMF7Xh1MXJLANkZ3BTd",
-            "5EeMi84pk5P5nQpyupQeCZ1C4NhUFtMF7Xh1MXJLANkZ3BTd",
+            "4EeMi84pk5P5nQpyupQeCZ1C4NhUFtMF7Xh1MXJLANkZ3BTd",    <-- Validator 2 SS58 Address
+            "4EeMi84pk5P5nQpyupQeCZ1C4NhUFtMF7Xh1MXJLANkZ3BTd",    <-- Validator 2 SS58 Address
             {
-                "authority_discovery": "5F6daoG2gBXRLvbT4mVRajExZdZBHH7APmX3wDuLYJyzxHSS",
-                "babe": "5C7vBVHUYKqApCywqGsuap6XhjZ3gdYnW4YYP2mMyvYctLqT",
-                "grandpa": "5G3Ai6BGUjqtCoM2aTvWyR19gQ8WZiNnh1KFM47RyiYTwkE6",
-                "im_online": "5FHA7gzKfSLvd8jP85JUCWV6RyeRLm331KHcjnynGx7TWm7D"
+                "authority_discovery": "4F6daoG2gBXRLvbT4mVRajExZdZBHH7APmX3wDuLYJyzxHSS",
+                "babe": "4C7vBVHUYKqApCywqGsuap6XhjZ3gdYnW4YYP2mMyvYctLqT",
+                "grandpa": "4G3Ai6BGUjqtCoM2aTvWyR19gQ8WZiNnh1KFM47RyiYTwkE6",
+                "im_online": "4FHA7gzKfSLvd8jP85JUCWV6RyeRLm331KHcjnynGx7TWm7D"
             }
         ],
         [
-            "5FPRYfSVqwaX39vXZ78tT3DPBT9FmFXvdQDD7y5UQKncJGu1",
-            "5FPRYfSVqwaX39vXZ78tT3DPBT9FmFXvdQDD7y5UQKncJGu1",
+            "4FPRYfSVqwaX39vXZ78tT3DPBT9FmFXvdQDD7y5UQKncJGu1",    <-- Validator 3 SS58 Address                        
+            "4FPRYfSVqwaX39vXZ78tT3DPBT9FmFXvdQDD7y5UQKncJGu1",    <-- Validator 3 SS58 Address
             {
-                "authority_discovery": "5CqzJFkdSZg52PfV6Fd4gJ3vPLmRu1HGuPvNivjJ8dDWaz1a",
-                "babe": "5EComk8TsrT399xT6MPhGnhbZEif6U6cny8DiyZ3zezo9b5f",
-                "grandpa": "5Cqi4rG3CzWRZairhZX4isT8qG2jyz9fGDXJMrP6uBYkrft5",
-                "im_online": "5C7V6R59cZVbabExqgWvHVE1vj1E1cV42SZr8d8zZD3gmsqk"
+                "authority_discovery": "4CqzJFkdSZg52PfV6Fd4gJ3vPLmRu1HGuPvNivjJ8dDWaz1a",
+                "babe": "4EComk8TsrT399xT6MPhGnhbZEif6U6cny8DiyZ3zezo9b5f",
+                "grandpa": "4Cqi4rG3CzWRZairhZX4isT8qG2jyz9fGDXJMrP6uBYkrft5",
+                "im_online": "4C7V6R59cZVbabExqgWvHVE1vj1E1cV42SZr8d8zZD3gmsqk"
             }
         ]
     ]
@@ -336,29 +337,29 @@ The palletSession section should look like this:
     "validatorCount": 10,
     "minimumValidatorCount": 2,
     "invulnerables": [
-        "5DnVqsovQHFTp86XJ29jDPDg7vJUiM3puUhAWRuNGRYkXdJV",     <-- Validator 1 key
-        "5ENyfEkqDc8wXxxKzeT9AgBSqzPgfSeUx5gyaN4K8EzDmd77",     <-- Validator 2 key
-        "5EkMjyVJAPsFZVXv3BgUUs4rVi7JmucPqBCHwYteiymkFghM"      <-- Validator 3 key
+        "4CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx",     <-- Validator 1 SS58 Address
+        "4EeMi84pk5P5nQpyupQeCZ1C4NhUFtMF7Xh1MXJLANkZ3BTd",     <-- Validator 2 SS58 Address
+        "4FPRYfSVqwaX39vXZ78tT3DPBT9FmFXvdQDD7y5UQKncJGu1"      <-- Validator 3 SS58 Address
     ],
     "forceEra": "NotForcing",
     "slashRewardFraction": 100000000,
     "canceledPayout": 0,
     "stakers": [
         [
-            "5DnVqsovQHFTp86XJ29jDPDg7vJUiM3puUhAWRuNGRYkXdJV",  <-- Validator 1 key
-            "5EAUMb2c4B5RKcDcpYbrfFBb4zZBNWkvaZinVaHvYhthaZPo",  <-- Validator 1 babe address
+            "4CnxYUugEzLQ8Re2d5P2Jso25pe8PBttcVjc3VdNL2V9shVx",  <-- Validator 1 SS58 Address
+            "4HirHF5BVHxkRBtqptFxBSmnAiZir1qQLs6pL9Utmm4eF77C",  <-- Validator 1 babe address
             1000000,
             "Validator"
         ],
         [
-            "5ENyfEkqDc8wXxxKzeT9AgBSqzPgfSeUx5gyaN4K8EzDmd77",  <-- Validator 2 key
-            "5C7vBVHUYKqApCywqGsuap6XhjZ3gdYnW4YYP2mMyvYctLqT",  <-- Validator 2 babe address
+            "4EeMi84pk5P5nQpyupQeCZ1C4NhUFtMF7Xh1MXJLANkZ3BTd",  <-- Validator 2 SS58 Address
+            "4C7vBVHUYKqApCywqGsuap6XhjZ3gdYnW4YYP2mMyvYctLqT",  <-- Validator 2 babe address
             1000000,
             "Validator"
         ],
         [
-            "5EkMjyVJAPsFZVXv3BgUUs4rVi7JmucPqBCHwYteiymkFghM",   <-- Validator 3 key
-            "5EComk8TsrT399xT6MPhGnhbZEif6U6cny8DiyZ3zezo9b5f",   <-- Validator 3 babe address
+            "4FPRYfSVqwaX39vXZ78tT3DPBT9FmFXvdQDD7y5UQKncJGu1",   <-- Validator 3 SS58 Address
+            "4EComk8TsrT399xT6MPhGnhbZEif6U6cny8DiyZ3zezo9b5f",   <-- Validator 3 babe address
             1000000,
             "Validator"
         ]
@@ -391,7 +392,7 @@ In the rest of the **spec.json** file, you need to change only the contents of *
                 "members": []
             },
             "palletSudo": {
-                "key": "5Dy6bzrvoApwjLaAjfrtvtX3tthCw6fnCU1Ym5KNyRGt3kKb"   <-- sudo address
+                "key": "4Dy6bzrvoApwjLaAjfrtvtX3tthCw6fnCU1Ym5KNyRGt3kKb"   <-- sudo address
             }
         }
     }
