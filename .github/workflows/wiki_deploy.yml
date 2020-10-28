@@ -22,7 +22,7 @@ jobs:
 
       - name: Install and Build 🔧 
         run: |
-          npm install @gridsome/cli
+          sudo npm install --global @gridsome/cli
           npm ci
           gridsome build
           
