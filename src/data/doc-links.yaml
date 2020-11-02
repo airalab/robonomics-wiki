@@ -37,6 +37,8 @@
   items:
     - title: Open Sensors Network
       items:
+        - title: Connect Sensor
+          link: /docs/connect-sensor-to-robonomics/
         - title: IoT Sensors Connectivity
           link: /docs/iot-sensors-connectivity/
         - title: Firmware Upload
