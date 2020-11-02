@@ -8,7 +8,7 @@
 ## Assembly
 ### Connection diagram
 
-![scheme](..images/sensors-connectivity/schema.jpg)
+![scheme](./images/sensors-connectivity/schema.jpg)
 
 ### Connecting SDS011
 
