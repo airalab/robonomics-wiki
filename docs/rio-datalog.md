@@ -2,6 +2,8 @@
 
 Datalog module allows you to store any string on blockchain
 
+https://www.youtube.com/watch?v=rs67AMyd-gE
+
 ## Requirements
 
 * `robonomics` [executable](https://github.com/airalab/robonomics/releases)
