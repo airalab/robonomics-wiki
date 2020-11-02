@@ -37,6 +37,8 @@
   items:
     - title: Open Sensors Network
       items:
+        - title: Assembly and Firmware
+          link: /docs/assembly-and-configuration/
         - title: IoT Sensors Connectivity
           link: /docs/iot-sensors-connectivity/
         - title: Firmware Upload
