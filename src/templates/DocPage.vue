@@ -17,10 +17,12 @@
 	<div class="page">
 		<div id="sidebarDocs" class="page__sidebar mobileClosed">
       <SidebarDocs :items="items" />
+      <Banner />
     </div>
 
   	<div class="page__content">
   		<VueRemarkContent />
+      <Banner :place="'content'" />
   	</div>
 
   	<div id="sidebarContent" class="page__sidebar mobileClosed">
@@ -179,7 +181,8 @@ export default {
 	    SidebarContent,
       IconMenu,
       IconDots,
-      IconClose
+      IconClose,
+      Banner: () => import("../components/Banner.vue")
 	  },
   data(){
     return {
