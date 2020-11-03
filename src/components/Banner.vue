@@ -1,5 +1,5 @@
 <template>
-	<g-link class="banner" :class="place" :to="'https://share.hsforms.com/1rlIfFL6ZSriaOjtf4NAGPw535vx?'+place">
+	<g-link style="display: none" class="banner" :class="place" :to="'https://share.hsforms.com/1rlIfFL6ZSriaOjtf4NAGPw535vx?'+place">
 		<g-image v-if="place==='sidebar'" alt="" src="~/assets/images/banner-sidebar-RWSbeta.png"/>
 		<g-image v-if="place==='content'" alt="" src="~/assets/images/banner-content-RWSbeta.png"/>
 	</g-link>
