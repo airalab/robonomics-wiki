@@ -22,7 +22,7 @@
                 <g-link to="https://github.com/airalab/">Github</g-link>
               </div>
 
-              <div class="header__nav__search header__nav__section">
+              <div class="header__nav__search header__nav__section" :class="{focus: SearchFocused }" v-on:click="SearchFocused = !SearchFocused">
                 <input
                   id="search"
                   v-model="searchTerm"
@@ -172,20 +172,24 @@ query {
         border-color: rgba(255,255,255,.1);
         color: var(--color-light);
         font-weight: 700;
-        width: 100px;
-
-        &:focus{
-          border-color: rgba(255,255,255,.2);
-          width: 180px;
-
-          & ~ .searchresults{
-          opacity: 1;
-          visibility: visible;
-        }
+        width: 100px;  
       }
+
+      &.focus{
+          input[type="text"] {
+            border-color: rgba(255,255,255,.2);
+            width: 180px;
+          }
+
+          .searchresults{
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+
+
     }
-  }
-}
 }
 
 
@@ -196,7 +200,7 @@ query {
   min-width: 200px;
 
   background-color: var(--color-dark);
-  border: 1px solid rgba(255,255,255,.2);
+  // border: 1px solid rgba(255,255,255,.2);
   border-radius: var(--radius);
 
   transition: 0.4s ease opacity;
@@ -347,6 +351,11 @@ import ToggleTheme from '~/components/ToggleTheme.vue'
 import Search from 'gridsome-plugin-flexsearch/SearchMixin'
 
 export default {
+  data () {
+    return {
+      SearchFocused: false
+    }
+  },
   components: {
     ToggleTheme
   },
