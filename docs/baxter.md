@@ -91,7 +91,7 @@ Return to the first terminal, open new window and send command to [**robonomics 
 ```sh
 echo "ON" | ./robonomics io write launch -r <CURIOSITY ADDRESS> -s <EMPLOYER’S KEY>
 ```
-Where *<CURIOSITY ADDRESS>* and *<EMPLOYER’S KEY>* are replaced with previously saved strings accordingly
+Where `<CURIOSITY ADDRESS>` and `<EMPLOYER’S KEY>` are replaced with previously saved strings accordingly
 
 ![rob_message][im8]
 

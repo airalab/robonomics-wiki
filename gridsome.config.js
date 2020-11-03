@@ -41,6 +41,18 @@ module.exports = {
           ],
           searchFields: ['title', 'content']
         }
+      },
+      {
+        use: 'gridsome-plugin-yandex-metrika',
+        options: {
+          id: 68969365,
+          options:  {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+          }
+        }
       }
 
   ],
