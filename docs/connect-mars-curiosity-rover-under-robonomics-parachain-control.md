@@ -30,12 +30,12 @@ cd ..
 We need to adjust starting conditions to make our rover spawn smoothly:
 - Go to
 
-`/robonomics_ws/src/master/curiosity_mars_rover_description/worlds` and change line 14 of the file` mars_curiosity.world` to 
+`/robonomics_ws/src/master/curiosity_mars_rover_description/worlds` and change line 14 of the file` mars_curiosity.world` to
 `<pose>0 0 9 0 0 0</pose>`.
 
 - Go to
 
-`/robonomics_ws/src/master/curiosity_mars_rover_description/launch` and change line 4 of the file `mars_curiosity_world.launch` to 
+`/robonomics_ws/src/master/curiosity_mars_rover_description/launch` and change line 4 of the file `mars_curiosity_world.launch` to
 `<arg name="paused" default="false"/>`.
 
 Don’t forget to add source command to `~/.bashrc`:
@@ -64,15 +64,8 @@ Since we are testing, let's create a local robonomics network node with robonomi
 ```
 rm -rf /home/$USER/.local/share/robonomics/chains/dev/db
 ```
-After a successful launch go to https://parachain.robonomics.network and switch to local node:
 
-![Local node](./images/curiosity-demo/local_node.jpg "Local node")
-
-Go to Accounts and create **CURIOSITY** and **EMPLOYER** accounts (**NOT_CURIOSITY** is optional).
-
-**Important**! Copy each account's key and address (to copy address click on account's icon) and add these addresses, keys and path to robonomics binary file to file `config.config` in `robonomics_ws/src/robonomics_sample_controller/src`
-
-Transfer some money (units) to these accounts:
+After a successful launch create accounts following [this](docs/create-account-in-dapp) manual. **Do not forget to save each account's seed and address! You will need them for transactions**. Add these addresses, seeds and path to robonomics binary file to file `config.config` in `robonomics_ws/src/robonomics_sample_controller/src`. Transfer some money (units) to these accounts:
 
 ![Balances](./images/curiosity-demo/balances.jpg "Balances")
 
@@ -99,14 +92,10 @@ Now you can send a transaction triggering the Rover to start moving and collecti
 echo "ON" | ./robonomics io write launch -r <CURIOSITY ADDRESS> -s <EMPLOYER’S KEY>
 ```
 Where `<CURIOSITY ADDRESS>`  and `<EMPLOYER’S KEY>` are replaced with  previously saved strings accordingly.
-You should see the log `"Arming..."` and the robot should start moving its camera and arm. Later, when the job is done (there is a log informing user when the program has finished), on the Robonomics portal go to `Developer` -> `Chain state` and add a CURIOSITY datalog using `“+”` button with selected `datalog` as state query: 
+You should see the log `"Arming..."` and the robot should start moving its camera and arm. Later, when the job is done (there is a log informing user when the program has finished), on the Robonomics portal go to `Developer` -> `Chain state` and add a CURIOSITY datalog using `“+”` button with selected `datalog` as state query:
 
 ![Datalog](./images/curiosity-demo/hash_in_chain.jpg "Datalog")
 
 The IPFS hash of the telemetry has been saved in the blockchain. To see the data simply copy the hash and add it to the local [gateway](https://gateway.ipfs.io/ipfs/QmeYYwD4y4DgVVdAzhT7wW5vrvmbKPQj8wcV2pAzjbj886/docs/getting-started/) address `localhost:8080/ipfs/`:
 
 ![Voila](./images/curiosity-demo/datalog.jpg "Voila")
-
-
-
-
