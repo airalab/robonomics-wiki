@@ -63,11 +63,7 @@ Since we are testing, let's create a local robonomics network node with robonomi
 ```
 rm -rf /home/$USER/.local/share/robonomics/chains/dev/db
 ```
-After a successful launch go to https://parachain.robonomics.network and switch to local node:
-
-![local_node](./images/drone-demo/local_node.jpg "local_node")
-
-Go to Accounts and create **DRONE** and **EMPLOYER** accounts. **Important**! Copy each account's raw key and address (to copy address click on account's icon) and add these addresses, keys and path to robonomics binary file to file `config.config` in `drone_simulator_ws/src/drone_simulator_controller/src`. Transfer some money (units) to these accounts:
+After a successful launch create accounts following [this](docs/create-account-in-dapp) manual. **Do not forget to save each account's seed and address! You will need them for transactions**. Add these addresses, seeds and path to robonomics binary file to file `config.config` in `robonomics_ws/src/robonomics_sample_controller/src`. Transfer some money (units) to these accounts:
 
 ![balances](./images/drone-demo/balances.jpg "balances")
 ### 5. Launching the drone under parachain control
