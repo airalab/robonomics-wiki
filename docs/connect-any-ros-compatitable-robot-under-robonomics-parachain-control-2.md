@@ -8,7 +8,7 @@
 - Robonomics node (binary file) (download latest release [here](https://github.com/airalab/robonomics/releases))
 - Python dependencies:
 ```
-pip install cv_bridge ipfshttpclient 
+pip install cv_bridge ipfshttpclient
 ```
 ## 1. Add dependencies
 If we launch a simulation and look at the topic list (see previous tutorial), we will see, that there is one topic containing front camera data and using `sensor_msgs/Image` message type:
@@ -25,11 +25,7 @@ As done in a previous tutorial, create a local robonomics network node with robo
 ```
 rm -rf /home/$USER/.local/share/robonomics/chains/dev/db
 ```
-After a successful launch go to https://parachain.robonomics.network and switch to local node:
-
-![local_node](./images/drone-demo/local_node.jpg "local_node")
-
-Go to Accounts. There should be previously saved **DRONE** and **EMPLOYER** ones. They should have the same key and address as obtained in part 1, so just transfer some money (units) to these accounts:
+After a successful launch create accounts following [this](docs/create-account-in-dapp) manual. **Do not forget to save each account's seed and address! You will need them for transactions**. Add these addresses, seeds and path to robonomics binary file to file `config.config` in `robonomics_ws/src/robonomics_sample_controller/src`. Transfer some money (units) to these accounts:
 
 ![balances](./images/drone-demo/balances.jpg "balances")
 ## 3. Launch
