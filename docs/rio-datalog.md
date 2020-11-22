@@ -11,7 +11,7 @@ For the examples the development network is used. Check [this](/docs/robonomics-
 * `robonomics` [executable](https://github.com/airalab/robonomics/releases)
 * Account on parachain
 
-You can find instructions on how to create an account [here](docs/create-account-in-dapp)
+You can find instructions on how to create an account [here](/docs/create-account-in-dapp)
 
 ## Write
 
