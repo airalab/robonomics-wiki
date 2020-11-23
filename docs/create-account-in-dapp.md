@@ -5,7 +5,7 @@
 ### 1. Choose your network and navigate to Robonomics portal
 Globally, there are 3 different ways to work with Robonomics:
 - Launch your own local network with [robonomics binary](https://github.com/airalab/robonomics/releases/) by `./robonomics --dev`. This method is used in all playground tutorials. (_tip: to avoid failures on next launches clean chain data by `rm -rf /home/$USER/.local/share/robonomics/chains/dev/db` after each session_)
-- Launch your own test network following [this](docs/robonomics-test-network-manual/) manual
+- Launch your own test network following [this](/docs/robonomics-test-network-manual/) manual
 - Connect to an existing network on a portal (more information on this below)
 
 Regardless of method chosen, go to [parachain.robonomics.network](https://parachain.robonomics.network) and draw your attention to the top-left corner:
@@ -30,7 +30,7 @@ You should see the following panel:
 ![Add account panel](./images/creating-an-account/add-account-panel.jpg "Add account panel")
 
 - *Name* is just you account's name in this exact browser. It makes no sense but convenience.
-- *Seed*. Each transaction must be signed by account's unique seed. It has two forms: *Mnemonic* (human-readable) and *Raw* (a sequence of digits and letters). Change *Mnemonic* to *Raw* and copy the seed. **It's very important to store it somewhere securely** since secret seeds are used for transactions in [Robonomics IO](docs/rio-overview/) module. If you have created an account before, you can insert its secret seed here to restore its balance and history.
+- *Seed*. Each transaction must be signed by account's unique seed. It has two forms: *Mnemonic* (human-readable) and *Raw* (a sequence of digits and letters). Change *Mnemonic* to *Raw* and copy the seed. **It's very important to store it somewhere securely** since secret seeds are used for transactions in [Robonomics IO](/docs/rio-overview/) module. If you have created an account before, you can insert its secret seed here to restore its balance and history.
 - *Password* is used to sign transactions on a portal (in GUI). Create one and remember it.
 
 Click `Save`, `Create and backup account`. A downloaded JSON-file is another way to restore account's data on the portal.
