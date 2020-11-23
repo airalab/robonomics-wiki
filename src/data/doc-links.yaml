@@ -15,7 +15,7 @@
 - title: Playground
   items:
     - title: Create Account on Robonomics Platform
-      link: /docs/create-accounts-in-dapp/
+      link: /docs/create-account-in-dapp/
     - title: Connect Mars Curiosity Rover
       link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control/
     - title: Connect ROS-compatibale Drone
