@@ -5,28 +5,38 @@ Example of how it works:
 https://youtu.be/AeufQmaNRWk
 
 ## Requirements:
-
+ - Ubuntu 18.04
  - ROS Melodic + Gazebo (installation manual [here][db2])  
  - extra packages:
 ```sh
 sudo apt-get install ros-melodic-gazebo-ros-control ros-melodic-effort-controllers ros-melodic-joint-state-controller
 ```
 - IPFS 0.4.22 (download from [here][db3] and install)
+- pip:
+```sh
+sudo apt install python-pip
+```
+
+
 - ipfshttpclient:
 ```sh
 pip install ipfshttpclient
 ```
+
+
  - Robonomics node (binary file) (download latest [release][db4] here)
+ - Create __Baxter__ and __Employer__ accounts  on **Robonomics Portal**  
+ (you can find tutorial ["Create an Account on Robonomics Portal"][db6] here).
  - IPFS browser extension (not necessary)
 
-## 1. Download simulation and controller packages
+## 1. Download Baxter model and controller packages
 Download packages:
 ```sh
+cd ~
 mkdir -p robot_ws/src
-cd robot_ws/src
 git clone https://github.com/nakata5321/Baxter_simulation_controller.git
-mv Baxter_simulation_controller/* ./
-rm -rf Baxter_simulation_controller/
+cd robot_ws/src
+ln -s ~/Baxter_simulation_controller/ .
 cd ..
 catkin build
 ```
@@ -35,7 +45,7 @@ Dont forget to add source command:
 echo "source /home/$USER/robot_ws/devel/setup.bash" >> ~/.bashrc
 ```
 
-## 2. Start simulation
+## 2. Create simulation world
 Let's start gazebo world and put our baxter in it:
 ```sh
 roslaunch gazebo_ros empty_world.launch
@@ -65,12 +75,9 @@ rm -rf /home/$USER/.local/share/robonomics/chains/dev/db
 Go to [https://parachain.robonomics.network][db5] and switch to local node
 ![local node][im4]
 
-Go to Accounts and create __Baxter__ and __Employer__ accounts (__Robot__ is not necessary)
+Go to Accounts and transfer some money to __Baxter__ and __Employer__ accounts.
 
-__Important!__ Copy each account's key and address (to copy address click on account's icon). Transfer some money (units) to these accounts:
-
-![create account][im5]
-![accounts][im6]
+You can find The manual "Create an Account on Robonomics Portal" [here.][db6]
 
 Add Baxter's secret key and adress to `configuration.txt` in `robot_ws/src/robot_controller/src/`
 
@@ -120,10 +127,8 @@ Click  __View on Gateway__ and that's all!
 [im3]: <./images/baxter_demo/robonomics.jpg>
 [db5]: <https://parachain.robonomics.network>
 [im4]: <./images/baxter_demo/local_node.jpg>
-[im5]: <./images/baxter_demo/create_account.jpg>
-[im6]: <./images/baxter_demo/accounts.jpg>
 [im7]: <./images/baxter_demo/waiting.jpg>
-[db6]: <https://wiki.robonomics.network/docs/rio-overview/>
+[db6]: </docs/create-account-in-dapp>
 [im8]: <./images/baxter_demo/rob_message.jpg>
 [im9]: <./images/baxter_demo/working.jpg>
 [im10]: <./images/baxter_demo/datalog.jpg>
