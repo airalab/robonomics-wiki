@@ -1,27 +1,26 @@
-# Control Baxter robot with robonomics
+# Say "Hello Baxter!" with robonomics
 
-Example of how it works:
+Example of how it works is available [here][db1].
 
-https://youtu.be/AeufQmaNRWk
 
 ## Requirements:
  - Ubuntu 18.04
  - ROS Melodic + Gazebo (installation manual [here][db2])  
  - extra packages:
 ```sh
-sudo apt-get install ros-melodic-gazebo-ros-control ros-melodic-effort-controllers ros-melodic-joint-state-controller
+sudo apt-get install ros-melodic-qt-build ros-melodic-driver-common ros-melodic-gazebo-ros-control ros-melodic-gazebo-ros-pkgs ros-melodic-ros-control ros-melodic-control-toolbox ros-melodic-realtime-tools ros-melodic-ros-controllers ros-melodic-xacro python-wstool ros-melodic-tf-conversions ros-melodic-kdl-parser python-wstool python-catkin-tools qt4-default
 ```
+
 - IPFS 0.4.22 (download from [here][db3] and install)
 - pip:
 ```sh
 sudo apt install python-pip
 ```
 
-
-- ipfshttpclient:
+- ipfshttpclient
 ```sh
 pip install ipfshttpclient
-```
+```  
 
 
  - Robonomics node (binary file) (download latest [release][db4] here)
@@ -29,32 +28,47 @@ pip install ipfshttpclient
  (you can find tutorial ["Create an Account on Robonomics Portal"][db6] here).
  - IPFS browser extension (not necessary)
 
-## 1. Download Baxter model and controller packages
+## 1. Download Baxter model
 Download packages:
 ```sh
 cd ~
 mkdir -p robot_ws/src
+cd robot_ws/src/
+wstool init .
+wstool merge https://raw.githubusercontent.com/RethinkRobotics/baxter_simulator/master/baxter_simulator.rosinstall
+wstool update
 git clone https://github.com/nakata5321/Baxter_simulation_controller.git
-cd robot_ws/src
-ln -s ~/Baxter_simulation_controller/ .
+```
+This packages were created for ROS indigo. We have to change some files to run them on ROS melodic.
+We will use **patch** files.
+```sh
+patch ./baxter_simulator/baxter_sim_io/include/baxter_sim_io/qnode.hpp ./Baxter_simulation_controller/patch/qnode_patch
+patch ./baxter_simulator/baxter_sim_kinematics/src/arm_kinematics.cpp ./Baxter_simulation_controller/patch/arm_patch
+```
+And let's build  all our packages:
+```sh
 cd ..
 catkin build
 ```
 Dont forget to add source command:
 ```sh
 echo "source /home/$USER/robot_ws/devel/setup.bash" >> ~/.bashrc
-```
+```  
+At the end save *Robonomics node (binary file)* in **robot_ws** directory.
 
-## 2. Create simulation world
-Let's start gazebo world and put our baxter in it:
+## 2. Start simulation
+First of all copy and edit `baxter.sh`
 ```sh
-roslaunch gazebo_ros empty_world.launch
+cp src/baxter/baxter.sh .
 ```
-![empty world][im1]
+Edit the following values in `baxter.sh` :
+- your_ip value - put your local ip address
+- ros_version
 
-Open one more window in terminal:
+Run the baxter shell script with sim specified:
 ```sh
-rosrun gazebo_ros spawn_model -file `rospack find baxter_description`/urdf/baxter.urdf -urdf -z 1 -model baxter
+./baxter.sh sim
+roslaunch baxter_gazebo baxter_world.launch
 ```
 You can put some models in front of our baxter. It will be more intresting.
 ![baxter][im2]
@@ -79,9 +93,10 @@ Go to Accounts and transfer some money to __Baxter__ and __Employer__ accounts.
 
 You can find The manual "Create an Account on Robonomics Portal" [here.][db6]
 
-Add Baxter's secret key and adress to `configuration.txt` in `robot_ws/src/robot_controller/src/`
 
-## 4.Start simulation
+Add Baxter's secret key and adress to `config.yaml` in `robot_ws/src/Baxter_simulation_controller/config/`
+
+## 4.Beginning of work
 
 In new window run:
 ```sh
@@ -96,9 +111,9 @@ rosrun robot_controller robot_control.py
 
 Return to the first terminal, open new window and send command to [**robonomics io**][db6]. This command will turn ON your robot:
 ```sh
-echo "ON" | ./robonomics io write launch -r <CURIOSITY ADDRESS> -s <EMPLOYER’S KEY>
+echo "ON" | ./robonomics io write launch -r <BAXTER ADDRESS> -s <EMPLOYER’S KEY>
 ```
-Where `<CURIOSITY ADDRESS>` and `<EMPLOYER’S KEY>` are replaced with previously saved strings accordingly
+Where `<BAXTER ADDRESS>`  and `<EMPLOYER’S KEY>` are replaced with previously saved strings accordingly.
 
 ![rob_message][im8]
 
@@ -110,25 +125,25 @@ when the work is over go to the Robonomics Portal to `Developer > Chain state`. 
 
 ![datalog][im10]
 
-Now the IPFS hash of the telemetry and photos is saved in the blockchain. To see the data simply copy the hash and insert it in IPFS Companion:
+Now the IPFS hash of the telemetry and photos is saved in the blockchain. To see the data simply copy the hash and insert it in the search bar with URL: `gateway.ipfs.io/ipfs/<put your hash here>`
 
-![ipfs][im11]
 
-Click  __View on Gateway__ and that's all!
+That's all!
 
 ![result1][im12]
 ![result2][im13]
 
+[db1]: <https://youtu.be/2AQGFVzkGdg>
 [db2]: <http://wiki.ros.org/melodic/Installation>
 [db3]: <https://dist.ipfs.io/go-ipfs/v0.4.22/go-ipfs_v0.4.22_linux-386.tar.gz>
 [db4]: <https://github.com/airalab/robonomics/releases>
+[db6]: </docs/create-account-in-dapp>
 [im1]: <./images/baxter_demo/empty_world.jpg>
 [im2]: <./images/baxter_demo/baxter_simulation.jpg>
 [im3]: <./images/baxter_demo/robonomics.jpg>
 [db5]: <https://parachain.robonomics.network>
 [im4]: <./images/baxter_demo/local_node.jpg>
 [im7]: <./images/baxter_demo/waiting.jpg>
-[db6]: </docs/create-account-in-dapp>
 [im8]: <./images/baxter_demo/rob_message.jpg>
 [im9]: <./images/baxter_demo/working.jpg>
 [im10]: <./images/baxter_demo/datalog.jpg>

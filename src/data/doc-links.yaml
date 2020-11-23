@@ -25,7 +25,11 @@
         - title: Part 2. Saving Data To Blockchain
           link: /docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-2/
     - title: Connect Industrial Robot
-      link: /docs/baxter/
+      items:
+        - title: Baxter simulation v1.0
+          link: /docs/baxter/
+        - title: Baxter simulation v2.0
+          link: /docs/baxter2/
     - title: Connect Manipulator
       link: /docs/kuka/
     - title: Connect Unmanned Aerial Vehicle
