@@ -4,7 +4,7 @@ Robonomics technologies can already solve the challenges that Industry 4.0 faces
 
 A large number of AI companies are building solutions to optimize the processes on the factory floor, allowing plants to produce more with less cost. However, most plants are hesitant to connect their infrastructure to the cloud directly since this results in potential cybersecurity risks, which could lead to million-dollar losses and even the loss of human life.
 
-MerkleBot has used Robonomics Network to build a solution for industrial clients to connect their factory to the cloud-based AI in a secure way.
+[MerkleBot](https://merklebot.com) has used [Robonomics Network](https://robonomics.network) to build a solution for industrial clients to connect their factory to the cloud-based AI in a secure way.
 
 This article is written in the wake of an experiment we conducted with [Veracity Protocol](https://www.veracityprotocol.org/) that uses algorithms to create non-invasive protection of any physical item based on the photographs from a mobile device.
 
