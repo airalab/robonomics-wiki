@@ -6,7 +6,7 @@ To get the weather from sensor on Fuji Mountain, please, open the page of [Fuji 
 
 Here's a walkthrough video:
 
-https://www.youtube.com/embed/WgWUTuWTLqk
+https://www.youtube.com/embed/t098NlMELk4
 
 ## 1. Open the Dapp
 
