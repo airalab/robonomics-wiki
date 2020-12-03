@@ -50,8 +50,6 @@
           link: /docs/connect-sensor-to-robonomics/
         - title: IoT Sensors Connectivity
           link: /docs/iot-sensors-connectivity/
-        - title: Firmware Upload
-          link: /docs/iot-firmware-upload/
         - title: Install Connectivity on Aira
           link: /docs/sensors-connectivity-on-aira/
         - title: Configuration Options Description
