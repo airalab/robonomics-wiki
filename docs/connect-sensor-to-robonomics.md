@@ -107,7 +107,7 @@ Open ESP local address in your browser, go to Configuration and click `API Robon
 
 ![robonomics](./images/sensors-connectivity/12_APIrobonomics.jpg)
 
-> If you want to send data to your own server, tick `Custom API` and write your address and port 
+> If you want to send data to your own server, enable `Custom API` and write your address and port 
 
 Then enable GPS, put in your coordinates. Also enable all the sensors you connected:
 
