@@ -2,11 +2,7 @@
 
 ## Prerequirements
 
-You must have an AIRA instance somewhere:
-
-* [Aira Installation on Intel NUC]()
-* [Aira Installation on cloud]()
-* [Aira Installation on VirtualBox]() (testing only)
+You must have an AIRA instance somewhere
 
 ## Install the Package
 
