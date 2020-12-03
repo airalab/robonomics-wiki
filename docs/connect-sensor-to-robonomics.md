@@ -64,8 +64,17 @@ chmod +x airrohr-flasher-linux
 ./airrohr-flasher-linux
 ```
 ---
-### For windows:
+### For Windows:
 Unpack flasher and run it with double click.
+You need to install drivers for the USB2serial chipset (Windows 10 should be able to automatically download these):
+
+* Drivers for NodeMCU v3 (CH340): [Windows](http://www.wch.cn/downloads/file/5.html) ([2018/09/04 v3.4 mirror](https://d.inf.re/luftdaten/CH341SER.ZIP))
+
+---
+### For MacOS
+Download flasher and run it.
+You need to install drivers for the USB2serial chipset: 
+* Drivers for NodeMCU v3 (CH340): [MacOS](http://www.wch.cn/downloads/file/178.html) ([2018/09/04 v1.4 mirror](https://d.inf.re/luftdaten/CH341SER_MAC.ZIP))
 
 ---
 Choose firmware (English or Russian) and press upload. It will take a few minutes.
@@ -94,19 +103,20 @@ Then find ESP in local network (for that your computer and ESP must be in one ne
 
 ---
 
-Open ESP local address in your browser, go to Configuration and click 'API Robonomics'. 
+Open ESP local address in your browser, go to Configuration and click `API Robonomics`. 
 
 ![robonomics](./images/sensors-connectivity/12_APIrobonomics.jpg)
+
+> If you want to send data to your own server, enable `Custom API` and write your address and port 
 
 Then enable GPS, put in your coordinates. Also enable all the sensors you connected:
 
 ![gps](./images/sensors-connectivity/13_gps.jpg)
 
-Then press "Save configuration and restart".
+Then press `Save configuration and restart`.
 
 ---
 
 ## Results
 Go to [sensors.robonomics.network](https://sensors.robonomics.network/#/), and you will see your sensor on the map.
 ![map](./images/sensors-connectivity/14_map.jpg)
-

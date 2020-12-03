@@ -56,25 +56,3 @@ cd sensors-connectivity
 nix build -f release.nix
 source result/setup.bash
 ```
-
-## Flash Firmware
-
-Let's start from a ping firmware. Plug an ESP like board in. Edit firmware's configuration file `sensors-connectivity/boards/esp/ESP_PING/config.my`:
-
-```yaml
-stassid: "ESSID"            # put your wifi name
-stapsk: "PASSWORD"          # wifi password
-host: "34.90.113.108"       # leave it for now
-port: 31313                 # leave it for now
-geo: "53.507520,49.252999"  # put your "latitude,longitude"
-```
-
-Then from firmware's root folder run the script:
-
-```
-cd boards/esp/ESP_PING
-./flash_firmware.py
-```
-
-The board should be ready. Go to [Sensors Connectivity Dapp](https://sensors.robonomics.network/#/) and look for your board at the specified GPS location. It could take up to 1 min for the board to appear on the map. 
-
