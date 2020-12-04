@@ -3,19 +3,15 @@
 
   <div class="sidebarMobileToggle">
     <div class="layout__page flex-line">
-      <div class="sidebarMobileToggle__tog" v-on:click="showBlock('sidebarDocs', $event)">
-        <IconMenu height="20px" class="mobileMenu"/>
-        <IconClose height="20px" class="mobileMenuClose" style="display: none;"/>
-      </div>
-      <div class="sidebarMobileToggle__tog" v-on:click="showBlock('sidebarContent', $event)">
-        <IconDots height="20px" class="mobileMenu"/>
-        <IconClose height="20px" class="mobileMenuClose" style="display: none;"/>
-      </div>
+
+      <NavIcon :section="'sidebarDocs'" :icon="'SideLeft'"/>
+      <NavIcon :section="'sidebarContent'" :icon="'SideRight'"/>
+      
     </div>
   </div>
 
 	<div class="page">
-		<div id="sidebarDocs" class="page__sidebar mobileClosed">
+		<div id="sidebarDocs" class="page__sidebar hiddenMobile">
       <SidebarDocs :items="items" />
       <Banner />
     </div>
@@ -25,7 +21,7 @@
       <Banner :place="'content'" />
   	</div>
 
-  	<div id="sidebarContent" class="page__sidebar mobileClosed">
+  	<div id="sidebarContent" class="page__sidebar hiddenMobile">
       <SidebarContent />
     </div>
 
@@ -50,7 +46,6 @@
       border-color: var(--link-color);
     }
 
-    // h4 ~ .menu { display: none; }
   }
 
   .page{
@@ -85,20 +80,6 @@
     z-index: 100;
 
     border-top: 1px solid currentColor;
-
-    &__tog{
-      cursor: pointer;
-      transition: opacity 0.2s ease;
-
-      &:hover{
-        opacity: .6;
-      }
-
-      svg{
-        display: block;
-        fill: currentColor;
-      }
-    }
   }
 
 
@@ -118,7 +99,7 @@
       &__sidebar{
 
         position: fixed;
-        top: calc( (2rem + (var(--header-padding))*2 ) *2 );
+        top: calc( (1rem + (var(--header-padding))*2 ) *2 );
         left: 0;
         right: 0;
         bottom: 0;
@@ -128,9 +109,6 @@
         padding: var(--space);
         background-color: var(--body-bg);
 
-        &.mobileClosed{
-          display: none;
-        }
       }
     }
 
@@ -166,32 +144,22 @@ query ($id: ID!) {
 
 
 <script>
-
-import SidebarDocs from '~/components/SidebarDocs.vue'
-import SidebarContent from '~/components/SidebarContent.vue'
-import IconMenu from '@/assets/images/IconMenu.svg'
-import IconDots from '@/assets/images/IconDots.svg'
-import IconClose from '@/assets/images/IconClose.svg'
-
 import items from '@/data/doc-links.yaml'
 
 export default {
 	components: {
-	    SidebarDocs,
-	    SidebarContent,
-      IconMenu,
-      IconDots,
-      IconClose,
-      Banner: () => import("../components/Banner.vue")
+      SidebarDocs: () => import("~/components/SidebarDocs.vue"),
+      SidebarContent: () => import("~/components/SidebarContent.vue"),
+      Banner: () => import("~/components/Banner.vue"),
+      NavIcon: () => import('~/components/NavIcon.vue'),
 	  },
+
   data(){
     return {
       items: this.setBranchOpenLabel(this.initOpenLabel(items))
     }
   },
-  // mounted: function(){
-  //       this.hideTitles();
-  // },
+
   methods: {
     initOpenLabel(list) {
       return list.map(item => {
@@ -215,28 +183,7 @@ export default {
         return {...item}
       })
     },
-    showBlock: function(bID, event){
-      var element = document.getElementById(bID),
-          classClose = 'mobileClosed',
-          menuI = event.currentTarget.querySelector('.mobileMenu'),
-          closeI = event.currentTarget.querySelector('.mobileMenuClose');
 
-      if (element.classList.contains(classClose)) {
-        element.classList.remove(classClose);
-        closeI.style.display = 'block';
-        menuI.style.display = 'none';
-      } else {
-        element.classList.add(classClose);
-        closeI.style.display = 'none';
-        menuI.style.display = 'block';
-      }
-    },
-
-    // hideTitles: function(){
-    //   var titles = document.getElementById('#sidebarDocs .menu__title');
-
-    //   titles
-    // }
   },
 	metaInfo () {
 	    const { title, headings } = this.$page.doc
@@ -244,33 +191,6 @@ export default {
 	      title: title || (headings.length ? headings[0].value : undefined)
 	    }
 	  }
-  // updated: function(){
-
-
-  //   //open current menu in SidebarDocs
-  //    var links = document.querySelectorAll('.menu-tree a'),
-  //    currentPath = this.$route.path,
-  //    path;
-
-
-  //    links.forEach(function(item, i, arr) {
-
-  //       path = item.href.replace(/.*\/\/[^\/]*/, '');
-
-  //       if (path == currentPath){
-
-  //         for ( ; item && item !== document; item = item.parentNode ) {
-  //           if(item.classList.contains('menu-tree')){
-  //             item.style.display = "block";
-  //           }
-  //         }
-  //       }
-
-  //     });
-  //   //end of open current menu in SidebarDocs
-
-
-  // }
 }
 
 
