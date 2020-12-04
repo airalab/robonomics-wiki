@@ -2,51 +2,7 @@
   <div id="app" class="layout">
 
       <div class="footerPusher">
-        <header class="header">
-          <div class="layout__page flex-line">
-            <div class="header__section header__logo">
-              <g-link to="/">
-                <g-image :alt="$static.metadata.siteName" src="~/assets/images/robonomics-logo-sign-sm.svg"/>
-                <span>{{ $static.metadata.siteName }}</span>
-              </g-link>
-            </div>
-
-            <div class="header__section flex-line header__nav">
-
-              <g-link class="header__nav__logo" to="/">
-                <g-image :alt="$static.metadata.siteName" src="~/assets/images/robonomics-logo-sign-sm.svg"/>
-              </g-link>
-              
-              <div class="header__nav__links header__nav__section">
-                <g-link to="https://discourse.robonomics.network">Forum</g-link>
-                <g-link to="https://github.com/airalab/">Github</g-link>
-              </div>
-
-              <div class="header__nav__search header__nav__section" :class="{focus: SearchFocused }" v-on:click="SearchFocused = !SearchFocused">
-                <input
-                  id="search"
-                  v-model="searchTerm"
-                  type="text"
-                  placeholder="Search" />
-
-
-                <div class="searchresults">
-                  <g-link
-                    v-for="result in searchResults"
-                    :key="result.id"
-                    :to="result.path"
-                    class="searchresults__item">
-                    {{ result.title }}
-                  </g-link>
-                </div>
-              </div>
-
-              <div class="header__nav__section">
-                <ToggleTheme />
-              </div>
-            </div>
-          </div>
-        </header>
+        <Header/>
 
         <transition name="fade" appear>
           <main class="main layout__page post">
@@ -85,13 +41,8 @@ query {
 
 
 <style lang="scss">
-.fade-enter-active {
-    transition: opacity .5s;
-  }
-
-  .fade-enter {
-    opacity: 0;
-  }
+.fade-enter-active { transition: opacity .5s; }
+.fade-enter { opacity: 0; }
   
 .header {
   padding: var(--header-padding) 0;
@@ -105,6 +56,11 @@ query {
 
   color: var(--header-link) !important;
 
+  & > div {
+    display: grid;
+    grid-template-columns: 300px auto; 
+  }
+
   a {
     color: currentColor;
   }
@@ -113,6 +69,7 @@ query {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
+    text-align: left;
 
     a {
       text-decoration: none;
@@ -124,14 +81,18 @@ query {
     }
 
     img{
-        // width: 30px;
-        height: var(--header-logo-height);
+        width: 30px;
+        // max-height: var(--header-logo-height);
         margin-right: 15px;
       }
     }
 
   &__nav{
     font-size: 0.8rem;
+    display: grid;
+    grid-template-columns: auto 180px;
+    align-items: center;
+    gap: 20px;
 
     &__section {
       margin-right: calc(var(--space) / 2);
@@ -151,6 +112,16 @@ query {
     &__links{
       white-space: nowrap;
       overflow-x: auto;
+      text-align: right;
+
+      & > *:not(:last-child) {
+          margin-right: calc(var(--space) / 4);
+      }
+
+      & > * {
+        display: inline-block;
+        vertical-align: middle;
+      }
 
       a {
         text-transform: uppercase;
@@ -158,63 +129,18 @@ query {
         text-decoration: none;
         font-weight: 700;
 
-        margin-right: calc(var(--space) / 4);
+        
       }
     }
 
 
-    &__search{
-      position: relative;
-
-      input[type="text"]{
-        transition: 0.2s ease all;
-        background-color: var(--color-dark);
-        border-color: rgba(255,255,255,.1);
-        color: var(--color-light);
-        font-weight: 700;
-        width: 100px;  
-      }
-
-      &.focus{
-          input[type="text"] {
-            border-color: rgba(255,255,255,.2);
-            width: 180px;
-          }
-
-          .searchresults{
-              opacity: 1;
-              visibility: visible;
-            }
-          }
-        }
 
 
     }
 }
 
 
-.searchresults{
-  position: absolute;
-  top: calc(100% + .5rem);
-  right: 0;
-  min-width: 200px;
 
-  background-color: var(--color-dark);
-  // border: 1px solid rgba(255,255,255,.2);
-  border-radius: var(--radius);
-
-  transition: 0.4s ease opacity;
-  opacity: 0;
-  visibility: hidden;
-
-  &__item{
-    display: block;
-    border-bottom: 1px solid rgba(255,255,255,.1);
-    padding: .5rem .8rem;
-    text-decoration: none;
-    font-weight: 700;
-  }
-}
 
 
 
@@ -265,100 +191,36 @@ query {
   }
 }
 
-
-
-@media screen and (max-width: 1080px) {
-    .header {
-      padding: calc(var(--space) / 2) 0;
-    }
-
-    .searchresults{
-      left: 0;
-    }
-}
-
-
-@media screen and (max-width: 860px) {
-  .header{
-    &__logo{
-        display: none;
-      }
-
-    &__nav{
-
-      flex-wrap: nowrap;
-      
-      &__logo{
-        display: block;
-      }
-
-    }
-
-
-    & > .flex-line{
-      flex-wrap: wrap;
-
-      .header__section{
-        min-width: 100%;
-        margin-bottom: calc(var(--space)/2);
-
-        &:last-child{
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    .header__nav__search{
-      flex-grow: 1;
-
-      input[type="text"]{
-        width: 100%;
-      }
-    }
+@media screen and (max-width: 880px) {
+  .header > div {
+    grid-template-columns: 60px auto; 
   }
 
-}
-
-
-@media screen and (max-width: 500px) {
-  .header{
-
-    &__nav{
-
-      // flex-wrap: wrap;
-    
-      // &__search{
-      //   order: 10;
-      //   min-width: 100%;
-      //   margin-top: calc(var(--space)/2);
-      // }
-
-      flex-wrap: nowrap;
-
-      &__search{
-        display: none;
-      }
-
+  .header__logo {
+    span {
+      display: none;
     }
   }
-
 }
+
+
+@media screen and (max-width: 480px) {
+  .header__nav {
+    grid-template-columns: auto 20px;
+  }
+
+  // .header__nav__links {
+  //   display: none;
+  // }
+}
+
 </style>
 
 
 <script>
-import ToggleTheme from '~/components/ToggleTheme.vue'
-import Search from 'gridsome-plugin-flexsearch/SearchMixin'
-
 export default {
-  data () {
-    return {
-      SearchFocused: false
-    }
-  },
   components: {
-    ToggleTheme
+    Header: () => import('~/components/Header.vue'),
   },
-  mixins: [Search]
 }
 </script>

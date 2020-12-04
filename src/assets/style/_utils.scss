@@ -17,3 +17,15 @@
 	color: rgba(var(--body-bg), 0.6);
 	font-style: italic;
 }
+
+.hiddenMobile{ 
+	@media screen and (max-width: 1080px) {
+		display: none;
+	}
+}
+
+.hiddenDesktop{ 
+	@media screen and (min-width: 1080px) {
+		display: none;
+	}
+}
