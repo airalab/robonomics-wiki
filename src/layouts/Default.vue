@@ -2,13 +2,13 @@
   <div id="app" class="layout">
 
       <div class="footerPusher">
+      
         <Header/>
 
-        <transition name="fade" appear>
-          <main class="main layout__page post">
-            <slot/>
-          </main>
-        </transition>
+        <main class="main layout__page post">
+          <slot/>
+        </main>
+
       </div>
 
       <footer class="footer">
@@ -40,10 +40,7 @@ query {
 </static-query>
 
 
-<style lang="scss">
-.fade-enter-active { transition: opacity .5s; }
-.fade-enter { opacity: 0; }
-  
+<style lang="scss">  
 .header {
   padding: var(--header-padding) 0;
   background-color: var(--header-bg);

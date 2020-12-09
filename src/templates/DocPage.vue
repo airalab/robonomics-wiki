@@ -147,6 +147,7 @@ query ($id: ID!) {
 import items from '@/data/doc-links.yaml'
 
 export default {
+
 	components: {
       SidebarDocs: () => import("~/components/SidebarDocs.vue"),
       SidebarContent: () => import("~/components/SidebarContent.vue"),
@@ -190,7 +191,30 @@ export default {
 	    return {
 	      title: title || (headings.length ? headings[0].value : undefined)
 	    }
-	  }
+	  },
+
+  updated: function(){
+
+
+    //Hide popup mobile menu after clickcing (cause - no real page reload in Gridsome)
+    document.querySelectorAll('.menu__link').forEach(function(el) {
+      
+      el.addEventListener('click', function(event){
+        event.target.closest('.page__sidebar').classList.add('hiddenMobile');
+        var id = event.target.closest('.page__sidebar').id;
+        console.log(id);
+        
+        document.querySelectorAll('.sectionToggler').forEach(function(el) {
+          if(el.dataset.show == id) {
+            el.classList.add('open');
+            el.classList.remove('close');
+          }
+        });
+      })
+    });
+
+    
+  }
 }
 
 

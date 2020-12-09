@@ -24,7 +24,7 @@
 				return [2,3,4].includes(value.depth)
 			})
 			return subtitles
-	    }
+	    },
 	  }
 	}
 

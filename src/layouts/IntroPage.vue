@@ -1,24 +1,16 @@
 <template>
   <div id="app" class="layout screen">
       <ToggleTheme />
-      
-      <transition name="fade" appear>
-        <div class="layout__content">
-          <slot/>
-        </div>
-      </transition>
+
+      <div class="layout__content">
+        <slot/>
+      </div>
+
   </div>
 </template>
 
 
 <style lang="scss">
-  .fade-enter-active {
-    transition: opacity .5s;
-  }
-
-  .fade-enter {
-    opacity: 0;
-  }
 
   .screen .toggle-theme{
     color: currentColor;

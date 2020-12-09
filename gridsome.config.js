@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'Robonomics Wiki',
   siteDescription: 'The Robonomics Wiki aims to bring all the knowledge about Robonomics to end users and everyone who is interested in the project.',
-
+  
   plugins: [
     {
       use: '@gridsome/vue-remark',
@@ -64,6 +64,13 @@ module.exports = {
       }
 
   ],
+
+
+  // transformers: {
+  //   remark: {
+  //     externalLinks: false
+  //   }
+  // },
 
 
   chainWebpack: config => {
