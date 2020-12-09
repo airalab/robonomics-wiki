@@ -11,7 +11,7 @@ There are many ways to contribute to Robonomics Network: you can contribute dire
 
 ## For Researchers & Academics
 
-- [Read Robonomics White Paper and our scientific articles](https://robonomics.network/en/documents/)
+- [Read Robonomics White Paper and our scientific articles](https://robonomics.network/community/#science)
 
 If you have a background in mathematics, cryptography, or economics you might be interested for collaboration with us, write us to [research@aira.life](mailto:research@aira.life)
 
