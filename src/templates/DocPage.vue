@@ -63,6 +63,14 @@
         min-width: 0;
         max-width: 100%;
       }
+
+      @media screen and (min-width: 1080px){
+        align-items: flex-start;
+        &__sidebar {
+          position: sticky;
+          top: 80px;
+        }
+      }
   }
 
   .sidebarMobileToggle{
