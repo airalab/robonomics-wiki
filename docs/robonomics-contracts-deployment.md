@@ -17,7 +17,7 @@ A file truffle.js contains available networks for migration. We will work with d
     npm install // to install dependencies
     truffle migrate --network development
 
-It's time to learn how to create a new lighthouse. For more information about Robonomics network and Lighthouse in particular read [white paper](https://robonomics.network/robonomics_white_paper_en.pdf). Briefly lighthouse o distributes the running time of providers. Every lighthouse serves its own broadcast channel. Ask and Bid messages come into this channel. XRT tokens are used as a payment. 
+It's time to learn how to create a new lighthouse. For more information about Robonomics network and Lighthouse in particular read [white paper](http://static.robonomics.network/docs/book-the-economy-of-robots-1-2017/robonomics.network-book-the-economy-of-robots-1-2017-en.pdf). Briefly lighthouse o distributes the running time of providers. Every lighthouse serves its own broadcast channel. Ask and Bid messages come into this channel. XRT tokens are used as a payment. 
 
 When XRT contracts was deployed some tokens were issued on our account. Let's check the balance:
 

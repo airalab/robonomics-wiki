@@ -24,7 +24,7 @@ The next step is to deposit some ethers and XRT tokens to the address which is h
 
 ## Create a lighthouse
 
-Go to the lighthouse [dapp](https://robonomics.network/lighthouse/#/) and fill in a name in the right side:
+Go to the lighthouse [dapp](https://dapp.robonomics.network/#/lighthouse) and fill in a name in the right side:
 
 ![The Right Side](./images/become_a_provider_1.jpg "The Right Side")
 

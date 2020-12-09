@@ -54,7 +54,7 @@ In the code we subscribe for the ``/blink_led`` topic and set a callback. The ty
 
 > You can download the latest release from [here](https://github.com/airalab/aira/releases).
 
-Set up the COM port forwarding as described in [this lesson](#). You should forward your `/dev/ttyUSB0` or `/dev/ttyACM0` port (depending on the system) to `COM1`. In the client `/dev/ttyS0` will represent the board. After this launch the virtual machine.
+Set up the COM port forwarding. You should forward your `/dev/ttyUSB0` or `/dev/ttyACM0` port (depending on the system) to `COM1`. In the client `/dev/ttyS0` will represent the board. After this launch the virtual machine.
 
 ## ROS
 
@@ -73,7 +73,7 @@ When new liability is created it goes to `/liability/ready` topic. We have to re
   rospy.Subscriber("/liability/ready", Liability, newliability)
 ```
 
-A message in the `/blink` topic come from the objective field. Have a look at [Basic usage](#) page.
+A message in the `/blink` topic come from the objective field. Have a look at [Basic usage](/docs/aira-basic-usage) page.
 
 ## AIRA
 
@@ -99,4 +99,4 @@ $ cd robonomics_tutorials/arduino_blink_dapp
 $ npm i && npm run dev
 ```
 
-Open the [link](http://localhost:8000/) and press "Demand" then "Offer" buttons. Wait until a new liability is created and you should see the board blinking. Congratulations on the first agent!
+Open [http://localhost:8000/](http://localhost:8000/) and press "Demand" then "Offer" buttons. Wait until a new liability is created and you should see the board blinking. Congratulations on the first agent!

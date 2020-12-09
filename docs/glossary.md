@@ -22,7 +22,7 @@ For more detail how it works go to the official website.
 
 A lighthouse is an autonomous workflow that allows us to distribute the running time of providers that serve a single broadcast channel.
 
-For more information read [Robonomics Whitepaper](https://robonomics.network/robonomics_white_paper_en.pdf) section 5.2.
+For more information read [Robonomics Whitepaper](https://static.robonomics.network/docs/whitepaper/Robonomics-whitepaper-en.pdf) section 5.2.
 
 ## Sidechain
 

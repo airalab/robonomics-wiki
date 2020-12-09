@@ -46,8 +46,6 @@ How to use it for:
 
 * [ipfs](/docs/rio-ipfs)
 * [launch](/docs/rio-launch)
-* [pubsub](/docs/rio-pubsub)
-* [sds011](/docs/rio-sds011)
 
 ```
 % ./robonomics io read
@@ -78,7 +76,6 @@ How to use it for:
 * [datalog](/docs/rio-datalog)
 * [ipfs](/docs/rio-ipfs)
 * [launch](/docs/rio-launch)
-* [pubsub](/docs/rio-pubsub)
 
 ```
 % ./robonomics io write
