@@ -4,7 +4,7 @@
 ## Requirements
 - Robonomics binary, download latest here: https://github.com/airalab/robonomics/releases/
 - Subkey tool, download latest here: https://github.com/airalab/robonomics/releases/
-- 3 servers with root shell. Their ip-addresses in the current instruction will be **165.227.171.127**, **159.89.25.75** and **159.89.30.50**
+- 3 servers with root shell. Their ip-addresses in the current instruction will be `165.227.171.127`, `159.89.25.75` and `159.89.30.50`
 
 ## Introduction
 In this tutorial, we will first create all key files locally, and then upload them to their corresponding nodes. 
@@ -102,10 +102,10 @@ Example creating one key.
     ```
   
 Command template for creating a validator key file:  
-> touch ./local/validators/**SS58_Address** && echo '"**seed**"' | tee ./local/validators/**SS58_Address**
+`touch ./local/validators/**SS58_Address** && echo '"**seed**"' | tee ./local/validators/**SS58_Address**`
 
 Command template for creating a sudo key file:   
-> touch ./local/sudo/**SS58_Address** && echo '"**seed**"' | tee ./local/sudo/**SS58_Address**
+`touch ./local/sudo/**SS58_Address** && echo '"**seed**"' | tee ./local/sudo/**SS58_Address**`
 
 Three keys are stored in the **local/validators** folder and one in the **local/sudo** folder. As a result, the following content should appear in the **local** directory:
 ```
@@ -180,83 +180,103 @@ An example of creating keys for one node:
   $ ./subkey --sr25519 -n robonomics generate
   ```
   >  Secret phrase **cover once garment syrup income chair elder business diary frozen rack damage** is account:  
-  >  Network ID/version: substrate  
-  >  Secret seed:        0x90ddeee3a9a0c464572021d311c245eefc41f9a59c739faefda47efcf4755677  
-  >  Public key (hex):   0xfa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43  
-  >  Account ID:         0x**fa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43**  
-  >  SS58 Address:       *4HirHF5BVHxkRBtqptFxBSmnAiZir1qQLs6pL9Utmm4eF77C*
+  >
+  >  Network ID/version: `substrate`
+  >
+  >  Secret seed:        `0x90ddeee3a9a0c464572021d311c245eefc41f9a59c739faefda47efcf4755677`
+  >
+  >  Public key (hex):   `0xfa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43`
+  >
+  >  Account ID:         `0xfa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43`
+  > 
+  >  SS58 Address:       `4HirHF5BVHxkRBtqptFxBSmnAiZir1qQLs6pL9Utmm4eF77C`
   
  ```
  $ touch uploads/165.227.171.127/keystore/62616265fa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43 && echo '"cover once garment syrup income chair elder business diary frozen rack damage"' | tee ./uploads/165.227.171.127/keystore/62616265fa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43 
  ```
- This command creates a **babe** key file for the **165.227.171.127** node. To fill in **spec.json**, need to take from this output the value **SS58 Address**: *4HirHF5BVHxkRBtqptFxBSmnAiZir1qQLs6pL9Utmm4eF77C*. This address need to insert instead of **%sr25519_babe_SS58_address%** in the above **palletSession** template.
+ This command creates a **babe** key file for the `165.227.171.127` node. To fill in **spec.json**, need to take from this output the value **SS58 Address**: `4HirHF5BVHxkRBtqptFxBSmnAiZir1qQLs6pL9Utmm4eF77C`. This address need to insert instead of `%sr25519_babe_SS58_address%` in the above **palletSession** template.
    
  **babe** key file creation command template:  
-  > touch ./uploads/**node_ip**/keystore/62616265+**Account_ID** && echo '"**seed**"' | tee ./uploads/**node_ip**/keystore/62616265+**Account_ID**  
+`touch ./uploads/[node_ip]/keystore/62616265+[Account_ID] && echo '"[seed]"' | tee ./uploads/[node_ip]/keystore/62616265+[Account_ID]`  
 
-As you can see, the name of the babe key file is the sum of two substrings: **babe prefix ('62616265')**, and the **account_id** of the generated key, without the leading zero (**fa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43**). 
-  Note that the keys **babe, im_online, authority_discovery** are generated with the indication **--sr25519**.  
-  **grandpa** key have to generate with the indication **--ed25519**.
+As you can see, the name of the babe key file is the sum of two substrings: `babe prefix ('62616265')`, and the `account_id` of the generated key, without the leading zero (`fa44d96e310cf68350dd855c745794f7c1afa63089ebdb2c96bff3797972bb43`). 
+  Note that the keys `babe, im_online, authority_discovery` are generated with the indication `--sr25519`.  
+  **grandpa** key have to generate with the indication `--ed25519`.
  
 
 - Creating an **im_online** (prefix *696d6f6e*) key file.  
   ```
   $ ./subkey --sr25519 -n robonomics generate
   ```
-  > Secret phrase **envelope truly balance turkey undo casual waste skill average ordinary gun split** is account:  
-  >   Network ID/version: substrate  
-  >   Secret seed:        0x8a19df08feeff9f1fa3581902ca22a305252aea32e284d32f10e990d00bb8926  
-  >   Public key (hex):   0x6c13ff8e37d91b80fe3b03f9b92a91a1ef7db741434cf12cc44d5ed29257ab09  
-  >   Account ID:         0x**6c13ff8e37d91b80fe3b03f9b92a91a1ef7db741434cf12cc44d5ed29257ab09**  
-  >   SS58 Address:       *4EWQyBRoucH4Wjd4JtGoSEYYCw4bbkonjoFy9hNUX5fbmMEt*
+  > Secret phrase **envelope truly balance turkey undo casual waste skill average ordinary gun split** is account:
+  >
+  >   Network ID/version: `substrate`
+  > 
+  >   Secret seed:        `0x8a19df08feeff9f1fa3581902ca22a305252aea32e284d32f10e990d00bb8926`
+  > 
+  >   Public key (hex):   `0x6c13ff8e37d91b80fe3b03f9b92a91a1ef7db741434cf12cc44d5ed29257ab09`
+  >  
+  >   Account ID:         `0x6c13ff8e37d91b80fe3b03f9b92a91a1ef7db741434cf12cc44d5ed29257ab09`
+  >  
+  >   SS58 Address:       `4EWQyBRoucH4Wjd4JtGoSEYYCw4bbkonjoFy9hNUX5fbmMEt`
    
   ```
   $ touch uploads/165.227.171.127/keystore/696d6f6e6c13ff8e37d91b80fe3b03f9b92a91a1ef7db741434cf12cc44d5ed29257ab09 && echo '"envelope truly balance turkey undo casual waste skill average ordinary gun split"' | tee uploads/165.227.171.127/keystore/696d6f6e6c13ff8e37d91b80fe3b03f9b92a91a1ef7db741434cf12cc44d5ed29257ab09
   ```
   **im_online** key file creation command template:  
-  > touch ./uploads/**node_ip**/keystore/696d6f6e+**Account_ID** && echo '"**seed**"' | tee ./uploads/**node_ip**/keystore/696d6f6e+**Account_ID**  
+  `touch ./uploads/[node_ip]/keystore/696d6f6e+[Account_ID] && echo '"[seed]"' | tee ./uploads/[node_ip]/keystore/696d6f6e+[Account_ID]`
   
-  **spec.json**: *4EWQyBRoucH4Wjd4JtGoSEYYCw4bbkonjoFy9hNUX5fbmMEt* need to insert instead of **%sr25519_im_online_SS58_address%** in the above **palletSession** template.
+  **spec.json**: `4EWQyBRoucH4Wjd4JtGoSEYYCw4bbkonjoFy9hNUX5fbmMEt` need to insert instead of `%sr25519_im_online_SS58_address%` in the above **palletSession** template.
 
 
 - Creating an **authority_discovery** (prefix *61756469*) key file.
    ```
    $ ./subkey --sr25519 -n robonomics generate
    ```
-   > Secret phrase **boy harsh because omit equip atom apart spring undo explain walnut crystal** is account:  
-   > Network ID/version: substrate  
-   >   Secret seed:        0x27838c9ea0524353da3717862ef0ecef123f40e81b73bb5ef377d12b47d1c543  
-   >   Public key (hex):   0x4e33ccfd4105d30dfd93c5ef4658e2585a749508ea7c7abe754efc36dd634c07  
-   >   Account ID:         0x**4e33ccfd4105d30dfd93c5ef4658e2585a749508ea7c7abe754efc36dd634c07**  
-   >   SS58 Address:       *4DqEyoefRSz746sjaonxJ7KZQz8MUq4cKFA87DfoLzQgWk8t*
+   > Secret phrase **boy harsh because omit equip atom apart spring undo explain walnut crystal** is account:
+   >
+   > Network ID/version: `substrate`
+   >
+   >   Secret seed:        `0x27838c9ea0524353da3717862ef0ecef123f40e81b73bb5ef377d12b47d1c543`
+   > 
+   >   Public key (hex):   `0x4e33ccfd4105d30dfd93c5ef4658e2585a749508ea7c7abe754efc36dd634c07`
+   > 
+   >   Account ID:         `0x4e33ccfd4105d30dfd93c5ef4658e2585a749508ea7c7abe754efc36dd634c07`
+   >  
+   >   SS58 Address:       `4DqEyoefRSz746sjaonxJ7KZQz8MUq4cKFA87DfoLzQgWk8t`
    
    ```
    $ touch uploads/165.227.171.127/keystore/617564694e33ccfd4105d30dfd93c5ef4658e2585a749508ea7c7abe754efc36dd634c07 && echo '"boy harsh because omit equip atom apart spring undo explain walnut crystal"' | tee uploads/165.227.171.127/keystore/617564694e33ccfd4105d30dfd93c5ef4658e2585a749508ea7c7abe754efc36dd634c07
    ```
   **authority_discovery** key file creation command template:  
-  > touch ./uploads/**node_ip**/keystore/61756469+**Account_ID** && echo '"**seed**"' | tee ./uploads/**node_ip**/keystore/61756469+**Account_ID**  
+  `touch ./uploads/[node_ip]/keystore/61756469+[Account_ID] && echo '"[seed]"' | tee ./uploads/[node_ip]/keystore/61756469+[Account_ID]` 
   
-   **spec.json**: *4DqEyoefRSz746sjaonxJ7KZQz8MUq4cKFA87DfoLzQgWk8t* need to insert instead of **%sr25519_authority_discovery_SS58_address%** in the above **palletSession** template.
+   **spec.json**: `4DqEyoefRSz746sjaonxJ7KZQz8MUq4cKFA87DfoLzQgWk8t` need to insert instead of `%sr25519_authority_discovery_SS58_address%` in the above **palletSession** template.
 
 
 - Creating a **grandpa** (prefix *6772616e*) key file.
    ```
    $ ./subkey --ed25519 -n robonomics generate
    ```
-   > Secret phrase **squeeze nature off vendor comic pause tattoo seek omit spatial regular cattle** is account:  
-   >   Network ID/version: substrate  
-   >   Secret seed:        0xef0a9f51a4da7b789c0a25d39b44428d4da7262cc3fe013d4383b45216e8b83e  
-   >   Public key (hex):   0x7ea1beed13fb66a333b50b1ae417ebfd152bab99b223be2d4d886adb5fa7f009  
-   >   Account ID:         0x**7ea1beed13fb66a333b50b1ae417ebfd152bab99b223be2d4d886adb5fa7f009**  
-   >   SS58 Address:       *4EvjwRdgUg6YtdUDjq6Z3PoTKtzH5cgFgwnzArMSbw3RzYTa*
+   > Secret phrase **squeeze nature off vendor comic pause tattoo seek omit spatial regular cattle** is account:
+   > 
+   >   Network ID/version: `substrate`
+   >
+   >   Secret seed:        `0xef0a9f51a4da7b789c0a25d39b44428d4da7262cc3fe013d4383b45216e8b83e`
+   >  
+   >   Public key (hex):   `0x7ea1beed13fb66a333b50b1ae417ebfd152bab99b223be2d4d886adb5fa7f009`
+   >  
+   >   Account ID:         `0x7ea1beed13fb66a333b50b1ae417ebfd152bab99b223be2d4d886adb5fa7f009`
+   > 
+   >   SS58 Address:       `4EvjwRdgUg6YtdUDjq6Z3PoTKtzH5cgFgwnzArMSbw3RzYTa`
     
    ```
    $ touch uploads/165.227.171.127/keystore/6772616e7ea1beed13fb66a333b50b1ae417ebfd152bab99b223be2d4d886adb5fa7f009 && echo '"squeeze nature off vendor comic pause tattoo seek omit spatial regular cattle"' | tee uploads/165.227.171.127/keystore/6772616e7ea1beed13fb66a333b50b1ae417ebfd152bab99b223be2d4d886adb5fa7f009
    ```
    **grandpa** key file creation command template:  
-  > touch ./uploads/**node_ip**/keystore/6772616e+**Account_ID** && echo '"**seed**"' | tee ./uploads/**node_ip**/keystore/6772616e+**Account_ID** 
+  `touch ./uploads/[node_ip]/keystore/6772616e+[Account_ID] && echo '"[seed]"' | tee ./uploads/[node_ip]/keystore/6772616e+[Account_ID]`
    
-   **spec.json**: *4EvjwRdgUg6YtdUDjq6Z3PoTKtzH5cgFgwnzArMSbw3RzYTa* need to insert instead of **%sr25519_grandpa_SS58_address%** in the above **palletSession** template.
+   **spec.json**: `4EvjwRdgUg6YtdUDjq6Z3PoTKtzH5cgFgwnzArMSbw3RzYTa` need to insert instead of `%sr25519_grandpa_SS58_address%` in the above **palletSession** template.
    
    
 **Now 4 key files have been created for one node. Need to repeat this actions for the remaining two nodes.**

@@ -1,6 +1,6 @@
 # R&D Based on Robonomics Network
 
-### [EN]
+### English
 For 4 years, the Robonomics project participants completed 13 R&D projects in the process of writing the current version of the Robonomics platform, including:
 
 1. Launching a drone under the control of a decentralized computer.
@@ -17,7 +17,7 @@ For 4 years, the Robonomics project participants completed 13 R&D projects in th
 12. Control of equipment maintenance process by supply chain participants based on IoT data.
 13. Robot as a service in service robotics.
 
-### [RU]
+### Русский
 За 4 года участники проекта Робономика выполнили 13 R&D проектов в процессе написания текущей версии платформы Робономика. Ознакомьтесь со списком опробованных нами сценариев применения web3+robotics:
 
 1. Запуск дрона под контролем децентрализованного компьютера.
