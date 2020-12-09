@@ -1,26 +1,45 @@
 <template>
-	<div class="sectionToggler" :class="sectionClass" v-on:click="showBlock(section, $event)">
+	<div class="sectionToggler open" :class="sectionClass" v-on:click="showBlock(section, $event)" :data-show="section">
         <IconMenu v-if="icon == 'Menu'" v-bind="iconOpenAttr" />
         <IconDots v-if="icon == 'Dots'" v-bind="iconOpenAttr" />
         <IconSideLeft v-if="icon == 'SideLeft'" v-bind="iconOpenAttr" />
         <IconSideRight v-if="icon == 'SideRight'" v-bind="iconOpenAttr" />
-        <IconClose height="20px" class="sectionTogglerClose" style="display: none;"/>
+        <IconClose height="20px" class="sectionTogglerClose"/>
 	</div>
 </template>
 
 <style lang="scss">
 	.sectionToggler {
 		cursor: pointer;
-      	// transition: opacity 0.2s ease;
 
 		&:hover{
 			opacity: .6;
 		}
 
 		svg{
-			display: block;
 			fill: currentColor;
+      display: none;
 		}
+
+    &.open {
+      .sectionTogglerOpen {
+         display: block;
+      }
+
+      .sectionTogglerClose {
+         display: none;
+      }
+    }
+
+    &.close {
+      .sectionTogglerOpen {
+         display: none;
+      }
+
+      .sectionTogglerClose {
+        display: block;
+      }
+    }
 	}
 	
 </style>
@@ -65,21 +84,22 @@ export default {
   methods: {
     showBlock: function(bID, event){
       var element = document.getElementById(bID),
-          classClose = 'hiddenMobile',
-          menuI = event.currentTarget.querySelector('.sectionTogglerOpen'),
-          closeI = event.currentTarget.querySelector('.sectionTogglerClose');
+          classClose = 'hiddenMobile';
 
       if (element.classList.contains(classClose)) {
         element.classList.remove(classClose);
-        closeI.style.display = 'block';
-        menuI.style.display = 'none';
+        event.currentTarget.classList.add('close');
+        event.currentTarget.classList.remove('open');
       } else {
         element.classList.add(classClose);
-        closeI.style.display = 'none';
-        menuI.style.display = 'block';
+        event.currentTarget.classList.add('open');
+        event.currentTarget.classList.remove('close');
       }
+
     },
 
   },
+
+  
 }
 </script>
