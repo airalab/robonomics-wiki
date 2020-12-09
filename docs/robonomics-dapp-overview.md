@@ -16,7 +16,7 @@ You can treat it as a unique identifier of your instance in IPFS network. Under 
 
 ## Address Eth
 
-By default AIRA generates new Ethereum address for you (it's [possible](/docs/faq#how-to-change-ethereum-address-of-aira) to generate new one).
+By default AIRA generates new Ethereum address for you (it's [possible](/docs/aira-faq#how-to-change-ethereum-address-of-aira) to generate new one).
 
 It's mainly used to sign all the outcoming messages.
 
@@ -28,7 +28,7 @@ You can choose existing one or create your own on [Lighthouses](https://dapp.rob
 
 ## Peers
 
-The amount of IPFS pubsub [peers](/docs/faq#how-to-check-the-quantity-of-ipfs-peers).
+The amount of IPFS pubsub [peers](/docs/aira-faq#how-to-check-the-quantity-of-ipfs-peers).
 
 ## Date
 

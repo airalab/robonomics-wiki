@@ -18,7 +18,7 @@ The best way to try AIRA is to start from installing it as a virtual machine on 
 AIRA has [stable](https://aira.life/channels/aira-stable/) and [unstable](https://aira.life/channels/aira-unstable/) channels.
 
 To get stable image download the file with `.ova` extension.
-	For example, the link for stable image can be [https://aira.life/channels/aira-stable/nixos-20.03pre-git-x86_64-linux.ova](https://aira.life/channels/aira-stable/nixos-20.03pre-git-x86_64-linux.ova)
+	The link for stable image is [here](https://releases.aira.life/channels/aira/stable/862-aira-stable/nixos-20.03pre-git-x86_64-linux.ova)
 
 Don't forget to compare checksum of the downloaded image with the last column `SHA-256 hash` on the [download page](https://aira.life/channels/aira-stable/). It must be equal to the output of the following command (it is an example, please check the name of downloaded by you .ova file first):
 

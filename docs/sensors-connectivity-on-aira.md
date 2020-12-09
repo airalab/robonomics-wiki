@@ -18,11 +18,11 @@ From this point you can run the package with the default configuration file or c
 
 Assuming you are in the package root directory edit the file:
 ```
-cp config/default.yaml config/my.yaml
-vim config/my.yaml
+cp config/default.yaml config/my.json
+vim config/my.json
 ```
 
-Extended description of options is located [here]()
+Extended description of options is located [here](/docs/configuration-options-description)
 
 ### Run Manually
 
@@ -30,7 +30,7 @@ From the package directory:
 
 ```
 source result/setup.zsh
-roslaunch sensors_connectivity agent.launch config:=/root/sensors-connectivity/config/my.yaml
+roslaunch sensors_connectivity agent.launch config:=/root/sensors-connectivity/config/my.json
 ```
 
 ### Run via systemd
