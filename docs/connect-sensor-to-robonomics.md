@@ -4,7 +4,6 @@
 * particle sensor SDS011
 * micro USB cable
 * connecting wires
----
 
 ## Assembling
 ### Connection Diagram
@@ -46,7 +45,6 @@ And connect them to ESP according to the diagram:
 
 ![esp_con](./images/sensors-connectivity/6_esp_con.jpg)
 
----
 ## Device Firmware
 Download `airrohr-flasher` from the [latest release](https://github.com/airalab/sensors-connectivity/releases) for your OS. 
 Connect ESP to computer via micro-USB and run flasher. 
@@ -63,25 +61,25 @@ Now you can run flasher (don't forget to give it permission to execute):
 chmod +x airrohr-flasher-linux
 ./airrohr-flasher-linux
 ```
----
+
 ### For Windows:
 Unpack flasher and run it with double click.
 You need to install drivers for the USB2serial chipset (Windows 10 should be able to automatically download these):
 
 * Drivers for NodeMCU v3 (CH340): [Windows](http://www.wch.cn/downloads/file/5.html) ([2018/09/04 v3.4 mirror](https://d.inf.re/luftdaten/CH341SER.ZIP))
 
----
+
 ### For MacOS
 Download flasher and run it.
 You need to install drivers for the USB2serial chipset: 
 * Drivers for NodeMCU v3 (CH340): [MacOS](http://www.wch.cn/downloads/file/178.html) ([2018/09/04 v1.4 mirror](https://d.inf.re/luftdaten/CH341SER_MAC.ZIP))
 
----
+
 Choose firmware (English or Russian) and press upload. It will take a few minutes.
 
 ![flasher](./images/sensors-connectivity/7_flasher.jpg)
 
----
+
 ## Configuration
 Reboot your ESP (simply reconnect USB to computer).
 Then connect to airRohr--xxxxxxx Wi-Fi network and in your browser write address 192.168.4.1:
@@ -96,12 +94,12 @@ Then press "Save configuration and restart" and ESP will be connected to the pro
 
 ![save](./images/sensors-connectivity/10_save.jpg)
 
----
+
 Then find ESP in local network (for that your computer and ESP must be in one network). You can do it using airrohr-flasher. Run it, go to the Discovery tab and press Refresh, then you'll be able to see the address.
 
 ![addr](./images/sensors-connectivity/11_flaser2.jpg)
 
----
+
 
 Open ESP local address in your browser, go to Configuration and click `API Robonomics`. 
 
@@ -115,8 +113,9 @@ Then enable GPS, put in your coordinates. Also enable all the sensors you connec
 
 Then press `Save configuration and restart`.
 
----
+
 
 ## Results
 Go to [sensors.robonomics.network](https://sensors.robonomics.network/#/), and you will see your sensor on the map.
+
 ![map](./images/sensors-connectivity/14_map.jpg)
