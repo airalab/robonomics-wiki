@@ -18,11 +18,16 @@
 
   	<div class="page__content">
   		<VueRemarkContent />
-      <Banner :place="'content'" />
+      <!--<Banner :place="'content'" />-->
+      
   	</div>
 
   	<div id="sidebarContent" class="page__sidebar hiddenMobile">
       <SidebarContent />
+      <a :href="editLink" target="_blank" class="button button__secondary button__small">
+        <IconGithub/>
+        <span>Edit this page</span>
+      </a>
     </div>
 
   </div>
@@ -33,44 +38,45 @@
 
 <style lang="scss">
 
-  #sidebarContent.page__sidebar {
-    padding-left: calc( var(--space) / 2);
-    flex: 0 0 220px;
-  }
-
-  #sidebarDocs.page__sidebar {
-    padding-right: var(--space);
-    flex: 0 0 300px;
-
-    .menu .menu:hover{
-      border-color: var(--link-color);
-    }
-
-  }
-
   .page{
-      display: flex;
-      flex-flow: row nowrap;
-      height: 100%;
+      display: grid;
+      // grid-template-columns: 250px auto 200px;
+      grid-template-columns: minmax(0,250px) minmax(0,auto) minmax(0,200px);
+      gap: var(--space);
+      align-items: start;
+
+      h1 { font-weight: 500; }
 
       &__sidebar{
-        flex: 0 0 260px;
         word-break: break-word;
       }
 
-      &__content{
-        flex: 1 auto;
-        min-width: 0;
-        max-width: 100%;
-      }
-
       @media screen and (min-width: 1080px){
-        align-items: flex-start;
+        
         &__sidebar {
           position: sticky;
           top: 80px;
         }
+
       }
+  }
+
+  #sidebarDocs.page__sidebar {
+
+    .menu {
+      h4 {
+        border-top: 1px solid var(--border-color);
+        padding-top: 5px;
+
+        &:not(:first-child) { margin-top: 20px; }
+      }
+	    padding-left: calc( var(--space) / 4);
+    }
+
+    .menu .menu:hover{
+      border-color: var(--link-color);
+    }
+    
   }
 
   .sidebarMobileToggle{
@@ -95,19 +101,14 @@
 @media screen and (max-width: 1080px) {
 
     .page{
-      flex-wrap: wrap;
+      grid-template-columns: 1fr;
       padding-top: calc(var(--space)*2);
 
-      &__content{
-        flex: 1;
-        order: 3;
-        min-width: 100%;
-      }
 
       &__sidebar{
 
         position: fixed;
-        top: calc( (1rem + (var(--header-padding))*2 ) *2 );
+        top: calc( (2rem + (var(--header-padding))*2 ) *2 );
         left: 0;
         right: 0;
         bottom: 0;
@@ -161,6 +162,7 @@ export default {
       SidebarContent: () => import("~/components/SidebarContent.vue"),
       Banner: () => import("~/components/Banner.vue"),
       NavIcon: () => import('~/components/NavIcon.vue'),
+      IconGithub: () => import('@/assets/images/IconGithub.svg'),
 	  },
 
   data(){
@@ -194,6 +196,21 @@ export default {
     },
 
   },
+
+  computed: {
+
+    currentPath () {
+      return this.$route.matched[0].path
+    },
+
+    editLink () {
+      let path = this.currentPath
+      if((path.match(new RegExp("/", "g")) || []).length == 1) path = path + '/README'
+      return `https://github.com/airalab/robonomics-wiki/blob/master${path}.md`
+    },
+
+  },
+
 	metaInfo () {
 	    const { title, headings } = this.$page.doc
 	    return {
