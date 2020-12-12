@@ -19,7 +19,24 @@
   	<div class="page__content">
   		<VueRemarkContent />
       <!--<Banner :place="'content'" />-->
-      
+
+    
+    
+    <!--{{items}}
+    <hr/>
+    {{linksList}}
+
+    <section class="page__next">
+    
+      <g-link v-if="previousPage" exact class="button button__secondary" :to="previousPage.link">
+        &larr; {{ previousPage.title }}
+      </g-link>
+      <g-link v-if="nextPage" exact class="button button__secondary" :to="nextPage.link">
+        {{ nextPage.title }} &rarr;
+      </g-link>
+
+    </section>-->
+
   	</div>
 
   	<div id="sidebarContent" class="page__sidebar hiddenMobile">
@@ -49,6 +66,22 @@
 
       &__sidebar{
         word-break: break-word;
+      }
+
+      &__next {
+        border-width: 1px 0 0;
+        border-style: solid;
+        border-color: var(--border-color);
+        padding: calc(var(--space)/2) 0;
+
+        display: grid;
+        gap: calc(var(--space)/2);
+
+        @media screen and (min-width:500px){
+          grid-template-columns: 1fr 1fr;
+        }
+
+        text-transform: uppercase
       }
 
       @media screen and (min-width: 1080px){
@@ -101,7 +134,7 @@
 @media screen and (max-width: 1080px) {
 
     .page{
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0,1fr);
       padding-top: calc(var(--space)*2);
 
 
@@ -167,7 +200,8 @@ export default {
 
   data(){
     return {
-      items: this.setBranchOpenLabel(this.initOpenLabel(items))
+      items: this.setBranchOpenLabel(this.initOpenLabel(items)),
+      // linksList: this.listOfLinks(items),
     }
   },
 
@@ -195,19 +229,67 @@ export default {
       })
     },
 
+
+    // flat(object) {
+    //     return Object
+    //         .values(object)
+    //         .reduce((r, v) => r.concat(v && typeof v === 'object' ? this.flat(v) : v), []);
+    // },
+
+    // clean(object) {
+    //   for (let value of object.values()) {
+    //       if(value.title && !value.link) {
+    //         delete value.title
+    //       }
+    //       if(value.isOpen != 'undefined') {
+    //         delete value.isOpen
+    //       }
+    //       if(value.items) {
+    //         this.clean(value.items)
+    //       }
+    //   }
+    // },
+
+    // listOfLinks (object) {
+    //   this.clean(object);
+    //   return object
+    // },
+
+
   },
 
+  
   computed: {
 
     currentPath () {
       return this.$route.matched[0].path
     },
-
+    
     editLink () {
       let path = this.currentPath
       if((path.match(new RegExp("/", "g")) || []).length == 1) path = path + '/README'
       return `https://github.com/airalab/robonomics-wiki/blob/master${path}.md`
     },
+    
+
+
+    /* Это для ссылок на пред и след статью */
+    // currentIndex () {
+    //   return this.linksList.findIndex(item => {
+    //     return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
+    //   })
+    // },
+
+    // nextPage () {
+    //   return this.listOfLinks[this.currentIndex + 1]
+    // },
+
+    // previousPage () {
+    //   return this.listOfLinks[this.currentIndex - 1]
+    // }
+    /* Это для ссылок на пред и след статью [конец] */
+
+
 
   },
 
@@ -219,6 +301,10 @@ export default {
 	  },
 
   updated: function(){
+
+    // for (let value of this.items.values()) {
+    //     console.log(value.title);
+    // }
 
 
     //Hide popup mobile menu after clickcing (cause - no real page reload in Gridsome)
@@ -237,8 +323,6 @@ export default {
         });
       })
     });
-
-    
   }
 }
 
