@@ -13,14 +13,14 @@
 		}
 
 		&__secondary {
-			color: var(--link-color);
+			&, &:visited { color: var(--link-color); }
 
 			svg path { fill: var(--link-color); }
 
 			&:hover {
 				background-color: var(--link-color);
-				color: #fff;
-				svg path { fill: #fff; }
+				color: var(--body-bg);
+				svg path { fill: var(--body-bg); }
 			}
 			
 		}
