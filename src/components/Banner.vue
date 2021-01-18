@@ -1,15 +1,25 @@
 <template>
-	<g-link class="banner" :class="place" :to="'https://share.hsforms.com/1rlIfFL6ZSriaOjtf4NAGPw535vx?'+place">
-		<g-image v-if="place==='sidebar'" alt="" src="~/assets/images/banner-sidebar-RWSbeta.png"/>
-		<g-image v-if="place==='content'" alt="" src="~/assets/images/banner-content-RWSbeta.png"/>
-	</g-link>
+	<div class="banners">
+		<g-link class="banner" :class="place" :to="'https://share.hsforms.com/1rlIfFL6ZSriaOjtf4NAGPw535vx?'+place">
+			<g-image v-if="place==='sidebar'" alt="" src="~/assets/images/banner_sidebanner_RWS.jpg"/>
+			<g-image v-if="place==='content'" alt="" src="~/assets/images/banner-content-RWSbeta.png"/>
+		</g-link>
+
+		<g-link class="banner" :class="place" :to="'https://robonomics.network/blog/winter-robonomics-school/?'+place">
+			<g-image v-if="place==='sidebar'" alt="" src="~/assets/images/banner_sidebanner_winter_school.jpg"/>
+		</g-link>
+	</div>
 </template>
 
 <style lang="scss">
+	.banners {
+		margin-top: var(--space);
+	}
+
 	.banner {
 		display: block;
 		width: 100%;
-		margin-top: var(--space);
+		margin-top: calc(var(--space)/2);
 
 		img {
 			display: block;
