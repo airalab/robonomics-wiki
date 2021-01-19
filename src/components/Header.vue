@@ -33,13 +33,23 @@
   .header {
     .search-container {
       input[type="text"]{
-        background-color: var(--color-dark);
+        // background-color: var(--color-dark);
+        background-color: var(--header-link);
         border-color: rgba(255,255,255,.1);
-        color: var(--color-light);
-        font-weight: 700;  
+        // color: var(--color-light);
+        color: var(--color-dark);
+        font-weight: 700;
+
+        &::placeholder {
+          color: var(--color-dark);
+        }
+
+        &:focus::placeholder {
+          color: var(--header-link);
+        }
       }
 
-      &.focus{
+      &.active{
           input[type="text"] {
             border-color: rgba(255,255,255,.2);
           }

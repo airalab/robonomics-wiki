@@ -1,12 +1,15 @@
 <template>
-  <div class="search-container" :class="{focus: SearchFocused }" v-on:click="SearchFocused = !SearchFocused">
-    <input id="search" v-model="searchTerm" type="text" placeholder="Search" />
+ 
+  <div class="search-container"  :class="toggleClasses" >
     
-    <div class="searchresults">
-      <g-link v-for="result in searchResults" :key="result.id" :to="result.path" class="searchresults__item">
-        {{ result.title }}
-      </g-link>
-    </div>
+      <input id="search" v-model="searchTerm" type="text" placeholder="Search" tabindex="0" @focus="isFocused = true; isActive = true" @blur="isFocused = false; isActive = false"/>
+      
+      <div class="searchresults" tabindex="0" @focus="isFocused = true; isActive = true" @blur="isFocused = false; isActive = false">
+        <g-link v-for="result in searchResults" :key="result.id" :to="result.path" class="searchresults__item" >
+          {{ result.title }}
+        </g-link>
+      </div>
+
   </div>
 </template>
 
@@ -37,7 +40,7 @@
       }
     }
 
-    &.focus{
+    &.active{
       .searchresults{
           opacity: 1;
           visibility: visible;
@@ -52,8 +55,17 @@
   export default {
     data () {
       return {
-        SearchFocused: false
+        isActive: false,
+        isFocused: false
       }
+    },
+
+    computed: {
+      toggleClasses() {
+        
+        return { 'active': this.isActive }
+
+      },
     },
 
     mixins: [Search]
