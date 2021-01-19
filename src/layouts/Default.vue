@@ -15,7 +15,8 @@
         <div class="layout__page">
           <nav>
             <g-link to="https://robonomics.network">Website</g-link>
-            <g-link to="https://riot.im/app/#/room/#robonomics:matrix.org">Riot chat</g-link>
+            <g-link to="https://t.me/robonomics">Telegram</g-link>
+            <g-link to="https://riot.im/app/#/room/#robonomics:matrix.org">Riot</g-link>
             <g-link to="https://twitter.com/AIRA_Robonomics">Twitter</g-link>
           </nav>
 
