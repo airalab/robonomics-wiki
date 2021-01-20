@@ -14,6 +14,8 @@
 
 - title: Playground
   items:
+    - title: Playground Overview
+      link: /docs/playground-overview/
     - title: Create Account on Robonomics Platform
       link: /docs/create-account-in-dapp/
     - title: Connect Mars Curiosity Rover
