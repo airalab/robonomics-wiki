@@ -18,8 +18,13 @@
     position: relative;
 
     input[type="text"]{
+      transition: 0.2s ease all;
         width: 100%;
         font-weight: 700;
+
+        &:focus {
+          background-color: var(--color-light);
+        }
     }
 
     .searchresults {
