@@ -2,10 +2,10 @@
  
   <div class="search-container"  :class="toggleClasses" >
     
-      <input id="search" v-model="searchTerm" type="text" placeholder="Search" tabindex="0" @focus="isFocused = true; isActive = true" @blur="isFocused = false; isActive = false"/>
+      <input id="search" v-model="searchTerm" type="text" placeholder="Search" tabindex="0" @focusin="isFocused = true; isActive = true"/>
       
-      <div class="searchresults" tabindex="0" @focus="isFocused = true; isActive = true" @blur="isFocused = false; isActive = false">
-        <g-link v-for="result in searchResults" :key="result.id" :to="result.path" class="searchresults__item" >
+      <div class="searchresults" tabindex="0" @focusin="isFocused = true; isActive = true" @focusout="isFocused = false; isActive = false">
+        <g-link v-for="result in searchResults" :key="result.id" :to="result.path" class="searchresults__item">
           {{ result.title }}
         </g-link>
       </div>
