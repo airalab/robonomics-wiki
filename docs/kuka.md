@@ -51,6 +51,12 @@ Go to the folder with robonomics file ad create a local robonomics network:
 
 ![robonomics](./images/kuka-demo/robonomics.jpg)
 
+**Important!** Before next launches it is necessary to remove a directory `db` with
+
+```
+rm -rf /home/$USER/.local/share/robonomics/chains/dev/db
+```
+
 Go to https://parachain.robonomics.network and switch to local node
 
 ![local](./images/kuka-demo/local.jpg)
