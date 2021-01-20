@@ -92,6 +92,10 @@ query {
     align-items: center;
     gap: 20px;
 
+    @media screen and (max-width: 1080px) {
+      grid-template-columns: auto 50px;
+    }
+
     &__section {
       margin-right: calc(var(--space) / 2);
       &:last-child{ margin-right: 0; }
