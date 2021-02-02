@@ -45,6 +45,22 @@ And connect them to ESP according to the diagram:
 
 ![esp_con](./images/sensors-connectivity/6_esp_con.jpg)
 
+### Connecting DHT22
+
+
+* Pin 1 => 3V3
+* Pin 2 => Pin D7 (GPIO13)
+* Pin 3 => unused
+* Pin 4 => GND
+
+### Connecting BME280/HTU21D
+
+* VCC -> Pin 3V3
+* GND -> Pin GND
+* SCL -> Pin D4 (GPIO2)
+* SDA -> Pin D3 (GPIO0)
+
+
 ## Device Firmware
 Download `airrohr-flasher` from the [latest release](https://github.com/airalab/sensors-connectivity/releases) for your OS. 
 Connect ESP to computer via micro-USB and run flasher. 
