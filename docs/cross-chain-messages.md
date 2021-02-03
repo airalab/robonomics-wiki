@@ -2,6 +2,8 @@
 
 XCM (Cross-chain Message) allows sending messages between parachains. You can send launchXcm transaction to run/stop your robot or datalogXcm transaction to save data to blockchain.
 
+https://www.youtube.com/watch?v=a6XrqoaYhK8&feature=emb_logo
+
 ## Create Account
 
 Lets try to send message from Earth to Mars.
