@@ -1,7 +1,7 @@
 # Connect any ROS-compatitable robot under Robonomics parachain control. Part 2: IPFS
 
 **In this article we will continue using Robonomics tools to make a drone be controlled by a parachain. This time we will add sending data to IPFS and hash storing in chain options. Below is the instruction and code snippets. Requirements:**
-- **Part 1 of this tutorial**
+- [**Part 1 of this tutorial**](/docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-1)
 - Ubuntu 18.04 LTS
 - ROS Melodic + Gazebo + RViz (installation manual [here](http://wiki.ros.org/melodic/Installation))
 - IPFS 0.4.22 (download from [here](https://dist.ipfs.io/go-ipfs/v0.4.22/go-ipfs_v0.4.22_linux-386.tar.gz) and install)
@@ -10,6 +10,11 @@
 ```
 pip install cv_bridge ipfshttpclient
 ```
+The entire process of coding this part of demo is presented in a video below.
+
+https://www.youtube.com/watch?v=dliLb6GHgpo&feature=youtu.be
+
+
 ## 1. Add dependencies
 If we launch a simulation and look at the topic list (see previous tutorial), we will see, that there is one topic containing front camera data and using `sensor_msgs/Image` message type:
 
