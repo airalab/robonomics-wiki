@@ -7,7 +7,7 @@ https://www.youtube.com/watch?v=a6XrqoaYhK8&feature=emb_logo
 ## Create Account
 
 Lets try to send message from Earth to Mars.
-Go to [paracain.robonomics.network](https://parachain.robonomics.network/#/explorer) and choose `Airalab Rococo` testnet:
+Go to [parachain.robonomics.network](https://parachain.robonomics.network/#/explorer) and choose `Airalab Rococo` testnet:
 
 ![testnets](./images/cross-chain/testnet.jpg)
 
