@@ -5,6 +5,11 @@
 - Ubuntu 18.04 LTS
 - ROS Melodic + Gazebo + RViz (installation manual [here](http://wiki.ros.org/melodic/Installation))
 - Robonomics node (binary file) (download latest release [here](https://github.com/airalab/robonomics/releases))
+
+The entire process of coding this part of demo is presented in a video below.
+
+https://www.youtube.com/watch?v=fDpwhBasQ5o&feature=youtu.be
+
 ## 1. Find a simulation
 Let's surf the web. Google for `ROS drone simulator`. The first link will mostly likely show you the `tum_simulator` page on [http://wiki.ros.org/tum_simulator](http://wiki.ros.org/tum_simulator)
 
@@ -87,4 +92,4 @@ You should see the log `"Taking Off"` and the drone should start flying:
 
 ![flying](./images/drone-demo/flying.jpg "flying")
 
-That's how any ROS-compatitable robot can be controlled by Robonomics parachain control. Proceed to part 2 to learn more
+That's how any ROS-compatitable robot can be controlled by Robonomics parachain control. Proceed to [part 2](/docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-2) to learn more
