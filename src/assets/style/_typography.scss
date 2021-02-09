@@ -85,3 +85,16 @@ p, ul, ol, li, blockquote {
 section{
   margin: var(--space) 0;
 }
+
+details {
+  summary {
+    cursor: pointer;
+    padding: calc(var(--space-text)/2);
+    border: 1px dashed var(--border-color);
+    background-color: var(--border-color-light);
+    font-weight: 700;
+    margin-bottom: var(--space-text);
+  }
+
+  margin-bottom: var(--space-text);
+}
