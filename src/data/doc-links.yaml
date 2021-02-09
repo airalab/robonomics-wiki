@@ -141,9 +141,14 @@
                 link: /docs/hardware-connect-sensor/
 
     - title: Winter School 2021
+      published: false
       items:
         - title: Lesson 3, Robonomics IO in practice
           link: /docs/school2021-robonomics-io-in-practice/
+          published: false
+        - title: Lesson 4, Robonomics parachain in practice
+          link: /docs/school2021-robonomics-io-in-practice/
+          published: false
         - title: Lesson 6, Build Dapp Interface
           link: /docs/school2021-build-dapp-interface/
           published: false
