@@ -140,6 +140,13 @@
               - title: Connect an air pollution sensor
                 link: /docs/hardware-connect-sensor/
 
+    - title: Winter School 2021
+      items:
+        - title: Lesson 3, Robonomics IO in practice
+          link: /docs/school2021-robonomics-io-in-practice/
+        - title: Lesson 6, Build Dapp Interface
+          link: /docs/school2021-build-dapp-interface/
+          published: false
 
 - title: Contribute
   items:

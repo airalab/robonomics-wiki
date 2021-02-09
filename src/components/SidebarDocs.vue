@@ -1,6 +1,6 @@
 <template>
   <ul class="menu menu-tree">
-    <li v-for="(item, key) in list" :key="key">
+    <li v-for="(item, key) in list" :key="key" v-if="item.published!=false">
       <g-link class="menu__item menu__link" v-if="item.link" :to="item.link" :exact="item.link == '/docs/'">{{item.title}}</g-link>
       <template v-else>
         <h4 class="menu__item menu__title" @click="toggle(key)">

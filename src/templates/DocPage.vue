@@ -66,6 +66,12 @@
 
       &__sidebar{
         word-break: break-word;
+
+        overflow-y: auto;
+        max-height: calc(100vh - 80px);
+        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        &::-webkit-scrollbar { display: none; } /* Hide scrollbar for Chrome, Safari and Opera */
       }
 
       &__next {
@@ -146,11 +152,9 @@
         right: 0;
         bottom: 0;
         z-index: 99;
-        overflow: auto;
 
         padding: var(--space);
         background-color: var(--body-bg);
-
       }
     }
 
