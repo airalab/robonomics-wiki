@@ -117,13 +117,13 @@ Then find ESP in local network (for that your computer and ESP must be in one ne
 
 
 
-Open ESP local address in your browser, go to Configuration and click `API Robonomics`. 
+Open ESP local address in your browser, go to `APIs` tab in  `Configuration` and click `Robonomics`. 
 
 ![robonomics](./images/sensors-connectivity/12_APIrobonomics.jpg)
 
 > If you want to send data to your own server, enable `Custom API` and write your address and port 
 
-Then enable GPS, put in your coordinates. Also enable all the sensors you connected:
+Then go to `Sensors` tab, enable GPS and put in your coordinates. Also enable the sensors you connected:
 
 ![gps](./images/sensors-connectivity/13_gps.jpg)
 
