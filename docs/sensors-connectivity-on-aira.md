@@ -44,8 +44,7 @@ systemd.services.connectivity = {
   wantedBy = [ "multi-user.target" ];
   environment.ROS_MASTER_URI =  "http://localhost:11311";
   script = ''
-    source /root/sensors-connectivity/result/setup.bash \
-    && roslaunch sensors_connectivity agent.launch config:=/root/sensors-connectivity/config/my.json
+    source /root/sensors-connectivity/result/setup.bash roslaunch sensors_connectivity agent.launch config:=/root/sensors-connectivity/config/my.json
   '';
   serviceConfig = {
     Restart = "on-failure";
@@ -60,5 +59,11 @@ Then
 
 ```
 nixos-rebuild switch
+```
+
+Running
+
+```
+systemctl start connectivity.service
 ```
 
