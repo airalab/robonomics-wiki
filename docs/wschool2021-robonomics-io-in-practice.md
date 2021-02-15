@@ -17,15 +17,15 @@ If you have connected SDS011 sensor then please check that it presented in `/dev
 
 When docker is installed let's launch robonomics docker image from [Official repository](https://hub.docker.com/r/robonomics/robonomics). I'll use `winter-school` tag during this lesson.
 
-<Asciinema vid="UKVTbTmM0GKiTEomDxUeoKIyq"/>
+<Asciinema vid="wM43jozIVfcRmt52ENrJ6yPlH"/>
 
 When docker image is ready let's try to read a data using `robonomics io` command (optiona if you have SDS011 device).
 
-<Asciinema vid="QVCdOrWzMy0bNqBfInCUALgAd"/>
+<Asciinema vid="iztt22tKGaV8wq3cMXY1oUEYv"/>
 
 If you have no SDS011 sensor then feel free to use virtual SDS011 sensor available in the same docker container via `vsds011.sh`. And everywhere in folloding command please use it as transparent replacement for physical sensor.
 
-<Asciinema vid="JoaONrsvVvbjQYCKtVkFcBQUT"/>
+<Asciinema vid="GCkSiJBA1DgpLAAHiMhIOSpgG"/>
 
 The Robonomics IO subsystem have two kind of commands:
 
