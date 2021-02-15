@@ -8,7 +8,7 @@ Have a look at [configuration](https://github.com/airalab/sensors-connectivity/b
 ```json
 {
    "general":{
-      "publish_interval":30            
+      "publish_interval":30
    },
    "comstation":{
       "enable":false,
@@ -20,6 +20,11 @@ Have a look at [configuration](https://github.com/airalab/sensors-connectivity/b
    "httpstation":{
       "enable":true,
       "port":8001
+   },
+   "mqttstation": {
+      "enable": true,
+      "host": "connectivity.robonomics.network",
+      "port": 1883
    },
    "luftdaten":{
       "enable":true
@@ -62,6 +67,9 @@ Explanation of options:
 | `comstation/public_key`            | Ed25519 verifying key in hex format. If not provided connectivity generates a new one      |
 | `httpstation/enable`                | true/false. Enabling/disabling the station   |
 | `httpstation/port`                  | what port listen to      |
+| `mqttstation/enable`                | true/false. Enabling/disabling the station   |
+|`mqttstation/host`                   | the hostname or IP address of the remote broker |
+|`mqttstation/port`                   | the network port of the server host to connect to |
 | `luftdaten/enable`                 | true/false. Whether or not publish data to [Luftdaten](https://devices.sensor.community/). Don't forget to register the sensor's mac address on the site         |
 | `robonomics/enable`                | true/false. Whether or not publish data to IPFS topic according to Robonomics communication protocol      |
 | `robonomics/ipfs_proveder`         | an endpoint for IPFS daemon. By default it's `/ip4/127.0.0.1/tcp/5001/http` that means local daemon. The endpoint must by in multiaddr format. For example for [Infura.io](https://infura.io/) it would be `/dns/ipfs.infura.io/tcp/5001/https`       |
@@ -170,7 +178,55 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
 > networking.firewall.allowedTCPPorts = [ 31313 ];
 > ```
 
-## Scenario #3: Connect Multiple Sensors and Publish to Datalog
+## Scenario #3: Connect SDS011 via MQTT
+
+### Connectivity Configuration
+
+```json
+{
+   "general":{
+      "publish_interval":30
+   },
+   "comstation":{
+      "enable":false,
+      "port":"/dev/ttyUSB0",
+      "work_period":300,
+      "geo":"",
+      "public_key":""
+   },
+   "httpstation":{
+      "enable":true,
+      "port":8001
+   },
+   "mqttstation": {
+      "enable": true,
+      "host": "connectivity.robonomics.network",
+      "port": 1883
+   },
+   "luftdaten":{
+      "enable":true
+   },
+   "robonomics":{
+      "enable":true,
+      "ipfs_provider":"/ip4/127.0.0.1/tcp/5001/http",
+      "ipfs_topic":"airalab.lighthouse.5.robonomics.eth"
+   },
+   "datalog":{
+      "enable":false,
+      "path":"",
+      "suri":"",
+      "remote":"wss://substrate.ipci.io",
+      "dump_interval":3600,
+      "temporal_username":"",
+      "temporal_password":""
+   },
+   "dev":{
+      "sentry":""
+   }
+}
+```
+
+## Scenario #4: Connect Multiple Sensors and Publish to Datalog
 
 ### Install Robonomics
 

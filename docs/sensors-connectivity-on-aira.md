@@ -18,7 +18,7 @@ From this point you can run the package with the default configuration file or c
 
 Assuming you are in the package root directory edit the file:
 ```
-cp config/default.yaml config/my.json
+cp config/default.json config/my.json
 vim config/my.json
 ```
 
@@ -44,8 +44,7 @@ systemd.services.connectivity = {
   wantedBy = [ "multi-user.target" ];
   environment.ROS_MASTER_URI =  "http://localhost:11311";
   script = ''
-    source /root/sensors-connectivity/result/setup.bash \
-    && roslaunch sensors_connectivity agent.launch config:=/root/sensors-connectivity/config/my.yaml
+    source /root/sensors-connectivity/result/setup.bash && roslaunch sensors_connectivity agent.launch config:=/root/sensors-connectivity/config/my.json
   '';
   serviceConfig = {
     Restart = "on-failure";
@@ -60,5 +59,11 @@ Then
 
 ```
 nixos-rebuild switch
+```
+
+Running
+
+```
+systemctl start connectivity.service
 ```
 
