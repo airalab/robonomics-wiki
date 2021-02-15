@@ -43,15 +43,15 @@ Full list of supported devices is possible to get running `robonomics io read` o
 On next step runned IPFS daemon is required. For this purpose let's run init IPFS and run daemon on dedicated
 terminal tab.
 
-<Asciinema vid="185zghtRahHMORQdiqFUwQrTC"/>
+<Asciinema vid="ir6ziXSBUDrRltTmNxg7sdXVY"/>
 
 When daemon launched is possible to connect docker image in separate tab and use `robonomics io` for writing and reading a data.
 
-<Asciinema vid="nv2vxMEbV0syOgMm55MyUGugL"/>
+<Asciinema vid="ZtwcmpB9Lhum2Sc221QmNwHG4"/>
 
 The output forwarding is also works here, that means it's possible to forward SDS011 sensor data into IPFS using `|` (pipe) symbol in console. Let's try to do it.
 
-<Asciinema vid="u3tZqFJ7WcZMaRlTdXF3bnI4m"/>
+<Asciinema vid="XS0QESWG7f8ELsQe1bGQllb9O"/>
 
 Where JSON data from SDS011 forwarded as input for IPFS writer and result is published on stdout.
 
@@ -67,11 +67,11 @@ robonomics io read sds011 | gz | robonomics io write pubsub my-sensor-data
 
 For the final part of this lesson runned robonomics node is required. Development mode is preffered because of quick block time and already distributed balances on preset accounts. Let's launch it on separate terminal tab in the same container.
 
-<Asciinema vid="OxsryOPyAd9vZCNa91ggwxA8Z"/>
+<Asciinema vid="QnN9l0sdaZZOyK9ah0DntvCXt"/>
 
 Then private seed also required as argument for `datalog` device. This seed is used to sign transaction and presents account as a sender. Let's generate it using embedded `robonomics key` command.
 
-<Asciinema vid="swGw05jzGupo9NcFaCeWHAnc4"/>
+<Asciinema vid="4Cdfl9F0GgjNWv1c1ZcTBBktF"/>
 
 Save generated address and seed on safe place for use it later.
 
@@ -81,7 +81,7 @@ Currently address balance is zero and the network don't permits to send transact
 
 And then `datalog` device could be used for saving any data on blockchain. The key `-s` is used to set secret seed of account. Account should have non-zero balance to send transactions.
 
-<Asciinema vid="toxCPOYroE3oi7P1mNp4Inc2T"/>
+<Asciinema vid="FzERH9TmFB8oRuas8ZU202Pv8"/>
 
 If every thing is correct the you should see `Datalog` event on `Explorer` page of Robonomics portal.
 
@@ -96,7 +96,7 @@ SDS011 -> IPFS -> Blockchain
 
 It's easy to implement using Robonomics IO, let's do that.
 
-<Asciinema vid="pB9gHTal6Z1Ra0lG6jzE3wHXD"/>
+<Asciinema vid="FzERH9TmFB8oRuas8ZU202Pv8"/>
 
 If everything well the `Datalog` event with IPFS hash should be presented.
 
