@@ -96,7 +96,7 @@ SDS011 -> IPFS -> Blockchain
 
 It's easy to implement using Robonomics IO, let's do that.
 
-<Asciinema vid="FzERH9TmFB8oRuas8ZU202Pv8"/>
+<Asciinema vid="MTpiawGo8DKEn081OozbYb5mU"/>
 
 If everything well the `Datalog` event with IPFS hash should be presented.
 
