@@ -11,7 +11,7 @@ import Asciinema from '~/components/Asciinema.vue'
 
 If you have connected SDS011 sensor then please check that it presented in `/dev` and have correct access rights.
 
-<Asciinema vid="PUx6Nbss6A4ilZXky6bfbSuaW"/>
+<Asciinema vid="WCFcx8C6M8e52UKDNei1xZloU"/>
 
 ## Quick start
 
