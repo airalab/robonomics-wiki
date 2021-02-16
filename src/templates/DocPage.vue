@@ -19,8 +19,7 @@
   	<div class="page__content">
   		<VueRemarkContent />
       <!--<Banner :place="'content'" />-->
-
-    
+ 
     
     <!--{{items}}
     <hr/>
@@ -41,10 +40,11 @@
 
   	<div id="sidebarContent" class="page__sidebar hiddenMobile">
       <SidebarContent />
-      <a :href="editLink" target="_blank" class="button button__secondary button__small">
+      
+      <g-link :href="github_link" target="_blank" class="button button__secondary button__small">
         <IconGithub/>
         <span>Edit this page</span>
-      </a>
+      </g-link>
     </div>
 
   </div>
@@ -184,6 +184,7 @@ query ($id: ID!) {
       anchor
     }
     content
+    contributors
   }
 }
 </page-query>
@@ -206,6 +207,7 @@ export default {
     return {
       items: this.setBranchOpenLabel(this.initOpenLabel(items)),
       // linksList: this.listOfLinks(items),
+      github: null
     }
   },
 
@@ -233,6 +235,22 @@ export default {
       })
     },
 
+    // async github_link() {
+    //   let doc = this.currentPath
+    //   if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/README'
+    //   let url = `https://api.github.com/repos/airalab/robonomics-wiki/contents${doc}.md`;
+
+    //   let response = await fetch(url);
+
+    //   if(response.ok){
+    //     let commits = await response.json()
+    //     return commits.html_url
+    //   }
+    //   else return 'https://github.com/airalab/robonomics-wiki/tree/master/docs'
+
+    //   // return `https://github.com/airalab/robonomics-wiki/blob/master${path}.md`
+    // },
+
 
     // flat(object) {
     //     return Object
@@ -259,6 +277,15 @@ export default {
     //   return object
     // },
 
+    // async contributorGet(c){
+    //   let response = await fetch('https://api.github.com/users/' + c);
+
+    //   if(response.ok){
+    //     let user = await response.json()
+    //     console.log(user);
+    //     return user
+    //   }
+    // }
 
   },
 
@@ -268,14 +295,18 @@ export default {
     currentPath () {
       return this.$route.matched[0].path
     },
-    
-    editLink () {
-      let path = this.currentPath
-      if((path.match(new RegExp("/", "g")) || []).length == 1) path = path + '/README'
-      return `https://github.com/airalab/robonomics-wiki/blob/master${path}.md`
-    },
-    
 
+    github_link() {
+      let doc = this.currentPath
+      if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/README'
+      return `https://github.com/airalab/robonomics-wiki/blob/master${doc}.md`
+    },
+
+    // contributors () {
+    //   let c = this.$page.doc.contributors.split(',')
+    //   return c;
+    // }
+  
 
     /* Это для ссылок на пред и след статью */
     // currentIndex () {
@@ -304,7 +335,11 @@ export default {
 	    }
 	  },
 
-  updated: function(){
+  // async beforeUpdate(){
+  //   this.github = await this.github_link();
+  // },
+
+  updated(){
 
     // for (let value of this.items.values()) {
     //     console.log(value.title);

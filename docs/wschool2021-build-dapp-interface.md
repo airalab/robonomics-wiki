@@ -849,7 +849,7 @@ input.large, select.large {
 
 </details>
 
-**Lets check:**
+**Lets check that everything works fine after updates:**
 
 ![Dapp Interface changing step 12](./images/build-dapp-interface/dapp-12.gif "Dapp Interface changing step 12")
 
@@ -863,14 +863,14 @@ We have datalog section through out dapp, so I'll make component for it.
 <template>
     <div v-if="log" class="log">
         <h4 class="log-title">Datalog</h4>
-        
+
         <div class="log-content">
 
           <p v-if="log.length === 0" class="error">Not found</p>
 
           <details v-for="(item, k) in log" :key="k" class="box" :open="k === 0">
-              <summary>{{ item[0] | dateFormat }}</summary>
-              <pre>{{ item[1] | dataFormat }}</pre>
+              <summary>{{ item[0] }}</summary>
+              <pre>{{ item[1] }}</pre>
           </details>
         </div>
     </div>
@@ -878,22 +878,11 @@ We have datalog section through out dapp, so I'll make component for it.
 
 <script>
 
-import { stringToHex, u8aToString } from "@polkadot/util";
-
 export default {
 
   props: {
     log: {
       type: Array
-    }
-  },
-
-  filters: {
-    dateFormat: function(v) {
-      return new Date(Number(v)).toLocaleString();
-    },
-    dataFormat: function(v) {
-      return u8aToString(v);
     }
   },
 
@@ -972,19 +961,26 @@ details.box[open] summary {
 
 </details>
 
-What to pay attention on here: we pass prop 'log' with Array that we've got in step 1 'Datalog'. If you will just print it - `{{log}}`, you will get not really human-readable data, such as:
+What to pay attention on here: we pass prop `log` as array. I assume that this multidimensional array will contain arrays of log entries, every entry has title (I made date) and content. We need to reformat arrays in components **Datalog.vue** and **Launch.vue**.
 
+Find method, where we get log:
 ```JS
-[ [ "0x00000177965181a0", "0x6461746120737472696e67" ], [ "0x0000017796522d82", "0x6461746120737472696e67" ], [ "0x0000017796644650", "0x6461746120737472696e67" ], [ "0x000001779667a1b1", "0x6461746120737472696e67" ] ] 
+async read() {
+  this.log = (await this.api.query.datalog.datalog(this.account)).toArray();
+}
 ```
 
-So don't forget to transfer the following code from **Datalog.vue** to **DatalogSection.vue**:
-
+Now we have to format data in **Datalog.vue**, and pass ready log array for **DatalogSection.vue**. So lets map log array:
 ```JS
-<script>
+async read() {
+  this.log = (await this.api.query.datalog.datalog(this.account)).toArray().map((item) => {
+    return [new Date(Number(item[0])).toLocaleString(), u8aToString(item[1])]
+  });
+}
+```
 
-import { stringToHex, u8aToString } from "@polkadot/util";
-
+We don't need this code anymore:
+```JS
 filters: {
   dateFormat: function(v) {
     return new Date(Number(v)).toLocaleString();
@@ -992,18 +988,227 @@ filters: {
   dataFormat: function(v) {
     return u8aToString(v);
   }
-},
-
-</script>
+}
 ```
 
-I've already included it in code of **DatalogSection.vue** below, but don't forget that you don't need this code in **Datalog.vue** anymore, remove it from there.
-
-**Lets check:**
+**Lets check datalog section in Datalog tab:**
 
 ![Dapp Interface changing step 13](./images/build-dapp-interface/dapp-13.gif "Dapp Interface changing step 13")
 
 ## Launch
 
 For this step most of improvements already done, we just need to apply it in template: import Button and Datalog components, remove excessive title:
+
+![Dapp Interface changing step 14](./images/build-dapp-interface/dapp-14.gif "Dapp Interface changing step 14")
+
+Lets replace `select` control element with `checkbox`.
+
+Instead this:
+```HTML
+<select v-model="parameter" :disabled="isWrite">
+  <option value="ON">ON</option>
+  <option value="OFF">OFF</option>
+</select>
+```
+
+Write this:
+```HTML
+<div class="toggler inline-block">
+  <input v-model="parameter" :disabled="isWrite" type="checkbox" checked id="robot-switch" />
+  <label for="robot-switch"><span></span></label>
+</div>
+```
+
+<details>
+
+<summary>Styles in app.css:</summary>
+
+```CSS
+.toggler input { display: none; }
+.toggler label {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 40px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: var(--color-gray);
+  color: var(--color-light);
+  text-align: center;
+}
+
+.toggler label:before {
+  content: 'Off';
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+}
+
+.toggler label:after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--color-gray-dark);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  transition: 0.3s ease-out all;
+}
+
+.toggler input:checked + label {
+  background-color: var(--color-green);
+}
+
+.toggler input:checked + label:before {
+  content: 'On';
+}
+
+.toggler input:checked + label:after {
+  transform: translateX(54px);
+  background-color: #007038;
+}
+```
+
+</details>
+
+![Dapp Interface changing step 15](./images/build-dapp-interface/dapp-15.gif "Dapp Interface changing step 15")
+
+I want to clarify with interface that with these elements we start some device, lets visualize it. I've chosen drone, and will toggle classes according to `item.parameter`.
+
+Create new property in `data`:
+```JS
+data() {
+  status: false
+}
+```
+
+Assign value of `parameter` to `status` after button clicked and tx sent to block:
+```JS
+methods: {
+    async launch() {
+      try {
+        this.error = "";
+        this.isWrite = true;
+
+        const tx = await this.api.tx.launch
+          .launch(this.robot, this.parameter === "ON")
+          .signAsync(this.account);
+
+        await tx.send(result => {
+          if (result.status.isInBlock) {
+            this.isWrite = false;
+            this.status = this.parameter; // new line here
+          }
+        });
+      } catch (error) {
+        this.error = error.message;
+        this.isWrite = false;
+      }
+    }
+  }
+```
+
+Write styles for drone in **Launch.vue**. Don't forget `scoped` for `<style>` tag, to apply styles only for this component.
+
+<details>
+
+<summary>CSS for drone:</summary>
+
+```CSS
+<style scoped>
+.tools {
+  position: relative;
+  padding-left: 120px;
+  text-align: left;
+  display: inline-block;
+}
+
+.launch-drone {
+  position: absolute;
+  width: 100px;
+  left: 0;
+  filter: grayscale(1);
+  transition: 1s all ease-in;
+}
+
+.launch-drone.on {
+  filter: grayscale(0);
+  animation: DroneLaunch 10s linear infinite;
+}
+
+@keyframes DroneLaunch {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(-20%);
+  }
+}
+</style>
+```
+
+</details>
+
+![Dapp Interface changing step 16](./images/build-dapp-interface/dapp-16.gif "Dapp Interface changing step 16")
+
+Now lets add **DatalogSection.vue** component.
+
+```JS
+components: {
+  DatalogSection: () => import("./DatalogSection")
+}
+```
+
+Reformat log array from:
+
+```JS
+this.log.push({
+  sender,
+  robot,
+  parameter
+});
+```
+
+to (for structure like `[["entry 1 date", "entry 1 content"], ["entry 2 date", "entry 2 content"]]`):
+
+```JS
+this.log.push([new Date().toLocaleString(), {
+  sender,
+  robot,
+  parameter
+}]);
+```
+
+Replace code from template:
+
+```HTML
+<div v-if="log.length > 0" class="log">
+  <div v-for="(item, k) in log" :key="k" class="row">
+    sender: <b>{{ item.sender }}</b>
+    <br />
+    robot: <b>{{ item.robot }}</b>
+    <br />
+    parameter: <b>{{ item.parameter ? "ON" : "OFF" }}</b>
+  </div>
+</div>
+```
+
+with this:
+
+```HTML
+<DatalogSection :log="log"/>
+```
+
+**Check:**
+![Dapp Interface changing step 17](./images/build-dapp-interface/dapp-17.gif "Dapp Interface changing step 17")
+
+
 
