@@ -101,3 +101,5 @@ It's easy to implement using Robonomics IO, let's do that.
 If everything well the `Datalog` event with IPFS hash should be presented.
 
 ![portal datalog complex](https://ipfs.io/ipfs/QmbpArfthyor5wFWRexgPAyjK7GaFduasc1eoReaf9TpJg/datalog_complex.png)
+
+> Contributor [@Akru](https://github.com/akru)
