@@ -17,7 +17,7 @@ for all child parachains and implements message passing mechanics for them. Let'
 relay chain with two robonomics-based parachains as a childs. I'll use prepared [Docker image]() but all source code of examples
 available in [Robonomics GitHub](https://github.com/airalab/robonomics/tree/master/scripts/polkadot-launch).
 
-<Asciinema vid="Tsfnt8th1bce8Bx7LYItDaDkP"/>
+<Asciinema vid="419Jrg22ziFfMFPZlh2WtiLvg"/>
 
 It could take a time, but be partient. As result you should have three chain instances at ports:
 
