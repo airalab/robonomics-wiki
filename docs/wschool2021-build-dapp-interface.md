@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This tutorial continues the previous lesson where you have built already simple application and focused mostly on technical questions. Now we will **build user-friendly interface** for this application.
+This tutorial continues the previous lesson where you have built already simple application and focused on connecting account to node, sending transactions and other vital functions of dapp. Now we will **build user-friendly interface** for this application.
 
 ## Prerequisites
 
@@ -46,13 +46,13 @@ If you connected at this step and prefer to **learn by doing**, please, follow t
   - Make sure you allowed **access for Polkadot Extension**:
     ![Polkadot Extension giving access](./images/build-dapp-interface/polkadot-permission.png "Polkadot Extension giving access")
 
-  - If you have errors in log of running node and dapp is not loading correctly, please, try to delete data base of dev chain: `sudo rm -rf <YOUR LOCAL PATH>/robonomics/chains/dev/db/` and restart node.
+  - If you have errors in log of running node and dapp is not loading correctly, please, try to delete data base of dev chain: `sudo rm -rf <YOUR LOCAL PATH>/robonomics/chains/dev/db/` and restart node. If it not helped, restart your machine.
 
 </details>
 
 ## Inspecting the code
 
-Let's inspect the structure of dApp to clear up what and where we can fix in order to change UI.
+Let's inspect the structure of dapp to clear up what and where we can fix in order to change UI.
 
 ```
 .
@@ -79,7 +79,7 @@ Let's inspect the structure of dApp to clear up what and where we can fix in ord
 
 In this tutorial I show how to change the interface of small dapp from scratch without any stable library of UI components. So I will import and create not only different Vue components, but also write my own styles.
 
-If your application is big or your project has whole bunch of dapps, in the future you'd better look for building library of components specifically for your project to make UI more organized and efficient ( [example tool for organizing](https://storybook.js.org)), or if you are okay with standart interface themes, you can use any third party UI Libraries ([for example](https://vuetifyjs.com/)).
+If your application is big or your project has whole bunch of dapps, in the future you'd better look for building library of components specifically for your project to make UI more organized and efficient ([for example, here is a tool for organizing components](https://storybook.js.org)), or if you are okay with standart interface themes, you can use any third party UI Libraries ([for example](https://vuetifyjs.com/)).
 
 ## First import or where to start
 
@@ -104,6 +104,13 @@ Import these CSS files in your app by editing **main.js** file:
 
 ![Import global CSS in Vue app](./images/build-dapp-interface/import-css-vue-1.png "Import global CSS in Vue app")
 
+```JS
+import './assets/styles/reset.css'
+import './assets/styles/variables.css'
+import './assets/styles/typography.css'
+import './assets/styles/animation.css'
+```
+
 **Check if fonts changed in the dapp:**
 
 ![Dapp Interface changing step 1](./images/build-dapp-interface/dapp-1.png "Dapp Interface changing step 1")
@@ -113,11 +120,15 @@ Import these CSS files in your app by editing **main.js** file:
 
 ## Change layout and prettify the title
 
-Lets change layout of application. As I mentioned earlier, you can write your styles directly in App.vue, but I prefer for this example to separate it.
+Let's change layout of application. As I mentioned earlier, you can write your styles directly in App.vue, but I prefer for this example to separate it.
 
 - Comment or delete styles from tag `<style>` in **App.vue**
 
 - Create css file **app.css** in styles folder for this application and import it in **main.js**
+
+```JS
+import './assets/styles/app.css'
+```
 
 <details>
 
@@ -142,7 +153,7 @@ body {
 
 <details>
 
-<summary>Change the title of the app: App.vue</summary>
+<summary>Change the title of the app [App.vue]</summary>
 
 ```html
 <div class="top">
@@ -158,7 +169,7 @@ body {
 
 <details>
 
-<summary>Write styles for the title: app.css</summary>
+<summary>Write styles for the title [app.css]</summary>
 
 ```css
 .top {
@@ -211,7 +222,7 @@ body {
 
 ## Define styles according to the dapp's data
 
-Now I will wrap the app's content in element and I need different styles for different states of dapp (loaded or not loaded).
+Now I will wrap the app's content in `<div>` element and I need different styles for different states of dapp (loaded or not loaded).
 
 - Open the **App.vue** and write wrapping element:
 ```html
@@ -226,12 +237,137 @@ Now I will wrap the app's content in element and I need different styles for dif
   <!--here is everything going after the title-->
 </div>
 ```
-Thats how you can easily toggle styles in your app according to the data you get.
+Thats how you can easily toggle styles in your app according to the data you get. You will see the usage of this class below.
 
 ## Define views according to the dapp's data
 
 Lets change the loader for the app.
-- For this purpose I will import my component from another Robonomics project **./src/components/AnimatedRobonomicsLogo.vue**
+- For this purpose I will import my component from another Robonomics project 
+
+<details>
+
+<summary>./src/components/AnimatedRobonomicsLogo.vue</summary>
+
+```HTML
+<template>
+  <div class="logo-animated" :style="{transform: 'scale('+scale+')'}">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="196.9px" height="170.3px" viewBox="0 0 196.9 170.3" style="enable-background:new 0 0 196.9 170.3;" xml:space="preserve">
+		<g transform="translate(2530 155)">
+            <path class="line" d="M-2523.4,7.9l184.2,0.5l-91.7-158.1L-2523.4,7.9z"/>
+
+            <circle class="dot" cx="-2339.7" cy="8.7" r="6.6"/>
+            <circle class="dot" cx="-2523.4" cy="8.2" r="6.6"/>
+            <circle class="dot" cx="-2430.8" cy="-148.4" r="6.6"/>
+            
+            <path class="triangle-1" d="M-2477.3-18.3l92.1,0.3l-45.8-79L-2477.3-18.3z"/>
+            <path class="triangle-2" d="M-2431.2-18.1l46,0.1l-45.8-79L-2431.2-18.1z"/>
+            <path class="triangle-3" d="M-2477.3-18.3l92.1,0.3l-46-20.3L-2477.3-18.3z"/>
+          </g>
+	</svg>
+  </div>
+</template>
+
+<script>
+
+export default {
+
+  props: {
+    scale: {
+      type: String,
+      default: '1'
+    },
+  },
+
+};
+</script>
+
+<style scoped>
+    /*
+    Global styles required:
+    FadeIn - keyframe animation from animation: .css
+    all --color- variables from variables.css
+    */
+
+    .logo-animated {
+        transform-origin: 0 0;
+    }
+
+    .logo-animated .dot {
+        fill: var(--color-blue);
+        visibility: hidden;
+        opacity: 0;
+        animation: 1s FadeIn 0.3s ease forwards;
+    }
+
+    .logo-animated .line {
+        fill: transparent;
+        stroke: var(--color-blue);
+        stroke-miterlimit:10;
+        stroke-dasharray: 700;
+        stroke-dashoffset: 700;
+        animation: 1s DrawSvgPath 0.5s ease-in-out forwards; 
+    }
+
+    .logo-animated .triangle-1 {
+        fill: var(--color-blue);
+        visibility: hidden;
+        opacity: 0;
+        animation: 0.5s FadeIn 0.3s ease forwards, 5s logo-triangle-1 0.1s linear infinite;
+    }
+
+    .triangle-2 {
+        fill: var(--color-violet-light);
+        visibility: hidden;
+        opacity: 0;
+        animation: 0.5s FadeIn 0.3s ease forwards, 5s logo-triangle-2 0.1s linear infinite;
+    }
+
+    .triangle-3 {
+        fill: var(--color-violet-mid);
+        visibility: hidden;
+        opacity: 0;
+        animation: 0.5s FadeIn 0.3s ease forwards, 5s logo-triangle-3 0.1s linear infinite;
+    }
+
+
+    @keyframes DrawSvgPath
+        {
+        to {
+            stroke-dashoffset: 0;
+        }
+        }
+
+    @keyframes logo-triangle-1
+    {
+        0% { fill: var(--color-blue); }
+        25% { fill: var(--color-blue); }
+        50% { fill: var(--color-blue); }
+        75% { fill: var(--color-violet-light); }
+        100% { fill: var(--color-blue); }
+    }
+
+    @keyframes logo-triangle-2
+    {
+        0% { fill: var(--color-violet-light); }
+        25% { fill: #E0BDED; }
+        50% { fill: var(--color-blue); }
+        75% { fill: var(--color-blue); }
+        100% { fill: var(--color-violet-light); }
+    }
+
+    @keyframes logo-triangle-3
+    {
+        0% { fill: var(--color-violet-mid); }
+        25% { fill: var(--color-violet-light); }
+        50% { fill: var(--color-violet-light); }
+        75% { fill: var(--color-violet-dark); }
+        100% { fill: var(--color-violet-mid); }
+    }
+</style>
+```
+
+</details>
+
 - Register component in **App.vue**
 ```JS
 export default {
@@ -244,7 +380,9 @@ export default {
 ```HTML
 <div class="content" :class="{ load: load }">
   <Loader v-if="load" />
-  <template v-else></template>
+  <template v-else>
+    <!-- here will be main content of loaded dapp -->
+  </template>
 </div>
 ```
 - Watch result in browser. It has some issues, that we will fix now:
@@ -252,9 +390,8 @@ export default {
 1. Loader pops up to the title (it should be in the center). Lets insert these lines to **app.css**:
 ```css
 body, html, #app {
-  min-height: 100%;
   height: 100%;
-  position: relative; /* this style for the future, just place it at the same time */
+  position: relative;
 }
 ```
 2. If your connection goes too fast, you will see just blinking loader for a moment. It may confuse a lot. Lets set timeout for the app's responce. To do that open **api.js** and find in function `initAccount` this code:
@@ -499,7 +636,7 @@ export default {
 **We get this view:**
 ![Dapp Interface changing step 5](./images/build-dapp-interface/dapp-5.png "Dapp Interface changing step 5")
 
-For the Button component we emited the click from prop, so I will pay attention is faucet function working now correctly:
+For the Button component we emited the click from prop with `@onClick`, so I will pay attention is faucet function working now correctly (the balance should change on click):
 
 ![Dapp Interface changing step 6](./images/build-dapp-interface/dapp-6.gif "Dapp Interface changing step 6")
 
@@ -561,9 +698,9 @@ export default {
 
 </details>
 
-To use it with button edit **Button.vue** component.
+To use it with button edit the Button component.
 
-Import Icon component:
+Import Icon in **Button.vue**:
 
 ```JS
 components: {
@@ -589,7 +726,7 @@ Add Icon to the button (we can specify different templates with `v-if` condition
   <Icon :icon="icon" />
   <span v-if="label != ''" class="inline-block">{{ label }}</span>
 </template>
-<template v-if="icon == 'none'">
+<template v-if="icon == 'none' & label != ''">
   {{ label }}
 </template>
 ```
@@ -775,9 +912,11 @@ Lets edit styles for tabs:
 
 ![Dapp Interface changing step 11](./images/build-dapp-interface/dapp-11.gif "Dapp Interface changing step 11")
 
+> Let me remind you that the finished code for this tutorial is in [this](https://github.com/positivecrash/wscool21-ui-dapp) repository. And let's shift to the next steps :)
+
 ## Datalog
 
-Lets start with fixing UI elements that already known in dapp: buttons (same as we did for 'Faucet', but with different props).
+Start with fixing UI elements that already known in dapp: buttons (same as we did for 'Faucet', but with different props).
 
 Than I will wrap these element in `<fieldset>` to separate them by meaning. And write my own styles for fieldset and input elements.
 
@@ -849,7 +988,7 @@ input.large, select.large {
 
 </details>
 
-**Lets check that everything works fine after updates:**
+**Let's check that everything works fine after updates:**
 
 ![Dapp Interface changing step 12](./images/build-dapp-interface/dapp-12.gif "Dapp Interface changing step 12")
 
@@ -961,16 +1100,16 @@ details.box[open] summary {
 
 </details>
 
-What to pay attention on here: we pass prop `log` as array. I assume that this multidimensional array will contain arrays of log entries, every entry has title (I made date) and content. We need to reformat arrays in components **Datalog.vue** and **Launch.vue**.
+What to pay attention on here: we pass prop `log` as array. I assume that this multidimensional array will contain log entries, every entry has title (I wrote there date for all logs in dapp) and content. We need to reformat arrays in components **Datalog.vue** and **Launch.vue**.
 
-Find method, where we get log:
+Now edit **Datalog.vue**. Find method, where we get log:
 ```JS
 async read() {
   this.log = (await this.api.query.datalog.datalog(this.account)).toArray();
 }
 ```
 
-Now we have to format data in **Datalog.vue**, and pass ready log array for **DatalogSection.vue**. So lets map log array:
+Now we have to format data in **Datalog.vue**, and pass ready log array for **DatalogSection.vue**. So let's map log array:
 ```JS
 async read() {
   this.log = (await this.api.query.datalog.datalog(this.account)).toArray().map((item) => {
@@ -991,17 +1130,17 @@ filters: {
 }
 ```
 
-**Lets check datalog section in Datalog tab:**
+**Let's check datalog section in Datalog tab:**
 
 ![Dapp Interface changing step 13](./images/build-dapp-interface/dapp-13.gif "Dapp Interface changing step 13")
 
 ## Launch
 
-For this step most of improvements already done, we just need to apply it in template: import Button and Datalog components, remove excessive title:
+For this step most of improvements are already done, we just need to apply it in template: import Button and Datalog components, remove excessive title:
 
 ![Dapp Interface changing step 14](./images/build-dapp-interface/dapp-14.gif "Dapp Interface changing step 14")
 
-Lets replace `select` control element with `checkbox`.
+Let's replace `select` control element with `checkbox`.
 
 Instead this:
 ```HTML
@@ -1014,7 +1153,7 @@ Instead this:
 Write this:
 ```HTML
 <div class="toggler inline-block">
-  <input v-model="parameter" :disabled="isWrite" type="checkbox" checked id="robot-switch" />
+  <input v-model="parameter" :disabled="isWrite" type="checkbox" id="robot-switch" />
   <label for="robot-switch"><span></span></label>
 </div>
 ```
@@ -1081,7 +1220,7 @@ Write this:
 
 ![Dapp Interface changing step 15](./images/build-dapp-interface/dapp-15.gif "Dapp Interface changing step 15")
 
-I want to clarify with interface that with these elements we start some device, lets visualize it. I've chosen drone, and will toggle classes according to `item.parameter`.
+I want to clarify with interface that with these elements we start some device, let's visualize it. I've chosen drone, and will toggle classes according to `item.parameter`.
 
 Create new property in `data`:
 ```JS
@@ -1159,7 +1298,7 @@ Write styles for drone in **Launch.vue**. Don't forget `scoped` for `<style>` ta
 
 ![Dapp Interface changing step 16](./images/build-dapp-interface/dapp-16.gif "Dapp Interface changing step 16")
 
-Now lets add **DatalogSection.vue** component.
+Now let's add **DatalogSection.vue** component.
 
 ```JS
 components: {
@@ -1210,5 +1349,45 @@ with this:
 **Check:**
 ![Dapp Interface changing step 17](./images/build-dapp-interface/dapp-17.gif "Dapp Interface changing step 17")
 
+Sometimes you have got some errors, it's almost inevitable, something can go wrong with connection or anything else can happen. So we have fallbacks with error messages through out dapp, I haven't changed it from the start, in code they look like:
+
+```HTML
+<div v-if="error" class="error">{{ error }}</div>
+```
+
+On interface errors now look this way:
+
+![Dapp Interface changing step 18](./images/build-dapp-interface/dapp-18.png "Dapp Interface changing step 18")
+
+Add styles for the `.error` in **app.css**:
+
+```CSS
+.error {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-red);
+}
+```
+
+And I will fix space between `.tools` section and other content from the bottom also in **app.css**:
+
+```CSS
+.tools {
+  margin-bottom: var(--space);
+}
+```
+
+We get:
+
+![Dapp Interface changing step 19](./images/build-dapp-interface/dapp-19.png "Dapp Interface changing step 19")
+
+Now on this page we have to "primary" buttons. Technically it is okay, but this is not okay from above user experience. It's better not to use more than one prevailing button on the screen. So lets fix it and add for the `Button` in **Launch.vue** with property `type="secondary"`:
+
+![Dapp Interface changing step 20](./images/build-dapp-interface/dapp-20.png "Dapp Interface changing step 20")
+
+Great, now I'll fix some issues with my node and go to the Demo step.
+
+## Demo
 
 
