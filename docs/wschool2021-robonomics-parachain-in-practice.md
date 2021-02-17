@@ -14,7 +14,7 @@ This lesson requirements:
 
 The relay chain is a core of Polkadot, it provides [shared security](https://wiki.polkadot.network/docs/en/learn-security)
 for all child parachains and implements message passing mechanics for them. Let's launch local instance of Rococo (polkadot testnet)
-relay chain with two robonomics-based parachains as a childs. I'll use prepared [Docker image]() but all source code of examples
+relay chain with two robonomics-based parachains as a childs. I'll use prepared [Docker image tag: "winter-school-2"](https://hub.docker.com/layers/robonomics/robonomics/winter-school-2/images/sha256-92f4795262f3ded3e6a153999d2777c4009106a7d37fd29969ebf1c3a262dc85?context=explore) but all source code of examples
 available in [Robonomics GitHub](https://github.com/airalab/robonomics/tree/master/scripts/polkadot-launch).
 
 <Asciinema vid="419Jrg22ziFfMFPZlh2WtiLvg"/>
