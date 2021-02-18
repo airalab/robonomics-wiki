@@ -17,25 +17,14 @@
     </div>
 
   	<div class="page__content">
+
+      <ul>
+        <li>{{test(items)}}</li>
+        <li>{{items}}</li>
+      </ul>
+
   		<VueRemarkContent />
       <!--<Banner :place="'content'" />-->
- 
-    
-    <!--{{items}}
-    <hr/>
-    {{linksList}}
-
-    <section class="page__next">
-    
-      <g-link v-if="previousPage" exact class="button button__secondary" :to="previousPage.link">
-        &larr; {{ previousPage.title }}
-      </g-link>
-      <g-link v-if="nextPage" exact class="button button__secondary" :to="nextPage.link">
-        {{ nextPage.title }} &rarr;
-      </g-link>
-
-    </section>-->
-
   	</div>
 
   	<div id="sidebarContent" class="page__sidebar hiddenMobile">
@@ -206,12 +195,12 @@ export default {
   data(){
     return {
       items: this.setBranchOpenLabel(this.initOpenLabel(items)),
-      // linksList: this.listOfLinks(items),
       github: null
     }
   },
 
   methods: {
+
     initOpenLabel(list) {
       return list.map(item => {
         if (item.items) {
@@ -252,31 +241,6 @@ export default {
     // },
 
 
-    // flat(object) {
-    //     return Object
-    //         .values(object)
-    //         .reduce((r, v) => r.concat(v && typeof v === 'object' ? this.flat(v) : v), []);
-    // },
-
-    // clean(object) {
-    //   for (let value of object.values()) {
-    //       if(value.title && !value.link) {
-    //         delete value.title
-    //       }
-    //       if(value.isOpen != 'undefined') {
-    //         delete value.isOpen
-    //       }
-    //       if(value.items) {
-    //         this.clean(value.items)
-    //       }
-    //   }
-    // },
-
-    // listOfLinks (object) {
-    //   this.clean(object);
-    //   return object
-    // },
-
     // async contributorGet(c){
     //   let response = await fetch('https://api.github.com/users/' + c);
 
@@ -307,25 +271,6 @@ export default {
     //   return c;
     // }
   
-
-    /* Это для ссылок на пред и след статью */
-    // currentIndex () {
-    //   return this.linksList.findIndex(item => {
-    //     return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
-    //   })
-    // },
-
-    // nextPage () {
-    //   return this.listOfLinks[this.currentIndex + 1]
-    // },
-
-    // previousPage () {
-    //   return this.listOfLinks[this.currentIndex - 1]
-    // }
-    /* Это для ссылок на пред и след статью [конец] */
-
-
-
   },
 
 	metaInfo () {
@@ -340,11 +285,6 @@ export default {
   // },
 
   updated(){
-
-    // for (let value of this.items.values()) {
-    //     console.log(value.title);
-    // }
-
 
     //Hide popup mobile menu after clickcing (cause - no real page reload in Gridsome)
     document.querySelectorAll('.menu__link').forEach(function(el) {
