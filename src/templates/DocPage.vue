@@ -17,12 +17,6 @@
     </div>
 
   	<div class="page__content">
-
-      <ul>
-        <li>{{test(items)}}</li>
-        <li>{{items}}</li>
-      </ul>
-
   		<VueRemarkContent />
       <!--<Banner :place="'content'" />-->
   	</div>
