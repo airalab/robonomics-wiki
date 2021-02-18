@@ -14,16 +14,24 @@ This lesson requirements:
 
 The relay chain is a core of Polkadot, it provides [shared security](https://wiki.polkadot.network/docs/en/learn-security)
 for all child parachains and implements message passing mechanics for them. Let's launch local instance of Rococo (polkadot testnet)
-relay chain with two robonomics-based parachains as a childs. I'll use prepared [Docker image]() but all source code of examples
+relay chain with two robonomics-based parachains as a childs. I'll use prepared [Docker image tag: "winter-school-2"](https://hub.docker.com/layers/robonomics/robonomics/winter-school-2/images/sha256-92f4795262f3ded3e6a153999d2777c4009106a7d37fd29969ebf1c3a262dc85?context=explore) but all source code of examples
 available in [Robonomics GitHub](https://github.com/airalab/robonomics/tree/master/scripts/polkadot-launch).
 
-<Asciinema vid="Tsfnt8th1bce8Bx7LYItDaDkP"/>
+<Asciinema vid="419Jrg22ziFfMFPZlh2WtiLvg"/>
 
 It could take a time, but be partient. As result you should have three chain instances at ports:
 
 * `9944` - local rococo relay chain.
 * `9988` - robonomics parachain with `id=100`
 * `9989` - robonomics parachain with `id=200`
+
+If you use remote server, you need to create some ssh tunnels on local machine:
+```
+ssh -f -N -L 9944:127.0.0.1:9944 root@REMOTE_SERVER_IP
+ssh -f -N -L 9988:127.0.0.1:9988 root@REMOTE_SERVER_IP
+ssh -f -N -L 9989:127.0.0.1:9989 root@REMOTE_SERVER_IP
+```
+After that, you can use `ws://127.0.0.1:9944`, `ws://127.0.0.1:9988`and `ws://127.0.0.1:9989` in https://parachain.robonomics.network/
 
 ![relay](https://ipfs.io/ipfs/QmR9Tj86yPkrXQsSwereJwqDxsZgkAdySB16G4SMHrhpBu/upcoming.png)
 
