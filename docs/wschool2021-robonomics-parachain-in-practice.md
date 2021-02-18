@@ -6,7 +6,8 @@ Robonomics parachain is not a general purpose parachain on Polkadot ecosystem. T
 is building economy of machines, the parachain in this scope of aims helps to integrate Polkadot ecosystem
 with IoT, Smart Cities and Industry 4.0 concepts.
 
-This lesson requirements:
+## Requirements
+
 * Docker, please [install it](https://docs.docker.com/engine/install/).
 * Polkadot-launch, please [install it](https://github.com/paritytech/polkadot-launch#install).
 
