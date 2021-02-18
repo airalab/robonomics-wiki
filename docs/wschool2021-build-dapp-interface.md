@@ -1,4 +1,6 @@
-# Build Dapp Interface
+# Build Dapp Interface from scratch
+
+![Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot](./images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot")
 
 ## Introduction
 
