@@ -290,9 +290,9 @@ export default {
       })
     },
 
-    currenLink () {
-      return this.itemsList[this.currentIndex].link
-    },
+    // currenLink () {
+    //   return this.itemsList[this.currentIndex].link
+    // },
 
     // contributors () {
     //   let c = this.$page.doc.contributors.split(',')
