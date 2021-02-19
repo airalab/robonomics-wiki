@@ -19,7 +19,7 @@
 
 		computed: {
 			subtitles() {
-				// Remove h1, h4, h5, h6 titles
+				// Remove h1, h5, h6 titles
 				let subtitles = this.$page.doc.subtitles.filter(function(value, index, arr){
 				return [2,3,4].includes(value.depth)
 			})

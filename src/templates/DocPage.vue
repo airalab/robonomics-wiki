@@ -12,13 +12,19 @@
 
 	<div class="page">
 		<div id="sidebarDocs" class="page__sidebar hiddenMobile">
-      <SidebarDocs :items="items" />
+      <SidebarDocs :items="items" :current="currenLink" :allList="itemsList" />
       <Banner />
     </div>
 
   	<div class="page__content">
-  		<VueRemarkContent />
+
+      <!-- {{currenLink}} -->
+      
+      <VueRemarkContent />
       <!--<Banner :place="'content'" />-->
+
+      <PageNextPrev :itemsList="itemsList" :current="currentIndex"/>
+
   	</div>
 
   	<div id="sidebarContent" class="page__sidebar hiddenMobile">
@@ -55,22 +61,6 @@
         scrollbar-width: none;  /* Firefox */
         -ms-overflow-style: none;  /* IE and Edge */
         &::-webkit-scrollbar { display: none; } /* Hide scrollbar for Chrome, Safari and Opera */
-      }
-
-      &__next {
-        border-width: 1px 0 0;
-        border-style: solid;
-        border-color: var(--border-color);
-        padding: calc(var(--space)/2) 0;
-
-        display: grid;
-        gap: calc(var(--space)/2);
-
-        @media screen and (min-width:500px){
-          grid-template-columns: 1fr 1fr;
-        }
-
-        text-transform: uppercase
       }
 
       @media screen and (min-width: 1080px){
@@ -184,6 +174,7 @@ export default {
       Banner: () => import("~/components/Banner.vue"),
       NavIcon: () => import('~/components/NavIcon.vue'),
       IconGithub: () => import('@/assets/images/IconGithub.svg'),
+      PageNextPrev: () => import('~/components/PageNextPrev.vue'),
 	  },
 
   data(){
@@ -194,7 +185,7 @@ export default {
   },
 
   methods: {
-
+  
     initOpenLabel(list) {
       return list.map(item => {
         if (item.items) {
@@ -218,6 +209,21 @@ export default {
       })
     },
 
+    flatten(o){
+
+      let result = [];
+      for (const item of o) {
+        if (item.link) {
+          result.push(item);
+        }
+        if (item.items) {
+          result = [...result, ...this.flatten(item.items)];
+        }
+      }
+      return result;
+    },
+
+  
     // async github_link() {
     //   let doc = this.currentPath
     //   if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/README'
@@ -260,6 +266,20 @@ export default {
       return `https://github.com/airalab/robonomics-wiki/blob/master${doc}.md`
     },
 
+    itemsList() {
+        return this.flatten(this.items)
+    },
+
+    currentIndex () {
+      return this.itemsList.findIndex(item => {
+        return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
+      })
+    },
+
+    currenLink () {
+      return this.itemsList[this.currentIndex].link
+    },
+
     // contributors () {
     //   let c = this.$page.doc.contributors.split(',')
     //   return c;
@@ -286,7 +306,6 @@ export default {
       el.addEventListener('click', function(event){
         event.target.closest('.page__sidebar').classList.add('hiddenMobile');
         var id = event.target.closest('.page__sidebar').id;
-        console.log(id);
         
         document.querySelectorAll('.sectionToggler').forEach(function(el) {
           if(el.dataset.show == id) {
@@ -296,6 +315,7 @@ export default {
         });
       })
     });
+
   }
 }
 
