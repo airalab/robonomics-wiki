@@ -29,3 +29,10 @@
 		display: none;
 	}
 }
+
+.inline-block {
+    display: inline-block;
+    vertical-align: middle;
+    vertical-align: -moz-middle-with-baseline;
+    vertical-align: -webkit-baseline-middle;
+}

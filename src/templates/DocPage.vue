@@ -4,8 +4,8 @@
   <div class="sidebarMobileToggle">
     <div class="layout__page flex-line">
 
-      <NavIcon :section="'sidebarDocs'" :icon="'SideLeft'"/>
-      <NavIcon :section="'sidebarContent'" :icon="'SideRight'"/>
+      <NavIcon :section="'sidebarDocs'" :icon="'Menu'"/>
+      <NavIcon :section="'sidebarContent'" :icon="'Dots'"/>
       
     </div>
   </div>
@@ -47,7 +47,7 @@
   .page{
       display: grid;
       // grid-template-columns: 250px auto 200px;
-      grid-template-columns: minmax(0,250px) minmax(0,auto) minmax(0,200px);
+      grid-template-columns: minmax(0,var(--width-sidebar-left)) minmax(0,auto) minmax(0,var( --width-sidebar-right));
       gap: var(--space);
       align-items: start;
 
@@ -82,7 +82,8 @@
 
         &:not(:first-child) { margin-top: 20px; }
       }
-	    padding-left: calc( var(--space) / 4);
+	    
+      &:not(:first-child) { padding-left: calc( var(--space) / 4); }
     }
 
     .menu .menu:hover{
@@ -120,7 +121,9 @@
       &__sidebar{
 
         position: fixed;
-        top: calc( (2rem + (var(--header-padding))*2 ) *2 );
+        
+        top: calc(2 * 49px);
+
         left: 0;
         right: 0;
         bottom: 0;
@@ -131,15 +134,26 @@
       }
     }
 
-    .sidebarMobileToggle{
+    .sidebarMobileToggle {
       opacity: 1;
       visibility: visible;
 
-      top: calc( 2rem + (var(--header-padding))*2 );
+      top: 49px;
 
       border-top: 2px solid var(--body-bg);
     }
   }
+
+
+@media screen and (max-width: 600px) {
+  .page__sidebar {
+    top: 150px;
+  }
+
+  .sidebarMobileToggle {
+    top: 95px;
+  }
+}
 
 </style>
 
