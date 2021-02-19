@@ -42,109 +42,6 @@ query {
 
 
 <style lang="scss">  
-.header {
-  padding: var(--header-padding) 0;
-  background-color: var(--header-bg);
-
-  top:0;
-  z-index: 10;
-  position: sticky;
-  width: 100%;
-  z-index: 9999;
-
-  color: var(--header-link) !important;
-
-  & > div {
-    display: grid;
-    grid-template-columns: 300px auto; 
-  }
-
-  a {
-    color: currentColor;
-  }
-
-  &__logo{
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 700;
-    text-align: left;
-
-    a {
-      text-decoration: none;
-    }
-
-    img, span {
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    img{
-        width: 30px;
-        // max-height: var(--header-logo-height);
-        margin-right: 15px;
-      }
-    }
-
-  &__nav{
-    font-size: 0.8rem;
-    display: grid;
-    grid-template-columns: auto 180px;
-    align-items: center;
-    gap: 20px;
-
-    @media screen and (max-width: 1080px) {
-      grid-template-columns: auto 50px;
-    }
-
-    &__section {
-      margin-right: calc(var(--space) / 2);
-      &:last-child{ margin-right: 0; }
-    }
-
-    &__logo{
-      display: none;
-      margin-right: 0.7rem;
-
-      img{
-        width: 2rem;
-      }
-    }
-
-
-    &__links{
-      white-space: nowrap;
-      overflow-x: auto;
-      text-align: right;
-
-      & > *:not(:last-child) {
-          margin-right: calc(var(--space) / 4);
-      }
-
-      & > * {
-        display: inline-block;
-        vertical-align: middle;
-      }
-
-      a {
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-decoration: none;
-        font-weight: 700;
-
-        
-      }
-    }
-
-
-
-
-    }
-}
-
-
-
-
-
 
 .main {
   margin: 0 auto;
@@ -193,28 +90,28 @@ query {
   }
 }
 
-@media screen and (max-width: 880px) {
-  .header > div {
-    grid-template-columns: 60px auto; 
-  }
+// @media screen and (max-width: 880px) {
+//   .header > div {
+//     grid-template-columns: 60px auto; 
+//   }
 
-  .header__logo {
-    span {
-      display: none;
-    }
-  }
-}
+//   .header__logo {
+//     span {
+//       display: none;
+//     }
+//   }
+// }
 
 
-@media screen and (max-width: 480px) {
-  .header__nav {
-    grid-template-columns: auto 20px;
-  }
+// @media screen and (max-width: 480px) {
+//   .header__nav {
+//     grid-template-columns: auto 20px;
+//   }
 
-  // .header__nav__links {
-  //   display: none;
-  // }
-}
+//   // .header__nav__links {
+//   //   display: none;
+//   // }
+// }
 
 </style>
 

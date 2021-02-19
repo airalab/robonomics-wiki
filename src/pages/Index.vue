@@ -12,7 +12,7 @@
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
   .logo{
     display: inline-block;
     width: 200px;
