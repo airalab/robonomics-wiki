@@ -47,8 +47,6 @@ echo "source /home/$USER/robonomics_ws/devel/setup.bash" >> ~/.bashrc
 In terminal do the following. This will download a sample script used in the demo:
 ```
 cd ~/robonomics_ws/src
-mkdir robonomics_sample_controller
-cd robonomics_sample_controller
 git clone https://github.com/PaTara43/robonomics_sample_controller
 cd ../..
 catkin build
@@ -65,7 +63,9 @@ Since we are testing, let's create a local robonomics network node with robonomi
 rm -rf /home/$USER/.local/share/robonomics/chains/dev/db
 ```
 
-After a successful launch create accounts following [this](/docs/create-account-in-dapp) manual. **Do not forget to save each account's seed and address! You will need them for transactions**. Add these addresses, seeds and path to robonomics binary file to file `config.config` in `robonomics_ws/src/robonomics_sample_controller/src`. Transfer some money (units) to these accounts:
+After a successful launch create accounts for the rover and for it's employer following [this](/docs/create-account-in-dapp) manual. **Do not forget to save each account's seed (RAW SEED) and address! You will need them for transactions**. Add these addresses, seeds and path to robonomics binary file to file `config.config` in `robonomics_ws/src/robonomics_sample_controller/src`. Transfer some money (units) to these accounts:
+
+![Config](./images/curiosity-demo/config.jpg "Config")
 
 ![Balances](./images/curiosity-demo/balances.jpg "Balances")
 
@@ -73,7 +73,7 @@ After a successful launch create accounts following [this](/docs/create-account-
 Up to now the **only thing running** should be the robonomics local node.
 In a separate terminal launch IPFS:
 ```
-ifps init # you only need to do this once
+ipfs init # you only need to do this once
 ipfs daemon
 ```
 In another separate terminal launch Curiosity simulation:
@@ -99,3 +99,7 @@ You should see the log `"Arming..."` and the robot should start moving its camer
 The IPFS hash of the telemetry has been saved in the blockchain. To see the data simply copy the hash and add it to the local [gateway](https://gateway.ipfs.io/ipfs/QmeYYwD4y4DgVVdAzhT7wW5vrvmbKPQj8wcV2pAzjbj886/docs/getting-started/) address `localhost:8080/ipfs/`:
 
 ![Voila](./images/curiosity-demo/datalog.jpg "Voila")
+
+##Troubleshooting
+
+If due to some reason addresses in IO module and on the portal are displayed unequally (e.g. `5...` and `4...`) and the program outputs "Not my job is paid", fill in configuration file with address of the same type as in IO module.
