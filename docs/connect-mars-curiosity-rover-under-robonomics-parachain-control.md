@@ -100,6 +100,6 @@ The IPFS hash of the telemetry has been saved in the blockchain. To see the data
 
 ![Voila](./images/curiosity-demo/datalog.jpg "Voila")
 
-##Troubleshooting
+## Troubleshooting
 
 If due to some reason addresses in IO module and on the portal are displayed unequally (e.g. `5...` and `4...`) and the program outputs "Not my job is paid", fill in configuration file with address of the same type as in IO module.
