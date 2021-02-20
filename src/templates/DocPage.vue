@@ -198,6 +198,11 @@ export default {
       github: null
     }
   },
+  watch: {
+    "$route.path": function(current, old) {
+      this.items = this.setBranchOpenLabel(this.initOpenLabel(this.items));
+    }
+  },
 
   methods: {
   
@@ -206,7 +211,14 @@ export default {
         if (item.items) {
           item.items = this.initOpenLabel(item.items)
         }
-        return {...item, isOpen: Object.prototype.hasOwnProperty.call(item, 'link') && this.$route.path === item.link}
+        return {
+          ...item,
+          isOpen:
+            (!Object.prototype.hasOwnProperty.call(item, "link") &&
+              item.isOpen) ||
+            (Object.prototype.hasOwnProperty.call(item, "link") &&
+              this.$route.path === item.link)
+        };
       })
     },
     hasOpenChildren(list) {
