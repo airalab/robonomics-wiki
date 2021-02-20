@@ -1,7 +1,3 @@
----
-contributors: Vourhey, Positivecrash
----
-
 # Getting Started
 Robonomics platform provides tools for working with the robot economy network. Robonomics allow designers of smart cities and industry 4.0 zones to build trust among the [autonomous robots services](/docs/glossary#cyber-physical-system), provide [direct user access via dapp](/docs/glossary#dapp) for ordering products from autonomous factories and services of urban sensor networks. This in turn will allow us to put in place a decentralized system that globally monitors the activities of cyber physical systems.
 
