@@ -54,9 +54,7 @@ Well-known architectural solutions can be roughly divided into 3 groups:
 
 ## Installing Connectivity on Aira
 
-<!-- 
-YOUTUBE_SCREENCAST
--->
+https://www.youtube.com/watch?v=JbBNMHAzJKM
 
 ### Requirements
 
@@ -87,9 +85,7 @@ roslaunch sensors_connectivity agent.launch config:=$PWD/config/my.json
 
 ## Connect Sensor to Connectivity
 
-<!--
-YOUTUBE_SCREENCAST
--->
+https://www.youtube.com/watch?v=yxqxBk-6bpI
 
 ### Requirements
 
