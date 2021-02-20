@@ -12,14 +12,12 @@
 
 	<div class="page">
 		<div id="sidebarDocs" class="page__sidebar hiddenMobile">
-      <SidebarDocs :items="items" :current="currenLink" :allList="itemsList" />
+      <SidebarDocs :items="items" :current="currenLink" />
       <Banner />
     </div>
 
   	<div class="page__content">
 
-      <!-- {{itemsList}} -->
-      
       <VueRemarkContent />
       <!--<Banner :place="'content'" />-->
 
@@ -30,7 +28,7 @@
   	<div id="sidebarContent" class="page__sidebar hiddenMobile">
       <SidebarContent />
       
-      <g-link :href="github_link" target="_blank" class="button button__secondary button__small">
+      <g-link :href="github" target="_blank" class="button button__secondary button__small">
         <IconGithub/>
         <span>Edit this page</span>
       </g-link>
@@ -251,21 +249,19 @@ export default {
     },
 
   
-    // async github_link() {
-    //   let doc = this.currentPath
-    //   if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/README'
-    //   let url = `https://api.github.com/repos/airalab/robonomics-wiki/contents${doc}.md`;
+    async github_link_api() {
+      let doc = this.currentPath
+      if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/README'
+      let url = `https://api.github.com/repos/airalab/robonomics-wiki/contents${doc}.md`;
 
-    //   let response = await fetch(url);
+      let response = await fetch(url);
 
-    //   if(response.ok){
-    //     let commits = await response.json()
-    //     return commits.html_url
-    //   }
-    //   else return 'https://github.com/airalab/robonomics-wiki/tree/master/docs'
-
-    //   // return `https://github.com/airalab/robonomics-wiki/blob/master${path}.md`
-    // },
+      if(response.ok){
+        let commits = await response.json()
+        return commits.html_url
+      }
+      else return 'https://github.com/airalab/robonomics-wiki/tree/master/docs'
+    },
 
 
     // async contributorGet(c){
@@ -287,11 +283,12 @@ export default {
       return this.$route.matched[0].path
     },
 
-    github_link() {
-      let doc = this.currentPath
-      if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/README'
-      return `https://github.com/airalab/robonomics-wiki/blob/master${doc}.md`
-    },
+    // This is old, but maybe api will not work correctly, do not this delete now
+    // github_link() {
+    //   let doc = this.currentPath
+    //   if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/README'
+    //   return `https://github.com/airalab/robonomics-wiki/blob/master${doc}.md`
+    // },
 
     itemsList() {
         return this.flatten(this.items)
@@ -302,10 +299,6 @@ export default {
         return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
       })
     },
-
-    // currenLink () {
-    //   return this.itemsList[this.currentIndex].link
-    // },
 
     // contributors () {
     //   let c = this.$page.doc.contributors.split(',')
@@ -321,9 +314,9 @@ export default {
 	    }
 	  },
 
-  // async beforeUpdate(){
-  //   this.github = await this.github_link();
-  // },
+  async beforeUpdate(){
+    this.github = await this.github_link_api();
+  },
 
   updated(){
 
