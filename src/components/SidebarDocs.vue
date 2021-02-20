@@ -1,6 +1,6 @@
 <template>
   <ul class="menu menu-tree">
-    <li v-for="(item, key) in list" :key="key">
+    <li v-for="(item, key) in items" :key="key">
       <!-- <a class="menu__item menu__link" v-reload v-if="item.link && item.published!=false" :href="link(item.link)">{{item.title}}</a> -->
       <g-link class="menu__item menu__link" v-if="item.link && item.published!=false" :to="item.link" :exact="item.link == '/docs/'">{{item.title}}</g-link>
       <template v-else>
@@ -34,12 +34,9 @@ export default {
   components: {
     List: () => import("./SidebarDocs.vue")
   },
-  data(){
-    return { list: this.items }
-  },
   methods: {
     toggle (index) {
-      Vue.set(this.list[index], 'isOpen', !this.list[index].isOpen)
+      Vue.set(this.items[index], 'isOpen', !this.items[index].isOpen)
       // console.log(event.currentTarget.innerHTML);
     },
     link (path){
