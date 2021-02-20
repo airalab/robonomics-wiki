@@ -1,29 +1,33 @@
+.menu-subtitle {
+	border-top: 1px solid var(--border-color);
+	padding-top: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+	margin-bottom: .5rem;
+
+	&:not(:first-child) { margin-top: 20px; }
+}
+
+.menu .menu .menu-subtitle {
+	font-size: 0.85rem;
+}
+
+.menu-link{
+	color: currentColor !important;
+	line-height: 1;
+	text-decoration: none;
+
+	&.active{
+		color: var(--link-color) !important;
+	}
+}
+
 .menu {
 	list-style: none;
 	margin: 0;
 	font-size: .85rem;
-
 	margin-bottom: 1.6rem;
 
-	&__link{
-		color: currentColor !important;
-		line-height: 1;
-		text-decoration: none;
-
-		&.active{
-			color: var(--link-color) !important;
-		}
-	}
-
-	&__title{
-		cursor: pointer;
-		font-size: 1rem;
-		margin-bottom: .5rem;
-	}
-
-	.menu .menu__title{
-		font-size: 0.8rem;
-	}
 
 	&__item-depth-2{
 		margin-bottom: 0;
@@ -42,4 +46,8 @@
 		padding: .2rem 1.4rem;
 	}
 
+}
+
+.menu-tree {
+	&:not(:first-child) { padding-left: calc( var(--space) / 4); }
 }
