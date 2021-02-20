@@ -126,6 +126,10 @@
   }
 
   @media screen and (max-width: 600px) {
+    .header {
+      position: static;
+    }
+    
     .header-top {
       grid-template-columns: var(--logo-w) 1fr;
       grid-template-rows: repeat(1fr,2);
