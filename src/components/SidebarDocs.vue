@@ -25,7 +25,7 @@ import Vue from 'vue'
 
 export default {
   props: {
-    allList: null,
+    // allList: null,
     items: {
       default: []
     },
