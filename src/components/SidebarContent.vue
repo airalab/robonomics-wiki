@@ -2,6 +2,8 @@
 	
 	 <div v-if="subtitles.length > 0 && subtitles[0].depth !== 4">
 
+		<h4 class="menu-subtitle">In this article</h4>
+
 	    <ul v-if="subtitles.length" class="menu">
 	      <li :class="'menu__item-depth-' + subtitle.depth" v-for="subtitle in subtitles" :key="subtitle.value">
 	        <a class="menu__item menu__link" :href="subtitle.anchor">

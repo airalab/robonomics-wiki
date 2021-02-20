@@ -2,9 +2,9 @@
   <ul class="menu menu-tree">
     <li v-for="(item, key) in items" :key="key">
       <!-- <a class="menu__item menu__link" v-reload v-if="item.link && item.published!=false" :href="link(item.link)">{{item.title}}</a> -->
-      <g-link class="menu__item menu__link" v-if="item.link && item.published!=false" :to="item.link" :exact="item.link == '/docs/'">{{item.title}}</g-link>
+      <g-link class="menu-link" v-if="item.link && item.published!=false" :to="item.link" :exact="item.link == '/docs/'">{{item.title}}</g-link>
       <template v-else>
-        <h4 class="menu__item menu__title" @click="toggle(key)" v-if="item.published!=false">
+        <h4 class="menu-subtitle" @click="toggle(key)" v-if="item.published!=false">
           {{item.title}}
           <span>[{{ item.isOpen === "true" ? '-' : '+' }}]</span>
         </h4>

@@ -71,25 +71,6 @@
       }
   }
 
-  #sidebarDocs.page__sidebar {
-
-    .menu {
-      h4 {
-        border-top: 1px solid var(--border-color);
-        padding-top: 5px;
-
-        &:not(:first-child) { margin-top: 20px; }
-      }
-	    
-      &:not(:first-child) { padding-left: calc( var(--space) / 4); }
-    }
-
-    .menu .menu:hover{
-      border-color: var(--link-color);
-    }
-    
-  }
-
   .sidebarMobileToggle{
     transition: opacity 0.2s ease;
     opacity: 0;
