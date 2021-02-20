@@ -31,6 +31,7 @@
       position: absolute;
       top: calc(100% + .5rem);
       width: 100%;
+      z-index: 1000;
       
       transition: 0.4s ease opacity;
       opacity: 0;

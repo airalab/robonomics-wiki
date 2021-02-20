@@ -42,11 +42,13 @@ export default {
 
   computed: {
       pagePrev() {
-        return this.itemsList[this.current - 1];
+        if(this.current > -1)
+          return this.itemsList[this.current - 1]
       },
 
       pageNext() {
-        return this.itemsList[this.current + 1];
+        if(this.current > -1)
+          return this.itemsList[this.current + 1]
       },
 
     //   pageCurrent() {

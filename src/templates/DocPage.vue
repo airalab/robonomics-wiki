@@ -18,7 +18,7 @@
 
   	<div class="page__content">
 
-      <!-- {{currenLink}} -->
+      <!-- {{itemsList}} -->
       
       <VueRemarkContent />
       <!--<Banner :place="'content'" />-->
@@ -152,6 +152,7 @@
 
   .sidebarMobileToggle {
     top: 95px;
+    position: absolute
   }
 }
 
