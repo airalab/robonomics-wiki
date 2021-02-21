@@ -17,7 +17,6 @@ sudo apt-get install ros-melodic-gazebo-ros-control ros-melodic-effort-controlle
 sudo apt install python-pip
 ```
 
-
 - ipfshttpclient:
 ```sh
 pip install ipfshttpclient
@@ -34,15 +33,17 @@ Download packages:
 ```sh
 cd ~
 mkdir -p robot_ws/src
-git clone https://github.com/nakata5321/Baxter_simulation_controller.git
 cd robot_ws/src
-ln -s ~/Baxter_simulation_controller/ .
-cd ..
+git clone https://github.com/nakata5321/Baxter_simulation_controller.git
+cd Baxter_simulation_controller
+git checkout old_version
+cd ../..
 catkin build
 ```
 Dont forget to add source command:
 ```sh
 echo "source /home/$USER/robot_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## 2. Create simulation world
@@ -94,7 +95,7 @@ rosrun robot_controller robot_control.py
 ```
 ![waiting][im7]
 
-Return to the first terminal, open new window and send command to [**robonomics io**][db6]. This command will turn ON your robot:
+Return to the first terminal, open new window and send command to [**robonomics io**][db7]. This command will turn ON your robot:
 ```sh
 echo "ON" | ./robonomics io write launch -r <CURIOSITY ADDRESS> -s <EMPLOYER’S KEY>
 ```
@@ -135,3 +136,4 @@ Click  __View on Gateway__ and that's all!
 [im11]: <./images/baxter_demo/ipfs.jpg>
 [im12]: <./images/baxter_demo/result1.jpg>
 [im13]: <./images/baxter_demo/result2.jpg>
+[db7]: </docs/rio-overview>
