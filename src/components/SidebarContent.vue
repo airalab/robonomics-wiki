@@ -31,3 +31,9 @@
 	}
 
 </script>
+
+<style scoped>
+.menu a {
+	font-weight: 600;
+}
+</style>
