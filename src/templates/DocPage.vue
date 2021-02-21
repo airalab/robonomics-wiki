@@ -151,7 +151,6 @@ query ($id: ID!) {
       anchor
     }
     content
-    contributors
   }
 }
 </page-query>
