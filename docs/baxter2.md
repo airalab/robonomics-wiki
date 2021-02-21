@@ -25,7 +25,7 @@ pip install ipfshttpclient
 
  - Robonomics node (binary file) (download latest [release][db4] here)
  - Create __Baxter__ and __Employer__ accounts  on **Robonomics Portal**  
- (you can find tutorial ["Create an Account on Robonomics Portal"][db6] here).
+ (you can find tutorial ["Create an Account on Robonomics Portal"][db8] here).
  - IPFS browser extension (not necessary)
 
 ## 1. Download Baxter model
@@ -53,17 +53,33 @@ catkin build
 Dont forget to add source command:
 ```sh
 echo "source /home/$USER/robot_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 ```  
-At the end save *Robonomics node (binary file)* in **robot_ws** directory.
+__Important!__ At the end save *Robonomics node (binary file)* in **robot_ws** directory.
 
 ## 2. Start simulation
 First of all copy and edit `baxter.sh`
 ```sh
 cp src/baxter/baxter.sh .
 ```
+
+Find your local ip adress with command:
+```
+ip a
+```
+![ip_a][im14]
+
 Edit the following values in `baxter.sh` :
-- your_ip value - put your local ip address
-- ros_version
+```
+nano baxter.sh
+```
+
+Edit the following values in `baxter.sh` :
+
+- your_ip - put your local ip address. See `ip a`
+- ros_version - for example "melodic"
+
+![baxtersh][im15]
 
 Run the baxter shell script with sim specified:
 ```sh
@@ -91,7 +107,7 @@ Go to [https://parachain.robonomics.network][db5] and switch to local node
 
 Go to Accounts and transfer some money to __Baxter__ and __Employer__ accounts.
 
-You can find The manual "Create an Account on Robonomics Portal" [here.][db6]
+You can find The manual "Create an Account on Robonomics Portal" [here.][db8]
 
 
 Add Baxter's secret key and adress to `config.yaml` in `robot_ws/src/Baxter_simulation_controller/config/`
@@ -137,7 +153,7 @@ That's all!
 [db2]: <http://wiki.ros.org/melodic/Installation>
 [db3]: <https://dist.ipfs.io/go-ipfs/v0.4.22/go-ipfs_v0.4.22_linux-386.tar.gz>
 [db4]: <https://github.com/airalab/robonomics/releases>
-[db6]: </docs/create-account-in-dapp>
+[db8]: </docs/create-account-in-dapp>
 [im1]: <./images/baxter_demo/empty_world.jpg>
 [im2]: <./images/baxter_demo/baxter_simulation.jpg>
 [im3]: <./images/baxter_demo/robonomics.jpg>
@@ -150,3 +166,6 @@ That's all!
 [im11]: <./images/baxter_demo/ipfs.jpg>
 [im12]: <./images/baxter_demo/result1.jpg>
 [im13]: <./images/baxter_demo/result2.jpg>
+[db6]: </docs/rio-overview>
+[im14]:<./images/baxter_demo/ip_a.png>
+[im15]:<./images/baxter_demo/baxter_sh.jpg>
