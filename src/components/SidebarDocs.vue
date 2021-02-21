@@ -1,5 +1,5 @@
 <template>
-  <ul class="menu menu-tree">
+  <ul class="menu">
     <li v-for="(item, key) in items" :key="key">
       <g-link class="menu-link" v-if="item.link && item.published!=false" :to="item.link" :exact="item.link == '/docs/'">{{item.title}}</g-link>
       <template v-else>
@@ -40,3 +40,7 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.menu:not(:first-child) { padding-left: calc( var(--space) / 4); }
+</style>

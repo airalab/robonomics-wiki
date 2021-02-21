@@ -47,7 +47,3 @@
 	}
 
 }
-
-.menu-tree {
-	&:not(:first-child) { padding-left: calc( var(--space) / 4); }
-}
