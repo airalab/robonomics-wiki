@@ -144,6 +144,31 @@ Start the VM, connect via SSH and set `comstation/port` option according to your
 }
 ```
 
+> If you don't have a real sensor, you can use `sensors-connectivity/utils/virtual-sensor.py` script to emulate one
+> 
+> Enable `HTTPStation` and disable `COMStation` by changing the configuration file as:
+> ```
+> {
+>    "general":{
+>       "publish_interval":30
+>    },
+>    "comstation":{
+>       "enable":false,
+>       "port":"/dev/ttyUSB0",
+>       "work_period":0,
+>       "geo":"59.944917,30.294558",
+>       "public_key":""
+>    },
+>    "httpstation":{
+>       "enable":true,
+>       "port":8001
+>    },
+>    ...
+> }
+> ```
+>
+> and launching `utils/virtual-sensor.py` in a dedicated terminal in the VM
+
 Save the file and launch connectivity from `sensors-connectivity` folder:
 
 ```
