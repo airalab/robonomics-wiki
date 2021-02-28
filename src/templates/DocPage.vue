@@ -21,7 +21,7 @@
       <div class="layout__content">
         <VueRemarkContent />
 
-        <section class="docContribution">
+        <section class="docContribution" v-if="ghLink">
 
           <div class="content" v-if="ghLink">
             <h5>Make a contribution</h5>
