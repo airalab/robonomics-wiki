@@ -12,26 +12,35 @@
 
 	<div class="page">
 		<div id="sidebarDocs" class="page__sidebar hiddenMobile">
-      <SidebarDocs :items="items" :current="currenLink" />
+      <SidebarDocs :items="items" />
       <Banner />
     </div>
 
   	<div class="page__content">
 
-      <VueRemarkContent />
-      <!--<Banner :place="'content'" />-->
+      <div class="layout__content">
+        <VueRemarkContent />
 
-      <PageNextPrev :itemsList="itemsList" :current="currentIndex"/>
+        <section class="docContribution">
+
+          <div class="content" v-if="ghLink">
+            <h5>Make a contribution</h5>
+            <p>Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.</p>
+            <Button label="Edit this page" :link="ghLink" type="secondary" icon="github" size="small"/>
+          </div>
+
+          <div class="head" v-if="ghUpdateName">
+            Latest <g-link :to="ghUpdateUrl">commit</g-link> on {{ghUpdateDate}} by {{ghUpdateName}}
+          </div>
+        </section>
+
+        <PageNextPrev :itemsList="itemsList" :current="currentIndex"/>
+      </div>
 
   	</div>
 
   	<div id="sidebarContent" class="page__sidebar hiddenMobile">
       <SidebarContent />
-      
-      <g-link :href="github" target="_blank" class="button button__secondary button__small">
-        <IconGithub/>
-        <span>Edit this page</span>
-      </g-link>
     </div>
 
   </div>
@@ -40,16 +49,13 @@
   </Layout>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
   .page{
       display: grid;
-      // grid-template-columns: 250px auto 200px;
-      grid-template-columns: minmax(0,var(--width-sidebar-left)) minmax(0,auto) minmax(0,var( --width-sidebar-right));
+      grid-template-columns: minmax(0,var(--width-sidebar-left)) auto minmax(0,var( --width-sidebar-right));
       gap: var(--space);
       align-items: start;
-
-      h1 { font-weight: 500; }
 
       &__sidebar{
         word-break: break-word;
@@ -67,7 +73,10 @@
           position: sticky;
           top: 80px;
         }
+      }
 
+      .layout__content {
+        padding: 0;
       }
   }
 
@@ -135,6 +144,23 @@
   }
 }
 
+.docContribution {
+
+  border: 1px solid var(--table-thead-bg);
+  
+  .head {
+    background-color: var(--table-thead-bg);
+    padding: calc(var(--space)/4);
+    font-weight: 500;
+  }
+
+  .content {
+    padding: calc(var(--space)/4);
+    background-color: var(--table-tr-hover);
+  }
+
+}
+
 </style>
 
 <page-query>
@@ -158,6 +184,9 @@ query ($id: ID!) {
 
 <script>
 import items from '@/data/doc-links.yaml'
+import {Octokit} from '@octokit/rest'
+
+export const octokit = new Octokit()
 
 export default {
 
@@ -166,19 +195,24 @@ export default {
       SidebarContent: () => import("~/components/SidebarContent.vue"),
       Banner: () => import("~/components/Banner.vue"),
       NavIcon: () => import('~/components/NavIcon.vue'),
-      IconGithub: () => import('@/assets/images/IconGithub.svg'),
       PageNextPrev: () => import('~/components/PageNextPrev.vue'),
+      Button: () => import('~/components/Button.vue'),
 	  },
 
   data(){
     return {
       items: this.setBranchOpenLabel(this.initOpenLabel(items)),
-      github: null
+      ghLink: null,
+      ghUpdateDate: null,
+      ghUpdateName: null,
+      ghUpdateUrl: null,
     }
   },
   watch: {
     "$route.path": function(current, old) {
-      this.items = this.setBranchOpenLabel(this.initOpenLabel(this.items));
+      this.items = this.setBranchOpenLabel(this.initOpenLabel(this.items))
+      this.github_lastupdated()
+      this.github_link()
     }
   },
 
@@ -228,47 +262,46 @@ export default {
       return result;
     },
 
-  
-    async github_link_api() {
-      let doc = this.currentPath
-      if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/README'
-      let url = `https://api.github.com/repos/airalab/robonomics-wiki/contents${doc}.md`;
+    github_lastupdated() {
+      octokit.repos
+        .listCommits({
+          owner: "airalab",
+          repo: "robonomics-wiki",
+          path: this.currentDoc
+        })
+        .then(({ data }) => {
 
-      let response = await fetch(url);
+          let d = new Date(data[0].commit.author.date)
+          this.ghUpdateDate = d.toLocaleDateString()
 
-      if(response.ok){
-        let commits = await response.json()
-        return commits.html_url
-      }
-      else return 'https://github.com/airalab/robonomics-wiki/tree/master/docs'
+          this.ghUpdateName = data[0].commit.author.name
+
+          this.ghUpdateUrl = data[0].html_url
+        });
     },
 
-
-    // async contributorGet(c){
-    //   let response = await fetch('https://api.github.com/users/' + c);
-
-    //   if(response.ok){
-    //     let user = await response.json()
-    //     console.log(user);
-    //     return user
-    //   }
-    // }
+    github_link() {
+      octokit.repos
+        .getContent({
+          owner: "airalab",
+          repo: "robonomics-wiki",
+          path: this.currentDoc
+        })
+        .then(result => {
+          this.ghLink = result.data.html_url
+        })
+    }
 
   },
 
   
   computed: {
 
-    currentPath () {
-      return this.$route.matched[0].path
+    currentDoc () {
+      let doc = this.$route.matched[0].path
+      if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/README'
+      return doc+'.md';
     },
-
-    // This is old, but maybe api will not work correctly, do not this delete now
-    // github_link() {
-    //   let doc = this.currentPath
-    //   if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/README'
-    //   return `https://github.com/airalab/robonomics-wiki/blob/master${doc}.md`
-    // },
 
     itemsList() {
         return this.flatten(this.items)
@@ -280,11 +313,6 @@ export default {
       })
     },
 
-    // contributors () {
-    //   let c = this.$page.doc.contributors.split(',')
-    //   return c;
-    // }
-  
   },
 
 	metaInfo () {
@@ -294,8 +322,9 @@ export default {
 	    }
 	  },
 
-  async beforeUpdate(){
-    this.github = await this.github_link_api();
+  created() {
+    this.github_lastupdated()
+    this.github_link()
   },
 
   updated(){
@@ -315,9 +344,7 @@ export default {
         });
       })
     });
-
   }
 }
-
 
 </script>

@@ -71,7 +71,7 @@ rm -rf /home/$USER/.local/share/robonomics/chains/dev/db
 After a successful launch create accounts following [this](/docs/create-account-in-dapp) manual. **Do not forget to save each account's seed and address! You will need them for transactions**. Add these addresses, seeds and path to robonomics binary file to file `config.config` in `robonomics_ws/src/robonomics_sample_controller/src`. Transfer some money (units) to these accounts:
 
 ![balances](./images/drone-demo/balances.jpg "balances")
-### 5. Launching the drone under parachain control
+## 5. Launching the drone under parachain control
 Up to now the **only thing running** should be the robonomics local node. In a separate terminal launch drone simulation:
 ```
 roslaunch sjtu_drone simple.launch
