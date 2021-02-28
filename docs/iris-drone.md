@@ -9,6 +9,7 @@ https://youtu.be/4CwtGAX1OwM
 * dependencies for control:
 ``` sh
 sudo apt install -y \
+	python3-pip \
 	ninja-build \
 	exiftool \
 	python-argparse \
@@ -38,6 +39,9 @@ pip3 install \
 * extra packages: 
 ``` bash 
 sudo apt-get install ros-melodic-gazebo-ros-control ros-melodic-effort-controllers ros-melodic-joint-state-controller
+sudo apt-get install python-jinja2
+sudo apt-get install python-catkin-pkg
+sudo apt-get install python3-catkin-pkg-modules
 ```
 * IPFS verson 0.4.22
 ```bash
@@ -60,12 +64,13 @@ sudo ./install_geographiclib_datasets.sh
 cd ~/catkin_ws/src
 git clone https://github.com/PX4/Firmware.git
 cd Firmware
-make posix_sitl_default gazebo
+git checkout v1.9.0
+bash ./Tools/setup/ubuntu.sh
 ```
 ```bash
 cd ~/catkin_ws/src
 git clone https://github.com/generalized-intelligence/GAAS.git
-cp -r ~/catkin_ws/src/simulator/models/* ~/catkin_ws/src/Firmware/Tools/sitl_gazebo/models/
+cp -r ~/catkin_ws/src/GAAS/simulator/models/* ~/catkin_ws/src/Firmware/Tools/sitl_gazebo/models/
 cp -r ~/catkin_ws/src/GAAS/simulator/worlds/* ~/catkin_ws/src/Firmware/Tools/sitl_gazebo/worlds/
 cp -r ~/catkin_ws/src/GAAS/simulator/posix-config/* ~/catkin_ws/src/Firmware/posix-configs/SITL/init/ekf2/
 ```
@@ -81,9 +86,10 @@ Modifying your `.bashrc` file, adding the following lines to the bottom:
 
   
 ## Control Package Installation
+In a new Terminal:
 ```bash
 cd catkin_ws/src
-https://github.com/tubleronchik/robonomics_drone_sim.git
+git clone https://github.com/tubleronchik/robonomics_drone_sim.git
 cd ..
 catkin build
 ```
@@ -111,7 +117,7 @@ ipfs daemon
 In another terminal launch the simulation:
 ```bash
 roslaunch px4 mavros_posix_sitl.launch
-cd ~/catkin_ws/src/drone_sim/src
+cd ~/catkin_ws/src/robonomics_drone_sim/src
 python3 takeoff.py
 ```
 Waiting till "Waiting for payment" 

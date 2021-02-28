@@ -16,6 +16,10 @@ cd go-ipfs/
 sudo bash install.sh
 ipfs init
 ```
+* pip
+```bash
+sudo apt install python-pip
+```
 * ipfshttpclient
 ```bash
 pip install ipfshttpclient
@@ -26,11 +30,12 @@ pip install ipfshttpclient
 ## Installation
 Install Kuka manipulator and control packages
 ```bash
-cd catkin_wc/src/
+cd catkin_ws/src/
 git clone https://github.com/orsalmon/kuka_manipulator_gazebo
 git clone https://github.com/LoSk-p/kuka_controller
 cd ..
 catkin_make
+echo "source /home/$USER/catkin_ws/devel/setup.bash" >> ~/.bashrc
 ```
 ***
 ## Running gazebo model
@@ -111,6 +116,17 @@ Now you can find Kuka's telemetry using this hash in IPFS Companion:
 
 ![telemetry](./images/kuka-demo/telemetry.jpg)
 
+## Troubleshooting
+
+If `catkin_make` doesn't work with the message that it can't find MoveArm.h, try to remove last four lines in CMakeLists.txt in kuka_manipulator_gazebo package:
+```
+include_directories(include ${catkin_INCLUDE_DIRS})
+
+add_executable(move_arm_server src/move_arm_server.cpp)
+target_link_libraries(move_arm_server ${catkin_LIBRARIES})
+add_dependencies(move_arm_server beginner_tutorials_gencpp)
+```
+Do `catkin_make` without these lines, then returm them and do `catkin_make` again.
 
 
 
