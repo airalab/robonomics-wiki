@@ -24,8 +24,7 @@ export default {
   props: {
     items: {
       default: []
-    },
-    current: null
+    }
   },
   components: {
     List: () => import("./SidebarDocs.vue")

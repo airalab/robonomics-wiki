@@ -24,7 +24,7 @@
   </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
   .header {
     --logo-w: 30px;
@@ -52,7 +52,7 @@
 
   .header-top {
     display: grid;
-    grid-template-columns: var(--width-sidebar-left) auto var(--width-sidebar-left);
+    grid-template-columns: minmax(0,var(--width-sidebar-left)) auto minmax(0,var( --width-sidebar-right));
     gap: var(--space);
     align-items: center;
     justify-items: stretch;
@@ -73,7 +73,6 @@
 
   .header-nav {
     font-size: 70%;
-    text-align: right;
 
     & > *:not(:last-child) {
       margin-right: 15px;

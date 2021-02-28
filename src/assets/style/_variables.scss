@@ -23,23 +23,26 @@ body {
  	--link-color: #449ff2;
  	--border-color-light:  rgba(0,0,0,.1);
  	--border-color:  rgba(0,0,0,.2);
+	--color-btn: var(--link-color);
 
  	--table-bg: transparent;
- 	--table-thead-bg: #ede1a0;
- 	--table-tr-hover: #f6f1d2;
+ 	--table-thead-bg: #fceb8f;
+ 	--table-tr-hover: #fffbea;
 
  	--header-bg: #0e161a;
  	--header-link: #ced8de;
+
+	 --font-size: 1rem;
  	
 
   --space: 3.5rem;
   --space-text: 1.25rem;
-  --content-width: 960px;
-  --page-width: 1440px;
+  --content-width: 820px;
+  --page-width: 1920px;
   --radius: 4px;
 
   --width-sidebar-left: 250px;
-  --width-sidebar-right: 200px;
+  --width-sidebar-right: 250px;
 
   --header-padding: .5rem;
   --header-logo-height: 2rem;
@@ -62,11 +65,13 @@ body[data-theme="dark"] {
  	--text-color: #ced8de;
  	--text-color-invert: #162128;
 
- 	--code-bg: var(--color-dark:);
+ 	--code-bg-inline: rgba(94, 23, 67, 0.288);
+	--code-text-inline: rgb(255, 60, 193);
 
  	--title-color: #fff;
  	--link-color: #fceb8f;
  	--border-color:  rgba(255,255,255,.1);
+	// --color-btn: #1289a7;
 
  	--table-bg: var(--color-dark:);
  	--table-thead-bg: #0d1b26;

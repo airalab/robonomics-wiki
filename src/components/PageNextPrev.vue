@@ -2,13 +2,16 @@
 
     <section class="pageNextPrev">
 
-        <a v-if="pagePrev" class="button button__primary" :href="pagePrev.link">
+        <!-- <a v-if="pagePrev" class="button button__primary" :href="pagePrev.link">
             &larr; {{ pagePrev.title }}
-        </a>
+        </a> -->
 
-        <a v-if="pageNext" class="button button__primary" :href="pageNext.link">
+        <Button v-if="pagePrev" :label="'← ' + pagePrev.title" :link="pagePrev.link"/>
+        <Button v-if="pageNext" :label="pageNext.title + ' →'" :link="pageNext.link"/>
+
+        <!-- <a v-if="pageNext" class="button button__primary" :href="pageNext.link">
             {{ pageNext.title }} &rarr;
-        </a>
+        </a> -->
 
     </section>
 
@@ -35,9 +38,14 @@
 <script>
 
 export default {
+  
   props: {
     current: null,
     itemsList: null
+  },
+
+  components: {
+    Button: () => import('~/components/Button.vue'),
   },
 
   computed: {
@@ -50,13 +58,6 @@ export default {
         if(this.current > -1)
           return this.itemsList[this.current + 1]
       },
-
-    //   pageCurrent() {
-    //     return Object.values(this.itemsList).findIndex(function(item) {
-    //         if(item.isOpen == true)
-    //         return true;
-    //     })
-    //   }
   },
 
 }

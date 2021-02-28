@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap');
 
 html {
   font-size: var(--base-font-size);
@@ -11,6 +11,14 @@ body {
 
 p, .youtube-embed {
 	margin-bottom: var(--space-text);
+}
+
+a:not(.button) {
+	color: var(--link-color);
+ 	transition: opacity .2s;
+	&:hover {
+		opacity: .8;
+	}
 }
 
 h1, h2, h3, h4, h5 {
@@ -32,6 +40,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   margin-top: 0;
   font-size: 2rem;
+  font-weight: 500;
 }
 
 h2 {font-size: 1.7rem;}
