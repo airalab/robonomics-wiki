@@ -69,7 +69,7 @@ After a successful launch create accounts for the rover and for it's employer fo
 
 ![Balances](./images/curiosity-demo/balances.jpg "Balances")
 
-### 4. Start Robonomics
+## 4. Start Robonomics
 Up to now the **only thing running** should be the robonomics local node.
 In a separate terminal launch IPFS:
 ```
