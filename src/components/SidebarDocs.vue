@@ -3,12 +3,12 @@
     <li v-for="(item, key) in items" :key="key">
       <g-link class="menu-link" v-if="item.link && item.published!=false" :to="item.link" :exact="item.link == '/docs/'">{{item.title}}</g-link>
       <template v-else>
-        <h4 class="menu-subtitle" @click="toggle(key)" v-if="item.published!=false">
+
+        <h4 class="menu-subtitle" @click="toggle" v-if="item.published!=false" :class="hascurrent(item.items) ? 'open' : 'close'">
           {{item.title}}
-          <span>[{{ item.isOpen ? '-' : '+' }}]</span>
         </h4>
 
-        <List :items="item.items" v-show="item.isOpen"/>
+        <List :items="item.items" />
       </template>
     </li>
   </ul>
@@ -17,7 +17,6 @@
 
 
 <script>
-
 import Vue from 'vue'
 
 export default {
@@ -26,20 +25,67 @@ export default {
       default: []
     }
   },
+
   components: {
     List: () => import("./SidebarDocs.vue")
   },
+
   methods: {
-    toggle (index) {
-      Vue.set(this.items[index], 'isOpen', !this.items[index].isOpen)
+
+    toggle (event) {
+       event.target.classList.toggle('open')
     },
-    link (path){
-      return window.location.protocol + "//" + window.location.host + path; 
-    },
-  },
+
+
+    hascurrent (a) {
+      let path = this.$route.matched[0].path;
+      let contains = false;
+
+      for (var i = 0; i < a.length; i++) {
+        if(!a[i].items){
+          
+          if(a[i].link == path + '/'){
+            contains = true;
+          }
+        }
+        else{
+          if( this.hascurrent(a[i].items) ){
+            contains = true;
+          }
+        }
+      }
+      return contains;
+    }
+  }
+
+  
 }
 </script>
 
 <style scoped>
-.menu:not(:first-child) { padding-left: calc( var(--space) / 4); }
+
+.menu:not(:first-child) {
+  padding-left: calc( var(--space) / 4);
+}
+
+::selection {
+  background-color: transparent;
+}
+
+.menu-subtitle + .menu {
+  display: none;
+}
+
+.menu-subtitle:after {
+  content: "[+]"
+}
+
+.menu-subtitle.open + .menu {
+  display: block;
+}
+
+.menu-subtitle.open:after {
+  content: "[-]"
+}
+
 </style>
