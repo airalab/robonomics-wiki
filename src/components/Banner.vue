@@ -4,10 +4,6 @@
 			<g-image v-if="place==='sidebar'" alt="" src="~/assets/images/banner_sidebanner_RWS.jpg"/>
 			<g-image v-if="place==='content'" alt="" src="~/assets/images/banner-content-RWSbeta.png"/>
 		</g-link>
-
-		<g-link class="banner" :class="place" :to="'https://robonomics.network/blog/winter-robonomics-school/?'+place">
-			<g-image v-if="place==='sidebar'" alt="" src="~/assets/images/banner_sidebanner_winter_school.jpg"/>
-		</g-link>
 	</div>
 </template>
 
