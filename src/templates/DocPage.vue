@@ -201,52 +201,22 @@ export default {
 
   data(){
     return {
-      items: this.setBranchOpenLabel(this.initOpenLabel(items)),
+      items: items,
       ghLink: null,
       ghUpdateDate: null,
       ghUpdateName: null,
       ghUpdateUrl: null,
     }
   },
+
   watch: {
     "$route.path": function(current, old) {
-      this.items = this.setBranchOpenLabel(this.initOpenLabel(this.items))
       this.github_lastupdated()
       this.github_link()
     }
   },
 
   methods: {
-  
-    initOpenLabel(list) {
-      return list.map(item => {
-        if (item.items) {
-          item.items = this.initOpenLabel(item.items)
-        }
-        return {
-          ...item,
-          isOpen:
-            (!Object.prototype.hasOwnProperty.call(item, "link") &&
-              item.isOpen) ||
-            (Object.prototype.hasOwnProperty.call(item, "link") &&
-              this.$route.path === item.link)
-        };
-      })
-    },
-    hasOpenChildren(list) {
-      return list.find(item =>{
-        return item.isOpen
-      }) ? true : false
-    },
-    setBranchOpenLabel(list) {
-      return list.map(item => {
-        if (item.items && !item.isOpen) {
-          item.items = this.setBranchOpenLabel(item.items)
-          item.isOpen = this.hasOpenChildren(item.items)
-        }
-        return {...item}
-      })
-    },
 
     flatten(o){
 
