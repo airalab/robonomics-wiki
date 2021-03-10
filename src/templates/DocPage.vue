@@ -300,7 +300,7 @@ export default {
   updated(){
 
     //Hide popup mobile menu after clickcing (cause - no real page reload in Gridsome)
-    document.querySelectorAll('.menu__link').forEach(function(el) {
+    document.querySelectorAll('.menu-link').forEach(function(el) {
       
       el.addEventListener('click', function(event){
         event.target.closest('.page__sidebar').classList.add('hiddenMobile');

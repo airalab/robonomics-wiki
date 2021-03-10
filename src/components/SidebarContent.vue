@@ -6,7 +6,7 @@
 
 	    <ul v-if="subtitles.length" class="menu">
 	      <li :class="'menu__item-depth-' + subtitle.depth" v-for="subtitle in subtitles" :key="subtitle.value">
-	        <a class="menu__item menu__link" :href="subtitle.anchor">
+	        <a class="menu__item menu-link" :href="subtitle.anchor">
 	          {{ subtitle.value }}
 	        </a>
 	      </li>
