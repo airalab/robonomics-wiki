@@ -22,7 +22,7 @@ body {
  	--title-color: #111;
  	--link-color: #449ff2;
  	--border-color-light:  rgba(0,0,0,.1);
- 	--border-color:  rgba(0,0,0,.2);
+ 	--border-color: #dbdbdb;
 	--color-btn: var(--link-color);
 
  	--table-bg: transparent;
@@ -70,7 +70,8 @@ body[data-theme="dark"] {
 
  	--title-color: #fff;
  	--link-color: #fceb8f;
- 	--border-color:  rgba(255,255,255,.1);
+ 	--border-color:  #5f5f5f;
+ 	// --border-color:  rgba(255,255,255,.1);
 	// --color-btn: #1289a7;
 
  	--table-bg: var(--color-dark:);
