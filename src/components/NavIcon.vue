@@ -11,6 +11,7 @@
 <style lang="scss">
 	.sectionToggler {
 		cursor: pointer;
+    min-width: 26px;
 
 		&:hover{
 			opacity: .6;
@@ -19,6 +20,7 @@
 		svg{
 			fill: currentColor;
       display: none;
+      margin: 0 auto;
 		}
 
     &.open {
