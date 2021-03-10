@@ -65,6 +65,16 @@
 
 - title: Learn
   items:
+    - title: Robonomics-js
+      link: /docs/robonomics-js/
+      
+    - title: Glossary
+      link: /docs/glossary/
+
+    - title: Sensors Connectivity
+      link: /docs/sensors-connectivity/
+
+      
     - title: Robonomics IO
       items:
         - title: Overview
@@ -75,13 +85,6 @@
           link: /docs/rio-launch/
         - title: Datalog
           link: /docs/rio-datalog/
-    - title: Robonomics-js
-      link: /docs/robonomics-js/
-    - title: Glossary
-      link: /docs/glossary/
-
-    - title: Sensors Connectivity
-      link: /docs/sensors-connectivity/
 
     - title: AIRA
       items:
