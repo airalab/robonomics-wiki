@@ -6,7 +6,7 @@
 
     <h1>{{ $static.metadata.siteName }}</h1>
     <div class="titleDescription">{{ $static.metadata.siteDescription }}</div>
-    <g-link class="button button__primary" to="/docs/">Getting started</g-link>
+    <Button label="Getting started" link="/docs/" />
   </IntroPage>
 </template>
 
@@ -44,11 +44,10 @@ query {
 
 <script>
 
-import IntroPage from '~/layouts/IntroPage.vue'
-
 export default {
   components: {
-      IntroPage
+      IntroPage: () => import('~/layouts/IntroPage.vue'),
+      Button: () => import('~/components/Button.vue'),
     }
   }
 
