@@ -89,30 +89,6 @@ query {
     color: currentColor;
   }
 }
-
-// @media screen and (max-width: 880px) {
-//   .header > div {
-//     grid-template-columns: 60px auto; 
-//   }
-
-//   .header__logo {
-//     span {
-//       display: none;
-//     }
-//   }
-// }
-
-
-// @media screen and (max-width: 480px) {
-//   .header__nav {
-//     grid-template-columns: auto 20px;
-//   }
-
-//   // .header__nav__links {
-//   //   display: none;
-//   // }
-// }
-
 </style>
 
 
