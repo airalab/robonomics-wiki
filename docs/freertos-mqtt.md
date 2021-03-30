@@ -1,13 +1,13 @@
-Connect an Amazon FreeRTOS device to Robonomics by MQTT
+Connect an Amazon FreeRTOS Device to Robonomics by MQTT
 =======================================================
 
-Here we demonstrate how a microcontroller running [Amazon Web Services FreeRTOS](https://aws.amazon.com/freertos/) may connect to Robonomics Network by MQTT.
-Please check [http://github.com/khssnv/freertos_mqtt_robonomics_example](http://github.com/khssnv/freertos_mqtt_robonomics_example) for all project sources.
+Here's the demonstration of how a microcontroller running [Amazon Web Services FreeRTOS](https://aws.amazon.com/freertos/) may be connected to Robonomics Network via MQTT.
+Please check [this repository](http://github.com/khssnv/freertos_mqtt_robonomics_example) for the project source code.
 We use [ESP32 DevKitC](https://devices.amazonaws.com/detail/a3G0L00000AANtjUAH/ESP32-WROOM-32-DevKitC/) with FreeRTOS distribution and MQTT implementation provided by [Espressif IoT Development Framework](https://github.com/espressif/esp-idf) while Espressif is a vendor of the microcontroller used.
-Also there is a [PMS-3003]() sensor for demonstration purposes.
+Also there is a [PMS-3003](http://www.plantower.com/en/content/?107.html) sensor for demonstration purposes.
 Sensor measures presence of particulated matter in the air and one may use it to estimate air quality.
 Air quality is not a topic of the article, you may find more about it at WHO's website: [Ambient (outdoor) air pollution](https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health).
-A goal of the system is to publish sensor measurements in Airalab's Robonomics network.
+A goal of the system is to publish sensor measurements to Airalab's Robonomics network.
 
 Hardware setup
 --------------
@@ -17,7 +17,7 @@ Also both devices require power and common ground.
 
 ![Wiring Diagram](./images/freertos-mqtt/wiring.png)
 
-Data flow
+Data Flow
 ---------
 In order to deliver sensor measurements to Robonomics network, on a firmware level our goal is to get data from a sensor by embedded communication protocol it supports (UART in our case) and pass it to AIRA instance by MQTT / TCP.
 
@@ -29,7 +29,7 @@ Then we pass messages to `robonomics io` writer by pipe.
 
 ![Receiving](./images/freertos-mqtt/recv.svg)
 
-Now data available in Robonomics Network and we can read it with `robonomics io` again.
+Now data available in Robonomics Network and we can be read it with `robonomics io` again.
 
 Firmware
 --------
@@ -55,10 +55,10 @@ Then we set Wi-Fi access point SSID and password in `Example Connection Configur
 
 ![Menuconfig Wi-Fi](./images/freertos-mqtt/menuconfig-wi-fi.png)
 
-### MQTT endpoint configuration
+### MQTT Endpoint Configuration
 
 There are two things to configure for MQTT.
-First is MQTT broker address.
+The first is a MQTT broker address.
 It is configurable with SDK configuration tool.
 
 ```console
@@ -70,8 +70,8 @@ Set `Broker URL` in `Example Configuration` section.
 
 ![Menuconfig MQTT](./images/freertos-mqtt/menuconfig-mqtt.png)
 
-Second thing is MQTT topic.
-We set it in firmware with project name prefix followed with our ESP32 MAC address.
+The second thing is a MQTT topic.
+We set it in the firmware with the project name prefix followed with our ESP32 MAC address.
 It gives us `/freertos_mqtt_robonomics_example/98:F4:AB:72:23:C4` for our particular microchip.
 
 From MQTT to Robonomics
@@ -87,7 +87,7 @@ ts=1615651809, PM1=2, PM2.5=6, PM10=3
 
 Here we bring `mosquitto` package into our environment to use `mosquitto_sub` utility.
 Then we subscribe to the topic set in the firmware.
-We got our measurements means AIRA receives data by MQTT correctly.
+We got our measurements that means AIRA receives data by MQTT correctly.
 Now let's pipe these messages to Robonomics Network.
 
 ```console
@@ -109,10 +109,13 @@ $ robonomics io read pubsub --listen /ip4/127.0.0.1/tcp/34333 /freertos_mqtt_rob
 ts=1616843855, PM1=3, PM2.5=4, PM10=3
 ```
 
-Original resources used
+Original Resources Used
 -----------------------
 
 * ESP32 DevKitC pinout from GoJimmy's blog https://gojimmypi.blogspot.com/2017/03/jtag-debugging-for-esp32.html
 * PSM3003 data structure and decoder from OpenAirProject https://github.com/openairproject/sensor-esp32
 
 Thank you all!
+
+> Contributor [@khssnv](https://github.com/khssnv)
+
