@@ -95,7 +95,7 @@ nix-shell -p mosquitto --run "mosquitto_sub -h localhost -t '/freertos_mqtt_robo
 ```
 
 Here we use `robonomics` utility to publish messages in pubsub channel `/freertos_mqtt_robonomics_example`.
-We specify `bootnodes` to ensure at least on connection established.
+We specify `bootnodes` to ensure at least one connection established.
 
 Now we are read these messages from the same pubsub channel.
 
