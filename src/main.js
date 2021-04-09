@@ -16,16 +16,18 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   
   appOptions.store = new Vuex.Store({
     state: {
-      locale: localStorage.lang || localeSettings.defaultLocale
+      locale: isClient ? (localStorage.lang || localeSettings.defaultLocale) : localeSettings.defaultLocale
+      // locale: localeSettings.defaultLocale
     },
     mutations: {
       setlocale (state, lang) {
         state.locale = lang
-        localStorage.setItem('lang', lang)
+        if(isClient) {
+          localStorage.setItem('lang', lang)
+        }
       }
     }
   });
-
 
   function translatePath(pathToResolve, targetLocale) {
     
@@ -85,19 +87,21 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
 
   //Rewrite route according to locale
-  router.beforeEach((to, from, next) => {
+  if (process.isClient) {
+    router.beforeEach((to, from, next) => {
 
-    const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
+      const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
-    if (enterpath === to.path) {
-      return next()
-    }
+      if (enterpath === to.path) {
+        return next()
+      }
 
-    return next({
-      path: enterpath
+      return next({
+        path: enterpath
+      })
+
     })
-
-  })
+  }
 
   // Update the lang attribute on each route change
   if (process.isClient) {

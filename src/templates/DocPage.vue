@@ -371,8 +371,12 @@ export default {
     this.github_lastupdated()
     this.github_link()
 
-    if( !localStorage.lang )
-      localStorage.lang = 'en'
+  },
+
+  mounted(){
+    if( !localStorage.getItem('lang') ){
+      localStorage.setItem('lang', 'en')
+    }
   },
 
   updated(){
