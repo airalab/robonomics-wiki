@@ -11,8 +11,8 @@ Everyone can contribute to Robonomics. If you want to contribute to the translat
 If support for your language has already been added to the site, follow these steps:
 
 1. Click the "Edit this page" button on the article you would like to translate. Each article is duplicated in a supported language, even if it has not yet been translated from English.
-2. Edit by sticking to the existing markup. You can read the article [How to edit WIKI(/docs/edit-wiki)
-3. Submit [RP](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) with the changes you have made.
+2. Edit by sticking to the existing markup. You can read the article [How to edit WIKI](/docs/en/edit-wiki)
+3. Submit [PR](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) with the changes you have made.
 
 ## Adding a new language
 
