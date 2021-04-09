@@ -30,50 +30,6 @@ module.exports = {
       }
     },
 
-    // {
-    //   use: 'gridsome-plugin-flexsearch',
-    //     options: {
-    //       // chunk: true,
-    //       collections: [
-    //         {
-    //           typeName: 'DocPage',
-    //           indexName: 'docs',
-    //           fields: ['title', 'path', 'content']
-    //         }
-    //       ],
-    //       searchFields: ['title', 'content'],
-    //       flexsearch: {
-    //         tokenize: "reverse"
-    //         // Не работает для пробелов, не работает case для русского
-    //         // tokenize: "reverse",
-    //         // encode: false,
-    //         // split: /\s+/
-
-    //         // ipfs ok
-    //         // Robonomics parachain no
-    //         // Тест ok
-    //         // тест ok
-    //         // платформы Робономика no
-    //         // tokenize: "forward",
-    //         // split: /\s+/
-
-
-    //         // ipfs ok
-    //         // Robonomics parachain no
-    //         // Тест ok
-    //         // тест ok
-    //         // платформы Робономика no
-    //         // tokenize: "reverse",
-    //         // split: /\s\w*/
-
-    //         // no
-    //         // tokenize: function(str){
-    //         //     return str.replace(/[\x00-\x7F]/g, "")
-    //         // },
-    //         // split: /\s+/
-    //       }
-    //     }
-    //   },
       {
         use: 'gridsome-plugin-yandex-metrika',
         options: {

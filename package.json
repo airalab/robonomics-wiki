@@ -17,7 +17,6 @@
     "gridsome": "^0.7.23",
     "gridsome-plugin-flexsearch": "^0.1.20",
     "gridsome-plugin-gtm": "^0.1.1",
-    "gridsome-plugin-i18n": "^1.6.0",
     "gridsome-plugin-remark-asciinema": "0.0.2",
     "gridsome-plugin-yandex-metrika": "^0.1.2",
     "http-server": "^0.12.3",
