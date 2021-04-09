@@ -19,7 +19,7 @@ Docs in Robonomics WIKI contain frontmatter block. It must be at the top of the 
 ```YAML
 ---
 title: How to contribute # Title for the page, you do not need to duplicate it in text
-contributors: [positivecrash] # Main contributors (who actively curates this page)
+contributors: [positivecrash] # Main contributors (who actively curates this page). GitHub nickname required, without any additional symbols
 translated: true # "true" if it has been translated in current language (see locale folder name of doc)
 ---
 ```
