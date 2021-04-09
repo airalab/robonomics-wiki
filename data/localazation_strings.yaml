@@ -1,0 +1,119 @@
+- alias: Enter title
+  en: Explore Robonomics wiki
+  es: Explore Robonomics wiki
+  ru: Изучайте Робономику в Вики
+
+- alias: Site Description
+  en: Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.
+  es: Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.
+  ru: Изучите Робономику с помощью наших уроков и практически полезных экспериментов. Эта документация призвана помочь вам в подключении роботов или создании децентрализованных приложений в сети Робономики.
+
+- alias: Enter Nav 1
+  en: Quick overview
+  es: Quick overview
+  ru: Быстрое погружение
+
+- alias: Enter Nav 2
+  en: Connect robots
+  es: Connect robots
+  ru: Подключайте роботов
+
+- alias: Enter Nav 3
+  en: Maintenance Guide
+  es: Maintenance Guide
+  ru: Администрируйте
+
+- alias: Enter Nav 4
+  en: Use Cases
+  es: Use Cases
+  ru: Практические примеры
+
+- alias: Enter Nav 5
+  en: Developers' documentation
+  es: Developers' documentation
+  ru: Документация для разработчиков
+
+- alias: Enter Nav 6
+  en: Make a contribution
+  es: Make a contribution
+  ru: Внесите свой вклад
+
+- alias: Menu
+  en: Menu
+  es: Menu
+  ru: Меню
+
+- alias: Search
+  en: Search
+  es: Búsqueda
+  ru: Поиск
+
+- alias: Robonomics WIKI
+  en: Robonomics WIKI
+  es: Robonomics WIKI
+  ru: WIKI Робономика
+
+- alias: Search Found
+  en: Found results
+  es: Resultados encontrados
+  ru: Количество найденных записей
+
+- alias: 404msg
+  en: This page not found
+  es: This page not found
+  ru: Страница не найдена
+
+- alias: In this article
+  en: In this article
+  es: En este articulo
+  ru: Содержание страницы
+
+- alias: Github Contribution Title
+  en: Make a contribution
+  es: Make a contribution
+  ru: Станьте контрибьютором
+
+- alias: Github Contribution Text
+  en: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
+  es: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
+  ru: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
+
+- alias: Github Contribution Button
+  en: Edit page
+  es: Edit page
+  ru: Редактировать страницу
+
+- alias: Latest (commit)
+  en: Latest
+  es: Latest
+  ru: Последний
+
+- alias: commit
+  en: commit
+  es: commit
+  ru: коммит
+
+- alias: on (date of commit)
+  en: on
+  es: on
+  ru: 
+
+- alias: by (author of commit)
+  en: by
+  es: by
+  ru: сделан
+
+- alias: Main contributors
+  en: Main contributors
+  es: Main contributors
+  ru: Основные контрибьюторы
+
+- alias: How to contribute
+  en: How to contribute
+  es: How to contribute
+  ru: Как стать контрибьютором
+
+- alias: This page needs translation
+  en: This page needs translation
+  es: This page needs translation
+  ru: Эта страница нуждается в переводе

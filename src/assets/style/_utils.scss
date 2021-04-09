@@ -20,13 +20,13 @@
 
 .hiddenMobile{ 
 	@media screen and (max-width: 1080px) {
-		display: none;
+		display: none !important;
 	}
 }
 
 .hiddenDesktop{ 
 	@media screen and (min-width: 1080px) {
-		display: none;
+		display: none !important;
 	}
 }
 

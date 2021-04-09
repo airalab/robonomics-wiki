@@ -1,0 +1,5 @@
+{
+    "locales": ["en", "ru", "es"],
+    "defaultLocale": "en",
+    "goesAfter": ["docs"]
+}

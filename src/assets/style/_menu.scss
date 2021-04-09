@@ -1,15 +1,14 @@
 .menu-subtitle {
-	border-top: 1px solid var(--border-color);
+	// border-top: 1px solid var(--border-color);
 	padding-top: 5px;
 	cursor: pointer;
 	font-size: 1rem;
 	margin-bottom: .5rem;
+	font-weight: 700;
+	text-transform: none;
+	letter-spacing: 0;
 
 	&:not(:first-child) { margin-top: 20px; }
-}
-
-.menu .menu .menu-subtitle {
-	font-size: 0.85rem;
 }
 
 .menu-link{
@@ -25,7 +24,7 @@
 .menu {
 	list-style: none;
 	margin: 0;
-	font-size: .85rem;
+	font-size: 1rem;
 	margin-bottom: 1.6rem;
 
 
@@ -44,6 +43,18 @@
 
 	&__item-depth-4{
 		padding: .2rem 1.4rem;
+	}
+
+	a.active {
+		cursor: default;
+	}
+
+	a:not(.active):hover {
+	background-color: var(--color-focus-light);
+	}
+
+	.menu-subtitle.open ~ .menu {
+		border-left: 1px solid var(--link-color)
 	}
 
 }
