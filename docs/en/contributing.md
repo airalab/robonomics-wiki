@@ -26,7 +26,7 @@ When opening a new issue, do not forget about a few basic rules for reporting:
 
 3. Be sure to include title and clear description, as much relevant information as possible.
 
-4. Please prefix your issue with one of the following: [BUG], [PROPOSAL], [ QUESTION].
+4. Please prefix your issue with one of the following: `[BUG]`, `[PROPOSAL]`, `[QUESTION]`.
 
 
 ## Pull requests
