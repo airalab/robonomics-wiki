@@ -32,7 +32,7 @@ export default {
 .toggle-theme {
   background-color: transparent;
   border: 0;
-  color: var(--header-link);
+  color: var(--header-color-text);
   cursor: pointer;
 
   &:hover {

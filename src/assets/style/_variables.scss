@@ -1,20 +1,17 @@
-// Default variables
-html {
-	--base-font-size: 18px;
-}
-
 // Light default theme
 body {
+	--font-size: 1.2rem;
+	--font-family: 'Roboto', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+
 	--color-dark: #162128;
-	// --color-light: rgb(252, 250, 239); //#fcfaef
 	--color-light: #ffffff;
 	--color-gray: #cfcfcf;
 
  	--body-bg: var(--color-light);
- 	--text-color: 68, 68, 68; //#444
+ 	--text-color: var(--color-dark);
  	--text-color-invert: #fff;
 
- 	--code-bg: #162128;
+ 	--code-bg: var(--color-dark);
  	--code-bg-inline: rgba(179, 37, 133, 0.06);
  	--code-text: #fff;
  	--code-text-inline: rgb(179, 37, 133);
@@ -29,30 +26,26 @@ body {
  	--table-thead-bg: #fceb8f;
  	--table-tr-hover: #fffbea;
 
- 	--header-bg: #0e161a;
- 	--header-link: #ced8de;
+ 	--header-color-bg: #0e161a;
+ 	--header-color-text: #ced8de;
 
-	 --font-size: 1rem;
+	 --color-focus: rgb(163, 221, 255);
+	 --color-focus-light: rgb(238, 247, 255);
+	 --color-link-background-highlight: #f0f7ff;
  	
 
   --space: 3.5rem;
   --space-text: 1.25rem;
   --content-width: 820px;
-  --page-width: 1920px;
+  --page-width: 1660px;
   --radius: 4px;
 
   --width-sidebar-left: 250px;
   --width-sidebar-right: 250px;
-
-  --header-padding: .5rem;
-  --header-logo-height: 2rem;
 }
 
 // Make  things smaller for mobile
-@media screen and (max-width: 1280px) {
-	html {
-		--base-font-size: 16px;
-	}
+@media screen and (max-width: 1080px) {
 	body {
 		--space: 2rem;
 	}
@@ -63,7 +56,7 @@ body {
 body[data-theme="dark"] {
  	--body-bg: #213039;
  	--text-color: #ced8de;
- 	--text-color-invert: #162128;
+ 	--text-color-invert: var(--color-dark);
 
  	--code-bg-inline: rgba(94, 23, 67, 0.288);
 	--code-text-inline: rgb(255, 60, 193);
@@ -71,10 +64,12 @@ body[data-theme="dark"] {
  	--title-color: #fff;
  	--link-color: #fceb8f;
  	--border-color:  #5f5f5f;
- 	// --border-color:  rgba(255,255,255,.1);
-	// --color-btn: #1289a7;
 
  	--table-bg: var(--color-dark:);
  	--table-thead-bg: #0d1b26;
  	--table-tr-hover: #122636;
+
+	 --color-focus: rgb(9, 61, 95);
+	 --color-focus-light: rgb(5, 94, 153);
+	 --color-link-background-highlight: var(--color-dark);
 }

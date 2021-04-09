@@ -5,8 +5,17 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+// import localeOptions from '@/data/localization.json'
+const localeOptions = require('./data/localization.json')
+const localeSettings = JSON.parse(JSON.stringify(localeOptions))
+
 module.exports = function (api) {
   api.loadSource(({ addCollection }) => {
     // Use the Data store API here: https://gridsome.org/docs/data-store-api/
+  })
+
+  api.loadSource(async store => {
+    store.addMetadata('defaultLocale', localeSettings.defaultLocale) //set default locale globally
+    store.addMetadata('locales', localeSettings.locales) //set list of locales globally
   })
 }

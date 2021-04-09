@@ -4,19 +4,22 @@
 
       <div class="header-top">
 
+
         <g-link to="/" class="header-logo">
-          <g-image :alt="$static.metadata.siteName" src="~/assets/images/robonomics-logo-sign-sm.svg" class="inline-block"/>
-          <span class="inline-block">{{ $static.metadata.siteName }}</span>
+          <g-image :alt="$st('Robonomics WIKI', $store.state.locale)" src="~/assets/images/robonomics-logo-sign-sm.svg" class="inline-block"/>
+          <span class="inline-block">{{ $st('Robonomics WIKI', $store.state.locale) }}</span>
         </g-link>
 
-        <Search/>
+        <div class="header-center">
+          <Search/>
+        </div>
 
         <div class="header-nav">
-          <g-link class="inline-block" to="https://discord.gg/5UWNGNaAUf">Discord</g-link>
-          <g-link class="inline-block" to="https://discourse.robonomics.network">Forum</g-link>
-          <g-link class="inline-block" to="https://github.com/airalab/">Github</g-link>
           <ToggleTheme class="inline-block" />
+          <ToggleLang class="inline-block" />
+          <NavIcon class="inline-block hiddenDesktop" :section="'sidebarDocs'" :icon="'Menu'" v-if="!homePage"/>
         </div>
+
       </div>
 
     </div>
@@ -24,29 +27,24 @@
   </header>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
   .header {
-    --logo-w: 30px;
+
+    --header-padding: 1rem;
+    --width-logo-sign: 2rem;
 
     padding: var(--header-padding) 0;
-    background-color: var(--header-bg);
+    background-color: var(--header-color-bg);
 
-    top:0;
-    z-index: 10;
     position: sticky;
-    width: 100%;
+    top:0;
     z-index: 9999;
 
-    color: var(--header-link);
 
     a {
-      color: currentColor;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 700;
-      text-align: left;
       text-decoration: none;
+      color: var(--header-color-text);
     }
   }
 
@@ -61,111 +59,73 @@
 
   .header-logo {
     display: block;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
 
-    img {
-      max-width: var(--logo-w);
-    }
-
-    > *:not(:last-child) {
-      margin-right: 15px;
-    }
+    img { max-width: var(--width-logo-sign) }
   }
 
-  .header-nav {
-    font-size: 70%;
-
+  .header-logo, .header-nav {
     & > *:not(:last-child) {
-      margin-right: 15px;
+      margin-right: 1rem;
     }
   }
 
+  .header-nav { text-align: right; }
 
 
-  .header {
-    .search-container {
-      input[type="text"]{
-        background-color: var(--header-link);
-        border-color: rgba(255,255,255,.1);
-        color: var(--color-dark);
-        font-weight: 700;
-
-        &::placeholder {
-          color: var(--color-dark);
-        }
-
-        &:focus::placeholder {
-          color: var(--header-link);
-        }
-      }
-
-      &.active{
-          input[type="text"] {
-            border-color: rgba(255,255,255,.2);
-          }
-      }
-
-      .searchresults{
-        background-color: var(--color-dark);
-        border-radius: var(--radius);
-
-        &__item{
-          border-color: rgba(255,255,255,.1);
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 780px) {
-    .header-logo span { display: none; }
+  @media screen and (max-width: 860px) {
     .header-top {
-      grid-template-columns: var(--logo-w) auto auto;
-    }
-    .header-nav {grid-column-start: 2; text-align: left; }
-    .search-container {grid-column-start: 3;}
-  }
-
-  @media screen and (max-width: 600px) {
-    .header {
-      position: static;
-    }
-    
-    .header-top {
-      grid-template-columns: var(--logo-w) 1fr;
-      grid-template-rows: repeat(1fr,2);
-      row-gap: calc(var(--space)/2);
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      gap: calc( var(--space)/2 )
     }
 
-    .search-container {
+    .header-center {
       grid-column-start: 1;
       grid-column-end: 3;
       grid-row-start: 2;
+
+      .searchresults {
+        top: 7rem !important
+      }
     }
 
-    .header-nav { text-align: right; font-size: 60%; }
+  }
+
+  @media screen and (max-width: 620px) {
+    .header-top { grid-template-columns: var(--width-logo-sign) auto; }
+    .header-logo span { display: none; }
   }
 
    @media screen and (max-width: 340px) {
     .header-nav { font-size: 50%; }
   }
-</style>
 
-
-<static-query>
-query {
-  metadata {
-    siteName
+  body[data-theme="dark"] {
+    select {
+      background-image: url("data:image/svg+xml;utf8,<svg fill='#ced8de' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    }
   }
-}
-</static-query>
+</style>
 
 
 <script>
 
 export default {
+
   components: {
       NavIcon: () => import('~/components/NavIcon.vue'),
       Search: () => import('~/components/Search.vue'),
       ToggleTheme: () => import('~/components/ToggleTheme.vue'),
+      ToggleLang: () => import('~/components/ToggleLang.vue'),
   },
+
+  computed:{
+    homePage(){
+      return this.$route.path == "/" || this.$route.path == "/" + this.$store.state.locale || this.$route.path == "/" + this.$store.state.locale + "/"
+    }
+  }
 }
 </script>

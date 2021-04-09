@@ -2,16 +2,8 @@
 
     <section class="pageNextPrev">
 
-        <!-- <a v-if="pagePrev" class="button button__primary" :href="pagePrev.link">
-            &larr; {{ pagePrev.title }}
-        </a> -->
-
-        <Button v-if="pagePrev" :label="'← ' + pagePrev.title" :link="pagePrev.link"/>
-        <Button v-if="pageNext" :label="pageNext.title + ' →'" :link="pageNext.link"/>
-
-        <!-- <a v-if="pageNext" class="button button__primary" :href="pageNext.link">
-            {{ pageNext.title }} &rarr;
-        </a> -->
+      <Button v-if="pagePrev" :label="'← ' + getTitleLocalazide(pagePrev)" :link="pagePrev.link"/>
+      <Button v-if="pageNext" :label="getTitleLocalazide(pageNext) + ' →'" :link="pageNext.link"/>
 
     </section>
 
@@ -33,6 +25,14 @@
     }
 
 </style>
+
+<static-query>
+query {
+  metadata {
+    defaultLocale
+  }
+}
+</static-query>
 
 
 <script>
@@ -58,7 +58,24 @@ export default {
         if(this.current > -1)
           return this.itemsList[this.current + 1]
       },
+
+      locale() {
+        return this.$store.state.locale
+      },
   },
+
+  methods: {
+    getTitleLocalazide(item) {
+
+      if (eval(`item.title_${this.locale}`) ){
+        return eval(`item.title_${this.locale}`)
+      }
+      
+      if ( eval(`item.title_${this.$static.metadata.defaultLocale}`) ){
+        return eval(`item.title_${this.$static.metadata.defaultLocale}`)
+      }
+    }
+  }
 
 }
 

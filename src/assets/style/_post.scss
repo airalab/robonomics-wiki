@@ -4,17 +4,6 @@
 		border: 10px solid var(--border-color-light);
 	}
 
-
-	h1 {
-	  margin-bottom: calc(var(--space)/2);
-	}
-
-	h2 {
-	  padding-top: calc(var(--space)/2);
-	  margin-top: var(--space);
-	  border-top: 1px solid var(--border-color);
-	}
-
 	h1, h2, h3, h4, h5{
 
 		position: relative;
@@ -34,6 +23,21 @@
 		}
 	}
 
+	h1 {
+		margin-bottom: calc(var(--space)/2);
+	}
+
+	h2 {
+	padding-top: calc(var(--space)/2);
+	margin-top: var(--space);
+	border-top: 1px solid var(--border-color);
+	}
+
+	div > h2:first-child {
+		margin-top: 0;
+		border-top: 0;
+	}
+
 	table{
 		border-collapse: collapse;
 		border-spacing: 0;
@@ -41,7 +45,7 @@
 		margin-top: 0;
 		overflow: auto;
 		width: 100%;
-		font-size: .87rem;
+		// font-size: .87rem;
 
 		margin-bottom: var(--space-text);
 

@@ -1,23 +1,39 @@
 <template>
+
   <ul class="menu">
+
     <li v-for="(item, key) in items" :key="key">
-      <g-link class="menu-link" v-if="item.link && item.published!=false" :to="item.link" :exact="item.link == '/docs/'">{{item.title}}</g-link>
+
+      <g-link class="menu-link" v-if="item.link && item.published!=false" :to="$path(item.link, locale)" exact>
+        {{ getTitle(item) }}
+      </g-link>
+      
       <template v-else>
 
         <h4 class="menu-subtitle" @click="toggle" v-if="item.published!=false" :class="hascurrent(item.items) ? 'open' : 'close'">
-          {{item.title}}
+          {{ getTitle(item) }}
         </h4>
 
         <List :items="item.items" />
       </template>
+
     </li>
+
   </ul>
 
 </template>
 
 
+<static-query>
+query {
+  metadata {
+    defaultLocale
+  }
+}
+</static-query>
+
+
 <script>
-import Vue from 'vue'
 
 export default {
   props: {
@@ -30,6 +46,12 @@ export default {
     List: () => import("./SidebarDocs.vue")
   },
 
+  computed: {
+    locale() {
+      return this.$store.state.locale
+    },
+  },
+
   methods: {
 
     toggle (event) {
@@ -38,13 +60,13 @@ export default {
 
 
     hascurrent (a) {
-      let path = this.$route.matched[0].path;
-      let contains = false;
+      let path = this.$route.matched[0].path + '/'
+      let contains = false
 
       for (var i = 0; i < a.length; i++) {
+
         if(!a[i].items){
-          
-          if(a[i].link == path + '/'){
+          if(this.$path(a[i].link, this.locale) == path){
             contains = true;
           }
         }
@@ -55,9 +77,20 @@ export default {
         }
       }
       return contains;
-    }
-  }
+    },
 
+    getTitle(item){
+      if (eval(`item.title_${this.locale}`) ){
+        return eval(`item.title_${this.locale}`)
+      }
+      
+      if ( eval(`item.title_${this.$static.metadata.defaultLocale}`) ){
+        return eval(`item.title_${this.$static.metadata.defaultLocale}`)
+      }
+        
+    }
+
+  }
   
 }
 </script>
