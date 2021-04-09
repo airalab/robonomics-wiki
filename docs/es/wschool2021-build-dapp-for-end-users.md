@@ -1,5 +1,5 @@
 ---
-title: Build IoT Dapps For End Users, part 1
+title: Lección 6.1, Crear dApps IoT para usuarios finales
 contributors: [vol4tim]
 translated: false
 ---
