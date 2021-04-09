@@ -58,23 +58,27 @@
           link: /docs/sensors-connectivity-on-aira/
         - title: Configuration Options Description
           link: /docs/configuration-options-description/
+        - title: Connect an Amazon FreeRTOS device to Robonomics by MQTT
+          link: /docs/freertos-mqtt/
     - title: Securely Connect Cloud AI To The Factory Floor
       link: /docs/securely-connect-cloud-ai-to-the-factory-floor/
     - title: Create digital identity run by Ethereum
       link: /docs/create-digital-identity-run-by-ethereum/
-
+    - title: Run Gaka-Chu - a Robot-Artist.
+      link: /docs/gaka-chu/
+      
 - title: Learn
   items:
     - title: Robonomics-js
       link: /docs/robonomics-js/
-      
+
     - title: Glossary
       link: /docs/glossary/
 
     - title: Sensors Connectivity
       link: /docs/sensors-connectivity/
 
-      
+
     - title: Robonomics IO
       items:
         - title: Overview
