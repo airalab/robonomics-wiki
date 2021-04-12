@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{"7l0S":function(t,s,e){"use strict";e.r(s);var n=e("KHd+"),l=Object(n.a)({},(function(){var t=this.$createElement,s=this._self._c||t;return s("Layout",[s("h1",[this._v(this._s(this.$st("404msg",this.$store.state.locale)))])])}),[],!1,null,null,null);s.default=l.exports}}]);
