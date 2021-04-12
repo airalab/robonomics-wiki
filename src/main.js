@@ -94,18 +94,11 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
       console.log('to.path ' + to.path)
       console.log('enterpath ' + enterpath)
+      console.log('to.matched.length ' + to.matched.length)
+      console.dir('to.matched ' + to.matched)
+      console.dir('to.meta ' + to.meta)
 
-      // if (enterpath === to.path) {
-      //   console.log('enterpath === to.path')
-      //   return next()
-      // }
-
-      // return next({
-      //   path: enterpath,
-      //   replace: true
-      // })
-
-      if (enterpath != to.path) {
+      if (enterpath !== to.path) {
         return next({
           path: enterpath,
           replace: true
@@ -114,7 +107,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       else{
         return next()
       }
-
     })
   }
 
