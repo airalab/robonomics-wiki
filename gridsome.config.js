@@ -88,6 +88,7 @@ module.exports = {
     svgRule
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
+    config.mode('development')
   }
 
 
