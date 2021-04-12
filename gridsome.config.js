@@ -30,6 +30,28 @@ module.exports = {
       }
     },
 
+
+    // {
+    //   use: '@gridsome/vue-remark',
+    //   options: {
+    //     typeName: 'DocPageEn',
+    //     index: ['getting-started'],
+    //     baseDir: './docs/en',
+    //     pathPrefix: '/docs/en',
+    //     template: './src/templates/DocPageEn.vue',
+    //     plugins: [
+    //       ['remark-highlight.js'],
+    //       ['remark-autolink-headings', {content: {
+    //           type: 'text',
+    //           value: '#'
+    //         }}],
+    //       [ '@noxify/gridsome-plugin-remark-embed', {
+    //           'enabledProviders' : ['Youtube', 'Twitter', 'Gist']
+    //         }]
+    //     ]
+    //   }
+    // },
+
       {
         use: 'gridsome-plugin-yandex-metrika',
         options: {
