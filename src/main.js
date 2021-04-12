@@ -88,15 +88,15 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   //Rewrite route according to locale
   if (process.isClient) {
-    router.beforeEach((to, from, next) => {
+    router.beforeResolve((to, from, next) => {
 
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
-      console.log('to.path ' + to.path)
-      console.log('enterpath ' + enterpath)
-      console.log('to.matched.length ' + to.matched.length)
-      console.dir('to.matched ' + to.matched)
-      console.dir('to.meta ' + to.meta)
+      // console.log('to.path ' + to.path)
+      // console.log('enterpath ' + enterpath)
+      // console.log('to.matched.length ' + to.matched.length)
+      // console.dir('to.matched ' + to.matched)
+      // console.dir('to.meta ' + to.meta)
 
       if (enterpath !== to.path) {
         return next({
