@@ -99,15 +99,11 @@ export default function (Vue, { router, head, isClient, appOptions }) {
         console.log('enterpath === to.path')
         return next()
       }
-      else {
-        return next({
-          path: enterpath
-        })
-      }
 
-      // return next({
-      //   path: enterpath
-      // })
+      return next({
+        path: enterpath,
+        replace: true
+      })
 
     })
   }
