@@ -96,6 +96,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       console.log('enterpath ' + enterpath)
 
       if (enterpath === to.path) {
+        console.log('enterpath === to.path')
         return next()
       }
 
