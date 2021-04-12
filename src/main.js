@@ -100,8 +100,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
       if (enterpath !== to.path) {
         return next({
-          path: enterpath,
-          replace: true
+          path: enterpath
         })
       }
       else{
