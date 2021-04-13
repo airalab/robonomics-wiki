@@ -1,7 +1,7 @@
 ---
 title: How to edit WIKI
 contributors: [positivecrash]
-translated: true
+translated: false
 ---
 
 **Robonomics WIKI is open source. Any corrections are welcome: fixing errors, typos, some unclear or outdated information, translation into any language. You'll need a [GitHub](https://github.com/) account.**

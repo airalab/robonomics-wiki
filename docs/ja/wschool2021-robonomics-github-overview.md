@@ -1,7 +1,7 @@
 ---
 title: Lesson 2, Robonomics GitHub overview
 contributors: [Ensrationis]
-translated: true
+translated: false
 ---
 
 ## Step 1: AIRA Installation on VirtualBox

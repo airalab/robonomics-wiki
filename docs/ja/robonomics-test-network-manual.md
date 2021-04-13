@@ -1,7 +1,7 @@
 ---
 title: Manual start of the Robonomics network, consisting of 3 nodes
 contributors: [dergudzon, Vourhey]
-translated: true
+translated: false
 ---
 
 **Need to start Robonomics network of N (N> = 2) nodes**

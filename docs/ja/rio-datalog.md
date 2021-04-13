@@ -1,7 +1,7 @@
 ---
 title: Robonomics IO Datalog
 contributors: [Vourhey, PaTara43]
-translated: true
+translated: false
 ---
 
 Datalog module allows you to store any string on blockchain

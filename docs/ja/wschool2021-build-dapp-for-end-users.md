@@ -1,7 +1,7 @@
 ---
 title: Lesson 6.1, Build IoT Dapps For End Users
 contributors: [vol4tim]
-translated: true
+translated: false
 ---
 
 ## Getting ready

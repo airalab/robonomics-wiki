@@ -1,7 +1,7 @@
 ---
 title: Lesson 5, Connectivity
 contributors: [vourhey]
-translated: true
+translated: false
 ---
 
 ## IoT as a Multiple Pie

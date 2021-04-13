@@ -1,7 +1,7 @@
 ---
 title: Create an Account on Robonomics Portal
 contributors: [PaTara43]
-translated: true
+translated: false
 ---
 
 **In order to be able to complete all the playground tutorials below, one should have several accounts on Robonomics portal. These accounts do not contain any personal data, neither they are anyhow valuable (if you play on a local dev network or on a self-owned test one). But still their keys, both public and private, are necessary for launching any demo.**

@@ -1,7 +1,7 @@
 ---
 title: DEMO "Get Weather on Fuji Mountain"
 contributors: [Vourhey]
-translated: true
+translated: false
 ---
 
 **Let's start from a quick example of what Robonomics is able to do within 5 minutes. Requirements: [Metamask extension](https://metamask.io/)**

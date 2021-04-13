@@ -1,7 +1,7 @@
 ---
 title: IPFS Common
 contributors: [ensrationis, akru]
-translated: true
+translated: false
 ---
 
 The package handle IPFS connections, provides useful services for working with IPFS Network. 
