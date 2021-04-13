@@ -93,18 +93,15 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
       // do not rewrite build paths
-
       if (process.isServer) {
-
         return next()
-
       }
 
-      // console.log('to.path ' + to.path)
+      // console.log('to.path ' + JSON.stringify(to))
+      console.log('process.isProduction ' + process.isProduction)
+
+      // console.log('from.path ' + JSON.stringify(from))
       // console.log('enterpath ' + enterpath)
-      // console.log('to.matched.length ' + to.matched.length)
-      // console.dir('to.matched ' + to.matched)
-      // console.dir('to.meta ' + to.meta)
 
       if (enterpath !== to.path) {
         return next({
