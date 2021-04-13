@@ -97,21 +97,13 @@ export default function (Vue, { router, head, isClient, appOptions }) {
         return next()
       }
 
-      // console.log('to.path ' + JSON.stringify(to))
-      // console.log('process.isProduction ' + process.isProduction)
-
-      // console.log('from.path ' + JSON.stringify(from))
-      // console.log('enterpath ' + enterpath)
-      // console.log('from.fullPath ' + from.fullPath)
-      // console.log('to.fullPath ' + to.fullPath)
-
       if (enterpath !== to.path) {
         return next({
           path: enterpath
         })
       }
       else{
-        next()
+        return next()
       }
     })
   }
