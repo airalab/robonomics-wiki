@@ -87,10 +87,18 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
 
   //Rewrite route according to locale
-  if (isClient) {
+  if (process.isClient) {
     router.beforeEach((to, from, next) => {
 
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
+
+      // do not rewrite build paths
+
+      if (process.isServer) {
+
+        return next()
+
+      }
 
       // console.log('to.path ' + to.path)
       // console.log('enterpath ' + enterpath)
