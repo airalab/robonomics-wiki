@@ -11,7 +11,7 @@
         </g-link>
 
         <div class="header-center">
-          <Search/>
+          <!-- <Search/> -->
         </div>
 
         <div class="header-nav">
