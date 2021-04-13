@@ -18,7 +18,7 @@
 		}
 
 		svg{
-			fill: currentColor;
+			fill: var(--header-color-text);
       display: none;
       margin: 0 auto;
 		}
