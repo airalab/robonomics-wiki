@@ -1,0 +1,99 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vue-remark--docs--es--aira-basic-usage-md"],{
+
+/***/ "0+bC":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/gridsome","cacheIdentifier":"293f11d7-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??ref--17-0!./node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1!./docs/es/aira-basic-usage.md?vue&type=template&id=2364811c& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('VueRemarkRoot',[_c('p',[_vm._v(\"To get familiar with AIRA, let's see what is under the hood.\")]),_c('p',[_vm._v(\"Once you launch the client several ros nodes will already be on the run. Here's a list of robonomics communication stack nodes:\")]),_c('pre',[_c('code',{pre:true,attrs:{\"class\":\"hljs language-bash\"}},[_vm._v(\"$ rosnode list\\n/eth/erc20_token\\n/eth/eth_node\\n/graph/aira_graph\\n/liability/executor\\n/liability/infochan/eth/signer\\n/liability/infochan/ipfs_channel\\n/liability/persistence\\n/liability/listener\\n/rosout\")])]),_c('ul',[_c('li',[_c('code',{pre:true},[_vm._v(\"/eth/erc20_token\")]),_vm._v(\", \"),_c('code',{pre:true},[_vm._v(\"/eth/eth_node\")]),_vm._v(\" - proved services for Ethereum blockchain and ERC20 tokens\")]),_c('li',[_c('code',{pre:true},[_vm._v(\"/graph/aira_graph\")]),_vm._v(\" - service node for exploring other AIRA instances\")]),_c('li',[_c('code',{pre:true},[_vm._v(\"/liability/executor\")]),_vm._v(\" - gets rosbag file from IPFS and plays it\")]),_c('li',[_c('code',{pre:true},[_vm._v(\"/liability/infochan/ipfs_channel\")]),_vm._v(\" - is responsible for offer, demand and result messages. It catches messages from the channel and sends signed messages back\")]),_c('li',[_c('code',{pre:true},[_vm._v(\"/liability/infochan/eth/signer\")]),_vm._v(\" - offers services for signing offer, demand and result messages\")]),_c('li',[_c('code',{pre:true},[_vm._v(\"/liability/listener\")]),_vm._v(\" - watches for a new liability contracts. When the event is received the node calls executor node\")]),_c('li',[_c('code',{pre:true},[_vm._v(\"/liability/persistence\")]),_vm._v(\" - helps to store incoming liabilities and restart them after shutdown\")])]),_c('p',[_vm._v(\"And here's a list of robonomics stack topics.\")]),_c('pre',[_c('code',{pre:true,attrs:{\"class\":\"hljs language-bash\"}},[_vm._v(\"$ rostopic list\\n/eth/event/approval\\n/eth/event/transfer\\n/graph/greetings\\n/liability/complete\\n/liability/finalized\\n/liability/incoming\\n/liability/infochan/eth/sending/demand\\n/liability/infochan/eth/sending/offer\\n/liability/infochan/eth/sending/result\\n/liability/infochan/eth/signing/demand\\n/liability/infochan/eth/signing/offer\\n/liability/infochan/eth/signing/result\\n/liability/infochan/incoming/demand\\n/liability/infochan/incoming/offer\\n/liability/infochan/incoming/result\\n/liability/persistence/add\\n/liability/persistence/del\\n/liability/persistence/update_timestamp\\n/liability/ready\\n/liability/result\\n/rosout\\n/rosout_agg\")])]),_c('p',[_vm._v(\"The most important topics for us are:\")]),_c('ul',[_c('li',[_c('code',{pre:true},[_vm._v(\"/liability/incoming\")]),_vm._v(\" - when a new liability is created, this topic publishes Ethereum address of the contract\")]),_c('li',[_c('code',{pre:true},[_vm._v(\"/liability/result\")]),_vm._v(\" - this topic is for publishing results. But don't publish a result directly to this topic! Use a service instead\")]),_c('li',[_c('code',{pre:true},[_vm._v(\"/liability/infochan/incoming/*\")]),_vm._v(\" - a CPS gets information about offer, demand or result from corresponding topics\")]),_c('li',[_c('code',{pre:true},[_vm._v(\"/liability/infochan/eth/signing/*\")]),_vm._v(\" - a CPS sends offer, demand or result messages to corresponding topics\")])]),_c('p',[_vm._v(\"For the details check out the \"),_c('a',{attrs:{\"href\":\"/docs/robonomics-liability/\"}},[_vm._v(\"API page\")]),_vm._v(\".\")]),_c('p',[_vm._v(\"Let's start with greetings - say hello to AIRA!\")]),_c('p',[_vm._v(\"You should just launch a pre-installed package \"),_c('code',{pre:true},[_vm._v(\"hello_aira\")]),_vm._v(\":\")]),_c('pre',[_c('code',{pre:true},[_vm._v(\"$ rosrun hello_aira hello_aira\\n\")])]),_c('p',[_vm._v(\"We've launched our agent. It will wait for a demand message. Now it's time to send the message. Go to \"),_c('a',{attrs:{\"href\":\"https://airalab.github.io/robonomics_tutorials/\",\"target\":\"_blank\",\"rel\":\"nofollow noopener noreferrer\"}},[_vm._v(\"dapp\")]),_vm._v(\" and press Order.\\nNow go back to the console and see the result!\")])])}\nvar staticRenderFns = []\n\n\n\n//# sourceURL=webpack:///./docs/es/aira-basic-usage.md?./node_modules/cache-loader/dist/cjs.js?%7B%22cacheDirectory%22:%22node_modules/.cache/gridsome%22,%22cacheIdentifier%22:%22293f11d7-vue-loader-template%22%7D!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??ref--17-0!./node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1");
+
+/***/ }),
+
+/***/ "1pWb":
+/*!*****************************************************************************************!*\
+  !*** ./docs/es/aira-basic-usage.md?vue&type=custom&index=0&blockType=vue-remark-import ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_15_0_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_aira_basic_usage_md_vue_type_custom_index_0_blockType_vue_remark_import__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib??ref--15-0!../../node_modules/vue-loader/lib??ref--17-0!../../node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1!./aira-basic-usage.md?vue&type=custom&index=0&blockType=vue-remark-import */ \"PlYH\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_babel_loader_lib_index_js_ref_15_0_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_aira_basic_usage_md_vue_type_custom_index_0_blockType_vue_remark_import__WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./docs/es/aira-basic-usage.md?");
+
+/***/ }),
+
+/***/ "IlBV":
+/*!**********************************************************************************************!*\
+  !*** ./docs/es/aira-basic-usage.md?vue&type=custom&index=1&blockType=vue-remark-frontmatter ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_16_0_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_aira_basic_usage_md_vue_type_custom_index_1_blockType_vue_remark_frontmatter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib??ref--16-0!../../node_modules/vue-loader/lib??ref--17-0!../../node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1!./aira-basic-usage.md?vue&type=custom&index=1&blockType=vue-remark-frontmatter */ \"uqLw\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_babel_loader_lib_index_js_ref_16_0_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_aira_basic_usage_md_vue_type_custom_index_1_blockType_vue_remark_frontmatter__WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./docs/es/aira-basic-usage.md?");
+
+/***/ }),
+
+/***/ "PlYH":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--15-0!./node_modules/vue-loader/lib??ref--17-0!./node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1!./docs/es/aira-basic-usage.md?vue&type=custom&index=0&blockType=vue-remark-import ***!
+  \******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_runner_work_robonomics_wiki_robonomics_wiki_node_modules_gridsome_vue_remark_src_VueRemarkRoot_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@gridsome/vue-remark/src/VueRemarkRoot.js */ \"UQSp\");\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ \"Kw5r\");\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\n\n\nvar strats = vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"].config.optionMergeStrategies;\nvar imported = {\n  VueRemarkRoot: _home_runner_work_robonomics_wiki_robonomics_wiki_node_modules_gridsome_vue_remark_src_VueRemarkRoot_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (Component) {\n  var components = Component.options.components = Component.options.components || {};\n  var computed = Component.options.computed = Component.options.computed || {};\n  Object.keys(imported).forEach(function (key) {\n    if (_typeof(imported[key]) === 'object' && typeof imported[key].render === 'function') {\n      components[key] = imported[key];\n    } else if (typeof imported[key] === 'function' && typeof imported[key].options.render === 'function') {\n      components[key] = imported[key];\n    } else {\n      computed[key] = function () {\n        return imported[key];\n      };\n    }\n  });\n});\n\n//# sourceURL=webpack:///./docs/es/aira-basic-usage.md?./node_modules/babel-loader/lib??ref--15-0!./node_modules/vue-loader/lib??ref--17-0!./node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1");
+
+/***/ }),
+
+/***/ "UQSp":
+/*!****************************************************************!*\
+  !*** ./node_modules/@gridsome/vue-remark/src/VueRemarkRoot.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// @vue/component\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: 'VueRemarkRoot',\n  render: function render(h) {\n    return h('div', null, this.$slots[\"default\"]);\n  }\n});\n\n//# sourceURL=webpack:///./node_modules/@gridsome/vue-remark/src/VueRemarkRoot.js?");
+
+/***/ }),
+
+/***/ "ZHiZ":
+/*!********************************************************************!*\
+  !*** ./docs/es/aira-basic-usage.md?vue&type=template&id=2364811c& ***!
+  \********************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_cache_loader_dist_cjs_js_cacheDirectory_node_modules_cache_gridsome_cacheIdentifier_293f11d7_vue_loader_template_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_aira_basic_usage_md_vue_type_template_id_2364811c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/cache-loader/dist/cjs.js?{\"cacheDirectory\":\"node_modules/.cache/gridsome\",\"cacheIdentifier\":\"293f11d7-vue-loader-template\"}!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??ref--17-0!../../node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1!./aira-basic-usage.md?vue&type=template&id=2364811c& */ \"0+bC\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_cache_loader_dist_cjs_js_cacheDirectory_node_modules_cache_gridsome_cacheIdentifier_293f11d7_vue_loader_template_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_aira_basic_usage_md_vue_type_template_id_2364811c___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_cache_loader_dist_cjs_js_cacheDirectory_node_modules_cache_gridsome_cacheIdentifier_293f11d7_vue_loader_template_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_aira_basic_usage_md_vue_type_template_id_2364811c___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./docs/es/aira-basic-usage.md?");
+
+/***/ }),
+
+/***/ "uqLw":
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--16-0!./node_modules/vue-loader/lib??ref--17-0!./node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1!./docs/es/aira-basic-usage.md?vue&type=custom&index=1&blockType=vue-remark-frontmatter ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initFrontMatter; });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"Kw5r\");\n\nvar strats = vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].config.optionMergeStrategies;\nvar key = '__vueRemarkFrontMatter';\nvar data = {\n  \"excerpt\": null,\n  \"title\": \"Basic usage of AIRA\",\n  \"contributors\": [\"akru\"],\n  \"translated\": false\n};\nfunction initFrontMatter(Component) {\n  if (Component.options[key]) {\n    Component.options[key] = data;\n  }\n\n  vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].util.defineReactive(Component.options, key, data);\n  Component.options.computed = strats.computed({\n    $frontmatter: function $frontmatter() {\n      return Component.options[key];\n    }\n  }, Component.options.computed);\n}\n\n//# sourceURL=webpack:///./docs/es/aira-basic-usage.md?./node_modules/babel-loader/lib??ref--16-0!./node_modules/vue-loader/lib??ref--17-0!./node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1");
+
+/***/ }),
+
+/***/ "vvMQ":
+/*!*************************************!*\
+  !*** ./docs/es/aira-basic-usage.md ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _aira_basic_usage_md_vue_type_template_id_2364811c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./aira-basic-usage.md?vue&type=template&id=2364811c& */ \"ZHiZ\");\n/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"KHd+\");\n/* harmony import */ var _aira_basic_usage_md_vue_type_custom_index_0_blockType_vue_remark_import__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./aira-basic-usage.md?vue&type=custom&index=0&blockType=vue-remark-import */ \"1pWb\");\n/* harmony import */ var _aira_basic_usage_md_vue_type_custom_index_1_blockType_vue_remark_frontmatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./aira-basic-usage.md?vue&type=custom&index=1&blockType=vue-remark-frontmatter */ \"IlBV\");\n\nvar script = {}\n\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(\n  script,\n  _aira_basic_usage_md_vue_type_template_id_2364811c___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _aira_basic_usage_md_vue_type_template_id_2364811c___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* custom blocks */\n\nif (typeof _aira_basic_usage_md_vue_type_custom_index_0_blockType_vue_remark_import__WEBPACK_IMPORTED_MODULE_2__[\"default\"] === 'function') Object(_aira_basic_usage_md_vue_type_custom_index_0_blockType_vue_remark_import__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(component)\n\nif (typeof _aira_basic_usage_md_vue_type_custom_index_1_blockType_vue_remark_frontmatter__WEBPACK_IMPORTED_MODULE_3__[\"default\"] === 'function') Object(_aira_basic_usage_md_vue_type_custom_index_1_blockType_vue_remark_frontmatter__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(component)\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack:///./docs/es/aira-basic-usage.md?");
+
+/***/ })
+
+}]);
