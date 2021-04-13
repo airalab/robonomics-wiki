@@ -102,7 +102,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
       // console.log('from.path ' + JSON.stringify(from))
       // console.log('enterpath ' + enterpath)
-
+      
       if (enterpath !== to.path) {
         return next({
           path: enterpath
