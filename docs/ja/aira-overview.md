@@ -1,7 +1,7 @@
 ---
 title: AIRA Overview
 contributors: [ensrationis, akru, positivecrash]
-translated: true
+translated: false
 ---
 
 ## Introduction

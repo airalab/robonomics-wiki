@@ -1,7 +1,7 @@
 ---
 title: Install Sensors Connectivity on Your Own Aira
 contributors: [LoSk-p, Vourhey]
-translated: true
+translated: false
 ---
 
 ## Prerequirements

@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 contributors: [Vourhey, positivecrash]
-translated: true
+translated: false
 ---
 
 ## What is Robonomics

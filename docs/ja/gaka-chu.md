@@ -1,7 +1,7 @@
 ---
 title: Gaka-Chu setup and software Installation
 contributors: [PaTara43]
-translated: true
+translated: false
 ---
 
 https://www.youtube.com/watch?v=GxlYxaykqTU

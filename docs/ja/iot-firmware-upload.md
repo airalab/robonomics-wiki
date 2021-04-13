@@ -1,7 +1,7 @@
 ---
 title: IoT Firmware Upload
 # contributors: []
-translated: true
+translated: false
 ---
 
 There are few firmwares for ESP like boards:

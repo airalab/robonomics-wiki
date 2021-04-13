@@ -1,7 +1,7 @@
 ---
 title: Say "Hello Baxter!" with robonomics
 contributors: [nakata5321]
-translated: true
+translated: false
 ---
 
 Example of how it works is available [here][db1].

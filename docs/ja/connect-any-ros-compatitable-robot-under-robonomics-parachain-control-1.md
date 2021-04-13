@@ -1,7 +1,7 @@
 ---
 title: Connect ROS-compatibale Drone To Robonomics Parachain. Part 1. Launch by Transaction
 contributors: [PaTara43]
-translated: true
+translated: false
 ---
 
 **In this article we will show that with the help of Robonomics tools you can control any ROS-compatitable device. We will find a random drone simulation package on the web and adjust it to run with Robonomics.**

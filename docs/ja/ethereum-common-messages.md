@@ -1,7 +1,7 @@
 ---
 title: Ethereum Common Messages
 contributors: [ensrationis, akru]
-translated: true
+translated: false
 ---
 
 ## ethereum_common/Address.msg

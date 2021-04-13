@@ -1,7 +1,7 @@
 ---
 title: Lesson 6.2, Build IoT Dapps For End Users
 contributors: [positivecrash]
-translated: true
+translated: false
 ---
 
 ![Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot](../images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot")

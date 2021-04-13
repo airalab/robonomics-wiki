@@ -1,7 +1,7 @@
 ---
 title:  Market messages
 # contributors: []
-translated: true
+translated: false
 ---
 
 Market messages is used for exchange **Demand** and **Offer** information. It also used for delivery **Result** messages with liability execution reports.

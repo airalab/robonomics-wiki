@@ -1,7 +1,7 @@
 ---
 title: Connect Sensor To Robonomics Network
 contributors: [LoSk-p, Vourhey]
-translated: true
+translated: false
 ---
 
 ## Requiremets

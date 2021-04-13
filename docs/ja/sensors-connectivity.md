@@ -1,7 +1,7 @@
 ---
 title: Sensors Connectivity
 contributors: [Vourhey]
-translated: true
+translated: false
 ---
 
 This Aira package allows you to read data from a SDS011 sensor and publish to different output channels. That said Aira is able to form a json formatted message with measurements and publish to a few channels. Also it includes Datalog feature which is still experimental. It could be used to publish data to Substrate based blockchain by Robonomics.
