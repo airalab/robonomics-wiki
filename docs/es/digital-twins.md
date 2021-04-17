@@ -1,7 +1,7 @@
 ---
 title: Digital Twins
 contributors: [nakata5321]
-translated: true
+translated: false
 ---
 
 ## Requirements
