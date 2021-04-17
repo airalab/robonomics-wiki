@@ -39,6 +39,8 @@
       link: /docs/kuka
     - title_en: Connect Unmanned Aerial Vehicle
       link: /docs/iris-drone
+    - title_en: ROS-based Projects for Smart Spaces
+      link: /docs/ros-smart-projects 
 
 - title_en: Maintain
   items:
