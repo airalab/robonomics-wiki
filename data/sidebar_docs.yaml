@@ -72,14 +72,14 @@
   items:
     - title_en: Robonomics-js
       link: /docs/robonomics-js
-      
+
     - title_en: Glossary
       link: /docs/glossary
 
     - title_en: Sensors Connectivity
       link: /docs/sensors-connectivity
 
-      
+
     - title_en: Robonomics IO
       items:
         - title_en: Overview
@@ -90,6 +90,8 @@
           link: /docs/rio-launch
         - title_en: Datalog
           link: /docs/rio-datalog
+    - title_en: Digital twins
+      link: /docs/digital-twins
 
     - title_en: AIRA
       items:
