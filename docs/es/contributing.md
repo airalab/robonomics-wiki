@@ -6,9 +6,9 @@ translated: false
 
 Robonomics network is an open-source project built by core maintainers from Airalab and contributors. We want to make it easy for anyone to contribute. You may contribute to core, suggest changes, improve documentation or write a blog post. Please, read some rules and suggestions for contributing.
 
-## Main Airalab repositories 
+## Main Airalab repositories
 
-- [aira](https://github.com/airalab/aira) - AIRA client for Robonomics network. 
+- [aira](https://github.com/airalab/aira) - AIRA client for Robonomics network.
 - [robonomics_comm](https://github.com/airalab/robonomics_comm) - Robonomics communication stack
 - [robonomics_contracts](https://github.com/airalab/robonomics_contracts) - smart contracts of Robonomics network
 
@@ -42,5 +42,3 @@ Any Airalab repository or this documentation may be subject to pull requests or 
 3. Please, do not fix whitespace, format code, or make a purely cosmetic patch.
 
 4. Please, attempt to adhere to the prevailing Markdown style, language, and layout.
-
-
