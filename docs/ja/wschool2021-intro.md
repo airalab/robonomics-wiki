@@ -31,7 +31,7 @@ https://youtu.be/kQaSwNYHJQ8
 ロボノミクスウィンタースクール2021をフォローするために、どのようなリンクがあるのか、繰り返し説明します。
 
 - [ウェブサイトの概要](https://robonomics.network/blog/winter-robonomics-school/)
-- テキストレッスン用のWikiのこと、 あなたは今ここにいるよ 🤓
+- テキストレッスン用のWiki、 あなたは今ここにいるよ 🤓
 - [ビデオレッスン](https://www.youtube.com/channel/UCrSiho1uB-1n6F8cZpCLhjQ)
 - [Twitterでの速報](https://twitter.com/AIRA_Robonomics)
 - [Discordでの質問、議論、クイズ](https://discord.gg/5UWNGNaAUf)
