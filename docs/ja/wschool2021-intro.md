@@ -1,31 +1,39 @@
 ---
-title: Robonomics Winter School 2021 introduction
-# contributors: []
-translated: false
+title: ロボノミクスウィンタースクール2021 紹介
+# contributors: [Kiichi Sugihara]
+translated: true
 ---
 
-Robonomics Winter School 2021 is held from 10 to 24 February **online**. It's **free**.
+ロボノミクスウィンタースクール2021は、 2/10~2/24に**オンライン**で開催される。参加費は**無料**です。
 
-We are publishing **lessons** online in different ways: text here in Wiki, video on our [YouTube channel](https://www.youtube.com/channel/UCrSiho1uB-1n6F8cZpCLhjQ), announce in [Twitter account](https://twitter.com/AIRA_Robonomics). Please, keep in mind, that video lessons and text lessons are not the same. For the start we plan to publish two language versions: English and Russian. 
 
-Join us, take your steps through the lessons, **discuss and ask questions** in [Discord](https://discord.gg/5UWNGNaAUf).
+テキストレッスンはこのWikiで、
+ビデオレッスンは[YouTube channel](https://www.youtube.com/channel/UCrSiho1uB-1n6F8cZpCLhjQ)で、 
+お知らせは[Twitter account](https://twitter.com/AIRA_Robonomics)でと、
+様々な方法で**レッスン**をオンラインで公開しています。
 
-## Watch opening ceremony
+ビデオレッスンとテキストレッスンは同じではありませんのでご注意ください。最初は、2つの言語バージョンを公開する予定です。英語とロシア語です。
+
+私たちと一緒にレッスンを進め、[Discord](https://discord.gg/5UWNGNaAUf)で**議論し、質問しましょう。**
+
+## オープニングセレモニーを見よう
 
 https://youtu.be/kQaSwNYHJQ8
 
-## Basic information
+## 基本的な情報
 
-Take a look at [page about school](https://robonomics.network/blog/winter-robonomics-school/) on our website. We are collecting there all basic information: shedule, infopartners, links.
+私たちのウェブサイト上の[ウィンタースクールについてのページ](https://robonomics.network/blog/winter-robonomics-school/)を見てください。スケジュール、パートナー情報、リンクなどの基本的な情報をまとめています。
 
-## Links, links, links
 
-Lets repeat what links do we have for following Robonomics Winter School 2021:
 
-- [Summary on website](https://robonomics.network/blog/winter-robonomics-school/)
-- Wiki for text lessons, YOU ARE HERE 🤓
-- [Video lessons](https://www.youtube.com/channel/UCrSiho1uB-1n6F8cZpCLhjQ)
-- [Fast announce on Twitter](https://twitter.com/AIRA_Robonomics)
-- [Questions, Discussions, Quizes in Discord](https://discord.gg/5UWNGNaAUf)
+## 便利な関連リンク！
 
-**Lets start learn Robonomics!**
+ロボノミクスウィンタースクール2021をフォローするために、どのようなリンクがあるのか、繰り返し説明します。
+
+- [ウェブサイトの概要](https://robonomics.network/blog/winter-robonomics-school/)
+- テキストレッスン用のWiki、 あなたは今ここにいるよ 🤓
+- [ビデオレッスン](https://www.youtube.com/channel/UCrSiho1uB-1n6F8cZpCLhjQ)
+- [Twitterでの速報](https://twitter.com/AIRA_Robonomics)
+- [Discordでの質問、議論、クイズ](https://discord.gg/5UWNGNaAUf)
+
+**Robonomicsの学習を始めよう!**
