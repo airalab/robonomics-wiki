@@ -17,12 +17,21 @@ The following chart describes what place Robonomics takes in the scenario:
 ## What the documentation contains
 
 ### Robonomics Network quick start
-Start with quick example of what Robonomics is able to do within 5 minutes: [DEMO "Get Weather on Fuji Mountain"](/docs/get-weather-on-fuji-mountain).
+For newcomer's convenience core Robonomics developers came up with a [6 lessons learning curve](https://wiki.robonomics.network/docs/en/wschool2021-intro/)!
 
-### I'm interested in using Robonomics services
+You'll explore the serverless IoT architecture! Robonomics Web Services (RWS) is the basic infrastructural service for Robotics and IoT on top of Polkadot && IPFS.
 
-Take a look at the [Robonomics Dapp](https://dapp.robonomics.network/#/). Get familiar with the statistic, average miner reward etc.
-Try out existing [services](https://dapp.robonomics.network/#/services)
+Course graduates can launch a local relay chain and control a ROS-compatible device through cross-chain transaction.
+
+[Join Robonomics Developers Discord](https://discord.gg/jTxqGeF5Qy) to connect with community and get technical support.
+
+### Benefits for Robonomics Winter School graduates
+- Intership for best students   Become a Robonomics team member and contribute to the development of the chosen product.
+- Active community && regular events   Become a part of the learner's community, discuss your use-cases with industry experts. Team-up and participate in hackathons!
+- Certificate of completion   Add a certificate for completing the course on building DAPPs for IoT to your portfolio.
+- Assistance in admission to the ITMO university. Whether you are a bachelor or master, you'll get assistance in your admission to the university.
+- Funding && acceleration opportunities: 1)Apply for up to $50.000 Academia - support grant; 2)Participate in Robonomics builders acceleration program supported by Web3 Foundation; 3)Deploy your stand-alone DAPP on top of Robonomics; 4)Monetize it && get marketing support from Robonomics team.
+
 
 ### I'm a Dapp developer
 
