@@ -17,15 +17,15 @@ The following chart describes what place Robonomics takes in the scenario:
 ## What the documentation contains
 
 ### Robonomics Network quick start
-For newcomer's convenience core Robonomics developers came up with a [6 lessons learning curve](https://wiki.robonomics.network/docs/en/wschool2021-intro/)!
+**For newcomer's convenience core Robonomics developers came up with a [6 lessons learning curve](https://wiki.robonomics.network/docs/en/wschool2021-intro/)!**
 
 You'll explore the serverless IoT architecture! Robonomics Web Services (RWS) is the basic infrastructural service for Robotics and IoT on top of Polkadot && IPFS.
 
 Course graduates can launch a local relay chain and control a ROS-compatible device through cross-chain transaction.
 
-[Join Robonomics Developers Discord](https://discord.gg/jTxqGeF5Qy) to connect with community and get technical support.
+**[Join Robonomics Developers Discord](https://discord.gg/jTxqGeF5Qy) to connect with community and get technical support.**
 
-### Benefits for Robonomics Winter School graduates
+### Benefits for Robonomics Academy graduates
 - Intership for best students   Become a Robonomics team member and contribute to the development of the chosen product.
 - Active community && regular events   Become a part of the learner's community, discuss your use-cases with industry experts. Team-up and participate in hackathons!
 - Certificate of completion   Add a certificate for completing the course on building DAPPs for IoT to your portfolio.
