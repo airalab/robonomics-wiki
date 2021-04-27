@@ -5,6 +5,11 @@ translated: true
 ---
 
 Robonomics allows to use robots as autonomous agents that receive commands from a human or another robot and do some useful work, storing a report of their actions in Blockchain. The interaction between the robot and the Robonomics platform is quite simple with a [Robonomics IO](/docs/rio-overview).
+
+## Robonomics ROS playground overview 
+
+https://youtu.be/mKr352z8vio
+
 ## What Robots You Can Control
 The playground section contains examples of connecting different robots to Robonomics which everyone can try to repeat step by step. In this section you can try to control:
 * [an Unmanned Aerial Vehicle](/docs/iris-drone/)
