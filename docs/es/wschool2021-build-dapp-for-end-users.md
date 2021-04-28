@@ -4,9 +4,9 @@ contributors: [vol4tim]
 translated: false
 ---
 
-## Getting ready
+## Preparándose
 
-### Robonomics node launch
+### Lanzamiento del nodo de Robonomics
 
 Para el desarrollo y la prueba de dApp, usaremos un nodo local de Robonomics. Para hacer esto, necesita descargar el archivo binario compilado [https://github.com/airalab/robonomics/releases](https://github.com/airalab/robonomics/releases). Usaré Ubuntu, así uno descarga la versión apropiada.
 
@@ -115,7 +115,7 @@ module.exports = {
 
 #### Conectarse a Robonomics
 
-First, let's create a configuration file with the parameters for connecting to the Robonomics node. In the demo repository, there is an example of this file `config.template.json`.
+Primero, creemos un archivo de configuración con los parámetros para conectarse al nodo de Robonomics. En el repositorio de demostración, hay un ejemplo de este archivo `config.template.json`.
 
 `src/config.json`
 ```json
