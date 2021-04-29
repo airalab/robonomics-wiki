@@ -1,6 +1,6 @@
 ---
 title: ロボノミクスウィンタースクール2021 紹介
-# contributors: [Kiichi Sugihara]
+contributors: [KiichiSugihara]
 translated: true
 ---
 
