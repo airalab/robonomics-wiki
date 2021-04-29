@@ -1,5 +1,5 @@
 ---
-title: Lesson 1, 로봇을 사용자 앱에 연결
+title: 레슨 1, 로봇을 사용자 앱에 연결
 contributors: []
 translated: true
 ---
