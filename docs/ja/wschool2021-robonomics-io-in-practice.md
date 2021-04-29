@@ -1,6 +1,6 @@
 ---
 title: Lesson 3, Robonomics IOの実践
-contributors: [Kiichi Sugihara]
+contributors: [KiichiSugihara]
 translated: true
 ---
 import Asciinema from '~/components/Asciinema.vue'
