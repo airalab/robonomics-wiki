@@ -1,6 +1,6 @@
 ---
 title: 용어 사전
-contributors: [arinaml]
+기여자 : [arinaml]
 translated: true
 ---
 
