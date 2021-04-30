@@ -1,6 +1,6 @@
 ---
 title: 로노미크스-JS
-contributors: [arinaml]
+기여자 : [arinaml]
 translated: false
 ---
 
