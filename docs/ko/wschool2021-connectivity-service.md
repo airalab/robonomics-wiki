@@ -1,6 +1,6 @@
 ---
 title: 5과, 연결성
-contributors: [arinaml]
+기고자: [arinaml]
 translated: true
 ---
 
