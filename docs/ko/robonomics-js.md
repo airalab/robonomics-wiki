@@ -1,6 +1,6 @@
 ---
 title: 로노미크스-JS
-contributors: [Vourhey]
+contributors: [arinaml]
 translated: false
 ---
 
