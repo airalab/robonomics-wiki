@@ -1,6 +1,6 @@
 ---
 title: 레슨 1, 로봇을 사용자 앱에 연결
-contributors: []
+기여자 : [arinaml]
 translated: true
 ---
 
