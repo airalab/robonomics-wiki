@@ -46,15 +46,15 @@ IoT 세계에서 연결이란 다양한 IoT 장치를 인터넷에 연결하여 
 
 ## AWS와 Robonomics 연결성의 비교
 
-| Management service  	| AWS                               	|               Robonomics              	|
+| 관리 서비스              | AWS                                  |               Robonomics              	|
 |---------------------	|-----------------------------------	|---------------------------------------	|
-| Transaction type    	| Technical                         	| Technical and economic                	|
-| Security            	| IT-company cloud control          	| Polkadot and Ethereum                 	|
-| Protocol            	| HTTPS, MQTT                       	| IPFS, Robonomics                      	|
-| Ecosystem           	| Private                           	| Shared                                	|
-| Access to DeFi      	| No                                	| Yes                                   	|
-| Costs               	| Pushing data - $1-2 a sensor      	| Pushing data - $0                     	|
-|                     	| Shadow         - from $10 a month 	| Digital Twin    - $0,01 a transaction 	|
+| 거래 유형               | 기술                                  | 기술 및 경제                             	 |
+| 보안                   | IT 회사 클라우드 제어                    | Polkadot 및 Ethereum                     |
+| 프로토콜            	 | HTTPS, MQTT                       	 | IPFS, Robonomics                        |
+| 생태계             	  | 개인                           	    | 공유                                	   |
+| DeFi에  액세스          | 없음                                	| 있음                                   	|
+| 소송 비용               | 데이터 푸시-센서 당 $ 1-2                 | 데이터 푸시-$ 0                            |
+|                     	| Shadow-월 $ 10                        | 디지털 트윈-거래 당 $ 0,01                  |
 
 ## 연결성 ON AIRA 설치하기
 
