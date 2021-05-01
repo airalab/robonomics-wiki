@@ -1,6 +1,6 @@
 ---
 title: Lesson 2, RobonomicsのGitHub概要
-contributors: [Kiichi Sugihara]
+contributors: [KiichiSugihara]
 translated: true
 ---
 
