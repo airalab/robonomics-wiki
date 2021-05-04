@@ -259,7 +259,6 @@ export default {
       NavIcon: () => import('~/components/NavIcon.vue'),
       PageNextPrev: () => import('~/components/PageNextPrev.vue'),
       Button: () => import('~/components/Button.vue'),
-      ButtonTranslateThis: () => import('~/components/ButtonTranslateThis.vue'),
 	  },
 
   data(){
