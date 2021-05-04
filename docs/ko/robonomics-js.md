@@ -1,47 +1,47 @@
 ---
-title: Robonomics-js
-contributors: [Vourhey]
-translated: true
+title: 로노미크스-JS
+기여자 : [arinaml]
+translated: false
 ---
 
-[Robonomics-js](https://github.com/airalab/robonomics-js) is a simple Javascript library for working with Robonomics Network.
+[Robonomics-js](https://github.com/airalab/robonomics-js) 는 Robonomics 네트워크 작업을위한 간단한 자바 스크립트 라이브러리입니다.
 
-## Installation
+## 설치
 
 ```
 npm install robonomics-js --save
 ```
 
-or
+또는/나
 
 ```
 yarn add robonomics-js
 ```
 
-### Dependencies 
+### 의존성
 
-* [Web3](https://github.com/ethereum/web3.js/) version 1.2.4
-* [Ipfs](https://github.com/ipfs/js-ipfs) version 0.34.0
+* [Web3](https://github.com/ethereum/web3.js/) 버전 1.2.4
+* [Ipfs](https://github.com/ipfs/js-ipfs) 버전 0.34.0
 
 
-## Usage 
+## 용법
 
-Creates a Robonomics instance
+Robonomics 인스턴스를 만듦
 
 ```JavaScript
 const options = {...};
 const robonomics = new Robonomics(options);
 ```
 
-### options
+### 옵션
 
-The object of properties:
+속성의 대상 :
 
 ```
 options.web3
 ```
 
-An instance of [web3.js](https://github.com/ethereum/web3.js/):
+[web3.js](https://github.com/ethereum/web3.js/)인스턴스 :
 
 ```JavaScript
 // metamask
@@ -65,7 +65,7 @@ const options = {
 options.messageProvider
 ```
 
-This is an instance of MessageProviderIpfs which uses a [js-ipfs](https://github.com/ipfs/js-ipfs) node with pubsub support
+pubsub 지원과 함께 [js-ipfs](https://github.com/ipfs/js-ipfs) 노드를 사용하는 MessageProviderIpfs의 인스턴스입니다 
 
 ```JavaScript
 const ipfs = new Ipfs({
@@ -112,9 +112,9 @@ const options = {
 options.account
 ```
 
-This is an account object which will be used to sign messages. It's necessary to specify either account address (that one must be unlocked) or a private key (the address will be recovered from the given private key).
+이것은 메시지에 서명하는 데 사용되는 계정 개체입니다. 계정 주소 (잠금 해제해야 함) 또는 개인 키 (주어진 개인 키에서 주소가 복구 됨)를 지정해야합니다.
 
-Option `isSignPrefix` tells whether or not a prefix must be appended. Default is `true`.
+옵션 `isSignPrefix`는 접두어를 추가해야하는지 여부를 알려줍니다. 디폴트 `true`입니다.
 
 ```JavaScript
 const options = {
@@ -131,7 +131,7 @@ const options = {
 options.ens
 ```
 
-This is a `ens` contract object. This one is not required. If it's necessary you may specify `address` of the contract if the network is not set to mainnet. `suffix` may be `sid` for sidechain or `eth` for mainnet. `eth` is default. `version` is the version of Robonomics Network. Default is the latest deployed version.
+이것은 `ens`계약 객체입니다. 이것은 필수가 아닙니다. 필요한 경우 네트워크가 메인 넷으로 설정되지 않은 경우 계약의 `address`를 지정할 수 있습니다. `suffix`는 사이드 체인의 경우 `sid`, 메인 넷의 경우 `eth`일 수 있습니다. `eth`가 디폴트입니다. `version`은 Robonomics Network의 버전입니다. 디폴트는 배포된 최신 버전입니다.
 
 ```JavaScript
 const options = {
@@ -148,7 +148,7 @@ const options = {
 options.lighthouse
 ```
 
-ENS name of a lighthouse, not required. Default is `airalab.lighthouse.5.robonomics.eth`. It's possible to specify only the first part of the name, like `airalab`.
+등대의 ENS 이름이며 필요하지 않습니다. 디폴트는 `airalab.lighthouse.5.robonomics.eth`입니다. `airalab`과 같이 이름의 첫부분 만 지정할수 있습니다.
 
 ```JavaScript
 const options = {
@@ -157,7 +157,7 @@ const options = {
 };
 ```
 
-It's necessary to wait until full initialization
+전체 초기화가 될때까지 기다려야합니다
 
 ```JavaScript
 const options = {...};
@@ -169,11 +169,11 @@ robonomics.ready().then(() => {
 
 ## API
 
-### Messages
+### 메시지
 
-#### Demand 
+#### 수요
 
-The message specification
+메시지 사양
 
 ```JavaScript
 const demand = {
@@ -194,7 +194,7 @@ const demand = {
 
 `robonomics.sendDemand`
 
-Signing and broadcasting the demand message. A liability is returned as promise
+수요 메시지에 서명하고 브로드캐스팅합니다. 책임은 약속으로 반환됩니다
 
 ```JavaScript
 robonomics.sendDemand(demand).then(liability => {
@@ -204,7 +204,7 @@ robonomics.sendDemand(demand).then(liability => {
 
 `robonomics.onDemand`
 
-Listens to demand messages with a defined model. If model is `null` returns any demand message.
+정의된 모델로 수요 메시지를 수신합니다. 모델이 null이면 모든 수요 메시지를 반환합니다.
 
 ```JavaScript
 robonomics.onDemand(model, message => {
@@ -212,9 +212,9 @@ robonomics.onDemand(model, message => {
 });
 ```
 
-#### Offer 
+#### 공급
 
-The message specification
+메시지 사양
 
 ```JavaScript
 const offer = {
@@ -235,7 +235,7 @@ const offer = {
 
 `robonomics.sendOffer`
 
-Signs and broadcasts an offer message. A liability is returned as promise
+공급 메시지에 서명하고 브로드캐스팅합니다. 책임은 약속으로 반환됩니다
 
 ```JavaScript
 robonomics.sendOffer(offer).then(liability => {
@@ -245,7 +245,7 @@ robonomics.sendOffer(offer).then(liability => {
 
 `robonomics.onOffer`
 
-Listens to offer messages with a defined model. If model is `null` returns any offer message
+정의된 모델로 공급 메시지를 수신합니다. 모델이 `null`이면 모든 공급 메시지를 반환합니다
 
 ```JavaScript
 robonomics.onOffer(model, message => {
@@ -253,9 +253,9 @@ robonomics.onOffer(model, message => {
 });
 ```
 
-#### Result 
+#### 결과
 
-The message specification
+메시지 사양
 
 ```JavaScript
 const result = {
@@ -268,7 +268,7 @@ const result = {
 
 `robonomics.sendResult`
 
-Signs and broadcasts a result message
+결과 메시지에 서명하고 브로드캐스팅합니다
 
 ```JavaScript
 robonomics.sendResult(result).then(() => {
@@ -278,7 +278,7 @@ robonomics.sendResult(result).then(() => {
 
 `robonomics.onResult`
 
-Listens to result messages. These results may be not valid. Valid results are stored in a liability contract
+결과 메시지를 수신합니다. 이 결과는 유효하지 않을 수 있습니다. 유효한 결과는 책임 계약에 저장됩니다
 
 ```JavaScript
 robonomics.onResult(result => {
@@ -286,13 +286,13 @@ robonomics.onResult(result => {
 });
 ```
 
-### Smart Contracts 
+### 스마트 계약
 
-#### Liability 
+#### 책임
 
 `liability.getInfo`
 
-Return a property object of the contract
+계약의 속성 개체 반환합니다
 
 ```JavaScript
 liability.getInfo().then(data => {
@@ -321,7 +321,7 @@ liability.getInfo().then(data => {
 
 `liability.onResult`
 
-Waits until a liability is finished. Returns a result
+책임이 끝날 때까지 기다립니다. 결과를 반환합니다
 
 ```JavaScript
 liability.onResult().then(result => {
@@ -329,11 +329,11 @@ liability.onResult().then(result => {
 });
 ```
 
-#### Lighthouse 
+#### 등대
 
 `robonomics.lighthouse.getInfo`
 
-Returns a property object of the contract
+계약의 속성 개체 반환합니다
 
 ```JavaScript
 robonomics.lighthouse.getInfo().then(data => {
@@ -352,7 +352,7 @@ robonomics.lighthouse.getInfo().then(data => {
 
 `robonomics.lighthouse.getProviders`
 
-Returns a list of providers on the lighthouse
+등대에있는 공급자 목록을 반환합니다
 
 ```JavaScript
 robonomics.lighthouse.getProviders().then(list => {
@@ -360,7 +360,7 @@ robonomics.lighthouse.getProviders().then(list => {
 });
 ```
 
-##### Creation of a new lighthouse
+##### 새로운 등대 창조
 
 ```JavaScript
 const minimalFreeze = 1000      // Wn
@@ -374,9 +374,9 @@ robonomics.factory.onLighthouse((lighthouse) => {
 })
 ```
 
-##### Become a provider 
+##### 공급자되기
 
-Preliminarily you must call `approve` for the tokens `XRT`
+사전에 `XRT`토큰에 대해 `approve`를 호출해야합니다.
 
 ```JavaScript
 const name = "mylighthouse";    // lighthouse name
@@ -387,11 +387,11 @@ robonomics.lighthouse.methods
   .then(tx => console.log(tx));
 ```
 
-#### Token 
+#### 토큰
 
 `robonomics.xrt.getInfo`
 
-Returns property object of the token
+토큰의 속성 개체 반환합니다
 
 ```JavaScript
 robonomics.xrt.getInfo().then(data => {
@@ -407,7 +407,7 @@ robonomics.xrt.getInfo().then(data => {
 });
 ```
 
-##### Check balance 
+##### 균형 확인
 
 ```JavaScript
 robonomics.xrt.methods
@@ -416,7 +416,7 @@ robonomics.xrt.methods
   .then(balance => console.log(balance));
 ```
 
-##### Check allowance 
+##### 허용량 확인
 
 ```JavaScript
 robonomics.xrt.methods
@@ -425,7 +425,7 @@ robonomics.xrt.methods
   .then(allowance => console.log(allowance));
 ```
 
-##### Approve 
+##### 승인
 
 ```JavaScript
 robonomics.xrt.methods
@@ -436,7 +436,7 @@ robonomics.xrt.methods
   .then(tx => console.log(tx));
 ```
 
-## Links 
+## 링크
 
 - [Website](https://robonomics.network/)
 - [Minimal template of dApp](https://github.com/airalab/vue-dapp-robonomics-template)

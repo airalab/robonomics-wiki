@@ -26,7 +26,7 @@ When docker image is ready let's try to read a data using `robonomics io` comman
 
 <Asciinema vid="iztt22tKGaV8wq3cMXY1oUEYv"/>
 
-If you have no SDS011 sensor then feel free to use virtual SDS011 sensor available in the same docker container via `vsds011.sh`. And everywhere in folloding command please use it as transparent replacement for physical sensor.
+If you have no SDS011 sensor then feel free to use virtual SDS011 sensor available in the same docker container via `vsds011.sh`. And everywhere in following command please use it as transparent replacement for physical sensor.
 
 <Asciinema vid="GCkSiJBA1DgpLAAHiMhIOSpgG"/>
 
