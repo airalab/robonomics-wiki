@@ -1,64 +1,64 @@
 ---
-title: Construir la interfaz de la DApp, Parte 2
-contributors: [positivecrash]
-translated: false
+title: 6.2 강, 스크래치에서 DAPP 인터페이스 구축
+contributors: [arinaml]
+translated: true
 ---
 
-![Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot](../images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot")
+![Robonomics 및 Polkadot 위에 분산 된 애플리케이션을위한 사용자 인터페이스 구축](../images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot")
 
-## Introducción
+## 서론
 
-Este tutorial continúa la lección anterior, donde ya ha creado una aplicación simple y se centró en conectar una cuenta a un nodo, enviar transacciones y otras funciones vitales de la dapp. Ahora **crearemos una interfaz fácil de usar** para esa aplicación.
+이 자습서는 이전 단원을 계속합니다. 이미 간단한 애플리케이션을 구축했으며 계정을 노드에 연결하고 트랜잭션을 전송하고 dapp의 기타 중요한 기능에 집중했습니다. 이제이 애플리케이션을위한 사용자 친화적 인 인터페이스를 구축 할 것입니다.
 
-## Prerrequisitos
+## 전제 조건
 
-Este tutorial está diseñado para personas que están familiarizadas un poco con **HTML, CSS, JavaScript** y quieren aprender a aplicar estas habilidades para aplicaciones descentralizadas.
+이 튜토리얼은 **HTML, CSS, JavaScript**에 약간 익숙하고 이러한 기술을 분산 응용 프로그램에 적용하는 방법을 배우려는 사람들을 위해 설계되었습니다.
 
-Para crear la interfaz de su dapp, puede elegir cualquier marco de JavaScript que le resulte cómodo o incluso intentar crear una interfaz sin ningún marco. En Robonomics 2021 usamos [Vue.js](https://vuejs.org) ya que es bastante escalable y fácil de usar.
+dapp의 인터페이스를 구축하려면 자신에게 편안한 JavaScript 프레임 워크를 선택하거나 프레임 워크없이 인터페이스를 구축 할 수도 있습니다. Robonomics 2021에서는 확장 성이 뛰어나고 사용하기 쉬운 [Vue.js](https://vuejs.org)를 사용합니다.
 
-## Configuración para el Tutorial
+## 이 튜토리얼을위한 설정
 
-Si comienza con este paso y prefiere **aprender con la práctica**, siga esta lista de tareas para iniciar el dapp resultante de la lección anterior:
+이 단계로 시작하고 학습을 선호하는 경우 다음 할 일 목록을 따라 이전 강의에서 얻은 결과 dapp을 시작하십시오 :
 
-1. Descargue un nodo Robonomics local de la [releases page](https://github.com/airalab/robonomics/releases/) que se adapte a su sistema operativo. Si no encuentra su sistema en la última versión, busque la versión más reciente en las versiones anteriores.
+1. [릴리스 페이지에서](https://github.com/airalab/robonomics/releases/) OS에 맞는 로컬 Robonomics 노드를 다운로드하십시오. 최신 릴리스에서 시스템을 찾지 못한 경우 이전 릴리스에서 최신 버전을 찾으십시오.
 
-2. Inicie el nodo Robononomics en el modo Desarrollador escribiendo `./robonomics --dev` en su terminal.
+2. 터미널에 `./robonomics --dev`를 입력하여 개발자 모드에서 Robonomics 노드를 시작합니다. 
 
-3. Descargue la extensión Polkadot para Chrome o Firefox [here](https://polkadot.js.org/extension/)
+3. [여기](https://polkadot.js.org/extension/)에서 Chrome 또는 Firefox 용 Polkadot 프로그램을 다운로드하십시오. 
 
-4. Clona [this repository](https://github.com/vol4tim/example-robonomics-dapp/).
+4. [이 저장소를 복제하시시오](https://github.com/vol4tim/example-robonomics-dapp/).
 
-5. Instale [Yarn](https://yarnpkg.com).
+5. [Yarn](https://yarnpkg.com)을 설치하십시오.
 
-6. Instale [@vue/cli](https://cli.vuejs.org/guide/installation.html)
+6. [@vue/cli](https://cli.vuejs.org/guide/installation.html) 설치하십시오/.
 
-7. Comience a desarrollar dapp con el comando `yarn serve` en su terminal.
+7. 터미널에서 `yarn serve` 명령으로 dapp 개발을 시작하십시오.
 
 
-**Debería tener esta pantalla en su navegador:**
+**브라우저에 다음 화면이 표시되어야합니다 :**
 
-![Dapp Start](../images/build-dapp-interface/dapp-start.png "Dapp Start")
+![Dapp 시작](../images/build-dapp-interface/dapp-start.png "Dapp Start")
 
 
 <details>
 
-  <summary>Algunos consejos adicionales para el lanzamiento</summary>
+  <summary>시작을위한 몇 가지 추가 팁</summary>
 
-  - Asegúrate de que tu **nodo se esté ejecutando**:
-    ![Example of running a Robonomics node](../images/build-dapp-interface/robonomics-node-launch.png "Example of running Robonomics node")
+  - **노드가 실행 중인지** 확인합니다.:
+    ![Robonomics 노드 실행의 예](../images/build-dapp-interface/robonomics-node-launch.png "Example of running Robonomics node")
 
-  - En **macOS**, es posible que deba cambiar los **permisos de acceso** `chmod +x robonomics`
+  - **macOS**에서는 **접근 권한**`chmod + x robonomics`를 변경해야 할 수 있습니다. 
 
-  - Asegúrese de haber permitido **acceso para Polkadot Extension**:
-    ![Polkadot Extension giving access](../images/build-dapp-interface/polkadot-permission.png "Polkadot Extension giving access")
+  - **Polkadot Extension에 대한 액세스**를 허용했는지 확인합니다 :
+    ![액세스를 제공하는 Polkadot 확장](../images/build-dapp-interface/polkadot-permission.png "Polkadot Extension giving access")
 
-  - Si tiene errores en el registro del nodo en ejecución y dapp no se carga correctamente, intente eliminar la base de datos de la cadena de desarrollo: `sudo rm -rf <YOUR LOCAL PATH>/robonomics/chains/dev/db/` y reinicia el nodo. Si no ayuda, reinicie su máquina.
+  - 실행중인 노드의 로그에 오류가 있고 dapp이 올바르게로드되지 않는 경우 dev chain의 데이터베이스를 삭제 해보십시오.`sudo rm -rf <YOUR LOCAL PATH>/robonomics/chains/dev/db/`및 재시작 노드. 도움이되지 않으면 컴퓨터를 다시 시작하십시오. 
 
 </details>
 
-## Inspección del Código
+## 코드 검사
 
-Inspeccionemos la estructura de la dapp para aclarar qué y dónde podemos arreglar para cambiar la interfaz de usuario.
+UI를 변경하기 위해 dapp의 구조를 살펴보고 수정할 수있는 항목과 위치를 정리해 보겠습니다.
 
 ```
 .
@@ -79,17 +79,17 @@ Inspeccionemos la estructura de la dapp para aclarar qué y dónde podemos arreg
 
 ```
 
-> **El código de este tutorial está en este [repository](https://github.com/positivecrash/wscool21-ui-dapp)**
+> **이 튜토리얼의 코드는이 저장소에 [있습니다](https://github.com/positivecrash/wscool21-ui-dapp)**
 
-## CSS-in-JS VS. Hojas de Estilos Globales
+## CSS-in-JS VS. Global stylesheets
 
-En este tutorial, muestro cómo cambiar la interfaz de una pequeña dapp desde cero sin una biblioteca estable de componentes de UI. Por lo tanto, importaré y crearé no solo diferentes componentes de Vue, sino que también escribiré mis propios estilos.
+이 튜토리얼에서는 안정적인 UI 컴포넌트 라이브러리없이 처음부터 작은 dapp의 인터페이스를 변경하는 방법을 보여줍니다. 그래서 다른 Vue 컴포넌트를 가져 와서 생성 할뿐만 아니라 나만의 스타일도 작성하겠습니다.
 
-Si su aplicación es grande o su proyecto tiene un montón de dapps, en el futuro será mejor que busque construir una biblioteca de componentes específicamente para su proyecto para hacer que la interfaz de usuario sea más organizada y eficiente (por ejemplo, [aquí hay una herramienta para organizar componentes](https://storybook.js.org)). O si está de acuerdo con los temas de la interfaz estándar, puede usar cualquier biblioteca de interfaz de usuario de terceros ([por ejemplo](https://vuetifyjs.com/)).
+애플리케이션이 크거나 프로젝트에 여러 dapp이있는 경우 향후에는 UI를보다 체계적이고 효율적으로 만들기 위해 특별히 프로젝트 용 구성 요소 라이브러리를 구축하는 것이 좋습니다 ([예 : 구성 요소 구성](https://storybook.js.org)).또는 표준 인터페이스 테마에 문제가없는 경우 타사의 모든 UI 라이브러리를 사용할 수 있습니다 ([예 :](https://vuetifyjs.com/)).
 
-## Primera Importacion o por donde empezar
+## 첫 번째 가져 오기 또는 시작 지점
 
-No tengo ningún diseño específico para este dapp, pero tengo [Brandbook](https://static.robonomics.network/assets/Robonomics-Visual-Identity.pdf) y [tipografia](https://robonomics.network), las fuentes, los estilos de botones, etc. bien establecidos. Así que, para empezar, importaré los siguientes archivos css a nivel mundial:
+이 dapp에 대한 특정 디자인은 없지만 [Brandbook](https://static.robonomics.network/assets/Robonomics-Visual-Identity.pdf)과  [잘 정립](https://robonomics.network) 된 타이포그래피, 글꼴, 버튼 스타일 등이 있습니다. 처음에는 다음 CSS 파일을 전역으로 가져옵니다 :
 
 ```
 ...
@@ -104,10 +104,11 @@ No tengo ningún diseño específico para este dapp, pero tengo [Brandbook](http
 
 ```
 
-En su lugar, puede escribir el contenido de cualquiera de estos archivos en App.vue, si se ajusta mejor a su percepción. Pero recomiendo importar algunos archivos CSS globalmente para este ejemplo para mantener App.vue un poco más claro.
+이러한 파일의 내용은 사용자의 인식에 더 적합하다면 App.vue에서 작성할 수 있습니다. 그러나 App.vue를 좀 더 명확하게 유지하려면이 예제에서 일부 CSS 파일을 전역으로 가져 오는 것이 좋습니다.
 
-Importe estos archivos CSS a su aplicación editando el archivo **main.js**:
-![Importar CSS global en la Vue app](../images/build-dapp-interface/import-css-vue-1.png "Import global CSS in Vue app")
+**main.js** 파일을 편집하여 다음 CSS 파일을 앱으로 가져옵니다 :
+
+![Vue App에서 글로벌 CSS 가져 오기](../images/build-dapp-interface/import-css-vue-1.png "Import global CSS in Vue app")
 
 ```JS
 import './assets/styles/reset.css'
@@ -116,18 +117,18 @@ import './assets/styles/typography.css'
 import './assets/styles/animation.css'
 ```
 
-**Compruebe si se han cambiado las fuentes en la dapp:**
+**dapp에서 글꼴이 변경되었는지 확인하십시오 :**
 
-![Paso 1 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-1.png "Dapp Interface changing step 1")
+![Dapp 인터페이스 변경 1 단계](../images/build-dapp-interface/dapp-1.png "Dapp Interface changing step 1")
 
 
-## Cambiar el diseño y pretificar el titulo
+## 레이아웃 변경 및 제목 꾸미기
 
-Cambiemos el diseño de la aplicación. Como mencioné anteriormente, puede escribir sus estilos directamente en App.vue, pero para este ejemplo prefiero separar este proceso.
+응용 프로그램의 레이아웃을 변경해 보겠습니다. 앞서 언급했듯이 App.vue에서 직접 스타일을 작성할 수 있지만이 예제에서는이 프로세스를 분리하는 것을 선호합니다.
 
-- Comente o elimine estilos de la etiqueta `<style\` en **App.vue**
+- **App.vue**의 `<style>` 태그에서 스타일 주석 처리 또는 삭제합니다 
 
-- Cree el archivo css **app.css** en la carpeta de estilos para esta aplicación e impórtelo en **main.js**
+- 이 애플리케이션의 스타일 폴더에 css 파일 **app.css**를 만들고 **main.js**로 가져옵니다.
 
 ```JS
 import './assets/styles/app.css'
@@ -135,7 +136,7 @@ import './assets/styles/app.css'
 
 <details>
 
-<summary>Escriba en app.css los primeros estilos básicos para la aplicación:</summary>
+<summary>앱의 첫 번째 기본 스타일 app.css 작성 :</summary>
 
 ```css
 #app {
@@ -156,7 +157,7 @@ body {
 
 <details>
 
-<summary>Cambiar el título de la aplicación [App.vue]</summary>
+<summary>앱 제목 변경 [App.vue]</summary>
 
 ```html
 <div class="top">
@@ -172,7 +173,7 @@ body {
 
 <details>
 
-<summary>Escribe estilos para el título [app.css]</summary>
+<summary>제목 [app.css]의 스타일 작성</summary>
 
 ```css
 .top {
@@ -218,34 +219,34 @@ body {
 
 </details>
 
-- Coloque un archivo con el logo de la escuela de invierno de Robonomics Winter School 2021 en la carpeta **./src/assets/images**
+- Robonomics 겨울 학교 2021 로고가있는 파일을 **./src/assets/images** 폴더에 넣으십시오.
 
-**Obtendrá la siguiente pantalla:**
-![Paso 2 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-2.png "Dapp Interface changing step 2")
+**다음 화면이 표시됩니다 :**
+![Dapp 인터페이스 변경 2 단계](../images/build-dapp-interface/dapp-2.png "Dapp Interface changing step 2")
 
-## Definir estilos segun los datos de la Dapp
+## DAPP 데이터에 따른 스타일 정의
 
-Ahora envolveré el contenido de la aplicación en el elemento `<div>`. También necesitaré diferentes estilos para diferentes estados de la dapp (cargada o no cargada).
+이제 `<div>` 요소에 앱의 콘텐츠를 래핑합니다. 또한 dapp의 다양한 상태 (로드 됨 또는로드되지 않음)에 대해 다른 스타일이 필요합니다.
 
-- Abra **App.vue** y escriba un elemento de envoltura:
+- **App.vue**를 열고 래핑 요소를 작성합니다 :
 ```html
 <div class="content">
   <!--here is everything going after the title-->
 </div>
 ```
-- Busque la variable `load`, ya se ha definido en `<script>`.
-- Pase un objeto a `v-bind:class` para alternar dinámicamente las clases (yo uso la versión abreviada `:class`):
+- 변수 `load`를 찾으십시오. 이미 `<script>`에 정의되어 있습니다.
+- 객체를 `v-bind:class`에 전달하여 클래스를 동적으로 토글합니다 (축약 된 버전 `:class` 사용).
 ```html
 <div class="content" :class="{ load: load }">
   <!--here is everything going after the title-->
 </div>
 ```
-Así es como puede alternar fácilmente los estilos en su aplicación de acuerdo con los datos que obtiene. Verá el uso de esta clase a continuación.
+이렇게하면 얻은 데이터에 따라 앱에서 스타일을 쉽게 전환 할 수 있습니다. 아래에서이 클래스의 사용법을 볼 수 있습니다.
 
-## Definir vistas segun los datos de la Dapp
+## DAPP 데이터에 따른 뷰 정의
 
-Cambiemos el cargador de la aplicación.
-- Para este propósito, importaré mi componente de otro proyecto de Robonomics
+앱의 로더를 변경해 보겠습니다.
+- 이를 위해 다른 Robonomics 프로젝트에서 내 구성 요소를 가져옵니다
 
 <details>
 
@@ -371,7 +372,7 @@ export default {
 
 </details>
 
-- Registre este componente en **App.vue**
+-이 구성 요소를 **App.vue**에 등록합니다
 ```JS
 export default {
   components: {
@@ -379,7 +380,7 @@ export default {
   }
 }
 ```
-- Insértelo con la condicional directiva Vue `v-if`, usando la `load` variable ya conocida:
+- 이미 알려진 변수`로드를` 사용하여 조건부 Vue 지시문 `v-if`와 함께 삽입합니다 :
 ```HTML
 <div class="content" :class="{ load: load }">
   <Loader v-if="load" />
@@ -388,37 +389,37 @@ export default {
   </template>
 </div>
 ```
-- Mira el resultado en el navegador. Tiene algunos problemas que arreglaremos ahora:
+- 브라우저에서 결과를 확인하십시오. 지금 수정할 몇 가지 문제가 있습니다 :
 
-1. Loader aparece con el título (debería estar en el centro). Insertemos estas líneas en **app.css**:
+1. 로더가 제목에 팝업됩니다 (가운데에 있어야 함). 다음 줄을 **app.css**에 삽입 해 보겠습니다 :
 ```css
 body, html, #app {
   height: 100%;
   position: relative;
 }
 ```
-2. Si su conexión va demasiado rápido, verá el cargador parpadeando por un momento. Puede confundir mucho. Establezcamos un tiempo de espera para la respuesta de la aplicación. Para hacer eso, abra **api.js** y busque en la función `initAccount` este código:
+2. 연결 속도가 너무 빠르면 잠시 동안 로더 만 깜박입니다. 혼란 스러울 수 있습니다. 앱의 응답에 대한 시간 제한을 설정해 보겠습니다. 그렇게하려면 **api.js**를 열고 `initAccount` 함수에서이 코드를 찾으십시오 :
 ```JS
 const timeout = new Promise(resolve => {
   setTimeout(resolve, 300);
 });
 ```
-Configuré `1700` en lugar de `300` y verifico el resultado:
+`300` 대신 `1700`을 설정하고 결과를 확인합니다 :
 
-![Dapp Interface changing step 3](../images/build-dapp-interface/dapp-3.gif "Dapp Interface changing step 3")
+![Dapp 인터페이스 변경 3 단계](../images/build-dapp-interface/dapp-3.gif "Dapp Interface changing step 3")
 
 
-## Uso componentes reutilizables
+## 재사용 가능한 구성 요소 사용
 
-Ya ha visto cómo registrar y utilizar un componente en la sección anterior sobre Loader, pero ahora quiero centrarme en él con más atención.
+Loader에 대한 이전 섹션에서 구성 요소를 등록하고 사용하는 방법을 이미 살펴 봤지만 이제는 더주의 깊게 살펴 보겠습니다.
 
-Cambiemos la sección Account. Aquí usaré componentes escritos por mí mismo (box, button, icon) y el de terceros ([from Vue Polkadot Library](https://vue-polkadot.js.org/vue-ui/vue-identicon/#vue-polkadot-vue-identicon )).
+계정 섹션을 변경해 보겠습니다. 여기서는 자체 작성 구성 요소 (상자, 버튼, 아이콘)와 타사 구성 요소 ([Vue Polkadot 라이브러리에서 제공](https://vue-polkadot.js.org/vue-ui/vue-identicon/#vue-polkadot-vue-identicon ))를 사용합니다.
 
-### Añadir la Caja  
+### The Box 추가
 
 <details>
 
-<summary>Crear componente Box en archivo ./src/components/Box.vue </summary>
+<summary>./src/components/Box.vue 파일에 Box 구성 요소 만듭니다 </summary>
 
 ```HTML
 <template>
@@ -456,9 +457,9 @@ export default {
 ```
 </details>
 
-Ahora podemos usarlo muchas veces a lo largo de la dapp. Veamos esto en el ejemplo de la sección Cuenta:
+이제 dapp 전체에서 여러 번 사용할 수 있습니다. 계정 섹션 예제에서 이것을 보겠습니다 :
 
--  Componente de registro (**App.vue**):
+- 구성 요소 등록 (**App.vue**):
 
 ```JS
 export default {
@@ -468,7 +469,7 @@ export default {
 }
 ```
 
-- Úselo para la sección Account con una clase adicional pasada con prop `classList`:
+- prop `classList`와 함께 전달 된 추가 클래스가있는 계정 섹션에 사용하십시오 :
 
 ```HTML
 <Box :classList="'account'">
@@ -479,16 +480,16 @@ export default {
 </Box>
 ```
 
-**Comprueba el resultado:**
-![Dapp Interface changing step 4](../images/build-dapp-interface/dapp-4.png "Dapp Interface changing step 4")
+**결과 확인하십시오 :**
+![Dapp 인터페이스 변경 4 단계](../images/build-dapp-interface/dapp-4.png "Dapp Interface changing step 4")
 
-### Añadir el Boton
+### 버튼 추가
 
-Es posible que ni siquiera note el botón en el cuadro que hemos agregado. Arreglemoslo y agreguemos un componente para los botones, ya que no es el único botón de la aplicación.
+우리가 추가 한 상자의 버튼을 눈치 채지 못할 수도 있습니다. 앱에서 유일한 버튼이 아니므로이를 수정하고 버튼에 대한 구성 요소를 추가해 보겠습니다.
 
 <details>
 
-<summary>Crear componente de botón en el archivo ./src/components/Button.vue </summary>
+<summary>./src/components/Button.vue 파일에 Button 구성 요소 만듭니다 </summary>
 
 ```HTML
 <template>
@@ -617,7 +618,7 @@ export default {
 </details>
 
 
-- Registre el componente (**App.vue**):
+- 구성 요소 등록합니다 (**App.vue**):
 
 ```JS
 export default {
@@ -627,7 +628,7 @@ export default {
 }
 ```
 
-- Úselo para el botón ‘Faucet’ con accesorios definidos en el componente 'Button' 
+- 'Button'구성 요소에 정의 된 소품이있는 'Faucet'버튼에 사용합니다.
 
 ```HTML
 <Box :classList="'account'">
@@ -636,26 +637,26 @@ export default {
 </Box>
 ```
 
-**Obtenemos esta vista:**
-![Dapp Interface changing step 5](../images/build-dapp-interface/dapp-5.png "Dapp Interface changing step 5")
+**우리는 다음과 같은 입장을 얻습니다 :**
+![Dapp 인터페이스 변경 5 단계](../images/build-dapp-interface/dapp-5.png "Dapp Interface changing step 5")
 
-Para el componente Botón, hemos emitido el clic de prop con `@onClick`, por lo que prestaré atención si la función de faucet está funcionando correctamente ahora (el saldo debería cambiar al hacer clic):
+Button 구성 요소의 경우 `@onClick`을 사용하여 prop에서 클릭을 내보냈으므로 이제 수도꼭지 기능이 올바르게 작동하는지 확인하겠습니다 (클릭시 잔액이 변경되어야 함).
 
-![Dapp Interface changing step 6](../images/build-dapp-interface/dapp-6.gif "Dapp Interface changing step 6")
+![Dapp 인터페이스 변경 6 단계](../images/build-dapp-interface/dapp-6.gif "Dapp Interface changing step 6")
 
-### AAñadir el Icono
+### 아이콘 추가
 
-Agreguemos un ícono a este botón para atraer más atención a este elemento de la interfaz, ya que el usuario no puede interactuar con la dapp correctamente sin unidades y haciendo clic en este botón.
+사용자가 유닛과이 버튼을 클릭하지 않고는 디앱과 제대로 상호 작용할 수 없기 때문에 인터페이스의이 요소에 더 많은 관심을 끌기 위해이 버튼에 아이콘을 추가합시다.
 
-Para este propósito, puede usar cualquier biblioteca Vue lista para íconos, crearé mi propio componente con el ícono.
+이를 위해 준비된 Vue 라이브러리를 아이콘으로 사용할 수 있습니다. 아이콘으로 나만의 구성 요소를 만들겠습니다.
 
-- Encontré un ícono apropiado en [el gran archivo de íconos en línea](https://www.flaticon.com).
-- Descargué el archivo .svg y lo editó en el editor de gráficos vectoriales para obtener el tamaño adecuado.
-- Se insertó svg como texto en el componente Icon.vue.
+- [큰 온라인 아이콘 아카이브에서](https://www.flaticon.com) 적절한 아이콘을 찾았습니다. 
+- .svg 파일을 다운로드하고 벡터 그래픽 편집기에서 적절한 크기로 편집합니다.
+- Icon.vue 구성 요소에 svg를 텍스트로 삽입합니다
 
 <details>
 
-<summary>Esto es lo que obtuve como componente Icon.vue</summary>
+<summary>Icon.vue 구성 요소로 얻은 것은 다음과 같습니다</summary>
 
 ```JS
 <template>
@@ -701,9 +702,9 @@ export default {
 
 </details>
 
-Para usarlo con el botón, edite el componente Botón.
+버튼과 함께 사용하려면 Button 구성 요소를 편집합니다.
 
-Importe el icono en **Button.vue**:
+**Button.vue**에서 아이콘 가져 오기 :
 
 ```JS
 components: {
@@ -711,7 +712,7 @@ components: {
 }
 ```
 
-Objeto de registro:
+소품 등록 :
 
 ```JS
 props: {
@@ -722,7 +723,7 @@ props: {
 }
 ```
 
-Agregue el ícono al botón (podemos especificar diferentes plantillas con la condición `v-if`):
+버튼에 아이콘을 추가합니다 (`v-if` 조건으로 다른 템플릿을 지정할 수 있음) :
 
 ```HTML
 <template v-if="icon != 'none'">
@@ -734,7 +735,7 @@ Agregue el ícono al botón (podemos especificar diferentes plantillas con la co
 </template>
 ```
 
-Agregar estilos:
+스타일 추가 :
 
 ```CSS
 .button .icon-fill path {
@@ -747,28 +748,28 @@ Agregar estilos:
 
 ```
 
-Agregue el icono de apoyo en el botón en **App.vue**:
+**App.vue**의 버튼에 아이콘 소품을 추가합니다 :
 
 ```HTML
 <Button label="Faucet" size="large" icon="faucet" @onClick="faucet" />
 ```
 
-**Check:**
+**확인 :**
 
-![Dapp Interface changing step 7](../images/build-dapp-interface/dapp-7.png "Dapp Interface changing step 7")
+![Dapp 인터페이스 변경 7 단계](../images/build-dapp-interface/dapp-7.png "Dapp Interface changing step 7")
 
-### Agregar Polkadot Avatar
+### Polcadot 아바타 추가
 
-- Instalar [@vue-polkadot/vue-identicon](https://vue-polkadot.js.org/vue-ui/vue-identicon/#vue-polkadot-vue-identicon)
+- [@vue-polkadot/vue-identicon](https://vue-polkadot.js.org/vue-ui/vue-identicon/#vue-polkadot-vue-identicon) 설치
 
-- Importar a App.vue:
+- App.vue로 가져 오기 :
 ```JS
 components: {
     Identicon: () => import("@vue-polkadot/vue-identicon")
 }
 ```
 
-- Inserte el avatar en lugar de la palabra ‘Account’, pase los accesorios de acuerdo con la documentación, use los datos de la "account' como un valor de apoyo:
+- `계정`이라는 단어 대신 아바타를 삽입하고 문서에 따라 소품을 전달하고 계정 데이터를 값 소품으로 사용합니다.
 ```HTML
 <Identicon
   :value="account"
@@ -778,15 +779,15 @@ components: {
 />
 ```
 
-**Cheque:**
+**확인 :**
 
-![Paso 8 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-8.png "Dapp Interface changing step 8")
+![Dapp 인터페이스 변경 8 단계](../images/build-dapp-interface/dapp-8.png "Dapp Interface changing step 8")
 
-## Manipulación de datos para una mejor vista
+## 더 나은보기를위한 데이터 조작
 
-Cortemos la dirección de la cuenta:
+계정 주소를 잘라 봅시다 :
 
-- Envuelva la `account` variable en la propiedad calculada:
+- 계산 된 속성에서 변수 `계정`을 래핑합니다 :
 
 ```JS
 computed: {
@@ -796,19 +797,19 @@ computed: {
 }
 ```
 
-- Reemplace la `account` variable con `AccountAddress` en la plantilla.
+- 템플릿에서 변수 `계정`을 `AccountAddress`로 바꿉니다.
 
-**Cheque:**
+**확인 :**
 
-![Paso 9 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-9.png "Dapp Interface changing step 9")
+![Dapp 인터페이스 변경 9 단계](../images/build-dapp-interface/dapp-9.png "Dapp Interface changing step 9")
 
-## CMagia CSS
+## CSS magic
 
-Embellezcamos un poco más la sección de la cuenta:
+계정 섹션을 좀 더 예쁘게 만들어 보겠습니다 :
 
 <details>
 
-<summary>Plantilla</summary>
+<summary>주형</summary>
 
 ```HTML
 <Box :classList="'account'">
@@ -836,7 +837,7 @@ Embellezcamos un poco más la sección de la cuenta:
 
 <details>
 
-<summary>Estilos (en app.css)</summary>
+<summary>스타일 (app.css)</summary>
 
 ```CSS
 .account {
@@ -861,13 +862,13 @@ Embellezcamos un poco más la sección de la cuenta:
 
 </details>
 
-![Paso 10 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-10.gif "Dapp Interface changing step 10")
+![Dapp 인터페이스 변경 10 단계](../images/build-dapp-interface/dapp-10.gif "Dapp Interface changing step 10")
 
-Editemos estilos para las pestañas:
+탭의 스타일을 편집 해 보겠습니다.
 
 <details>
 
-<summary>Estilos (en app.css)</summary>
+<summary>스타일 (app.css)</summary>
 
 ```CSS
 .tabs {
@@ -901,7 +902,7 @@ Editemos estilos para las pestañas:
 
 <details>
 
-<summary>Cambios mínimos en la plantilla:</summary>
+<summary>최소한의 템플릿 변경 :</summary>
 
 ```HTML
 <div class="tabs-content">
@@ -913,18 +914,19 @@ Editemos estilos para las pestañas:
 
 </details>
 
-![Paso 11 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-11.gif "Dapp Interface changing step 11")
+![Dapp 인터페이스 변경 11 단계](../images/build-dapp-interface/dapp-11.gif "Dapp Interface changing step 11")
 
-> Permítanme recordarles que el código terminado para este tutorial se encuentra en [este](https://github.com/positivecrash/wscool21-ui-dapp) repositorio. Y pasemos a los siguientes pasos :)
+> 이 튜토리얼의 완성 된 코드가이 [저장소에 있음을](https://github.com/positivecrash/wscool21-ui-dapp) 상기시켜 드리겠습니다. 다음 단계로 이동하겠습니다 :)
 
-## Registro de Datos (Datalog)
+## 데이터 로그
 
-Comience por arreglar elementos de la interfaz de usuario que ya se conocen en los botones dapp: (lo mismo que hemos hecho para el ‘Faucet’, pero con diferentes accesorios).
+dapp : 버튼에 이미 알려진 UI 요소를 수정하는 것부터 시작합니다 ( '수도꼭지'에 대해 수행 한 것과 동일하지만 소품이 다릅니다).
 
-Luego, envolveré estos elementos en `<fieldset>` para separarlos por significado. Y escribiré mis propios estilos para el conjunto de campos y los elementos de entrada.
+그런 다음 이러한 요소를 의미별로 구분하기 위해 `<fieldset>`에 래핑합니다. 그리고 fieldset 및 input 요소에 대한 고유 한 스타일을 작성합니다.
+
 <details>
 
-<summary>Plantilla en Datalog.vue:</summary>
+<summary>Dialogue.vue의 템플릿 :</summary>
 
 ```HTML
 <div class="tools">
@@ -944,7 +946,7 @@ Luego, envolveré estos elementos en `<fieldset>` para separarlos por significad
 
 <details>
 
-<summary>Estilos para elementos de entrada en app.css: se supone que es global:</summary>
+<summary>app.css의 입력 요소에 대한 스타일-전역이어야합니다 :</summary>
 
 ```CSS
 input, select{
@@ -990,15 +992,15 @@ input.large, select.large {
 
 </details>
 
-**Comprobemos que todo funciona bien después de las actualizaciones:**
+**업데이트 후 모든 것이 잘 작동하는지 확인합시다 :**
 
-![Paso 12 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-12.gif "Dapp Interface changing step 12")
+![Dapp 인터페이스 변경 12 단계](../images/build-dapp-interface/dapp-12.gif "Dapp Interface changing step 12")
 
-Tenemos una sección de registro de datos en todo el dapp, así que crearé un componente para él.
+dapp 전체에 데이터 로그 섹션이 있으므로 구성 요소를 만들겠습니다
 
 <details>
 
-<summary>Tengo el siguiente código para un nuevo componente DatalogSection.vue</summary>
+<summary>새 구성 요소 DatalogSection.vue에 대한 다음 코드가 있습니다.</summary>
 
 ```HTML
 <template>
@@ -1102,16 +1104,16 @@ details.box[open] summary {
 
 </details>
 
-A lo que debe prestar atención aquí: pasamos prop `log` como una matriz. Supongo que esta matriz multidimensional contendrá un registro de entradas y cada entrada tiene un título (escribí la fecha para todos los registros en el dapp) y contenido. Necesitamos reformatear las matrices en los componentes **Datalog.vue** y **Launch.vue**.
+여기서주의해야 할 사항 : prop `log`를 배열로 전달합니다. 이 다차원 배열에는 항목 로그가 포함되고 모든 항목에는 제목 (dapp의 모든 로그에 대해 날짜를 썼습니다)과 내용이 있다고 가정합니다. **Datalog.vue** 및 **Launch.vue** 구성 요소의 배열을 다시 포맷해야합니다.
 
-Ahora edite **Datalog.vue**. Método de búsqueda, donde obtenemos el registro:
+이제 **Datalog.vue**를 편집하십시오. 로그를 얻는 Find 메서드 :
 ```JS
 async read() {
   this.log = (await this.api.query.datalog.datalog(this.account)).toArray();
 }
 ```
 
-Ahora tenemos que formatear los datos en **Datalog.vue** y pasar la matriz de registro lista para **DatalogSection.vue**. Así que mapeemos la matriz de registros:
+이제 **Datalog.vue**의 데이터 형식을 지정하고 **DatalogSection.vue**에 대한 준비된 로그 배열을 전달해야합니다. 따라서 로그 배열을 매핑 해 보겠습니다 :
 ```JS
 async read() {
   this.log = (await this.api.query.datalog.datalog(this.account)).toArray().map((item) => {
@@ -1120,7 +1122,7 @@ async read() {
 }
 ```
 
-Ya no necesitamos este código:
+이 코드는 더 이상 필요하지 않습니다 :
 ```JS
 filters: {
   dateFormat: function(v) {
@@ -1132,19 +1134,19 @@ filters: {
 }
 ```
 
-**Revisemos la sección de registro de datos en la pestaña Datalog:**
+**데이터 로그 탭에서 데이터 로그 섹션을 확인해 보겠습니다 :**
 
-![Paso 13 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-13.gif "Dapp Interface changing step 13")
+![Dapp 인터페이스 변경 13 단계](../images/build-dapp-interface/dapp-13.gif "Dapp Interface changing step 13")
 
-## Lanzamiento
+## 시작
 
-Para este paso, la mayoría de las mejoras ya se han hecho, solo necesitamos aplicarlas a la plantilla: Importar componentes Button y Datalog, eliminar el título excesivo:
+이 단계에서는 대부분의 개선이 이미 완료되었으므로 템플릿에 적용하기 만하면됩니다. Import Button 및 Datalog 구성 요소는 과도한 제목을 제거합니다 :
 
-![Paso 14 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-14.gif "Dapp Interface changing step 14")
+![Dapp 인터페이스 변경 14 단계](../images/build-dapp-interface/dapp-14.gif "Dapp Interface changing step 14")
 
-Reemplacemos el elemento de control de `select` con `checkbox`..
+`선택` `컨트롤` 요소를 확인란으로 대체하겠습니다 :
 
-En lugar de esto:
+대신 :
 ```HTML
 <select v-model="parameter" :disabled="isWrite">
   <option value="ON">ON</option>
@@ -1152,7 +1154,7 @@ En lugar de esto:
 </select>
 ```
 
-Escribe esto:
+이것을 쓰십시오 :
 ```HTML
 <div class="toggler inline-block">
   <input v-model="parameter" :disabled="isWrite" type="checkbox" id="robot-switch" />
@@ -1162,7 +1164,7 @@ Escribe esto:
 
 <details>
 
-<summary>Estilos en app.css:</summary>
+<스타일 (app.css):</summary>
 
 ```CSS
 .toggler input { display: none; }
@@ -1220,18 +1222,18 @@ Escribe esto:
 
 </details>
 
-![Paso 15 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-15.gif "Dapp Interface changing step 15")
+![Dapp 인터페이스 변경 15 단계](../images/build-dapp-interface/dapp-15.gif "Dapp Interface changing step 15")
 
-Quiero aclarar algo con la interfaz: con estos elementos arrancamos algún dispositivo. Visualicémoslo. Elegí un dron, así que alternaré las clases según `item.parameter`.
+인터페이스에 대해 명확히하고 싶습니다. 이러한 요소를 사용하여 일부 장치를 시작합니다. 시각화 해 봅시다. 드론을 선택 했으므로 `item.parameter`에 따라 클래스를 전환하겠습니다.
 
-Cree una nueva propiedad en `data`:
+`데이터`에 새 속성을 만듭니다 :
 ```JS
 data() {
   status: false
 }
 ```
 
-Asignar el valor del `parameter` al `status` después de hacer clic en el botón y enviar tx al bloque:
+버튼을 클릭하고 tx가 블록으로 전송 된 후 상태에 매개 변수 값을 할당합니다 :
 ```JS
 methods: {
     async launch() {
@@ -1257,11 +1259,11 @@ methods: {
   }
 ```
 
-Escribe estilos para el dron en Launch.vue. No olvide el `scoped` de la etiqueta `<style>`, para aplicar estilos solo para este componente.
+**Launch.vue**에서 드론의 스타일을 작성하십시오. 이 구성 요소에만 스타일을 적용하려면 `<style>` 태그의 범위를 지정하는 것을 잊지 마십시오.
 
 <details>
 
-<summary>CSS para drones:</summary>
+<summary>드론 용 CSS :</summary>
 
 ```CSS
 <style scoped>
@@ -1298,9 +1300,9 @@ Escribe estilos para el dron en Launch.vue. No olvide el `scoped` de la etiqueta
 
 </details>
 
-![Paso 16 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-16.gif "Dapp Interface changing step 16")
+![Dapp Interface changing step 16](../images/build-dapp-interface/dapp-16.gif "Dapp Interface changing step 16")
 
-Ahora agreguemos el componente **DatalogSection.vue**.
+이제 **DatalogSection.vue** 구성 요소를 추가하겠습니다.
 
 ```JS
 components: {
@@ -1308,7 +1310,7 @@ components: {
 }
 ```
 
-Vuelva a formatear la matriz de registros desde:
+다음에서 로그 배열을 다시 포맷하십시오 :
 
 ```JS
 this.log.push({
@@ -1318,7 +1320,7 @@ this.log.push({
 });
 ```
 
-a (para estructuras como `[["entry 1 date", "entry 1 content"], ["entry 2 date", "entry 2 content"]]`):
+(`[[ "entry 1 date", "entry 1 content"], [ "entry 2 date", "entry 2 content"]]`와 같은 구조의 경우) :
 
 ```JS
 this.log.push([new Date().toLocaleString(), {
@@ -1328,7 +1330,7 @@ this.log.push([new Date().toLocaleString(), {
 }]);
 ```
 
-Reemplace el código de la plantilla:
+템플릿에서 코드를 바꿉니다 :
 
 ```HTML
 <div v-if="log.length > 0" class="log">
@@ -1342,26 +1344,26 @@ Reemplace el código de la plantilla:
 </div>
 ```
 
-con esto:
+이것으로 :
 
 ```HTML
 <DatalogSection :log="log"/>
 ```
 
-**Cheque:**
-![Paso 17 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-17.gif "Dapp Interface changing step 17")
+**확인 :**
+![Dapp 인터페이스 변경 17 단계](../images/build-dapp-interface/dapp-17.gif "Dapp Interface changing step 17")
 
-A veces tienes algunos errores, es casi inevitable. Algo puede salir mal con la conexión o puede suceder cualquier otra cosa. Entonces tenemos alternativas con mensajes de error en todo el dapp, no los he cambiado desde el principio, en el código se ven así:
+때로는 약간의 오류가 발생하지만 거의 불가피합니다. 연결에 문제가 생기거나 다른 일이 발생할 수 있습니다. 그래서 우리는 dapp을 통해 오류 메시지와 함께 폴백을 가지고 있으며, 코드는 다음과 같이 처음부터 변경하지 않았습니다 :
 
 ```HTML
 <div v-if="error" class="error">{{ error }}</div>
 ```
 
-En la interfaz, los errores se ven de esta manera ahora:
+인터페이스에서 오류는 다음과 같이 보입니다 :
 
-![Paso 18 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-18.png "Dapp Interface changing step 18")
+![Dapp 인터페이스 변경 18 단계](../images/build-dapp-interface/dapp-18.png "Dapp Interface changing step 18")
 
-Agregue estilos para el `.error` en **app.css**:
+**app.css**에서 `.error`에 대한 스타일을 추가합니다 :
 
 ```CSS
 .error {
@@ -1372,7 +1374,7 @@ Agregue estilos para el `.error` en **app.css**:
 }
 ```
 
-Y arreglaré un espacio entre la sección `.tools` y otro contenido desde la parte inferior también en **app.css**:
+`.tools` 섹션과 하단의 다른 콘텐츠 사이의 공간도 **app.css**에서 수정합니다.
 
 ```CSS
 .tools {
@@ -1380,21 +1382,21 @@ Y arreglaré un espacio entre la sección `.tools` y otro contenido desde la par
 }
 ```
 
-Obtendremos:
+결과는 :
 
-![Paso 19 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-19.png "Dapp Interface changing step 19")
+![Dapp 인터페이스 변경 19 단계](../images/build-dapp-interface/dapp-19.png "Dapp Interface changing step 19")
 
-Ahora en esta página tenemos los botones “primary”. Técnicamente está bien, pero esto no está bien según la experiencia del usuario anterior. Es mejor no utilizar más de un botón predominante en la pantalla. Así que arreglemoslo y agreguemos para el `Button` en **Launch.vue** con la propiedad `type = "secundaria"`:
+이제이 페이지에서 "기본"버튼이 필요합니다. 기술적으로는 괜찮지 만 위의 사용자 경험으로는 괜찮지 않습니다. 화면에서 하나 이상의 일반적인 버튼을 사용하지 않는 것이 좋습니다. 따라서이를 수정하고 속성 `type = "secondary"`로 **Launch.vue**에 `Button`을 추가해 보겠습니다. 
 
-![Paso 20 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-20.png "Dapp Interface changing step 20")
+![Dapp 인터페이스 변경 20 단계](../images/build-dapp-interface/dapp-20.png "Dapp Interface changing step 20")
 
-Genial, ahora solucionaré algunos problemas con mi nodo e iré al paso de demostración.
+좋습니다. 이제 노드의 일부 문제를 수정하고 데모 단계로 이동하겠습니다.
 
-## Demo
+## 데모
 
-Para empezar, me gustaría intercambiar pestañas, para prestar más atención a la más relevante, pero este no es el primer paso que hacemos para practicar. Invertir pestañas en **App.vue**.
+처음에는 가장 관련성이 높은 탭에 더 많은주의를 기울이기 위해 탭을 바꾸고 싶지만 이것이 우리가 연습하는 첫 번째 단계는 아닙니다. 먼저 **App.vue**에서 탭을 뒤집습니다.
 
-No olvide reemplazar los datos predeterminados:
+기본 데이터를 바꾸는 것을 잊지 마십시오 :
 
 ```JS
 data() {
@@ -1405,14 +1407,14 @@ data() {
 },
 ```
 
-![Paso 21 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-21.png "Dapp Interface changing step 21")
+![Dapp 인터페이스 변경 21 단계](../images/build-dapp-interface/dapp-21.png "Dapp Interface changing step 21")
 
-Como de costumbre, comencemos por cambiar lo que ya tenemos.
+평소처럼 이미 가지고있는 것을 변경하는 것부터 시작합시다.
 
-- EliminaR el título `<h2>Demo</h2>` como en los pasos anteriores
-- Encontrar elementos de la interfaz de usuario que ya hemos aprendido: registro de datos, botones, dirección de cuenta. Pero no tan rápido. Ahora cambiaremos solo el registro de datos.
+- 이전 단계에서와 같이 `<h2>Demo</h2>` 제목을 제거합니다.
+- 이미 학습 한 UI 요소 (데이터 로그, 버튼, 계정 주소)를 찾습니다. 그러나 그렇게 빠르지는 않습니다. 이제 데이터 로그 만 변경하겠습니다.
 
-Agregar el componente a **Demo.vue**:
+**Demo.vue**에 구성 요소를 추가합니다.
 
 ```JS
 components: {
@@ -1424,13 +1426,13 @@ components: {
 <DatalogSection :log="log"/>
 ```
 
-Tenemos datos sin procesar en el registro, por lo que debemos reformatear la matriz con el registro para pasar los datos de vista lista del componente como en los pasos anteriores. Busque la devolución de línea `return [item[0], item[1]];` in `async created()` y reemplácelo con:
+로그에 원시 데이터가 있으므로 이전 단계에서와 같이 구성 요소 준비보기 데이터를 전달하기 위해 로그로 배열을 다시 포맷해야합니다. 라인 `return [item [0], item [1]];`을 찾습니다 `async created()`에서 다음으로 바꿉니다 :
 
 ```JS
 return [new Date(Number(item[0])).toLocaleString(), JSON.parse(u8aToString(item[1]))];
 ```
 
-Elimine el código no utilizado del registro:
+로그에서 사용하지 않는 코드를 제거하십시오 :
 
 ```HTML
 <div v-if="log" class="log">
@@ -1442,7 +1444,7 @@ Elimine el código no utilizado del registro:
 </div>
 ```
 
-y:
+또는:
 
 ```JS
 filters: {
@@ -1455,14 +1457,14 @@ filters: {
 },
 ```
 
-**Cheque:**
-![Paso 22 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-22.png "Dapp Interface changing step 22")
+**확인:**
+![Dapp 인터페이스 변경 22 단계](../images/build-dapp-interface/dapp-22.png "Dapp Interface changing step 22")
 
-Para la personalización de este ejemplo de demostración con el lanzamiento de un robot, puede proponer cualquier idea. Personalmente, comencé con esta ciudad:
+로봇을 시작하여이 데모 예제를 사용자 정의하려면 아이디어를 자유롭게 생각해 낼 수 있습니다. 개인적으로 저는이 도시에서 시작했습니다 :
 
-![Paso 23 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-23.gif "Dapp Interface changing step 23")
+![Dapp 인터페이스 변경 23 단계](../images/build-dapp-interface/dapp-23.gif "Dapp Interface changing step 23")
 
-No mostraré el código completo para que esto no te confunda en absoluto, pero esquemáticamente habrá algo como esto:
+혼동하지 않도록 전체 코드를 보여주지는 않겠지 만 개략적으로 다음과 같은 내용이있을 것입니다 :
 
 ```HTML
 <div class="demo" :class="[robot.state ? 'play' : 'stop']">
@@ -1472,15 +1474,15 @@ No mostraré el código completo para que esto no te confunda en absoluto, pero 
 </div>
 ```
 
-Que dentro del elemento `.demo.play` escriba estilos para mover la ciudad hacia atrás y el automóvil hacia adelante.
+그런 다음 `.demo.play` 요소 내에 도시를 뒤로 이동하고 자동차를 앞으로 이동하는 스타일을 작성합니다.
 
-Mientras trabajaba en esto, se me ocurrió la idea de realizar la ciudad CyberPunk. Como no tengo ninguna tarea en particular, el automóvil se convirtió en un taxi, el conductor se convirtió en un pasajero, y ahora en la interfaz tenemos un holograma de robot de IA que da la bienvenida al pasajero (todos estos son solo CSS y tweaks&&tricks).
+이 작업을하면서 저는 CyberPunk 도시를 실현한다는 아이디어를 떠올 렸습니다. 특별한 작업이 없어서 차가 택시가되었고, 운전자가 승객이되었고, 이제 인터페이스에 승객을 맞이하는 AI 로봇 홀로그램이 있습니다 (모두 CSS와 그래픽 조정 및 트릭입니다).
 
-**TEl código de la demostración de Cyberpunk City:**
+**Cyberpunk 도시 데모 코드 :**
 
 <details>
 
-<summary>Plantilla</summary>
+<summary>주형</summary>
 
 ```HTML
 <div class="demo" :class="[robot.state ? 'play' : 'stop']">
@@ -1519,7 +1521,7 @@ Mientras trabajaba en esto, se me ocurrió la idea de realizar la ciudad CyberPu
 
 </details>
 
-Hay más de una dirección hash que debería acortarse, así que agregué el método:
+축약해야 할 해시 주소가 두 개 이상 있으므로 메서드를 추가했습니다 :
 
 ```JS
 methods: {
@@ -1529,7 +1531,7 @@ methods: {
 }
 ```
 
-No olvide registrar el componente Button
+Button 구성 요소를 등록하는 것을 잊지 마십시오
 
 ```JS
 components: {
@@ -1539,7 +1541,7 @@ components: {
 
 <details>
 
-<summary>Estilos</summary>
+<summary>스타일</summary>
 
 ```CSS
 <style scoped>
@@ -1745,34 +1747,28 @@ div.demo-city-1 {
 
 </details>
 
-**Resultado:**
+**결과:**
 
-![Paso 25 de cambio de interfaz Dapp](../images/build-dapp-interface/dapp-25.gif "Dapp Interface changing step 25")
+![Dapp 인터페이스 변경 25 단계](../images/build-dapp-interface/dapp-25.gif "Dapp Interface changing step 25")
 
-## Conclusion
+## 결론
 
-Felicidades! Ahora ha rediseñado la dapp y da pistas sobre cómo comenzar a construir la interfaz de su aplicación.
+축하합니다! 이제 dapp을 재 설계하고 애플리케이션 인터페이스 구축을 시작하는 방법에 대한 단서를 찾았습니다.
 
-### Enlaces de pago
+### 체크 아웃 링크
 
-- [Código completo de este tutorial](https://github.com/positivecrash/wscool21-ui-dapp)
-- [Discutir en discordia](https://discord.gg/5UWNGNaAUf)
-- [Ver el calendario y resumen de Robonomics Winter School 2021](https://robonomics.network/blog/winter-robonomics-school/)
-- [Github de colaborador](https://github.com/positivecrash)
+- [이 튜토리얼의 전체 코드](https://github.com/positivecrash/wscool21-ui-dapp)
+- [Discord에서 소통](https://discord.gg/5UWNGNaAUf)
+- [Robonomics Winter School 2021 일정 및 요약보기](https://robonomics.network/blog/winter-robonomics-school/)
+- [기여자의 Github](https://github.com/positivecrash)
 
-### Practica
+### 연습
 
-Si tiene algo de tiempo extra o quiere practicar sus habilidades, hay algunas ideas de mejoras que podría hacer en esta demostración:
+시간이 더 있거나 기술을 연습하고 싶다면이 데모를 개선 할 수있는 몇 가지 아이디어가 있습니다 :
 
-- Adapte la interfaz de usuario para pantallas estrechas, haga que dapp sea compatible con dispositivos móviles.
-- Agregue el modo ‘day/night’, editando el archivo **_variables.scss** y el archivo de plantilla de la dapp.
-- Agregar botones ‘Copy to clipboard’ para direcciones.
-- Haga popus delicados para informar a los usuarios sobre los cambios (por ejemplo, puede mostrar un mensaje emergente de que se reciben las unidades después de hacer clic en el botón ‘Faucet’, o puede mover en la ventana emergente un error que teníamos en la sección ‘Iniciar’).
+- 좁은 화면에 맞게 UI를 조정하고 dapp을 모바일 친화적으로 만듭니다
+- **_variables.scss** 파일과 dapp의 템플릿 파일을 편집하여 '날/밤'모드를 추가합니다.
+- 주소에 '클립 보드에 복사'버튼 추가하십시오
+- 사용자에게 변경 사항을 알리기 위해 섬세한 팝업을 만듭니다 (예 : '수도꼭지'버튼을 클릭 한 후 단위가 수신되었다는 메시지를 팝업하거나 '실행'섹션에서 발생한 오류를 팝업에서 이동할 수 있음).
 
-Por favor, llénate gratis para hacer preguntas y compartir tus resultados en [Discord](https://discord.gg/5UWNGNaAUf), márcame en tu mensaje `@positivecrash`.
-
-
-
-
-
-
+질문하고 [Discord](https://discord.gg/5UWNGNaAUf)에서 결과를 공유하십시오. `@positivecrash` 메시지에 저를 표시하십시오. 
