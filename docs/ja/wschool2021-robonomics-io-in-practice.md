@@ -73,7 +73,6 @@ robonomics io read sds011 | gz | robonomics io write pubsub my-sensor-data
 
 <Asciinema vid="QnN9l0sdaZZOyK9ah0DntvCXt"/>
 
-Then private seed also required as argument for `datalog` device. This seed is used to sign transaction and presents account as a sender. Let's generate it using embedded `robonomics key` command.
 
 また、`datalog`デバイスの引数としてprivateなシード値が必要です。このシード値は、取引に署名するために使用され、アカウントを送信者として提示します。組み込まれている`robonomics key`コマンドを使って生成してみましょう。
 
@@ -110,7 +109,6 @@ Robonomics IOを使って簡単に実装できますので、やってみまし�
 
 <Asciinema vid="MTpiawGo8DKEn081OozbYb5mU"/>
 
-If everything well the `Datalog` event with IPFS hash should be presented.
 うまくいけば、IPFSのハッシュを含む`Datalog`イベントが提示されるはずです。
 
 ![portal datalog complex](https://ipfs.io/ipfs/QmbpArfthyor5wFWRexgPAyjK7GaFduasc1eoReaf9TpJg/datalog_complex.png)
