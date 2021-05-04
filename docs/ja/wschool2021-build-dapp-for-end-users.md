@@ -4,13 +4,13 @@ contributors: [vol4tim]
 translated: false
 ---
 
-## Getting ready
+## 準備
 
-### Robonomics node launch
+### Robonomicsノードの立ち上げ
 
-For dApp development and testing, we will use a local Robonomics node. To do this, you need to download the compiled binary file https://github.com/airalab/robonomics/releases. I will be using Ubuntu, so I download the appropriate version.
+dAppの開発とテストには、ローカルのRobonomicsノードを使用します。そのためには、コンパイル済みのバイナリファイル https://github.com/airalab/robonomics/releases をダウンロードする必要があります。私はUbuntuを使用するので、適切なバージョンをダウンロードします。
 
-Unpack the archive
+アーカイブを解凍
 ```sh
 wget https://github.com/airalab/robonomics/releases/download/v0.24.0/robonomics-ubuntu-0.24.0-x86_64.zip
 unzip robonomics-ubuntu-0.24.0-x86_64.zip
@@ -18,51 +18,53 @@ cd robonomics-ubuntu-0.24.0-x86_64
 chmod +x robonomics
 ```
 
-Now we can start the node in development mode. To do this, use the --dev flag
+これでノードを開発モードで起動できるようになりました。これには --dev フラグを使います。
 ```sh
 ./robonomics --dev
 ```
 
-> Troubleshooting
+> トラブルシューティング
 ```sh
 ./robonomics purge-chain --dev
 ```
 
-### Browser extension
+### ブラウザ拡張
 
-To store keys in a browser, there is a `polkadot{.js} extension`. In dApp we will use it to sign transactions.
+ブラウザに鍵を保存するために、`polkadot{.js}`という拡張機能があります。dAppでは、これを使ってトランザクションに署名します。
 
-The extension is currently available for `Google chrome` and `Firefox` https://polkadot.js.org/extension/
+この拡張機能は現在、`Google chrome` と `Firefox` で利用可能です。https://polkadot.js.org/extension/ 
 
-After installing the extension, create a new account.
+拡張機能をインストールしたら、新しいアカウントを作成します。 
 ![screen1](../images/build-iot-dapps/screen1.png)
 
-> The first step is completed.
+> 最初のステップが完了しました。
 
-## DApp development
+## DApp 開発
 
 ### Step 1
 
-> We will write the dApp using the vue.js framework, although you can use whatever you like/can.
+> ここでは、vue.jsのフレームワークを使ってdAppを書きますが、好きなもの・できるものを使っても構いません。
 
-Let's start developing the dApp by creating a startup application with vue.js And here you can do it in two ways.
+vue.jsで起動アプリを作ってdAppの開発を始めましょう ここでは、2つの方法で行うことができます。
 
-Way 1:
+方法 1:
 
-Using the `Vue cli` console utility.
-To do this, you need to install it https://cli.vuejs.org/guide/installation.html
+`Vue cli`コンソールユーティリティを使用する。これを行うには、`Vue cli`をインストールする必要があります。https://cli.vuejs.org/guide/installation.html 
 
-After installation, you can run the command in the terminal
+インストールが完了したら、ターミナルで次のコマンドを実行します。
+
 
 ```sh
 vue create mydapp
 ```
 
 Answer a few questions of the setup wizard. We will be using version Vue 2, so we keep the default version `Default ([Vue 2] babel, eslint)`.
+セットアップウィザードのいくつかの質問に答えます。ここでは、Vue 2バージョンを使用するので、デフォルトのバージョン`Default ([Vue 2] babel, eslint)`のままにしておきます。
 
-Way 2:
 
-Clone the prepared git repository with the example and switch to step 1
+方法 2:
+
+例のために準備されたgitリポジトリをクローンして、step-1にチェックアウトする。
 
 ```sh
 git clone https://github.com/airalab/example-robonomics-dapp.git mydapp
@@ -70,27 +72,27 @@ cd mydapp
 git checkout step-1
 ```
 
-As a result, we will get a directory with the installed startup application, which can already be launched and opened in the browser.
+その結果、起動アプリケーションがインストールされたディレクトリが作成され、起動してブラウザで開くことができるようになります。
+
 
 ```sh
 yarn
 yarn serve
 ```
 
-### Step 2. Getting started with polkadot.js
+### Step 2. polkadot.jsを使い始める
 
-#### Installing dependencies
+#### 依存関係のインストール
 
-To connect the dApp to the Robonomics chain, there is the `@polkadot/api` library. And for interaction of dApp with an extension with keys, we have the `@polkadot/extension-dapp` library. We need to install them into our application.
-More details on using this library can be found in the documentation https://polkadot.js.org/docs/.
+ロボノミクスチェーンにdAppを接続するために、`@polkadot/api`ライブラリがあります。また、キーを持つ拡張機能とdAppを連動させるためには、`@polkadot/extension-dapp`ライブラリがあります。これらをアプリケーションにインストールする必要があります。このライブラリの使い方の詳細は、ドキュメント https://polkadot.js.org/docs/ に記載されています。
 
-Way 1:
+方法 1:
 
 ```sh
 yarn add @polkadot/api @polkadot/extension-dapp
 ```
 
-You also need to add the `vue.config.js` file to support `mjs` extension.
+また、mjs拡張をサポートするために、vue.config.jsファイルを追加する必要があります。
 
 `vue.config.js`
 ```js
@@ -113,9 +115,9 @@ module.exports = {
 };
 ```
 
-#### Connecting to Robonomics
+#### Robonomicsへの接続
 
-First, let's create a configuration file with the parameters for connecting to the Robonomics node. In the demo repository, there is an example of this file `config.template.json`.
+まず、Robonomicsノードに接続するためのパラメータを記述した設定ファイルを作成しましょう。デモのリポジトリには、このファイル`config.template.json`の例があります。
 
 `src/config.json`
 ```json
@@ -130,9 +132,10 @@ First, let's create a configuration file with the parameters for connecting to t
 }
 ```
 
-In this file, we indicate the node, which we are going to connect to, and custom types. The types for Robonomics can be taken from github https://github.com/airalab/robonomics/blob/master/bin/node/cli/res/custom_types.json
+このファイルでは、接続先のノードとカスタムタイプを指定しています。Robonomicsのためのタイプは、githubから取得できます。 https://github.com/airalab/robonomics/blob/master/bin/node/cli/res/custom_types.json 
 
-Now we need to write a script to connect to our running node.
+
+次に、実行中のノードに接続するためのスクリプトを書きます。
 
 `src/utils/api.js`
 ```js
@@ -154,7 +157,7 @@ export function getApi() {
 }
 ```
 
-So that we can sign transactions with the key from the extension, let’s add two functions for connecting to the extension and the function for initializing the account.
+拡張機能のキーを使ってトランザクションに署名できるように、拡張機能への接続用の関数と、アカウントを初期化するための関数の2つを追加しましょう。
 
 `src/utils/api.js`
 ```js
@@ -190,7 +193,7 @@ export async function initAccount(index = 0) {
 ...OTHER_CODE...
 ```
 
-Our account will have a zero balance, while we need a little funds. So we need to create another faucet function. As we launched Robonomics with the `--dev` flag, we have `Alice` account with a large balance, so we will request funds from there.
+口座の残高はゼロですが、ちょっとした資金が必要になります。そこで、別のfaucet関数を作る必要があります。Robonomicsを --dev フラグで起動したところ、残高の多いアリスアカウントがあるので、そこから資金を要求します。
 
 `src/utils/api.js`
 ```js
@@ -216,17 +219,17 @@ export async function faucet(address) {
 ...OTHER_CODE...
 ```
 
-The full version of script https://github.com/airalab/example-robonomics-dapp/blob/master/src/utils/api.js
+フルバージョンのスクリプト  https://github.com/airalab/example-robonomics-dapp/blob/master/src/utils/api.js
 
-Run app
+アプリの実行
 
 ```sh
 yarn serve
 ```
 
-Way 2:
+方法 2:
 
-If you start the application with cloning the repository, then in order to complete these steps, it will be enough to switch to step 2 and install the rest of the dependencies.
+リポジトリをクローンしてアプリケーションを開始した場合、このステップを完了するためには、ステップ2に切り替えて残りの依存関係をインストールするだけで十分です。
 
 ```sh
 git checkout step-2
@@ -235,15 +238,16 @@ yarn
 yarn serve
 ```
 
-### Step 3. Vue connecting component
+### Step 3. vueをコンポーネントに接続
 
-#### Connecting
+#### 接続
 
 We have already written a script for connecting. Now we can use it on our interface. It is enough to call the written `initApi` function in  the root component `App.vue`. And while the user is waiting for a connection, we will show him a small loader, for now in the form of an ellipsis.
+接続用のスクリプトはすでに書いてあります。あとはそれをインターフェイス上で使います。書かれた`initApi`関数を、ルートコンポーネントの`App.vue`で呼び出すだけで十分です。そして、ユーザーが接続を待っている間に、小さなローダーを表示します（今のところ、省略記号の形で）。
 
-Way 1:
+方法 1:
 
-Component template and base styles.
+コンポーネントのテンプレートとベーススタイル。
 
 `src/App.vue`
 ```js
@@ -299,7 +303,7 @@ input:focus {
 </style>
 ```
 
-There is the component code where the  `initApi` function will be called
+`initApi`関数が呼び出されるコンポーネントコードがあります。
 
 `src/App.vue`
 ```js
@@ -334,11 +338,11 @@ export default {
 </script>
 ```
 
-#### Account with balance
+#### アカウントの残高表示
 
-Now we can use our account, top up its balance and show it on the interface.
+これで、アカウントを使用し、残高を追加してインターフェイスに表示できるようになりました。
 
-Let’s add the appropriate markup to the template
+適切なマークアップをテンプレートに追加しましょう。
 
 `src/App.vue`
 ```js
@@ -363,7 +367,7 @@ Let’s add the appropriate markup to the template
 </template>
 ```
 
-Let’s add new fields for account address and balance
+アカウントアドレスと残高の新しいフィールドを追加しよう
 
 `src/App.vue`
 ```js
@@ -386,7 +390,7 @@ data() {
 ...OTHER_CODE...
 ```
 
-We need to add the account initialization to the `init` function and get its balance
+`init`関数にアカウントの初期化を追加し、その残高を取得する必要があります。
 
 `src/App.vue`
 ```js
@@ -414,7 +418,7 @@ async init() {
 </script>
 ```
 
-It remains to add the function of replenishing the balance, when clicking on the button
+あとは、ボタンをクリックすると、残高が補充される機能を追加します。
 
 `src/App.vue`
 ```js
@@ -431,15 +435,15 @@ It remains to add the function of replenishing the balance, when clicking on the
 
 https://github.com/airalab/example-robonomics-dapp/blob/step-3/src/App.vue
 
-Run app
+アプリの実行
 
 ```sh
 yarn serve
 ```
 
-Way 2:
+方法 2:
 
-If you start the application with cloning the repository, then to complete these steps, you will just need to switch to step 3.
+リポジトリをクローンした状態でアプリケーションを起動した場合、このステップを完了するには、ステップ3に切り替えるだけです。
 
 ```sh
 git checkout step-3
@@ -450,15 +454,16 @@ As a result we will get this picture in the browser
 
 ![screen2](../images/build-iot-dapps/screen2.png)
 
-### Step 4. Datalog
+### Step 4. データログ
 
-To save and read any data in the chain, we use the `datalog` module.
+チェーン内の任意のデータを保存したり読み出したりするには、`datalog`モジュールを使用します。
 
-For an example of how to use this module, let's make a `Datalog.vue` component.
+このモジュールの使い方の例として、`Datalog.vue`コンポーネントを作ってみましょう。
 
-Way 1:
+方法 1:
 
-In the markup, we will have a button for reading data `read` with a block, where we will display a list in the form of a date and the data itself. And there will be a form with a text input, into which you can enter any data in the form of a string, and a `write` button.
+
+マークアップでは、ブロックでデータを読むための`read`ボタンを用意し、そこに日付の形式でリストを表示し、データそのものを表示するようにします。そして、文字列の形で任意のデータを入力できるテキスト入力のあるフォームと、`write`ボタンを用意します。
 
 `src/components/Datalog.vue`
 ```js
@@ -495,7 +500,8 @@ In the markup, we will have a button for reading data `read` with a block, where
 </style>
 ```
 
-Component code. Here the main point in sending a transaction is to call the function, into which we transfer data and which we sign with our account, via api `this.api.tx.datalog.record(stringToHex(this.data)).signAsync(this.account);`
+コンポーネントコードです。ここでは、トランザクションを送信する際の主なポイントは、データを転送し、アカウントで署名する関数を、apiを介して呼び出すことです。
+`this.api.tx.datalog.record(stringToHex(this.data)).signAsync(this.account);`
 
 `src/components/Datalog.vue`
 ```js
@@ -549,7 +555,7 @@ export default {
 
 https://github.com/airalab/example-robonomics-dapp/blob/master/src/components/Datalog.vue
 
-To switch between components, added to `App.vue` the output of our component
+コンポーネントを切り替えるには、`App.vue`にコンポーネントの出力を追加します。
 
 `src/App.vue`
 ```js
@@ -615,32 +621,33 @@ export default {
 </style>
 ```
 
-Run app
+アプリの実行
 
 ```sh
 yarn serve
 ```
 
-Way 2:
+方法 2:
 
-If you start the application with cloning the repository, then to complete these steps, you will just need to switch to step 4.
+リポジトリをクローンした状態でアプリケーションを開始した場合、このステップを完了するには、ステップ4に切り替えるだけです。
 
 ```sh
 git checkout step-4
 yarn serve
 ```
 
-As a result we will get this picture in the browser
+その結果、ブラウザには次のような画像が表示されます。
 
 ![screen3](../images/build-iot-dapps/screen3.png)
 
-### Step 5. Launch
+### Step 5. 起動
 
-This function is used to start and stop the robot. To demonstrate how to use this module, let's write the `Launch.vue` component.
+この関数は、ロボットの起動と停止に使用されます。このモジュールの使い方を説明するために、`Launch.vue`コンポーネントを書いてみましょう。
 
-Way 1:
 
-In the component template, we will have a form where you can specify the address of the robot, the ON/OFF clicker and the button for sending.
+方法 1:
+
+コンポーネントのテンプレートには、ロボットのアドレス、ON/OFFクリッカー、送信用ボタンを指定するフォームを用意します。
 
 `src/components/Launch.vue`
 ```js
@@ -681,7 +688,7 @@ In the component template, we will have a form where you can specify the address
 </style>
 ```
 
-The code looks like the `Datalog.vue` component. The difference is just in reading. The robot will receive the command through events.
+このコードは`Datalog.vue`コンポーネントのように見えます。違いは読み方だけです。ロボットはイベントを通じてコマンドを受け取ります。
 
 `src/components/Launch.vue`
 ```js
@@ -745,7 +752,8 @@ export default {
 
 https://github.com/airalab/example-robonomics-dapp/blob/master/src/components/Launch.vue
 
-For display, add a new component to `App.vue`
+
+表示のために、`App.vue`に新しいコンポーネントを追加します。
 
 `src/App.vue`
 ```js
@@ -790,36 +798,36 @@ components: {
 ...OTHER_CODE...
 ```
 
-Run app
+アプリの実行
 
 ```sh
 yarn serve
 ```
 
-Way 2:
+方法 2:
 
-If you start the application with cloning the repository, then to complete these steps, you will just need to switch to step 5.
+リポジトリをクローンした状態でアプリケーションを起動した場合、このステップを完了するには、ステップ5に切り替えるだけです。
 
 ```sh
 git checkout step-5
 yarn serve
 ```
 
-As a result we will get this picture in the browser
+その結果、ブラウザには次のような画像が表示されます。
 
 ![screen4](../images/build-iot-dapps/screen4.png)
 
-### Step 6. Demo
+### Step 6. デモ
 
-In this demo, we will have a car that can be started and stopped through the dApp. The car collects a log during the trip, and after stopping, saves it to the chain. Here we will use both modules, which we tried separately, in conjunction.
+このデモでは、dAppを介して起動・停止できる車を用意します。車は走行中にログを収集し、停車後にはチェーンに保存します。ここでは、別々に試した2つのモジュールを組み合わせて使用します。　
 
-To emulate the behavior of a robot (car), we will write a Robot class. We will use the `Alice` key as an account for this robot. The `Robot` class will watch for `NewLaunch` events to turn itself on and off. After turning on, it starts collecting data into the log, in terms of data it will be just a timestamp. And after shutdown, it saves this log to the `datalog` module.
+ロボット(車)の動作をエミュレートするために、Robotクラスを書きます。このロボットのアカウントとして`Alice`キーを使います。`Robot`クラスは、`NewLaunch`イベントを監視して、自分の電源を入れたり切ったりします。電源を入れた後は、ログにデータを集め始めます。そして、シャットダウンの後、このログを`datalog`モジュールに保存します。
 
-Way 1:
+方法 1:
 
-Create file `src/utils/robot.js`. The full code of the file https://github.com/airalab/example-robonomics-dapp/blob/master/src/utils/robot.js
+`src/utils/robot.js`というファイルを作成します。ファイルのフルコード https://github.com/airalab/example-robonomics-dapp/blob/master/src/utils/robot.js
 
-For visualization, we will create a `Demo.vue` component, where we will have a start button, car animation and log output.
+ビジュアル化のために、`Demo.vue`コンポーネントを作成し、スタートボタン、車のアニメーション、ログ出力を行います。
 
 `src/components/Demo.vue`
 ```js
@@ -912,7 +920,7 @@ For visualization, we will create a `Demo.vue` component, where we will have a s
 </style>
 ```
 
-Component code. Here we need to create an instance of the `Robot` class and a launch/stop function.
+コンポーネントのコードです。ここでは、`Robot`クラスのインスタンスと、launch/stop関数を作成する必要があります。
 
 `src/components/Demo.vue`
 ```js
@@ -978,9 +986,9 @@ export default {
 
 https://github.com/airalab/example-robonomics-dapp/blob/master/src/components/Demo.vue
 
-Let's add another picture of our car to `src/images/build-iot-dapps/car.png`. Example https://github.com/airalab/example-robonomics-dapp/blob/master/src/images/build-iot-dapps/car.png.
+車の写真をもう一枚、`src/images/build-iot-dapps/car.png`に追加してみましょう。 例 https://github.com/airalab/example-robonomics-dapp/blob/master/src/images/build-iot-dapps/car.png.
 
-For display, add a new component to `App.vue`
+表示のために、`App.vue`に新しいコンポーネントを追加します。
 
 `src/App.vue`
 ```js
@@ -1033,25 +1041,25 @@ components: {
 ...OTHER_CODE...
 ```
 
-Run app
+アプリの実行
 
 ```sh
 yarn serve
 ```
 
-Way 2:
+方法 2:
 
-If you start the application with cloning the repository, then to complete these steps, you will just need to switch to step 6.
+リポジトリをクローンした状態でアプリケーションを起動した場合、このステップを完了するには、ステップ6に切り替えるだけです。
 
 ```sh
 git checkout step-6
 yarn serve
 ```
 
-As a result we will get this picture in the browser
+その結果、ブラウザには次のような画像が表示されます。
 
 ![screen5](../images/build-iot-dapps/screen5.png)
 
-This concludes our lesson.
+以上で、今回のレッスンは終了です。
 
-Thanks!
+ありがとうございました！
