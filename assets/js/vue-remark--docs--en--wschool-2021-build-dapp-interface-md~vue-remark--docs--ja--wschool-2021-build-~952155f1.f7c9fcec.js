@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vue-remark--docs--en--wschool-2021-build-dapp-interface-md~vue-remark--docs--ja--wschool-2021-build-~6d24fcc5"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vue-remark--docs--en--wschool-2021-build-dapp-interface-md~vue-remark--docs--ja--wschool-2021-build-~952155f1"],{
 
 /***/ "1E/v":
 /*!*************************************************************************************************************************************************************************************************************!*\
