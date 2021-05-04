@@ -1,17 +1,17 @@
 ---
-title: 레슨 2, ROBONOMICS GITHUB 개요
-기여자 : [arinaml]
+title: Lesson 2, Robonomics GitHub overview
+contributors: [Ensrationis]
 translated: true
 ---
 
-## 1 단계 : VIRTUALBOX에 AIRA 설치
+## Step 1: AIRA Installation on VirtualBox
 
 https://youtu.be/ISKilRfY3Ow
 
-## 2 단계 : SSH를 통해 AIRA 연결
+## Step 2: Connecting Aira via SSH
 
 https://youtu.be/W0rOcRA2sEc
 
-## 3 단계 : AIRA와 상호 작용
+## Step 3: Interact with AIRA
 
 https://youtu.be/fhRTF2mddfU
