@@ -1,75 +1,75 @@
 ---
-title: Lesson 5, Connectivity
-contributors: [vourhey]
+title: 5과, 연결성
+contributors: [vourhey, arinaml]
 translated: true
 ---
 
-## IoT as a Multiple Pie
+## 다중 파이로 IOT
 
-* Device Software
+* 장치 소프트웨어
     * FreeRTOS
     * ESP/Arduino
-    * Single-board computers (RPi, LattePanda etc)
-* Connectivity
+    * 싱글 보드 컴퓨터 (RPi, LattePanda 등)
+* 연결성
     * IoT Hub
-    * IoT Manager
-* Analytics Services
+    * IoT 매니저
+* 분석 서비스
     * AWS
     * Google Cloud IoT Core
     * ThingsBoard
 
-As a rule, most are not interested in sensors and servers, but data analytics.
-To get it, you need to decide which device to use, how to work with it and where to connect
+일반적으로 대부분은 센서와 서버에 관심이 없지만 데이터 분석에 관심이 있습니다.
+이를 얻으려면 사용할 장치, 작업 방법 및 연결할 위치를 결정해야합니다.
 
-## Device Software
+## 장치 소프트웨어
 
-Consider the example of a home weather station. It is necessary to collect data on air pollution (SDS011), temperature and humidity (BME). The ESP8266 microcontroller can handle this task.
+가정용 기상 관측소의 예를 고려하십시오. 대기 오염 (SDS011), 온도 및 습도 (BME)에 대한 데이터 수집이 필요합니다. ESP8266 마이크로 컨트롤러는이 작업을 처리 할 수 있습니다.
 
-Requirements:
+요구 사항 :
 
-* Correctly read data from sensors
-* Have a unique identifier
-* Transfer data to a known server
-* Provide digital signature of data (optional)
+* 올바르게 센서로부터 데이터를 받기
+* 고유 식별자가 있슴
+* 알려진 서버로 데이터 전송
+* 데이터의 디지털 서명 제공 (선택 사항)
 
-You can find the current firmware [here](https://github.com/LoSk-p/sensors-software/tree/366b19bf447a5fc19220ef89eab0f2440f8db1c2)
+[여기에서](https://github.com/LoSk-p/sensors-software/tree/366b19bf447a5fc19220ef89eab0f2440f8db1c2) 현재 펌웨어를 찾을 수 있습니다.
 
-## What is Connectivity? 
+## 연결성이 무엇인가?
 
-In the IoT world, connectivity refers to the connection of various IoT devices to the Internet to send data and / or control the device.
+IoT 세계에서 연결이란 다양한 IoT 장치를 인터넷에 연결하여 데이터를 전송하거나 장치를 제어하는 것을 말합니다.
 
-Well-known architectural solutions can be roughly divided into 3 groups:
+잘 알려진 아키텍처 솔루션은 크게 세 그룹으로 나눌 수 있습니다.
 
-* Fully decentralized. For example, devices are connected by a mesh network. Not suitable for wide area networks due to high hardware requirements
-* Centralized. For example, AWS. Provides a single entry point and ease of connection, but there is a high risk of failure in case of server problems
-* Hybrid. For example, [Robonomics Connectivity](https://github.com/airalab/sensors-connectivity). Provides an address for devices on a "local" network and publishes data to a distributed IPFS message channel
+* 분산전산망. 예를 들어, 장치는 메시 네트워크로 연결됩니다. 높은 하드웨어 요구 사항으로 인해 광역 네트워크에 적합하지 않습니다
+* 집중형망.예 : AWS. 단일 진입 점 및 연결 용이성을 제공하지만 서버 문제 발생시 장애 위험이 높습니다.
+* 하이브리드. 예를 들어, [Robonomics 연결성](https://github.com/airalab/sensors-connectivity) "로컬"네트워크에있는 장치에 대한 주소를 제공하고 분산 된 IPFS 메시지 채널에 데이터를 게시합니다. 
 
-## Comparison of AWS and Robonomics Connectivity
+## AWS와 Robonomics 연결성의 비교
 
-| Management services 	| AWS                               	|               Robonomics              	|
+| 관리 서비스              | AWS                                  |               Robonomics              	|
 |---------------------	|-----------------------------------	|---------------------------------------	|
-| Transaction type    	| Technical                         	| Technical and economic                	|
-| Security            	| IT-company cloud control          	| Polkadot and Ethereum                 	|
-| Protocol            	| HTTPS, MQTT                       	| IPFS, Robonomics                      	|
-| Ecosystem           	| Private                           	| Shared                                	|
-| Access to DeFi      	| No                                	| Yes                                   	|
-| Costs               	| Pushing data - $1-2 a sensor      	| Pushing data - $0                     	|
-|                     	| Shadow         - from $10 a month 	| Digital Twin    - $0,01 a transaction 	|
+| 거래 유형               | 기술                                  | 기술 및 경제                             	 |
+| 보안                   | IT 회사 클라우드 제어                    | Polkadot 및 Ethereum                     |
+| 프로토콜            	 | HTTPS, MQTT                       	 | IPFS, Robonomics                        |
+| 생태계             	  | 개인                           	    | 공유                                	   |
+| DeFi에  액세스          | 없음                                	| 있음                                   	|
+| 소송 비용               | 데이터 푸시-센서 당 $ 1-2                 | 데이터 푸시-$ 0                            |
+|                     	| Shadow-월 $ 10                        | 디지털 트윈-거래 당 $ 0,01                  |
 
-## Installing Connectivity on Aira
+## 연결성 ON AIRA 설치하기
 
 https://www.youtube.com/watch?v=JbBNMHAzJKM
 
-### Requirements
+### 요구 사항
 
-* [VirtualBox 6.1](https://www.virtualbox.org/wiki/Downloads) and above
-* [Aira OS ova image](https://static.aira.life/ova/airaos-21.03_robonomics-winter-school.ova)
+* [VirtualBox 6.1 이상](https://www.virtualbox.org/wiki/Downloads) and above
+* [Aira OS ova 이미지](https://static.aira.life/ova/airaos-21.03_robonomics-winter-school.ova)
 
-Import Aira image in VirtualBox as described [here](/docs/aira-installation-on-vb/)
+[여기에](/docs/aira-installation-on-vb/)설명 된대로 VirtualBox에서 Aira 이미지 가져 오기
 
-Set up a connection over [SSH](/docs/aira-connecting-via-ssh/)
+[SSH](/docs/aira-connecting-via-ssh/)를 통한 연결 설정 
 
-When everything is set and you successfully log in via SSH, let's clone the main package and build it 
+모든 것이 설정되고 SSH를 통해 성공적으로 로그인되면 메인 패키지를 복제하고 빌드 해 보겠습니다.
 
 ```
 git clone https://github.com/airalab/sensors-connectivity
@@ -77,9 +77,9 @@ cd sensors-connectivity
 nix build -f release.nix
 ```
 
-Now let's create a copy of the default configuration file for later usage. 
-To learn about all the options check [this article](/docs/configuration-options-description/) out.
-Then launch the package with `roslaunch`
+이제 나중에 사용할 수 있도록 기본 구성 파일의 복사본을 만들어 보겠습니다.
+모든 옵션에 대해 알아 보려면[이 기사를](/docs/configuration-options-description/)확인하십시오.
+그런 다음 `roslaunch`로 패키지를 시작합니다.
 
 ```
 cp config/default.json config/my.json
@@ -87,22 +87,22 @@ source result/setup.zsh
 roslaunch sensors_connectivity agent.launch config:=$PWD/config/my.json
 ```
 
-## Connect Sensor to Connectivity
+## 센서를 연결성에 연결
 
 https://www.youtube.com/watch?v=yxqxBk-6bpI
 
-### Requirements
+### 요구 사항
 
-* [Nova SDS011](https://aqicn.org/sensor/sds011) sensor 
-* [Yarn Packet Manager](https://yarnpkg.com/getting-started/install)
+* [Nova SDS011 센서1](https://aqicn.org/sensor/sds011) sensor 
+* [Yarn 패키지 매니저](https://yarnpkg.com/getting-started/install)
 
-Now let's connect a real sensor, forward USB port to the virtual machine, set up a map and look at our own measurements
+이제 실제 센서를 연결하고 USB 포트를 가상 머신에 전달하고지도를 설정하고 자체 측정을 살펴 보겠습니다
 
-First, stop the Aira OS if it was running and add a corresponding USB device
+먼저 Aira OS가 실행 중이면 중지하고 해당 USB 장치를 추가하십시오
 
 ![VB USB Forwarding](../images/vb_forward_usb.jpg)
 
-Start the VM, connect via SSH and set `comstation/port` option according to your USB device in the VM. Also enable `comstation` and set your latitude and longitude. In the end `config/my.json` should look like this:
+VM을 시작하고 SSH를 통해 연결 한 다음 VM의 USB 장치에 따라 `comstation/port` 옵션을 설정합니다. 또한 `comstation`을 활성화하고 위도와 경도를 설정하십시오. 결국 `config/my.json`은 다음과 같아야합니다.
 
 ```
 {
@@ -148,9 +148,9 @@ Start the VM, connect via SSH and set `comstation/port` option according to your
 }
 ```
 
-> If you don't have a real sensor, you can use `sensors-connectivity/utils/virtual-sensor.py` script to emulate one
+> 실제 센서가없는 경우 `sensors-connectivity/utils/virtual-sensor.py` 스크립트를 사용하여 하나를 에뮬레이션 할 수 있습니다
 > 
-> Enable `HTTPStation` and disable `COMStation` by changing the configuration file as:
+> 구성 파일을 다음과 같이 변경하여 `HTTPStation`을 활성화하고 `COMStation`을 비활성화합니다 :
 > ```
 > {
 >    "general":{
@@ -171,20 +171,20 @@ Start the VM, connect via SSH and set `comstation/port` option according to your
 > }
 > ```
 >
-> and launching `utils/virtual-sensor.py` in a dedicated terminal in the VM
+> VM의 전용 터미널에서 `utils/virtual-sensor.py` 실행
 
-Save the file and launch connectivity from `sensors-connectivity` folder:
+파일을 저장하고`sensors-connectivity` 폴더에서 연결을 시작합니다.
 
 ```
 source result/setup.zsh
 roslaunch sensors_connectivity agent.launch config:=$PWD/config/my.json
 ```
 
-You should see first measurements in the console output
+콘솔 출력에 첫 번째 측정이 표시되어야합니다.
 
-Look for your IPFS ID in the VM. It appears right after booting the image or via `ipfs id` command. We will need it later.
+VM에서 IPFS ID를 찾으십시오. 이미지를 부팅 한 직후 또는 `ipfs id` 명령을 통해 나타납니다. 나중에 필요합니다.
 
-Now let's set up our own instance of the map. On your laptop (not in the VM) clone [this](https://github.com/airalab/sensors.robonomics.network) repository and build the app:
+이제 맵의 자체 인스턴스를 설정하겠습니다. VM이 아닌 노트북에서이 [저장소를 복제하고](https://github.com/airalab/sensors.robonomics.network) 앱을 빌드합니다.
 
 ```
 git clone https://github.com/airalab/sensors.robonomics.network
@@ -192,7 +192,7 @@ cd sensors.robonomics.network
 yarn install
 ```
 
-Edit `src/agents.json` file and put your IPFS ID. For example:
+`src/agents.json` 파일을 편집하고 IPFS ID를 입력하십시오. 예를 들면
 
 ```
 [
@@ -200,40 +200,40 @@ Edit `src/agents.json` file and put your IPFS ID. For example:
 ]
 ```
 
-Launch the map:
+map 시작 :
 
 ```
 yarn serve
 ```
 
-Go to [http://localhost:8080/](http://localhost:8080/) or the address yarn gave you and look for the sensor.
+[http://localhost:8080/](http://localhost:8080/) 또는 yarn이 제공한 주소로 이동하여 센서를 찾으십시오. 
 
-## Practice
+## 연습
 
-### Trajectory 1. Flash a sensor ESP + SDS011
+### Trajectory 1. 플래시 센서 ESP + SDS011
 
-Requirements:
+요구 사항 :
 
 * ESP8266
-* At least one of sensors SDS011, BME280, HTU21D
+* 센서 SDS011, BME280, HTU21D 중 하나 이상
 
-Use the [instruction](https://wiki.robonomics.network/docs/connect-sensor-to-robonomics/) to connect a sensor to Robonomics Connectivity. 
+[지침을](https://wiki.robonomics.network/docs/connect-sensor-to-robonomics/) 사용하여 센서를 Robonomics Connectivity에 연결합니다.  
 
-Check that your sensor appears on our [map](https://sensors.robonomics.network/#/).
+센서가 [매프에 ](https://sensors.robonomics.network/#/)나타나는지 확인하십시오.
 
-### Trajectory 2. Launch Connectivity
+### Trajectory 2. 연결성 시작
 
-Requirements:
+요구 사항 :
 
 * ROS
 * Python
-* Nix (optional)
+* Nix (선택 과목)
 
-Build and launch [sensors-connectivity](https://github.com/airalab/sensors-connectivity#get-a-package-and-build)
+[센서 연결 구축 및 실행](https://github.com/airalab/sensors-connectivity#get-a-package-and-build)
 
-> How it build, install [here](https://wiki.robonomics.network/docs/iot-sensors-connectivity/) and configure [here](https://wiki.robonomics.network/docs/configuration-options-description/)
+> 빌드, [설치](https://wiki.robonomics.network/docs/iot-sensors-connectivity/) 및 [구성하](https://wiki.robonomics.network/docs/configuration-options-description/)는 방법. 
 
-General scheme of the package:
+패키지의 일반 계획 :
 
 ```
     station1 \                        / feeder1
@@ -241,9 +241,8 @@ General scheme of the package:
     station3 /                        \ feeder3
 ```
 
-The choice is proposed to implement either a new station, for example, a random number generator, or a new feeder, for example, displaying a string on the screen.
+예를 들어 난수 생성기와 같은 새로운 스테이션을 구현하거나, 예를 들어 화면에 문자열을 표시하는 새 피더를 구현하기 위해 선택이 제안됩니다.
 
-Interface `IStation` [here](https://github.com/airalab/sensors-connectivity/blob/master/src/stations/istation.py#L73).
+`IStation` 인터페이스 [여기](https://github.com/airalab/sensors-connectivity/blob/master/src/stations/istation.py#L73).
 
-Interface `IFeeder` [here](https://github.com/airalab/sensors-connectivity/blob/master/src/feeders/ifeeder.py#L5)
-
+`IFeeder` 인터페이스 [여기](https://github.com/airalab/sensors-connectivity/blob/master/src/feeders/ifeeder.py#L5)
