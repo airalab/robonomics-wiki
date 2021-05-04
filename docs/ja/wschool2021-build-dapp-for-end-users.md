@@ -1,7 +1,7 @@
 ---
-title: Lesson 6.1, Build IoT Dapps For End Users
-contributors: [vol4tim]
-translated: false
+title: Lesson 6.1, エンドユーザー向けのIoT Dappsの構築
+contributors: [KiichiSugihara]
+translated: true
 ---
 
 ## 準備
@@ -58,7 +58,6 @@ vue.jsで起動アプリを作ってdAppの開発を始めましょう ここで
 vue create mydapp
 ```
 
-Answer a few questions of the setup wizard. We will be using version Vue 2, so we keep the default version `Default ([Vue 2] babel, eslint)`.
 セットアップウィザードのいくつかの質問に答えます。ここでは、Vue 2バージョンを使用するので、デフォルトのバージョン`Default ([Vue 2] babel, eslint)`のままにしておきます。
 
 
@@ -242,7 +241,6 @@ yarn serve
 
 #### 接続
 
-We have already written a script for connecting. Now we can use it on our interface. It is enough to call the written `initApi` function in  the root component `App.vue`. And while the user is waiting for a connection, we will show him a small loader, for now in the form of an ellipsis.
 接続用のスクリプトはすでに書いてあります。あとはそれをインターフェイス上で使います。書かれた`initApi`関数を、ルートコンポーネントの`App.vue`で呼び出すだけで十分です。そして、ユーザーが接続を待っている間に、小さなローダーを表示します（今のところ、省略記号の形で）。
 
 方法 1:
@@ -819,7 +817,7 @@ yarn serve
 
 ### Step 6. デモ
 
-このデモでは、dAppを介して起動・停止できる車を用意します。車は走行中にログを収集し、停車後にはチェーンに保存します。ここでは、別々に試した2つのモジュールを組み合わせて使用します。　
+このデモでは、dAppを介して起動・停止できる車を用意します。車は走行中にログを収集し、停車後にはチェーンに保存します。ここでは、別々に試した2つのモジュールを組み合わせて使用します。
 
 ロボット(車)の動作をエミュレートするために、Robotクラスを書きます。このロボットのアカウントとして`Alice`キーを使います。`Robot`クラスは、`NewLaunch`イベントを監視して、自分の電源を入れたり切ったりします。電源を入れた後は、ログにデータを集め始めます。そして、シャットダウンの後、このログを`datalog`モジュールに保存します。
 
