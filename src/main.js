@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+// import VueCookies from 'vue-cookies'
+// Vue.use(VueCookies)
 
 import '~/assets/style/index.scss'
 import DefaultLayout from '~/layouts/Default.vue'
@@ -11,7 +13,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   const localeOptions = require('../data/localization.json')
   const localeSettings = JSON.parse(JSON.stringify(localeOptions))
 
-  Vue.component('Layout', DefaultLayout);
+  Vue.component('Layout', DefaultLayout)
   Vue.use(Vuex)
   
   appOptions.store = new Vuex.Store({
