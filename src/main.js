@@ -60,7 +60,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     // Else insert at the end
     // expected /path-to-page -> /locale/path-to-page
     else {
-      newPathSegments.splice(newPathSegments.length-1, 0, targetLocale)
+      newPathSegments.splice(1, 0, targetLocale)
+      // newPathSegments.splice(newPathSegments.length-1, 0, targetLocale)
     }
 
     return newPathSegments.join('/')
@@ -89,7 +90,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   //Rewrite route according to locale
   if (isClient) {
     router.beforeEach((to, from, next) => {
-
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
       // do not rewrite build paths
