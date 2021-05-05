@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-// import VueCookies from 'vue-cookies'
-// Vue.use(VueCookies)
+import VueCookies from 'vue-cookies'
 
 import '~/assets/style/index.scss'
 import DefaultLayout from '~/layouts/Default.vue'
@@ -15,6 +14,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   Vue.component('Layout', DefaultLayout)
   Vue.use(Vuex)
+    
+  Vue.use(VueCookies)
   
   appOptions.store = new Vuex.Store({
     state: {

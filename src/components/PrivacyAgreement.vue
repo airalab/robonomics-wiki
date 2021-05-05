@@ -41,22 +41,18 @@ export default {
 
   data () {
       return {
-        // cookieAgreement: this.$cookies.get('WikiCookieAgreement')
-        cookieAgreement: process.isClient
-        ? !localStorage.getItem("WikiCookieAgreement")
-        : false
+        cookieAgreement: this.$cookies.get('WikiCookieAgreement')
+        // cookieAgreement: localStorage.WikiCookieAgreement
       }
     },
 
   methods: {
     cookieAgreementSet(){
         // 365 day after, expire, '' current path , browser default
-        // this.$cookies.config(60 * 60 * 24 * 365,'');
-        // this.$cookies.set('WikiCookieAgreement', true);
-        if(process.isClient){
-            localStorage.WikiCookieAgreement = true
-            this.cookieAgreement = true
-        }
+        this.$cookies.config(60 * 60 * 24 * 365,'');
+        this.$cookies.set('WikiCookieAgreement', true);
+        // localStorage.WikiCookieAgreement = true
+        this.cookieAgreement = true
     }
   }
 
