@@ -1,4 +1,4 @@
-<template>
+// <template>
   <div id="app" class="layout">
 
       <div class="footerPusher">
@@ -12,8 +12,8 @@
       </div>
 
       <Footer/>
-      <PrivacyAgreement/>
-      <!-- <ClientOnly> <PrivacyAgreement/> </ClientOnly> -->
+      <!-- <PrivacyAgreement/> -->
+      <ClientOnly> <PrivacyAgreement/> </ClientOnly>
 
   </div>
 </template>
