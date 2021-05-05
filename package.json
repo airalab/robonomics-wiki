@@ -24,6 +24,7 @@
     "prismjs": "^1.23.0",
     "remark-autolink-headings": "^5.2.2",
     "remark-highlight.js": "^5.2.0",
+    "vue-cookies": "^1.7.4",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

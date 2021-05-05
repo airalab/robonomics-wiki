@@ -95,7 +95,6 @@
       grid-template-columns: minmax(0,var(--width-sidebar-left)) auto;
       gap: var(--space);
       align-items: start;
-      padding-top: var(--space);
 
       &__sidebar{
         word-break: break-word;
