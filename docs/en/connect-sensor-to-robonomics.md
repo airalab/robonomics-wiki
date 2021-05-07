@@ -95,6 +95,7 @@ Download flasher and run it.
 You need to install drivers for the USB2serial chipset: 
 * Drivers for NodeMCU v3 (CH340): [MacOS](http://www.wch.cn/downloads/file/178.html) ([2018/09/04 v1.4 mirror](https://d.inf.re/luftdaten/CH341SER_MAC.ZIP))
 
+---
 
 Choose firmware (English or Russian) and press upload. It will take a few minutes.
 
@@ -103,13 +104,9 @@ Choose firmware (English or Russian) and press upload. It will take a few minute
 
 ## Configuration
 Reboot your ESP (simply reconnect USB to computer).
-Then connect to airRohr--xxxxxxx Wi-Fi network and in your browser write address 192.168.4.1:
+Then connect to airRohr--xxxxxxx Wi-Fi network and in your browser write address 192.168.4.1 (or configuration page will be opened automatically) and add the information about your Wi-Fi network:
 
-![menu](../images/sensors-connectivity/8_menu1.jpg)
-
-Go to Configuration -> Wi-Fi Settings and add the information about your Wi-Fi network:
-
-![config](../images/sensors-connectivity/9_W-fi.jpg)
+![config](../images/sensors-connectivity/wifi-setup.jpg)
 
 Then press "Save configuration and restart" and ESP will be connected to the provided Wi-Fi network.
 
@@ -122,15 +119,19 @@ Then find ESP in local network (for that your computer and ESP must be in one ne
 
 
 
-Open ESP local address in your browser, go to `APIs` tab in  `Configuration` and click `Robonomics`. 
+Open ESP local address in your browser and go to `Configuration`. 
 
-![robonomics](../images/sensors-connectivity/12_APIrobonomics.jpg)
+![menu](../images/sensors-connectivity/menu.jpg)
+
+In `APIs` make sure that `Robonomics` is chosen: 
+
+![robonomics](../images/sensors-connectivity/APIs.jpg)
 
 > If you want to send data to your own server, enable `Custom API` and write your address and port 
 
 Then go to `Sensors` tab, enable GPS and put in your coordinates. Also enable the sensors you connected:
 
-![gps](../images/sensors-connectivity/13_gps.jpg)
+![gps](../images/sensors-connectivity/Sensors.jpg)
 
 Then press `Save configuration and restart`.
 

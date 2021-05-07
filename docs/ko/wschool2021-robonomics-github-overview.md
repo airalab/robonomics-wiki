@@ -1,6 +1,6 @@
 ---
 title: 레슨 2, ROBONOMICS GITHUB 개요
-기여자 : [arinaml]
+contributors: [Ensrationis, arinaml]
 translated: true
 ---
 

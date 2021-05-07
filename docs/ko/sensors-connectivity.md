@@ -1,6 +1,6 @@
 ---
 title: 센서 연결성
-기여자 : [arinaml]
+contributors: [Vourhey, arinaml]
 translated: true
 ---
 

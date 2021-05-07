@@ -1,6 +1,6 @@
 ---
-title:  ROBONOMICS 겨울 학교 2021 소개
-기여자: [arinaml]
+title: Robonomics Winter School 2021 introduction
+contributors: [arinaml]
 translated: true
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: 레슨 3, ROBONOMICS IO 실제
-기여자 : [arinaml]
+contributors: [akru, arinaml]
 translated: true
 ---
-Asciinema 가져 오기 '~/components/Asciinema.vue'
+import Asciinema from '~/components/Asciinema.vue'
 
 ## 요구 사항
 

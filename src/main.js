@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VueCookies from 'vue-cookies'
 
 import '~/assets/style/index.scss'
 import DefaultLayout from '~/layouts/Default.vue'
@@ -11,8 +12,10 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   const localeOptions = require('../data/localization.json')
   const localeSettings = JSON.parse(JSON.stringify(localeOptions))
 
-  Vue.component('Layout', DefaultLayout);
+  Vue.component('Layout', DefaultLayout)
   Vue.use(Vuex)
+    
+  Vue.use(VueCookies)
   
   appOptions.store = new Vuex.Store({
     state: {
@@ -60,7 +63,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     // Else insert at the end
     // expected /path-to-page -> /locale/path-to-page
     else {
-      newPathSegments.splice(newPathSegments.length-1, 0, targetLocale)
+      newPathSegments.splice(1, 0, targetLocale)
+      // newPathSegments.splice(newPathSegments.length-1, 0, targetLocale)
     }
 
     return newPathSegments.join('/')
@@ -89,7 +93,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   //Rewrite route according to locale
   if (isClient) {
     router.beforeEach((to, from, next) => {
-
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
       // do not rewrite build paths

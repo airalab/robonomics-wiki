@@ -1,6 +1,6 @@
 ---
 title: Lesson 1, ユーザーアプリにロボットを繋ぐ
-contributors: [Kiichi Sugihara]
+contributors: [KiichiSugihara]
 translated: true
 ---
 
