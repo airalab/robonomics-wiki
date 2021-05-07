@@ -1,6 +1,6 @@
 ---
 title: 6.1과, 최종 사용자를위한 IOT DAPP 구축, 1 부
-기여자: [arinaml]
+contributors: [vol4tim, arinaml]
 translated: true
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 4과, 실제 ROBONOMICS  파라체인
-기여자: [arinaml]
+title: 과, 실제 ROBONOMICS  파라체인
+contributors: [akru, arinaml]
 translated: true
 ---
 import Asciinema from '~/components/Asciinema.vue'
