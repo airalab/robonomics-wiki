@@ -205,32 +205,32 @@ yarn serve
 
 Vaya a [http://localhost:8080/](http://localhost:8080/) o la dirección que le dio el hilo y busque el sensor.
 
-## Practice
+## Práctica
 
-### Trajectory 1. Flash a sensor ESP + SDS011
+### Trayectoria 1. Flashear un sensor ESP + SD011
 
-Requirements:
+Requerimientos:
 
 * ESP8266
-* At least one of sensors SDS011, BME280, HTU21D
+* Al menos uno de los sensores SDS011, BME280, HTU21D
 
-Use the [instruction](https://wiki.robonomics.network/docs/connect-sensor-to-robonomics/) to connect a sensor to Robonomics Connectivity. 
+Use la [instrucción](https://wiki.robonomics.network/docs/connect-sensor-to-robonomics/) para conectar un sensor a la Robonomics Connectivity.
 
-Check that your sensor appears on our [map](https://sensors.robonomics.network/#/).
+Fíjese que su sensor aparezca en nuestro [mapa](https://sensors.robonomics.network/#/).
 
-### Trajectory 2. Launch Connectivity
+### Trayectoria 2. Lanzamiento de Conectividad
 
-Requirements:
+Requerimientos:
 
 * ROS
 * Python
-* Nix (optional)
+* Nix (Opcional)
 
-Build and launch [sensors-connectivity](https://github.com/airalab/sensors-connectivity#get-a-package-and-build)
+Construcción y lanzamiento [sensores-conectividad](https://github.com/airalab/sensors-connectivity#get-a-package-and-build)
 
-> How it build, install [here](https://wiki.robonomics.network/docs/iot-sensors-connectivity/) and configure [here](https://wiki.robonomics.network/docs/configuration-options-description/)
+> Como construir, instalar [aqui](https://wiki.robonomics.network/docs/iot-sensors-connectivity/) y configurar [aqui](https://wiki.robonomics.network/docs/configuration-options-description/)
 
-General scheme of the package:
+Esquema General del paquete:
 
 ```
     station1 \                        / feeder1
@@ -238,10 +238,10 @@ General scheme of the package:
     station3 /                        \ feeder3
 ```
 
-The choice is proposed to implement either a new station, for example, a random number generator, or a new feeder, for example, displaying a string on the screen.
+Se propone la opción de implementar una nueva estación, por ejemplo, un generador de números aleatorios, o un nuevo alimentador, por ejemplo, mostrando una cadena en la pantalla.
 
-Interface `IStation` [here](https://github.com/airalab/sensors-connectivity/blob/master/src/stations/istation.py#L73).
+Interfase `IStation` [aqui](https://github.com/airalab/sensors-connectivity/blob/master/src/stations/istation.py#L73).
 
-Interface `IFeeder` [here](https://github.com/airalab/sensors-connectivity/blob/master/src/feeders/ifeeder.py#L5)
+Interfase `IFeeder` [aqui](https://github.com/airalab/sensors-connectivity/blob/master/src/feeders/ifeeder.py#L5)
 
 
