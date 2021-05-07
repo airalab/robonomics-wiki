@@ -1,44 +1,44 @@
 ---
-title: How to contribute
+title: Cómo Contribuir
 contributors: [positivecrash]
 translated: false
 ---
 
-Robonomics network is an open-source project built by core maintainers from Airalab and contributors. We want to make it easy for anyone to contribute. You may contribute to core, suggest changes, improve documentation or write a blog post. Please, read some rules and suggestions for contributing.
+La red Robonomics es un proyecto de código abierto creado por mantenedores centrales de Airalab y colaboradores. Queremos que sea fácil para cualquiera contribuir. Puede contribuir al núcleo, sugerir cambios, mejorar la documentación o escribir una publicación de blog. Por favor, lea algunas reglas y sugerencias para contribuir.
 
-## Main Airalab repositories
+## Repositorios principales de Airalab
 
-- [aira](https://github.com/airalab/aira) - AIRA client for Robonomics network.
-- [robonomics_comm](https://github.com/airalab/robonomics_comm) - Robonomics communication stack
-- [robonomics_contracts](https://github.com/airalab/robonomics_contracts) - smart contracts of Robonomics network
+- [aira](https://github.com/airalab/aira) - Cliente AIRA para la red Robonomics.
+- [robonomics_comm](https://github.com/airalab/robonomics_comm) - Pila de comunicación de Robonomics
+- [robonomics_contracts](https://github.com/airalab/robonomics_contracts) - Contratos inteligentes de la red Robonomics
 
-## Bugs and proposals for improvements
+## Errores y propuestas de mejoras
 
-If you find a bug in AIRA client, Robonomics repositories, this documentation or would like to propose an improvement, please, open a new issue in the same repository, that you want to contribute.
+Si encuentra un error en el cliente AIRA, repositorios de Robonomics, esta documentación o le gustaría proponer una mejora, por favor, abra una nueva edición en el mismo repositorio, que quiera contribuir.
 
-### Rules for reporting
+### Reglas para reportar
 
-When opening a new issue, do not forget about a few basic rules for reporting:
+Al abrir un nuevo problema, no se olvide de algunas reglas básicas para reportar:
 
-1. Choose exact repository, that you want to submit an issue.
+1. Elija el repositorio exacto al que desea enviar un problema.
 
-2. If you are reporting bug, make sure the bug was not already reported.
+2. Si está informando un error, asegúrese de que el error no haya sido informado antes.
 
-3. Be sure to include title and clear description, as much relevant information as possible.
+3. Asegúrese de incluir un título y una descripción clara, con tanta información relevante como sea posible.
 
-4. Please prefix your issue with one of the following: [BUG], [PROPOSAL], [ QUESTION].
+4. Por favor, anteponga a su problema uno de los siguientes: [BUG], [PROPOSAL], [QUESTION].
 
 
-## Pull requests
+## Solicitudes de extracción
 
-Any Airalab repository or this documentation may be subject to pull requests or changes by contributors where you believe you have something valuable to add or change. Please, do not forget about basic rules for contributors.
+Cualquier repositorio de Airalab o de esta documentación pueden estar sujetos a solicitudes de extracción o cambios por parte de los colaboradores cuando crea que tiene algo valioso que agregar o cambiar. Por favor, no se olvide de las reglas básicas para los colaboradores. 
 
-### Rules for contributing
+### Reglas para Contribuir
 
-1. Pull requests are preferred to issues, if you have some fixes, especially for small changes such as typos.
+1. Se prefieren las solicitudes de extracción para errores, si tiene algunas correcciones, especialmente para cambios pequeños como errores tipográficos.
 
-2. Make sure the PR description clearly describes the problem and the solution. Include the relevant issue number if applicable.
+2. Asegúrese de que la descripción de la Solicitud de Extracción describa claramente el problema y la solución. Incluya el número de problema relevante si corresponde.
 
-3. Please, do not fix whitespace, format code, or make a purely cosmetic patch.
+3. Por favor, no corrija espacios en blanco, código de formato ni haga un parche puramente cosmético.
 
-4. Please, attempt to adhere to the prevailing Markdown style, language, and layout.
+4. Por favor, intente adherirse al estilo, lenguaje y diseño de Markdown predominantes.
