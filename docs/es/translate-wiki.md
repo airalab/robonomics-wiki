@@ -1,25 +1,25 @@
 ---
-title: How to participate in the Wiki translation
-contributors: [positivecrash]
+title: Cómo participar en la traducción Wiki
+contributors: [positivecrash, arinamml]
 translated: false
 ---
 
-Everyone can contribute to Robonomics. If you want to contribute to the translation of the documentation, you are on the right track: this article will tell you how to do it.
+Todos pueden contribuir a Robonomics. Si quieres contribuir a la traducción de la documentación, estás en el camino correcto: este artículo te dirá cómo hacerlo.
 
-## Editing an article
+## Editando un articulo
 
-If support for your language has already been added to the site, follow these steps:
+Si ya se agregó al sitio la compatibilidad con su idioma, siga estos pasos:
 
-1. Click the "Edit this page" button on the article you would like to translate. Each article is duplicated in a supported language, even if it has not yet been translated from English.
-2. Edit by sticking to the existing markup. You can read the article [How to edit WIKI(/docs/edit-wiki)
-3. Submit [RP](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) with the changes you have made.
+1. Haga clic en el botón "Editar esta página" en el artículo que le gustaría traducir. Cada artículo está duplicado en un idioma admitido, incluso si aún no se ha traducido del inglés.
+2. Edite respetando el marcado existente. Puedes leer el artículo [Cómo editar WIKI](/docs/edit-wiki)
+3. Envíe [Solicitud de Extracción](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) con los cambios que ha realizado.
 
-## Adding a new language
+## Agregar un nuevo idioma
 
-If the language you would like to translate the article into has not yet been added, request it from the Robonomics root team by, [creating Issue](https://docs.github.com/desktop/contributing-and-collaborating-using-github-desktop/creating-an-issue-or-pull-request) on GitHub.
+Si aún no se ha agregado el idioma al que le gustaría traducir el artículo, solicítelo al equipo raíz de Robonomics al [crear problema](https://docs.github.com/desktop/contributing-and-collaborating-using-github-desktop/creating-an-issue-or-pull-request) en GitHub.
 
-When we add support for the requested language to the site, we will close the Issue, commenting on it if necessary. You will be notified accordingly. This means you can translate pages (they will already be duplicated in English in a folder like `/docs/locale`)
+Cuando agreguemos soporte para el idioma solicitado al sitio, cerraremos el Issue, comentando si es necesario. Se le notificará en consecuencia. Esto significa que puede traducir páginas (ya estarán duplicadas en inglés en una carpeta como `/docs/locale`)
 
-## Notes
-* If you see a way to improve an existing translation of an article, you can also use the PR or Issue on GitHub to request changes
-* If you make a significant contribution to the translation, you can participate in the rewards program
+## Notas
+* Si ve una forma de mejorar una traducción existente de un artículo, también puede usar el PR o Issue en GitHub para solicitar cambios
+* Si realiza una contribución significativa a la traducción, puede participar en el programa de recompensas.
