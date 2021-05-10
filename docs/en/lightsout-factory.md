@@ -17,7 +17,7 @@ Provide optimized and fully automated factory manufacturing depending on the spe
 - [modbus](https://github.com/HumaRobotics/modbus)
 
 ## Ports description:
-![Main PLC](../images/lightsout-factory/plc_main.png)![Additional PLC](../images/lightsout-factory/plc_additional.png)<br>
+![PLC](../images/lightsout-factory/plc.png)<br>
 Main PLC block has its own connection scheme. The rest of the blocks are all similar to each other.<br>
 More information about ports can be found [here](https://docs.google.com/spreadsheets/d/1g_LuqgdKADWxOYnbkcRyZtqtx3cMqh8EEH0UOrVdQ5M).
 
