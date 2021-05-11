@@ -1,22 +1,9 @@
 ---
-title: Lightsout Factory
+title: Ports mapping
 contributors: [ValanisZz]
-translated: false
+translated: true
 ---
 
-![Lightsout Factory Preview](../images/lightsout-factory/factory-preview.png)
-
-## Project goal
-Provide optimized and fully automated factory manufacturing depending on the specified requirements
-
-## Requirements:
-- FischerTechink factory
-- Siemens PLC S7-1200
-- 6 additional PLC blocks (SM-1223)
-- LattePanda with [Ubuntu 20.04](https://releases.ubuntu.com/20.04/) and [ROS Noetic](http://wiki.ros.org/noetic/Installation) installed
-- [modbus](https://github.com/HumaRobotics/modbus)
-
-## Ports description:
 ![PLC](../images/lightsout-factory/plc.png)<br>
 Main PLC block has its own connection scheme. The rest of the blocks are all similar to each other.<br>
 More information about ports can be found [here](https://docs.google.com/spreadsheets/d/1g_LuqgdKADWxOYnbkcRyZtqtx3cMqh8EEH0UOrVdQ5M).
