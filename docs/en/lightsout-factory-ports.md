@@ -1,6 +1,6 @@
 ---
 title: Ports mapping
-contributors: [ValanisZz]
+contributors: [ValanisZz, GiggleSeagul, Valiento]
 translated: true
 ---
 
@@ -134,3 +134,6 @@ More information about ports can be found [here](https://docs.google.com/spreads
 | OUT_7-1.5 |                            |   | IN_7-1.5 |                              |
 | OUT_7-1.6 |                            |   | IN_7-1.6 |                              |
 | OUT_7-1.7 |                            |   | IN_7-1.7 |                              |
+| &nbsp;    |                            |   |          |                              |
+|           |                            |   |   AN_1   | Color Recognition Block      |
+|           |                            |   |   AN_2   |                              |
