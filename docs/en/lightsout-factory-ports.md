@@ -1,21 +1,22 @@
 ---
 title: Ports mapping
-contributors: [ValanisZz]
+contributors: [ValanisZz, GiggleSeagul, Valiento]
 translated: true
 ---
 
+## PLC scheme
 ![PLC](../images/lightsout-factory/plc.png)<br>
+<b>Notice! </b>AN ports are not represented on the scheme above. Check out table below to see description.<br><br>
 Main PLC block has its own connection scheme. The rest of the blocks are all similar to each other.<br>
-More information about ports can be found [here](https://docs.google.com/spreadsheets/d/1g_LuqgdKADWxOYnbkcRyZtqtx3cMqh8EEH0UOrVdQ5M).
+More information about ports can be found [here](https://docs.google.com/spreadsheets/d/1g_LuqgdKADWxOYnbkcRyZtqtx3cMqh8EEH0UOrVdQ5M).<br>
 
-<br>
-
-**Table legend:**
+## Legend
 - 0 - departure warehouse position (e.g. move to 0 means move towards the departure warehouse)
 - 1 - arrival warehouse position (e.g. move to 1 means move towards the arrival warehouse)
 - sensor M - magnetic sensor
 - sensor L - light sensor
 
+## Ports mapping
 | Port      | Description                |   | Port     | Description                  |
 |-----------|----------------------------|---|----------|------------------------------|
 | OUT_1-0.0 |                            |   | IN_1-0.0 | Modbus ON/OFF                |
@@ -134,3 +135,6 @@ More information about ports can be found [here](https://docs.google.com/spreads
 | OUT_7-1.5 |                            |   | IN_7-1.5 |                              |
 | OUT_7-1.6 |                            |   | IN_7-1.6 |                              |
 | OUT_7-1.7 |                            |   | IN_7-1.7 |                              |
+| &nbsp;    |                            |   |          |                              |
+|           |                            |   |   AN_1   | Color Recognition Block      |
+|           |                            |   |   AN_2   |                              |
