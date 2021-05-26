@@ -9,23 +9,28 @@ translated: true
 ## Project goal
 Provide optimized and fully automated factory manufacturing depending on the specified requirements
 
-##Factory Components:
-0.1,0.2 - warehouses
-1 (8 pcs) - simple conveyor 
-2 (2 pcs) - rotary conveyor
-3.1 (4 pcs), 3.2 - receiving and giving conveyors
-4.1, 4.2, 4.3, 4.4 -  handlers
-4.5 - color recognition block
-5.1, 5.2 - loaders
-
-##Description of Lightsout Factory Preview
-- Every component moves from right to left 
-- Each conveyor has a tactile or light sensor (if the conveyor is initial or final)
-- All handlers (4.X) are different
-
-## Requirements:
+## Requirements
 - FischerTechink factory
 - Siemens PLC S7-1200
 - 6 additional PLC blocks (SM-1223)
 - LattePanda with [Ubuntu 20.04](https://releases.ubuntu.com/20.04/) and [ROS Noetic](http://wiki.ros.org/noetic/Installation) installed
 - [modbus](https://github.com/HumaRobotics/modbus)
+
+## Legend
+| Block number |           Description           | Amount, pcs |
+|--------------|---------------------------------|-------------|
+|     0.x      | Warehouse                       |      2      |
+|      1       | Simple conveyor                 |      8      |
+|      2       | Rotary conveyor                 |      2      |
+|     3.1      | Arrival conveyor                |      4      |
+|     3.2      | Departure conveyor              |      1      |
+|     4.x      | Handler                         |      4      |
+|     5.x      | Loader                          |      2      |
+|      6       | Color Recognition Block         |      1      |
+
+## Rules
+- Factory movement is organised from right to left side
+- Right side stands for 0, left side stands for 1
+- All handlers (4.x) are just models of various processing machines
+- Each block has a tactile or light sensor (except of warehouse storage positioning)
+
