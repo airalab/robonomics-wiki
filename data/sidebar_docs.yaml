@@ -102,6 +102,8 @@
           link: /docs/rio-datalog
     - title_en: Digital twins
       link: /docs/digital-twins
+    - title_en: XCM Robobank 
+      link: /docs/xcm-robobank
 
     - title_en: AIRA
       items:
