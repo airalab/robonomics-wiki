@@ -140,8 +140,7 @@ Edit rococo_local.json, replace balances and authorities with yours.
         "para_assignment": "",
         "authority_discovery": ""
       }
-    ],
-    ...
+    ]
 ```
 
 Polkadot address for //Alice//stash (sr25519 cryptography).
