@@ -9,7 +9,7 @@ Video with an example of work can be found here:
 [https://youtu.be/Fhf9LIt6zXQ](https://youtu.be/Fhf9LIt6zXQ)
 ***
 ## Requirements
-* ROS melodic, Gazebo (installation instraction [here](http://wiki.ros.org/melodic/Installation/Ubuntu))
+* ROS melodic, Gazebo (installation instruction [here](http://wiki.ros.org/melodic/Installation/Ubuntu))
 * Some extra packages
 ```bash
 sudo apt-get install ros-melodic-gazebo-ros-control ros-melodic-effort-controllers ros-melodic-joint-state-controller
