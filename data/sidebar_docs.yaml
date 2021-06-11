@@ -75,6 +75,10 @@
           link: /docs/lightsout-factory-about/
         - title_en: Ports
           link: /docs/lightsout-factory-ports/
+    - title_en: Spot Education
+      items:
+        - title_en: Try It Out
+          link: /docs/spot-try-it-out
 
 - title_en: Learn
   items:
