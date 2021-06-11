@@ -31,7 +31,7 @@ catkin_make
 
 Get example rosbag file:
 ```bash
-wget -O spot_rosbag.bag https://gateway.ipfs.io/ipfs/QmYifXdEuzEEHz1hQLg6u9RgNAA6yNsPFb3oCBsqdqnkcH
+wget -O spot_rosbag.bag https://gateway.ipfs.io/ipfs/QmTDrfMy7Zs7uDLN3KPBC1UYqXNMXBKEwX7ggVmJKAm7Ef
 ```
 
 Run rviz with the Spot model:
@@ -45,7 +45,10 @@ source ~/catkin_ws/devel/setup.bash
 roslaunch spot_viz view_robot.launch
 ``` 
 ![spot_viz](../images/spot/spot.jpg)
+
+
 Play rosbag file and you will see the robot move:
 ```bash
 rosbag play spot_rosbag.bag
 ```
+![spot_viz](../images/spot/spot2.jpg)
