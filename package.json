@@ -1,5 +1,6 @@
 {
   "name": "robonomics-wiki",
+  "license": "BSD-3-Clause",
   "private": true,
   "scripts": {
     "build": "gridsome build",
