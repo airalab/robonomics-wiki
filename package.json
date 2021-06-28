@@ -22,7 +22,7 @@
     "gridsome-plugin-yandex-metrika": "^0.1.2",
     "http-server": "^0.12.3",
     "lodash": "^4.17.21",
-    "prismjs": "^1.23.0",
+    "prismjs": "^1.24.0",
     "remark-autolink-headings": "^5.2.2",
     "remark-highlight.js": "^5.2.0",
     "vue-cookies": "^1.7.4",
