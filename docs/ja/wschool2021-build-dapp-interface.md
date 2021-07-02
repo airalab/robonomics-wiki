@@ -1,114 +1,117 @@
 ---
-title: Lesson 6.2, Build IoT Dapps For End Users
-contributors: [positivecrash]
-translated: false
+title: Lesson 6.2, Dapp インターフェースの構築
+contributors: [KiichiSugihara]
+translated: true
 ---
 
 ![Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot](../images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot")
 
-## Introduction
+## はじめに
 
-This tutorial continues the previous lesson, where you have already built simple application and were focused on connecting an account to a node, sending transactions and other vital functions of the dapp. Now we will **build user-friendly interface** for this application.
+このチュートリアルは前回の続きで、すでにシンプルなアプリケーションを構築し、アカウントとノードの接続、トランザクションの送信など、アプリの重要な機能に焦点を当てていました。今度は、このアプリケーションのために、**ユーザーフレンドリーなインターフェースを構築**します。
 
-## Prerequisites
+## 前提条件
 
-This tutorial is designed for people who are familiar with **HTML, CSS, JavaScript** a bit and want to learn how to apply these skills for decentralized applications.
-
-For building your dapp's interface you can choose any JavaScript framework which is comfortable for you or even try to build interface without any framework. In Robonomics 2021 we use [Vue.js](https://vuejs.org) as it is quite scalable and easy to use.
-
-## Set up for this tutorial
-
-If you start with this step and prefer to **learn by doing**, please, follow this to-do list to launch the resulting dapp from the previous lesson:
-
-1. Download a local Robonomics node from [releases page](https://github.com/airalab/robonomics/releases/) that fits your OS. If you do not find your system in the latest release, please, find the most recent version in the previous releases.
-
-2. Launch the Robononomics node in the Developer mode by typing `./robonomics --dev` in your terminal.
-
-3. Download the Polkadot Extension for Chrome or Firefox [here](https://polkadot.js.org/extension/)
-
-4. Clone [this repository](https://github.com/vol4tim/example-robonomics-dapp/).
-
-5. Install [Yarn](https://yarnpkg.com).
-
-6. Install [@vue/cli](https://cli.vuejs.org/guide/installation.html)
-
-7. Start developing dapp with `yarn serve` command in your terminal.
+このチュートリアルは、**HTML、CSS、JavaScript**に少し慣れていて、これらのスキルを分散型アプリケーションに適用する方法を学びたい方を対象としています。
 
 
-**You should get this screen in your browser:**
+アプリのインターフェイスを構築するために、自分にとって快適なJavaScriptフレームワークを選ぶことができますし、フレームワークなしでインターフェイスを構築することもできます。Robonomics2021では、スケーラブルで使いやすい[Vue.js](https://vuejs.org) を使用しています。
+
+## このチュートリアルのための設定
+
+このステップから始めて、**実際にやってみて学びたい**という方は、以下のTo-Doリストに従って、前のレッスンで作成したdappを起動してください。
+
+1.あなたのOSに合ったRobonomicsのローカルノードを[リリースページ](https://github.com/airalab/robonomics/releases/) からダウンロードしてください。もしあなたのシステムが最新のリリースにない場合は、過去のリリースから最新のバージョンを探してください。
+
+2.ターミナルで ./robonomics --dev と入力して、ロボノミクスノードを開発者モードで起動します。
+
+3.ChromeまたはFirefox用のPolkadot Extensionをダウンロードしてください。[Polkadot Extension](https://polkadot.js.org/extension/)
+
+4. [このリポジトリ](https://github.com/vol4tim/example-robonomics-dapp/)をクローンします。
+
+5. [Yarn](https://yarnpkg.com)をインストールします。
+
+6. [@vue/cli](https://cli.vuejs.org/guide/installation.html)をインストールします。
+
+7. ターミナルで `yarn serve`コマンドを実行して、dappの開発を開始します。
+
+
+
+**ブラウザにこのような画面が表示されるはずです。:**
 
 ![Dapp Start](../images/build-dapp-interface/dapp-start.png "Dapp Start")
 
 
 <details>
 
-  <summary>Some additional tips for launching</summary>
+  <summary>起動のためのいくつかの追加のヒント</summary>
 
-  - Make sure your **node is running**:
+  - **ノードが起動している**ことを確認します:
     ![Example of running a Robonomics node](../images/build-dapp-interface/robonomics-node-launch.png "Example of running Robonomics node")
 
-  - In **macOS** you may need to change the **access permissions** `chmod +x robonomics`
-
-  - Make sure you allowed **access for Polkadot Extension**:
+  - **macOS**の場合、**アクセス権**を変更する必要があるかもしれません`chmod +x robonomics`
+  - **Polkadot Extensionへのアクセスが許可**されていることを確認してください:
     ![Polkadot Extension giving access](../images/build-dapp-interface/polkadot-permission.png "Polkadot Extension giving access")
 
-  - If you have errors in log of the running node and dapp is not loading correctly, please, try to delete data base of dev chain: `sudo rm -rf <YOUR LOCAL PATH>/robonomics/chains/dev/db/` and restart the node. If it does not help, restart your machine.
+  - 実行中のノードのログにエラーがあり、dappが正しくロードされていない場合、devチェーンのデータベースを削除してみてください: `sudo rm -rf <YOUR LOCAL PATH>/robonomics/chains/dev/db/` そしてノードを再起動してください。それでもだめな場合は、マシンを再起動してください。
+
 
 </details>
 
-## Inspecting the code
+## コードの確認
 
-Let's inspect the structure of the dapp to clear up what and where we can fix in order to change UI.
+UIを変更するために、何をどこで修正すればよいかを明確にするために、dappの構造を確認してみましょう。
 
 ```
 .
 ├── public/
-│   ├── favicon.ico           # Icon for your dapp
-│   └── index.html            # The template file (injects icons links, JavaScript and CSS files for the app)
+│   ├── favicon.ico           # dappのアイコンです
+│   └── index.html            #  テンプレートファイル（アプリのアイコンのリンク、JavaScript、CSSファイルを注入します
 ├── src/
-│   ├── assets/               # Folder for images and global styles
-│   ├── components/           # Folder with components
-│   │   ├── Datalog.vue       # Tab 'Datalog' in dapp
-│   │   ├── Demo.vue          # Tab 'Demo' in dapp
-│   │   ├── Launch.vue        # Tab 'Launch' in dapp
-│   ├── utils/                # Folder with important for app js functions (we will touch api.js in this tutorial)
-│   ├── App.vue               # The root of our app, contains HTML, CSS, JS for the whole page. In fact it is Vue Component also
-│   ├── main.js               # The app’s entry file, we will import here global styles
-├── ...                       # There are config files and dependencies files, that we will not change mannually
-├── README.md                 # You can write here any instructions for your dapp
+│   ├── assets/               # 画像やグローバルスタイルのフォルダ
+│   ├── components/           # コンポーネントを格納するフォルダ
+│   │   ├── Datalog.vue       # dapp内のDatalogタブ
+│   │   ├── Demo.vue          #  dappの中のDemoタブ
+│   │   ├── Launch.vue        # dappの中のLaunchタブ
+│   ├── utils/                # アプリ用の重要な機能が入ったフォルダ (このチュートリアルでは api.js を触ります)
+│   ├── App.vue               # アプリのルートであり、ページ全体のHTML、CSS、JSを含む。実際にはVueコンポーネントでもあります
+│   ├── main.js               # アプリのエントリーファイル、ここでグローバルスタイルをインポートします
+├── ...                       # 設定ファイルや依存関係のファイルがありますが、通常は変更しません
+├── README.md                 # ここには、アプリの説明を書くことができます。
 
 ```
 
-> **The code of this tutorial is in this [repository](https://github.com/positivecrash/wscool21-ui-dapp)**
+> **このチュートリアルのコードは、[このリポジトリ](https://github.com/positivecrash/wscool21-ui-dapp)にあります。**
 
-## CSS-in-JS VS. Global stylesheets
+## CSS-IN-JS VS. グローバルスタイルシート
 
-In this tutorial I show how to change the interface of a small dapp from scratch without any stable library of UI components. So I will import and create not only different Vue components, but also write my own styles.
+このチュートリアルでは、UIコンポーネントの安定したライブラリがなくても、小さなdappのインターフェースをゼロから変更する方法を紹介します。そこで、さまざまなVueコンポーネントをインポートして作成するだけでなく、独自のスタイルも作成します。
 
-If your application is big or your project has the whole bunch of dapps, in future you'd better look for building library of components specifically for your project to make UI more organized and efficient ([for example, here is a tool for organizing components](https://storybook.js.org)). Or if you are okay with standart interface themes, you can use any UI Libraries of third party ([for example](https://vuetifyjs.com/)).
 
-## First import or where to start
+もしあなたのアプリケーションが大きかったり、プロジェクトにたくさんのdappsがある場合は、UIをより整理して効率的にするために、将来的にはあなたのプロジェクトに特化したコンポーネントのライブラリを探した方がいいでしょう（[例えば、コンポーネントを整理するためのツール](https://storybook.js.org)があります）。また、標準的なインターフェイスのテーマで良いのであれば、[サードパーティ製のUIライブラリ](https://vuetifyjs.com/)を利用することもできます。
+## 最初のインポート、どこから始めるか
 
-I don't have any specific design for this dapp, but I have [Brandbook](https://static.robonomics.network/assets/Robonomics-Visual-Identity.pdf) and [quit well-established](https://robonomics.network) typography, fonts, button styles etc. So for the start I will import the following css files globally:
 
+このアプリのための特別なデザインはありませんが、[ブランドブック](https://static.robonomics.network/assets/Robonomics-Visual-Identity.pdf)があり、[タイポグラフィ、フォント、ボタンのスタイルなどが確立](https://robonomics.network/community#assets)されています。そこで、まずは以下のcssファイルをグローバルにインポートします。
 ```
 ...
 ├── src/
 │   ├── assets/
 │   │   ├── styles/
-│   │   │   ├── reset.css         # The goal is to reduce browser inconsistencies
-│   │   │   ├── variables.css     # Contains specific values to be reused such as colors, font-names, space values etc.
-│   │   │   ├── typography.css    # Global typography for the whole dapp
-│   │   │   ├── animation.css     # Keyframe animations used throughout the dapp
+│   │   │   ├── reset.css         # 目的は、ブラウザの不整合を減らすことです。
+│   │   │   ├── variables.css     # 色、フォント名、スペース値など、再利用する特定の値を含む
+│   │   │   ├── typography.css    #  dapp全体のグローバルなタイポグラフィ
+│   │   │   ├── animation.css     # dapp全体で使われるキーフレームアニメーション
 ...
 
 ```
 
-The content of any of these files you can write in App.vue instead, if it fits your perception better. But I recommend to import some CSS files globally for this example to keep App.vue a little bit more clear.
+これらのファイルの内容は、あなたの認識に合うのであれば、代わりにApp.vueに書くことができます。しかし、この例では、App.vueを少しでもわかりやすくするために、いくつかのCSSファイルをグローバルにインポートすることをお勧めします。
 
-Import these CSS files into your app by editing **main.js** file:
 
-![Import global CSS in Vue app](../images/build-dapp-interface/import-css-vue-1.png "Import global CSS in Vue app")
+これらのCSSファイルをアプリにインポートするには、**main.js**ファイルを編集します:
+
+![VueアプリにグローバルなCSSをインポートする](../images/build-dapp-interface/import-css-vue-1.png "Import global CSS in Vue app")
 
 ```JS
 import './assets/styles/reset.css'
@@ -117,18 +120,19 @@ import './assets/styles/typography.css'
 import './assets/styles/animation.css'
 ```
 
-**Check if fonts have been changed in the dapp:**
+**dappでフォントが変更されているかどうかを確認:**
 
 ![Dapp Interface changing step 1](../images/build-dapp-interface/dapp-1.png "Dapp Interface changing step 1")
 
 
-## Change layout and prettify the title
+## レイアウトの変更とタイトルの装飾
 
-Let's change layout of the application. As I mentioned earlier, you can write your styles directly in App.vue, but for this example I prefer to separate this process.
 
-- Comment or delete styles from tag `<style>` in **App.vue**
+アプリケーションのレイアウトを変更してみましょう。先に述べたように、App.vueに直接スタイルを書くこともできますが、今回の例では、このプロセスを分けて考えたいと思います。
 
-- Create css file **app.css** in styles folder for this application and import it into **main.js**
+- **App.vue**の`<style>`タグからスタイルをコメントまたは削除する
+
+- このアプリケーションのstylesフォルダにcssファイル**app.css**を作成し、**main.js**にインポートします。
 
 ```JS
 import './assets/styles/app.css'
@@ -136,7 +140,7 @@ import './assets/styles/app.css'
 
 <details>
 
-<summary>Write in app.css first basic styles for the app:</summary>
+<summary>app.cssにアプリの最初の基本スタイルを記述します。:</summary>
 
 ```css
 #app {
@@ -157,7 +161,7 @@ body {
 
 <details>
 
-<summary>Change the title of the app [App.vue]</summary>
+<summary>アプリのタイトルを変更する [app.vue]</summary>
 
 ```html
 <div class="top">
@@ -173,7 +177,7 @@ body {
 
 <details>
 
-<summary>Write styles for the title [app.css]</summary>
+<summary>タイトル用のスタイルを書く [app.css]</summary>
 
 ```css
 .top {
@@ -219,34 +223,36 @@ body {
 
 </details>
 
-- Place a file with the logo of the Robonomics winter school 2021 in the folder **./src/assets/images**
+- ロボノミクスウィンタースクール2021のロゴが入ったファイルを、**./src/assets/images**フォルダに置く。
 
-**You will get the following screen:**
+**次のような画面が表示されます:**
 ![Dapp Interface changing step 2](../images/build-dapp-interface/dapp-2.png "Dapp Interface changing step 2")
 
-## Define styles according to the dapp's data
+## dappのデータに合わせてスタイルを定義する
 
-Now I will wrap the app's content in `<div>` element. Also I will need different styles for different states of the dapp (loaded or not loaded).
+ここで、アプリのコンテンツを`<div>`要素で囲みます。また、アプリの状態（ロードされている、されていない）に応じて、異なるスタイルが必要です。
 
-- Open the **App.vue** and write a wrapping element:
+- **App.vue**を開いて、ラッピング要素を書きます。:
 ```html
 <div class="content">
   <!--here is everything going after the title-->
 </div>
 ```
-- Find the variable `load`, it has already been defined in `<script>`.
-- Pass an object to `v-bind:class` to dynamically toggle classes (I use shortened version `:class`):
+- `<script>`で定義されている変数`load`を見つけます。
+- オブジェクトを`v-bind:class`に渡して、クラスを動的に切り替えます（私は短縮版の`:class`を使っています）。
+
 ```html
 <div class="content" :class="{ load: load }">
   <!--here is everything going after the title-->
 </div>
 ```
-That's how you can easily toggle styles in your app according to the data you get. You will see the usage of this class below.
+このようにして、取得したデータに応じてアプリのスタイルを簡単に切り替えることができます。このクラスの使い方は以下の通りです。
 
-## Define views according to the dapp's data
+## dappのデータに応じてビューを定義する
 
-Let's change the loader for the app.
-- For this purpose I will import my component from another Robonomics project 
+アプリのローダを変更しましょう。
+- この目的のために、別のRobonomicsプロジェクトからコンポーネントをインポートします。
+
 
 <details>
 
@@ -372,7 +378,7 @@ export default {
 
 </details>
 
-- Register this component in **App.vue**
+- このコンポーネントを**App.vue**に登録します。
 ```JS
 export default {
   components: {
@@ -380,46 +386,48 @@ export default {
   }
 }
 ```
-- Insert it with conditional Vue directive `v-if`, using the already known variable `load`:
+- 既に知られている変数`load`を使って、条件付きのVueディレクティブ`v-if`で挿入します。
 ```HTML
 <div class="content" :class="{ load: load }">
   <Loader v-if="load" />
   <template v-else>
-    <!-- here will be main content of loaded dapp -->
+    <!-- ここがロードされたDAPのメインコンテンツになります -->
   </template>
 </div>
 ```
-- Watch the result in browser. It has some issues that we will fix now:
+- ブラウザで結果を見てみましょう。いくつかの問題がありますが、これから修正していきます:
 
-1. Loader pops up to the title (it should be in the center). Let's insert these lines to **app.css**:
+1. ローダーがタイトルまでポップアップしています（中央にあるべきです）。以下の行を**app.css**に挿入してみましょう。
+
 ```css
 body, html, #app {
   height: 100%;
   position: relative;
 }
 ```
-2. If your connection goes too fast, you will see just blinking loader for a moment. It may confuse a lot. Let's set a timeout for the app's responce. To do that open **api.js** and find in the function `initAccount` this code:
+2. 通信速度が速すぎると、一瞬、ローダーが点滅するだけになります。混乱してしまうかもしれません。そこで、アプリからの応答にタイムアウトを設定してみましょう。そのためには、**api.js**を開き、関数`initAccount`の中に以下のコードを見つけます:
+
 ```JS
 const timeout = new Promise(resolve => {
   setTimeout(resolve, 300);
 });
 ```
-I set `1700` instead of `300` and check the result:
+`300`の代わりに`1700`を設定して、結果を確認します:
 
-![Dapp Interface changing step 3](../images/build-dapp-interface/dapp-3.gif "Dapp Interface changing step 3")
+![Dappインターフェース変更ステップ3](../images/build-dapp-interface/dapp-3.gif "Dappインターフェース変更ステップ3")
 
 
-## Using reusable components
+## 再利用可能なコンポーネントの使用
 
-You have already watched how to register and use a component in the previous section about Loader, but now I want to focus on it more carefully.
+コンポーネントを登録して使用する方法は、前回のLoaderの項ですでに見ていますが、今回はもっと注意深く注目してみたいと思います。
 
-Let's change the Account section. Here I will use self-written components (box, button, icon) and the third party's one ([from Vue Polkadot Library](https://vue-polkadot.js.org/vue-ui/vue-identicon/#vue-polkadot-vue-identicon )).
+Accountの部分を変えてみましょう。ここでは、自分で書いたコンポーネント（ボックス、ボタン、アイコン）とサードパーティのコンポーネント（[Vue Polkadot Libraryのもの](https://vue-polkadot.js.org/vue-ui/vue-identicon/#vue-polkadot-vue-identicon )）を使います。
 
-### Adding the box
+### ボックスの追加
 
 <details>
 
-<summary>Create Box component in ./src/components/Box.vue file </summary>
+<summary>./src/components/Box.vueファイルにBoxコンポーネントを作成します。</summary>
 
 ```HTML
 <template>
@@ -457,9 +465,9 @@ export default {
 ```
 </details>
 
-Now we can use it many times throught out the dapp. Let's see this on the Account section example:
+これで、Dappの中で何度も使うことができます。これをAccountセクションの例で見てみましょう:
 
-- Register component (**App.vue**):
+- コンポーネントを登録 (**App.vue**):
 
 ```JS
 export default {
@@ -469,7 +477,7 @@ export default {
 }
 ```
 
-- Use it for the Account section with an additional class passed with prop `classList`:
+- これをAccountセクションに使用し、prop `classList`で追加のクラスを渡します:
 
 ```HTML
 <Box :classList="'account'">
@@ -480,16 +488,16 @@ export default {
 </Box>
 ```
 
-**Check the result:**
+**結果の確認:**
 ![Dapp Interface changing step 4](../images/build-dapp-interface/dapp-4.png "Dapp Interface changing step 4")
 
-### Adding the button
+### ボタンの追加
 
-You may even not notice the button in the box that we have added. Let's fix it and add a component for buttons as it is not the only button in the app.
+追加したボックス内のボタンに気づかないこともあるかもしれません。このアプリにはボタンが1つしかないわけではないので、修正してボタン用のコンポーネントを追加しましょう。
 
 <details>
 
-<summary>Create Button component in ./src/components/Button.vue file </summary>
+<summary>./src/components/Button.vueファイルにButtonコンポーネントを作成します。</summary>
 
 ```HTML
 <template>
@@ -618,7 +626,7 @@ export default {
 </details>
 
 
-- Register the component (**App.vue**):
+- コンポーネントの登録 (**App.vue**):
 
 ```JS
 export default {
@@ -628,7 +636,7 @@ export default {
 }
 ```
 
-- Use it for the 'Faucet' button with props defined in the 'Button' component
+- `Button`コンポーネントで定義されたプロップを持つ`Faucet`ボタンに使用します。
 
 ```HTML
 <Box :classList="'account'">
@@ -637,26 +645,28 @@ export default {
 </Box>
 ```
 
-**We get this view:**
+**次のようなビューが得られます:**
 ![Dapp Interface changing step 5](../images/build-dapp-interface/dapp-5.png "Dapp Interface changing step 5")
 
-For the Button component we have emited the click from prop with `@onClick`, so I will pay attention if the faucet function is working correctly now (the balance should change on click):
+Buttonコンポーネントでは、`@onClick`でpropからクリックイベントを発火していますので、faucet機能が正しく動作しているかどうか（クリックで残高が変化するはず）に注目します。
+
 
 ![Dapp Interface changing step 6](../images/build-dapp-interface/dapp-6.gif "Dapp Interface changing step 6")
 
-### Adding the icon
+### アイコンの追加
 
-Let's add an icon to this button to attract more attention to this element of the interface, as user can't interact with the dapp properly without units and clicking on this button.
+このボタンにアイコンを追加して、インターフェイスのこの要素に注目させましょう。ユーザーは、このボタンをユニット化してクリックしないと、Dappを正しく操作できないからです。
 
-For this purpose you can use any ready Vue library for icons, I will create my own component with the icon.
+この目的のために、アイコンのためのVueライブラリを使用することができますが、私はアイコンを持つ独自のコンポーネントを作成します。
 
-- I found an appropriate icon on [the big online archive of icons](https://www.flaticon.com).
-- Downloaded .svg file and edited it in the vector graphics editor to make the proper size.
-- Inserted svg as a text in the Icon.vue component.
+- [アイコンの大きなオンライン・アーカイブ](https://www.flaticon.com)で適切なアイコンを見つけました。
+- .svgファイルをダウンロードして、ベクター・グラフィックス・エディターで編集し、適切なサイズにします。
+
+- Icon.vueコンポーネントにsvgをテキストとして挿入しました。
 
 <details>
 
-<summary>Here is what I got as the Icon.vue component</summary>
+<summary>これで、Icon.vueコンポーネントの出来上がりです。</summary>
 
 ```JS
 <template>
@@ -702,9 +712,9 @@ export default {
 
 </details>
 
-To use it with the button, edit the Button component.
+これをボタンで使うには、Buttonコンポーネントを編集します。
 
-Import the Icon in **Button.vue**:
+Iconを**Button.vue**にインポートします:
 
 ```JS
 components: {
@@ -712,7 +722,7 @@ components: {
 }
 ```
 
-Register prop:
+propを登録:
 
 ```JS
 props: {
@@ -723,7 +733,7 @@ props: {
 }
 ```
 
-Add the Icon to the button (we can specify different templates with `v-if` condition):
+アイコンをボタンに追加します（`v-if`条件で異なるテンプレートを指定できます）。
 
 ```HTML
 <template v-if="icon != 'none'">
@@ -735,7 +745,7 @@ Add the Icon to the button (we can specify different templates with `v-if` condi
 </template>
 ```
 
-Add styles:
+スタイルを追加:
 
 ```CSS
 .button .icon-fill path {
@@ -748,28 +758,29 @@ Add styles:
 
 ```
 
-Add the icon prop into the button in **App.vue**:
+**App.vue**でアイコンプロップをボタンに追加:
 
 ```HTML
 <Button label="Faucet" size="large" icon="faucet" @onClick="faucet" />
 ```
 
-**Check:**
+**確認:**
 
 ![Dapp Interface changing step 7](../images/build-dapp-interface/dapp-7.png "Dapp Interface changing step 7")
 
-### Add the Polkadot avatar
+### ポルカドットのアバターを追加する
 
-- Install [@vue-polkadot/vue-identicon](https://vue-polkadot.js.org/vue-ui/vue-identicon/#vue-polkadot-vue-identicon)
+- インストール [@vue-polkadot/vue-identicon](https://vue-polkadot.js.org/vue-ui/vue-identicon/#vue-polkadot-vue-identicon)
 
-- Import to App.vue:
+- App.vueにインポート:
 ```JS
 components: {
     Identicon: () => import("@vue-polkadot/vue-identicon")
 }
 ```
 
-- Insert the avatar instead of the word 'Account', pass props according to the documentation, use `account` data as a value prop:
+- `Account`という単語の代わりにアバターを挿入し、ドキュメントにしたがってpropsを渡し、value propとして`account`データを使用します:
+
 ```HTML
 <Identicon
   :value="account"
@@ -779,15 +790,15 @@ components: {
 />
 ```
 
-**Check:**
+**確認:**
 
 ![Dapp Interface changing step 8](../images/build-dapp-interface/dapp-8.png "Dapp Interface changing step 8")
 
-## Data manipulation for the better view
+## 見やすいようにデータを操作する
 
-Let's cut the account address:
+アカウントのアドレスをカットしてみましょう:
 
-- Wrap the variable `account` in the computed property:
+- 変数`account`をcomputedプロパティでラップします。
 
 ```JS
 computed: {
@@ -797,15 +808,15 @@ computed: {
 }
 ```
 
-- Replace the variable `account` with `AccountAddress` in the template
+- テンプレート内の変数 `account` を `AccountAddress` に置き換えてください。
 
-**Check:**
+**確認:**
 
 ![Dapp Interface changing step 9](../images/build-dapp-interface/dapp-9.png "Dapp Interface changing step 9")
 
 ## CSS magic
 
-Let's prettify the account section a little bit more:
+アカウントセクションをもう少し可愛くしてみましょう:
 
 <details>
 
@@ -864,7 +875,7 @@ Let's prettify the account section a little bit more:
 
 ![Dapp Interface changing step 10](../images/build-dapp-interface/dapp-10.gif "Dapp Interface changing step 10")
 
-Let's edit styles for the tabs:
+タブのスタイルを編集しましょう:
 
 <details>
 
@@ -902,7 +913,7 @@ Let's edit styles for the tabs:
 
 <details>
 
-<summary>Minimal template changes:</summary>
+<summary>テンプレートの変更は最小限に</summary>
 
 ```HTML
 <div class="tabs-content">
@@ -916,17 +927,17 @@ Let's edit styles for the tabs:
 
 ![Dapp Interface changing step 11](../images/build-dapp-interface/dapp-11.gif "Dapp Interface changing step 11")
 
-> Let me remind you that the finished code for this tutorial is in [this](https://github.com/positivecrash/wscool21-ui-dapp) repository. And let's shift to the next steps :)
+> このチュートリアルの完成したコードは、[このリポジトリ](https://github.com/positivecrash/wscool21-ui-dapp)にあることを覚えておいてください。そして、次のステップに進みましょう :)
 
 ## Datalog
 
-Start with fixing UI elements that are already known in the dapp: buttons (same as we have done for the 'Faucet', but with different props).
+まず、dapp で既に知られている UI 要素であるボタンを修正することから始めましょう（`Faucet`で行ったのと同じですが、異なるプロップを使用しています）。
 
-Then I will wrap these elements in `<fieldset>` to separate them by meaning. And I will write my own styles for the fieldset and input elements.
+次に、これらの要素を`<fieldset>`で囲み、意味ごとに分離します。そして、fieldsetとinputの要素に自分のスタイルを書きます。
 
 <details>
 
-<summary>Template in Datalog.vue:</summary>
+<summary>Datalog.vueのテンプレート:</summary>
 
 ```HTML
 <div class="tools">
@@ -946,7 +957,7 @@ Then I will wrap these elements in `<fieldset>` to separate them by meaning. And
 
 <details>
 
-<summary>Styles for input elements in app.css - it's supposed to be global:</summary>
+<summary>app.cssのinput要素のスタイル - グローバルなものになるはず:</summary>
 
 ```CSS
 input, select{
@@ -992,15 +1003,15 @@ input.large, select.large {
 
 </details>
 
-**Let's check that everything works fine after updates:**
+**アップデート後にすべてが問題なく動作することを確認してみましょう。:**
 
 ![Dapp Interface changing step 12](../images/build-dapp-interface/dapp-12.gif "Dapp Interface changing step 12")
 
-We have a datalog section through out the dapp, so I'll make a component for it.
+dappの中にはdatalogセクションがあるので、そのためのコンポーネントを作ります。
 
 <details>
 
-<summary>I have got the following code for a new component DatalogSection.vue</summary>
+<summary>新しいコンポーネントDatalogSection.vueのコードは以下のとおりです。</summary>
 
 ```HTML
 <template>
@@ -1104,16 +1115,17 @@ details.box[open] summary {
 
 </details>
 
-What you should pay attention to here: we pass prop `log` as an array. I assume that this multidimensional array will contain log of entries and every entry has a title (I wrote there date for all logs in the dapp) and content. We need to reformat arrays in components **Datalog.vue** and **Launch.vue**.
 
-Now edit **Datalog.vue**. Find method, where we get the log:
+ここで注意しなければならないのは、prop `log`を配列として渡していることです。この多次元配列にはエントリーのログが含まれていて、すべてのエントリーにはタイトル（dappのすべてのログには日付を書いています）とコンテンツがあると仮定しています。**Datalog.vue**と**Launch.vue**のコンポーネントで配列を再フォーマットする必要があります。
+
+次に**Datalog.vue**を編集します。ログを取得するFindメソッドを編集します:
 ```JS
 async read() {
   this.log = (await this.api.query.datalog.datalog(this.account)).toArray();
 }
 ```
 
-Now we have to format data in **Datalog.vue**, and pass ready log array for **DatalogSection.vue**. So let's map the log array:
+次に、**Datalog.vue**でデータをフォーマットして、**DatalogSection.vue**にログの配列を渡す必要があります。そこで、ログの配列をマッピングしてみましょう:
 ```JS
 async read() {
   this.log = (await this.api.query.datalog.datalog(this.account)).toArray().map((item) => {
@@ -1122,7 +1134,7 @@ async read() {
 }
 ```
 
-We don't need this code anymore:
+このコードはもう必要ありません。:
 ```JS
 filters: {
   dateFormat: function(v) {
@@ -1134,19 +1146,19 @@ filters: {
 }
 ```
 
-**Let's check the datalog section in Datalog tab:**
+**DatalogタブのDatalogセクションを確認してみましょう:**
 
 ![Dapp Interface changing step 13](../images/build-dapp-interface/dapp-13.gif "Dapp Interface changing step 13")
 
-## Launch
+## 起動
 
-For this step, most of improvements have already been done, we just need to apply them to the template: import Button and Datalog components, remove the excessive title:
+このステップでは、ほとんどの改善点がすでに完了しているので、テンプレートに適用するだけです。ButtonとDatalogコンポーネントをインポートし、過剰なタイトルを削除します:
 
 ![Dapp Interface changing step 14](../images/build-dapp-interface/dapp-14.gif "Dapp Interface changing step 14")
 
-Let's replace `select` control element with `checkbox`.
+`select`コントロール要素を`checkbox`に置き換えてみましょう。
 
-Instead of this:
+これの代わりに:
 ```HTML
 <select v-model="parameter" :disabled="isWrite">
   <option value="ON">ON</option>
@@ -1154,7 +1166,7 @@ Instead of this:
 </select>
 ```
 
-Write this:
+これを書く:
 ```HTML
 <div class="toggler inline-block">
   <input v-model="parameter" :disabled="isWrite" type="checkbox" id="robot-switch" />
@@ -1224,16 +1236,16 @@ Write this:
 
 ![Dapp Interface changing step 15](../images/build-dapp-interface/dapp-15.gif "Dapp Interface changing step 15")
 
-I want to clarify something with the interface: with these elements we start some device. Let's visualize it. I've chosen a drone, so I will toggle classes according to `item.parameter`.
+インターフェイスについて明確にしておきたいことがあります。これらの要素を使って、いくつかのデバイスを開始します。それをイメージしてみましょう。ここではドローンを選んだので、`item.parameter`に応じてクラスを切り替えます。
 
-Create a new property in `data`:
+`data`に新しいプロパティを作成します:
 ```JS
 data() {
   status: false
 }
 ```
 
-Assign value of `parameter` to `status` after button is clicked and tx is sent to the block:
+ボタンがクリックされ、ブロックにtxが送られた後、`parameter`の値を`status`に代入します:
 ```JS
 methods: {
     async launch() {
@@ -1259,11 +1271,11 @@ methods: {
   }
 ```
 
-Write styles for the drone in **Launch.vue**. Don't forget `scoped` for `<style>` tag, to apply styles only for this component.
+**Launch.vue**にドローンのスタイルを書きます。このコンポーネントだけにスタイルを適用するために、`<style>`タグの`スコープ`を忘れないように。
 
 <details>
 
-<summary>CSS for drone:</summary>
+<summary>drone用のCSS:</summary>
 
 ```CSS
 <style scoped>
@@ -1302,15 +1314,14 @@ Write styles for the drone in **Launch.vue**. Don't forget `scoped` for `<style>
 
 ![Dapp Interface changing step 16](../images/build-dapp-interface/dapp-16.gif "Dapp Interface changing step 16")
 
-Now let's add the **DatalogSection.vue** component.
-
+それでは、**DatalogSection.vue**コンポーネントを追加しましょう。
 ```JS
 components: {
   DatalogSection: () => import("./DatalogSection")
 }
 ```
 
-Reformat the log array from:
+ログの配列を再構築:
 
 ```JS
 this.log.push({
@@ -1320,7 +1331,8 @@ this.log.push({
 });
 ```
 
-to (for structure like `[["entry 1 date", "entry 1 content"], ["entry 2 date", "entry 2 content"]]`):
+
+ `[["entry 1 date", "entry 1 content"], ["entry 2 date", "entry 2 content"]]`のような構造の場合:
 
 ```JS
 this.log.push([new Date().toLocaleString(), {
@@ -1330,7 +1342,7 @@ this.log.push([new Date().toLocaleString(), {
 }]);
 ```
 
-Replace the code from the template:
+テンプレートからコードを置き換えます:
 
 ```HTML
 <div v-if="log.length > 0" class="log">
@@ -1344,26 +1356,26 @@ Replace the code from the template:
 </div>
 ```
 
-with this:
+こちらに置き換え:
 
 ```HTML
 <DatalogSection :log="log"/>
 ```
 
-**Check:**
+**確認:**
 ![Dapp Interface changing step 17](../images/build-dapp-interface/dapp-17.gif "Dapp Interface changing step 17")
 
-Sometimes you get some errors, it's almost inevitable. Something can go wrong with the connection or anything else can happen. So we have fallbacks with error messages through out the dapp, I haven't changed them from the start, in the code they look like:
+時々、いくつかのエラーが出ることがあります。接続がうまくいかなかったり、何か他のことが起こる可能性があります。そこで、Dappの中にエラーメッセージ付きのフォールバックを用意しました。
 
 ```HTML
 <div v-if="error" class="error">{{ error }}</div>
 ```
 
-On the interface errors look this way now:
+インターフェースでは、エラーはこのようになっています。:
 
 ![Dapp Interface changing step 18](../images/build-dapp-interface/dapp-18.png "Dapp Interface changing step 18")
 
-Add styles for the `.error` in **app.css**:
+**app.css**に`.error`のスタイルを追加します:
 
 ```CSS
 .error {
@@ -1374,7 +1386,7 @@ Add styles for the `.error` in **app.css**:
 }
 ```
 
-And I will fix a space between the `.tools` section and other content from the bottom as well in **app.css**:
+そして、`.tools`の部分と他のコンテンツの間のスペースを、**app.css**でも下から修正します。
 
 ```CSS
 .tools {
@@ -1382,21 +1394,21 @@ And I will fix a space between the `.tools` section and other content from the b
 }
 ```
 
-We get:
+以下のようになります:
 
 ![Dapp Interface changing step 19](../images/build-dapp-interface/dapp-19.png "Dapp Interface changing step 19")
 
-Now on this page we have to "primary" buttons. Technically it is okay, but this is not okay from the above user experience. It's better not to use more than one prevailing button on the screen. So let's fix it and add for the `Button` in **Launch.vue** with property `type="secondary"`:
+このページでは、ボタンを「primary」にしています。技術的には問題ありませんが、上記のユーザーエクスペリエンスからすると、これは問題ありません。画面上に複数のプライマリ・ボタンを使用しない方が良いでしょう。そこで、**Launch.vue**に`type="secondary "`のプロパティを持つ`ボタン`を追加して、この問題を解決しましょう。
 
 ![Dapp Interface changing step 20](../images/build-dapp-interface/dapp-20.png "Dapp Interface changing step 20")
 
-Great, now I'll fix some issues with my node and go to the Demo step.
+良い感じ、次はノードの問題を解決して、デモのステップに進みましょう。
 
-## Demo
+## デモ
 
-For the start, I'd like to swap tabs, to pay more attention to the most relevant one, but this is not the first step that we do to practice. Reverse tabs in **App.vue**.
+はじめに、タブを入れ替えて、最も関連性の高いものに注意を払うようにしたいのですが、これは練習のために行う最初のステップではありません。**App.vue**でタブを反転させます。
 
-Don't forget to replace the default data:
+デフォルトのデータの入れ替えも忘れずに:
 
 ```JS
 data() {
@@ -1409,12 +1421,12 @@ data() {
 
 ![Dapp Interface changing step 21](../images/build-dapp-interface/dapp-21.png "Dapp Interface changing step 21")
 
-As usual let's start with changing what we have already got.
+いつものように、すでにあるものを変更することから始めましょう。
 
-- Remove the title `<h2>Demo</h2>` as in the previous steps
-- Find UI elements that we have already learn – datalog, buttons, account address. But not so fast. Now we'll change the datalog only.
+- 前のステップで行ったように、タイトル`<h2>Demo</h2>`を削除します。
+- データログ、ボタン、アカウントアドレスなど、すでに学んだUI要素を見つけます。しかし、そうはいきません。ここでは、データログだけを変更します。
 
-Add the component to **Demo.vue**:
+**Demo.vue**にコンポーネントを追加します:
 
 ```JS
 components: {
@@ -1426,13 +1438,13 @@ components: {
 <DatalogSection :log="log"/>
 ```
 
-We've got raw data in the log, so we need to reformat the array with the log to pass in the component ready-view data as in the previous steps. Find the line `return [item[0], item[1]];` in `async created()` and replace it with:
+ログには生のデータが入っているので、前のステップのようにコンポーネントで描画しやすいデータを渡すために、ログで配列を再構成する必要があります。`async created() `の中の`return [item[0], item[1]];`という行を探して、次のように置き換えます。
 
 ```JS
 return [new Date(Number(item[0])).toLocaleString(), JSON.parse(u8aToString(item[1]))];
 ```
 
-Remove the unused code from the log:
+使用していないコードをログから削除します。:
 
 ```HTML
 <div v-if="log" class="log">
@@ -1444,7 +1456,7 @@ Remove the unused code from the log:
 </div>
 ```
 
-and:
+こちらも:
 
 ```JS
 filters: {
@@ -1457,14 +1469,14 @@ filters: {
 },
 ```
 
-**Check:**
+**確認:**
 ![Dapp Interface changing step 22](../images/build-dapp-interface/dapp-22.png "Dapp Interface changing step 22")
 
-For customization of this demo example with launching a robot, you are free to come up with any idea. Personally, I started with this town:
+今回のロボット起動のデモ例をカスタマイズするには、自由にアイデアを出すことができます。個人的にはこの街から始めました。
 
 ![Dapp Interface changing step 23](../images/build-dapp-interface/dapp-23.gif "Dapp Interface changing step 23")
 
-I won't show the whole code for this not to confuse you at all, but schematically there will be something like this:
+混乱しないように全体のコードは示しませんが、概略的には次のようなものになります。
 
 ```HTML
 <div class="demo" :class="[robot.state ? 'play' : 'stop']">
@@ -1474,11 +1486,11 @@ I won't show the whole code for this not to confuse you at all, but schematicall
 </div>
 ```
 
-Than within the element `.demo.play` write styles for moving the city backward, and the car forward.
+`.demo.play`という要素の中に、街を後ろに動かしたり、車を前に動かしたりするスタイルを書いています。
 
-While working on this, I came up with the idea of realization the CyberPunk city. As I have no any particullar task, so the car became a taxi, driver became a passenger, and now on the interface we have an AI robot hologram welcoming the passenger (these all are just CSS and graphics tweaks&&tricks).
+この作業をしているうちに、サイバーパンクの街を実現することを思いつきました。特別な作業なしで、車はタクシーになり、ドライバーは乗客になり、インターフェイスにはAIロボットのホログラムが乗客を迎えてくれるようになりました（これらはすべて、CSSとグラフィックの調整とトリックに過ぎません）
 
-**The code for the Cyberpunk city demo:**
+**Cyberpunk cityデモのコード:**
 
 <details>
 
@@ -1521,8 +1533,7 @@ While working on this, I came up with the idea of realization the CyberPunk city
 
 </details>
 
-There are more than one hash address that should be shortenned, so I added the method:
-
+短縮されるべきハッシュアドレスが複数あるので、メソッドを追加しました。
 ```JS
 methods: {
   addressShort(address) {
@@ -1531,7 +1542,7 @@ methods: {
 }
 ```
 
-Don't forget to register the Button component
+Buttonコンポーネントの登録も忘れずに
 
 ```JS
 components: {
@@ -1747,31 +1758,32 @@ div.demo-city-1 {
 
 </details>
 
-**Result:**
+**結果:**
 
 ![Dapp Interface changing step 25](../images/build-dapp-interface/dapp-25.gif "Dapp Interface changing step 25")
 
 ## Conclusion
 
-Congratulations! Now you have redesigned the dapp and clues how to start building your application's interface.
+おめでとうございます！これで、Dappのデザインを変更し、アプリケーションのインターフェイスの構築を開始する方法がわかりました。
 
 ### Checkout links
 
-- [Full code of this tutorial](https://github.com/positivecrash/wscool21-ui-dapp)
-- [Discuss in Discord](https://discord.gg/5UWNGNaAUf)
-- [View the Robonomics Winter School 2021 schedule and summary](https://robonomics.network/blog/winter-robonomics-school/)
+- [このチュートリアルの全コード](https://github.com/positivecrash/wscool21-ui-dapp)
+- [Discordで話し合う](https://discord.gg/5UWNGNaAUf)
+- [ロボノミクスウィンタースクール2021のスケジュールと概要を見る](https://robonomics.network/blog/winter-robonomics-school/)
 - [Github of contributor](https://github.com/positivecrash)
 
-### Practice
+### 実践
 
-If you have some extra time or want to practice your skills, there are some ideas for improvements that you could make to this demo:
+もし時間が余っていたり、スキルを練習したい場合は、このデモで行える改善アイデアがあります:
 
-- Adapt UI for narrow screens, make the dapp mobile-friendly
-- Add the 'day/night' mode, by editing the **_variables.scss** file and the template file of the dapp
-- Add 'Copy to clipboard' buttons for addresses
-- Make delicate popus to inform users about changes (e.g. you can popup a message that units are received after clicking the 'Faucet' button, or you can move in the popup an error that we had in the 'Launch' section).
+- UIを狭い画面に適応させ、モバイルフレンドリーなdappにする
+- dappの**_variables.scss**ファイルとテンプレートファイルを編集して、「ライト/ダーク」モードを追加する
+- アドレスに「クリップボードにコピー」ボタンを追加
+- 繊細なポップアップを作成して、ユーザーに変更を通知する（例：「Faucet」ボタンをクリックした後にユニットを受け取ったというメッセージをポップアップで表示したり、「起動」セクションで発生したエラーをポップアップで移動させることができます）。
 
-Please, fill free to ask questions and share your results in [Discord](https://discord.gg/5UWNGNaAUf), mark me in your message `@positivecrash`
+
+質問や結果の共有は[Discord](https://discord.gg/5UWNGNaAUf)で行ってください。メッセージに `@positivecrash`をつけてください。
 
 
 

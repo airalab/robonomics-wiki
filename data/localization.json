@@ -1,5 +1,5 @@
 {
-    "locales": ["en", "ru", "es","ja"],
+    "locales": ["en", "ru", "es", "ja", "ko"],
     "defaultLocale": "en",
     "goesAfter": ["docs"]
 }

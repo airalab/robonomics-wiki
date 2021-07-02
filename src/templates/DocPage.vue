@@ -95,7 +95,6 @@
       grid-template-columns: minmax(0,var(--width-sidebar-left)) auto;
       gap: var(--space);
       align-items: start;
-      padding-top: var(--space);
 
       &__sidebar{
         word-break: break-word;
@@ -259,7 +258,6 @@ export default {
       NavIcon: () => import('~/components/NavIcon.vue'),
       PageNextPrev: () => import('~/components/PageNextPrev.vue'),
       Button: () => import('~/components/Button.vue'),
-      ButtonTranslateThis: () => import('~/components/ButtonTranslateThis.vue'),
 	  },
 
   data(){
