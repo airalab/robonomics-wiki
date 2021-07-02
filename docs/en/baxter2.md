@@ -4,7 +4,9 @@ contributors: [nakata5321]
 translated: true
 ---
 
-Example of how it works is available [here][db1].
+Example of how it works is available [here][db1]:
+
+https://youtu.be/2AQGFVzkGdg
 
 ## Requirements:
  - Ubuntu 18.04

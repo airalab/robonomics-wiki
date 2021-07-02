@@ -178,6 +178,8 @@
           link: /docs/wschool2021-build-dapp-for-end-users
         - title_en: Lesson 6.2, Build Dapp Interface
           link: /docs/wschool2021-build-dapp-interface
+        - title_en: Troubleshooting
+          link: /docs/troubleshooting
 
 - title_en: Contribute
   title_ru: Внесите свой вклад

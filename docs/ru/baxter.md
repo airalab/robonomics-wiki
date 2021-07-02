@@ -32,6 +32,8 @@ pip install ipfshttpclient
  (you can find tutorial ["Create an Account on Robonomics Portal"][db6] here).
  - IPFS browser extension (not necessary)
 
+
+
 ## 1. Download Baxter model and controller packages
 Download packages:
 ```sh
@@ -49,6 +51,8 @@ Dont forget to add source command:
 echo "source /home/$USER/robot_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
+
+__Important!__ At the end save *Robonomics node (binary file)* in **robot_ws** directory.
 
 ## 2. Create simulation world
 Let's start gazebo world and put our baxter in it:
@@ -90,7 +94,7 @@ Add Baxter's secret key and adress to `configuration.txt` in `robot_ws/src/robot
 
 In new window run:
 ```sh
-ifps init #you only need to do this once
+ipfs init #you only need to do this once
 ipfs daemon
 ```
 Open separate terminal and start *controller package*:
@@ -101,9 +105,9 @@ rosrun robot_controller robot_control.py
 
 Return to the first terminal, open new window and send command to [**robonomics io**][db7]. This command will turn ON your robot:
 ```sh
-echo "ON" | ./robonomics io write launch -r <CURIOSITY ADDRESS> -s <EMPLOYER’S KEY>
+echo "ON" | ./robonomics io write launch -r <BAXTER ADDRESS> -s <EMPLOYER’S KEY>
 ```
-Where `<CURIOSITY ADDRESS>` and `<EMPLOYER’S KEY>` are replaced with previously saved strings accordingly
+Where `<BAXTER ADDRESS>` and `<EMPLOYER’S KEY>` are replaced with previously saved strings accordingly
 
 ![rob_message][im8]
 
