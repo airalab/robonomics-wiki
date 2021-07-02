@@ -1,20 +1,20 @@
 ---
-title: How to edit WIKI
-contributors: [positivecrash]
+title: Cómo editar WIKI
+contributors: [positivecrash, arinaml]
 translated: false
 ---
 
-**Robonomics WIKI is open source. Any corrections are welcome: fixing errors, typos, some unclear or outdated information, translation into any language. You'll need a [GitHub](https://github.com/) account.**
+**Robonomics WIKI es de código abierto. Cualquier corrección es bienvenida: corrección de errores, errores tipográficos, información poco clara o desactualizada, traducción a cualquier idioma. Necesitará una cuenta de [GitHub](https://github.com/).** 
 
-## Edit existing doc
+## Editar documento existente
 
-1. Choose page
-2. Click button "Edit page" marked with the Github logo on the page you want to edit
-3. Clicking on the button will take you to the .md file.
-4. Please, follow common rules for editing [Markdown files](https://en.wikipedia.org/wiki/Markdown), bearing in mind a few features of the WIKI stack:
+1. Elija la página
+2. Haga clic en el botón "Editar página" marcado con el logotipo de Github en la página que desea editar.
+3. Al hacer clic en el botón, accederá al archivo .md.
+4. Por favor, siga las reglas comunes para editar [archivos Markdown](https://en.wikipedia.org/wiki/Markdown), teniendo en cuenta algunas características del WIKI:
 
 ### Frontmatter
-Docs in Robonomics WIKI contain frontmatter block. It must be at the top of the Markdown file, and must take the form of valid YAML set between triple-dashed lines. Between the triple-dashed lines, you can set or edit folowing options:
+Los documentos de Robonomics WIKI contienen un bloque de frontmatter. Debe estar en la parte superior del archivo Markdown y debe tener la forma de un YAML válido establecido entre líneas de tres puntos. Entre las líneas de tres puntos, puede configurar o editar las siguientes opciones:
 
 ```YAML
 ---
@@ -24,45 +24,45 @@ translated: true # "true" if it has been translated in current language (see loc
 ---
 ```
 
-### Images
-1. Upload image in folder `/docs/images/url-of-your-doc`
-* If image needs to be localized, insert all of them in one folder
-* Use locale appendix in name of images if it's localized, e.g. `image_en.jpg`
-* Make sure your image is web optimised and at the same time it looks good
-2. Insert images standart way for Markdown files.
+### Imágenes
+1. Cargue la imagen en la carpeta `/docs/images/url-of-your-doc`
+* Si la imagen necesita ser localizada, insértelas todas en una carpeta
+* Use el apéndice de configuración regional en el nombre de las imágenes si está localizado, p. Ej. `image_en.jpg`
+* Asegúrese de que su imagen esté optimizada para la web y, al mismo tiempo, se vea bien
+2. Inserte imágenes de forma estándar para archivos Markdown.
 
-### YouTube videos
-You can embed any YouTube video in doc by inserting share link as separate paragraph without any additional quotes or tags, e.g.: `https://youtu.be/kQaSwNYHJQ8`
+### Videos de Youtube
+Puede incrustar cualquier video de YouTube en el documento insertando el enlace para compartir como un párrafo separado sin comillas o etiquetas adicionales, por ejemplo: `https://youtu.be/kQaSwNYHJQ8`
 
 ### Asciinema
-Robonomics WIKI has support for Asciinema. To insert Asciinema, please, follow these instructions:
-* Import component after frontmatter block `import Asciinema from '~/components/Asciinema.vue'`
-* Insert as separate paragraph `<Asciinema vid="WCFcx8C6M8e52UKDNei1xZloU"/>`, where is vid is ID of specific asciicast
+Robonomics WIKI tiene soporte para Asciinema. Para insertar Asciinema, siga estas instrucciones:
+* Importar componente después del bloque de frontmatter `importar Asciinema desde '~/components/Asciinema.vue'`
+* Insertar como párrafo separado `<Asciinema vid="WCFcx8C6M8e52UKDNei1xZloU"/>`, donde vid es el ID de una asciicast 
 
-> You can get the widget script for a specific asciicast by clicking on “Embed” link on asciicast page.
-> It looks like this:
+> Puede obtener el script del widget para una asciicast específica haciendo clic en el enlace "Insertar" en la página de asciicast.
+> Se parece a esto:
 > `<script src="https://asciinema.org/a/14.js" id="asciicast-14" async></script>`
 [Asciinema docs](https://asciinema.org/docs/embedding)
 
-In the example above vid is 14.
+En el ejemplo anterior, vid es 14.
 
-## Add new doc
+## Agregar nuevo documento
 
-If you need to add new page in docs of Robonomics WIKI, please, follow these steps:
+Si necesita agregar una nueva página en los documentos de Robonomics WIKI, siga estos pasos:
 
-1. Find the folder with the locale that matches the language of the article you are adding, e.g. `/docs/en/`
-2. Create .md file, using in name latin characters and follow common rules for [url structure](https://developers.google.com/search/docs/advanced/guidelines/url-structure)
-3. Edit file as described above
-4. Duplicate file to other locale folders, even if you do not plan to translate them. Do not forget mark in frontmatter not translated pages as `translated: false`
-5. Add doc in menu:
-* Open file `/data/sidebar_docs.yaml`
-* Decide where to place your doc
-* If you want to create new section, provide title with locale appendix, using only locales your section is translated
-* Add doc with link. The link must be only one, and must not contain locale characters. Correct is `/docs/url-of-your-doc`, not correct is `/docs/en/url-of-your-doc`
-* Use valid YAML for `/data/sidebar_docs.yaml` and rely on the existing file structure
+1. Busque la carpeta con la configuración regional que coincida con el idioma del artículo que está agregando, p. Ej. `/docs/en/`
+2. 2. Cree un archivo .md, utilizando caracteres latinos en el nombre y siga las reglas comunes para [estructura de URL](https://developers.google.com/search/docs/advanced/guidelines/url-structure)
+3. Edite el archivo como se describe arriba
+4. Duplique el archivo en otras carpetas de configuración regional, incluso si no planea traducirlas. No olvide marcar en la parte delantera las páginas no traducidas como `translated: false`
+5. Agregar documento en el menú:
+* Abra el archivo `/data/sidebar_docs.yaml`
+* Decide dónde colocar tu documento
+* Si desea crear una nueva sección, proporcione el título con el apéndice de configuración regional, utilizando solo las configuraciones regionales, su sección está traducida
+* Agregue un documento con un enlace. El enlace debe ser solo uno y no debe contener caracteres de configuración regional. Correcto es `/docs/url-of-your-doc`, incorrecto es `/docs/en/url-of-your-doc`
+* Use YAML válido para  `/data/sidebar_docs.yaml` y confíe en la estructura de archivo existente
 
-## Submit Pull Request
+## Enviar solicitud de extracción
 
-[Make pull request](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for any content you changed including typos, translations, outdated information or broken links.
+[Hacer solicitud de extracción](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) para cualquier contenido que haya cambiado, incluidos errores tipográficos, traducciones, información desactualizada o enlaces rotos.
 
-Decisions about individual PRs made by Robonomics core team. Special grants in [XRT](https://robonomics.network/community#token) are also possible for extended contribution 🤖💙💛💚💎🍭🎉🔌
+Decisiones sobre Solicitudes de extracción individuales tomadas por el equipo central de Robonomics. Las subvenciones especiales en [XRT](https://robonomics.network/community#token) también son posibles para contribuciones extendidas 🤖💙💛💚💎🍭🎉🔌

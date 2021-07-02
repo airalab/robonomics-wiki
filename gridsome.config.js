@@ -42,14 +42,14 @@ module.exports = {
           }
         }
       },
-      // {
-      //   use: 'gridsome-plugin-gtm',
-      //   options: {
-      //     id: 'GTM-5ZL8NWB',
-      //     enabled: true,
-      //     debug: true
-      //   }
-      // },
+      {
+        use: 'gridsome-plugin-gtm',
+        options: {
+          id: 'GTM-5ZL8NWB',
+          enabled: true,
+          debug: true
+        }
+      },
   ],
 
 
