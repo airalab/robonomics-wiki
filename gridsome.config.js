@@ -29,36 +29,7 @@ module.exports = {
         ]
       }
     },
-
-      {
-        use: 'gridsome-plugin-yandex-metrika',
-        options: {
-          id: 68969365,
-          options:  {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-          }
-        }
-      },
-      {
-        use: 'gridsome-plugin-gtm',
-        options: {
-          id: 'GTM-5ZL8NWB',
-          enabled: true,
-          debug: true
-        }
-      },
   ],
-
-
-  // transformers: {
-  //   remark: {
-  //     externalLinks: false
-  //   }
-  // },
-
 
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
