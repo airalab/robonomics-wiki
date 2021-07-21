@@ -1,5 +1,6 @@
 {
     "locales": ["en", "ru", "es", "ja", "ko"],
     "defaultLocale": "en",
-    "goesAfter": ["docs"]
+    "goesAfter": ["docs"],
+    "exclude": ["/404/", "/sitemap/"]
 }

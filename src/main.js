@@ -33,8 +33,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   });
 
   function translatePath(pathToResolve, targetLocale) {
-
-    console.log(pathToResolve)
     
     if (!targetLocale) {
       return pathToResolve
@@ -53,23 +51,32 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
     // delete all possible locales from path
     const newPathSegments = pathToResolveSegments.filter(el => !localeSettings.locales.includes(el))
+    const pathWithoutLocale = newPathSegments.join('/')
 
-    // Insert locale before page path
-  
-    //If path contains one of 'goesAfter' option, push locale after that
-    // expected /'goesAfter'/path-to-page -> /'goesAfter'/locale/path-to-page
-    let i
-    if( i = newPathSegments.findIndex(el => localeSettings.goesAfter.includes(el)) > 0 ) {
-      newPathSegments.splice(i+1, 0, targetLocale);
+    // Check if the path need to be translated
+    if( localeSettings.exclude.includes(pathWithoutLocale) ){
+      return pathWithoutLocale
     }
-    // Else insert at the end
-    // expected /path-to-page -> /locale/path-to-page
     else {
-      newPathSegments.splice(1, 0, targetLocale)
-      // newPathSegments.splice(newPathSegments.length-1, 0, targetLocale)
+       // Insert locale before page path
+  
+        //If path contains one of 'goesAfter' option, push locale after that
+        // expected /'goesAfter'/path-to-page -> /'goesAfter'/locale/path-to-page
+        let i
+        if( i = newPathSegments.findIndex(el => localeSettings.goesAfter.includes(el)) > 0 ) {
+          newPathSegments.splice(i+1, 0, targetLocale);
+        }
+        // Else insert at the end
+        // expected /path-to-page -> /locale/path-to-page
+        else {
+          newPathSegments.splice(1, 0, targetLocale)
+          // newPathSegments.splice(newPathSegments.length-1, 0, targetLocale)
+        }
+
+        return newPathSegments.join('/')
     }
 
-    return newPathSegments.join('/')
+   
   }
 
   // Add translate path helper
