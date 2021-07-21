@@ -19,8 +19,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   
   appOptions.store = new Vuex.Store({
     state: {
-      locale: isClient ? (localStorage.lang || localeSettings.defaultLocale) : localeSettings.defaultLocale
-      // locale: localeSettings.defaultLocale
+      // locale: isClient ? (localStorage.lang || localeSettings.defaultLocale) : localeSettings.defaultLocale
+      locale: localeSettings.defaultLocale
     },
     mutations: {
       setlocale (state, lang) {
