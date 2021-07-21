@@ -32,11 +32,9 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     }
   });
 
-  function getLocaleFromUrl(path) {
-    
-  }
-
   function translatePath(pathToResolve, targetLocale) {
+
+    console.log(pathToResolve)
     
     if (!targetLocale) {
       return pathToResolve

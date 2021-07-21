@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Robonomics Wiki',
+  siteUrl: 'https://wiki.robonomics.network/',
   // siteDescription: 'The Robonomics Wiki aims to bring all the knowledge about Robonomics to end users and everyone who is interested in the project.',
   
   plugins: [
@@ -29,6 +30,13 @@ module.exports = {
         ]
       }
     },
+
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        include: ['/docs', '/docs/**']
+      }
+    }
   ],
 
   chainWebpack: config => {
