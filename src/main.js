@@ -95,6 +95,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     router.beforeEach((to, from, next) => {
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
+      console.log(localStorage.lang)
+
       // do not rewrite build paths
       if (process.isServer) {
         return next()
