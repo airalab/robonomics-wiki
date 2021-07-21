@@ -19,8 +19,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   
   appOptions.store = new Vuex.Store({
     state: {
-      // locale: isClient ? (localStorage.lang || localeSettings.defaultLocale) : localeSettings.defaultLocale
-      locale: localeSettings.defaultLocale
+      locale: isClient ? (localStorage.lang || localeSettings.defaultLocale) : localeSettings.defaultLocale
+      // locale: localeSettings.defaultLocale
     },
     mutations: {
       setlocale (state, lang) {
@@ -31,6 +31,10 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       }
     }
   });
+
+  function getLocaleFromUrl(path) {
+    
+  }
 
   function translatePath(pathToResolve, targetLocale) {
     
@@ -88,11 +92,10 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.prototype.$st = translateString;
 
 
-
-
   //Rewrite route according to locale
   if (isClient) {
     router.beforeEach((to, from, next) => {
+
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
       console.log(localStorage.lang)
