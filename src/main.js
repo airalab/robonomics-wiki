@@ -4,6 +4,7 @@ import VueCookies from 'vue-cookies'
 
 import '~/assets/style/index.scss'
 import DefaultLayout from '~/layouts/Default.vue'
+import SidebarLayout from '~/layouts/Sidebar.vue'
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, { router, head, isClient, appOptions }) {
@@ -13,14 +14,15 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   const localeSettings = JSON.parse(JSON.stringify(localeOptions))
 
   Vue.component('Layout', DefaultLayout)
+  Vue.component('Sidebar', SidebarLayout)
   Vue.use(Vuex)
     
   Vue.use(VueCookies)
   
   appOptions.store = new Vuex.Store({
     state: {
-      locale: isClient ? (localStorage.lang || localeSettings.defaultLocale) : localeSettings.defaultLocale
-      // locale: localeSettings.defaultLocale
+      // locale: isClient ? (window.navigator.language.split('-')[0] || localeSettings.defaultLocale) : localeSettings.defaultLocale
+      locale: localeSettings.defaultLocale
     },
     mutations: {
       setlocale (state, lang) {
@@ -32,22 +34,47 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     }
   });
 
+  // function that splits path to segments, e.g. to check locales within path
+  function splitPath(path) {
+    if (!path.startsWith('/')) {
+      path = '/' + path
+    }
+
+    if (!path.endsWith('/')) {
+      path = path + '/'
+    }
+
+    return path.split('/')
+  }
+
+
+  // Initialize locale different from default, if applyable
+  function initLocale() {
+    if(isClient) {
+      // Check if we have saved preferences of user
+      if( localStorage.lang ) {
+        appOptions.store.state.locale = localStorage.lang
+      }
+      else {
+        // If no preferences, try get locales from url
+        const browserUrl = splitPath(window.location.href)
+        const localeFromBrowser = browserUrl.filter(el => localeSettings.locales.includes(el))[0] // in case there are several locales in url, we get first
+        appOptions.store.state.locale = localeFromBrowser
+        localStorage.setItem('lang', localeFromBrowser) // set as preference
+      }
+
+      //if non of these conditions are worked, locale will remain default
+    }
+  }
+
+
   function translatePath(pathToResolve, targetLocale) {
     
     if (!targetLocale) {
       return pathToResolve
     }
 
-    // Check path segments
-    if (!pathToResolve.startsWith('/')) {
-      pathToResolve = '/' + pathToResolve
-    }
-
-    if (!pathToResolve.endsWith('/')) {
-      pathToResolve = pathToResolve + '/'
-    }
-
-    const pathToResolveSegments = pathToResolve.split('/')
+    const pathToResolveSegments = splitPath(pathToResolve)
 
     // delete all possible locales from path
     const newPathSegments = pathToResolveSegments.filter(el => !localeSettings.locales.includes(el))
@@ -99,11 +126,11 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   //Rewrite route according to locale
   if (isClient) {
-    router.beforeEach((to, from, next) => {
+    router.beforeEach(async (to, from, next) => {
+
+      initLocale()
 
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
-
-      console.log(localStorage.lang)
 
       // do not rewrite build paths
       if (process.isServer) {
@@ -116,6 +143,10 @@ export default function (Vue, { router, head, isClient, appOptions }) {
         })
       }
       else{
+       
+        // const response = await fetch(window.location.origin + to.path)
+        // console.log(response)
+
         return next()
       }
     })

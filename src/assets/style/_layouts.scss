@@ -1,4 +1,25 @@
-.layout__content, .layout__page {
+.main {
+	margin: 0 auto;
+	padding-bottom: var(--space);
+	position: relative;
+}
+
+.layout{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	.footerPusher{
+		flex: 1 0 auto;
+	}
+
+	.footer{
+		flex-shrink: 0;
+	}
+}
+  
+ 
+  .layout__content, .layout__page {
 	box-sizing: border-box;
 	width: 100%;
 	margin: 0 auto;

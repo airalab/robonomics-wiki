@@ -64,8 +64,8 @@
 - alias: Search
   en: Search
   es: Búsqueda
-  ja: Search
-  ko: Search
+  ja: サイト検索
+  ko: 사이트 검색
   ru: Поиск
 
 - alias: Robonomics WIKI
@@ -81,13 +81,6 @@
   ja: Found results
   ko: Found results
   ru: Количество найденных записей
-
-- alias: 404msg
-  en: This page not found
-  es: Página no Encontrada
-  ja: This page not found
-  ko: This page not found
-  ru: Страница не найдена
 
 - alias: In this article
   en: In this article
@@ -161,14 +154,77 @@
 
 - alias: This page needs translation
   en: This page needs translation
-  es: Esta Página necesita traducción
-  ja: This page needs translation
-  ko: This page needs translation
+  es: Esta página necesita traducción
+  ja: このページは翻訳が必要です
+  ko: 이 페이지는 번역이 필요합니다
   ru: Эта страница нуждается в переводе
 
-- alias: Privacy policy
-  en: Privacy & Cookie policy
-  es: Privacy & Cookie policy
-  ja: Privacy & Cookie policy
-  ko: Privacy & Cookie policy
-  ru: Privacy & Cookie policy
+- alias: This page not found
+  en: This page not found
+  es: Página no Encontrada
+  ja: このページは見つかりませんでした
+  ko: 이 페이지를 찾을 수 없습니다
+  ru: Страница не найдена
+
+- alias: 404string_1
+  en: There can be many reasons for this, for example
+  es: Puede haber muchas razones para esto, por ejemplo
+  ja: これには多くの理由があります。たとえば、
+  ko: 여기에는 여러 가지 이유가 있을 수 있습니다. 예를 들어
+  ru: У этого может быть много причин, например
+
+- alias: 404reason_1
+  en: there is a typo in the url
+  es: hay un error tipográfico en la URL
+  ja: URLにタイプミスがあります
+  ko: URL에 오타가 있습니다
+  ru: в url опечатка
+
+- alias: 404reason_2
+  en: such a page never existed
+  es: tal página nunca existió
+  ja: そのようなページは存在しませんでした
+  ko: 그런 페이지는 존재하지 않았습니다
+  ru: такой страницы никогда не существовало
+
+- alias: 404reason_3
+  en: the page was deleted for some reason or the content was combined with another page
+  es: la página se eliminó por algún motivo o el contenido se combinó con otra página
+  ja: 何らかの理由でページが削除されたか、コンテンツが別のページと結合されました
+  ko: 어떤 이유로 페이지가 삭제되었거나 콘텐츠가 다른 페이지와 결합되었습니다.
+  ru: страницу по какой-то причине удалили или совместили контент с другой страницей
+
+- alias: This page may need translation
+  en: This page may need translation
+  es: Esta página puede necesitar traducción
+  ja: このページは翻訳が必要な場合があります
+  ko: 이 페이지는 번역이 필요할 수 있습니다
+  ru: Возможно, эта страница нуждается в переводе
+
+- alias: If you want to help us
+  en: If you want to help us
+  es: Esta página puede necesitar traducción
+  ja: このページは翻訳が必要な場合があります
+  ko: 이 페이지는 번역이 필요할 수 있습니다
+  ru: Если вы хотите нам помочь
+
+- alias: contact us at
+  en: contact us at
+  es: por favor envíenos un correo electrónico
+  ja: メールでお問い合わせください
+  ko: 이메일을 보내주세요
+  ru: пишите на email
+
+- alias: or
+  en: or
+  es: o
+  ja: または
+  ko: 또는
+  ru: или
+
+- alias: send
+  en: send
+  es: enviar
+  ja: 送信
+  ko: 보내다
+  ru: отправляйте

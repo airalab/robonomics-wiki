@@ -16,30 +16,6 @@
   </div>
 </template>
 
-<style lang="scss">  
-
-.main {
-  margin: 0 auto;
-  padding-bottom: var(--space);
-  position: relative;
-}
-
-.layout{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-
-  .footerPusher{
-    flex: 1 0 auto;
-  }
-
-  .footer{
-    flex-shrink: 0;
-  }
-}
-</style>
-
-
 <script>
 
 export default {
