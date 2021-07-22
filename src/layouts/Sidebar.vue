@@ -27,6 +27,14 @@
 </template>
 
 
+<static-query>
+query {
+  metadata {
+    locales
+  }
+}
+</static-query>
+
 
 <style lang="scss">
 
@@ -229,19 +237,6 @@ export default {
 
   },
 
-	metaInfo () {
-	    const { title, headings } = this.$page.doc
-	    return {
-	      title: title || (headings.length ? headings[0].value : undefined)
-	    }
-	  },
-
-
-  // mounted(){
-  //   if( !localStorage.getItem('lang') ){
-  //     localStorage.setItem('lang', 'en')
-  //   }
-  // },
 
   updated(){
 
