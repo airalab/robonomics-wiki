@@ -1,13 +1,5 @@
 <template>
-  <Layout>
-
-	<div class="page">
-		<div id="sidebarDocs" class="page__sidebar hiddenMobile">
-      <SidebarDocs :items="items" />
-      <Banner />
-    </div>
-
-    <div>
+  <Sidebar>
 
       <div class="page-title">
         <h1>{{ $page.doc.title }}</h1>
@@ -61,13 +53,7 @@
         </div>
       </div>
 
-    </div>
-
-
-  </div>
-
-
-  </Layout>
+  </Sidebar>
 </template>
 
 <style lang="scss">
@@ -371,11 +357,11 @@ export default {
 
   },
 
-  mounted(){
-    if( !localStorage.getItem('lang') ){
-      localStorage.setItem('lang', 'en')
-    }
-  },
+  // mounted(){
+  //   if( !localStorage.getItem('lang') ){
+  //     localStorage.setItem('lang', 'en')
+  //   }
+  // },
 
   updated(){
 
