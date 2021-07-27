@@ -140,6 +140,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
         console.log('NOT_FOUND_PATH')
       }
 
+      console.log(to.matched.length)
+
       initLocale()
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
