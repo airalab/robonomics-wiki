@@ -152,16 +152,14 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
       if (enterpath === to.path) {
-        next()
+        return next()
       }
       else{
-        next({
+        return next({
           path: enterpath,
           replace: true
         })
       }
-
-      return
     })
   }
 

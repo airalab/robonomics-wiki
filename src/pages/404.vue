@@ -1,5 +1,5 @@
 <template>
-  <Sidebar>
+  <!-- <Sidebar>
     <h1>{{ $st("This page not found", $store.state.locale) }}</h1>
 
     <p>{{ $st("404string_1", $store.state.locale) }}:</p>
@@ -16,5 +16,5 @@
       <li>{{ $st("or", $store.state.locale) }} {{ $st("send", $store.state.locale) }} <g-link to="/docs/translate-wiki/">GitHub PR</g-link></li>
     </ul>
 
-  </Sidebar>
+  </Sidebar> -->
 </template>
