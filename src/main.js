@@ -128,25 +128,25 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   if (isClient) {
     router.beforeResolve(async (to, from, next) => {
 
-      initLocale()
-      const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
-
       // do not rewrite build paths
-      // if (process.isServer) {
-      //   return next()
-      // }
+      if (process.isServer) {
+        return next()
+      }
 
       const response = await fetch(window.location.origin + to.path)
       console.log(response)
 
-      if (enterpath !== to.path) {
+      initLocale()
+      const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
+
+      if (enterpath === to.path) {
+        return next()
+      }
+      else{
         return next({
           path: enterpath,
           replace: true
         })
-      }
-      else{
-        return next()
       }
     })
   }
