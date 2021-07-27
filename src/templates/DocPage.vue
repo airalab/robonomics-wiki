@@ -29,7 +29,7 @@
 
         <div>
           
-          <VueRemarkContent />
+          <VueRemarkContent v-if="$page.doc.content" />
 
           <section class="docContribution" v-if="ghLink">
 
