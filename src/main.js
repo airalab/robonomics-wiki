@@ -150,6 +150,11 @@ export default function (Vue, { router, head, isClient, appOptions }) {
         })
       }
     })
+
+
+    router.onError((err) => {
+      console.error('err ' + err)
+    })
   }
 
   // Update the lang attribute on each route change
