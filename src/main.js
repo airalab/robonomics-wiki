@@ -129,13 +129,15 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     router.beforeEach(async (to, from, next) => {
 
       initLocale()
-
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
       // do not rewrite build paths
       // if (process.isServer) {
       //   return next()
       // }
+
+      const response = await fetch(window.location.origin + to.path)
+      console.log(response)
 
       if (enterpath !== to.path) {
         return next({
@@ -144,10 +146,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
         })
       }
       else{
-       
-        // const response = await fetch(window.location.origin + to.path)
-        // console.log(response)
-
         return next()
       }
     })
