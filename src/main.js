@@ -142,12 +142,11 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       if (enterpath === to.path) {
         return next()
       }
-      else{
-        return next({
-          path: enterpath,
-          replace: true
-        })
-      }
+      
+      return next({
+        path: enterpath,
+        replace: true
+      })
     })
   }
 
