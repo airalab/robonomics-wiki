@@ -51,16 +51,21 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   // Initialize locale different from default, if applyable
   function initLocale() {
     if(isClient) {
+
       // Check if we have saved preferences of user
-      if( localStorage.lang ) {
+      if( localStorage.lang !== 'undefined') {
         appOptions.store.state.locale = localStorage.lang
       }
       else {
         // If no preferences, try get locales from url
-        const browserUrl = splitPath(window.location.href)
+        const browserUrl = splitPath(window.location.href)  
         const localeFromBrowser = browserUrl.filter(el => localeSettings.locales.includes(el))[0] // in case there are several locales in url, we get first
-        appOptions.store.state.locale = localeFromBrowser
-        localStorage.setItem('lang', localeFromBrowser) // set as preference
+        
+        if(localeFromBrowser){
+          appOptions.store.state.locale = localeFromBrowser
+          localStorage.setItem('lang', localeFromBrowser) // set as preference
+        }
+        
       }
 
       //if non of these conditions are worked, locale will remain default
@@ -80,7 +85,13 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     const newPathSegments = pathToResolveSegments.filter(el => !localeSettings.locales.includes(el))
     const pathWithoutLocale = newPathSegments.join('/')
 
-    // Check if the path need to be translated
+    // do not add locale to path if it is default locale
+    // if ( targetLocale === localeSettings.defaultLocale ) {
+    //   console.log(targetLocale + ' === ' + localeSettings.defaultLocale)
+    //   return pathWithoutLocale
+    // }
+
+    // Check if the path need to be translated according to user settings
     if( localeSettings.exclude.includes(pathWithoutLocale) ){
       return pathWithoutLocale
     }
@@ -136,24 +147,21 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       // const response = await fetch(window.location.origin + to.path)
       // console.log(response)
 
-      // if(to.path === process.env.NOT_FOUND_PATH) {
-      //   console.log('NOT_FOUND_PATH')
-      // }
-
-      // console.log(to.matched.length)
-
       initLocale()
+      
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
       if (enterpath === to.path) {
-        return next()
+        next()
       }
       else{
-        return next({
+        next({
           path: enterpath,
           replace: true
         })
       }
+
+      return
     })
   }
 
