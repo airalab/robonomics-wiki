@@ -146,22 +146,14 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
       if (enterpath === to.path) {
-        console.log('DEBUG enterpath === to.path')
         return next()
       }
       else{
-        console.log('DEBUG enterpath !== to.path')
         return next({
-          mode: "history",
           path: enterpath,
           replace: true
         })
       }
-    })
-
-
-    router.onError((err) => {
-      console.error('err ' + err)
     })
   }
 
