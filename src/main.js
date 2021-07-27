@@ -136,6 +136,10 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       const response = await fetch(window.location.origin + to.path)
       console.log(response)
 
+      if(to.path === process.env.NOT_FOUND_PATH) {
+        console.log('NOT_FOUND_PATH')
+      }
+
       initLocale()
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
