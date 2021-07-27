@@ -126,7 +126,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   //Rewrite route according to locale
   if (isClient) {
-    router.beforeEach(async (to, from, next) => {
+    router.beforeResolve(async (to, from, next) => {
 
       initLocale()
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
