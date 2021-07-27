@@ -26,4 +26,5 @@ module.exports = function (api) {
   //     component: './src/pages/Index.vue'
   //   })
   // })
+
 }
