@@ -135,9 +135,13 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.prototype.$st = translateString;
 
 
+  // Router is initially not paused
+  // let pausedResolve = null
+  // let pausedPromise = Promise.resolve()
+
   //Rewrite route according to locale
   if (isClient) {
-    router.beforeResolve(async (to, from, next) => {
+    router.beforeResolve( (to, from, next) => {
 
       // do not rewrite build paths
       if (process.isServer) {
@@ -152,14 +156,16 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
       if (enterpath === to.path) {
-        return next()
+         next()
       }
       else{
-        return next({
+         next({
           path: enterpath,
           replace: true
         })
       }
+
+      return
     })
   }
 
