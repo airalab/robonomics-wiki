@@ -9,6 +9,8 @@
 const localeOptions = require('./data/localization.json')
 const localeSettings = JSON.parse(JSON.stringify(localeOptions))
 
+const fs = require('fs')
+
 module.exports = function (api) {
   // api.loadSource(({ addCollection }) => {
   //   // Use the Data store API here: https://gridsome.org/docs/data-store-api/
@@ -26,5 +28,9 @@ module.exports = function (api) {
   //     component: './src/pages/Index.vue'
   //   })
   // })
+
+  api.afterBuild(({ redirects }) => {
+    console.log(redirects);
+  });
 
 }
