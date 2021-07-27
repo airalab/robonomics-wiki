@@ -23,15 +23,15 @@
     "gridsome-plugin-yandex-metrika": "^0.1.2",
     "http-server": "^0.12.3",
     "lodash": "^4.17.21",
+    "node-sass": "^6.0.1",
     "prismjs": "^1.24.0",
     "remark-autolink-headings": "^5.2.2",
     "remark-highlight.js": "^5.2.0",
+    "sass-loader": "^10.1.1",
     "vue-cookies": "^1.7.4",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.0",
     "vue-svg-loader": "^0.15.0"
   }
 }
