@@ -126,7 +126,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   //Rewrite route according to locale
   if (isClient) {
-    router.beforeResolve(async (to, from, next) => {
+    router.beforeEach(async (to, from, next) => {
 
       // do not rewrite build paths
       if (process.isServer) {
@@ -144,6 +144,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       }
       else{
         return next({
+          mode: "history",
           path: enterpath,
           replace: true
         })
