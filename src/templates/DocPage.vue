@@ -28,8 +28,10 @@
       <div class="page-content">
 
         <div>
+
+          <div v-html="$page.doc.content" />
           
-          <VueRemarkContent />
+          <!-- <VueRemarkContent /> -->
 
           <section class="docContribution" v-if="ghLink">
 
