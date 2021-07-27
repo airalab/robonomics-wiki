@@ -136,17 +136,32 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
 
   // Router is initially not paused
-  // let pausedResolve = null
-  // let pausedPromise = Promise.resolve()
+  let pausedResolve = null
+  let pausedPromise = Promise.resolve()
+
+  function pause() {
+    if (!pausedResolve) {
+      pausedPromise = new Promise(resolve => pausedResolve = resolve)
+    }
+  }
+
+  function resume() {
+    if (pausedResolve) {
+      pausedResolve()
+      pausedResolve = null
+    }
+  }
 
   //Rewrite route according to locale
   if (isClient) {
-    router.beforeResolve( (to, from, next) => {
+    router.beforeResolve(async (to, from, next) => {
 
       // do not rewrite build paths
       if (process.isServer) {
         return next()
       }
+
+      await pausedPromise
 
       // const response = await fetch(window.location.origin + to.path)
       // console.log(response)
@@ -156,16 +171,14 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       const enterpath = translatePath(to.path || '/', appOptions.store.state.locale)
 
       if (enterpath === to.path) {
-         next()
+        return next()
       }
       else{
-         next({
+        return next({
           path: enterpath,
           replace: true
         })
       }
-
-      return
     })
   }
 
