@@ -1,5 +1,4 @@
 <template>
-<h1>Not found</h1>
   <!-- <Sidebar>
     <h1>{{ $st("This page not found", $store.state.locale) }}</h1>
 
