@@ -146,8 +146,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       }
 
 
-      const response = await fetch(window.location.origin + to.path)
-      console.log(response)
+      // const response = await fetch(window.location.origin + to.path)
+      // console.log(response)
 
       initLocale()
       
