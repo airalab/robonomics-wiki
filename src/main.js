@@ -53,7 +53,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     if(isClient) {
 
       // Check if we have saved preferences of user
-      if( localStorage.lang !== 'undefined') {
+      if( localStorage.lang ) {
         appOptions.store.state.locale = localStorage.lang
       }
       else {
@@ -145,9 +145,9 @@ export default function (Vue, { router, head, isClient, appOptions }) {
         return next()
       }
 
-
       // const response = await fetch(window.location.origin + to.path)
-      // console.log(response)
+      // console.log(response.status)
+      // TODO: check here response.status and if link is translated
 
       initLocale()
       
