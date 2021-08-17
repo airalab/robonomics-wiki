@@ -12,10 +12,9 @@ translated: true
 
 ## 2. Choose the account you want to transfer funds from
 
-In the development mode, there exist several accounts, with 10000 Units worth of funds each, that can be used to transfer funds to other accounts created in the development network. These accounts are indicated by wrench signs (<img src="../images/adding-funds/wrench.png" width="10"/>) next to them.
+In the development mode, there exist several accounts, with 10000 Units worth of funds each, that can be used to transfer funds to other accounts created in the development network. These accounts are indicated by wrench signs <img alt="wrench sign" src="../images/adding-funds/wrench.png" width="20" /> next to them.
 
 ![Accounts-for-sending](../images/adding-funds/accounts-for-sending.svg "Accounts-for-sending")
-
 
 - Click on the "send" button of the account you want to transfer funds from, for example BOB
 

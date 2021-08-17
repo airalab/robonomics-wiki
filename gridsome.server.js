@@ -29,8 +29,5 @@ module.exports = function (api) {
   //   })
   // })
 
-  api.afterBuild(({ redirects }) => {
-    console.log(redirects);
-  });
 
 }
