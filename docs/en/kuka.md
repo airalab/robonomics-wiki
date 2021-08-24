@@ -6,10 +6,12 @@ translated: true
 
 Video with an example of work can be found here:
 
-[https://youtu.be/Fhf9LIt6zXQ](https://youtu.be/Fhf9LIt6zXQ)
+https://youtu.be/z55HepXbHr8
+
 ***
+
 ## Requirements
-* ROS melodic, Gazebo (installation instruction [here](http://wiki.ros.org/melodic/Installation/Ubuntu))
+* ROS melodic, Gazebo (installation instraction [here](http://wiki.ros.org/melodic/Installation/Ubuntu))
 * Some extra packages
 ```bash
 sudo apt-get install ros-melodic-gazebo-ros-control ros-melodic-effort-controllers ros-melodic-joint-state-controller
@@ -21,13 +23,17 @@ cd go-ipfs/
 sudo bash install.sh
 ipfs init
 ```
-* pip
+* pip3
 ```bash
-sudo apt install python-pip
+sudo apt-get install python3-pip
 ```
 * ipfshttpclient
 ```bash
-pip install ipfshttpclient
+pip3 install ipfshttpclient
+```
+* substrate-interface
+```bash
+pip3 install substrate-interface
 ```
 * Robonomics node (binary file) (download latest release [here](https://github.com/airalab/robonomics/releases))
 * IPFS browser extension (not necessary)
@@ -35,47 +41,44 @@ pip install ipfshttpclient
 ## Installation
 Install Kuka manipulator and control packages
 ```bash
-cd catkin_ws/src/
+cd catkin_wc/src/
 git clone https://github.com/orsalmon/kuka_manipulator_gazebo
 git clone https://github.com/LoSk-p/kuka_controller
 cd ..
 catkin_make
-echo "source /home/$USER/catkin_ws/devel/setup.bash" >> ~/.bashrc
 ```
 ***
 ## Running gazebo model
 ```bash
+source ~/catkin_ws/devel/setup.bash
 roslaunch manipulator_gazebo manipulator_empty_world.launch
 ```
 In a new window
 ```bash
+source ~/catkin_ws/devel/setup.bash
 rosrun manipulator_gazebo move_arm_server
 ```
-![model](../images/kuka-demo/gazebo.jpg)
+![model](../images/kuka-demo/1.png)
 ***
 ## Running robonomics
 Go to the folder with robonomics file ad create a local robonomics network:
 ```bash
-./robonomics --dev --rpc-cors all
+./robonomics --dev --tmp
 ```
 
-![robonomics](../images/kuka-demo/robonomics.jpg)
-
-**Important!** Before next launches it is necessary to remove a directory `db` with
-
-```
-rm -rf /home/$USER/.local/share/robonomics/chains/dev/db
-```
+![robonomics](../images/kuka-demo/robonomics.png)
 
 Go to https://parachain.robonomics.network and switch to local node
 
-![local](../images/kuka-demo/local.jpg)
+![local](../images/kuka-demo/local.png)
 
-Then go to Accounts and create KUKA and WORK accounts. Save account's addresses and keys, you will need them later
+Then go to Accounts and create `KUKA` account. Save account's mnemonic key, you will need it later. 
 
-![acc](../images/kuka-demo/create_account.jpg)
+![acc](../images/kuka-demo/create_acc.png)
 
-![accs](../images/kuka-demo/accounts.jpg)
+Send some units to the new account from one of default accounts.
+
+![accs](../images/kuka-demo/send_money.png)
 ***
 ## Running ipfs
 Run ipfs daemon:
@@ -84,42 +87,35 @@ ipfs daemon
 ```
 ***
 ## Running control package
-In kuka_control package path you need to edit move_arm_client.py. 
+In config directory in kuka_control package you need to create config file with this lines, where `<your_mnemonic>` is saved mnemonic seed:
 ```bash
-cd src/
-nano move_arm_client.py
+{
+    "kuka_mnemonic": "<your_mnemonic>",
+    "node": "ws://127.0.0.1:9944"
+}
 ```
-Change kuka_address, kuka_key and work_address to you addresses and key, then change robonomics_path to your path to file robonomics.
-
-![code](../images/kuka-demo/code.jpg)
 
 Now you can run control script:
 ```bash
-python move_arm_client.py
+source ~/catkin_ws/devel/setup.bash
+rosrun kuka_controller move_arm_client.py
 ```
-![control](../images/kuka-demo/control.jpg)
+![control](../images/kuka-demo/run.png)
 
-Then in a new window send a transaction to make Kuka move:
-```bash
-echo "ON" | ./robonomics io write launch -r <KUKA_ADDRESS> -s <WORK_KEY>
-```
-Where <KUKA_ADDRESS> and <WORK_KEY> are address and key from your accounts:
+## Sending transaction
+In https://parachain.robonomics.network go to `Developer/Extrinsics`, change `extrinsic` to `launch`. Chose your `KUKA` account in `robot` and change `param` to `Yes`. The press `Submit Transaction`
 
-![transaction](../images/kuka-demo/transaction.jpg)
+![transaction](../images/kuka-demo/launch.png)
 
 In the window with kuka_control package you will see:
 
-![done](../images/kuka-demo/done.jpg)
+![done](../images/kuka-demo/res.png)
 
-Then go Developer/Chain state on the Robonomics portal, select datalog in query and add KUKA datalog with button '+':
+Then go `Developer/Chain State` on the Robonomics portal, select `datalog` and `datalogItem((AccountId,u64)): RingBufferItem` in query and add `KUKA` datalog with button '+':
 
-![datalog](../images/kuka-demo/datalog.jpg)
+![datalog](../images/kuka-demo/datalog.png)
 
-Now you can find Kuka's telemetry using this hash in IPFS Companion:
-
-![ipfs](../images/kuka-demo/ipfs.jpg)
-
-![telemetry](../images/kuka-demo/telemetry.jpg)
+Now you can find robot's telemetry in IPFS via this link with your hash `https://gateway.ipfs.io/ipfs/<hash>`.
 
 ## Troubleshooting
 
@@ -132,7 +128,3 @@ target_link_libraries(move_arm_server ${catkin_LIBRARIES})
 add_dependencies(move_arm_server beginner_tutorials_gencpp)
 ```
 Do `catkin_make` without these lines, then returm them and do `catkin_make` again.
-
-
-
-
