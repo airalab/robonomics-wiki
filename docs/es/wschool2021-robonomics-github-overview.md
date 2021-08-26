@@ -1,5 +1,5 @@
 ---
-title: Lección 2, Robonomics Github Descripción General
+title: Lección 2, Robonomics AIRA Descripción General
 contributors: [Ensrationis]
 translated: true
 ---

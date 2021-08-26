@@ -184,10 +184,10 @@
           title_ko: 레슨 1, 로봇을 사용자 앱에 연결
           link: /docs/wschool2021-connect-robotics-to-user-app
 
-        - title_en: Lesson 2, Robonomics GitHub overview
-          title_es: Lección 2, Robonomics Github Descripción General
-          title_ja: Lesson 2, RobonomicsのGitHub概要
-          title_ko: 레슨 2, ROBONOMICS GITHUB 개요
+        - title_en: Lesson 2, Robonomics AIRA overview
+          title_es: Lección 2, Robonomics AIRA Descripción General
+          title_ja: Lesson 2, RobonomicsのAIRA概要
+          title_ko: 레슨 2, ROBONOMICS AIRA 개요
           link: /docs/wschool2021-robonomics-github-overview
         - title_en: Lesson 3, Robonomics IO in practice
           title_es: Lección 3, Robonomics IO en la Practica

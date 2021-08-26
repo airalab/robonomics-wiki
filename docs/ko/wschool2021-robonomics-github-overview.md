@@ -1,5 +1,5 @@
 ---
-title: 레슨 2, ROBONOMICS GITHUB 개요
+title: 레슨 2, ROBONOMICS AIRA 개요
 contributors: [Ensrationis, arinaml]
 translated: true
 ---
