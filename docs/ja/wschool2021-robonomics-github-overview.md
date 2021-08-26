@@ -1,5 +1,5 @@
 ---
-title: Lesson 2, RobonomicsのGitHub概要
+title: Lesson 2, RobonomicsのAIRA概要
 contributors: [KiichiSugihara]
 translated: true
 ---
