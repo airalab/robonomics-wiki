@@ -40,7 +40,7 @@ ssh -f -N -L 9944:127.0.0.1:9944 root@REMOTE_SERVER_IP
 ssh -f -N -L 9988:127.0.0.1:9988 root@REMOTE_SERVER_IP
 ssh -f -N -L 9989:127.0.0.1:9989 root@REMOTE_SERVER_IP
 ```
-After that, you can use `ws://127.0.0.1:9944` for relaychain, `ws://127.0.0.1:9988`and `ws://127.0.0.1:9989` for parachains in https://parachain.robonomics.network/
+After that, you can use `ws://127.0.0.1:9944` for relay chain, `ws://127.0.0.1:9988`and `ws://127.0.0.1:9989` for parachains in https://parachain.robonomics.network/
 
 ![relay](../images/ws_lesson4/upcoming.jpg)
 
