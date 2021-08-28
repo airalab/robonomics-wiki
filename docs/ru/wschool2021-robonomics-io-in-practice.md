@@ -22,7 +22,7 @@ When docker is installed let's launch robonomics docker image from [Official rep
 
 <Asciinema vid="wM43jozIVfcRmt52ENrJ6yPlH"/>
 
-When docker image is ready let's try to read a data using `robonomics io` command (optiona if you have SDS011 device).
+When docker image is ready let's try to read a data using `robonomics io` command (optionaд if you have SDS011 device).
 
 <Asciinema vid="iztt22tKGaV8wq3cMXY1oUEYv"/>
 
@@ -58,6 +58,11 @@ The output forwarding is also works here, that means it's possible to forward SD
 
 Where JSON data from SDS011 forwarded as input for IPFS writer and result is published on stdout.
 
+For virtual sensor use:
+```
+vsds011.sh | robonomics io write ipfs
+```
+
 This approach permits engineer extrimely quickly make a simple program just combine a primitive readers and writers from `robonomics io` tools.
 
 ```bash
@@ -80,7 +85,7 @@ Save generated address and seed on safe place for use it later.
 
 Currently address balance is zero and the network don't permits to send transactions from this address. To fix it let's transfer a bit of tokens from `Alice` account. I'll use Robonomics Portal on https://parachain.robonomics.network connected to local node with address `ws://127.0.0.1:9944`.
 
-![portal transfer](https://ipfs.io/ipfs/QmbpArfthyor5wFWRexgPAyjK7GaFduasc1eoReaf9TpJg/tran.png)
+![portal transfer](../images/ws_lesson3/tran.jpg)
 
 And then `datalog` device could be used for saving any data on blockchain. The key `-s` is used to set secret seed of account. Account should have non-zero balance to send transactions.
 
@@ -88,7 +93,7 @@ And then `datalog` device could be used for saving any data on blockchain. The k
 
 If every thing is correct the you should see `Datalog` event on `Explorer` page of Robonomics portal.
 
-![portal datalog](https://ipfs.io/ipfs/QmbpArfthyor5wFWRexgPAyjK7GaFduasc1eoReaf9TpJg/datalog.png)
+![portal datalog](../images/ws_lesson3/datalog.jpg)
 
 The final step is a bit complex but it's good to try use all knowledge of this lesson. Let's make a simple program
 that collects data from SDS011 sensor (or file), pack it into IPFS and then send `datalog` transaction to save hash on blockchain.
@@ -101,6 +106,12 @@ It's easy to implement using Robonomics IO, let's do that.
 
 <Asciinema vid="MTpiawGo8DKEn081OozbYb5mU"/>
 
+For virtual sensor use:
+```
+vsds011.sh | robonomics io write ipfs | robonomics io write datalog -s <private_key>
+```
+
+
 If everything well the `Datalog` event with IPFS hash should be presented.
 
-![portal datalog complex](https://ipfs.io/ipfs/QmbpArfthyor5wFWRexgPAyjK7GaFduasc1eoReaf9TpJg/datalog_complex.png)
+![portal datalog complex](../images/ws_lesson3/datalog_complex.jpg)

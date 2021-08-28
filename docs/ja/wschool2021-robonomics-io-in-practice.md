@@ -58,6 +58,11 @@ SDS011センサーのデータをIPFSに転送するには、コンソールの`
 
 SDS011からのJSONデータがIPFS書き込みの入力として転送され、その結果が標準出力に出力されます。
 
+For virtual sensor use:
+```
+vsds011.sh | robonomics io write ipfs
+```
+
 この方法を使えば `robonomics io`ツールのプリミティブな読み取りと書き込みを組み合わせるだけで、簡単なプログラムを簡単に作ることができます。
 
 
@@ -84,7 +89,7 @@ robonomics io read sds011 | gz | robonomics io write pubsub my-sensor-data
 現在、アドレスの残高はゼロで、ネットワークはこのアドレスからの取引の送信を許可していません。この問題を解決するために、`Alice`アカウントからトークンを送金しましょう。https://parachain.robonomics.network の Robonomics Portal を使って、 `ws://127.0.0.1:9944`というアドレスのローカルノードに接続してみましょう。
 
 
-![portal transfer](https://ipfs.io/ipfs/QmbpArfthyor5wFWRexgPAyjK7GaFduasc1eoReaf9TpJg/tran.png)
+![portal transfer](../images/ws_lesson3/tran.jpg)
 
 
 そして、任意のデータをブロックチェーンに保存するために、`datalog`デバイスを使用することができます。`-s`keyは、アカウントの秘密シード値を設定するために使用されます。取引を行うためには、口座の残高がゼロでないことが必要です。
@@ -94,7 +99,7 @@ robonomics io read sds011 | gz | robonomics io write pubsub my-sensor-data
 すべてが正しく行われていれば、Robonomicsポータルの`Explorer`ページに`Datalog`イベントが表示されます。
 
 
-![portal datalog](https://ipfs.io/ipfs/QmbpArfthyor5wFWRexgPAyjK7GaFduasc1eoReaf9TpJg/datalog.png)
+![portal datalog](../images/ws_lesson3/datalog.jpg)
 
 
 最後のステップは少し複雑ですが、このレッスンのすべての知識を使ってみるのもいいでしょう。SDS011センサー（またはファイル）からデータを収集し、それをIPFSに格納し、`datalog`トランザクションを送信してブロックチェーンにハッシュを保存する簡単なプログラムを作ってみましょう。
@@ -109,6 +114,12 @@ Robonomics IOを使って簡単に実装できますので、やってみまし�
 
 <Asciinema vid="MTpiawGo8DKEn081OozbYb5mU"/>
 
+For virtual sensor use:
+```
+vsds011.sh | robonomics io write ipfs | robonomics io write datalog -s <private_key>
+```
+
+
 うまくいけば、IPFSのハッシュを含む`Datalog`イベントが提示されるはずです。
 
-![portal datalog complex](https://ipfs.io/ipfs/QmbpArfthyor5wFWRexgPAyjK7GaFduasc1eoReaf9TpJg/datalog_complex.png)
+![portal datalog complex](../images/ws_lesson3/datalog_complex.jpg)
