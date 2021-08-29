@@ -57,6 +57,11 @@ Robonomics IO 하위 시스템에는 두 가지 종류의 명령이 있습니다
 
 SDS011의 JSON 데이터가 IPFS 작성기에 대한 입력으로 전달되고 결과가 stdout에 게시됩니다.
 
+For virtual sensor use:
+```
+vsds011.sh | robonomics io write ipfs
+```
+
 이 접근 방식을 통해 엔지니어는 `robonomics io` 도구의 원시 독자와 작성자를 결합하여 간단한 프로그램을 매우 빠르게 만들 수 있습니다.
 
 ```bash
@@ -79,7 +84,7 @@ robonomics io read sds011 | gz | robonomics io write pubsub my-sensor-data
 
 현재 주소 잔액은 0이며 네트워크는이 주소에서 트랜잭션을 보내는 것을 허용하지 않습니다. 이 문제를 해결하기 위해 `Alice`의 계정에서 약간의 토큰을 전송 해 보겠습니다. https://parachain.robonomics.network에서 주소가 `ws : //127.0.0.1 : 9944` 인 로컬 노드에 연결된 Robonomics 포털을 사용하겠습니다. 
 
-![포털 전송](https://ipfs.io/ipfs/QmbpArfthyor5wFWRexgPAyjK7GaFduasc1eoReaf9TpJg/tran.png)
+![포털 전송](../images/ws_lesson3/tran.jpg)
 
 그런 다음 `데이터 로그` 장치를 사용하여 블록 체인에 데이터를 저장할 수 있습니다. `-s` 키는 계정의 비밀 시드를 설정하는 데 사용됩니다. 거래를 보내려면 계정에 0이 아닌 잔액이 있어야합니다.
 
@@ -87,7 +92,7 @@ robonomics io read sds011 | gz | robonomics io write pubsub my-sensor-data
 
 모든 것이 올 바르면 Robonomics 포털의 `Explorer` 페이지에 `데이터 로그` 이벤트가 표시됩니다. 
 
-![포털 데이터 로그](https://ipfs.io/ipfs/QmbpArfthyor5wFWRexgPAyjK7GaFduasc1eoReaf9TpJg/datalog.png)
+![포털 데이터 로그](../images/ws_lesson3/datalog.jpg)
 
 마지막 단계는 약간 복잡하지만이 강의에 대한 모든 지식을 사용해 보는 것이 좋습니다. SDS011 센서 (또는 파일)에서 데이터를 수집하여 IPFS에 압축 한 다음 `데이터 로그` 트랜잭션을 전송하여 블록 체인에 해시를 저장하는 간단한 프로그램을 만들어 보겠습니다.
 
@@ -99,6 +104,12 @@ Robonomics IO를 사용하여 쉽게 구현할 수 있습니다.
 
 <Asciinema vid="MTpiawGo8DKEn081OozbYb5mU"/>
 
+For virtual sensor use:
+```
+vsds011.sh | robonomics io write ipfs | robonomics io write datalog -s <private_key>
+```
+
+
 모든 것이 잘되면 IPFS 해시가있는 `데이터 로그` 이벤트가 표시되어야합니다.
 
-![portal datalog complex](https://ipfs.io/ipfs/QmbpArfthyor5wFWRexgPAyjK7GaFduasc1eoReaf9TpJg/datalog_complex.png)
+![portal datalog complex](../images/ws_lesson3/datalog_complex.jpg)
