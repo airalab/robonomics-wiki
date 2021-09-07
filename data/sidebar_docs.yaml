@@ -61,6 +61,8 @@
           link: /docs/iot-sensors-connectivity
         - title_en: Install Connectivity on Aira
           link: /docs/sensors-connectivity-on-aira
+        - title_en: Sensors-Connectivity Terminal Readme
+          link: /docs/connectivity-terminal-readme
         - title_en: Configuration Options Description
           link: /docs/configuration-options-description
         - title_en: Connect an Amazon FreeRTOS device to Robonomics by MQTT
