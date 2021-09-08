@@ -3,72 +3,138 @@ title: Say "Hello Baxter!" with robonomics
 contributors: [nakata5321]
 translated: false
 ---
+Example of how it works:
 
-Example of how it works is available [here][db1]:
+https://youtu.be/2Dvuv0ZE2Bw
 
-https://youtu.be/2AQGFVzkGdg
 
 ## Requirements:
- - Ubuntu 18.04
+
  - ROS Melodic + Gazebo (installation manual [here][db2])  
  - extra packages:
 ```sh
 sudo apt-get install ros-melodic-qt-build ros-melodic-driver-common ros-melodic-gazebo-ros-control ros-melodic-gazebo-ros-pkgs ros-melodic-ros-control ros-melodic-control-toolbox ros-melodic-realtime-tools ros-melodic-ros-controllers ros-melodic-xacro python-wstool ros-melodic-tf-conversions ros-melodic-kdl-parser python-wstool python-catkin-tools qt4-default
 ```
-
-- IPFS 0.4.22 (download from [here][db3] and install)
-- pip:
+- IPFS up to 0.6.0 (download from [here][db3] and install)
+- python packages:
 ```sh
-sudo apt install python-pip
+sudo apt-get -y install python3-pip
+pip3 install --upgrade pip
 ```
-
-- ipfshttpclient
-```sh
-pip install ipfshttpclient
-```  
-
-
  - Robonomics node (binary file) (download latest [release][db4] here)
  - Create __Baxter__ and __Employer__ accounts  on **Robonomics Portal**  
  (you can find tutorial ["Create an Account on Robonomics Portal"][db8] here).
  - IPFS browser extension (not necessary)
 
-## 1. Download Baxter model
-Download packages:
+## 0. install CV Bridge extension for python3
+
+ - Create catkin workspace
+```shell
+mkdir -p catkin_workspace/src
+cd catkin_workspace
+catkin init
+```
+
+ - Instruct catkin to set cmake variables. Use your current version of `python`. For me, it is `python3.6`:
 ```sh
+catkin config -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.6m -DPYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m.so
+catkin config --install
+```
+
+ - Clone cv_bridge src:
+```shell
+git clone https://github.com/ros-perception/vision_opencv.git src/vision_opencv
+```
+
+ - Find version of cv_bridge in your repository:
+```shell
+apt-cache show ros-melodic-cv-bridge | grep Version
+    Version: 1.12.8-0xenial-20180416-143935-0800
+```
+
+ - Checkout right version in git repo. In our case it is 1.12.8:
+```shell
+cd src/vision_opencv/
+git checkout 1.12.8
+cd ../../
+```
+
+ - Build:
+```shell
+catkin build cv_bridge
+```
+
+ - Extend environment with new package:
+
+```shell
+source install/setup.bash --extend
+``` 
+ - Test:
+```shell
+$ python3
+Python 3.6.9 (default, Jan 26 2021, 15:33:00) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from cv_bridge.boost.cv_bridge_boost import getCvType
+>>>
+```
+
+## 1. Download simulation and controller packages
+We will need to create 2 workspaces - one for main Baxter's packages and other for main control programme.
+First workspace. It's main control programme. It will run under python3.
+
+```sh
+cd ~
+mkdir -p robonomics_ws/src
+cd robonomics_ws/src/
+git clone https://github.com/nakata5321/Baxter_simulation_controller.git
+cd Baxter_simulation_controller
+pip3 install -r requirements.txt
+```
+Second workspace. There will be all Baxter's packages. Simulation is very old, so it could run only under python2.
+```shell
 cd ~
 mkdir -p robot_ws/src
 cd robot_ws/src/
 wstool init .
 wstool merge https://raw.githubusercontent.com/RethinkRobotics/baxter_simulator/master/baxter_simulator.rosinstall
 wstool update
-git clone https://github.com/nakata5321/Baxter_simulation_controller.git
 ```
-This packages were created for ROS indigo. We have to change some files to run them on ROS melodic.
+These packages were created for ROS indigo. We have to change some files to run them on ROS melodic.
 We will use **patch** files.
 ```sh
-patch ./baxter_simulator/baxter_sim_io/include/baxter_sim_io/qnode.hpp ./Baxter_simulation_controller/patch/qnode_patch
-patch ./baxter_simulator/baxter_sim_kinematics/src/arm_kinematics.cpp ./Baxter_simulation_controller/patch/arm_patch
+patch ./baxter_simulator/baxter_sim_io/include/baxter_sim_io/qnode.hpp ~/robonomics_ws/src/Baxter_simulation_controller/patch/qnode_patch
+patch ./baxter_simulator/baxter_sim_kinematics/src/arm_kinematics.cpp ~/robonomics_ws/src/Baxter_simulation_controller/patch/arm_patch
+patch ./baxter_interface/src/baxter_interface/robot_enable.py ~/robonomics_ws/src/Baxter_simulation_controller/patch/interface_patch
 ```
-And let's build  all our packages:
+And let's build  all our packages:  
+First build Baxter's packages
 ```sh
-cd ..
+cd ../
 catkin build
 ```
-Dont forget to add source command:
+Then return to first workspace and build it too:
+```sh
+cd ~/Baxter_simulation_controller/
+catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3
+```
+Don't forget to add source command:
+
 ```sh
 echo "source /home/$USER/robot_ws/devel/setup.bash" >> ~/.bashrc
+echo "source /home/$USER/robonomics_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```  
-__Important!__ At the end save *Robonomics node (binary file)* in **robot_ws** directory.
+
 
 ## 2. Start simulation
-First of all copy and edit `baxter.sh`
+### Let's start our simulation:
+At first go to `robot_ws` and copy and edit baxter.sh
 ```sh
+cd ~/robot_ws/
 cp src/baxter/baxter.sh .
 ```
-
-Find your local ip adress with command:
+Find your local ip address with command:
 ```
 ip a
 ```
@@ -78,8 +144,6 @@ Edit the following values in `baxter.sh` :
 ```
 nano baxter.sh
 ```
-
-Edit the following values in `baxter.sh` :
 
 - your_ip - put your local ip address. See `ip a`
 - ros_version - for example "melodic"
@@ -91,33 +155,35 @@ Run the baxter shell script with sim specified:
 ./baxter.sh sim
 roslaunch baxter_gazebo baxter_world.launch
 ```
-You can put some models in front of our baxter. It will be more intresting.
+You can put some models in front of our baxter. It will be more interesting.
 ![baxter][im2]
 
 ## 3.Manage accounts in DAPP
 
 Since we are testing, let us create a local robonomics network with robonomics binary file. Go to folder with robonomics file and run:
 ```sh
-./robonomics --dev --rpc-cors all
+./robonomics --dev --tmp
 ```
 ![robonomics][im3]
-
-Don't forget to remove `db` folder after every launch:
-```sh
-rm -rf /home/$USER/.local/share/robonomics/chains/dev/db
-```
 
 Go to [https://parachain.robonomics.network][db5] and switch to local node
 ![local node][im4]
 
-Go to Accounts and transfer some money to __Baxter__ and __Employer__ accounts.
+Go to Accounts and create __Baxter__ and __Employer__ accounts.
 
-You can find The manual "Create an Account on Robonomics Portal" [here.][db8]
+You can find The manual "Create an Account on Robonomics Portal" [here][db8]
 
+__Important!__ Copy each account's **Mnemonic** and **address** (to copy address click on account's icon). **Mnemonic** is the private key for account.
 
-Add Baxter's secret key and adress to `config.yaml` in `robot_ws/src/Baxter_simulation_controller/config/`
+Transfer some money (units) to these accounts:
 
-## 4.Beginning of work
+![create account][im5]
+![create account2][im16]
+![accounts][im6]
+
+Add Baxter's **Mnemonic** and **address** to `config.yaml` in `robonomics_ws/src/Baxter_simulation_controller/config/`
+
+## 4.Start simulation
 
 In new window run:
 ```sh
@@ -130,23 +196,23 @@ rosrun robot_controller robot_control.py
 ```
 ![waiting][im7]
 
-Return to the first terminal, open new window and send command to [**robonomics io**][db6]. This command will turn ON your robot:
-```sh
-echo "ON" | ./robonomics io write launch -r <BAXTER ADDRESS> -s <EMPLOYER’S KEY>
-```
-Where `<BAXTER ADDRESS>`  and `<EMPLOYER’S KEY>` are replaced with previously saved strings accordingly.
+Now you can send a transaction triggering the Baxter to start moving and collecting data. To do so, you can use the same portal [https://parachain.robonomics.network][db5]. Go to **Developer->Extrinsics** and select Baxter's employer account, `launch` extrinsic, Baxter's account as a target account and `yes` as a parameter. Submit the extrinsic.
+
 
 ![rob_message][im8]
 
+The robot should start moving. It won't accept commands from other accounts neither commands with `no` parameter.
 You should see the following:
 
 ![working][im9]
 
-when the work is over go to the Robonomics Portal to `Developer > Chain state`. Choose *datalog* in **state query** and add Baxter datalog message using "+" button.
+When the work is over go to the Robonomics Portal to `Developer > Chain state`. Choose *datalog.datalogItem(AccountId,u64)* in **state query**.If you want to show all datalog's, then turn off `include option` add view Baxter's datalog message using "+" button.
 
 ![datalog][im10]
 
-Now the IPFS hash of the telemetry and photos is saved in the blockchain. To see the data simply copy the hash and insert it in the search bar with URL: `gateway.ipfs.io/ipfs/<put your hash here>`
+Now the IPFS hash of the telemetry and photos is saved in the blockchain. To see the data simply copy the hash and insert it in the search bar with URL:  
+#### gateway.ipfs.io/ipfs/< put your hash here>
+
 
 
 That's all!
@@ -154,23 +220,26 @@ That's all!
 ![result1][im12]
 ![result2][im13]
 
-[db1]: <https://youtu.be/2AQGFVzkGdg>
+
 [db2]: <http://wiki.ros.org/melodic/Installation>
-[db3]: <https://dist.ipfs.io/go-ipfs/v0.4.22/go-ipfs_v0.4.22_linux-386.tar.gz>
+[db3]: <https://dist.ipfs.io/go-ipfs/v0.6.0/go-ipfs_v0.6.0_linux-386.tar.gz>
 [db4]: <https://github.com/airalab/robonomics/releases>
-[db8]: </docs/create-account-in-dapp>
 [im1]: <../images/baxter_demo/empty_world.jpg>
 [im2]: <../images/baxter_demo/baxter_simulation.jpg>
 [im3]: <../images/baxter_demo/robonomics.jpg>
 [db5]: <https://parachain.robonomics.network>
 [im4]: <../images/baxter_demo/local_node.jpg>
+[im5]: <../images/baxter_demo/create_account.jpg>
+[im6]: <../images/baxter_demo/accounts.jpg>
 [im7]: <../images/baxter_demo/waiting.jpg>
+[db6]: <https://wiki.robonomics.network/docs/rio-overview/>
 [im8]: <../images/baxter_demo/rob_message.jpg>
 [im9]: <../images/baxter_demo/working.jpg>
 [im10]: <../images/baxter_demo/datalog.jpg>
 [im11]: <../images/baxter_demo/ipfs.jpg>
 [im12]: <../images/baxter_demo/result1.jpg>
 [im13]: <../images/baxter_demo/result2.jpg>
-[db6]: </docs/rio-overview>
-[im14]:<../images/baxter_demo/ip_a.png>
-[im15]:<../images/baxter_demo/baxter_sh.jpg>
+[im14]: <../images/baxter_demo/ip_a.png>
+[im15]: <../images/baxter_demo/baxter_sh.jpg>
+[im16]: <../images/baxter_demo/create_account2.jpg>
+[db8]: <https://wiki.robonomics.network/docs/create-account-in-dapp/>
