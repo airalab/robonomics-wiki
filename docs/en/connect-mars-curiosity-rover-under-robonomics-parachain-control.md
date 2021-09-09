@@ -11,6 +11,7 @@ translated: true
 sudo apt-get install ros-melodic-gazebo-ros-control ros-melodic-effort-controllers ros-melodic-joint-state-controller
 ```
 - IPFS up to [0.6.0](https://dist.ipfs.io/go-ipfs/v0.6.0/go-ipfs_v0.6.0_linux-386.tar.gz)
+- [IPFS Companion Extension](https://github.com/ipfs/ipfs-companion)
 - Robonomics node (binary file) (download latest release [here](https://github.com/airalab/robonomics/releases). This tutorial tested fine on v1.1)
 
 Here is the video showing successful launch:
@@ -60,6 +61,7 @@ cd ~/robonomics_ws/src
 git clone https://github.com/PaTara43/robonomics_sample_controller
 cd robonomics_sample_controller
 pip3 install -r requirements.txt
+pip3 install rospkg
 cd ..
 catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 # The controller supports python3
 ```
@@ -94,6 +96,9 @@ Add these addresses, seed and node address (defaults to `ws://127.0.0.1:9944` fo
 
 
 ### 4. Start Robonomics
+
+Before going further, make sure that you have installed [IPFS Companion Extension](https://github.com/ipfs/ipfs-companion).
+
 In a separate terminal launch IPFS:
 ```shell
 ifps init #you only need to do this once per IPFS installation
