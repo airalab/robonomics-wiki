@@ -1,7 +1,7 @@
 ---
 title: Construir la interfaz de la DApp, Parte 2
 contributors: [positivecrash]
-translated: false
+translated: true
 ---
 
 ![Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot](../images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot")
@@ -20,9 +20,9 @@ Para crear la interfaz de su dapp, puede elegir cualquier marco de JavaScript qu
 
 Si comienza con este paso y prefiere **aprender con la práctica**, siga esta lista de tareas para iniciar el dapp resultante de la lección anterior:
 
-1. Descargue un nodo Robonomics local de la [releases page](https://github.com/airalab/robonomics/releases/) que se adapte a su sistema operativo. Si no encuentra su sistema en la última versión, busque la versión más reciente en las versiones anteriores.
+1. Descargue un nodo Robonomics local v0.22 de la [releases page](https://github.com/airalab/robonomics/releases/tag/v0.22.0) que se adapte a su sistema operativo. Si no encuentra su sistema en la última versión, busque la versión más reciente en las versiones anteriores.
 
-2. Inicie el nodo Robononomics en el modo Desarrollador escribiendo `./robonomics --dev` en su terminal.
+2. Inicie el nodo Robononomics en el modo Desarrollador escribiendo `./robonomics --dev --tmp` en su terminal.
 
 3. Descargue la extensión Polkadot para Chrome o Firefox [here](https://polkadot.js.org/extension/)
 
@@ -32,7 +32,13 @@ Si comienza con este paso y prefiere **aprender con la práctica**, siga esta li
 
 6. Instale [@vue/cli](https://cli.vuejs.org/guide/installation.html)
 
-7. Comience a desarrollar dapp con el comando `yarn serve` en su terminal.
+7. Comience a desarrollar dapp con el comando en su terminal:
+
+```shell
+cp src/config.template.json src/config.json
+yarn
+yarn serve
+```
 
 
 **Debería tener esta pantalla en su navegador:**

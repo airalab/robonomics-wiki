@@ -8,19 +8,18 @@ translated: false
 
 ### Robonomics node launch
 
-For dApp development and testing, we will use a local Robonomics node. To do this, you need to download the compiled binary file https://github.com/airalab/robonomics/releases. I will be using Ubuntu, so I download the appropriate version.
+For dApp development and testing, we will use a local Robonomics node. To do this, you need to download the compiled binary file v0.24 from https://github.com/airalab/robonomics/releases. I will be using Ubuntu, so I download the appropriate version.
 
 Unpack the archive
 ```sh
-wget https://github.com/airalab/robonomics/releases/download/v0.24.0/robonomics-ubuntu-0.24.0-x86_64.zip
-unzip robonomics-ubuntu-0.24.0-x86_64.zip
-cd robonomics-ubuntu-0.24.0-x86_64
+wget https://github.com/airalab/robonomics/releases/download/v0.24.0/robonomics-ubuntu-0.24.0-x86_64.tar.xz
+tar -xvf robonomics-ubuntu-0.24.0-x86_64.tar.xz
 chmod +x robonomics
 ```
 
 Now we can start the node in development mode. To do this, use the --dev flag
 ```sh
-./robonomics --dev
+./robonomics --dev --tmp
 ```
 
 > Troubleshooting
@@ -50,7 +49,8 @@ Let's start developing the dApp by creating a startup application with vue.js An
 Way 1:
 
 Using the `Vue cli` console utility.
-To do this, you need to install it https://cli.vuejs.org/guide/installation.html
+To do this, you need to install [it](https://cli.vuejs.org/guide/installation.html
+Also we will need `yarn`. Install it from [here](https://yarnpkg.com)
 
 After installation, you can run the command in the terminal
 
@@ -130,7 +130,7 @@ First, let's create a configuration file with the parameters for connecting to t
 }
 ```
 
-In this file, we indicate the node, which we are going to connect to, and custom types. The types for Robonomics can be taken from github https://github.com/airalab/robonomics/blob/master/bin/node/cli/res/custom_types.json
+In this file, we indicate the node, which we are going to connect to, and custom types.
 
 Now we need to write a script to connect to our running node.
 
@@ -978,7 +978,7 @@ export default {
 
 https://github.com/airalab/example-robonomics-dapp/blob/master/src/components/Demo.vue
 
-Let's add another picture of our car to `src/images/build-iot-dapps/car.png`. Example https://github.com/airalab/example-robonomics-dapp/blob/master/src/images/build-iot-dapps/car.png.
+    Let's add another picture of our car to `src/images/build-iot-dapps/car.png` and to `src/assets/car.png`. Example https://github.com/airalab/example-robonomics-dapp/blob/master/src/assets/car.png
 
 For display, add a new component to `App.vue`
 

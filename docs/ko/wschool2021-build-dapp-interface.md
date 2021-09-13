@@ -20,9 +20,9 @@ dapp의 인터페이스를 구축하려면 자신에게 편안한 JavaScript 프
 
 이 단계로 시작하고 학습을 선호하는 경우 다음 할 일 목록을 따라 이전 강의에서 얻은 결과 dapp을 시작하십시오 :
 
-1. [릴리스 페이지에서](https://github.com/airalab/robonomics/releases/) OS에 맞는 로컬 Robonomics 노드를 다운로드하십시오. 최신 릴리스에서 시스템을 찾지 못한 경우 이전 릴리스에서 최신 버전을 찾으십시오.
+1. [릴리스 페이지에서](https://github.com/airalab/robonomics/releases/tag/v0.22.0) OS에 맞는 로컬 Robonomics v0.22 노드를 다운로드하십시오. 최신 릴리스에서 시스템을 찾지 못한 경우 이전 릴리스에서 최신 버전을 찾으십시오.
 
-2. 터미널에 `./robonomics --dev`를 입력하여 개발자 모드에서 Robonomics 노드를 시작합니다. 
+2. 터미널에 `./robonomics --dev --tmp`를 입력하여 개발자 모드에서 Robonomics 노드를 시작합니다. 
 
 3. [여기](https://polkadot.js.org/extension/)에서 Chrome 또는 Firefox 용 Polkadot 프로그램을 다운로드하십시오. 
 
@@ -32,7 +32,12 @@ dapp의 인터페이스를 구축하려면 자신에게 편안한 JavaScript 프
 
 6. [@vue/cli](https://cli.vuejs.org/guide/installation.html) 설치하십시오/.
 
-7. 터미널에서 `yarn serve` 명령으로 dapp 개발을 시작하십시오.
+7. 터미널에서 명령으로 dapp 개발을 시작하십시오.
+```shell
+cp src/config.template.json src/config.json
+yarn
+yarn serve
+```
 
 
 **브라우저에 다음 화면이 표시되어야합니다 :**
