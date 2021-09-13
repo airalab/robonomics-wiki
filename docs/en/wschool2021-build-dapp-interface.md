@@ -21,7 +21,8 @@ For building your dapp's interface you can choose any JavaScript framework which
 If you start with this step and prefer to **learn by doing**, please, follow this to-do list to launch the resulting dapp from the previous lesson:
 
 
-1. Download a local Robonomics node v 0.24 from [releases page](https://github.com/airalab/robonomics/releases/tag/v0.24.0) that fits your OS. If you do not find your system in the latest release, please, find the most recent version in the previous releases.
+1. Download a local Robonomics node v 0.22 from [releases page](https://github.com/airalab/robonomics/releases/tag/v0.22.0) that fits your OS. If you do not find your system in the latest release, please, find the most recent version in the previous releases.
+
 2. Launch the Robononomics node in the Developer mode by typing `./robonomics --dev --tmp` in your terminal.
 
 3. Download the Polkadot Extension for Chrome or Firefox [here](https://polkadot.js.org/extension/)
