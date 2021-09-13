@@ -12,15 +12,14 @@ dApp 개발 및 테스트를 위해 로컬 Robonomics 노드를 사용합니다.
 
 아카이브 압축 풀기
 ```sh
-wget https://github.com/airalab/robonomics/releases/download/v0.24.0/robonomics-ubuntu-0.24.0-x86_64.zip
-unzip robonomics-ubuntu-0.24.0-x86_64.zip
-cd robonomics-ubuntu-0.24.0-x86_64
+wget https://github.com/airalab/robonomics/releases/download/v0.24.0/robonomics-ubuntu-0.24.0-x86_64.tar.xz
+tar -xvf robonomics-ubuntu-0.24.0-x86_64.tar.xz
 chmod +x robonomics
 ```
 
 이제 개발 모드에서 노드를 시작할 수 있습니다. 이렇게하려면 --dev 플래그를 사용하십시오.
 ```sh
-./robonomics --dev
+./robonomics --dev --tmp
 ```
 
 > 문제 해결
@@ -51,6 +50,7 @@ vue.js로 시작 애플리케이션을 생성하여 dApp 개발을 시작하겠�
 
 `Vue cli` 콘솔 유틸리티 사용.
 이렇게하려면 https://cli.vuejs.org/guide/installation.html을 설치해야합니다.
+Also we will need `yarn`. Install it from [here](https://yarnpkg.com)
 
 설치 후 터미널에서 명령을 실행할 수 있습니다.
 
@@ -130,7 +130,7 @@ module.exports = {
 }
 ```
 
-이 파일에서는 연결할 노드와 사용자 지정 유형을 나타냅니다. Robonomics의 유형은 github https://github.com/airalab/robonomics/blob/master/bin/node/cli/res/custom_types.json에서 가져올 수 있습니다.
+이 파일에서는 연결할 노드와 사용자 지정 유형을 나타냅니다.
 
 이제 실행중인 노드에 연결하는 스크립트를 작성해야합니다.
 
@@ -978,7 +978,7 @@ export default {
 
 https://github.com/airalab/example-robonomics-dapp/blob/master/src/components/Demo.vue
 
-`src/images/build-iot-dapps/car.png`에 다른 차 사진을 추가해 보겠습니다. 예 https://github.com/airalab/example-robonomics-dapp/blob/master/src/images/build-iot-dapps/car.png.
+`src/images/build-iot-dapps/car.png`, `src/assets/car.png` 에 다른 차 사진을 추가해 보겠습니다. 예 https://github.com/airalab/example-robonomics-dapp/blob/master/src/assets/car.png
 
 표시를 위해 `App.vue`에 새 구성 요소 추가
 
