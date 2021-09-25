@@ -1,0 +1,17 @@
+---
+title: Changing Exodus Bridge Receiving Address
+contributors: [Leemo94]
+translated: false
+---
+This article will provide guidance on how you can change your Robonomics parachain receiving address in the event that you have input the wrong receiving address in the [Exodus bridge dapp](https://dapp.robonomics.network/#/exodus).
+
+Please be aware that the process of changing the receiving address is not something that will be able to be carried out indefinitely, in fact the intervention of the development team is only possible during the early stages of the Robonomics parachain development, and eventually it will not be possible for the development team to conduct this kind of operation. **Please always ensure that you input the correct parachain address (i.e. one you have the seed phrase for) into the Exodus bridging application**.
+
+Please be informed that the currently, if you input the wrong Robonomics parachain account address into the Exodus bridge dapp, then the process will be carried out as follows:
+1. Complete the process as described in this article (i.e. signing the message & raising a GitHub issue).
+2.Bridged $XRT will be sent to the account originally input into the Exodus bridge dapp (i.e. the incorrect account).
+3. If no transactions are made on the incorrect account for 1 month, then the Robonomics team will transfer the $XRT tokens to the new address stipulated in the message (which you will sign as per the instructions below).
+
+Of course, the utmost priority for the Robonomics team is to ensure only valid changes of address are executed, as such you need to sign a message **from the Ethereum account which you originally deposited the $XRT tokens into the Exodus dapp**. We recommend that you utilize a site such as [MyCrypto](https://app.mycrypto.com/sign-message) to create this message (the following images will show how to conduct this process on MyCrypto).
+
+Select the icon which corresponds to your web3 wallet, in our case we will choose MetaMask.
