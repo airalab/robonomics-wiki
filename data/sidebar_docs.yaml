@@ -103,6 +103,8 @@
     - title_en: Robonomics-js
       title_ko: 로노미크스-JS
       link: /docs/robonomics-js
+      title_en: Changing Exodus Bridge Receiving Address
+      link: /docs/en/changing-exodus-receiving-address.md
 
     - title_en: Glossary
       title_ko: 용어 사전
