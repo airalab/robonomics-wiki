@@ -93,7 +93,7 @@
           link: /docs/spot-lesson3
         - title_en: Lesson 4. GraphNav service. Mapping and navigating on the map
           link: /docs/spot-lesson4
-        - title_en: Lesson 5. Robot service. Camera calibration and "Spot check" 
+        - title_en: Lesson 5. Robot service. Camera calibration and "Spot check"
           link: /docs/spot-lesson5
         - title_en: Troubleshooting
           link: /docs/spot-troubleshooting
@@ -103,7 +103,7 @@
     - title_en: Robonomics-js
       title_ko: 로노미크스-JS
       link: /docs/robonomics-js
-      title_en: Changing Exodus Bridge Receiving Address
+    - title_en: Changing Exodus Bridge Receiving Address
       link: /docs/en/changing-exodus-receiving-address.md
 
     - title_en: Glossary
@@ -126,7 +126,7 @@
           link: /docs/rio-datalog
     - title_en: Digital twins
       link: /docs/digital-twins
-    - title_en: XCM Robobank 
+    - title_en: XCM Robobank
       link: /docs/xcm-robobank
 
     - title_en: AIRA
