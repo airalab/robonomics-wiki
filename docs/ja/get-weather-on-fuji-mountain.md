@@ -6,7 +6,7 @@ translated: false
 
 **Let's start from a quick example of what Robonomics is able to do within 5 minutes. Requirements: [Metamask extension](https://metamask.io/)**
 
-To get the weather from sensor on Fuji Mountain, please, open the page of [Fuji Weather sensor](https://dapp.robonomics.network/#/sensors/airalab/QmbQT8cj9TJKfYVaidfShnrEX1g14yTC9bdG1XbcRX73wY/0x4D8a26e1f055c0b28D71cf1deA05f0f595a6975d/) in Robonomics dApp and follow instructions below.
+To get the weather from sensor on Fuji Mountain, please, open the page of [Fuji Weather sensor](https://dapp.robonomics.network/#/fuji/airalab/QmbQT8cj9TJKfYVaidfShnrEX1g14yTC9bdG1XbcRX73wY/0x4D8a26e1f055c0b28D71cf1deA05f0f595a6975d/) in Robonomics dApp and follow instructions below.
 
 Here's a walkthrough video:
 
