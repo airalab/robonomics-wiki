@@ -6,7 +6,7 @@ translated: false
 
 **Давайте начнем с быстрого примера того, что Робономика способна сделать за 5 минут. Необходимо: [Расширение Метамаск](https://metamask.io/)**
 
-Чтобы получить погоду с датчика на горе Фудзи, откройте страницу [Датчик погоды г. Фуджи](https://dapp.robonomics.network/#/sensors/airalab/QmbQT8cj9TJKfYVaidfShnrEX1g14yTC9bdG1XbcRX73wY/0x4D8a26e1f055c0b28D71cf1deA05f0f595a6975d/) в Dapp приложении Робономики и следуйте инструкциям ниже.
+Чтобы получить погоду с датчика на горе Фудзи, откройте страницу [Датчик погоды г. Фуджи](https://dapp.robonomics.network/#/fuji/airalab/QmbQT8cj9TJKfYVaidfShnrEX1g14yTC9bdG1XbcRX73wY/0x4D8a26e1f055c0b28D71cf1deA05f0f595a6975d/) в Dapp приложении Робономики и следуйте инструкциям ниже.
 
 Пошаговое видео:
 
