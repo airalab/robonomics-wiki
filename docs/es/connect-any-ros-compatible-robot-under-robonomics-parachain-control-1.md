@@ -4,7 +4,7 @@ contributors: [PaTara43]
 translated: false
 ---
 
-**In this article we will show that with the help of Robonomics tools you can control any ROS-compatitable device. We will find a random drone simulation package on the web and adjust it to run with Robonomics.**
+**In this article we will show that with the help of Robonomics tools you can control any ROS-compatible device. We will find a random drone simulation package on the web and adjust it to run with Robonomics.**
 **Requirements:**
 - Ubuntu 18.04 LTS
 - ROS Melodic + Gazebo + RViz (installation manual [here](http://wiki.ros.org/melodic/Installation))
@@ -96,4 +96,4 @@ You should see the log `"Taking Off"` and the drone should start flying:
 
 ![flying](../images/drone-demo/flying.jpg "flying")
 
-That's how any ROS-compatitable robot can be controlled by Robonomics parachain control. Proceed to [part 2](/docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-2) to learn more
+That's how any ROS-compatible robot can be controlled by Robonomics parachain control. Proceed to [part 2](/docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-2) to learn more
