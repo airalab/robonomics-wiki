@@ -18,5 +18,5 @@ All of our Demos are launched in a local network, however you can connect a robo
 
 All Demos in this section follow a similar scenario. You [create an account](/docs/create-account-in-dapp/) for the robot and send him some units for paying transactions. Then the user sends an `ON/OFF` transaction to the robot's address, the robot receives it and starts working. After the job is done the telemetry is saved in IPFS and the file hash is sent to datalog. So at any time you can see how the robot performed its work.
 ## Connect Your Own Robot
-In addition you can create your own control package for any ROS-compatitable device with [this](/docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-1/) instruction.
+In addition you can create your own control package for any ROS-compatible device with [this](/docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-1/) instruction.
 

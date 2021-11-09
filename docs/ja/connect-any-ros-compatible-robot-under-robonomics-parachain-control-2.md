@@ -1,11 +1,11 @@
 ---
-title: Connect any ROS-compatitable robot under Robonomics parachain control. Part 2, IPFS
+title: Connect any ROS-compatible robot under Robonomics parachain control. Part 2, IPFS
 contributors: [PaTara43]
 translated: false
 ---
 
 **In this article we will continue using Robonomics tools to make a drone be controlled by a parachain. This time we will add sending data to IPFS and hash storing in chain options. Below is the instruction and code snippets. Requirements:**
-- [**Part 1 of this tutorial**](/docs/connect-any-ros-compatitable-robot-under-robonomics-parachain-control-1)
+- [**Part 1 of this tutorial**](/docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-1)
 - Ubuntu 18.04 LTS
 - ROS Melodic + Gazebo + RViz (installation manual [here](http://wiki.ros.org/melodic/Installation))
 - IPFS 0.4.22 (download from [here](https://dist.ipfs.io/go-ipfs/v0.4.22/go-ipfs_v0.4.22_linux-386.tar.gz) and install)
