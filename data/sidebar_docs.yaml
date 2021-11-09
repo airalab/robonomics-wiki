@@ -25,7 +25,7 @@
       link: /docs/cross-chain-messages
     - title_en: Connect Mars Curiosity Rover
       link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control
-    - title_en: Connect ROS-compatibale Drone
+    - title_en: Connect ROS-compatible Drone
       items:
         - title_en: Part 1. Launch by Transaction
           link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-1
