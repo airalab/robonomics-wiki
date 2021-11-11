@@ -9,6 +9,8 @@ translated: true
 "Robonomics coffee" - is a smart coffee machine integrated in  [Robonomics Network](https://robonomics.network/).
 This project aims to show Robonomics potential in the IoT sphere by a real-world example.
 
+https://www.youtube.com/watch?v=Z8pXcLjlJnQ
+
 ## How to make coffee?
 
 In order to have a cup of delicious coffee, a customer should send some funds (1 Statemine's token 
@@ -16,6 +18,8 @@ In order to have a cup of delicious coffee, a customer should send some funds (1
 After that the pouring process is started and action log is published in the 
 [Robonomics parachain](https://parachain.robonomics.network/?rpc=wss%3A%2F%2Fmain.frontier.rpc.robonomics.network%2F#/explorer) 
 via Datalog function.
+
+**NOTE!** *You may use **any** token on Statemine, more on that [here](#things-to-point-out)*
 
 ## How it works?
 
@@ -138,8 +142,15 @@ records a datalog!
 
 ## Things to point out
 - This is a POC of a blockchain-driven IoT device, it has things to improve, wires to hide and functionality to implement.
-- Token ID, the one, coffee machine is waiting to receive is edited
-[here](https://github.com/Multi-Agent-io/robonomics-coffee-maker/blob/master/statemine_monitor.py#L27), so you can use your own token.
+- Token ID, the one, coffee machine is waiting to receive, is set
+[here](https://github.com/Multi-Agent-io/robonomics-coffee-maker/blob/master/statemine_monitor.py#L27), **so you can use your own token**,
+existing one or newly created. To create one, go to 
+[Statemine Kusama parachain page](https://github.com/airalab/robonomics-wiki), `Network -> Assets -> Create`.
+Set an ID there, complete the procedure and paste ID in the code.
+
+![Creating Any Token for Paying](../images/robonomics-coffee/create_token.png)
+
+
 - Right now the only thing that matters for income tracker is the positive difference between current and previous
 asset balance. This may be filtered [code](https://github.com/Multi-Agent-io/robonomics-coffee-maker/blob/master/statemine_monitor.py#L59).
 - Powered by [Robonomics](https://robonomics.network/), made by [Multi-Agent.io](https://multi-agent.io/).
