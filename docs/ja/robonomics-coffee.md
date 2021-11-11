@@ -83,7 +83,7 @@ respectively.
 
 ![RPI GPIO](../images/robonomics-coffee/rpi_gpio.png)
 
-#### 6. Download software
+### Software installation
 Time to turn the Raspberry Pi into blockchain-powered coffee maker!  
 - Prepare the RPI for Substrate libs ([source](https://www.rust-lang.org/tools/install)):
 ```bash
@@ -106,7 +106,7 @@ git clone https://github.com/Multi-Agent-io/robonomics-coffee-maker
 pip3 install -r requirements.txt
 ```
 
-#### 7. Account management
+### Account management
 On your PC install [Polkadot Extension](https://polkadot.js.org/extension/) and register a coffee machine account there. **Save 
 mnemonic seed phrase as it is going to be used later.**
 
@@ -116,7 +116,7 @@ Logging actions in Robonomics is optional, you will need XRT on
 [parachain.robonomics.network](https://parachain.robonomics.network/) for coffee machine account (it is the same across
 networks) for this. If not, there will simply be an error message *"Balance too low."*
 
-#### 8. Run Robonomics coffee
+### Run Robonomics coffee
 Run this in repo folder:
 ```bash
 python3 main.py <previously saved seed in quotes>
