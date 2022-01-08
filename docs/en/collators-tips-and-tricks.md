@@ -4,7 +4,7 @@ contributors: [dergudzon]
 translated: false
 ---
 
-Currently Robonomics is maintained by developers but anyone can support the project. Every additional full node of blockchain helps it to be more sustainable and fault tolerant. Robonomics node binaries is available in release assets or it could be [build from source](/docs/how-to-build-collator-node/).
+Currently Robonomics is maintained by developers but anyone can support the project. Every additional full node of blockchain helps it to be more sustainable and fault tolerant. Robonomics node binaries is available in [release](https://github.com/airalab/robonomics/releases) assets or it could be [build from source](/docs/how-to-build-collator-node/).
 
 ## Requirements
 
@@ -24,9 +24,18 @@ But we recommend to launch collator using the **standard hardware requirements**
 Launch command:
 
 ```
-  robonomics --parachain-id=2048 --name="**%NODE_NAME%**" --validator --lighthouse-account="**%POLKADOT_ACCOUNT_ADDRESS%**" --telemetry-url="wss://telemetry.parachain.robonomics.network/submit/ 0" -- --database=RocksDb --unsafe-pruning --pruning=1000
+  robonomics \
+    --parachain-id=2048 \
+    --name="%NODE_NAME%" \
+    --validator \
+    --lighthouse-account="%POLKADOT_ACCOUNT_ADDRESS%" \
+    --telemetry-url="wss://telemetry.parachain.robonomics.network/submit/ 0" \
+    -- \
+    --database=RocksDb \
+    --unsafe-pruning \
+    --pruning=1000
 ```
-Where **%NAME%** is the node name, and
+Where **%NODE_NAME%** is the node name, and
       **%POLKADOT_ACCOUNT_ADDRESS%** is the account address in the Polkadot ecosystem in SS58 format. Example: *4Ch19e5HAF4PzudmLMVLD2xEyuxYXY4j47CLdsG74ht933Vz*
 
 Telemetry: https://telemetry.parachain.robonomics.network/#/Robonomics
