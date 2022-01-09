@@ -98,7 +98,7 @@ Telemetry url: https://telemetry.parachain.robonomics.network/#/Robonomics
 
 Collators logs can be monitored with : `journalctl -u robonomics.service -f` 
 
-Now the robonomics collator is launched it will sync with the Kusama Relay Chain, this can take up quite some time depending on your networkspeed and system specficiation, so we recommend to download the a Kusama snapshot and use it. 
+Now the robonomics collator is launched it will sync with the Kusama Relay Chain, this can take up quite some time depending on your network speed and system specifications, so we recommend to download a Kusama snapshot and use it. 
 
 
 ## Speeding up the sync process using a Kusama snapshot
