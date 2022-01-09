@@ -55,7 +55,7 @@ Where **%NODE_NAME%** is the node name, and
    mv robonomics /usr/local/bin/
    ```
 
-3. Create the the systemd service file named *robonomics.service*:
+3. Create the systemd service file named *robonomics.service*:
     ```
     nano /etc/systemd/system/robonomics.service
     ```
