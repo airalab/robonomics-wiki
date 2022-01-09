@@ -4,7 +4,7 @@ contributors: [dergudzon]
 translated: false
 ---
 
-Ensure you have Rust and the support software installed. The Rust installer will ask you about current installation options, you're need to choose `1) Proceed with installation (default)` case.
+Ensure you have Rust and the support software installed. The Rust installer will ask you about current installation options, you should choose the `1) Proceed with installation (default)` option.
 
 ```
   curl https://sh.rustup.rs -sSf | sh
@@ -43,6 +43,7 @@ You will also need to install the following packages:
   3. Windows (PowerShell):
 
   ```
+    # Install git https://git-scm.com/download/win
     # Install LLVM
     # Download and install the Pre Build Windows binaries
     # of LLVM  from http://releases.llvm.org/download.html
