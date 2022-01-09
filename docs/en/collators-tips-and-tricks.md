@@ -13,7 +13,7 @@ Currently the Robonomics network is maintained by developers, but anyone can sup
 + 160GB NVMe
 + 8GB RAM
 
-But we recommend to launch collator using the **standard hardware requirements** for [Polkadot validators](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#standard-hardware):
+But we recommend that you launch a collator using the **standard hardware requirements** for [Polkadot validators](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#standard-hardware):
 + CPU - Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz.
 + Storage - A NVMe solid state drive. Should be reasonably sized to deal with the blockchain growth. Currently the Kusama db uses around 90GB of space. Starting around 160GB-200GB will be sufficient for the first six months of Robonomics, but it will need to be re-evaluated every six months.
 + Memory - 64GB ECC
