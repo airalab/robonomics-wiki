@@ -19,7 +19,7 @@ But we recommend to launch collator using the **standard hardware requirements**
 + Memory - 64GB ECC
 
 
-## Easily launching a Robonomics collator
+## Easily launch a Robonomics collator
 
 You can simply launch a collator directly in the command line to check for errors.
 After that we strongly recommend to launch the Robonomics collator as a service.
