@@ -1,6 +1,6 @@
 ---
-title: Collators tips and tricks
-contributors: [dergudzon]
+title: How to launch the Robonomics collator
+contributors: [dergudzon, Leemo94]
 translated: false
 ---
 
