@@ -1,10 +1,10 @@
 <template>
- 
+
   <div class="search-container"  :class="toggleClasses" tabindex="0" @focusin="focusIn" @focusout="focusOut">
 
       <!-- v-on:keyup.down="SearchLinksFocus" -->
       <input v-model="search" type="search" :aria-label="$st('Search', $store.state.locale)" :placeholder="$st('Search', $store.state.locale)"/>
-      
+
       <div v-if="searchResults.length > 0" role="listbox" class="searchresults">
 
         <div class="layout__content">
@@ -81,11 +81,11 @@ query{
       background-color: var(--background-active);
       border-top: 1rem solid var(--border-bottom);
       border-bottom: 1rem solid var(--border-bottom);
-      
+
       transition: 0.4s ease opacity;
       opacity: 0;
       visibility: hidden;
- 
+
       nav a {
         transition: 0.2s ease all;
         display: block;
@@ -108,7 +108,7 @@ query{
         background-color: var(--background-active);
         border-color: var(--border-bottom)
       }
-    
+
     }
   }
 
@@ -131,13 +131,13 @@ query{
 
     computed: {
       toggleClasses() {
-        
+
         return { 'active': this.isActive }
 
       },
 
       searchResults() {
-        
+
         if ( this.search.length > 2 ) {
           return this.$static.allDocPage.edges.filter(post => {
             return (post.node.title.toLowerCase().includes(this.search.toLowerCase().trim()) || post.node.content.toLowerCase().includes(this.search.toLowerCase().trim())) & post.node.path.includes('/'+ this.$store.state.locale +'/') & (post.node.path != this.$route.matched[0].path+'/')
@@ -151,11 +151,11 @@ query{
 
     methods: {
       focusIn() {
-        document.querySelector('.search-container').classList.add('active')
+        this.isActive = true;
       },
 
       focusOut() {
-        document.querySelector('.search-container').classList.remove('active')
+        this.isActive = false;
       },
 
       // SearchLinksFocus() {
@@ -164,8 +164,8 @@ query{
     },
 
     watch: {
-      "$route.path": function(current, old) {
-        document.querySelector('.search-container').classList.remove('active')
+      "$route.path": function() {
+        this.isActive = false;
       }
     },
 
