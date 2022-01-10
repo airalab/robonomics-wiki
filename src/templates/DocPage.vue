@@ -28,7 +28,7 @@
       <div class="page-content">
 
         <div>
-          
+
           <VueRemarkContent />
 
           <section class="docContribution" v-if="ghLink">
@@ -144,7 +144,7 @@
   .docContribution {
 
     border: 1px solid var(--table-thead-bg);
-    
+
     .head {
       background-color: var(--table-thead-bg);
       padding: calc(var(--space)/4);
@@ -168,7 +168,7 @@
       &__sidebar{
 
         position: fixed !important;
-        
+
         top: 7rem;
 
         left: 0;
@@ -233,8 +233,6 @@ query {
 import items from '../../data/sidebar_docs.yaml'
 import {Octokit} from '@octokit/rest'
 
-export const octokit = new Octokit()
-
 export default {
 
 	components: {
@@ -253,6 +251,7 @@ export default {
       ghUpdateDate: null,
       ghUpdateName: null,
       ghUpdateUrl: null,
+      octokit: null
     }
   },
 
@@ -280,7 +279,10 @@ export default {
     },
 
     github_lastupdated() {
-      octokit.repos
+      if (!this.octokit) {
+        return
+      }
+      this.octokit.repos
         .listCommits({
           owner: "airalab",
           repo: "robonomics-wiki",
@@ -298,7 +300,10 @@ export default {
     },
 
     github_link() {
-      octokit.repos
+      if (!this.octokit) {
+        return
+      }
+      this.octokit.repos
         .getContent({
           owner: "airalab",
           repo: "robonomics-wiki",
@@ -318,7 +323,7 @@ export default {
 
   },
 
-  
+
   computed: {
 
     //seems to be broken, needs checks
@@ -351,7 +356,8 @@ export default {
 	    }
 	  },
 
-  created() {
+  mounted() {
+    this.octokit = new Octokit()
     this.github_lastupdated()
     this.github_link()
 
@@ -367,11 +373,11 @@ export default {
 
     //Hide popup mobile menu after clickcing (cause - no real page reload in Gridsome)
     document.querySelectorAll('.menu-link').forEach(function(el) {
-      
+
       el.addEventListener('click', function(event){
         event.target.closest('.page__sidebar').classList.add('hiddenMobile');
         var id = event.target.closest('.page__sidebar').id;
-        
+
         document.querySelectorAll('.sectionToggler').forEach(function(el) {
           if(el.dataset.show == id) {
             el.classList.add('open');
