@@ -17,7 +17,7 @@
   items:
     - title_en: Playground Overview
       link: /docs/playground-overview
-    - title_en: Create Account on Robonomics Platform
+    - title_en: Create Account for Robonomics Parachain
       link: /docs/create-account-in-dapp
     - title_en: Adding Funds To Your Account on Robonomics Portal
       link: /docs/adding-funds-to-account-in-dapp/
