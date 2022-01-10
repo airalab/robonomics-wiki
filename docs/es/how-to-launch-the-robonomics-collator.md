@@ -1,28 +1,28 @@
 ---
-title: Collators tips and tricks
-contributors: [dergudzon]
+title: How to launch the Robonomics collator
+contributors: [dergudzon, Leemo94]
 translated: false
 ---
 
-Currently Robonomics is maintained by developers but anyone can support the project. Every additional full node of blockchain helps it to be more sustainable and fault tolerant. Robonomics node binaries is available in [release](https://github.com/airalab/robonomics/releases) assets or it could be [build from source](/docs/how-to-build-collator-node/).
+Currently the Robonomics network is maintained by developers, but anyone can support the project. Every additional full node of the blockchain helps it to be more sustainable and fault tolerant. Robonomics node binaries are available in [release](https://github.com/airalab/robonomics/releases) assets or it could be [build from source](/docs/how-to-build-collator-node/).
 
 ## Requirements
 
-**Minimum hardware requirements** for collator:
+**Minimum hardware requirements** for collators:
 + 4-cores CPU
 + 160GB NVMe
 + 8GB RAM
 
-But we recommend to launch collator using the **standard hardware requirements** for polkadot validators:
+But we recommend that you launch a collator using the **standard hardware requirements** for [Polkadot validators](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#standard-hardware):
 + CPU - Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz.
-+ Storage - A NVMe solid state drive. Should be reasonably sized to deal with blockchain growth. In the moment just Kusama db used around 90GB space. Starting around 160GB-200GB will be okay for the first six months of Robonomics, but will need to be re-evaluated every six months.
++ Storage - A NVMe solid state drive. Should be reasonably sized to deal with the blockchain growth. Currently the Kusama db uses around 90GB of space. We recommend 200-240GB for first months, but it will need to be re-evaluated every six months.
 + Memory - 64GB ECC
 
 
-## Simple launch the Robonomics collator
+## Easily launch a Robonomics collator
 
-You can use simple launch directly in the command line just for first check for errors.
-After that we strongly recommend to launch the Robonomics as a service.
+You can simply launch a collator directly in the command line to check for errors.
+After that we strongly recommend to launch the Robonomics collator as a service.
 
 ```
 robonomics \
@@ -48,13 +48,18 @@ Where **%NODE_NAME%** is the node name, and
     useradd -m robonomics
     ```
 
-2. Move the Robonomics binary to the */usr/local/bin/* directory. 
+2. Download, extract and move the Robonomics binary to the */usr/local/bin/* directory.. 
+   ```
+   wget https://github.com/airalab/robonomics/releases/download/v1.4.0/robonomics-1.4.0-ubuntu-x86_64.tar.gz
+   tar -xf robonomics-1.4.0-ubuntu-x86_64.tar.gz
+   mv robonomics /usr/local/bin/
+   ```
 
-3. Create the the systemd service file named *robonomics.service*:
+3. Create the systemd service file named *robonomics.service*:
     ```
     nano /etc/systemd/system/robonomics.service
     ```
-    And add to it these rows:
+    And add the following lines in the service file:
     ```
     [Unit]
     Description=robonomics
@@ -91,24 +96,24 @@ Where **%NODE_NAME%** is the node name, and
 
 Telemetry url: https://telemetry.parachain.robonomics.network/#/Robonomics
 
-How to check the collator logs: `journalctl -u robonomics.service -f` 
+Collators logs can be monitored with : `journalctl -u robonomics.service -f` 
 
-Now the robonomics collator is launched, but Kusama chain syncronization process will take a lot of time, so we recommend to download the actual Kusama snapshot and use it. 
+Now the robonomics collator is launched it will sync with the Kusama Relay Chain, this can take up quite some time depending on your network speed and system specifications, so we recommend to download a Kusama snapshot and use it. 
 
 
-## Using Kusama snapshot for making syncronization faster
+## Speeding up the sync process using a Kusama snapshot
 
-We recommend to do it immediately after creating the robonomics service. You can find info about snapshots and usage instructions on this page: https://ksm-rocksdb.polkashots.io/
+We recommend to do this immediately after you've created and started the robonomics service. You can find more info about snapshots and usage instructions on the followin page: https://ksm-rocksdb.polkashots.io/
 
-Here our instruction:
+Instructions:
 
-1. Stop the Robonomics service and remove current Kusama database directory:
+1. Stop the Robonomics service and remove the current Kusama database directory:
     ```
     systemctl stop robonomics.service
     rm -rf /home/robonomics/.local/share/robonomics/polkadot/chains/ksmcc3/db/
     ```
     
-2. Download the actual snapshot, install 7z, unarchive the downloaded db and remove downloaded archive:
+2. Download the actual snapshot, install 7z, extract and remove the downloaded archive:
     ```
     wget https://ksm-rocksdb.polkashots.io/snapshot -O kusama.RocksDb.7z
     apt install p7zip-full p7zip-rar
@@ -116,7 +121,7 @@ Here our instruction:
     rm -v kusama.RocksDb.7z
     ```
     
-3. Set right owner for database folder:
+3. Setting the right ownership for the database folder:
     ``` 
     chown -R robonomics:robonomics home/robonomics/.local/share/robonomics/polkadot/chains/ksmcc3
     ```
