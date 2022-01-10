@@ -1,46 +1,93 @@
 ---
-title: Create an Account on Robonomics Portal
-contributors: [PaTara43]
+title: Create Account for Robonomics Parachain
+contributors: [PaTara43, Fingerling42]
 translated: true
 ---
 
-**In order to be able to complete all the playground tutorials below, one should have several accounts on Robonomics portal. These accounts do not contain any personal data, neither they are anyhow valuable (if you play on a local dev network or on a self-owned test one). But still their keys, both public and private, are necessary for launching any demo.**
+**In order to interact and operate with Robonomics Parachain, developers and users need to create an account on the Polkadot / Substrate Portal. The account performs basic functions for the network: your public network address(the public key), the access control to the address and funds (the private key), sending transactions to the network, showing your tokens and their amount, etc. Below are two main ways to create an account for Robonomics Parachain.**
 
-## 1. Choose your network and navigate to Robonomics portal
-Globally, there are 3 different ways to work with Robonomics:
-- Launch your own local network with [robonomics binary](https://github.com/airalab/robonomics/releases/) by `./robonomics --dev`. This method is used in all playground tutorials. (_tip: to avoid failures on next launches clean chain data by `rm -rf /home/$USER/.local/share/robonomics/chains/dev/db` after each session_)
-- Launch your own test network following [this](/docs/robonomics-test-network-manual/) manual
-- Connect to an existing network on a portal (more information on this below)
+# Using Polkadot{.js} Browser Extension
 
-Regardless of method chosen, go to [parachain.robonomics.network](https://parachain.robonomics.network) and draw your attention to the top-left corner:
+The Polkadot Extension provides a mechanism to generate the account and interact with all Polkadot / Kusama projects including Robonomics Parachain. This is not the safest way to manage your account, but it is the most convenient in terms of security / usability balance.
 
-![Portal top-left](../images/creating-an-account/portal-top-left.jpg "Portal top-left")
+## 1. Install Browser Extension
 
-Press on the current network icon and choose you network:
-- **Development -> Local Node** if you have launched local network
-- **Custom Endpoint -> insert endpoint** if you have created a test network on a remote server
-- **Live Networks** or **Test Networks** if you are operating in a public one
-Don't forget to press `Switch` button to confirm network choice. In all the playgrounds we will use local networks.
+The browser extension is available for [FireFox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension) and [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (plus Chromium-based browsers).
 
-![Choosing local network](../images/creating-an-account/choosing-local-node.jpg "Choosing local network")
+![Browser Extension](../images/creating-an-account/1.1-polkadot-extension.png "Browser Extension")
 
-## 2. Create accounts
-Now that you have chosen your network, go to **Accounts -> Accounts** and press `Add account` button
+## 2. Open Robonomics Parachain App
 
-![Accounts page](../images/creating-an-account/accounts-page.jpg "Accounts page")
+Go to [Robonomics Parachain app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) on Polkadot / Substrate Portal. If this is the first time you entered the portal, it will request access to the browser extension, so allow access. 
 
-You should see the following panel:
+Once you've opened the app, take a look at the top left corner. The name of the network, its icon and the number of the last block are displayed there. Clicking on this area will open a list of all Polkadot / Kusama networks, including test networks and local nodes. You can switch between networks by selecting the required one and pressing the `Switch` button. **Make sure you are connected to Robonomics Parachain now**. 
 
-![Add account panel](../images/creating-an-account/add-account-panel.jpg "Add account panel")
+![Robonomics Parachain app](../images/creating-an-account/1.2-robonomics-app.png "Robonomics Parachain app")
 
-- *Name* is just you account's name in this exact browser. It makes no sense but convenience.
-- *Seed*. Each transaction must be signed by account's unique seed. It has two forms: *Mnemonic* (human-readable) and *Raw* (a sequence of digits and letters). Change *Mnemonic* to *Raw* and copy the seed. **It's very important to store it somewhere securely** since secret seeds are used for transactions in [Robonomics IO](/docs/rio-overview/) module. If you have created an account before, you can insert its secret seed here to restore its balance and history.
-- *Password* is used to sign transactions on a portal (in GUI). Create one and remember it.
+## 3. Update Extension Metadata
 
-Click `Save`, `Create and backup account`. A downloaded JSON-file is another way to restore account's data on the portal.
+It is very likely that the app will ask you to update the metadata for the extension to display the correct information about the chain you are connected to. Go to **Settings -> Metadata**, press `Update metadata` button and then, in the pop-up window, allow the extension to do it. 
 
-## 3. Manage your accounts
-Now you can fully operate with your fresh-created account. Send and receive tokens, messages, write datalog and more. You can forget this account for this exact browser by clicking three dots in opposite of your account's name and choosing *Forget this account*. Feel free to explore all the features of portal. To copy your account's address simply click on its icon, address will be copied to clipboard.
+![Updating metadata](../images/creating-an-account/1.3-metadata-update.png "Updating metadata")
 
-## 4. Some notes before proceeding to playground
-Most of the playground demos require "Control" account and one or several "Worker" accounts. Transfer units to both before starting, since "Control" needs to send "ON"/"OFF" transactions and "Worker" publishes datalog. Also, each "ON"/"OFF" transaction requires target address, so don't forget to copy it from the portal.
+# 4. Create Account in Extension
+
+Open the Polkadot{.js} browser extension. Click the big plus button or select `Create new account` from the small plus icon in the top right. You should see the following menu, with generated mnemonic seed in the form of twelve words and the address. 
+
+![Account creation, step one](../images/creating-an-account/1.4-create-account-step-1.png "Account creation, step one")
+
+The seed is your key to the account. Knowing the seed allows you (or anyone else who knows the seed) to get control on this account and even re-create it, if you forget the password. **It's very important to store it somewhere securely**, preferably on paper or other non-digital device, not in digital storage or on a computer. 
+
+Save the seed and press `Next step`. You should see the following menu.
+
+![Account creation, step two](../images/creating-an-account/1.5-create-account-step-2.png "Account creation, step two")
+
+- *Network* allows you to choose which of the networks this account will be exclusively used for. You can use the same address on multiple networks, however, for privacy reasons, it is recommended that you create a new address for each network you use. 
+Select the Robonomics network from the drop-down list. If you could not find the Robonomics network, then most likely you did not update the metadata, go back and do it.
+
+    - You will notice that the format of the address and the account icon will change — this is normal. Different network formats are merely other representations of the same public key. 
+
+- *Name* is just account's name for your use only. It is not stored on the blockchain and will not be visible to other users. 
+
+- *Password* is used to encrypt your account's information. You will need to re-enter it when signing transactions on the portal. Create one and remember it.
+
+As a result, after creating an account, you will see it in the list of accounts in Polkadot{.js} extension. By clicking on three dots, you can rename the account, export it, remove it from the extension and change the network used for the account. 
+
+Also, the account will appear in the **Accounts -> Accounts** menu on the portal, where it will be noted that it was injected using the extension.
+
+![Successful account creation](../images/creating-an-account/1.6-account-injected.png "Successful account creation")
+
+
+# Directly on Robonomics Parachain App
+
+You can use the user interface on the Polkadot / Substrate Portal to create an account, although this is not recommended as it is the less secure method for the account creation. It should be used when other methods are not applicable or for development and tests. 
+
+## 1. Open Robonomics Parachain App
+
+Go to [Robonomics Parachain app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) on Polkadot / Substrate Portal. **Check at the top left corner that you are connected to Robonomics Parachain**.  
+
+Go to **Accounts -> Accounts** and press `Add account` button. 
+
+![Robonomics Parachain App](../images/creating-an-account/2.1-robonomics-app-main-view.png "Robonomics Parachain App")
+
+## 2. Create Account
+
+You should see the following popup menu with account seed. 
+
+![Generating account seed](../images/creating-an-account/2.2-robonomics-app-seed.png "Generating account seed")
+
+It has two forms: *Mnemonic* (human-readable) and *Raw* (a sequence of digits and letters). Save the seed phrase securely and press `Next`.
+
+In the next menu, you need to set the account name and password, similar to the extension instructions described above.
+
+![Generating account name and password](../images/creating-an-account/2.3-robonomics-app-name-pass.png "Generating account name and password")
+
+Clicking on the `Next` button will take you to the last window. Click `Save` to finish account creation. It will also generate a backup JSON-files that you should safely store. You can later use this file to recover your account if you remember the password.
+
+![Successful account creation](../images/creating-an-account/2.4-robonomics-app-account-created.png "Successful account creation")
+
+# Account Сreated Successfully 
+
+Now you can fully operate with your fresh-created account. Send and receive tokens, messages, write datalog and more. Feel free to explore all the features of app. To copy your account's address simply click on its icon, address will be copied to clipboard. 
+
+If you would like to know more about Polkadot / Kusama accounts and additional ways to create them, more information can be found [here](https://wiki.polkadot.network/docs/learn-accounts) and [here](https://wiki.polkadot.network/docs/learn-account-generation).
