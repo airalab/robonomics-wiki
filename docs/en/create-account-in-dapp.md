@@ -30,7 +30,7 @@ It is very likely that the app will ask you to update the metadata for the exten
 
 ![Updating metadata](../images/creating-an-account/1.3-metadata-update.png "Updating metadata")
 
-# 4. Create Account in Extension
+## 4. Create Account in Extension
 
 Open the Polkadot{.js} browser extension. Click the big plus button or select `Create new account` from the small plus icon in the top right. You should see the following menu, with generated mnemonic seed in the form of twelve words and the address. 
 
