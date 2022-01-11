@@ -49,7 +49,7 @@ Let's start developing the dApp by creating a startup application with vue.js An
 Way 1:
 
 Using the `Vue cli` console utility.
-To do this, you need to install [it](https://cli.vuejs.org/guide/installation.html
+To do this, you need to install [it](https://cli.vuejs.org/guide/installation.html)
 Also we will need `yarn`. Install it from [here](https://yarnpkg.com)
 
 After installation, you can run the command in the terminal
