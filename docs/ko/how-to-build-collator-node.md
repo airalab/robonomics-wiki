@@ -4,7 +4,10 @@ contributors: [dergudzon, Leemo94]
 translated: false
 ---
 
+https://youtu.be/wnAtD7w0Pxk
+
 Ensure you have Rust and the support software installed. The Rust installer will ask you about current installation options, you should choose the `1) Proceed with installation (default)` option.
+
 
 ```
   curl https://sh.rustup.rs -sSf | sh
@@ -59,4 +62,4 @@ Now you can install the robonomics node from git source.
 
 After this command the compiled robonomics binary will be in `~/.cargo/bin` directory.
 
-The next step is how to launch the collator node. You can read about it in the ["Collators tips and tricks" article](/docs/collators-tips-and-tricks/)
+The next step is how to launch the collator node. You can read about it in the ["How to launch the Robonomics collator"](/docs/how-to-launch-the-robonomics-collator.md/) article.
