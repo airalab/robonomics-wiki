@@ -4,7 +4,7 @@ contributors: [dergudzon, Leemo94]
 translated: false
 ---
 
-Currently the Robonomics network is maintained by developers, but anyone can support the project. Every additional full node of the blockchain helps it to be more sustainable and fault tolerant. Robonomics node binaries are available in [release](https://github.com/airalab/robonomics/releases) assets or it could be [build from source](/docs/how-to-build-collator-node/).
+Currently the Robonomics network is maintained by developers, but anyone can support the project. Every additional full node of the blockchain helps it to be more sustainable and fault tolerant. Robonomics node binaries are available in [release](https://github.com/airalab/robonomics/releases) assets or it could be [built from source](/docs/how-to-build-collator-node/).
 
 ## Requirements
 
@@ -27,12 +27,12 @@ In this article we use next specifications:
 
 
 ## Important information
-1. We use some variables in this instruction, and you'll need to replace its for yours values in all commands:
+1. We use some variables in these instructions, and you'll need to replace the values for your own in all the commands:
     + **%NODE_NAME%** is the node name. Example: *my-robonomics-kusama-collator*
     + **%BASE_PATH%** is the path to mounted volume. Example: */mnt/HC_Volume_16056435/*
     + **%POLKADOT_ACCOUNT_ADDRESS%** is the account address in the Polkadot ecosystem in SS58 format. Example: *4Gp3QpacQhp4ZReGhJ47pzExQiwoNPgqTWYqEQca9XAvrYsu*
 
-2. Note that you need use *--state-cache-size=0* in collator's service launch. This parameter important for collator stable work. 
+2. Note that you need use *--state-cache-size=0* in the collator's service launch. This parameter is important for the stability of the collator.
 You can see more info in the related [issue](https://github.com/airalab/robonomics/issues/234) on github.
 
 ## Easily launch a Robonomics collator
