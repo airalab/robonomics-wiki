@@ -1,26 +1,25 @@
 ---
 title: Lección 6.1, Crear dApps IoT para usuarios finales
 contributors: [vol4tim]
-translated: false
+translated: true
 ---
 
 ## Preparándose
 
 ### Lanzamiento del nodo de Robonomics
 
-Para el desarrollo y la prueba de dApp, usaremos un nodo local de Robonomics. Para hacer esto, necesita descargar el archivo binario compilado [https://github.com/airalab/robonomics/releases](https://github.com/airalab/robonomics/releases). Usaré Ubuntu, así uno descarga la versión apropiada.
+Para el desarrollo y la prueba de dApp, usaremos un nodo local de Robonomics. Para hacer esto, necesita descargar el archivo binario compilado v0.24 [https://github.com/airalab/robonomics/releases](https://github.com/airalab/robonomics/releases). Usaré Ubuntu, así uno descarga la versión apropiada.
 
 Desempaquetar el archivo:
 ```sh
-wget https://github.com/airalab/robonomics/releases/download/v0.24.0/robonomics-ubuntu-0.24.0-x86_64.zip
-unzip robonomics-ubuntu-0.24.0-x86_64.zip
-cd robonomics-ubuntu-0.24.0-x86_64
+wget https://github.com/airalab/robonomics/releases/download/v0.24.0/robonomics-ubuntu-0.24.0-x86_64.tar.xz
+tar -xvf robonomics-ubuntu-0.24.0-x86_64.tar.xz
 chmod +x robonomics
 ```
 
 Ahora podemos iniciar el nodo en modo de desarrollo. Para hacer esto, use -dev flag.
 ```sh
-./robonomics --dev
+./robonomics --dev --tmp
 ```
 
 > Solución de problemas
@@ -50,7 +49,8 @@ Comencemos a desarrollar la dApp creando una aplicación de inicio con vue.js Y 
 Camino 1:
 
 Usando la utilidad de consola `Vue cli`.
-Para hacer esto, debe instalarlo https://cli.vuejs.org/guide/installation.html
+Para hacer esto, debe [instalarlo] (https://cli.vuejs.org/guide/installation.html)
+Also we will need `yarn`. Install it from [here](https://yarnpkg.com)
 
 Después de la instalación, puede ejecutar el comando en la terminal
 
@@ -130,7 +130,7 @@ Primero, creemos un archivo de configuración con los parámetros para conectars
 }
 ```
 
-En este archivo, indicamos el nodo al que nos vamos a conectar y los tipos personalizados. Los tipos de Robonomics se pueden tomar de github  https://github.com/airalab/robonomics/blob/master/bin/node/cli/res/custom_types.json
+En este archivo, indicamos el nodo al que nos vamos a conectar y los tipos personalizados.
 
 Ahora necesitamos escribir un script para conectarnos a nuestro nodo en ejecución.
 
@@ -978,7 +978,7 @@ export default {
 
 https://github.com/airalab/example-robonomics-dapp/blob/master/src/components/Demo.vue
 
-Agreguemos otra imagen de nuestro automóvil a `src/images/build-iot-dapps/car.png`. Ejemplo https://github.com/airalab/example-robonomics-dapp/blob/master/src/images/build-iot-dapps/car.png.
+Agreguemos otra imagen de nuestro automóvil a `src/images/build-iot-dapps/car.png`and `src/assets/car.png`. Ejemplo https://github.com/airalab/example-robonomics-dapp/blob/master/src/assets/car.png
 
 Para la visualización, agregue un nuevo componente a `App.vue`
 

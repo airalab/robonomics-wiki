@@ -12,15 +12,14 @@ dAppの開発とテストには、ローカルのRobonomicsノードを使用し
 
 アーカイブを解凍
 ```sh
-wget https://github.com/airalab/robonomics/releases/download/v0.24.0/robonomics-ubuntu-0.24.0-x86_64.zip
-unzip robonomics-ubuntu-0.24.0-x86_64.zip
-cd robonomics-ubuntu-0.24.0-x86_64
+wget https://github.com/airalab/robonomics/releases/download/v0.24.0/robonomics-ubuntu-0.24.0-x86_64.tar.xz
+tar -xvf robonomics-ubuntu-0.24.0-x86_64.tar.xz
 chmod +x robonomics
 ```
 
 これでノードを開発モードで起動できるようになりました。これには --dev フラグを使います。
 ```sh
-./robonomics --dev
+./robonomics --dev --tmp
 ```
 
 > トラブルシューティング
@@ -50,6 +49,7 @@ vue.jsで起動アプリを作ってdAppの開発を始めましょう ここで
 方法 1:
 
 `Vue cli`コンソールユーティリティを使用する。これを行うには、`Vue cli`をインストールする必要があります。https://cli.vuejs.org/guide/installation.html 
+Also we will need `yarn`. Install it from [here](https://yarnpkg.com)
 
 インストールが完了したら、ターミナルで次のコマンドを実行します。
 
@@ -131,7 +131,7 @@ module.exports = {
 }
 ```
 
-このファイルでは、接続先のノードとカスタムタイプを指定しています。Robonomicsのためのタイプは、githubから取得できます。 https://github.com/airalab/robonomics/blob/master/bin/node/cli/res/custom_types.json 
+このファイルでは、接続先のノードとカスタムタイプを指定しています。
 
 
 次に、実行中のノードに接続するためのスクリプトを書きます。
@@ -984,7 +984,7 @@ export default {
 
 https://github.com/airalab/example-robonomics-dapp/blob/master/src/components/Demo.vue
 
-車の写真をもう一枚、`src/images/build-iot-dapps/car.png`に追加してみましょう。 例 https://github.com/airalab/example-robonomics-dapp/blob/master/src/images/build-iot-dapps/car.png.
+車の写真をもう一枚、`src/images/build-iot-dapps/car.png`and `src/assets/car.png` に追加してみましょう。 例 https://github.com/airalab/example-robonomics-dapp/blob/master/src/assets/car.png
 
 表示のために、`App.vue`に新しいコンポーネントを追加します。
 

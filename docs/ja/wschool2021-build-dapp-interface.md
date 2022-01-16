@@ -21,9 +21,9 @@ translated: true
 
 このステップから始めて、**実際にやってみて学びたい**という方は、以下のTo-Doリストに従って、前のレッスンで作成したdappを起動してください。
 
-1.あなたのOSに合ったRobonomicsのローカルノードを[リリースページ](https://github.com/airalab/robonomics/releases/) からダウンロードしてください。もしあなたのシステムが最新のリリースにない場合は、過去のリリースから最新のバージョンを探してください。
+1.あなたのOSに合ったRobonomics v0.22のローカルノードを[リリースページ](https://github.com/airalab/robonomics/releases/tag/v0.22.0) からダウンロードしてください。もしあなたのシステムが最新のリリースにない場合は、過去のリリースから最新のバージョンを探してください。
 
-2.ターミナルで ./robonomics --dev と入力して、ロボノミクスノードを開発者モードで起動します。
+2.ターミナルで `./robonomics --dev --tmp` と入力して、ロボノミクスノードを開発者モードで起動します。
 
 3.ChromeまたはFirefox用のPolkadot Extensionをダウンロードしてください。[Polkadot Extension](https://polkadot.js.org/extension/)
 
@@ -33,8 +33,12 @@ translated: true
 
 6. [@vue/cli](https://cli.vuejs.org/guide/installation.html)をインストールします。
 
-7. ターミナルで `yarn serve`コマンドを実行して、dappの開発を開始します。
-
+7. ターミナルで コマンドを実行して、dappの開発を開始します。
+```shell
+cp src/config.template.json src/config.json
+yarn
+yarn serve
+```
 
 
 **ブラウザにこのような画面が表示されるはずです。:**

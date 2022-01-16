@@ -19,6 +19,22 @@ cd ~/catkin_ws/src
 git clone https://github.com/clearpathrobotics/spot_ros.git
 git clone https://github.com/ros/geometry2 --branch 0.6.5
 ```
+Open the `view_model.launch` file:
+```bash
+nano ~/catkin_ws/src/spot_ros/spot_viz/launch/view_model.launch
+```
+
+And set `use_sim_time` parameter to `true`, file must look like this:
+```xml
+<launch>
+  <param name="/use_sim_time" value="true"/>
+  <include file="$(find spot_description)/launch/description.launch"/>
+
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find spot_viz)/rviz/model.rviz" />
+</launch>
+```
 
 Then install dependencies:
 ```bash

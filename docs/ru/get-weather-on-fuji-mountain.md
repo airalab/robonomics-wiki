@@ -4,36 +4,36 @@ contributors: [Vourhey]
 translated: false
 ---
 
-**Let's start from a quick example of what Robonomics is able to do within 5 minutes. Requirements: [Metamask extension](https://metamask.io/)**
+**Давайте начнем с быстрого примера того, что Робономика способна сделать за 5 минут. Необходимо: [Расширение Метамаск](https://metamask.io/)**
 
-To get the weather from sensor on Fuji Mountain, please, open the page of [Fuji Weather sensor](https://dapp.robonomics.network/#/sensors/airalab/QmbQT8cj9TJKfYVaidfShnrEX1g14yTC9bdG1XbcRX73wY/0x4D8a26e1f055c0b28D71cf1deA05f0f595a6975d/) in Robonomics dApp and follow instructions below.
+Чтобы получить погоду с датчика на горе Фудзи, откройте страницу [Датчик погоды г. Фуджи](https://dapp.robonomics.network/#/fuji/airalab/QmbQT8cj9TJKfYVaidfShnrEX1g14yTC9bdG1XbcRX73wY/0x4D8a26e1f055c0b28D71cf1deA05f0f595a6975d/) в Dapp приложении Робономики и следуйте инструкциям ниже.
 
-Here's a walkthrough video:
+Пошаговое видео:
 
 https://www.youtube.com/embed/t098NlMELk4
 
-## 1. Open the Dapp
+## 1. Откройте Dapp (децентрализованное приложение)
 
-In case you don't have MetaMask extension you'll see the picture below. Go to the link provided above and install one.
+Если у вас нет расширения MetaMask, появится такая картинка. Перейдите по ссылке выше и установите его.
 
 !["Robonomics dApp if no MetaMask installed"](../images/sensor-demo/sensor-demo-1.png "Robonomics dApp if no MetaMask installed")
 
-## 2. Allow connection to the extension
+## 2. Разрешите подключение к расширению
 !["Connection to Robonomics dApp via Metamask"](../images/sensor-demo/sensor-demo-2.png "Connection to Robonomics dApp via Metamask")
 
-## 3. Press "Request current values"
+## 3. Нажмите "Request current values"
 !["Request sensor's data in Robonomics network via dApp"](../images/sensor-demo/sensor-demo-3.png "Request sensor's data in Robonomics network via dApp")
 
-## 4. Sign a message. No token or ether are needed
+## 4. Подпишите сообщение (Sign). Токен или эфир не нужны!
 !["Sign a message in Robonomics network via dApp"](../images/sensor-demo/sensor-demo-4.png "Sign a message in Robonomics network via dApp")
 
-## 5. Wait until the agent collects the data and sends it back
+## 5.Подождите, пока агент-приложения соберет данные и отправит их обратно
 !["Wait for response of the agent in Robonomics network via dApp"](../images/sensor-demo/sensor-demo-5.png "Wait for response of the agent in Robonomics network via dApp")
 
-## 6. Wait until the Dapp downloads the result file from IPFS
+## 6.Подождите, пока Dapp загрузит файл результата из IPFS (межпланетная файловая система).
 !["Wait for IPFS file with results in Robonomics network via dApp"](../images/sensor-demo/sensor-demo-6.png "Wait for IPFS file with results in Robonomics network via dApp")
 
-## 7. Look at the weather data on Fuji Mountain
+## 7. Посмотрите данные о погоде на горе Фудзи.
 !["The results of sensor network in Robonomics via dApp"](../images/sensor-demo/sensor-demo-7.png "The results of sensor network in Robonomics via dApp")
 
-Just now you have broadcasted a demand message and got a result from an autonomous agent! The result file is stored in IPFS, the result message is signed with the agent's private key.
+Поздравляем! Только что вы передали сообщение с запросом и получили результат от автономного агента! Файл результатов хранится в IPFS, сообщение результата подписывается закрытым ключом агента.

@@ -20,9 +20,9 @@ For building your dapp's interface you can choose any JavaScript framework which
 
 If you start with this step and prefer to **learn by doing**, please, follow this to-do list to launch the resulting dapp from the previous lesson:
 
-1. Download a local Robonomics node from [releases page](https://github.com/airalab/robonomics/releases/) that fits your OS. If you do not find your system in the latest release, please, find the most recent version in the previous releases.
+1. Download a local Robonomics node v 0.22 from [releases page](https://github.com/airalab/robonomics/releases/tag/v0.22.0) that fits your OS. If you do not find your system in the latest release, please, find the most recent version in the previous releases.
 
-2. Launch the Robononomics node in the Developer mode by typing `./robonomics --dev` in your terminal.
+2. Launch the Robononomics node in the Developer mode by typing `./robonomics --dev --tmp` in your terminal.
 
 3. Download the Polkadot Extension for Chrome or Firefox [here](https://polkadot.js.org/extension/)
 
@@ -32,7 +32,12 @@ If you start with this step and prefer to **learn by doing**, please, follow thi
 
 6. Install [@vue/cli](https://cli.vuejs.org/guide/installation.html)
 
-7. Start developing dapp with `yarn serve` command in your terminal.
+7. Start developing dapp with  commands in your terminal:
+```shell
+cp src/config.template.json src/config.json
+yarn
+yarn serve
+```
 
 
 **You should get this screen in your browser:**
