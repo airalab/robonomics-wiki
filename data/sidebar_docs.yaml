@@ -61,6 +61,8 @@
           link: /docs/iot-sensors-connectivity
         - title_en: Install Connectivity on Aira
           link: /docs/sensors-connectivity-on-aira
+        - title_en: Sensors-Connectivity Terminal Readme
+          link: /docs/connectivity-terminal-readme
         - title_en: Configuration Options Description
           link: /docs/configuration-options-description
         - title_en: Connect an Amazon FreeRTOS device to Robonomics by MQTT
@@ -81,12 +83,28 @@
       items:
         - title_en: Try It Out
           link: /docs/spot-try-it-out
+        - title_en: Lesson 0. Configure and test connection to Spot
+          link: /docs/spot-lesson0
+        - title_en: Lesson 1. Emergency stop, initialization, body position control
+          link: /docs/spot-lesson1
+        - title_en: Lesson 2. Remote controlled and programmed motion
+          link: /docs/spot-lesson2
+        - title_en: Lesson 3. Find and follow an object, navigate between them
+          link: /docs/spot-lesson3
+        - title_en: Lesson 4. GraphNav service. Mapping and navigating on the map
+          link: /docs/spot-lesson4
+        - title_en: Lesson 5. Robot service. Camera calibration and "Spot check"
+          link: /docs/spot-lesson5
+        - title_en: Troubleshooting
+          link: /docs/spot-troubleshooting
 
 - title_en: Learn
   items:
     - title_en: Robonomics-js
       title_ko: 로노미크스-JS
       link: /docs/robonomics-js
+    - title_en: Changing Exodus Bridge Receiving Address
+      link: /docs/changing-exodus-receiving-address
 
     - title_en: Glossary
       title_ko: 용어 사전
@@ -108,7 +126,7 @@
           link: /docs/rio-datalog
     - title_en: Digital twins
       link: /docs/digital-twins
-    - title_en: XCM Robobank 
+    - title_en: XCM Robobank
       link: /docs/xcm-robobank
 
     - title_en: AIRA

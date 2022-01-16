@@ -6,7 +6,7 @@ translated: true
 
 **Comencemos con un ejemplo rápido de lo que Robonomics es capaz de hacer en 5 minutos. Requisitos: [extensión Metamask](https://metamask.io/)**
 
-Para obtener el clima del sensor en la montaña Fuji, abra la página del [Fuji Weather sensor](https://dapp.robonomics.network/#/sensors/airalab/QmbQT8cj9TJKfYVaidfShnrEX1g14yTC9bdG1XbcRX73wY/0x4D8a26e1f055c0b28D71cf1deA05f0f595a6975d/) en Robonomics dApp y siga las instrucciones a continuación.
+Para obtener el clima del sensor en la montaña Fuji, abra la página del [Fuji Weather sensor](https://dapp.robonomics.network/#/fuji/airalab/QmbQT8cj9TJKfYVaidfShnrEX1g14yTC9bdG1XbcRX73wY/0x4D8a26e1f055c0b28D71cf1deA05f0f595a6975d/) en Robonomics dApp y siga las instrucciones a continuación.
 
 Aquí hay un video tutorial:
 
