@@ -108,15 +108,15 @@
         - title_en: Overview
           link: /docs/home-assistant-begin
         - title_en: Raspberry Setup
-          link: /docs/raspberry_setup
+          link: /docs/raspberry-setup
         - title_en: Raspberry Setup with Prepared Image
-          link: /docs/raspberry_image
+          link: /docs/raspberry-image
         - title_en: Connect Sensors with Xiaomi Gateway
-          link: /docs/xiaomi_gateway
+          link: /docs/xiaomi-gateway
         - title_en: Connect Vacuum Cleaner
-          link: /docs/vacuum_connect
+          link: /docs/vacuum-connect
         - title_en: Connect Sensors with Zigbee2MQTT 
-          link: /docs/zigbee2MQTT
+          link: /docs/zigbee2-mqtt
 
 - title_en: Learn
   items:
