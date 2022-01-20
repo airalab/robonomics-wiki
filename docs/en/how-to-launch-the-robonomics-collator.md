@@ -4,6 +4,8 @@ contributors: [dergudzon, Leemo94]
 translated: false
 ---
 
+https://youtu.be/wUTDDLDbzTg
+
 Currently the Robonomics network is maintained by developers, but anyone can support the project. Every additional full node of the blockchain helps it to be more sustainable and fault tolerant. Robonomics node binaries are available in [release](https://github.com/airalab/robonomics/releases) assets or it could be [built from source](/docs/how-to-build-collator-node/).
 
 ## Requirements
@@ -69,6 +71,8 @@ root@robokusama-collator-screencast:~# robonomics \
    root@robokusama-collator-screencast:~# tar -xf robonomics-1.4.0-ubuntu-x86_64.tar.gz
    root@robokusama-collator-screencast:~# mv robonomics /usr/local/bin/
    ```
+   ![Download Robonomics 1.4.0 binary](../images/how-to-launch-the-robonomics-collator/wget_binary.png)
+
 
 3. Create the systemd service file named *robonomics.service*:
     ```
@@ -103,11 +107,13 @@ root@robokusama-collator-screencast:~# robonomics \
     [Install]
     WantedBy=multi-user.target
     ```
+    ![Create Robonomics service file](../images/how-to-launch-the-robonomics-collator/nano_robonomics_service.png)
 
 
     ```
     root@robokusama-collator-screencast:~# chown -R robonomics:robonomics %BASE_PATH%
     ```
+
 
 4. Save this file, then enable and start the service:
     ```
@@ -132,18 +138,18 @@ Instructions:
     root@robokusama-collator-screencast:~# systemctl stop robonomics.service
     root@robokusama-collator-screencast:~# rm -rf %BASE_PATH%/polkadot/chains/ksmcc3/db/
     ```
-    
 2. Download the actual snapshot and extract it:
     ```
     root@robokusama-collator-screencast:~# wget https://ksm-rocksdb.polkashots.io/snapshot -O kusama.RocksDb.tar.lz4
     root@robokusama-collator-screencast:~# lz4 -c -d kusama.RocksDb.tar.lz4 | tar -x -C %BASE_PATH%/polkadot/chains/ksmcc3
     ```
+    ![Download Kusama snapshot](../images/how-to-launch-the-robonomics-collator/wget_kusama_snapshot.png)
+
 
     You can remove the downloaded archive after succesful unpacking:
     ```
     root@robokusama-collator-screencast:~# rm -v kusama.RocksDb.tar.lz4
-    ```
-    
+    ```   
 3. Setting the right ownership for the database folder:
     ``` 
     root@robokusama-collator-screencast:~# chown -R robonomics:robonomics %BASE_PATH%/polkadot/chains/ksmcc3
@@ -152,4 +158,8 @@ Instructions:
     ```
     root@robokusama-collator-screencast:~# systemctl start robonomics.service
     ```
-    
+5. Check service logs:
+    ```
+    root@robokusama-collator-screencast:~# journalctl -u robonomics.service -f
+    ```    
+    ![Check service logs](../images/how-to-launch-the-robonomics-collator/finish_journalctl.png)
