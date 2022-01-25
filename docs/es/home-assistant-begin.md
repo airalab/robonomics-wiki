@@ -3,7 +3,7 @@ title: Robonomics Smart Home
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
 ---
-There are instructions on how to connect your smart home devices to the Robonomics network through a Home Assistant. There will be two methods which will be explained to help you connect your device to a Raspberry Pi; via a zigbee2MQTT adapter, or through Xiaomi Gateway.
+There are instructions on how to connect your smart home devices to the Robonomics network. You need Robonomics accounts for each device, they will publish encrypted data in datalog. Also you need user account that will send commands to devices end encrypt/decrypt data.
 
 In this video you can see the example of connecting temperature sensor:
 
