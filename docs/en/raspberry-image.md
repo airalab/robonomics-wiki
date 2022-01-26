@@ -6,7 +6,7 @@ translated: true
 ## Image
 We prepared an image to make it easier to use the Home Assistant with Xiaomi Miio and Robonomics with the Raspberry Pi.
 
-You can get it here: [download image](https://ipfs.io/ipfs/bafybeihjcidgm4bfmsedgxfacftinbyyqvjdqsmcd6t7jqsak23nrzivmm)
+You can get it here: [download image](https://ipfs.io/ipfs/bafybeihzzqoyycflxzxlxy2aplkzxo537ggqatdlbr24b4dnlyrtpkp2eu)
 
 SHA256 checksum: `7ec5ea99d7e339b54cbeaaae58c8295411769d27732ec2b5464dbb495ba24120`
 
@@ -74,45 +74,14 @@ Password is "ubuntu". Then follow the instructions to change the password.
 
 Then you need to write the seed from your Robonomics account to config file. Open it:
 ```bash
+sudo -u homeassistant -H -s
 sudo nano /srv/homeassistant/python_scripts/config.config
 ```
 And add mnemonic:
 ```
-[secrets]
-MNEMONIC_SEED = <your mnemonic>
+[user]
+SEED = <your mnemonic or raw seed>
 ```
-> Also you need to change endpoint in file `utils.py`:
-> ```bash
-> sudo nano /srv/homeassistant/python_scripts/utils.py
-> ```
-> In `connect_robonomics` function change `url` parameter to `kusama.rpc.robonomics.network`
-> Function must look like this:
-> ```python
-> def connect_robonomics() -> SubstrateInterface:
->    substrate = SubstrateInterface(
->            url="wss://kusama.rpc.robonomics.network",
->            ss58_format=32,
->            type_registry_preset="substrate-node-template",
->            type_registry= {
->                "types": {
->                    "Record": "Vec<u8>",
->                    "Parameter": "Bool",
->                    "LaunchParameter": "Bool",
->                    "<T as frame_system::Config>::AccountId": "AccountId",
->                    "RingBufferItem": {
->                        "type": "struct",
->                        "type_mapping": [["timestamp", "Compact<u64>"], ["payload", "Vec<u8>"]],
->                    },
->                    "RingBufferIndex": {
->                        "type": "struct",
->                        "type_mapping": [["start", "Compact<u64>"], ["end", "Compact<u64>"]],
->                    },
->                }
->            }
->            )
->    return substrate
->```
-
 Then restart Robonomics Control service:
 ```bash
 systemctl restart robonomics-control@homeassistant.service
