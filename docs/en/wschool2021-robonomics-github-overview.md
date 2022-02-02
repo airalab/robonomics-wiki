@@ -21,7 +21,7 @@ Towards learning how to leverage AIRA, in this lesson, you would install AIRA, s
 
 > You can follow the procedure mentioned [here](https://computingforgeeks.com/install-virtualbox-6-on-ubuntu-linux/) to install VirtualBox and its extension.
 
-> After successfully installing VirtualBox download the WinterSchool AIRA [image]().
+> After successfully installing VirtualBox download the WinterSchool AIRA image from [here](https://static.aira.life/ova/airaos-21.11_robonomics-winter-school.ova).
 
 ### **Import AIRA to VirtualBox**
 
