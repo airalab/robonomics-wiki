@@ -5,8 +5,9 @@ name: Robonomics Wiki
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  push:
-    branches: [ master ]
+  pull_request:
+    branches:
+      - master
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,15 +27,3 @@ jobs:
           npm ci
           gridsome build
 
-      - name: Deploy
-        #uses: JamesIves/github-pages-deploy-action@3.7.1
-        #with:
-        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #  BRANCH: gh-pages # The branch the action should deploy to.
-        #  FOLDER: dist # The folder the action should deploy.
-        #  CLEAN: true # Automatically remove deleted files from the deploy branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          cname: wiki.robonomics.network
