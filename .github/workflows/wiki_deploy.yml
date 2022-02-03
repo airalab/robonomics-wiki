@@ -22,8 +22,8 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          sudo npm install --global @gridsome/cli
-          npm ci
+          sudo yarn global add @gridsome/cli
+          yarn install
           gridsome build
 
       - name: Deploy
