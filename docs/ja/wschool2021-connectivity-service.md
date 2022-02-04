@@ -74,6 +74,7 @@ SSHでの[接続設定](/docs/aira-connecting-via-ssh/)
 ```
 git clone https://github.com/airalab/sensors-connectivity
 cd sensors-connectivity
+git checkout v0.9
 nix build -f release.nix
 ```
 
