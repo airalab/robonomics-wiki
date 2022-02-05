@@ -74,6 +74,7 @@ When everything is set and you successfully log in via SSH, let's clone the main
 ```
 git clone https://github.com/airalab/sensors-connectivity
 cd sensors-connectivity
+git checkout v0.9
 nix build -f release.nix
 ```
 
