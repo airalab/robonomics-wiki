@@ -74,6 +74,7 @@ https://www.youtube.com/watch?v=JbBNMHAzJKM
 ```
 git clone https://github.com/airalab/sensors-connectivity
 cd sensors-connectivity
+git checkout v0.9
 nix build -f release.nix
 ```
 
