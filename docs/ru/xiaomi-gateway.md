@@ -89,7 +89,7 @@ And restart Home Assistant:
 systemctl restart home-assistant@homeassistant.service
 ```
 
-You can add the data from sensors to your homepage like in `Home Assistant setup` in the description to [Method 1](/docs/zigbee2MQTT/).
+You can add the data from sensors to your homepage like in `Home Assistant setup` in the description to [Method 1](/docs/zigbee2-mqtt/).
 
 You can see the data in [subscan](https://robonomics.subscan.io/), find your account and you will see datalog transactions. Data looks like this:
 
