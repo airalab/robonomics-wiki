@@ -88,6 +88,6 @@ systemctl restart robonomics-control@homeassistant.service
 ```
 
 After that you can connect your devices:
-- [Connection with zigbee2MQTT](/docs/zigbee2MQTT/)
-- [Connection through Xiaomi Gateway](/docs/xiaomi_gateway/)
-- [Connect Vacuum Cleaner](/docs/vacuum_connect/)
+- [Connection with zigbee2MQTT](/docs/zigbee2-mqtt/)
+- [Connection through Xiaomi Gateway](/docs/xiaomi-gateway/)
+- [Connect Vacuum Cleaner](/docs/vacuum-connect/)

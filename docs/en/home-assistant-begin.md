@@ -26,8 +26,8 @@ Also you can connect some devices directly through Mi Home app (for example, Vac
 
 # Setup
 
-1. First you need to [setup Raspberry Pi](/docs/raspberry_setup/) (also you can [use prepared image](/docs/raspberry_image/)).
+1. First you need to [setup Raspberry Pi](/docs/raspberry-setup/) (also you can [use prepared image](/docs/raspberry-image/)).
 2. Then you need to connect devices:
-- [Connection with zigbee2MQTT](/docs/zigbee2MQTT/)
-- [Connection through Xiaomi Gateway](/docs/xiaomi_gateway/)
-- [Connect Vacuum Cleaner](/docs/vacuum_connect/)
+- [Connection with zigbee2MQTT](/docs/zigbee2-mqtt/)
+- [Connection through Xiaomi Gateway](/docs/xiaomi-gateway/)
+- [Connect Vacuum Cleaner](/docs/vacuum-connect/)
