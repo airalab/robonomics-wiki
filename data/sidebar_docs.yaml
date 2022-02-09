@@ -216,23 +216,22 @@
           title_ja: ロボノミクスウィンタースクール2021 紹介
           title_ko: ROBONOMICS 겨울 학교 2021 소개
           link: /docs/wschool2021-intro
-        - title_en: Lesson 1, Connect robotics to user app
+        - title_en: Lesson 1, Connect Robotics to User App
           title_es: Lección 1, Conectar la robótica a la dapp
           title_ja: Lesson 1, ユーザーアプリにロボットを繋ぐ
           title_ko: 레슨 1, 로봇을 사용자 앱에 연결
           link: /docs/wschool2021-connect-robotics-to-user-app
-
-        - title_en: Lesson 2, Robonomics AIRA overview
+        - title_en: Lesson 2, Robonomics AIRA Overview
           title_es: Lección 2, Robonomics AIRA Descripción General
           title_ja: Lesson 2, RobonomicsのAIRA概要
           title_ko: 레슨 2, ROBONOMICS AIRA 개요
           link: /docs/wschool2021-robonomics-github-overview
-        - title_en: Lesson 3, Robonomics IO in practice
+        - title_en: Lesson 3, Robonomics IO in Practice
           title_es: Lección 3, Robonomics IO en la Practica
           title_ja: Lesson 3, Robonomics IOの実践
           title_ko: 레슨 3, ROBONOMICS IO 실제
           link: /docs/wschool2021-robonomics-io-in-practice
-        - title_en: Lesson 4, Robonomics parachain in practice
+        - title_en: Lesson 4, Robonomics Parachain in Practice
           title_es: Lección 4, Robonomics Parachain en la Práctica
           title_ja: Lesson 4, 実践でのRobonomics parachain
           title_ko: 4과, 실제 ROBONOMICS  파라체인

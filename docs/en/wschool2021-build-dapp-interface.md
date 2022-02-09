@@ -4,19 +4,17 @@ contributors: [positivecrash]
 translated: true
 ---
 
+This lesson continues the previous one, where you have already built simple application and were focused on connecting an account to a node, sending transactions and other vital functions of the dapp. Now we will **build user-friendly interface** for this application.
+
 ![Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot](../images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot")
-
-## Introduction
-
-This tutorial continues the previous lesson, where you have already built simple application and were focused on connecting an account to a node, sending transactions and other vital functions of the dapp. Now we will **build user-friendly interface** for this application.
 
 ## Prerequisites
 
-This tutorial is designed for people who are familiar with **HTML, CSS, JavaScript** a bit and want to learn how to apply these skills for decentralized applications.
+This lesson is designed for people who are familiar with **HTML, CSS, JavaScript** a bit and want to learn how to apply these skills for decentralized applications.
 
 For building your dapp's interface you can choose any JavaScript framework which is comfortable for you or even try to build interface without any framework. In Robonomics 2021 we use [Vue.js](https://vuejs.org) as it is quite scalable and easy to use.
 
-## Set up for this tutorial
+## Set up
 
 If you start with this step and prefer to **learn by doing**, please, follow this to-do list to launch the resulting dapp from the previous lesson:
 
@@ -77,7 +75,7 @@ Let's inspect the structure of the dapp to clear up what and where we can fix in
 │   │   ├── Datalog.vue       # Tab 'Datalog' in dapp
 │   │   ├── Demo.vue          # Tab 'Demo' in dapp
 │   │   ├── Launch.vue        # Tab 'Launch' in dapp
-│   ├── utils/                # Folder with important for app js functions (we will touch api.js in this tutorial)
+│   ├── utils/                # Folder with important for app js functions (we will touch api.js in this lesson)
 │   ├── App.vue               # The root of our app, contains HTML, CSS, JS for the whole page. In fact it is Vue Component also
 │   ├── main.js               # The app’s entry file, we will import here global styles
 ├── ...                       # There are config files and dependencies files, that we will not change mannually
@@ -85,11 +83,11 @@ Let's inspect the structure of the dapp to clear up what and where we can fix in
 
 ```
 
-> **The code of this tutorial is in this [repository](https://github.com/positivecrash/wscool21-ui-dapp)**
+> **The code of the lesson is in this [repository](https://github.com/positivecrash/wscool21-ui-dapp)**
 
 ## CSS-in-JS VS. Global stylesheets
 
-In this tutorial I show how to change the interface of a small dapp from scratch without any stable library of UI components. So I will import and create not only different Vue components, but also write my own styles.
+In this lesson I show how to change the interface of a small dapp from scratch without any stable library of UI components. So I will import and create not only different Vue components, but also write my own styles.
 
 If your application is big or your project has the whole bunch of dapps, in future you'd better look for building library of components specifically for your project to make UI more organized and efficient ([for example, here is a tool for organizing components](https://storybook.js.org)). Or if you are okay with standart interface themes, you can use any UI Libraries of third party ([for example](https://vuetifyjs.com/)).
 
@@ -922,7 +920,7 @@ Let's edit styles for the tabs:
 
 ![Dapp Interface changing step 11](../images/build-dapp-interface/dapp-11.gif "Dapp Interface changing step 11")
 
-> Let me remind you that the finished code for this tutorial is in [this](https://github.com/positivecrash/wscool21-ui-dapp) repository. And let's shift to the next steps :)
+> Let me remind you that the finished code for this lesson is in [this](https://github.com/positivecrash/wscool21-ui-dapp) repository. And let's shift to the next steps :)
 
 ## Datalog
 
@@ -1763,7 +1761,7 @@ Congratulations! Now you have redesigned the dapp and clues how to start buildin
 
 ### Checkout links
 
-- [Full code of this tutorial](https://github.com/positivecrash/wscool21-ui-dapp)
+- [Full code of this lesson](https://github.com/positivecrash/wscool21-ui-dapp)
 - [Discuss in Discord](https://discord.gg/5UWNGNaAUf)
 - [View the Robonomics Winter School 2021 schedule and summary](https://robonomics.network/blog/winter-robonomics-school/)
 - [Github of contributor](https://github.com/positivecrash)
