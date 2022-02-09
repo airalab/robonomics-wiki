@@ -4,6 +4,10 @@ contributors: [vol4tim]
 translated: true
 ---
 
+Having organized the connection of devices to the blockchain and set up their work, the next stage is the actual creation of a convenient and user-friendly application that performs the main functionality for the user, which would wrap the basic functions of Robonomics. For blockchain systems, the human-machine interface is provided by decentralized applications (dapps).
+
+In this lesson, you will learn how to create a basic dapp for Robonomics Parachain, provide main functionality and connect the application to the parachain.
+
 ## Getting ready
 
 ### Robonomics node launch
