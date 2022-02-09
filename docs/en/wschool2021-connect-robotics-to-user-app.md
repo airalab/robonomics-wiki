@@ -1,5 +1,5 @@
 ---
-title: Lesson 1, Connect robotics to user app
+title: Lesson 1, Connect Robotics to User App
 contributors: [Ensrationis, Houman]
 translated: true
 ---

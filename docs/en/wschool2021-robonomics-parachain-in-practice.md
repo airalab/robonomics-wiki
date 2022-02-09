@@ -1,13 +1,21 @@
 ---
-title: Lesson 4, Robonomics parachain in practice
+title: Lesson 4, Robonomics Parachain in Practice
 contributors: [akru]
 translated: true
 ---
 import Asciinema from '~/components/Asciinema.vue'
 
-Robonomics parachain is not a general purpose parachain on Polkadot ecosystem. The target of Robonomics
-is building economy of machines, the parachain in this scope of aims helps to integrate Polkadot ecosystem
-with IoT, Smart Cities and Industry 4.0 concepts.
+At the moment, Robonomics, in addition to the Ethereum network, also operates on the basis of the Polkadot ecosystem, which has greater scalability through the use of sharded blockchains. To do this, the ecosystem uses a [sharded model](https://wiki.polkadot.network/docs/getting-started), with the following elements:
+
+![Polkadot base scheme](../images/ws_lesson4/polkadot-base-scheme.png "Polkadot base scheme (from Polkadot Wiki)")
+
+* relay chain — central blockchain used by others for basic coordination of work;
+* parachains — data structures (usually also blockchains) used for specific applications; Robonomics operates as a parachain;
+* validators — nodes that create blocks in the relay chain and also verify new block candidates from parachains for inclusion to the shared state of Polkadot;
+* collators — nodes that maintain a parachain by collecting its transactions and producing new block candidates to pass to validators;
+* Cross-Consensus Messaging Format (XCM) — format that allows parachains to send messages of any type to each other.
+
+The goal of this lesson is to get to know the basic elements of the Polkadot ecosystem and understand how they interact with each other. To do this, you will run your local relay chain and several Robonomics-based parachains.
 
 ## Requirements
 
@@ -16,9 +24,7 @@ with IoT, Smart Cities and Industry 4.0 concepts.
 
 ## Launch the relay
 
-The relay chain is a core of Polkadot, it provides [shared security](https://wiki.polkadot.network/docs/en/learn-security)
-for all child parachains and implements message passing mechanics for them. Let's launch local instance of Rococo (polkadot testnet)
-relay chain with two robonomics-based parachains as a childs. I'll use prepared [Docker image tag: "winter-school-2"](https://hub.docker.com/layers/robonomics/robonomics/winter-school-2/images/sha256-92f4795262f3ded3e6a153999d2777c4009106a7d37fd29969ebf1c3a262dc85?context=explore) but all source code of examples
+Let's launch local instance of Rococo (polkadot testnet) relay chain with two Robonomics-based parachains as a childs. I'll use prepared [Docker image tag: "winter-school-2"](https://hub.docker.com/layers/robonomics/robonomics/winter-school-2/images/sha256-92f4795262f3ded3e6a153999d2777c4009106a7d37fd29969ebf1c3a262dc85?context=explore) but all source code of examples
 available in [Robonomics GitHub](https://github.com/airalab/robonomics/tree/master/scripts/polkadot-launch).
 ```
 docker run -ti --rm --network host robonomics/robonomics:winter-school-2 bash
