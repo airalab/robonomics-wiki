@@ -119,8 +119,10 @@
           link: /docs/zigbee2-mqtt
     - title_en: Carbon Footprint Offsetting Service
       items:
+        - title_en: Offsetting Service
+          link: /docs/carbon-footprint-service
         - title_en: Connect Sensor
-          link: /docs/carboon-footprint-sensor
+          link: /docs/carbon-footprint-sensor
 
 - title_en: Learn
   items:
