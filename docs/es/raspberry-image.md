@@ -75,7 +75,7 @@ Password is "ubuntu". Then follow the instructions to change the password.
 Then you need to write the seed from your Robonomics account to config file. Open it:
 ```bash
 sudo -u homeassistant -H -s
-sudo nano /srv/homeassistant/python_scripts/config.config
+nano /srv/homeassistant/python_scripts/config.config
 ```
 And add mnemonic:
 ```
