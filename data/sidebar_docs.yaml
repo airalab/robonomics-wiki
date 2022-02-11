@@ -117,6 +117,12 @@
           link: /docs/vacuum-connect
         - title_en: Connect Sensors with Zigbee2MQTT 
           link: /docs/zigbee2-mqtt
+    - title_en: Carbon Footprint Offsetting Service
+      items:
+        - title_en: Offsetting Service
+          link: /docs/carbon-footprint-service
+        - title_en: Connect Sensor
+          link: /docs/carbon-footprint-sensor
 
 - title_en: Learn
   items:
