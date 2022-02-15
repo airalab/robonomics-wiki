@@ -9,7 +9,7 @@ Example of work is in the video:
 https://youtu.be/Ha9wN6bjh64
 
 Service to offset CO2 footprint by burning tokens in Statemine network. 
-1 MWh of non-renewable electricity produces 1 ton of C02. 1 ton of C02 is covered by consuption of 1 token. [Here](/docs/carbon-footprint-sensor) is the unstructions for connecting device.
+Produced CO2 calculates as follows: data from device in Wh multiply by  coeffcients depends on the region. 1 ton of C02 is covered by consuption of 1 token. [Here](/docs/carbon-footprint-sensor) is the unstructions for connecting device.
 
 ## Scenario
 
