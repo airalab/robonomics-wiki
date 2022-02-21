@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vue-remark--docs--en--wschool-2021-robonomics-parachain-in-practice-md~vue-remark--docs--es--wschool~d7677b18"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vue-remark--docs--es--wschool-2021-robonomics-parachain-in-practice-md~vue-remark--docs--ja--wschool~ac2beb6c"],{
 
 /***/ "+Gqu":
 /*!**************************************!*\
