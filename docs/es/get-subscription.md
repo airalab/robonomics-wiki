@@ -36,10 +36,4 @@ Submit the transaction. Now you can check the list of devices in `Chain state` w
 
 ![devices](../images/dev-node/devices.png)
 
-Now lets try to send datalog extrinsic from the account without tokens. Go to `Extrinsic`, choose this account and `rws -> call`. Then in `subscriptionID` field choose the account that bought the subscription and in the next field choose `datalog -> record`. Write anything in the last field and submit the transaction:
-
-![datalog](../images/dev-node/datalog.png)
-
-Now go to `Network/Explorer` and in the `Recent Events` you will see two events `rws.NewCall` and `datalog.NewRecord`:
-
-![events](../images/dev-node/events.png)
+Now you can try to [send launch](/docs/subscription-launch) extrinsic using the subscription.
