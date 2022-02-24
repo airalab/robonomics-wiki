@@ -25,6 +25,8 @@
       link: /docs/adding-funds-to-account-in-dapp/
     - title_en: How to Buy a Subscription
       link: /docs/get-subscription
+    - title_en: How to Send Launch with Subscription
+      link: /docs/subscription-launch
     - title_en: Cross-chain Message
       link: /docs/cross-chain-messages
     - title_en: Connect Mars Curiosity Rover
