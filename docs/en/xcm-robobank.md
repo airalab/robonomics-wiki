@@ -5,35 +5,35 @@ translated: true
 ---
 
 
-Main goal of this project is simplification of parachain runtime development, when cross-chain messages are used. 
-Allows to develop runtime code with integration tests with high repeatablility and simple usage.
-Automates building, construction of pre-set network configuration (f.e. 1 relay chain + 2 parachains), setup message-passing channels between parachains and running tests, sending messages, using call to runtime, constructed and composed in Python.
+The main goal of this project is the simplification of parachain runtime development, when cross-chain messages are used. 
+It allows the development of runtime code with integration tests with high degree of repeatability and simple usage.
+It automates building, construction of pre-set network configuration (i.e. 1 relay chain + 2 parachains), setup message-passing channels between parachains and run messaging tests, sending messages, using call to runtime, all constructed and composed in Python.
 
-XCM Testsuite is used for testing production cycle for Robobank - the set of Substrate pallets, allowing robots to register in external parachains, receive pre-paid orders, execute them and receive payments using external tokens. This allows robots to operate inside Robonomics network with all needed infrastructure, but, in the same time, offer their services in any external parachain.
+XCM Testsuite is used for testing the production cycle of Robobank - the set of Substrate pallets, which allow robots to register on external parachains, receive pre-paid orders, execute them and receive payments using external tokens. This allows robots to operate inside the Robonomics network with all required infrastructure, but at the same time, offer their services on any other parachain.
 
-Video example is available on [YouTube](https://www.youtube.com/watch?v=S_bZgsxngiM)
+An example video is available on [YouTube](https://www.youtube.com/watch?v=S_bZgsxngiM)
 
-The demo scenary main steps are:
-- launch relay chain and two parachains in pack of 6 processes
-- setup XCM messages channels between parachains
+The main steps in the demo scenario are:
+- launch relay chain and two parachains in a pack of 6 processes
+- setup XCM message channels between parachains
 - register a robot in both parachains
-- create order for this robot in client parachain (reserving payment for completion of order)
-- send XCM message to Robonomica
-- creating "mirrored" order record in Robonomica parachain
-- accept order by robot in Robonomica
-- send XCM message about order acceptance back to client parachain
-- accept order in client parachain (reserving penalty fee for no-completion of order until deadline)
-- complete order by robot in Robonomica
-- send XCM message about order completion to client parachain
-- settle all payments (client payment is transfered to robot, as well as penalty fee)
-- close order
+- create an order for this robot in the client parachain (reserving payment for the completion of order)
+- send XCM message to the Robonomics parachain
+- creating the "mirrored" order record on the Robonomics parachain
+- robot accepts the order on the Robonomics parachain
+- send XCM message about the order acceptance back to the client parachain
+- accept the order on the client parachain (reserving a penalty fee for lack-of-order-completion until the order deadline)
+- robot completes the order on the Robonomics parachain
+- send XCM message about the order completion to the client parachain
+- settle all payments (client payment is transfered to the robot, as well as the unutilized penalty fee)
+- close the order1
 
 
 ## Upstream
 This project is a fork of the
 [Substrate Developer Hub Node Template](https://github.com/substrate-developer-hub/substrate-node-template).
-Contains code of runtime pallets being tested.
-As in original node code of parachains is in "./pallets", "./runtime", "./node" catalogs.
+It contains code of the runtime pallets being tested.
+As in original node code of the parachains is in "./pallets", "./runtime", "./node" catalogs.
 
 Differences with original "substrate-node-template":
 - this collator runtime has HRMP handler module and can handle messages from siblings parachains
@@ -44,11 +44,11 @@ Recommended(highly) setup:
 ```
 Ubuntu 20, 16 Gb RAM, 8 CPU, 120 Gb SSD
 ```
-[NOTE] First build can take a lot of time, up to several hours on weak machines
+[NOTE] The first build can take a lot of time, up to several hours on suboptimal machines.
 
-[NOTE] Script works with FIXED versions (commit hashes) of Polkadot(Rococo) in relay chain and parachains
+[NOTE] The script works with the FIXED versions (commit hashes) of Polkadot(Rococo) in relay chain and parachains.
 
-[NOTE] By default script re-creates same environment every launch, by removing all previous states. this behaviour can be changed in "config.sh" using "PERSISTENT" param
+[NOTE] By default the script re-creates the same environment every launch, by removing all previous states. This behaviour can be changed in "config.sh" using "PERSISTENT" param.
 
 
 Run build and setup script.  
@@ -59,24 +59,24 @@ cd xcm-robobank-prototype
 ```
 
 Basic actions of "init.sh" script:
- - read config (file "config.sh" with revision number, initial node keys and identifiers, chaindata persistence param, etc)
+ - read config (file "config.sh" with revision number, initial node keys and identifiers, chaindata persistence param, etc.)
  - setup OS packets, Rust and Python
- - bulds separate binaries for relay chain and for both parachains
+ - bulds separate binaries for the relay chain and also for both parachains
     - binaries will be generated in ./bin subdirectory. 
  - (optional) removes all previous chain data for all chains
     - disabled if "PERSISTENT=1" is set in "config.sh"
  - runs as separate processes (with separate PIDs and I/O pipes):
-    - validators of relay chain (f.e. 4 validators of some stable Rococo revision)
-    - collators for parachain-100 (f.e. single collator for first parachain, that you're developing)
-    - collators for parachain-200 (f.e. single collator for second parachain, that you're developing)
- - prints all endpoints, ports to console, allowing to study any chain using frontend apps (explorer, DApp)
- - keep printing all output of all chains to console
+    - validators of relay chain (i.e. 4 validators of running a stable Rococo revision)
+    - collators for parachain-100 (i.e. single collator for first parachain, that you're developing)
+    - collators for parachain-200 (i.e. single collator for second parachain, that you're developing)
+ - prints all endpoints, ports to console, allowing you to study any chain using frontend apps (explorer, DApp)
+ - keep printing all the output data of all chains to console
 
-[WARNING] After launch, wait until a network is up, make sure that blocks finalization started, and parachains are registered. These processes require approximately 5 min (50 blocks x 6 sec ).
+[WARNING] After launching, wait until the network is up, make sure that block finalization has started, and that the parachains are registered. These processes should require approximately 5 min (50 blocks x 6 sec).
 
-## Checking if all works 
+## Checking that initial setup works 
 
-Use standard Polkdot frontend and generated "--ws-port" endpoints to connect with each node.
+Use the standard Polkdot frontend and generated "--ws-port" endpoints to connect with each node.
 Open [Polkadot application](https://polkadot.js.org/apps/?rpc=ws://localhost:9500/) to monitor the chains. 
 
 ### Example:
@@ -89,14 +89,14 @@ Localhost, 4 relay chain validators, one parachain-100 collator, one parachain-2
 - [Parachain-200 collator](https://polkadot.js.org/apps/?rpc=ws://localhost:10055/)
 
 
-If everything works, consensus started off, we can proceed to run test cases (in a new terminal)
+If everything works, and consensus started off, we can proceed to run our test cases (in a new terminal).
 
 ### UMP message passing test
 ```bash
 ./scripts/init.sh ump
 ```
-It creates `Balance.transfer` message in `parachain-100` and passes it to relay.
-When relay receives message it will transfer 15 tokens from `para 100` account to the Charlie's.
+It creates a `Balance.transfer` message in `parachain-100` and passes it to the relay chain.
+When the relay chain receives the message it will transfer 15 tokens from `para 100` account to the Charlie acount.
 
 
 ### HRMP message passing test
@@ -104,12 +104,12 @@ When relay receives message it will transfer 15 tokens from `para 100` account t
 ./scripts/init.sh ump
 ```
 
-It creates `Balance.transfer` message in `parachain-100` and passes it to `sibling 200` one.
-Before that, it endows `subl 100` account with 1000 tokens and  establish a channel between the parachains.
+It creates a `Balance.transfer` message in `parachain-100` and passes it to the `sibling 200` one.
+Before that, it endows the`subl 100` account with 1000 tokens and  establish a communication channel between the parachains.
 ```bash
 ./scripts/init.sh hrmp
 ```
-Next messages can be sent by running `hrmpm` subcommand. It doesn't create a channel and so it runs faster.
+Next messages can be sent by running the `hrmpm` subcommand. It doesn't create a channel and so it runs faster.
 ```bash
 ./scripts/init.sh hrmpm
 ```
@@ -126,7 +126,7 @@ Next messages can be sent by running `hrmpm` subcommand. It doesn't create a cha
 ./bin/polkadot build-spec --chain rococo-local --disable-default-bootnode > rococo_local.json
 ```
 
-Edit rococo_local.json, replace balances and authorities with yours.
+Edit rococo_local.json, replace the balances and authorities parameters with yours.
 ```json
   "keys": [
     [
@@ -197,11 +197,11 @@ To use new chain spec replace rococo.json file in ./config/ directory this new o
 ```bash
 ./scripts/init.sh run
 ```
-You can freely edit code. The above command will rebuild project and update collator node before start.
+You can freely edit the code. The above command will rebuild the project and update the collator node before starting.
 Cumulus is pre-release software that is still under heavy development.
 We are using a specific commit of polkadot [46c826f595021475fa5dbcd0987ed53f104e6e15  18 mar 2021] (https://github.com/paritytech/polkadot/tree/46c826f595021475fa5dbcd0987ed53f104e6e15)
 
-You can use more recent version of software. For this change  POLKADOT_COMMIT  in ./scipt/config.sh
+You can use more recent versions of the software. To do this, change  POLKADOT_COMMIT  in ./scipt/config.sh
 to the latest commit of `rococo-v1` branch, delete ./bin/polkadot, and run 
 ```bash
 ./scripts/init.sh run
