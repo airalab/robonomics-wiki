@@ -142,10 +142,6 @@
       title_ko: 용어 사전
       link: /docs/glossary
 
-    - title_en: Sensors Connectivity
-      title_ko: 센서 연결성
-      link: /docs/sensors-connectivity
-
     - title_en: Robonomics IO
       items:
         - title_en: Overview
