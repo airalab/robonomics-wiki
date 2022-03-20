@@ -67,8 +67,8 @@ root@robokusama-collator-screencast:~# robonomics \
 
 2. Download, extract and move the Robonomics binary to the */usr/local/bin/* directory.. 
    ```
-   root@robokusama-collator-screencast:~# wget https://github.com/airalab/robonomics/releases/download/v1.4.0/robonomics-1.4.0-ubuntu-x86_64.tar.gz
-   root@robokusama-collator-screencast:~# tar -xf robonomics-1.4.0-ubuntu-x86_64.tar.gz
+   root@robokusama-collator-screencast:~# wget https://github.com/airalab/robonomics/releases/download/v1.8.4/robonomics-1.8.4-x86_64-unknown-linux-gnu.tar.gz
+   root@robokusama-collator-screencast:~# tar -xf robonomics-1.8.4-x86_64-unknown-linux-gnu.tar.gz
    root@robokusama-collator-screencast:~# mv robonomics /usr/local/bin/
    ```
    ![Download Robonomics 1.4.0 binary](../images/how-to-launch-the-robonomics-collator/wget_binary.png)
