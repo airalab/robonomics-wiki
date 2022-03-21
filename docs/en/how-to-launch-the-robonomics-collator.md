@@ -4,6 +4,8 @@ contributors: [dergudzon, Leemo94]
 translated: false
 ---
 
+Note: In the screencast and screenshots of this article, we used version 1.4.0 of Robonomics. You need to use the same commands, but replace the version of Robonomics with the current one.
+
 https://youtu.be/wUTDDLDbzTg
 
 Currently the Robonomics network is maintained by developers, but anyone can support the project. Every additional full node of the blockchain helps it to be more sustainable and fault tolerant. Robonomics node binaries are available in [release](https://github.com/airalab/robonomics/releases) assets or it could be [built from source](/docs/how-to-build-collator-node/).
@@ -65,10 +67,10 @@ root@robokusama-collator-screencast:~# robonomics \
     root@robokusama-collator-screencast:~# useradd -m robonomics
     ```
 
-2. Download, extract and move the Robonomics binary to the */usr/local/bin/* directory.. 
+2. Download, extract and move the Robonomics binary to the */usr/local/bin/* directory. You need to replace *$ROBONOMICS_VERSION* with the current version of Robonomics in the commands in this section. You can find the current version on the [Releases page of the Robonomics repository on github](https://github.com/airalab/robonomics/releases).
    ```
-   root@robokusama-collator-screencast:~# wget https://github.com/airalab/robonomics/releases/download/v1.4.0/robonomics-1.4.0-ubuntu-x86_64.tar.gz
-   root@robokusama-collator-screencast:~# tar -xf robonomics-1.4.0-ubuntu-x86_64.tar.gz
+   root@robokusama-collator-screencast:~# wget https://github.com/airalab/robonomics/releases/download/v$ROBONOMICS_VERSION/robonomics-$ROBONOMICS_VERSION-x86_64-unknown-linux-gnu.tar.gz
+   root@robokusama-collator-screencast:~# tar -xf robonomics-$ROBONOMICS_VERSION-x86_64-unknown-linux-gnu.tar.gz
    root@robokusama-collator-screencast:~# mv robonomics /usr/local/bin/
    ```
    ![Download Robonomics 1.4.0 binary](../images/how-to-launch-the-robonomics-collator/wget_binary.png)
