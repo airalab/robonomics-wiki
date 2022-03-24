@@ -34,7 +34,7 @@ ip a
 ```
 It must look like `192.168.xx.xx` or `172.xx.xx.xx`.
 
-Then scan the network with your address and zero in the end:
+Then scan the network with your address and zero in the end (also you can use `arp -a`):
 
 ```bash 
 $ sudo nmap -sP 192.168.xx.0/24
@@ -65,30 +65,31 @@ Now we need to install Home Assistant to the Raspberry Pi. Detailed instructions
 
 Update your system and install necessary packages:
 ```bash
-ubuntu@ubuntu:~$ sudo apt-get update
-ubuntu@ubuntu:~$ sudo apt-get upgrade -y
-ubuntu@ubuntu:~$ sudo apt-get install -y python3 python3-dev python3-venv python3-pip libffi-dev libssl-dev libjpeg-dev zlib1g-dev autoconf build-essential libopenjp2-7 libtiff5 tzdata libcurl4-openssl-dev
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install -y python3 python3-dev python3-venv python3-pip libffi-dev libssl-dev libjpeg-dev zlib1g-dev autoconf build-essential libopenjp2-7 libtiff5 tzdata libcurl4-openssl-dev
 ```
 
 Create user `homeassistant` and the directory for homeassistant core:
 ```bash
-ubuntu@ubuntu:~$ sudo useradd -rm homeassistant
-ubuntu@ubuntu:~$ sudo mkdir /srv/homeassistant
-ubuntu@ubuntu:~$ sudo chown homeassistant:homeassistant /srv/homeassistant
+sudo useradd -rm homeassistant
+sudo mkdir /srv/homeassistant
+sudo chown homeassistant:homeassistant /srv/homeassistant
 ```
 
 Next up is to create and change to a virtual environment for Home Assistant Core. This will be done as the homeassistant account.
 ```bash
-ubuntu@ubuntu:~$ sudo -u homeassistant -H -s
-homeassistant@ubuntu:/home/ubuntu$ cd /srv/homeassistant
-homeassistant@ubuntu:/srv/homeassistant$ python3.9 -m venv .
-homeassistant@ubuntu:/srv/homeassistant$ source bin/activate
+sudo -u homeassistant -H -s
+cd /srv/homeassistant
+python3.9 -m venv .
+source bin/activate
 ```
+![terminal1](../images/home-assistant/terminal1.png)
 
 Then install required Python packages:
 ```bash
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant$ python3 -m pip install wheel
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant$ pip3 install homeassistant==2021.11.5
+python3 -m pip install wheel
+pip3 install homeassistant==2021.11.5
 ```
 
 Start Home Assistant Core for the first time. This will complete the installation for you, automatically creating the `.homeassistant `configuration directory in the `/home/homeassistant` directory, and installing any basic dependencies:
@@ -99,24 +100,26 @@ Start Home Assistant Core for the first time. This will complete the installatio
 You can now reach your installation via the web interface on `http://%RASPBERRY_IP_ADDRESS%:8123`. 
 In this example: `http://192.168.43.56:8123`
 
-Create user and finish setup, then stop Home Assistant with `Ctrl+C`.
+> You don't need to connect you raspberry to the screen, you can open Web UI from any computer connected to your local network
 
-After this installation process has been completed, from the`python_scripts` folder import some necessary scripts:
+Create user and finish setup (first setup is described [here](https://www.home-assistant.io/getting-started/onboarding/) in more details), then stop Home Assistant with `Ctrl+C`.
+
+After this installation process has been completed, from the `python_scripts` folder import some necessary scripts:
 
 ```bash
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant$ mkdir python_scripts
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant$ cd python_scripts/
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/send_datalog.py
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/control.py
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/utils.py
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/create_config.py
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/decrypt.py
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/encrypt.py
+mkdir python_scripts
+cd python_scripts/
+wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/send_datalog.py
+wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/control.py
+wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/utils.py
+wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/create_config.py
+wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/decrypt.py
+wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/encrypt.py
 ```
 
-Add mnemonic seed from your user account in `config.config` file:
+To use Robonomics you need account (instructions of how to create it are [here](/docs/create-account-in-dapp/)). Add mnemonic or raw seed from it in `config.config` file:
 ```bash
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ nano /srv/homeassistant/python_scripts/config.config
+nano /srv/homeassistant/python_scripts/config.config
 ```
 
 In this format:
@@ -131,17 +134,21 @@ To pub data to Robonomics you need to install `substrate-interface` python packa
 
 Install RUST:
 ```bash
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ source $HOME/.cargo/env
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ rustup default nightly
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+rustup default nightly
 ```
 
 And install necessary python packages to the virtual environment:
 ```bash
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ pip3 install pynacl==1.4.0 packaging pycurl
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ pip3 install substrate-interface==1.1.2 --use-feature=2020-resolver
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ pip3 install python-miio==0.5.8 --use-feature=2020-resolver
+pip3 install pynacl==1.4.0 packaging pycurl
+pip3 install substrate-interface==1.1.2 --use-feature=2020-resolver
+pip3 install python-miio==0.5.8 --use-feature=2020-resolver
 ```
+Be sure that you-re on virtual environment:
+
+![terminal1](../images/home-assistant/terminal2.png)
+
 ## Systemd services
 
 Now change user (you can run under any user, which allows you to use sudo):
@@ -202,6 +209,7 @@ ubuntu@ubuntu:~$ sudo systemctl enable robonomics-control@homeassistant.service
 ```
 
 After that you can connect your devices:
-- [Connection with zigbee2MQTT](/docs/zigbee2-mqtt)
-- [Connection through Xiaomi Gateway](/docs/xiaomi-gateway)
-- [Connect Vacuum Cleaner](/docs/vacuum-connect)
+- [Connection with zigbee2MQTT](/docs/zigbee2-mqtt/)
+- [Setup SLS Gateway](/docs/sls-setup) and [connect it to Home Assistant](/docs/sls-gateway-connect)
+- [Connection through Xiaomi Gateway](/docs/xiaomi-gateway/)
+- [Connect Vacuum Cleaner](/docs/vacuum-connect/)
