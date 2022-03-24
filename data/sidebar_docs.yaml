@@ -118,12 +118,18 @@
           link: /docs/raspberry-setup
         - title_en: Raspberry Setup with Prepared Image
           link: /docs/raspberry-image
+        - title_en: Setup SLS Gateway
+          link: /docs/sls-setup
+        - title_en: Connect SLS Gateway to Home Assistant
+          link: /docs/sls-gateway-connect
         - title_en: Connect Sensors with Xiaomi Gateway
           link: /docs/xiaomi-gateway
         - title_en: Connect Vacuum Cleaner
           link: /docs/vacuum-connect
         - title_en: Connect Sensors with Zigbee2MQTT 
           link: /docs/zigbee2-mqtt
+        - title_en: Add device to Robonomics
+          link: /docs/add-smart-device-to-robonomics
     - title_en: Carbon Footprint Offsetting Service
       items:
         - title_en: Offsetting Service
