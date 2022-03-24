@@ -65,6 +65,9 @@
   items:
     - title_en: Open Sensors Network
       items:
+        - title_en: Introduction
+          title_ru: Введение
+          link: /docs/sensors-network-introduction
         - title_en: Connect Sensor
           link: /docs/connect-sensor-to-robonomics
         - title_en: IoT Sensors Connectivity
