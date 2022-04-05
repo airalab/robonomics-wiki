@@ -4,7 +4,7 @@ contributors: [dergudzon, Leemo94]
 translated: false
 ---
 
-Note: In the screencast and screenshots of this article, we used version 1.9.0 of Robonomics, launching in **dev** mode
+Note: In the screenshots of this article, we used version 1.9.0 of Robonomics, launching in **dev** mode
 
 The Robonomics Technical Committee can use the **fast-track** function to speed up the proposals enacting in the Democracy module.
 
@@ -21,13 +21,13 @@ Briefly, proposal fast-tracking includes few steps:
 5. Technical committee voting for fast-track the proposal
 6. Voting on enacted proposal in Democracy
 
-For example, let's set balance for account *4EnEc9ZD1jpA1H3HpVzr1v6SGGYGrue2k9Ny5KzFHhti5xQv*
+For example, let's set free balance for account *4EnEc9ZD1jpA1H3HpVzr1v6SGGYGrue2k9Ny5KzFHhti5xQv* to 10 XRT
 
 ## 1. Creating the proposal preimage
 Open the **Governance -> Democracy** page and click the **Submit preimage** button, and then select required parameters:
 ![Creating preimage](../images/technical-committee-fast-track/creating_preimage.png)
 
-After all fields are filled, need to save generated preimage hash (*0x691405ef2f4ee0aee5bfb9d1ac3d98413e528eb211d2b914aed980370b57822b*) in this example). We'll need it in the next step.
+After all fields are filled, need to save generated preimage hash (*0x691405ef2f4ee0aee5bfb9d1ac3d98413e528eb211d2b914aed980370b57822b*) in this example. We'll need it in the next step.
 
 After saving the preimage hash we can click the **Submit preimage** button in this window and sign the transaction:
 ![Sign submitting preimage](../images/technical-committee-fast-track/sign_submitting_preimage.png)
@@ -37,7 +37,7 @@ After saving the preimage hash we can click the **Submit preimage** button in th
 Open the **Governance -> Tech. comm.** page and go to the **Proposals** tab:
 ![Techcomm proposals interface](../images/technical-committee-fast-track/techcomm_proposals_interface.png)
 
-Then click **"Submit proposal"** button and create *democracy.externalProposeMajority(0x691405ef2f4ee0aee5bfb9d1ac3d98413e528eb211d2b914aed980370b57822b)* using you technical committee account and early saved preimage hash:
+Then click **"Submit proposal"** button and create *democracy.externalProposeMajority(0x691405ef2f4ee0aee5bfb9d1ac3d98413e528eb211d2b914aed980370b57822b)* using your technical committee account and early saved preimage hash:
 ![Create techcomm proposal 1](../images/technical-committee-fast-track/create_techcomm_proposal_1.png)
 
 After signing transaction, the proposal will appear on this page:
@@ -47,7 +47,7 @@ After signing transaction, the proposal will appear on this page:
 On this step the majority of technical committee membership need to vote **Aye** in this poll. For example:
 ![First vote result](../images/technical-committee-fast-track/first_vote_result.png)
 
-Then we can to close this voting using **Close** button. After this action the proposal will be appear on the Democracy page:
+Then we can to close this voting using **Close** button. After this action the proposal will be appear on the **Democracy** page on the **external** table. How can you see, here exists **Fast track** button. This button is appear and active ONLY if we used **democracy.externalProposeMajority** function:
 ![Created democracy proposal](../images/technical-committee-fast-track/created_democracy_proposal.png)
 
 
@@ -63,7 +63,7 @@ After this, the fast-track proposal should be appear on the Technical Commettee 
 Now the technical committee need to vote unanimously for fast-tracking the earlier created proposal. It mean that all six member need to vote **Aye**:
 ![Fast-track vote result](../images/technical-committee-fast-track/fasttrack_vote_result.png)
 
-After this anyone can **Close** this voting, and the proposal will be enacted and moved to active referenda:
+After this anyone can **Close** this voting, and the proposal will be enacted and moved from **external** table to active **referenda**:
 ![Democracy enacted proposal](../images/technical-committee-fast-track/democracy_enacted_proposal.png)
 
 
