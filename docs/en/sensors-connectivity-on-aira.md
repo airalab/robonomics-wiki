@@ -1,8 +1,30 @@
 ---
-title: Install Sensors Connectivity
+title: Sensors Connectivity
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: true
 ---
+
+The Sensors Robonomics Network uses the sensors community module from Robonomics to receive and process data. This module allows any user to raise his own server to receive data from sensors and process it further. Now the developers have launched several such servers and any sensor can send data to them. Running several servers allows to avoid data loss in case of problems with one of them, because sensors from a non-working server will switch to a working one.
+
+Sensors Connectivity schematic:
+
+```
+    station1 \                        / feeder1
+    station2 -  sensors-connectivity  - feeder2
+    station3 /                        \ feeder3
+```
+
+Sensors Connectivity is a set of stations (station1, station2...), which receive various data, including data from sensors via http protocol. But also it can be sensors connected to the computer via USB or any other data source.
+
+Data received from the stations are processed by Sensors Connectivity and passed to feeders (feeder1, feeder2...). Feeders send the processed data to the user. In our case the data is sent to the decentralized IPFS channel.
+
+Map [sensors.robonomics.network](https://sensors.robonomics.network/) is a decentralized application (DApp) running on your computer. It reads data from the IPFS channel and outputs them to the map. So there is no direct connection between the server collecting the data from the sensors and the map the user sees, the data transfer between them is done via IPFS pubsub, which reduces the load on the servers.
+
+In addition, every once in a while, a file with data from the last time period is saved in IPFS, and the hash of that data is further written to the blockchain. Since IPFS is a content-addressable network, storing data in it guarantees that any change in the data will not go unnoticed, because the address of the desired file contains a hash of its content, which will change if any change in the data occurs. The blockchain is used to pass the hash on to the user, who can use it to retrieve the desired data from the IPFS (which is what happens when requesting to view the history on [sensors.robonomics.network](https://sensors.robonomics.network/)). Since the transaction made cannot be changed, we can be sure that it is the correct hash.
+
+The source code for Sensors Connectivity is available at [link](https://github.com/airalab/sensors-connectivity). To see the data from your server on the map, you need to contact the development team at vm@multi-agent.io and send the ipfs id of your server. 
+
+# Run your own Sensors Connectivity
 
 ## Pre-requirements
 
@@ -15,26 +37,35 @@ cd go-ipfs
 sudo bash install.sh 
 ipfs init
 ```
+You can get IPFS ID with the following command after running IPFS daemon (it is in the `ID` column):
 
-# Installation as PyPi package
+```console
+$ ipfs id
+{
+	"ID": "QmUZxw8jsRpSx5rWkTpJokPGKvWihTrt5rbRCFXzJ4eCAP",
+	"PublicKey": "CAASpgIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC/uMV3rLM/C+LOh2DGPo3chr+VM+vyYMKi...
+    ...
+```
+
+## Installation as PyPi package
 
 ```
 pip3 install py-sr25519-bindings
 pip3 install sensors-connectivity
 ```
 
-## Configuration
+### Configuration
 
 [Here](/docs/configuration-options-description/) you can find an article to set a proper configuration for your instance.
 
-## Running
+### Running
 
 First, launch IPFS daemon:
 
 ```
 ipfs daemon --enable-pubsub-experiment
 ```
-After config and log files are setted, you can run the service: (in another terminal)
+After config is set, you can run the service: (in another terminal)
 
 ```
 sensors_connectivity "path/to/your/config/file"
@@ -42,8 +73,8 @@ sensors_connectivity "path/to/your/config/file"
 
 You will be able to see logs in your console and in `~/.logs`.
 
-# Build from source
-## Requirements
+## Build from source
+### Requirements
 
 To build a python package fron source [poetry](https://python-poetry.org/docs/#osx--linux--bashonwindows-install-instructions) should be also installed. Assyming, you work with linux:
 
@@ -51,7 +82,7 @@ To build a python package fron source [poetry](https://python-poetry.org/docs/#o
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 ```
 
-## Get a Package And Installing dependencies
+### Get a Package And Installing dependencies
 
 ```
 git clone https://github.com/airalab/sensors-connectivity
@@ -59,11 +90,11 @@ cd sensors-connectivity
 poetry install
 ```
 
-## Documentation
+### Documentation
 
 To prepare a sensor for the work with the package follow instructions on [Robonomics Wiki](/docs/connect-sensor-to-robonomics/).
 
-## Configuration
+### Configuration
 
 [Here](/docs/configuration-options-description/) you can find an article to set a proper configuration for your instance.
 
@@ -71,7 +102,7 @@ Make a copy of `default.json` and fill it using description from the article.
 
 You also can set a logging file. The default file for logs is `logging.py`, which uses `console` and `file` handler by default. Pay attention for the `file` handler. The template is stored in `connectivity/config/logging_template.py`. You can cpecify the path (`filename`), where your logs will be stored in (do not forget to create this directory if it doesn't exist). Default path for logs is `~/.logs`. You can figure any other handlers from the [library](https://docs.python.org/3.8/library/logging.html).
 
-## Running
+### Running
 
 First, launch IPFS daemon:
 
@@ -86,7 +117,7 @@ poetry run sensors_connectivity "path/to/your/config/file"
 
 If your log file is setted with `console` handler, you will be able to see logs in your console.
 
-## Example of logs:
+### Example of logs:
 
 ```
 2022-02-17 19:30:51,248 - INFO - Getting data from the stations...
