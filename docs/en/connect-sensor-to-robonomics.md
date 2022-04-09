@@ -4,140 +4,107 @@ contributors: [LoSk-p, Vourhey]
 translated: true
 ---
 
-## Requiremets
-* ESP8266 Node MCU v3
-* particle sensor SDS011
-* micro USB cable
-* connecting wires
+## Hardware
 
-## Assembling
-### Connection Diagram
+Universal board for air quality sensor, based on ESP8266 allows to use the following modules: NODEMCU v3, NODEMCU v2, WEMOS D1 MINI. The device is designed for 6 - 24 volt power supply, using DC-DC converter DC MINI560.
 
-![scheme](../images/sensors-connectivity/schema.jpg)
+![plata](../images/sensors-connectivity/plata.png)
 
-### Connecting SDS011
+This board allows you to connect PM sensors:
 
-* Pin 1 (TX) -> (RX) Pin D1 (GPIO5)
-* Pin 2 (RX) -> (TX) Pin D2 (GPIO4)
-* Pin 3 (GND) -> GND
-* Pin 4 (2.5m) -> unused
-* Pin 5 (5V) -> VU
-* Pin 6 (1m) -> unused
+- [SDS011](https://cdn-reichelt.de/documents/datenblatt/X200/SDS011-DATASHEET.pdf)
+- PMS1003-6003
+- [PMS7003/G7](http://www.plantower.com/en/content/?110.html)
+- [SPS 30 PM Sensor](https://sensirion.com/products/catalog/SPS30/)
 
-Sensor is shipped with a USB adapter and connection wires. You don't need USB adapter, so disconnect wires from it.
+I2C connectivity:
 
-![disconnect](../images/sensors-connectivity/2_assembly_usb.jpg)
+- [BMP180](https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf) - temperature and humidity
+- [BME/P280](https://www.mouser.com/datasheet/2/783/BST-BME280-DS002-1509607.pdf) - temperature, humidity, atmospheric pressure
+- [HTU21D](https://eu.mouser.com/ProductDetail/Measurement-Specialties/HTU21D?qs=tx5doIiTu8oixw1WN5Uy8A%3D%3D) - temperature and humidity
+- SHT3x(I2C) - temperature and humidity
+- [CCS811 VOC SENSOR](https://www.sciosense.com/wp-content/uploads/documents/Application-Note-Baseline-Save-and-Restore-on-CCS811.pdf) - volatile Organic Compounds, CO2 equivalent
+- LCD1602/ 2004 / OLED SSD1306 / SH1106 - supported displays
 
-You may connect it to ESP via connecting wires "Female-Male":
+Possibility of connection via 1 Wire interface:
 
-![f-m](../images/sensors-connectivity/3_conn.jpg)
+- DTH22(AM2302) - temperature and humidity
+- DS18B20 - temperature.
 
-And connect them to your ESP according to the connection diagram.
+There is also a smaller MINI model with a trimmed down list of connectable devices. The source circuits for both models can be found at [full model](https://oshwlab.com/ludovich88/aira_sensor_rev0-1) and [MINI model](https://oshwlab.com/ludovich88/aira_sensor_d1_mini).
 
-Or you can use wires from USB adapter. Disconnect one wire: push on it with some sharp object and carefully pull the wire:
+> To obtain a ready-made board, contact the developers at vm@multi-agent.io.
 
-![extreme_con](../images/sensors-connectivity/4_assembly_wires.jpg)
+After receiving/assembling the sensor, all that remains is to flash and configure it.
 
-Insert it to last connector:
+## Firmware
 
-![extr](../images/sensors-connectivity/5_wires1.jpg)
+Our firmware is based on the firmware from [Sensor.Community](https://github.com/opendata-stuttgart/sensors-software), with some sensors added and the data sending scheme changed. The source code can be found [at the link](https://github.com/LoSk-p/sensors-software/tree/master/airrohr-firmware). 
 
-Then cut the connector in the middle:
+To flash the sensor you can use `airrohr-flasher`. Download the executable for your operating system from [latest release](https://github.com/airalab/sensors-connectivity/releases).
 
-![cut](../images/sensors-connectivity/6_assembly_wires2.jpg)
+### For Linux
 
-And connect them to ESP according to the diagram:
+First you need to add a user to the `dialout` group (for Ubuntu) to gain access to the USB port:
 
-![esp_con](../images/sensors-connectivity/6_esp_con.jpg)
-
-### Connecting DHT22
-
-
-* Pin 1 => 3V3
-* Pin 2 => Pin D7 (GPIO13)
-* Pin 3 => unused
-* Pin 4 => GND
-
-### Connecting BME280/HTU21D
-
-* VCC -> Pin 3V3
-* GND -> Pin GND
-* SCL -> Pin D4 (GPIO2)
-* SDA -> Pin D3 (GPIO0)
-
-
-## Device Firmware
-Download `airrohr-flasher` from the [latest release](https://github.com/airalab/sensors-connectivity/releases) for your OS. 
-Connect ESP to computer via micro-USB and run flasher. 
-
-### For Linux:
-Firstly you need to add the user to `dialout` group:
 ```bash
 sudo usermod -a -G dialout $USER
 ```
-Then logout and login or restart computer.
 
-Now you can run flasher (don't forget to give it permission to execute):
+After that, reboot the computer. Next, change the permissions of the file and run it:
+
 ```bash
 chmod +x airrohr-flasher-linux
 ./airrohr-flasher-linux
 ```
 
 ### For Windows:
-Unpack flasher and run it with double click.
-You need to install drivers for the USB2serial chipset (Windows 10 should be able to automatically download these):
+Unzip the flasher and double-click to run it. You will also need to install drivers for USB2serial (Windows 10 should start automatically):
 
 * Drivers for NodeMCU v3 (CH340): [Windows](http://www.wch.cn/downloads/file/5.html) ([2018/09/04 v3.4 mirror](https://d.inf.re/luftdaten/CH341SER.ZIP))
 
-
-### For MacOS
-Download flasher and run it.
-You need to install drivers for the USB2serial chipset: 
-* Drivers for NodeMCU v3 (CH340): [MacOS](http://www.wch.cn/downloads/file/178.html) ([2018/09/04 v1.4 mirror](https://d.inf.re/luftdaten/CH341SER_MAC.ZIP))
+### For MacOS.
+Download the flasher and run it. You will also need to install the drivers for USB2serial: 
+* Drivers for NodeMCU v3 (CH340): [macOS](http://www.wch.cn/downloads/file/178.html) ([2018/09/04 v1.4 mirror](https://d.inf.re/luftdaten/CH341SER_MAC.ZIP))
 
 ---
 
-Choose firmware (English or Russian) and press upload. It will take a few minutes.
+Select the firmware (in English or Russian) and click `Upload`. Uploading the firmware will take some time.
 
 ![flasher](../images/sensors-connectivity/7_flasher.jpg)
 
+## Setup
 
-## Configuration
-Reboot your ESP (simply reconnect USB to computer).
-Then connect to airRohr--xxxxxxx Wi-Fi network and in your browser write address 192.168.4.1 (or configuration page will be opened automatically) and add the information about your Wi-Fi network:
+After downloading the firmware, reboot the ESP (just disconnect and reconnect the USB).
 
-![config](../images/sensors-connectivity/wifi-setup.jpg)
+After a while after the reboot, ESP will create a Wi-Fi network called RobonomicsSensor-xxxxxxxxx. Connect to it from your phone or computer, then an authorization window will open (if it doesn't open in any browser go to 192.168.4.1). Select your Wi-Fi network from the list (or write it yourself if it's not on the list) and fill in the password field. Also write the coordinates of the place where the sensor will be installed in the field below:
 
-Then press "Save configuration and restart" and ESP will be connected to the provided Wi-Fi network.
+![guest](../images/sensors-connectivity/guest.jpg)
 
-![save](../images/sensors-connectivity/10_save.jpg)
+Click `Save and restart`.
 
+The board will connect to the specified Wi-Fi network and in a couple of minutes you will be able to see the data on [map](https://sensors.robonomics.network/#/):
 
-Then find ESP in local network (for that your computer and ESP must be in one network). You can do it using airrohr-flasher. Run it, go to the Discovery tab and press Refresh, then you'll be able to see the address.
+![map](../images/sensors-connectivity/14_map.jpg)
+
+## Advanced Setup
+
+For a more detailed setup (you may need it to connect additional sensors or send data to your own server) you need to find the address of the sensor in your Wi-Fi network. To do this, you can use `airrohr-flasher` (your computer must be on the same network as the sensor is connected to). Start it and go to the `Discovery` tab, then press `Refresh`, wait a moment and your sensor address will appear.
 
 ![addr](../images/sensors-connectivity/11_flaser2.jpg)
 
+Double-click on this address (or type it into your browser), you will get to the sensor menu:
+
+![home](../images/sensors-connectivity/home.png)
+
+Under the `Configuration` tab you can configure the sensors used:
+
+![sensors](../images/sensors-connectivity/sensors.png)
+
+And also set up sending to your own server. To do this, in the tab `APIs` uncheck `Robonomics` and check `Send to own API` and specify the server address and port (65 for sensors connectivity):
+
+![apis](../images/sensors-connectivity/apis_en.png)
+
+Click `Save and restart` to save the settings.
 
 
-Open ESP local address in your browser and go to `Configuration`. 
-
-![menu](../images/sensors-connectivity/menu.jpg)
-
-In `APIs` make sure that `Robonomics` is chosen: 
-
-![robonomics](../images/sensors-connectivity/APIs.jpg)
-
-> If you want to send data to your own server, enable `Custom API` and write your address and port 
-
-Then go to `Sensors` tab, enable GPS and put in your coordinates. Also enable the sensors you connected:
-
-![gps](../images/sensors-connectivity/Sensors.jpg)
-
-Then press `Save configuration and restart`.
-
-
-
-## Results
-Go to [sensors.robonomics.network](https://sensors.robonomics.network/#/), and you will see your sensor on the map.
-
-![map](../images/sensors-connectivity/14_map.jpg)

@@ -1,12 +1,34 @@
 ---
-title: Install Sensors Connectivity
+title: Sensors Connectivity
 contributors: [LoSk-p, Vourhey, tubleronchik]
-translated: false
+translated: true
 ---
 
-## Pre-requirements
+Для получения и обработки данных Sensors Robonomics Network использует модуль sensors community от Робономики. Этот модуль позволяет любому пользователю поднять свой собственный сервер для получения данных с датчиков и дальнейшей их обработки. Сейчас разработчиками запущено несколько таких серверов и любой датчик может отправлять данные на них. Запуск нескольких серверов позволяет избежать потери данных при проблемах в работе одного из них, поскольку датчики с нерабочего сервера переключатся на рабочий.
 
-To build a python package IPFS daemon should be installed. Assyming, you work with linux:
+Схема работы Sensors Connectivity:
+
+```
+    station1 \                        / feeder1
+    station2 -  sensors-connectivity  - feeder2
+    station3 /                        \ feeder3
+```
+
+Sensors Connectivity представляет из себя набор станций (station1, station2...), на которые приходят различные данные, в том числе данные с датчиков по http протоколу. Но также это могут быть датчики, подключенные к компьтеру по USB или любой другой истчник данных.
+
+Полученные со станций данные обрабатываются Sensors Connectivity и переходят к фидерам (feeder1, feeder2...). Фидеры же отправляют обработанные данные пользователю. В нашем случае данные отправляются в децентрализованный IPFS канал.
+
+Карта [sensors.robonomics.network](https://sensors.robonomics.network/) это децентрализванное приложение (DApp), работающее на вашем компьютере. Оно читает данные из IPFS канала и выводит их на карту. Таким образом нет прямой связи между сервером, собирающим данные с датчиков, и картой, которую видит пользователь, передача данных между ними происходит через IPFS pubsub, что снижает нагрузку на сервера.
+
+Кроме того, раз в какое-то время файл с данными за последний промежуток времени сохраняется в IPFS, а хэш этих данных далее записывается в блокчейн. Так как IPFS это контентно-адресуемая сеть, то сохранение данных в ней дает гарантию, что любое изменение в них не пройдет незамеченным, потому что адрес нужного файла содержит хэш его содержимого, который поменяется при любом изменении данных. Блокчейн используется для передачи хэша дальше пользователю, который может использовать его, чтобы получить из IPFS нужные данные (что и происходит при запросе просмотра истории на карте [sensors.robonomics.network](https://sensors.robonomics.network/)). Так как сделанную транзакцию невозможно изменить, то можно быть уверенным, что это правильный хэш.
+
+Исходный код для Sensors Connectivity доступен по [ссылке](https://github.com/airalab/sensors-connectivity). Чтобы увидеть данные со своего сервера на карте, вам нужно обратиться к команде разработки по адресу vm@multi-agent.io и отправить ipfs id своего сервера.
+
+# Запуск собственного сервера Sensors Connectivity
+
+## Требования
+
+Чтобы собрать Python пакет вам нужен IPFS daemon. Установите его следующими командами:
 
 ```
 wget https://dist.ipfs.io/go-ipfs/v0.8.0/go-ipfs_v0.8.0_linux-amd64.tar.gz
@@ -15,43 +37,52 @@ cd go-ipfs
 sudo bash install.sh 
 ipfs init
 ```
+Вы можете получить IPFS ID следующей командой после запуска IPFS daemon (вам нужно то, что в графе `ID`)
 
-# Installation as PyPi package
+```console
+$ ipfs id
+{
+	"ID": "QmUZxw8jsRpSx5rWkTpJokPGKvWihTrt5rbRCFXzJ4eCAP",
+	"PublicKey": "CAASpgIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC/uMV3rLM/C+LOh2DGPo3chr+VM+vyYMKi...
+    ...
+```
+
+## Установка в качестве PyPi пакета
 
 ```
 pip3 install py-sr25519-bindings
 pip3 install sensors-connectivity
 ```
 
-## Configuration
+### Конфигурация
 
-[Here](/docs/configuration-options-description/) you can find an article to set a proper configuration for your instance.
+[Здесь](/docs/configuration-options-description/) вы можете найти статью о том, как установить правильную конфигурацию для вашего сервера.
 
-## Running
+### Запуск
 
-First, launch IPFS daemon:
+Сначала запустите IPFS Daemon:
 
 ```
 ipfs daemon --enable-pubsub-experiment
 ```
-After config and log files are setted, you can run the service: (in another terminal)
+После настройки конфигурации можно запустить сервис (в другом терминале):
 
 ```
 sensors_connectivity "path/to/your/config/file"
 ```
 
-You will be able to see logs in your console and in `~/.logs`.
+Вы сможете увидеть логи в терминале и в файле `~/.logs`.
 
-# Build from source
-## Requirements
+## Сборка из источников
+### Требования
 
-To build a python package fron source [poetry](https://python-poetry.org/docs/#osx--linux--bashonwindows-install-instructions) should be also installed. Assyming, you work with linux:
+Чтобы собрать пакет из источников вам нужен установленный [poetry](https://python-poetry.org/docs/#osx--linux--bashonwindows-install-instructions) . Для linux:
 
 ```
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 ```
 
-## Get a Package And Installing dependencies
+### Получение пакета и установка зависимостей
 
 ```
 git clone https://github.com/airalab/sensors-connectivity
@@ -59,34 +90,33 @@ cd sensors-connectivity
 poetry install
 ```
 
-## Documentation
+### Документация
 
-To prepare a sensor for the work with the package follow instructions on [Robonomics Wiki](/docs/connect-sensor-to-robonomics/).
+Чтобы подготовить датчик к работе с собственным сервером, пройдите инструкцию на [Robonomics Wiki](/docs/connect-sensor-to-robonomics/).
 
-## Configuration
+### Configuration
 
-[Here](/docs/configuration-options-description/) you can find an article to set a proper configuration for your instance.
+[Здесь](/docs/configuration-options-description/) вы можете найти статью о том, как установить правильную конфигурацию для вашего сервера.
 
-Make a copy of `default.json` and fill it using description from the article.
+Скопируйте `default.json` и заполните его использую информацию из статьи.
 
-You also can set a logging file. The default file for logs is `logging.py`, which uses `console` and `file` handler by default. Pay attention for the `file` handler. The template is stored in `connectivity/config/logging_template.py`. You can cpecify the path (`filename`), where your logs will be stored in (do not forget to create this directory if it doesn't exist). Default path for logs is `~/.logs`. You can figure any other handlers from the [library](https://docs.python.org/3.8/library/logging.html).
+Вы также можете задать файл протоколирования. По умолчанию для логгирования используется файл `logging.py`, который по умолчанию использует обработчик `console` и `file`. Обратите внимание на обработчик `file`. Шаблон хранится в файле `connectivity/config/logging_template.py`. Вы можете указать путь (`filename`), в котором будут храниться ваши логи (не забудьте создать этот каталог, если он не существует). По умолчанию путь для логов - `~/.logs`. Вы можете использовать любые другие обработчики из [library](https://docs.python.org/3.8/library/logging.html).
 
-## Running
+### Запуск
 
-First, launch IPFS daemon:
+Запустите IPFS Daemon:
 
 ```
 ipfs daemon --enable-pubsub-experiment
 ```
-After config and log files are setted, you can run the service: (in another terminal)
+После настройки конфигурации и лог файлов можно запустить службу (в другом терминале):
 
 ```
 poetry run sensors_connectivity "path/to/your/config/file"  
 ```
+Если в вашем файле журнала установлен обработчик `console`, вы сможете видеть логи в консоли.
 
-If your log file is setted with `console` handler, you will be able to see logs in your console.
-
-## Example of logs:
+### Пример логов:
 
 ```
 2022-02-17 19:30:51,248 - INFO - Getting data from the stations...
@@ -102,23 +132,24 @@ If your log file is setted with `console` handler, you will be able to see logs 
 2022-02-17 19:31:51,249 - INFO - Getting data from the stations...
 ```
 
-## Troubleshooting
+## Устранение неполадок
 
 ### Python.h: No such file or directory
 
-If during running `poetry install` comand you get such error, you need to install the header files and static libraries for python dev. Use your package manager for installation. For example, for `apt` you need to run
+Если при выполнении команды `poetry install` вы получаете такую ошибку, вам необходимо установить заголовочные файлы и статические библиотеки для python dev. Для установки используйте ваш менеджер пакетов. Например, для `apt` вам нужно выполнить команду
 ```
 sudo apt install python3-dev
 ```
 > Note:
-python3-dev does not cover all versions for python3. The service needs at least python3.8, for that you may need to specify the version `sudo apt install python3.8-dev`.
+python3-dev не охватывает все версии для python3. Для работы сервиса требуется как минимум python3.8, для этого вам может потребоваться указать версию `sudo apt install python3.8-dev`..
 
-[Here](https://stackoverflow.com/a/21530768) you can find examples for other package managers.
+[Здесь](https://stackoverflow.com/a/21530768) вы можете найти примеры для других менеджеров пакетов.
 
-### Python versions mismatch
+### Несоответствие версий Python
 
-If during running `poetry install` comand you get `SolverProblemError`, which says "The current project's Python requirement (3.6.9) is not compatible with some of the required packages Python requirement:..", even though you have older version of python (e.g. python3.8), you may need to specify the python version poetry is using:
+Если при выполнении команды `poetry install` вы получаете ошибку `SolverProblemError`, которая гласит "The current project's Python requirement (3.6.9) is not compatible with some of the required packages Python requirement:...", даже если у вас более старая версия python (например, python3.8), возможно, вам нужно указать версию python, которую использует poetry:
 
 ```
 poetry env use python3.8
 ```
+
