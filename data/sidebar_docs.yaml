@@ -13,14 +13,12 @@
       title_ru: R&D на базе Робономики
       link: /docs/r-and-d-based-on-robonomics-network
 
-- title_en: Playground
+- title_en: Basics
   items:
-    - title_en: Playground Overview
-      link: /docs/playground-overview
-    - title_en: How to Run Robonomics Dev Node
-      link: /docs/run-dev-node
     - title_en: Create Account for Robonomics Parachain
       link: /docs/create-account-in-dapp
+    - title_en: How to Run Robonomics Dev Node
+      link: /docs/run-dev-node
     - title_en: Adding Funds To Your Account on Robonomics Portal
       link: /docs/adding-funds-to-account-in-dapp/
     - title_en: How to Buy a Subscription
@@ -29,6 +27,11 @@
       link: /docs/subscription-launch
     - title_en: Cross-chain Message
       link: /docs/cross-chain-messages
+
+- title_en: Playground
+  items:
+    - title_en: Playground Overview
+      link: /docs/playground-overview
     - title_en: Connect Mars Curiosity Rover
       link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control
     - title_en: Connect ROS-compatible Drone

@@ -104,7 +104,7 @@ Add robonomic's path to `config.py`
 
 ![IPFS](../images/iris-drone-demo/IPFS.jpg)
 
-Go to the [Robonomics Portal](https://parachain.robonomics.network) and switch to local node.
+Go to the [Robonomics Parachain portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) and switch to local node.
 ![localNode](../images/iris-drone-demo/localNode.jpg)
 
 Go to **Accounts** and create **DRONE** and **EMPLOYER** accounts. Save the account names and keys and path to **robonomics** to `~/catkin_ws/src/drone_sim/src/config.py`. Transfer some money into the accounts.
@@ -130,7 +130,7 @@ Waiting till "Waiting for payment"
 To send a transaction run in another window:
 `echo "ON" | ./robonomics io write launch -r <drone_addres> -s <employer_key>` - where **<drone_address>** and **<employer_key>** should be replaced with the strings from `config.py` accordingly.
 
-After data was pushed to IPFS, go to the **Chain State** in [Robonomics Portal](https://parachain.robonomics.network). Select **datalog** in query and add DRONE datalog using `+` button.
+After data was pushed to IPFS, go to the **Chain State** in [Robonomics Parachain portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/). Select **datalog** in query and add DRONE datalog using `+` button.
 
 ![datalog](../images/iris-drone-demo/datalog.jpg)
 

@@ -148,7 +148,7 @@ Secret phrase `rebel federal super deer dinosaur sick pledge hint truth wool inp
 ```
  **Note:** Save the generated address and seed for later use.
 
-Initially, balance of the account at the generated address is zero, thus the network does not allow sending transactions from this address. To fix this, you need to transfer some tokens from an account like `Alice` to the account at the generated address. Use Robonomics [portal](https://parachain.robonomics.network) for making the transfer.
+Initially, balance of the account at the generated address is zero, thus the network does not allow sending transactions from this address. To fix this, you need to transfer some tokens from an account like `Alice` to the account at the generated address. Use [Robonomics Parachain portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) for making the transfer.
 
 ![portal transfer](../images/ws_lesson3/transfer_funds.jpg)
 
