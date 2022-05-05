@@ -68,7 +68,7 @@ Go to the folder with robonomics file ad create a local robonomics network:
 
 ![robonomics](../images/kuka-demo/robonomics.png)
 
-Go to https://parachain.robonomics.network and switch to local node
+Go to [Robonomics Parachain portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) and switch to local node
 
 ![local](../images/kuka-demo/local.png)
 
@@ -103,7 +103,7 @@ rosrun kuka_controller move_arm_client.py
 ![control](../images/kuka-demo/run.png)
 
 ## Sending transaction
-In https://parachain.robonomics.network go to `Developer/Extrinsics`, change `extrinsic` to `launch`. Chose your `KUKA` account in `robot` and change `param` to `Yes`. The press `Submit Transaction`
+In [Robonomics Parachain portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) go to `Developer/Extrinsics`, change `extrinsic` to `launch`. Chose your `KUKA` account in `robot` and change `param` to `Yes`. The press `Submit Transaction`
 
 ![transaction](../images/kuka-demo/launch.png)
 

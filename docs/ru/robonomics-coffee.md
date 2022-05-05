@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=Z8pXcLjlJnQ
 In order to have a cup of delicious coffee, a customer should send some funds (1 Statemine's token 
 [ACT](https://statemine.statescan.io/asset/3077), id=3077) to the address of a coffee machine in Statemine parachain.
 After that the pouring process is started and action log is published in the 
-[Robonomics parachain](https://parachain.robonomics.network/?rpc=wss%3A%2F%2Fmain.frontier.rpc.robonomics.network%2F#/explorer) 
+[Robonomics Parachain portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/explorer) 
 via Datalog function.
 
 **NOTE!** *You may use **any** token on Statemine, more on that [here](#things-to-point-out)*
@@ -117,7 +117,7 @@ mnemonic seed phrase as it is going to be used later.**
 ![Coffee machine Account](../images/robonomics-coffee/account.png)
 
 Logging actions in Robonomics is optional, you will need XRT on 
-[parachain.robonomics.network](https://parachain.robonomics.network/) for coffee machine account (it is the same across
+[Robonomics Parachain portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) for coffee machine account (it is the same across
 networks) for this. If not, there will simply be an error message *"Balance too low."*
 
 ### Run Robonomics coffee
