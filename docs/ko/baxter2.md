@@ -166,7 +166,7 @@ Since we are testing, let us create a local robonomics network with robonomics b
 ```
 ![robonomics][im3]
 
-Go to [https://parachain.robonomics.network][db5] and switch to local node
+Go to [Robonomics Parachain portal][db5] and switch to local node
 ![local node][im4]
 
 Go to Accounts and create __Baxter__ and __Employer__ accounts.
@@ -196,7 +196,7 @@ rosrun robot_controller robot_control.py
 ```
 ![waiting][im7]
 
-Now you can send a transaction triggering the Baxter to start moving and collecting data. To do so, you can use the same portal [https://parachain.robonomics.network][db5]. Go to **Developer->Extrinsics** and select Baxter's employer account, `launch` extrinsic, Baxter's account as a target account and `yes` as a parameter. Submit the extrinsic.
+Now you can send a transaction triggering the Baxter to start moving and collecting data. To do so, you can use the same portal [Robonomics Parachain portal][db5]. Go to **Developer->Extrinsics** and select Baxter's employer account, `launch` extrinsic, Baxter's account as a target account and `yes` as a parameter. Submit the extrinsic.
 
 
 ![rob_message][im8]
@@ -227,7 +227,7 @@ That's all!
 [im1]: <../images/baxter_demo/empty_world.jpg>
 [im2]: <../images/baxter_demo/baxter_simulation.jpg>
 [im3]: <../images/baxter_demo/robonomics.jpg>
-[db5]: <https://parachain.robonomics.network>
+[db5]: <https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/>
 [im4]: <../images/baxter_demo/local_node.jpg>
 [im5]: <../images/baxter_demo/create_account.jpg>
 [im6]: <../images/baxter_demo/accounts.jpg>

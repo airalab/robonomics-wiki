@@ -77,7 +77,7 @@ Since we are testing, let us create a local robonomics network with robonomics b
 ![Running node](../images/curiosity-demo/robonomics.jpg?raw=true "Running node")
 
 
-Go to https://parachain.robonomics.network and switch to local node 
+Go to [Robonomics Parachain portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) and switch to local node 
 
 ![Local node](../images/curiosity-demo/local_node.jpg?raw=true "Local node")
 
@@ -118,7 +118,7 @@ rosrun robonomics_sample_controller sample_controller.py
 ![Controller](../images/curiosity-demo/controller.jpg?raw=true "Controller")
 
 
-Now you can send a transaction triggering the Rover to start moving and collecting data. To do so, you can use the same portal https://parachain.robonomics.network.
+Now you can send a transaction triggering the Rover to start moving and collecting data. To do so, you can use the same [Robonomics Parachain portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/).
 Go to `Developer->Extrinsics` and select Curiosity's employer account, `launch` extrinsic, Curiosity's account as a target account and `yes` as a parameter.
 Submit the extrinsic.
 
