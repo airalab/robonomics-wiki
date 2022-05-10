@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vue-remark--docs--en--create-account-in-dapp-md~vue-remark--docs--es--create-account-in-dapp-md~vue-~c2500d98"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vue-remark--docs--en--create-account-in-dapp-md~vue-remark--docs--es--create-account-in-dapp-md~vue-~0ece70df"],{
 
 /***/ "/Blg":
 /*!********************************************************************************************************************************************************************************!*\
