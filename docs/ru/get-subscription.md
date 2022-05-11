@@ -1,39 +1,38 @@
 ---
-title: How to Buy a Subscription
-contributors: [LoSk-p]
-translated: false
+title: Как купить подписку
+contributors: [LoSk-p, katerina510]
+translated: true
 ---
 
 https://youtu.be/EsUiG_4ZGcw
 
-We will use [Robonomics dev node](/docs/run-dev-node) to try the subscription, but in the production network everything works the same. 
+Для тестирования подписки мы будем использовать [ноду Робономики в среде разработки](/docs/run-dev-node), но в производственной сети все работает точно так же.
 
-In `Developer/Chain state` you can see auctions for subscriptions (to get a subscription you need to win a fast auction). Choose `rws` and `auctionQueue` and press `+` button, you will see IDs of available auctions:
+В `Developer/Chain state` Вы можете видеть аукционы на подписку (чтобы получить подписку, необходимо выиграть быстрый аукцион). Выберите `rws` и `auctionQueue` и нажмите кнопку `+`. Вы увидите ID доступных аукционов:
 
-![queue](../images/dev-node/queue.png)
+![очередь](../images/dev-node/queue.png)
 
-You can see an information about any subscription with `rws` `auction` and ID of auction (the auction's ID in the picture is 0):
+Вы можете увидеть информацию о любой подписке с помощью `rws` `auction` и ID аукциона (на картинке ID аукциона - 0):
 
-![auction](../images/dev-node/auction.png)
+![аукцион](../images/dev-node/auction.png)
 
-In the information about the auction you can see `winner` field, at the moment it is `null` so nobody has this subscription and we can get it. For that go to `Developer/Extrinsic`, choose your account and `rws -> bid`. Also set auction ID (0) and the amount of units to bid (more than 1000000000 Wn):
+В информации об аукционе имеется поле `winner`. В данный момент оно `null`, что означает, что ни у кого нет этой подписки и мы можем ее получить. Для этого перейдите в `Developer/Extrinsic`, выберите Ваш аккаунт и `rws -> bid`. Также задайте ID аукциона (0) и количество токенов для ставки (более 1000000000 Wn):
 
-![bid](../images/dev-node/bid.png)
+![ставка](../images/dev-node/bid.png)
 
-Submit the transaction and check the information about the auction with ID 0 (in `Chain state` choose `rws -> auction` and ID 0):
+Совершите транзакцию и проверьте информацию об аукционе с ID 0 (в `Chain state` выберите `rws -> auction` и ID 0):
 
-![win](../images/dev-node/auc_win.png)
+![победа](../images/dev-node/auc_win.png)
 
-Now in `winner` field you will see your account address, it means that this account has the subscription 0. An auction starts with the first bid and lasts a few blocks, so if somebody bids more tokens than you in the next few blocks one will be the winner and one will take the subscription.
+Сейчас в поле `winner` Вы увидите адрес Вашего аккаунта. Это значит, что у данного аккаунта подписка 0. Аукцион начинается с первой ставки и длится несколько блоков, так что если в течение этого времени кто-нибудь поставит больше токенов, чем Вы, он станет победителем и получит подписку.
 
-Now you can add devices. Devices are accounts that are able to use this subscription and send extrinsics with no fee. To test it lets create a new account with no tokens and add it to devices. 
+Теперь Вы можете добавлять устройства. Устройства - это аккаунты, которые могут пользоваться подпиской и отправлять экстринсики без комиссии. Чтобы протестировать это, давайте создадим новый аккаунт без токенов и добавим его к устройствам.
 
-To add devices choose `rws -> setDevices` in `Developer/Extrinsic`. Then press `Add Item` button and choose recently created account with no tokens:
+Чтобы добавить устройства, выберите `rws -> setDevices` в `Developer/Extrinsic`. Затем нажмите кнопку `Add Item` и выберите недавно созданный аккаунт без токенов:  
 
-![set_devices](../images/dev-node/set_devices.png)
+![добавить устройства](../images/dev-node/set_devices.png)
+Совершите транзакцию. Теперь Вы можете проверить список устройств в `Chain state` с помощью `rws -> devices`. Здесь Вы увидите адрес Вашего аккаунта без токенов. Выберите аккаунт, с которого купили подписку, и нажмите `+`:
 
-Submit the transaction. Now you can check the list of devices in `Chain state` with `rws -> devices`. There you will see the address of your account without tokens. Choose the account that has bought the subscription and press `+`:
+![устройства](../images/dev-node/devices.png)
 
-![devices](../images/dev-node/devices.png)
-
-Now you can try to [send launch](/docs/subscription-launch) extrinsic using the subscription.
+Сейчас Вы можете попытаться [отправить launch](/docs/subscription-launch) экстринсик с помощью подписки.
