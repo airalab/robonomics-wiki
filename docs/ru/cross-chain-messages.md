@@ -1,47 +1,47 @@
 ---
-title: Cross-chain Message
-contributors: [Vourhey, LoSk-p]
-translated: false
+title: Межсетевой обмен сообщениями
+contributors: [Vourhey, LoSk-p, katerina510]
+translated: true
 ---
 
-XCM (Cross-chain Message) allows sending messages between parachains. You can send launchXcm transaction to run/stop your robot or datalogXcm transaction to save data to blockchain.
+XCM (протокол межсетевого обмена) позволяет отправлять сообщения между парачейнами.Вы можете отправлять транзакцию launchXcm transaction для запуска/остановки Вашего робота или транзакцию datalogXcm для сохранения данных в блокчейне.
 
 https://www.youtube.com/watch?v=a6XrqoaYhK8&feature=emb_logo
 
-## Create Account
+## Создаем аккаунт
 
-Lets try to send message from Earth to Mars.
-Go to [parachain.robonomics.network](https://parachain.robonomics.network/#/explorer) and choose `Airalab Rococo` testnet:
+Давайте попробуем отправить сообщение с Земли на Марс.
+Перейдите в [parachain.robonomics.network](https://parachain.robonomics.network/#/explorer) и выберите тестнет `Airalab Rococo`:
 
-![testnets](../images/cross-chain/testnet.jpg)
+![тестнеты](../images/cross-chain/testnet.jpg)
 
-In `Network/Parachains` you will see two parachains with their id:
+В `Network/Parachains` Вы увидите два парачейна с их ID:
 
-![ids](../images/cross-chain/Parachains_id.jpg)
+![id](../images/cross-chain/Parachains_id.jpg)
 
-Then go to Earth parachain and [create](https://wiki.robonomics.network/docs/create-account-in-dapp/) two accounts (for example `ROBOT` and `EMPLOYER`). In a new tab go to Mars parachain.
+Далее перейдите к парачейну Earth и [создайте](https://wiki.robonomics.network/docs/ru/create-account-in-dapp/) два аккаунта (например, `ROBOT` и `EMPLOYER`). В новой вкладке перейдите к парачейну Mars.
 
 ## LaunchXcm
 
-In Earth parachain go to `Developer/Extrinsics` and choose your `EMPLOYER` account and launchXcm. Then write Mars parachain id (2000) and choose the `ROBOT` account:
+В парачейне Earth выберите `Developer/Extrinsics`, Ваш аккаунт `EMPLOYER` и launchXcm. Затем впишите ID парачейна Mars (2000) и выберите аккаунт `ROBOT`:
 
 ![launch](../images/cross-chain/launch.jpg)
 
-Now press `Submit Transaction`.
+Теперь нажмите `Submit Transaction`.
 
-To see your transaction in Mars parachain go to `Network/Explorer` and look at Recent Events.
+Чтобы увидеть Ваши транзакции в парачейне Mars, перейдите в `Network/Explorer` и посмотрите Recent Events.
 
 ![recent_launch](../images/cross-chain/recent_launch.jpg)
 
 ## DatalogXcm
 
-In Earth parachain go to `Developer/Extrinsics` and choose your `ROBOT` account and datalogXcm. Write Mars parachain id (2000) and the message:
+В парачейне Earth перейдите в `Developer/Extrinsics`, выберите Ваш аккаунт `ROBOT` и datalogXcm. Напишите ID парачейна Mars (2000) и сообщение:
 
 ![datalog](../images/cross-chain/datalog.jpg)
 
-Now press `Submit Transaction`.
+Далее нажмите `Submit Transaction`.
 
-You can see your transaction in Recent Events in Mars parachain:
+Вы можете видеть Вашу транзакцию в Recent Events в парачейне Mars:
 
 ![recent_datalog](../images/cross-chain/recent_datalog.jpg)
 
