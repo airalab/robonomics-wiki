@@ -1,16 +1,16 @@
 ---
-title: How to Send Launch with Subscription
-contributors: [LoSk-p]
-translated: false
+title: Как отправить Launch с помощью подписки
+contributors: [LoSk-p, katerina510]
+translated: true
 ---
 
-If your address is in devices of any subscription you can send extrinsics with no fee. Lets try to send `launch`.
+Если Ваш адрес относится к устройствам с любой подпиской, Вы можете отправлять экстринсики без комиссии. Давайте попробуем отправить `launch`.
 
-Go to `Developer/Extrinsics`, choose your account (`MAIN` in the picture) and `rws -> call`. Then in `subscriptionID` field write the subscription's owner address (`SUBSCRIPTION OWNER` in the picture) and in the next field choose `launch -> launch`. In the `robot` field write the address you want to send `launch` transaction to(`LIGHTBULB (EXTENTION)` in the picture) and choose the parameter `Yes` or `No`. Then submit transaction:
+Перейдите в `Developer/Extrinsics`, выберите Ваш аккаунт (`MAIN` на картинке) и `rws -> call`. Затем в поле `subscriptionID` впишите адрес владельца подписки (`SUBSCRIPTION OWNER` на картинке) и в следующем поле выберите `launch -> launch`. В поле `robot` впишите адрес, куда Вы хотите отправить транзакцию `launch` (`LIGHTBULB (EXTENTION)` на картинке) и выберите параметр `Yes` или `No`. Чтобы совершить транзакцию:
 
 ![launch](../images/dev-node/launch.png)
 
 
-Now go to `Network/Explorer` and in the `Recent Events` you will see two events `rws.NewCall` and `launch.NewLaunch`:
+Перейдите в `Network/Explorer`. В `Recent Events` вы увидите два события - `rws.NewCall` и `launch.NewLaunch`:
 
-![events](../images/dev-node/events.png)
+![события](../images/dev-node/events.png)
