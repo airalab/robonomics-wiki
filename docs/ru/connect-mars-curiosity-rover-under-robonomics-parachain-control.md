@@ -1,25 +1,25 @@
 ---
-title: Connect Mars Curiosity rover under Robonomics parachain control
-contributors: [Vourhey, PaTara43]
-translated: false
+title: Подключить марсоход Curiosity под управлением парачейна Робономики
+contributors: [Vourhey, PaTara43, katerina510]
+translated: true
 ---
 
-**Let's see how Robonomics Parachain control allows to make Mars Curiosity rover move. Requirements:**
-- ROS Melodic + Gazebo + RViz (installation manual [here](http://wiki.ros.org/melodic/Installation))
-- extra packages:
+**Давайте посмотрим, как контроль Парачейна Робономики заставляет двигаться марсоход Curiosity. Требования:**
+- ROS Melodic + Gazebo + RViz (руководство по установке [здесь](http://wiki.ros.org/melodic/Installation))
+- дополнительные пакеты:
 ```shell
 sudo apt-get install ros-melodic-gazebo-ros-control ros-melodic-effort-controllers ros-melodic-joint-state-controller
 ```
-- IPFS up to [0.6.0](https://dist.ipfs.io/go-ipfs/v0.6.0/go-ipfs_v0.6.0_linux-386.tar.gz)
-- [IPFS Companion Extension](https://github.com/ipfs/ipfs-companion)
-- Robonomics node (binary file) (download latest release [here](https://github.com/airalab/robonomics/releases). This tutorial tested fine on v1.1)
+- IPFS до [0.6.0](https://dist.ipfs.io/go-ipfs/v0.6.0/go-ipfs_v0.6.0_linux-386.tar.gz)
+- расширение [IPFS Companion](https://github.com/ipfs/ipfs-companion)
+- узел Робономики (двоичный файл) (скачайте последнюю версию [здесь](https://github.com/airalab/robonomics/releases). Это руководство было успешно протестировано на v1.1)
 
-Here is the video showing successful launch:
+В этом видео показан успешный запуск:
 
 https://www.youtube.com/watch?v=6BSOyRbmac8
 
-### 1. Set up a simulation
-Download Curiosity rover package:
+### 1. Настройте симуляцию
+Скачайте пакет для марсохода Curiosity:
 ```shell
 mkdir -p robonomics_ws/src
 cd robonomics_ws/src
@@ -27,35 +27,35 @@ git clone https://bitbucket.org/theconstructcore/curiosity_mars_rover/src/master
 cd ..
 catkin build
 ```
-We need to adjust starting conditions to make our rover spawn smoothly:
-- Go to
+Нужно настроить начальные условия, чтобы наш марсоход успешно появился:
+- Перейдите в
 
-`src/master/curiosity_mars_rover_description/worlds` and change line 14 of the file` mars_curiosity.world` to 
+`src/master/curiosity_mars_rover_description/worlds` и измените строку 14 файла `mars_curiosity.world` на 
 `<pose>0 0 8 0 0 0</pose>`
 
-- Go to
+- Перейдите в
 
-`src/master/curiosity_mars_rover_description/launch` and change line 4 of the file `mars_curiosity_world.launch` to 
+`src/master/curiosity_mars_rover_description/launch` и измените строку 4 файла `mars_curiosity_world.launch` на
 `<arg name="paused" default="false"/>`
 
-Don't forget to add source command to `~/.bashrc`
+Не забудьте добавить команду source в `~/.bashrc`
 `source /home/$USER/robonomics_ws/devel/setup.bash`
 
 
-- Reboot console and launch the simulation:
+- Перезагрузите консоль и запустите симуляцию:
 
 ```shell
 roslaunch curiosity_mars_rover_description main_real_mars.launch
 ```
-![Mars rover](../images/curiosity-demo/rover.jpg?raw=true "Mars rover")
+![марсоход](../images/curiosity-demo/rover.jpg?raw=true "Марсоход")
 
-Note: if the image is dark, e.g. shadowed, change `Camera` to `Orthorgraphic` in Gazebo toolbar.
-The simulation can be closed for a while.
+Заметьте: если картинка темная, например, затененная, измените `Camera` на `Orthorgraphic` в панели инструментов Gazebo.
+Симуляцию можно закрыть на некоторое время.
 
 ------------
 
-### 2. Download Robonomics controller package
-To download a controller package for Rover type in terminal:
+### 2. Скачайте пакет контроллера Робономики
+Чтобы загрузить пакет контролера для типа марсоход, введите в терминале:
 ```shell
 cd ~/robonomics_ws/src
 git clone https://github.com/PaTara43/robonomics_sample_controller
@@ -68,76 +68,75 @@ catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 # The controller supports pyth
 
 ------------
 
-### 3. Manage accounts in DAPP
-Since we are testing, let us create a local robonomics network with robonomics binary file:
+### 3. Управление аккаунтами в децентрализованном приложении
+Так как мы тестируем, давайте создадим локальную сеть Робономики с двоичным файлом Робономики:
 ```shell
 ./robonomics --dev --tmp
 ```
 
-![Running node](../images/curiosity-demo/robonomics.jpg?raw=true "Running node")
+![Запускаем узел](../images/curiosity-demo/robonomics.jpg?raw=true "Запускаем узел")
 
 
-Go to [Robonomics Parachain portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) and switch to local node 
+Перейдите на [портал парачейна Робономики](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) и переключитесь на локальный узел. 
 
-![Local node](../images/curiosity-demo/local_node.jpg?raw=true "Local node")
-
-
-Go to Accounts and create **CURIOSITY** and **EMPLOYER** accounts.
-
-**Important**! Copy each account's address (to copy address click on account's icon) and Curiosity's account **mnemonic seed** (obtained while creating the account)
-Transfer some money (units) to these accounts. You can read more about accounts in Robonomics [here](https://wiki.robonomics.network/docs/en/create-account-in-dapp/)
-
-![Account creation](../images/curiosity-demo/account_creation.jpg?raw=true "Account creation")
+![Локальный узел](../images/curiosity-demo/local_node.jpg?raw=true "Локальный узел")
 
 
-Add these addresses, seed and node address (defaults to `ws://127.0.0.1:9944` for developer node) in `config.config` in `robonomics_ws/src/robonomics_sample_controller/src`. No quotes.
+Перейдите в Accounts и создайте аккаунты **CURIOSITY** и **EMPLOYER**.
+
+**Важно**! Скопируйте адрес каждого аккаунта (чтобы это сделать, кликните на иконку аккаунта) и **сид-фразу** аккаунта Curiosity (сгенерированную при создании аккаунта). Отправьте токены на эти аккаунты. Подробнее об аккаунтах Робономики можно прочесть [здесь](https://wiki.robonomics.network/docs/ru/create-account-in-dapp/)
+
+![Создание аккаунта](../images/curiosity-demo/account_creation.jpg?raw=true "Создание аккаунта")
+
+
+Добавьте эти адреса, сид и адрес узла (по умолчанию `ws://127.0.0.1:9944` - узел разработчика) в `config.config` в `robonomics_ws/src/robonomics_sample_controller/src`. Без кавычек.
 
 ------------
 
 
-### 4. Start Robonomics
+### 4. Запустите Робономику
 
-Before going further, make sure that you have installed [IPFS Companion Extension](https://github.com/ipfs/ipfs-companion).
+Перед тем как двигаться дальше, убедитесь, что Вы установили [расширение IPFS Companion](https://github.com/ipfs/ipfs-companion).
 
-In a separate terminal launch IPFS:
+В отдельном терминале запустите IPFS:
 ```shell
 ifps init #you only need to do this once per IPFS installation
 ipfs daemon
 ```
 
-In another separate terminal launch Curiosity simulation if it's not live:
+В другом отдельном терминале запустите симуляцию Curiosity, если она еще не запущена:
 ```shell
 roslaunch curiosity_mars_rover_description main_real_mars.launch
 ```
-Wait till it stays still
+Дождитесь выполнения операций.
 
-In another terminal launch the controller:
+В другом терминале запустите контроллера:
 ```shell
 rosrun robonomics_sample_controller sample_controller.py
 ```
-![Controller](../images/curiosity-demo/controller.jpg?raw=true "Controller")
+![Контроллер](../images/curiosity-demo/controller.jpg?raw=true "Контроллер")
 
 
-Now you can send a transaction triggering the Rover to start moving and collecting data. To do so, you can use the same [Robonomics Parachain portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/).
-Go to `Developer->Extrinsics` and select Curiosity's employer account, `launch` extrinsic, Curiosity's account as a target account and `yes` as a parameter.
-Submit the extrinsic.
+Теперь Вы можете отправлять транзакции, запускающие движение и сборку данных марсоходом. Чтобы это сделать, Вы можете использовать все тот же [портал парачейна Робономики](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/).
+Перейдите в `Developer->Extrinsics` и выберите аккаунт employer для Curiosity, экстринсик `launch`, аккаунт Curiosity как целевой аккаунт и `yes` как параметр.
+Отправьте экстринсик.
 
-![Extrinsic](../images/curiosity-demo/extrinsic.jpg?raw=true "Extrinsic")
-
-
-The robot should start moving. It won't accept commands from other accounts neither commands with `no` parameter. The rover will move around and collect data for about a minute.
-Later, when the job is done:
-
-![Job done](../images/curiosity-demo/job_done.jpg?raw=true "Job done")
+![Экстринсик](../images/curiosity-demo/extrinsic.jpg?raw=true "Экстринсик")
 
 
-On the Robonomics portal go to `Developer -> Chain state` and obtain a `CURIOSITY` datalog using “+” button with selected `datalog -> RingBufferItem` as query: 
+Робот должен начать двигаться. Он не будет принимать команды от других аккаунтов, а также команды с параметром `no`. Марсоход будет двигаться и собирать данные примерно около минуты.
+Затем, после выполнения работы:
 
-![Datalog](../images/curiosity-demo/datalog.jpg?raw=true "Datalog")
-
-Now the IPFS hash of the telemetry is saved in the blockchain. To see the data simply copy the hash and find it on a gateway:
-
-![Data in IPFS](../images/curiosity-demo/data_in_ipfs.jpg?raw=true "Data in IPFS")
+![Работа выполнена](../images/curiosity-demo/job_done.jpg?raw=true "Работа выполнена")
 
 
-This telemetry is kept in a decentralized storage, and it's hash is stored in a blockchain!
+На портале Робономики перейдите в `Developer -> Chain state` и получите журнал данных `CURIOSITY`, используя кнопку “+” с выбранным `datalog -> RingBufferItem` в качестве запроса: 
+
+![Журнал данных](../images/curiosity-demo/datalog.jpg?raw=true "Журнал данных")
+
+Теперь хэш IPFS телеметрии сохранен в блокчейне. Чтобы посмотреть данные, просто скопируйте хэш и найдите его на шлюзе:
+
+![Данные в IPFS](../images/curiosity-demo/data_in_ipfs.jpg?raw=true "Данные в IPFS")
+
+
+Эта телеметрия хранится в децентрализованном хранилище, а ее хэш хранится в блокчейне!
