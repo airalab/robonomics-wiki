@@ -1,22 +1,22 @@
 ---
-title: Playground Overview
-contributors: [LoSk-p]
-translated: false
+title: Обзор Playground
+contributors: [LoSk-p, katerina510]
+translated: true
 ---
 
-Robonomics allows to use robots as autonomous agents that receive commands from a human or another robot and do some useful work, storing a report of their actions in Blockchain. The interaction between the robot and the Robonomics platform is quite simple with a [Robonomics IO](/docs/rio-overview).
-## What Robots You Can Control
-The playground section contains examples of connecting different robots to Robonomics which everyone can try to repeat step by step. In this section you can try to control:
-* [an Unmanned Aerial Vehicle](/docs/iris-drone/)
-* [a Mars Rover](/docs/connect-mars-curiosity-rover-under-robonomics-parachain-control/)
-* [a Manipulator](/docs/kuka/)
-* [an industrial Baxter Robot](/docs/baxter2/)
+Робономика позволяет использовать роботов как автономных агентов, которые принимают команды от человека или другого робота и делают какую-то полезную работу, сохраняя отчет о своих действиях в блокчейне. Взаимодействие между роботом и платформой Робономики достаточно простое при использовании [Robonomics IO](/docs/ru/rio-overview).
+## Каких роботов можно контролировать
+Раздел Playground содержит примеры подключения различных роботов к Робономике, которые каждый может пошагово повторить. В этом разделе Вы можете контролировать:
+* [беспилотный летательный аппарат](/docs/ru/iris-drone/)
+* [марсохода](/docs/ru/connect-mars-curiosity-rover-under-robonomics-parachain-control/)
+* [манипулятора](/docs/ru/kuka/)
+* [промышленного робота Baxter](/docs/ru/baxter2/).
 
-Since all robots are available as simulation models, you don't need any special hardware. So you can try to connect the robot to Robonomics Network right now.
-## How Do You Control the Robot
-All of our Demos are launched in a local network, however you can connect a robot to the live networks in the same way.
+Поскольку все роботы доступны как имитационные модели, Вам не потребуется специальное оборудование. Вы можете попробовать подключить робота к сети Робономики прямо сейчас.
+## Как контролировать робота
+Все наши демо запущены в локальной сети, но вы можете подключать робота к действующим сетям таким же способом.
 
-All Demos in this section follow a similar scenario. You [create an account](/docs/create-account-in-dapp/) for the robot and send him some units for paying transactions. Then the user sends an `ON/OFF` transaction to the robot's address, the robot receives it and starts working. After the job is done the telemetry is saved in IPFS and the file hash is sent to datalog. So at any time you can see how the robot performed its work.
-## Connect Your Own Robot
-In addition you can create your own control package for any ROS-compatible device with [this](/docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-1/) instruction.
+Все демо в этом разделе следуют аналогичному сценарию. Вы [создаете аккаунт](/docs/ru/create-account-in-dapp/) для робота и отправляете ему токены для оплаты транзакций. Затем пользователь отправляет транзакцию `ON/OFF` на адрес робота, робот принимает ее и начинает работать. После выполнения работы телеметрия сохраняется в IPFS и хэш файла отправляется в журнал данных. Поэтому в любое время Вы можете видеть, как робот выполняет свою работу.
+## Подключите своего собственного робота
+Дополнительно Вы можете создать свой собственный пакет управления для любого устройства, совместимого с ROS, с помощью [этой](/docs/ru/connect-any-ros-compatible-robot-under-robonomics-parachain-control-1/) инструкции.
 
