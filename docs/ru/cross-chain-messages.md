@@ -4,7 +4,7 @@ contributors: [Vourhey, LoSk-p, katerina510]
 translated: true
 ---
 
-XCM (протокол межсетевого обмена) позволяет отправлять сообщения между парачейнами.Вы можете отправлять транзакцию launchXcm transaction для запуска/остановки Вашего робота или транзакцию datalogXcm для сохранения данных в блокчейне.
+XCM (протокол межсетевого обмена) позволяет отправлять сообщения между парачейнами.Вы можете отправлять транзакцию launchXcm для запуска/остановки Вашего робота или транзакцию datalogXcm для сохранения данных в блокчейне.
 
 https://www.youtube.com/watch?v=a6XrqoaYhK8&feature=emb_logo
 
@@ -44,5 +44,3 @@ https://www.youtube.com/watch?v=a6XrqoaYhK8&feature=emb_logo
 Вы можете видеть Вашу транзакцию в Recent Events в парачейне Mars:
 
 ![recent_datalog](../images/cross-chain/recent_datalog.jpg)
-
-
