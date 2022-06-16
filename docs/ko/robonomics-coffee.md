@@ -88,7 +88,11 @@ respectively.
 ![RPI GPIO](../images/robonomics-coffee/rpi_gpio.png)
 
 ### Software installation
+
 Time to turn the Raspberry Pi into blockchain-powered coffee maker!  
+
+#### Option 1: Using Robonomics Parachain in Kusama Network
+
 - Prepare the RPI for Substrate libs ([source](https://www.rust-lang.org/tools/install)):
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -110,7 +114,39 @@ git clone https://github.com/Multi-Agent-io/robonomics-coffee-maker
 pip3 install -r requirements.txt
 ```
 
+#### Option 2: Using Everscale Network.
+
+- Install gpiozero library ([source](https://gpiozero.readthedocs.io/en/stable/installing.html)) and reboot:
+```bash
+sudo apt update
+sudo apt install python3-gpiozero
+sudo pip3 install gpiozero
+sudo reboot
+```
+
+- Clone the repository
+```bash
+git clone https://github.com/Multi-Agent-io/robonomics-coffee-maker
+cd robonomics-coffee-maker
+```
+
+- Install Node.js requirements
+```bash
+npm install @eversdk/core
+npm install python-shell
+mv eversdk.node ~/.tonlabs/binaries/1
+git clone https://github.com/tonlabs/ever-sdk-js
+cd ever-sdk-js/packages/lib-node
+npm install -g
+```
+
+The reason why we can't just npm install @eversdk/lib-node is because this library is not compiled for the ARM architecture.
+
+
 ### Account management
+
+#### Option 1: Using Robonomics Parachain in Kusama Network
+
 On your PC install [Polkadot Extension](https://polkadot.js.org/extension/) and register a coffee machine account there. **Save 
 mnemonic seed phrase as it is going to be used later.**
 
@@ -120,8 +156,16 @@ Logging actions in Robonomics is optional, you will need XRT on
 [Robonomics Parachain portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) for coffee machine account (it is the same across
 networks) for this. If not, there will simply be an error message *"Balance too low."*
 
+#### Option 2: Using Everscale Network.
+
+Create an account in the Everscale with, for example mobile app. Save seed and activate a coffee-machine address there.
+Insert this address in `main.js`
+
 ### Run Robonomics coffee
-Run this in repo folder:
+
+#### Option 1: Using Robonomics Parachain in Kusama Network
+
+Run this in corresponding network repo folder:
 ```bash
 python3 main.py <previously saved seed in quotes>
 ```
@@ -130,7 +174,7 @@ You should see the program waiting for ACT incomes:
 ![Waiting for ACT](../images/robonomics-coffee/waiting_for_act.png)
 
 You can send tokens from another account created the same way via `assets:transfer` *extrinsic* on 
-[Statemine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer).
+[Statemine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fstatemine-rpc.polkadot.io#/explorer).
 
 As soon as there is an income (positive change in `assets:account` *storage function* for address 
 derived from seed and for token id `3077`) the RPI triggers GPIO pin 18 and coffee machine starts making coffee and 
@@ -139,6 +183,15 @@ records a datalog!
 ![Making coffee](../images/robonomics-coffee/making_coffee.png)
 
 ![Recorded Datalog](../images/robonomics-coffee/datalog.png)
+
+#### Option 2: Using Everscale Network.
+
+Run poller by 
+```bash
+node main.js
+```
+
+Then send 0.5 EVR to the address specified in the `main.js` file. Everscale use case does not imply Datalog recording.
 
 ## Things to point out
 - This is a POC of a blockchain-driven IoT device, it has things to improve, wires to hide and functionality to implement.
@@ -153,4 +206,8 @@ Set an ID there, complete the procedure and paste ID in the code.
 
 - Right now the only thing that matters for income tracker is the positive difference between current and previous
 asset balance. This may be filtered [code](https://github.com/Multi-Agent-io/robonomics-coffee-maker/blob/master/statemine_monitor.py#L59).
+- One may use QR-code for mobile apps for convenient transfers.
+
+![QR-codes](../images/robonomics-coffee/qr_codes.png)
+
 - Powered by [Robonomics](https://robonomics.network/), made by [Multi-Agent.io](https://multi-agent.io/).
