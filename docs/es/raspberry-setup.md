@@ -89,7 +89,7 @@ source bin/activate
 Then install required Python packages:
 ```bash
 python3 -m pip install wheel
-pip3 install homeassistant==2021.11.5
+pip3 install homeassistant==2022.6.2
 ```
 
 Start Home Assistant Core for the first time. This will complete the installation for you, automatically creating the `.homeassistant `configuration directory in the `/home/homeassistant` directory, and installing any basic dependencies:
@@ -103,51 +103,6 @@ In this example: `http://192.168.43.56:8123`
 > You don't need to connect you raspberry to the screen, you can open Web UI from any computer connected to your local network
 
 Create user and finish setup (first setup is described [here](https://www.home-assistant.io/getting-started/onboarding/) in more details), then stop Home Assistant with `Ctrl+C`.
-
-After this installation process has been completed, from the `python_scripts` folder import some necessary scripts:
-
-```bash
-mkdir python_scripts
-cd python_scripts/
-wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/send_datalog.py
-wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/control.py
-wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/utils.py
-wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/create_config.py
-wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/decrypt.py
-wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/encrypt.py
-```
-
-To use Robonomics you need account (instructions of how to create it are [here](/docs/create-account-in-dapp/)). Add mnemonic or raw seed from it in `config.config` file:
-```bash
-nano /srv/homeassistant/python_scripts/config.config
-```
-
-In this format:
-```
-[user]
-SEED = <your mnemonic or raw seed>
-```
-
-## Substrate Interface
-
-To pub data to Robonomics you need to install `substrate-interface` python package (you need to install RUST before) to your raspberry. 
-
-Install RUST:
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source $HOME/.cargo/env
-rustup default nightly
-```
-
-And install necessary python packages to the virtual environment:
-```bash
-pip3 install pynacl==1.4.0 packaging pycurl
-pip3 install substrate-interface==1.1.2 --use-feature=2020-resolver
-pip3 install python-miio==0.5.8 --use-feature=2020-resolver
-```
-Be sure that you-re on virtual environment:
-
-![terminal1](../images/home-assistant/terminal2.png)
 
 ## Systemd services
 
@@ -180,32 +135,9 @@ Environment="PATH=/srv/%i/bin"
 WantedBy=multi-user.target
 ```
 
-Do the same for robonomics control service:
-
-```bash
-ubuntu@ubuntu:~$ sudo nano /etc/systemd/system/robonomics-control@homeassistant.service 
-```
-
-With:
-```
-[Unit]
-Description=Robonomics Control
-After=network-online.target
-[Service]
-Type=simple
-User=%i
-WorkingDirectory=/srv/%i/
-ExecStart=/srv/homeassistant/bin/python3.9 "/srv/%i/python_scripts/control.py"
-Environment="PATH=/srv/%i/bin"
-
-[Install]
-WantedBy=multi-user.target
-```
-
-And enable both services:
+And enable service:
 ```bash
 ubuntu@ubuntu:~$ sudo systemctl enable home-assistant@homeassistant.service
-ubuntu@ubuntu:~$ sudo systemctl enable robonomics-control@homeassistant.service
 ```
 
 After that you can connect your devices:
