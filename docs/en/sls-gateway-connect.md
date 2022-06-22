@@ -63,7 +63,8 @@ Also you need to configure MQTT on SLS Gateway. On your SLS Gateway go to `Setti
 
 ![sls-mqtt](../images/home-assistant/sls-mqtt.png)
 
-And add your brocker address (address of the raspberry with Home Assistant in local network) and port (1883). Also write the topic name (you can choose any). Don't forget to tick `Enable` and `Retain states`:
+And add your brocker address (address of the raspberry with Home Assistant in local network) and port (1883). Also write the topic name (you can choose any). 
+> Don't forget to tick `Enable` and `Retain states`.
 
 ![sls-mqtt1](../images/home-assistant/sls-mqtt1.png)
 
