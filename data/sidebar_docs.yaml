@@ -120,8 +120,6 @@
           link: /docs/home-assistant-begin
         - title_en: Raspberry Setup
           link: /docs/raspberry-setup
-        - title_en: Raspberry Setup with Prepared Image
-          link: /docs/raspberry-image
         - title_en: Setup SLS Gateway
           link: /docs/sls-setup
         - title_en: Connect SLS Gateway to Home Assistant
@@ -132,7 +130,7 @@
           link: /docs/vacuum-connect
         - title_en: Connect Sensors with Zigbee2MQTT 
           link: /docs/zigbee2-mqtt
-        - title_en: Add device to Robonomics
+        - title_en: Add Robonomics Integration
           link: /docs/add-smart-device-to-robonomics
     - title_en: Carbon Footprint Offsetting Service
       items:
