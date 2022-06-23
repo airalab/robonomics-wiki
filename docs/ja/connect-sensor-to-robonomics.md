@@ -1,6 +1,6 @@
 ---
 title: Connect Sensor To Robonomics Network
-contributors: [LoSk-p, Vourhey]
+contributors: [LoSk-p, Vourhey, Ludovich88]
 translated: false
 ---
 
@@ -13,11 +13,8 @@ Universal board for air quality sensor, based on ESP8266 allows to use the follo
 This board allows you to connect PM sensors:
 
 - [SDS011](https://cdn-reichelt.de/documents/datenblatt/X200/SDS011-DATASHEET.pdf)
-- PMS1003-6003
-- [PMS7003/G7](http://www.plantower.com/en/content/?110.html)
-- [SPS 30 PM Sensor](https://sensirion.com/products/catalog/SPS30/)
 
-I2C connectivity:
+Possibility of connection via I2C interface:
 
 - [BMP180](https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf) - temperature and humidity
 - [BME/P280](https://www.mouser.com/datasheet/2/783/BST-BME280-DS002-1509607.pdf) - temperature, humidity, atmospheric pressure
@@ -33,9 +30,31 @@ Possibility of connection via 1 Wire interface:
 
 There is also a smaller MINI model with a trimmed down list of connectable devices. The source circuits for both models can be found at [full model](https://oshwlab.com/ludovich88/aira_sensor_rev0-1) and [MINI model](https://oshwlab.com/ludovich88/aira_sensor_d1_mini).
 
-> To obtain a ready-made board, contact the developers at vm@multi-agent.io.
+> To obtain a ready-made board, contact the developers at vm@multi-agent.io or ping@airalab.org.
 
 After receiving/assembling the sensor, all that remains is to flash and configure it.
+
+## Assembly
+
+Let's take a closer look at the board:
+The board has several connectors for connection - they are highlighted in blue and green. Consider the blue block of terminal blocks.
+![plata1](../images/sensors-connectivity/plata1.png)
+
+From left to right (all terminals are signed):
+- Terminal for connecting the power supply of the board. The recommended voltage is 12 volts.
+- Ground (point of zero potential). Serves both for connection of zero potential of the power supply, and for connection of sensors.
+- Supply of sensors. Configurable power output to which sensors are connected. The output can be set to 3.3 or 5 volts.
+- SDA terminal. Serial data line, is used to connect sensors via the I2C interface.
+- SSL/1-Wire terminal. Configurable terminal to which the serial clock line  is connected. Used to connect sensors via I2C or 1-Wire interface.
+
+Setting the power output for the sensor and selecting the interface is done by setting the jumpers, marked yellow in the image.
+The jumpers are installed horizontally, the places for installing the jumpers are signed.
+
+***BE CAREFUL!!!*** You can choose the voltage for the power supply by setting only one jumper to 3.3 volts or 5 volts. Setting two jumpers to 3.3 and 5 volts will damage the device. The same rule works when choosing an interface for sensors, install only one jumper in place of I2C or 1-Wire. Installing two jumpers may damage the device.
+
+There is also an additional block of Inputs In the image it is marked in green.
+
+> There is a power switch on the left side of the blue box to force the board to reboot. It is in the ON position by default.
 
 ## Firmware
 
