@@ -6,6 +6,23 @@ translated: false
 
 You can use [SLS Gateway from Robonomics](https://easyeda.com/ludovich88/robonomics_sls_gateway_v01) instead of Xiaomi/Aqara gateways. It works only in your local network and don't send any data to external servers, so you can control all data about your home.
 
+## Firmware
+
+If you have clear gateway, first you need to flash it. Download `ESP32_firmware` folder [here](https://drive.google.com/drive/folders/1h_XRUVWM8f5BtzlPs-sxU6WpR_D1mZgC?usp=sharing) and unpack it. Then go to `ESP32_firmware/firmware/20210124_full`. There you can choose folder for your OS. 
+
+1. Set 1 and 3 switches to `on`, others must be off.
+2. Connect gateway to your computer via USB type-C port on the gateway.
+3. Use `Clear` script.
+
+> For Linux first you need to add permisions:
+> ```bash
+> sudo chmod +x Clear.sh
+> sudo chmod +x Flash_16mb.sh
+> ```
+4. After that use `Flash_16mb` sript
+
+## Setup
+
 1. Ensure that the switches on the back of the gateway are properly positioned. Switches 5 (RX Zigbee to ESP) and 6 (TX Zigbee to ESP) must be in the ON position, the others must be off. 
 
 2. Connect the type C power cable. The indicator light in the center should turn green.

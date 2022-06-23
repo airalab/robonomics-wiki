@@ -183,26 +183,12 @@ sensor:
     name: "MQTT Climate Voltage"
     unit_of_measurement: ''
     value_template: "{{ value_json.voltage }}"
-
-# Trigger on receiving data
-automation:
-  - alias: "send_datalog_climate"
-    trigger:
-      platform: mqtt
-      topic: "zigbee2mqtt/0x00158d0006bcd022"
-    action:
-      service: shell_command.send_datalog_climate
-
-# Shell command that will run on the trigger
-shell_command:
-  send_datalog_climate: 'python3 python_scripts/send_datalog.py temperature={{ states("sensor.mqtt_climate_temperature")  }} humidity={{ states("sensor.mqtt_climate_humidity") }} pressure={{ states("sensor.mqtt_pressure") }} battery={{ states("sensor.mqtt_climate_battery") }} linkquality={{ states("sensor.mqtt_climate_link_quality") }} voltage={{ states("sensor.mqtt_climate_voltage") }}'
 ```
 
-Then start Home Assistant with new configuration:
+Then restart Home Assistant with new configuration:
 
 ```bash
-cd /srv/homeassistant
-hass
+systemctl restart home-assistant@homeassistant.service
 ```
 
 To see the sensor data in Home Assistant you need to add it. For that open the browser on your computer and go to:
@@ -230,16 +216,3 @@ In a similar way you can add card for Robonomics Service. With this you can star
 You homepage will look like this
 
 ![home](../images/home-assistant/home.png)
-
-You can see the data in [subscan](https://robonomics.subscan.io/), find your account and you will see datalog transactions. You can decrypt the data with script [decrypt.py](https://github.com/airalab/robonomics-smarthome/blob/main/python_scripts/decrypt.py), download it:
-
-```bash
-cd /srv/homeassistant/python_scripts
-wget https://raw.githubusercontent.com/airalab/robonomics-smarthome/main/python_scripts/decrypt.py
-```
-And run with the data from datalog:
-```bash
-cd /srv/homeassistant/
-source bin/activate
-python3 python_scripts/decrypt.py <data>
-```
