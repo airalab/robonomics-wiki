@@ -1,54 +1,83 @@
 ---
-title: Add Device to Robonomics
+title: Add Robonomics Integration
 contributors: [LoSk-p]
 translated: true
 ---
-For each device you need separate [Robonomics accounts](/docs/create-account-in-dapp/). After you've added your devices, you need to add them in a `config.config` file with their seeds. Firstly in `Configuration/Entities` tab in your Home Assistant find entity ids of your devices:
 
-![entity_id](../images/home-assistant/entity_id.png)
+Integration allow Home Assistant to record datalogs with encrypted data from Home Assistant and listen launch commands to control smart devices. Integration use IPFS to store data and send IPFS hash in datalog or launch.
 
-Open the configuration file:
+## Add custom integration
+
+On your raspberry pi with Home Assistant log in homeassistant user:
+```bash 
+sudo -u homeassistant -H -s
+```
+And install python package:
 ```bash
-nano /srv/homeassistant/python_scripts/config.config
+source /srv/homeassistant/bin/activate
+pip install http3
 ```
-And add there information of your devices in the following format:
 
+Then go to `.homeassistant` directory:
+```bash
+cd /home/homeassistant/.homeassistant
 ```
-[device_name]
-IDS = ['entity_id1', 'entity_id2']
-SEED = word word word
-```
-Where `device_name` is the name of your device (you can choose any name), `IDS` are entity ids of the data from the device (it may be one or more ids) and `SEED` is a mnemonic or raw seed from robonomics account to this device.
-
-After you fill the configuration file you need to get access token from Home Assistant. For that open your `profile` in the lower left corner:
-
-![profile](../images/home-assistant/profile.png)
-
-In the end of the page find `Long-Lived Access Tokens` and press `create token`. Save it somewhere, you will not be able to see it again.
-
-![token](../images/home-assistant/token.png)
-
-Now run `create_config.py` script with your token:
+Create directory `custom_components` and clone there the repository with the integration:
 
 ```bash
-cd /srv/homeassistant
-source bin/activate
-python3 python_scripts/create_config.py --token <access_token>
+mkdir custom_components
+cd custom_components
+git clone https://github.com/LoSk-p/robonomics_smart_home.git
 ```
-And restart Home Assistant:
+
+Then you need to install IPFS node to your raspberry. For that use `install_ipfs.sh` script:
+
+```bash
+su ubuntu
+cd ~
+wget https://raw.githubusercontent.com/LoSk-p/robonomics_smart_home/main/install_ipfs.sh
+sudo chmod +x install_ipfs.sh
+./install_ipfs.sh
+```
+
+## Configure
+
+Now you can add integration to Home Assistant. First, restart it:
+
 ```bash
 systemctl restart home-assistant@homeassistant.service
 ```
+Then in web interface go to `Settings/Device & Services` and press `Add Integration`. Find there `Robonomics`:
 
-You can add the data from sensors to your homepage like in `Home Assistant setup` in the description to [Method 1](/docs/zigbee2-mqtt/).
+![integration](/docs/images/home-assistant/add-integration.png)
 
-You can see the data in [subscan](https://robonomics.subscan.io/), find your account and you will see datalog transactions. Data looks like this:
+Click on it and fill the configuration. Here you need to add seed from `SUB_ADMIN` snd `SUB_OWNER` accounts and check the boxes if you created accounts with ED25519 type (it is better if you did that). Also you can set sending interval, by default it is 10 minutes.
 
-![datalog_data](../images/home-assistant/datalog_data.png)
+Moreover, you can add your Pinata credentials. It is not nessessary, if you will not do it, data will be pinned with your local node and Infura. If you add it, files also will be pinned in Pinata, it may help to faster access it.
 
-You can decrypt it with script `decrypt.py`, run it with the data from datalog:
-```bash
-cd /srv/homeassistant/
-source bin/activate
-python3 python_scripts/decrypt.py <data>
-```
+![configuration](/docs/images/home-assistant/configuration.png)
+
+## Use DApp
+
+Now you can use [Smarthome DApp](https://vol4tim.github.io/account-manager/#/) to control your home through the Robonomics. Both accounts `SUB_ADMIN` and `SUB_OWNER` must be added to the [Polcadot extention](https://polkadot.js.org/extension/).
+
+In `Account` field choose your account with subscription. In the picture account `4FzqML6URZ5KWtk5MoQmrykkaRNvVuzYEGva77ytG1XA3Hus` is `SUB_ADMIN` (to read telemetry mark a ster on it):
+![dapp-start](/docs/images/home-assistant/dapp-start.png)
+
+### See data
+
+Now we can se the data from our home. Press on `SUB_ADMIN` account and you will see list of datalogs:
+
+![dapp-datalog](/docs/images/home-assistant/dapp-datalog.png)
+
+Press `read` on the last datalog and wait while IPFS file is reading. After that write your secret key or mnemonic seed from `SUB_ADMIN` account and press decrypt. You will see the data:
+
+![dapp-data](/docs/images/home-assistant/dapp-data.png)
+
+### Control device
+
+To control devices go back to main page and press send button near `SUB_ADMIN` account. Here you can control any controllable device from Home Assistant. You need to know its entity id and and the service you want to call. Entity ids you can find in Home Assistant in `Settings/Devices & Services/Entities` and service `Developer Tool/Services`. The platform is the part of entity id before the dot. For example lets turn off shapes, it has entity id `light.shapes_9275`, so the platform is `light` and we can use service `turn_off`.
+
+![dapp-command](/docs/images/home-assistant/dapp-command.png)
+
+You can send encrypted command or not encrypted. To send encryptrd command just tick `crypto` before send message and write you secret key from sending account.
