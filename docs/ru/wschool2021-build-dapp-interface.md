@@ -4,21 +4,22 @@ contributors: [positivecrash]
 translated: false
 ---
 
-![Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot](../images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot")
+This lesson continues the previous one, where you have already built simple application and were focused on connecting an account to a node, sending transactions and other vital functions of the dapp. Now we will **build user-friendly interface** for this application.
 
-## Introduction
+<!-- ![Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot](../images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot") -->
 
-This tutorial continues the previous lesson, where you have already built simple application and were focused on connecting an account to a node, sending transactions and other vital functions of the dapp. Now we will **build user-friendly interface** for this application.
+<img src="../images/build-dapp-interface/sum.gif" alt="Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot" />
 
 ## Prerequisites
 
-This tutorial is designed for people who are familiar with **HTML, CSS, JavaScript** a bit and want to learn how to apply these skills for decentralized applications.
+This lesson is designed for people who are familiar with **HTML, CSS, JavaScript** a bit and want to learn how to apply these skills for decentralized applications.
 
 For building your dapp's interface you can choose any JavaScript framework which is comfortable for you or even try to build interface without any framework. In Robonomics 2021 we use [Vue.js](https://vuejs.org) as it is quite scalable and easy to use.
 
-## Set up for this tutorial
+## Set up
 
 If you start with this step and prefer to **learn by doing**, please, follow this to-do list to launch the resulting dapp from the previous lesson:
+
 
 1. Download a local Robonomics node v 0.22 from [releases page](https://github.com/airalab/robonomics/releases/tag/v0.22.0) that fits your OS. If you do not find your system in the latest release, please, find the most recent version in the previous releases.
 
@@ -76,7 +77,7 @@ Let's inspect the structure of the dapp to clear up what and where we can fix in
 │   │   ├── Datalog.vue       # Tab 'Datalog' in dapp
 │   │   ├── Demo.vue          # Tab 'Demo' in dapp
 │   │   ├── Launch.vue        # Tab 'Launch' in dapp
-│   ├── utils/                # Folder with important for app js functions (we will touch api.js in this tutorial)
+│   ├── utils/                # Folder with important for app js functions (we will touch api.js in this lesson)
 │   ├── App.vue               # The root of our app, contains HTML, CSS, JS for the whole page. In fact it is Vue Component also
 │   ├── main.js               # The app’s entry file, we will import here global styles
 ├── ...                       # There are config files and dependencies files, that we will not change mannually
@@ -84,11 +85,11 @@ Let's inspect the structure of the dapp to clear up what and where we can fix in
 
 ```
 
-> **The code of this tutorial is in this [repository](https://github.com/positivecrash/wscool21-ui-dapp)**
+> **The code of the lesson is in this [repository](https://github.com/positivecrash/wscool21-ui-dapp)**
 
 ## CSS-in-JS VS. Global stylesheets
 
-In this tutorial I show how to change the interface of a small dapp from scratch without any stable library of UI components. So I will import and create not only different Vue components, but also write my own styles.
+In this lesson I show how to change the interface of a small dapp from scratch without any stable library of UI components. So I will import and create not only different Vue components, but also write my own styles.
 
 If your application is big or your project has the whole bunch of dapps, in future you'd better look for building library of components specifically for your project to make UI more organized and efficient ([for example, here is a tool for organizing components](https://storybook.js.org)). Or if you are okay with standart interface themes, you can use any UI Libraries of third party ([for example](https://vuetifyjs.com/)).
 
@@ -411,7 +412,8 @@ const timeout = new Promise(resolve => {
 ```
 I set `1700` instead of `300` and check the result:
 
-![Dapp Interface changing step 3](../images/build-dapp-interface/dapp-3.gif "Dapp Interface changing step 3")
+<!-- ![Dapp Interface changing step 3](../images/build-dapp-interface/dapp-3.gif "Dapp Interface changing step 3") -->
+<img src="../images/build-dapp-interface/dapp-3.gif" alt="Dapp Interface changing step 3" />
 
 
 ## Using reusable components
@@ -647,7 +649,8 @@ export default {
 
 For the Button component we have emited the click from prop with `@onClick`, so I will pay attention if the faucet function is working correctly now (the balance should change on click):
 
-![Dapp Interface changing step 6](../images/build-dapp-interface/dapp-6.gif "Dapp Interface changing step 6")
+<!-- ![Dapp Interface changing step 6](../images/build-dapp-interface/dapp-6.gif "Dapp Interface changing step 6") -->
+<img src="../images/build-dapp-interface/dapp-6.gif" alt="Dapp Interface changing step 6" />
 
 ### Adding the icon
 
@@ -867,7 +870,8 @@ Let's prettify the account section a little bit more:
 
 </details>
 
-![Dapp Interface changing step 10](../images/build-dapp-interface/dapp-10.gif "Dapp Interface changing step 10")
+<!-- ![Dapp Interface changing step 10](../images/build-dapp-interface/dapp-10.gif "Dapp Interface changing step 10") -->
+<img src="../images/build-dapp-interface/dapp-10.gif" alt="Dapp Interface changing step 10" />
 
 Let's edit styles for the tabs:
 
@@ -919,9 +923,10 @@ Let's edit styles for the tabs:
 
 </details>
 
-![Dapp Interface changing step 11](../images/build-dapp-interface/dapp-11.gif "Dapp Interface changing step 11")
+<!-- ![Dapp Interface changing step 11](../images/build-dapp-interface/dapp-11.gif "Dapp Interface changing step 11") -->
+<img src="../images/build-dapp-interface/dapp-11.gif" alt="Dapp Interface changing step 11" />
 
-> Let me remind you that the finished code for this tutorial is in [this](https://github.com/positivecrash/wscool21-ui-dapp) repository. And let's shift to the next steps :)
+> Let me remind you that the finished code for this lesson is in [this](https://github.com/positivecrash/wscool21-ui-dapp) repository. And let's shift to the next steps :)
 
 ## Datalog
 
@@ -999,7 +1004,8 @@ input.large, select.large {
 
 **Let's check that everything works fine after updates:**
 
-![Dapp Interface changing step 12](../images/build-dapp-interface/dapp-12.gif "Dapp Interface changing step 12")
+<!-- ![Dapp Interface changing step 12](../images/build-dapp-interface/dapp-12.gif "Dapp Interface changing step 12") -->
+<img src="../images/build-dapp-interface/dapp-12.gif" alt="Dapp Interface changing step 12" />
 
 We have a datalog section through out the dapp, so I'll make a component for it.
 
@@ -1141,13 +1147,15 @@ filters: {
 
 **Let's check the datalog section in Datalog tab:**
 
-![Dapp Interface changing step 13](../images/build-dapp-interface/dapp-13.gif "Dapp Interface changing step 13")
+<!-- ![Dapp Interface changing step 13](../images/build-dapp-interface/dapp-13.gif "Dapp Interface changing step 13") -->
+<img src="../images/build-dapp-interface/dapp-13.gif" alt="Dapp Interface changing step 13" />
 
 ## Launch
 
 For this step, most of improvements have already been done, we just need to apply them to the template: import Button and Datalog components, remove the excessive title:
 
-![Dapp Interface changing step 14](../images/build-dapp-interface/dapp-14.gif "Dapp Interface changing step 14")
+<!-- ![Dapp Interface changing step 14](../images/build-dapp-interface/dapp-14.gif "Dapp Interface changing step 14") -->
+<img src="../images/build-dapp-interface/dapp-14.gif" alt="Dapp Interface changing step 14" />
 
 Let's replace `select` control element with `checkbox`.
 
@@ -1227,7 +1235,8 @@ Write this:
 
 </details>
 
-![Dapp Interface changing step 15](../images/build-dapp-interface/dapp-15.gif "Dapp Interface changing step 15")
+<!-- ![Dapp Interface changing step 15](../images/build-dapp-interface/dapp-15.gif "Dapp Interface changing step 15") -->
+<img src="../images/build-dapp-interface/dapp-15.gif" alt="Dapp Interface changing step 15" />
 
 I want to clarify something with the interface: with these elements we start some device. Let's visualize it. I've chosen a drone, so I will toggle classes according to `item.parameter`.
 
@@ -1305,7 +1314,8 @@ Write styles for the drone in **Launch.vue**. Don't forget `scoped` for `<style>
 
 </details>
 
-![Dapp Interface changing step 16](../images/build-dapp-interface/dapp-16.gif "Dapp Interface changing step 16")
+<!-- ![Dapp Interface changing step 16](../images/build-dapp-interface/dapp-16.gif "Dapp Interface changing step 16") -->
+<img src="../images/build-dapp-interface/dapp-16.gif" alt="Dapp Interface changing step 16" />
 
 Now let's add the **DatalogSection.vue** component.
 
@@ -1356,7 +1366,8 @@ with this:
 ```
 
 **Check:**
-![Dapp Interface changing step 17](../images/build-dapp-interface/dapp-17.gif "Dapp Interface changing step 17")
+<!-- ![Dapp Interface changing step 17](../images/build-dapp-interface/dapp-17.gif "Dapp Interface changing step 17") -->
+<img src="../images/build-dapp-interface/dapp-17.gif" alt="Dapp Interface changing step 17" />
 
 Sometimes you get some errors, it's almost inevitable. Something can go wrong with the connection or anything else can happen. So we have fallbacks with error messages through out the dapp, I haven't changed them from the start, in the code they look like:
 
@@ -1467,7 +1478,8 @@ filters: {
 
 For customization of this demo example with launching a robot, you are free to come up with any idea. Personally, I started with this town:
 
-![Dapp Interface changing step 23](../images/build-dapp-interface/dapp-23.gif "Dapp Interface changing step 23")
+<!-- ![Dapp Interface changing step 23](../images/build-dapp-interface/dapp-23.gif "Dapp Interface changing step 23") -->
+<img src="../images/build-dapp-interface/dapp-23.gif" alt="Dapp Interface changing step 23" />
 
 I won't show the whole code for this not to confuse you at all, but schematically there will be something like this:
 
@@ -1754,7 +1766,7 @@ div.demo-city-1 {
 
 **Result:**
 
-![Dapp Interface changing step 25](../images/build-dapp-interface/dapp-25.gif "Dapp Interface changing step 25")
+<!-- ![Dapp Interface changing step 25](../images/build-dapp-interface/dapp-25.gif "Dapp Interface changing step 25") -->
 
 ## Conclusion
 
@@ -1762,7 +1774,7 @@ Congratulations! Now you have redesigned the dapp and clues how to start buildin
 
 ### Checkout links
 
-- [Full code of this tutorial](https://github.com/positivecrash/wscool21-ui-dapp)
+- [Full code of this lesson](https://github.com/positivecrash/wscool21-ui-dapp)
 - [Discuss in Discord](https://discord.gg/5UWNGNaAUf)
 - [View the Robonomics Winter School 2021 schedule and summary](https://robonomics.network/blog/winter-robonomics-school/)
 - [Github of contributor](https://github.com/positivecrash)
@@ -1777,9 +1789,3 @@ If you have some extra time or want to practice your skills, there are some idea
 - Make delicate popus to inform users about changes (e.g. you can popup a message that units are received after clicking the 'Faucet' button, or you can move in the popup an error that we had in the 'Launch' section).
 
 Please, fill free to ask questions and share your results in [Discord](https://discord.gg/5UWNGNaAUf), mark me in your message `@positivecrash`
-
-
-
-
-
-

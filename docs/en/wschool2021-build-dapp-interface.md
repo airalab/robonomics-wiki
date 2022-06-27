@@ -6,7 +6,9 @@ translated: true
 
 This lesson continues the previous one, where you have already built simple application and were focused on connecting an account to a node, sending transactions and other vital functions of the dapp. Now we will **build user-friendly interface** for this application.
 
-![Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot](../images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot")
+<!-- ![Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot](../images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot") -->
+
+<img src="../images/build-dapp-interface/sum.gif" alt="Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot" />
 
 ## Prerequisites
 
@@ -410,7 +412,8 @@ const timeout = new Promise(resolve => {
 ```
 I set `1700` instead of `300` and check the result:
 
-![Dapp Interface changing step 3](../images/build-dapp-interface/dapp-3.gif "Dapp Interface changing step 3")
+<!-- ![Dapp Interface changing step 3](../images/build-dapp-interface/dapp-3.gif "Dapp Interface changing step 3") -->
+<img src="../images/build-dapp-interface/dapp-3.gif" alt="Dapp Interface changing step 3" />
 
 
 ## Using reusable components
@@ -646,7 +649,8 @@ export default {
 
 For the Button component we have emited the click from prop with `@onClick`, so I will pay attention if the faucet function is working correctly now (the balance should change on click):
 
-![Dapp Interface changing step 6](../images/build-dapp-interface/dapp-6.gif "Dapp Interface changing step 6")
+<!-- ![Dapp Interface changing step 6](../images/build-dapp-interface/dapp-6.gif "Dapp Interface changing step 6") -->
+<img src="../images/build-dapp-interface/dapp-6.gif" alt="Dapp Interface changing step 6" />
 
 ### Adding the icon
 
@@ -866,7 +870,8 @@ Let's prettify the account section a little bit more:
 
 </details>
 
-![Dapp Interface changing step 10](../images/build-dapp-interface/dapp-10.gif "Dapp Interface changing step 10")
+<!-- ![Dapp Interface changing step 10](../images/build-dapp-interface/dapp-10.gif "Dapp Interface changing step 10") -->
+<img src="../images/build-dapp-interface/dapp-10.gif" alt="Dapp Interface changing step 10" />
 
 Let's edit styles for the tabs:
 
@@ -918,7 +923,8 @@ Let's edit styles for the tabs:
 
 </details>
 
-![Dapp Interface changing step 11](../images/build-dapp-interface/dapp-11.gif "Dapp Interface changing step 11")
+<!-- ![Dapp Interface changing step 11](../images/build-dapp-interface/dapp-11.gif "Dapp Interface changing step 11") -->
+<img src="../images/build-dapp-interface/dapp-11.gif" alt="Dapp Interface changing step 11" />
 
 > Let me remind you that the finished code for this lesson is in [this](https://github.com/positivecrash/wscool21-ui-dapp) repository. And let's shift to the next steps :)
 
@@ -998,7 +1004,8 @@ input.large, select.large {
 
 **Let's check that everything works fine after updates:**
 
-![Dapp Interface changing step 12](../images/build-dapp-interface/dapp-12.gif "Dapp Interface changing step 12")
+<!-- ![Dapp Interface changing step 12](../images/build-dapp-interface/dapp-12.gif "Dapp Interface changing step 12") -->
+<img src="../images/build-dapp-interface/dapp-12.gif" alt="Dapp Interface changing step 12" />
 
 We have a datalog section through out the dapp, so I'll make a component for it.
 
@@ -1140,13 +1147,15 @@ filters: {
 
 **Let's check the datalog section in Datalog tab:**
 
-![Dapp Interface changing step 13](../images/build-dapp-interface/dapp-13.gif "Dapp Interface changing step 13")
+<!-- ![Dapp Interface changing step 13](../images/build-dapp-interface/dapp-13.gif "Dapp Interface changing step 13") -->
+<img src="../images/build-dapp-interface/dapp-13.gif" alt="Dapp Interface changing step 13" />
 
 ## Launch
 
 For this step, most of improvements have already been done, we just need to apply them to the template: import Button and Datalog components, remove the excessive title:
 
-![Dapp Interface changing step 14](../images/build-dapp-interface/dapp-14.gif "Dapp Interface changing step 14")
+<!-- ![Dapp Interface changing step 14](../images/build-dapp-interface/dapp-14.gif "Dapp Interface changing step 14") -->
+<img src="../images/build-dapp-interface/dapp-14.gif" alt="Dapp Interface changing step 14" />
 
 Let's replace `select` control element with `checkbox`.
 
@@ -1226,7 +1235,8 @@ Write this:
 
 </details>
 
-![Dapp Interface changing step 15](../images/build-dapp-interface/dapp-15.gif "Dapp Interface changing step 15")
+<!-- ![Dapp Interface changing step 15](../images/build-dapp-interface/dapp-15.gif "Dapp Interface changing step 15") -->
+<img src="../images/build-dapp-interface/dapp-15.gif" alt="Dapp Interface changing step 15" />
 
 I want to clarify something with the interface: with these elements we start some device. Let's visualize it. I've chosen a drone, so I will toggle classes according to `item.parameter`.
 
@@ -1304,7 +1314,8 @@ Write styles for the drone in **Launch.vue**. Don't forget `scoped` for `<style>
 
 </details>
 
-![Dapp Interface changing step 16](../images/build-dapp-interface/dapp-16.gif "Dapp Interface changing step 16")
+<!-- ![Dapp Interface changing step 16](../images/build-dapp-interface/dapp-16.gif "Dapp Interface changing step 16") -->
+<img src="../images/build-dapp-interface/dapp-16.gif" alt="Dapp Interface changing step 16" />
 
 Now let's add the **DatalogSection.vue** component.
 
@@ -1355,7 +1366,8 @@ with this:
 ```
 
 **Check:**
-![Dapp Interface changing step 17](../images/build-dapp-interface/dapp-17.gif "Dapp Interface changing step 17")
+<!-- ![Dapp Interface changing step 17](../images/build-dapp-interface/dapp-17.gif "Dapp Interface changing step 17") -->
+<img src="../images/build-dapp-interface/dapp-17.gif" alt="Dapp Interface changing step 17" />
 
 Sometimes you get some errors, it's almost inevitable. Something can go wrong with the connection or anything else can happen. So we have fallbacks with error messages through out the dapp, I haven't changed them from the start, in the code they look like:
 
@@ -1466,7 +1478,8 @@ filters: {
 
 For customization of this demo example with launching a robot, you are free to come up with any idea. Personally, I started with this town:
 
-![Dapp Interface changing step 23](../images/build-dapp-interface/dapp-23.gif "Dapp Interface changing step 23")
+<!-- ![Dapp Interface changing step 23](../images/build-dapp-interface/dapp-23.gif "Dapp Interface changing step 23") -->
+<img src="../images/build-dapp-interface/dapp-23.gif" alt="Dapp Interface changing step 23" />
 
 I won't show the whole code for this not to confuse you at all, but schematically there will be something like this:
 
@@ -1753,7 +1766,7 @@ div.demo-city-1 {
 
 **Result:**
 
-![Dapp Interface changing step 25](../images/build-dapp-interface/dapp-25.gif "Dapp Interface changing step 25")
+<!-- ![Dapp Interface changing step 25](../images/build-dapp-interface/dapp-25.gif "Dapp Interface changing step 25") -->
 
 ## Conclusion
 
