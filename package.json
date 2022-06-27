@@ -5,7 +5,8 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "develop-m1": "export NODE_OPTIONS=--openssl-legacy-provider && gridsome develop"
   },
   "dependencies": {
     "@gridsome/plugin-sitemap": "^0.4.0",
