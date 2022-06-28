@@ -20,9 +20,9 @@
 
 export default {
   components: {
-    Header: () => import('~/components/Header.vue'),
-    Footer: () => import('~/components/Footer.vue'),
-  },
+    Header: () => import("~/components/Header.vue"),
+    Footer: () => import("~/components/Footer.vue"),
+},
 
 }
 </script>

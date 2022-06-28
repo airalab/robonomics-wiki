@@ -5,6 +5,8 @@ import VueCookies from 'vue-cookies'
 import '~/assets/style/index.scss'
 import DefaultLayout from '~/layouts/Default.vue'
 import SidebarLayout from '~/layouts/Sidebar.vue'
+import ColoredNote from '~/components/ColoredNote.vue';
+import PictureWithLink from '~/components/PictureWithLink.vue';
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, { router, head, isClient, appOptions }) {
@@ -15,6 +17,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   Vue.component('Layout', DefaultLayout)
   Vue.component('Sidebar', SidebarLayout)
+  Vue.component('ColoredNote', ColoredNote)
+  Vue.component('PictureWithLink', PictureWithLink)
   Vue.use(Vuex)
     
   Vue.use(VueCookies)

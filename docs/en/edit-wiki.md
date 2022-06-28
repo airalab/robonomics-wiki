@@ -31,6 +31,29 @@ translated: true # "true" if it has been translated in current language (see loc
 * Make sure your image is web optimised and at the same time it looks good
 2. Insert images standart way for Markdown files.
 
+### Link images
+It is also possible to add link images with or without captions. You need to use custom component:
+
+with caption
+
+```
+<picture-with-link link="https://wiki.robonomics.network/" src="example_image.jpg" caption="EXPLORE ROBONOMICS WIKI" />
+```
+
+or without caption 
+
+```
+<picture-with-link link="https://wiki.robonomics.network/" src="example_image.jpg" />
+```
+
+>  src: path to the image
+
+>  link: link to the needed page
+
+>  caption: caption for the image
+
+
+
 ### YouTube videos
 You can embed any YouTube video in doc by inserting share link as separate paragraph without any additional quotes or tags, e.g.: `https://youtu.be/kQaSwNYHJQ8`
 
@@ -45,6 +68,17 @@ Robonomics WIKI has support for Asciinema. To insert Asciinema, please, follow t
 [Asciinema docs](https://asciinema.org/docs/embedding)
 
 In the example above vid is 14.
+
+
+### Notes
+You can add notes and give them specific types:
+* warning (orange color)
+* okay (green color)
+* note (gray color)
+
+```
+<colored-note type="okay" title="Some information about robots" />
+```
 
 ## Add new doc
 
