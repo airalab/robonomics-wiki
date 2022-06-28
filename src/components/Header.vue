@@ -4,7 +4,6 @@
 
       <div class="header-top">
 
-
         <g-link to="/" class="header-logo">
           <g-image :alt="$st('Robonomics WIKI', $store.state.locale)" src="~/assets/images/robonomics-logo-sign-sm.svg" class="inline-block"/>
           <span class="inline-block">{{ $st('Robonomics WIKI', $store.state.locale) }}</span>
@@ -118,11 +117,11 @@
 export default {
 
   components: {
-      NavIcon: () => import('~/components/NavIcon.vue'),
-      Search: () => import('~/components/Search.vue'),
-      ToggleTheme: () => import('~/components/ToggleTheme.vue'),
-      ToggleLang: () => import('~/components/ToggleLang.vue'),
-  },
+    NavIcon: () => import("~/components/NavIcon.vue"),
+    Search: () => import("~/components/Search.vue"),
+    ToggleTheme: () => import("~/components/ToggleTheme.vue"),
+    ToggleLang: () => import("~/components/ToggleLang.vue"),
+},
 
   computed:{
     homePage(){
