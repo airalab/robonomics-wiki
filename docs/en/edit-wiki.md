@@ -32,25 +32,42 @@ translated: true # "true" if it has been translated in current language (see loc
 2. Insert images standart way for Markdown files.
 
 ### Link images
-It is also possible to add link images with or without captions. You need to use custom component:
+It is also possible to add link image with or without caption. You need to use custom component:
 
-with caption
+`with caption`
 
-```
-<picture-with-link link="https://wiki.robonomics.network/" src="example_image.jpg" caption="EXPLORE ROBONOMICS WIKI" />
-```
-
-or without caption 
-
-```
-<picture-with-link link="https://wiki.robonomics.network/" src="example_image.jpg" />
+```c
+<robo-wiki-picture link="/docs/community" src="example_image.jpg" caption="EXPLORE ROBONOMICS WIKI" />
 ```
 
->  src: path to the image
+`or without caption` 
 
->  link: link to the needed page
+```c
+<robo-wiki-picture link="/docs/community" src="example_image.jpg" />
+```
 
->  caption: caption for the image
+`or simple image` 
+
+```c
+<robo-wiki-picture src="example_image.jpg" />
+```
+
+`or simple image with caption`
+
+```c
+<robo-wiki-picture src="example_image.jpg" caption="EXPLORE ROBONOMICS WIKI" />
+```
+
+`src (required)` - path to the image:
+
+ * if you uploaded your image directly to the `/docs/images/` use: 
+ `url-of-your-doc`
+
+ * if you uploaded image in one of the folders than use: `folder-name/url-of-your-doc`
+
+`link` - link to the needed page
+
+`caption` - caption for the image
 
 
 
@@ -72,12 +89,28 @@ In the example above vid is 14.
 
 ### Notes
 You can add notes and give them specific types:
-* warning (orange color)
-* okay (green color)
-* note (gray color)
+* warning (<span style="color:#f08432">**orange color**</span>)
+* okay (<span style="color:#3eaf7c">**green color**</span>)
+* note (<span style="color:#90a4b7">**grey color**</span>)
 
+`note with title`
+
+```c
+<robo-wiki-note type="okay" title="Some information about robots" />
 ```
-<colored-note type="okay" title="Some information about robots" />
+
+`note with content`
+
+```c
+<robo-wiki-note type="okay">Fascinating information about robonomics here only</robo-wiki-note>
+```
+
+`note with title and content`
+
+```c
+<robo-wiki-note type="okay" title="Robonomics for you">
+  Fascinating information about robonomics here only
+</robo-wiki-note>
 ```
 
 ## Add new doc
