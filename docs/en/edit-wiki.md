@@ -24,15 +24,21 @@ translated: true # "true" if it has been translated in current language (see loc
 ---
 ```
 
-### Images
-1. Upload image in folder `/docs/images/url-of-your-doc`
+### How to upload images
+Upload image in folder `/docs/images/url-of-your-doc`
 * If image needs to be localized, insert all of them in one folder
 * Use locale appendix in name of images if it's localized, e.g. `image_en.jpg`
 * Make sure your image is web optimised and at the same time it looks good
-2. Insert images standart way for Markdown files.
 
-### Link images
-It is also possible to add link image with or without caption. You need to use custom component:
+### How to insert images
+
+There are two ways for inerting pictures in your documents:
+
+<robo-wiki-note type="warning">
+
+It is recommended to insert pictures with built-in tag `<robo-wiki-picture>`, however you may also use standart way for Markdown files.
+
+</robo-wiki-note>
 
 `with caption`
 
@@ -57,6 +63,14 @@ It is also possible to add link image with or without caption. You need to use c
 ```c
 <robo-wiki-picture src="example_image.jpg" caption="EXPLORE ROBONOMICS WIKI" />
 ```
+
+`image with alt`
+
+```c
+<robo-wiki-picture src="example_image.jpg" caption="EXPLORE ROBONOMICS WIKI" alt="this is alternative text for image" />
+```
+
+**Props for robo-wiki-picture**
 
 `src (required)` - path to the image:
 
@@ -87,7 +101,7 @@ Robonomics WIKI has support for Asciinema. To insert Asciinema, please, follow t
 In the example above vid is 14.
 
 
-### Notes
+### Notes & warnings
 You can add notes and give them specific types:
 * warning (<span style="color:#f08432">**orange color**</span>)
 * okay (<span style="color:#3eaf7c">**green color**</span>)
@@ -112,6 +126,25 @@ You can add notes and give them specific types:
   Fascinating information about robonomics here only
 </robo-wiki-note>
 ```
+
+<robo-wiki-note type="okay" title="Join Discord">
+
+[Join Robonomics Developers Discord](https://discord.gg/jTxqGeF5Qy) to connect with community and get technical support.
+
+</robo-wiki-note>
+
+<robo-wiki-note type="note" title="Join Discord">
+
+[Join Robonomics Developers Discord](https://discord.gg/jTxqGeF5Qy) to connect with community and get technical support.
+
+</robo-wiki-note>
+
+<robo-wiki-note type="warning" title="Join Discord">
+
+[Join Robonomics Developers Discord](https://discord.gg/jTxqGeF5Qy) to connect with community and get technical support.
+
+</robo-wiki-note>
+
 
 ## Add new doc
 

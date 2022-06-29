@@ -8,8 +8,10 @@
           <li v-if="$page.doc.contributors.length > 0">
             <span>{{$st('Main contributors', $store.state.locale)}}: </span>
             <template v-for="(contributor, index) in $page.doc.contributors">
-              <g-link :to="'https://github.com/'+contributor">@{{contributor}}</g-link>
-              <span v-if="index != $page.doc.contributors.length-1">, </span>
+              <span :key="index">
+                <g-link :to="'https://github.com/'+contributor">@{{contributor}}</g-link>
+                <span v-if="index != $page.doc.contributors.length-1">, </span>
+              </span>
             </template>
           </li>
 

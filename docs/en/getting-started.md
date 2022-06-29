@@ -10,7 +10,9 @@ Robonomics platform provides tools for working with the robot economy network. R
 
 The following chart describes what place Robonomics takes in the scenario:
 
-![Robonomics Chart](../images/robonomics_network_basic_scheme.jpg "Robonomics Network scenario")
+<robo-wiki-picture src="robonomics_network_basic_scheme.jpg" alt="Robonomics Network scenario" />
+
+<!-- ![Robonomics Chart](../images/robonomics_network_basic_scheme.jpg "Robonomics Network scenario") -->
 
 Find more in [Building dApps on Robonomics deck](https://gateway.pinata.cloud/ipfs/QmNNdLG3vuTsJtZtNByWaDTKRYPcBZSZcsJ1FY6rTYCixQ/Robonomics_keypoint_March_2021.pdf)
 
