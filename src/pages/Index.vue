@@ -104,10 +104,9 @@
 
 
 <script>
-
 export default {
   components: {
-      Button: () => import('~/components/Button.vue'),
+      Button: () => import('~/components/Button.vue')
     },
 
 
