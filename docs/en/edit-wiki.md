@@ -31,6 +31,46 @@ translated: true # "true" if it has been translated in current language (see loc
 * Make sure your image is web optimised and at the same time it looks good
 2. Insert images standart way for Markdown files.
 
+### Link images
+It is also possible to add link image with or without caption. You need to use custom component:
+
+`with caption`
+
+```c
+<robo-wiki-picture link="/docs/community" src="example_image.jpg" caption="EXPLORE ROBONOMICS WIKI" />
+```
+
+`or without caption` 
+
+```c
+<robo-wiki-picture link="/docs/community" src="example_image.jpg" />
+```
+
+`or simple image` 
+
+```c
+<robo-wiki-picture src="example_image.jpg" />
+```
+
+`or simple image with caption`
+
+```c
+<robo-wiki-picture src="example_image.jpg" caption="EXPLORE ROBONOMICS WIKI" />
+```
+
+`src (required)` - path to the image:
+
+ * if you uploaded your image directly to the `/docs/images/` use: 
+ `url-of-your-doc`
+
+ * if you uploaded image in one of the folders than use: `folder-name/url-of-your-doc`
+
+`link` - link to the needed page
+
+`caption` - caption for the image
+
+
+
 ### YouTube videos
 You can embed any YouTube video in doc by inserting share link as separate paragraph without any additional quotes or tags, e.g.: `https://youtu.be/kQaSwNYHJQ8`
 
@@ -45,6 +85,33 @@ Robonomics WIKI has support for Asciinema. To insert Asciinema, please, follow t
 [Asciinema docs](https://asciinema.org/docs/embedding)
 
 In the example above vid is 14.
+
+
+### Notes
+You can add notes and give them specific types:
+* warning (<span style="color:#f08432">**orange color**</span>)
+* okay (<span style="color:#3eaf7c">**green color**</span>)
+* note (<span style="color:#90a4b7">**grey color**</span>)
+
+`note with title`
+
+```c
+<robo-wiki-note type="okay" title="Some information about robots" />
+```
+
+`note with content`
+
+```c
+<robo-wiki-note type="okay">Fascinating information about robonomics here only</robo-wiki-note>
+```
+
+`note with title and content`
+
+```c
+<robo-wiki-note type="okay" title="Robonomics for you">
+  Fascinating information about robonomics here only
+</robo-wiki-note>
+```
 
 ## Add new doc
 
