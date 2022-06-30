@@ -1,6 +1,7 @@
 ---
 title: How to edit WIKI
 contributors: [positivecrash]
+description: Ways to help us improve our wiki
 translated: true
 ---
 

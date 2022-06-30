@@ -9,7 +9,7 @@
 const localeOptions = require('./data/localization.json')
 const localeSettings = JSON.parse(JSON.stringify(localeOptions))
 
-const fs = require('fs')
+const fs = require('fs');
 
 module.exports = function (api) {
   // api.loadSource(({ addCollection }) => {
