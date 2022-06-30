@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import VueCookies from 'vue-cookies'
+import VueMeta from 'vue-meta'
 
 import '~/assets/style/index.scss'
 import DefaultLayout from '~/layouts/Default.vue'
@@ -22,6 +23,11 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.use(Vuex)
     
   Vue.use(VueCookies)
+
+  Vue.use(VueMeta, {
+    // optional pluginOptions
+    refreshOnceOnNavigation: true
+  })
   
   appOptions.store = new Vuex.Store({
     state: {

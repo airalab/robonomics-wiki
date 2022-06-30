@@ -46,8 +46,4 @@ export default {
     flex-direction: column;
   }
 
-  .robo-wiki-picture__link {
-    width: 500px;
-  }
-
 </style>
