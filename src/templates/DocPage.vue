@@ -384,6 +384,8 @@ export default {
           {
             key: 'og:image',
             name: 'og:image',
+            width: 400,
+            height: 300,
             content: this.generateImageUrl(this.$page.doc.title.replace(/ /g,"%20"))
           }
         ]
