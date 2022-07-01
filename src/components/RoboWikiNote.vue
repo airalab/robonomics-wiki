@@ -1,9 +1,9 @@
 <template>
-  <div v-if="title || this.$slots.default" :class="['robo-wiki-note', classList]">
-      <h2 v-if="title" class="robo-wiki-note__colorful-title" :style="{marginBottom: this.$slots.default ? '0.5rem' : 0}">{{title}}</h2>
-      <p class="robo-wiki-note__text" v-if="this.$slots.default">
+  <div v-if="title || this.$slots.default" :class="classList">
+      <div v-if="title" class="robo-wiki-note__title">{{title}}</div>
+      <div class="robo-wiki-note__text" v-if="this.$slots.default">
         <slot/>
-      </p>
+      </div>
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
     },
     type: {
       type: String,
-      default: null,
+      default: 'note',
       required: true,
       validator: function (value) {
         return ['okay', 'warning', 'note'].indexOf(value) !== -1;
@@ -29,6 +29,7 @@ export default {
   computed: {
     classList() {
       return {
+        [`robo-wiki-note`]: true,
         [`robo-wiki-note--${this.type}`]: this.type,
       };
     },
@@ -40,30 +41,46 @@ export default {
 <style scoped>
 
   .robo-wiki-note {
-    --type-color: var(--color-note);
+    --type-color-accent: var(--color-note-accent);
+    --type-color-pale: var(--color-note-pale);
+    --type-color-text: var(--color-note-text);
 
     padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--color-note-text);
-    background-color: var(--color-note-bg);
-    border-top: 1px solid transparent;
-    border-left: 0.4rem solid var(--type-color);
-    text-transform: none;
-  }
-  
-  .robo-wiki-note--okay { --type-color: var(--color-okay);}
-  .robo-wiki-note--warning { --type-color: var(--color-warning);}
-  .robo-wiki-note--note { --type-color: var(--color-note);}
-
-  .robo-wiki-note__colorful-title {
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-transform: none;
+    background-color: var(--type-color-pale);
+    border-left: 0.4rem solid var(--type-color-accent);
+    color: var(--type-color-text);
   }
 
-  .robo-wiki-note__text {
+  .robo-wiki-note:not(:last-child) {
+    margin-bottom: var(--space-text);
+  }
+
+  .robo-wiki-note__title {
+    color: var(--type-color-accent);
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .robo-wiki-note__text p:last-child {
     margin-bottom: 0;
   }
+
+
+  .robo-wiki-note--okay { 
+    --type-color-accent: var(--color-note-accent--okay);
+    --type-color-pale: var(--color-note-pale--okay);
+  }
+
+  .robo-wiki-note--warning {
+    --type-color-accent: var(--color-note-accent--warning);
+    --type-color-pale: var(--color-note-pale--warning);
+  }
+
+  .robo-wiki-note--note {
+    --type-color-accent: var(--color-note-accent);
+    --type-color-pale: var(--color-note-pale);
+  }
+
 
 </style>
