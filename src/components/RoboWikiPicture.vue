@@ -1,20 +1,31 @@
 <template>
-  <div class="robo-wiki-picture">
-    <g-link v-if="link" :to="link" class="robo-wiki-picture__link">
-      <g-image v-if="type === 'markdown'" ref="image" :src="require(`!!assets-loader!@imagesMarkdown/${src}`)" width="500"/> 
-      <g-image v-else :src="require(`!!assets-loader!@images/${src}`)" width="500"/> 
+  <figure class="robo-wiki-picture">
+    <g-link 
+      :to="link ? link : picture.src" 
+      class="robo-wiki-picture__link"
+      target="_blank"
+    >
+      <g-image 
+        v-if="type === 'markdown'" 
+        ref="image" 
+        v-bind="$attrs"
+        :src="picture" 
+      />
+
+      <g-image 
+        v-else 
+        v-bind="$attrs"
+        :src="require(`!!assets-loader!@images/${src}`)" 
+      /> 
     </g-link>
-    <div v-else>
-        <g-image v-if="type === 'markdown'" ref="image" :src="require(`!!assets-loader!@imagesMarkdown/${src}`)" width="500"/> 
-        <g-image v-else :src="require(`!!assets-loader!@images/${src}`)" width="500"/> 
-    </div>
-    <span v-if="caption" class="robo-wiki-picture__text">{{caption}}</span>
-  </div>
+    <figcaption v-if="caption" class="robo-wiki-picture__text">{{caption}}</figcaption>
+  </figure>
 </template>
 
 <script>
 export default {
   name: 'RoboWikiPicture',
+  inheritAttrs: false,
 
   props: {
     caption: {
@@ -36,6 +47,12 @@ export default {
     }
   },
 
+  data(){
+    return {
+      picture: require(`!!assets-loader!@imagesMarkdown/${this.src}`)
+    }
+  },
+
 }
 </script>
 
@@ -44,6 +61,10 @@ export default {
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+
+  .robo-wiki-picture__link[target=_blank]:after {
+    display: none;
   }
 
 </style>
