@@ -15,6 +15,7 @@
             </template>
           </li>
 
+
           <!-- we do not need to show this if there are no contributors-->
           <li v-if="$page.doc.contributors.length > 0 && !isCurrent('/docs/contributing/')">
             <g-link to="/docs/contributing/">{{$st('How to contribute', $store.state.locale)}}</g-link>
@@ -206,6 +207,7 @@ query ($id: ID!) {
   doc: docPage (id: $id) {
   	id
     title
+    description
     contributors
     translated
     headings (depth: h1) {
@@ -253,7 +255,8 @@ export default {
       ghUpdateDate: null,
       ghUpdateName: null,
       ghUpdateUrl: null,
-      octokit: null
+      octokit: null,
+      ogImage: null,
     }
   },
 
@@ -261,10 +264,13 @@ export default {
     "$route.path": function(current, old) {
       this.github_lastupdated()
       this.github_link()
-    }
+    },
   },
 
+  
+
   methods: {
+
 
     flatten(o){
 
@@ -321,7 +327,11 @@ export default {
       let filteredPath = this.$route.path.split('/').filter(el => !this.$static.metadata.locales.includes(el))
       let clearedPath = filteredPath.join('/')
       return clearedPath == url
-    }
+    },
+
+    generateImageUrl(title) {
+      return `https://test-git-main-zirreal.vercel.app/${title}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg&widths=0&heights=0`
+    } 
 
   },
 
@@ -352,9 +362,31 @@ export default {
   },
 
 	metaInfo () {
-	    const { title, headings } = this.$page.doc
+	    const { title, headings, description, content } = this.$page.doc
 	    return {
-	      title: title || (headings.length ? headings[0].value : undefined)
+	      title: title  || (headings.length ? headings[0].value : undefined),
+        meta: [
+          {
+            key: 'og:title',
+            name: 'og:title',
+            content: title  || (headings.length ? headings[0].value : undefined)
+          },
+          {
+            key: 'description',
+            name: 'description',
+            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[^a-zA-Z]/g, " ").replace(/\s+/g,' ').trim()}...`
+          },
+          {
+            key: 'og:description',
+            name: 'og:description',
+            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[^a-zA-Z ]/g, "").trim()}...`
+          },
+          {
+            key: 'og:image',
+            name: 'og:image',
+            content: this.ogImage
+          }
+        ]
 	    }
 	  },
 
@@ -362,6 +394,7 @@ export default {
     this.octokit = new Octokit()
     this.github_lastupdated()
     this.github_link()
+    this.ogImage = this.generateImageUrl(this.$page.doc.title.replace(/ /g,"%20"));
 
   },
 
@@ -372,6 +405,8 @@ export default {
   // },
 
   updated(){
+    // used here to generate new image on every page
+    this.ogImage = this.generateImageUrl(this.$page.doc.title.replace(/ /g,"%20"));
 
     //Hide popup mobile menu after clickcing (cause - no real page reload in Gridsome)
     document.querySelectorAll('.menu-link').forEach(function(el) {
