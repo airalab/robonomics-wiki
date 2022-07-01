@@ -382,7 +382,7 @@ export default {
           {
             key: 'og:image',
             name: 'og:image',
-            content: this.ogImage
+            content: this.generateImageUrl(this.$page.doc.title.replace(/ /g,"%20"))
           }
         ]
 	    }
@@ -392,8 +392,6 @@ export default {
     this.octokit = new Octokit()
     this.github_lastupdated()
     this.github_link()
-    this.ogImage = this.generateImageUrl(this.$page.doc.title.replace(/ /g,"%20"));
-
   },
 
   // mounted(){
@@ -403,8 +401,6 @@ export default {
   // },
 
   updated(){
-    // used here to generate new image on every page
-    this.ogImage = this.generateImageUrl(this.$page.doc.title.replace(/ /g,"%20"));
 
     //Hide popup mobile menu after clickcing (cause - no real page reload in Gridsome)
     document.querySelectorAll('.menu-link').forEach(function(el) {
