@@ -2,6 +2,7 @@
 title: Connecting AIRA via SSH
 contributors: [akru]
 translated: true
+cover_image: "../docsCovers/en/aira-connecting-via-ssh.png"
 ---
 
 It is more convenient to work with virtual machine via ssh connection. In this section we will configure VM.

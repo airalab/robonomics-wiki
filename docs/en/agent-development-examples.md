@@ -2,6 +2,7 @@
 title:  Agent development examples
 # contributors: []
 translated: true
+cover_image: "../docsCovers/en/agent-development-examples.png"
 ---
 
 Useful pieces of code and a few scenarios. All source code is [here](https://github.com/vourhey/robonomics_tutorials).

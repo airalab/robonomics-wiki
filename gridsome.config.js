@@ -36,7 +36,7 @@ module.exports = {
       options: {
         include: ['/docs', '/docs/**']
       }
-    }
+    },
   ],
 
 
@@ -49,6 +49,8 @@ module.exports = {
 
     config.resolve.alias.set('@imagesMarkdown', '/docs/images')
     config.resolve.alias.set('@images', '@/assets/images')
+
+
     
     config.mode('development')
   }

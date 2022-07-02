@@ -2,6 +2,7 @@
 title: ROS-based Projects for Smart Spaces
 contributors: [Fingerling42]
 translated: false
+cover_image: "../docsCovers/ru/ros-smart-projects.png"
 ---
 
 Throughout its 15 years of development, the Robot Operating System framework was integrated with dozens of [various robotic devices](https://robots.ros.org/), and there are even more packages with algorithms and tools developed by the community. Truth be told, there are now so many projects, and the chaoticness of the description style of their repositories grew so much that it is currently quite problematic to find projects dedicated to a specific subject topic. 

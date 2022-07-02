@@ -2,6 +2,7 @@
 title: Robonomics Smart Home
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
+cover_image: "../docsCovers/es/home-assistant-begin.png"
 ---
 If you don't want your data to be stored in some Xiaomi or another server that you can't access, you can use you own local server with Home Assistant and Robonomics to control your smart devices outdoors. There are instructions on how to connect your smart home devices to the Robonomics network. 
 

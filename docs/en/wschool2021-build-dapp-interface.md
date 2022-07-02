@@ -2,6 +2,7 @@
 title: Lesson 6.2, Build IoT Dapps For End Users
 contributors: [positivecrash]
 translated: true
+cover_image: "../docsCovers/en/wschool2021-build-dapp-interface.png"
 ---
 
 This lesson continues the previous one, where you have already built simple application and were focused on connecting an account to a node, sending transactions and other vital functions of the dapp. Now we will **build user-friendly interface** for this application.

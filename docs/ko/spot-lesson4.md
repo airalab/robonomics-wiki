@@ -2,6 +2,7 @@
 title: Lesson 4. GraphNav service. Mapping and navigating on the map
 contributors: [LoSk-p, khssnv]
 translated: false
+cover_image: "../docsCovers/ko/spot-lesson4.png"
 ---
 
 In the fourth lesson you will learn how to record and play autonomous missions with GraphNav service.

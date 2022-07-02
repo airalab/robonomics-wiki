@@ -2,6 +2,7 @@
 title: Configuration Options Description
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: true
+cover_image: "../docsCovers/ru/configuration-options-description.png"
 ---
 
 Basically, you can think of the package as a black box with one input (sensor data) and many outputs.

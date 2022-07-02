@@ -2,6 +2,7 @@
 title: Troubleshooting
 contributors: [LoSk-p]
 translated: false
+cover_image: "../docsCovers/es/spot-troubleshooting.png"
 ---
 
 ### Admin socket already exists 

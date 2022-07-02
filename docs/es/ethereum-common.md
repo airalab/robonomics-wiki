@@ -2,6 +2,7 @@
 title: Ethereum Common
 contributors: [ensrationis, akru]
 translated: false
+cover_image: "../docsCovers/es/ethereum-common.png"
 ---
 
 The packages contains two launch files: `erc20.launch` and `signer.launch`. The last one is included in [Robonomics Liability](/docs/robonomics-liability).
