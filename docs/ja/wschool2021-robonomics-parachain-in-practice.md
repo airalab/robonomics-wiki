@@ -2,6 +2,7 @@
 title: Lesson 4, 実践でのRobonomics parachain
 contributors: [KiichiSugihara]
 translated: true
+cover_image: "../docsCovers/ja/wschool2021-robonomics-parachain-in-practice.png"
 ---
 import Asciinema from '~/components/Asciinema.vue'
 

@@ -2,6 +2,7 @@
 title: How to Send Launch with Subscription
 contributors: [LoSk-p]
 translated: false
+cover_image: "../docsCovers/ko/subscription-launch.png"
 ---
 
 If your address is in devices of any subscription you can send extrinsics with no fee. Lets try to send `launch`.

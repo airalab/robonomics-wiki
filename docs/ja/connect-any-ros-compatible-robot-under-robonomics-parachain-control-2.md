@@ -2,6 +2,7 @@
 title: Connect any ROS-compatible robot under Robonomics parachain control. Part 2, IPFS
 contributors: [PaTara43]
 translated: false
+cover_image: "../docsCovers/ja/connect-any-ros-compatible-robot-under-robonomics-parachain-control-2.png"
 ---
 
 **In this article we will continue using Robonomics tools to make a drone be controlled by a parachain. This time we will add sending data to IPFS and hash storing in chain options. Below is the instruction and code snippets. Requirements:**

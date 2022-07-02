@@ -2,6 +2,7 @@
 title: Lightsout Factory
 contributors: [ValanisZz, GiggleSeagull, Valiento]
 translated: true
+cover_image: "../docsCovers/pt/lightsout-factory-about.png"
 ---
 
 ![Lightsout Factory Preview](../images/lightsout-factory/factory_preview_numbers.jpg)

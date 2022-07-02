@@ -208,6 +208,7 @@ query ($id: ID!) {
   	id
     title
     description
+    cover_image
     contributors
     translated
     headings (depth: h1) {
@@ -236,6 +237,7 @@ query {
 <script>
 import items from '../../data/sidebar_docs.yaml'
 import {Octokit} from '@octokit/rest'
+import M from 'minimatch';
 
 export default {
 
@@ -256,7 +258,6 @@ export default {
       ghUpdateName: null,
       ghUpdateUrl: null,
       octokit: null,
-      ogImage: null,
     }
   },
 
@@ -327,11 +328,7 @@ export default {
       let filteredPath = this.$route.path.split('/').filter(el => !this.$static.metadata.locales.includes(el))
       let clearedPath = filteredPath.join('/')
       return clearedPath == url
-    },
-
-    generateImageUrl(title) {
-      return `https://test-git-main-zirreal.vercel.app/${title}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg&widths=0&heights=0`
-    } 
+    }, 
 
   },
 
@@ -362,7 +359,7 @@ export default {
   },
 
 	metaInfo () {
-	    const { title, headings, description, content } = this.$page.doc
+	    const { title, headings, description, content, cover_image } = this.$page.doc
 	    return {
 	      title: title  || (headings.length ? headings[0].value : undefined),
         meta: [
@@ -379,14 +376,14 @@ export default {
           {
             key: 'og:description',
             name: 'og:description',
-            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[^a-zA-Z ]/g, "").trim()}...`
+            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[^a-zA-Z]/g, " ").replace(/\s+/g,' ').trim()}...`
           },
           {
             key: 'og:image',
             name: 'og:image',
             width: 400,
             height: 300,
-            content: this.generateImageUrl(this.$page.doc.title.replace(/ /g,"%20"))
+            content: cover_image.src 
           }
         ]
 	    }

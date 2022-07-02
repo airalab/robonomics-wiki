@@ -2,6 +2,7 @@
 title: 용어 사전
 contributors: [Vourhey, arinaml]
 translated: true
+cover_image: "../docsCovers/ko/glossary.png"
 ---
 
 ## 에이전트

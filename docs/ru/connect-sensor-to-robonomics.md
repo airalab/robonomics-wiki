@@ -2,6 +2,7 @@
 title: Подключение датчика к Робономике
 contributors: [LoSk-p, Vourhey, Ludovich88]
 translated: true
+cover_image: "../docsCovers/ru/connect-sensor-to-robonomics.png"
 ---
 
 ## Устройство датчика

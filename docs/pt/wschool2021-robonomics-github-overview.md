@@ -2,6 +2,7 @@
 title: Lesson 2, Robonomics AIRA Overview
 contributors: [Ensrationis]
 translated: true
+cover_image: "../docsCovers/pt/wschool2021-robonomics-github-overview.png"
 ---
 In this lesson you will learn about Autonomous Intelligent Robot Agent (AIRA). 
 

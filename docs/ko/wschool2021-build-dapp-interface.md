@@ -2,6 +2,7 @@
 title: 6.2 강, 스크래치에서 DAPP 인터페이스 구축
 contributors: [positivecrash, arinaml]
 translated: true
+cover_image: "../docsCovers/ko/wschool2021-build-dapp-interface.png"
 ---
 
 <!-- ![Robonomics 및 Polkadot 위에 분산 된 애플리케이션을위한 사용자 인터페이스 구축](../images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot") -->

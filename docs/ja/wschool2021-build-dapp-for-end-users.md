@@ -2,6 +2,7 @@
 title: Lesson 6.1, エンドユーザー向けのIoT Dappsの構築
 contributors: [KiichiSugihara]
 translated: true
+cover_image: "../docsCovers/ja/wschool2021-build-dapp-for-end-users.png"
 ---
 
 ## 準備

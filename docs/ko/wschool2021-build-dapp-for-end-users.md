@@ -2,6 +2,7 @@
 title: 6.1과, 최종 사용자를위한 IOT DAPP 구축, 1 부
 contributors: [vol4tim, arinaml]
 translated: true
+cover_image: "../docsCovers/ko/wschool2021-build-dapp-for-end-users.png"
 ---
 
 ## 준비하기

@@ -2,6 +2,7 @@
 title: Обзор децентрализованного приложения Робономики
 contributors: [Vourhey, katerina510]
 translated: true
+cover_image: "../docsCovers/ru/robonomics-dapp-overview.png"
 ---
 
 Вы можете взаимодействовать с сетью Робономики, используя интерфейс [децентрализованного приложения Робономики](https://dapp.robonomics.network/#/). Оно доступно для браузеров с [расширением Metamask](https://metamask.io). На главной странице Вы можете видеть статистику сети:
