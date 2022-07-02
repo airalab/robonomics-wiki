@@ -383,7 +383,7 @@ export default {
             name: 'og:image',
             width: 400,
             height: 300,
-            content: cover_image.src 
+            content: cover_image && cover_image.src 
           }
         ]
 	    }
