@@ -359,32 +359,70 @@ export default {
   },
 
 	metaInfo () {
-	    const { title, headings, description, content, cover_image } = this.$page.doc
+	    const { title, headings, description, content, cover_image } = this.$page.doc;
 	    return {
 	      title: title  || (headings.length ? headings[0].value : undefined),
         meta: [
           {
-            key: 'og:title',
-            name: 'og:title',
+            name: "description",
+            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[/\{L}/]/g, " ").replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/\s+/g,' ').trim()}...`
+          },
+          {
+            property: "og:url",
+            content: 'https://wiki.robonomics.network/'
+          },
+          {
+            property: "og:title",
             content: title  || (headings.length ? headings[0].value : undefined)
           },
           {
-            key: 'description',
-            name: 'description',
-            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[^a-zA-Z]/g, " ").replace(/\s+/g,' ').trim()}...`
+            property: "og:description",
+            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[/\{L}/]/g, " ").replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/\s+/g,' ').trim()}...`
           },
           {
-            key: 'og:description',
-            name: 'og:description',
-            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[^a-zA-Z]/g, " ").replace(/\s+/g,' ').trim()}...`
+            property: "og:image",
+            content: cover_image && `https://wiki.robonomics.network${cover_image.src}`  
           },
           {
-            key: 'og:image',
-            name: 'og:image',
-            width: 400,
-            height: 300,
-            content: cover_image && cover_image.src 
-          }
+            property: "og:image:width",
+            content: 1280
+          },
+          {
+            property: "og:image:height",
+            content: 765
+          },
+          {
+            property: "og:url",
+            content: "https://wiki.robonomics.network"
+          },
+          {
+            property: "og:site_name",
+            content: "WIKI ROBONOMICS"
+          },
+          {
+            name: "twitter:card",
+            content: "summary_large_image"
+          },
+          {
+            name: "twitter:title",
+            content: title || (headings.length ? headings[0].value : undefined),
+          },
+          {
+            property: "twitter:description",
+            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[/\{L}/]/g, " ").replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/\s+/g,' ').trim()}...`
+          },
+          {
+            property: "twitter:image",
+            content: cover_image && `https://wiki.robonomics.network${cover_image.src}` 
+          },
+          {
+            property: "twitter:site",
+            content: "@AIRA_Robonomics"
+          },
+          {
+            property: 'twitter:creator',
+            content: "@AIRA_Robonomics"
+          },
         ]
 	    }
 	  },
