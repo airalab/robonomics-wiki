@@ -2,6 +2,7 @@
 title: Playground Overview
 contributors: [LoSk-p]
 translated: false
+cover_image: "../docsCovers/es/playground-overview.png"
 ---
 
 Robonomics allows to use robots as autonomous agents that receive commands from a human or another robot and do some useful work, storing a report of their actions in Blockchain. The interaction between the robot and the Robonomics platform is quite simple with a [Robonomics IO](/docs/rio-overview).

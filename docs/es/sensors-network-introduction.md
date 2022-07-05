@@ -2,6 +2,7 @@
 title: Introduction
 contributors: [LoSk-p]
 translated: false
+cover_image: "../docsCovers/es/sensors-network-introduction.png"
 ---
 
 ## What is Sensors Robonomics Network?

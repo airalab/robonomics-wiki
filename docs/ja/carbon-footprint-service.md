@@ -2,6 +2,7 @@
 title: Offsetting Service 
 contributors: [tubleronchik]
 translated: false
+cover_image: "../docsCovers/ja/carbon-footprint-service.png"
 ---
 
 Example of work is in the video:

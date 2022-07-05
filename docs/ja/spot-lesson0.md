@@ -2,6 +2,7 @@
 title: Lesson 0. Configure and test connection to Spot
 contributors: [LoSk-p, vitl2907, khssnv]
 translated: false
+cover_image: "../docsCovers/ja/spot-lesson0.png"
 ---
 
 Let's start establishing connection to the robot.

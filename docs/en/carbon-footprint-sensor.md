@@ -2,6 +2,7 @@
 title: Connect sensor
 contributors: [LoSk-p, makyul]
 translated: true
+cover_image: "../docsCovers/en/carbon-footprint-sensor.png"
 ---
 
 Example of work is in the video:

@@ -2,6 +2,7 @@
 title: Connect Sensor To Robonomics Network
 contributors: [LoSk-p, Vourhey, Ludovich88]
 translated: false
+cover_image: "../docsCovers/ko/connect-sensor-to-robonomics.png"
 ---
 
 ## Hardware

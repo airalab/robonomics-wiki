@@ -221,6 +221,7 @@ query ($id: ID!) {
   	id
     title
     description
+    cover_image
     contributors
     translated
     headings (depth: h1) {
@@ -249,6 +250,7 @@ query {
 <script>
 import items from '../../data/sidebar_docs.yaml'
 import {Octokit} from '@octokit/rest'
+import M from 'minimatch';
 
 export default {
 
@@ -269,7 +271,6 @@ export default {
       ghUpdateName: null,
       ghUpdateUrl: null,
       octokit: null,
-      ogImage: null,
     }
   },
 
@@ -340,11 +341,7 @@ export default {
       let filteredPath = this.$route.path.split('/').filter(el => !this.$static.metadata.locales.includes(el))
       let clearedPath = filteredPath.join('/')
       return clearedPath == url
-    },
-
-    generateImageUrl(title) {
-      return `https://test-git-main-zirreal.vercel.app/${title}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg&widths=0&heights=0`
-    } 
+    }, 
 
   },
 
@@ -375,30 +372,71 @@ export default {
   },
 
 	metaInfo () {
-	    const { title, headings, description, content } = this.$page.doc
+	    const { title, headings, description, content, cover_image } = this.$page.doc;
 	    return {
 	      title: title  || (headings.length ? headings[0].value : undefined),
         meta: [
           {
-            key: 'og:title',
-            name: 'og:title',
+            name: "description",
+            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[/\{L}/]/g, " ").replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/\s+/g,' ').trim()}...`
+          },
+          {
+            property: "og:url",
+            content: 'https://wiki.robonomics.network/'
+          },
+          {
+            property: "og:title",
             content: title  || (headings.length ? headings[0].value : undefined)
           },
           {
-            key: 'description',
-            name: 'description',
-            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[^a-zA-Z]/g, " ").replace(/\s+/g,' ').trim()}...`
+            property: "og:description",
+            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[/\{L}/]/g, " ").replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/\s+/g,' ').trim()}...`
           },
           {
-            key: 'og:description',
-            name: 'og:description',
-            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[^a-zA-Z ]/g, "").trim()}...`
+            property: "og:image",
+            content: cover_image && `https://wiki.robonomics.network${cover_image.src}`  
           },
           {
-            key: 'og:image',
-            name: 'og:image',
-            content: this.ogImage
-          }
+            property: "og:image:width",
+            content: 1280
+          },
+          {
+            property: "og:image:height",
+            content: 765
+          },
+          {
+            property: "og:url",
+            content: "https://wiki.robonomics.network"
+          },
+          {
+            property: "og:site_name",
+            content: "WIKI ROBONOMICS"
+          },
+          
+          {
+            name: "twitter:card",
+            content: "summary_large_image"
+          },
+          {
+            name: "twitter:title",
+            content: title || (headings.length ? headings[0].value : undefined),
+          },
+          {
+            property: "twitter:description",
+            content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[/\{L}/]/g, " ").replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/\s+/g,' ').trim()}...`
+          },
+          {
+            property: "twitter:image",
+            content: cover_image && `https://wiki.robonomics.network${cover_image.src}` 
+          },
+          {
+            property: "twitter:site",
+            content: "@AIRA_Robonomics"
+          },
+          {
+            property: 'twitter:creator',
+            content: "@AIRA_Robonomics"
+          },
         ]
 	    }
 	  },
@@ -407,8 +445,6 @@ export default {
     this.octokit = new Octokit()
     this.github_lastupdated()
     this.github_link()
-    this.ogImage = this.generateImageUrl(this.$page.doc.title.replace(/ /g,"%20"));
-
   },
 
   // mounted(){
@@ -418,8 +454,6 @@ export default {
   // },
 
   updated(){
-    // used here to generate new image on every page
-    this.ogImage = this.generateImageUrl(this.$page.doc.title.replace(/ /g,"%20"));
 
     //Hide popup mobile menu after clickcing (cause - no real page reload in Gridsome)
     document.querySelectorAll('.menu-link').forEach(function(el) {

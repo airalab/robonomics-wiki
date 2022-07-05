@@ -2,6 +2,7 @@
 title: Ports mapping
 contributors: [ValanisZz, GiggleSeagul, Valiento]
 translated: true
+cover_image: "../docsCovers/en/lightsout-factory-ports.png"
 ---
 
 ## PLC scheme

@@ -2,6 +2,7 @@
 title: Substrate Cumulus Parachain Testsuite for cross-chain messaging 
 contributors: [tubleronchik] 
 translated: false 
+cover_image: "../docsCovers/ja/connectivity-terminal-readme.png"
 ---
 
 # Sensors-Connectivity Terminal Readme

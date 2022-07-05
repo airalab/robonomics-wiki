@@ -2,6 +2,7 @@
 title: Conexión de Aira a través de SSH
 contributors: [akru]
 translated: true
+cover_image: "../docsCovers/es/aira-connecting-via-ssh.png"
 ---
 
 Es más conveniente trabajar con una máquina virtual a través de una conexión SSH. En esta sección configuraremos VM.

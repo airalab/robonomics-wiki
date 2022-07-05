@@ -2,6 +2,7 @@
 title: Passing dynamic parameters
 contributors: [ensrationis, akru]
 translated: false
+cover_image: "../docsCovers/es/hardware-passing-dynamic-parameters.png"
 ---
 
 In [previous](/docs/connect-simple-cps/) example we discussed how to create a simple CPS with Arduino. Our first CPS is able to do only one task: to blink a led. We suggest you to get through the first lesson. Now let's expand the example and teach our board to blink blue or red led depending on objective parameter.

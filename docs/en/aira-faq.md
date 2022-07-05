@@ -2,6 +2,7 @@
 title: Frequently Asked Questions about AIRA
 contributors: [Vourhey]
 translated: true
+cover_image: "../docsCovers/en/aira-faq.png"
 ---
 
 ## How to see logs from main services?

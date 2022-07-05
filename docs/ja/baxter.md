@@ -2,6 +2,7 @@
 title: Control Baxter robot with robonomics
 contributors: [nakata5321, Vourhey]
 translated: false
+cover_image: "../docsCovers/ja/baxter.png"
 ---
 
 Example of how it works:
