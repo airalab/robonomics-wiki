@@ -52,7 +52,14 @@
         </div>
 
         <div id="sidebarContent">
+          <!-- <robo-wiki-note type="note" title="Tested for">
+            <a href="#" style="display:inline-block;background:var(--color-note-accent);color:var(--color-note-pale);padding:0 .5rem;font-size:80%;font-weight:bold;border-radius:2px;margin-right:1rem;text-decoration:none">Rust 1.62.0</a>
+            <a href="#" style="display:inline-block;background:var(--color-note-accent);color:var(--color-note-pale);padding:0 .5rem;font-size:80%;font-weight:bold;border-radius:2px;margin-right:1rem;text-decoration:none">Robonomics v1.4.0</a>
+          </robo-wiki-note> -->
+
           <SidebarContent />
+          
+          <!-- <Button label="Create an issue" link="#" size="small" /> -->
         </div>
       </div>
 
@@ -99,6 +106,12 @@
   #sidebarContent, #sidebarDocs {
     position: sticky;
     top: 7rem;
+    height: 67vh;
+    overflow-y: scroll;
+  }
+
+  #sidebarDocs {
+    height: 80vh;
   }
 
   .sidebarMobileToggle{

@@ -44,8 +44,8 @@ body {
 
   --space: 3.5rem;
   --space-text: 1.25rem;
-  --content-width: 820px;
-  --page-width: 1660px;
+  --content-width: auto;
+  --page-width: 1920px;
   --radius: 4px;
 
   --width-sidebar-left: 250px;
@@ -82,7 +82,7 @@ body[data-theme="dark"] {
 	 --color-link-background-highlight: var(--color-dark);
 
 	--color-note-accent: #384856;
-	--color-note-pale: #687784;
+	--color-note-pale: #7f8e9c;
 	--color-note-text: #ffffff;
 	--color-note-accent--okay: #234a2a;
 	--color-note-pale--okay: #559a61;
