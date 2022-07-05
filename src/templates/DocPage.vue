@@ -53,6 +53,8 @@
 
         <div id="sidebarContent">
           <SidebarContent />
+          
+          <Button label="Create an issue" link="#" size="small" />
         </div>
       </div>
 
@@ -99,6 +101,12 @@
   #sidebarContent, #sidebarDocs {
     position: sticky;
     top: 7rem;
+    height: 67vh;
+    overflow-y: scroll;
+  }
+
+  #sidebarDocs {
+    height: 80vh;
   }
 
   .sidebarMobileToggle{
