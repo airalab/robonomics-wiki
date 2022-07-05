@@ -1,7 +1,7 @@
 ---
-title: how to update robonomics collator node version
+title: How to update robonomics collator node version
 contributors: [Leemo94]
-translated: false
+translated: true
 ---
 
 It is recommended to have read the following articles prior to reading this post. ["how-to-build-collator-node"](https://github.com/airalab/robonomics-wiki/blob/master/docs/en/how-to-build-collator-node.md) & ["how-to-launch-the-robonomics-collator"](https://github.com/airalab/robonomics-wiki/blob/master/docs/en/how-to-launch-the-robonomics-collator.md).
