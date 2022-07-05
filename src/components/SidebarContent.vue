@@ -1,16 +1,12 @@
 <template>
 
-	<details v-if="subtitles.length > 0 && subtitles[0].depth !== 4" open>
-		<summary>{{$st('In this article', $store.state.locale)}}</summary>
-
-		<ul v-if="subtitles.length" class="menu">
-	      <li :class="'menu__item-depth-' + subtitle.depth" v-for="subtitle in subtitles" :key="subtitle.value">
-	        <a class="menu__item menu-link" :href="subtitle.anchor">
-	          {{ subtitle.value }}
-	        </a>
-	      </li>
-	    </ul>
-	</details>
+	<ul v-if="subtitles.length" class="menu">
+		<li :class="'menu__item-depth-' + subtitle.depth" v-for="subtitle in subtitles" :key="subtitle.value">
+			<a class="menu__item menu-link" :href="subtitle.anchor">
+				{{ subtitle.value }}
+			</a>
+		</li>
+	</ul>
 
 </template>
 
