@@ -110,7 +110,6 @@ export default {
 
       font-family: var(--font-family);
       font-size: var(--font-size);
-      line-height: 1;
       font-weight: 500;
 
       text-transform: uppercase;
