@@ -2,6 +2,7 @@
 title: Raspberry Setup
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: true
+cover_image: "../docsCovers/en/raspberry-setup.png"
 ---
 
 For both methods, the first thing you need to do is setup a Raspberry Pi.

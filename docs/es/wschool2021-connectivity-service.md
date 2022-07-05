@@ -2,6 +2,7 @@
 title: Lección 5, Conectividad
 contributors: [vourhey]
 translated: false
+cover_image: "../docsCovers/es/wschool2021-connectivity-service.png"
 ---
 
 ## IoT como un pie multiple

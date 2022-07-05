@@ -2,6 +2,7 @@
 title: Robonomics Liability Messages
 contributors: [ensrationis, akru]
 translated: false
+cover_image: "../docsCovers/ru/robonomics-liability-messages.png"
 ---
 
 ## robonomics_liability/Liability.msg

@@ -2,6 +2,7 @@
 title: Подключить марсоход Curiosity под управлением парачейна Робономики
 contributors: [Vourhey, PaTara43, katerina510]
 translated: true
+cover_image: "../docsCovers/ru/connect-mars-curiosity-rover-under-robonomics-parachain-control.png"
 ---
 
 **Давайте посмотрим, как контроль Парачейна Робономики заставляет двигаться марсоход Curiosity. Требования:**

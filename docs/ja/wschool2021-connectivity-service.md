@@ -2,6 +2,7 @@
 title: Lesson 5, コネクティビティ
 contributors: [KiichiSugihara]
 translated: true
+cover_image: "../docsCovers/ja/wschool2021-connectivity-service.png"
 ---
 
 ## 複数のパイとしてのIoT

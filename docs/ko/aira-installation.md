@@ -2,6 +2,7 @@
 title: AIRA Installation
 contributors: [akru]
 translated: false
+cover_image: "../docsCovers/ko/aira-installation.png"
 ---
 
 - [**How to launch AIRA on VirtualBox**](/docs/aira-installation-on-vb/)

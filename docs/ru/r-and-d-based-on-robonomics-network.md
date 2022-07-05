@@ -2,6 +2,7 @@
 title: R&D на базе Робономики
 contributors: [PaTara43]
 translated: true
+cover_image: "../docsCovers/ru/r-and-d-based-on-robonomics-network.png"
 ---
 
 За 4 года участники проекта Робономика выполнили 13 R&D проектов в процессе написания текущей версии платформы Робономика. Ознакомьтесь со списком опробованных нами сценариев применения web3+robotics:

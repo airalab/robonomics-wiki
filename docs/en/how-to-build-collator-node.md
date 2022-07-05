@@ -1,7 +1,7 @@
 ---
 title: How to build collator node from source
 contributors: [dergudzon, Leemo94]
-translated: true
+translated: false
 ---
 
 https://youtu.be/wnAtD7w0Pxk

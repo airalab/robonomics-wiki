@@ -2,6 +2,7 @@
 title: Введение
 contributors: [Vourhey, positivecrash]
 translated: true
+cover_image: "../docsCovers/ru/getting-started.png"
 ---
 
 ## Что такое Робономика

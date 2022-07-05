@@ -2,6 +2,7 @@
 title: How to edit WIKI
 contributors: [positivecrash]
 description: Ways to help us improve our wiki
+cover_image: "../docsCovers/en/edit-wiki.png"
 translated: true
 ---
 
