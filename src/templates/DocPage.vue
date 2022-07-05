@@ -399,6 +399,7 @@ export default {
             property: "og:site_name",
             content: "WIKI ROBONOMICS"
           },
+          
           {
             name: "twitter:card",
             content: "summary_large_image"
