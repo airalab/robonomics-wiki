@@ -57,8 +57,8 @@ export default {
 
   .robo-wiki-note__title {
     color: var(--type-color-accent);
+    font-size: 90%;
     font-weight: bold;
-    letter-spacing: 1px;
     text-transform: uppercase;
   }
 
