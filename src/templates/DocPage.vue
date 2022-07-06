@@ -60,7 +60,7 @@
 
           <SidebarContent />
           
-          <Button label="Create an issue" link="https://github.com/airalab/robonomics-wiki/issues/new" size="small" />
+          <Button label="Create an issue" :link="`https://github.com/airalab/robonomics-wiki/issues/new?${ghIssueTitle}`" size="small" />
         </div>
       </div>
 
@@ -285,6 +285,7 @@ export default {
       ghUpdateName: null,
       ghUpdateUrl: null,
       octokit: null,
+      ghIssueTitle: null
     }
   },
 
@@ -292,6 +293,7 @@ export default {
     "$route.path": function(current, old) {
       this.github_lastupdated()
       this.github_link()
+      this.getTitleForIssue()
     },
   },
 
@@ -356,6 +358,13 @@ export default {
       let clearedPath = filteredPath.join('/')
       return clearedPath == url
     }, 
+
+    getTitleForIssue() {
+      const url = new URL('https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&');
+      const params = new URLSearchParams(url.search);
+      params.append('title', `issue for document page - ${this.$page.doc.title}`);
+      this.ghIssueTitle = params.toString()
+    }
 
   },
 
@@ -459,6 +468,7 @@ export default {
     this.octokit = new Octokit()
     this.github_lastupdated()
     this.github_link()
+    this.getTitleForIssue()
   },
 
   // mounted(){
@@ -468,7 +478,6 @@ export default {
   // },
 
   updated(){
-    console.log(this.$page.doc.cover_image)
     //Hide popup mobile menu after clickcing (cause - no real page reload in Gridsome)
     document.querySelectorAll('.menu-link').forEach(function(el) {
 
