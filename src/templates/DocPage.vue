@@ -52,14 +52,15 @@
         </div>
 
         <div id="sidebarContent">
-          <!-- <robo-wiki-note type="note" title="Tested for">
-            <a href="#" style="display:inline-block;background:var(--color-note-accent);color:var(--color-note-pale);padding:0 .5rem;font-size:80%;font-weight:bold;border-radius:2px;margin-right:1rem;text-decoration:none">Rust 1.62.0</a>
-            <a href="#" style="display:inline-block;background:var(--color-note-accent);color:var(--color-note-pale);padding:0 .5rem;font-size:80%;font-weight:bold;border-radius:2px;margin-right:1rem;text-decoration:none">Robonomics v1.4.0</a>
-          </robo-wiki-note> -->
+          <robo-wiki-note v-if="$page.doc.tools.length" type="note" title="Tested for">
+            <a v-for="tool in $page.doc.tools" :href="tool.match(/\bhttps?:\/\/\S+/gi) ||  '#' " :key="tool" class="testedFor__link">
+             {{tool.replace(/\bhttps?:\/\/\S+/gi, '')}}
+            </a>
+          </robo-wiki-note>
 
           <SidebarContent />
           
-          <!-- <Button label="Create an issue" link="#" size="small" /> -->
+          <Button label="Create an issue" link="https://github.com/airalab/robonomics-wiki/issues/new" size="small" />
         </div>
       </div>
 
@@ -174,6 +175,18 @@
 
   }
 
+  .testedFor__link {
+    display:inline-block;
+    padding: 0 .5rem;
+    margin-right: 1rem;
+    font-size: 80%;
+    font-weight: 600;
+    border-radius: 2px;
+    background: var(--color-note-accent);
+    color: var(--color-note-pale) !important;
+    text-decoration: none
+  }
+
   @media screen and (max-width: 1080px) {
 
     .page{
@@ -233,6 +246,7 @@ query ($id: ID!) {
       anchor
     }
     content
+    tools
   }
 }
 </page-query>
@@ -422,19 +436,19 @@ export default {
             content: title || (headings.length ? headings[0].value : undefined),
           },
           {
-            property: "twitter:description",
+            name: "twitter:description",
             content: description || `${content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[/\{L}/]/g, " ").replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/\s+/g,' ').trim()}...`
           },
           {
-            property: "twitter:image",
+            name: "twitter:image",
             content: cover_image && `https://wiki.robonomics.network${cover_image.src}` 
           },
           {
-            property: "twitter:site",
+            name: "twitter:site",
             content: "@AIRA_Robonomics"
           },
           {
-            property: 'twitter:creator',
+            name: 'twitter:creator',
             content: "@AIRA_Robonomics"
           },
         ]
@@ -448,13 +462,13 @@ export default {
   },
 
   // mounted(){
-  //   if( !localStorage.getItem('lang') ){
-  //     localStorage.setItem('lang', 'en')
-  //   }
+  //   // if( !localStorage.getItem('lang') ){
+  //   //   localStorage.setItem('lang', 'en')
+  //   // }
   // },
 
   updated(){
-
+    console.log(this.$page.doc.cover_image)
     //Hide popup mobile menu after clickcing (cause - no real page reload in Gridsome)
     document.querySelectorAll('.menu-link').forEach(function(el) {
 
