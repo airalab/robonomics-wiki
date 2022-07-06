@@ -3,9 +3,7 @@
     
     <div class="footerPusher">
       <Header />
-
         <main class="main layout__page post">
-
           <div class="page">
             <div id="sidebarDocs" class="page__sidebar hiddenMobile">
               <SidebarDocs :items="items" />
@@ -13,6 +11,7 @@
             </div>
 
             <div>
+              <Breadcrumbs :items="items" />
               <slot/>
             </div>
           </div>
@@ -187,6 +186,7 @@ export default {
 
 	components: {
       SidebarDocs: () => import("~/components/SidebarDocs.vue"),
+      Breadcrumbs: () => import("~/components/Breadcrumbs.vue"),
       Banner: () => import("~/components/Banner.vue"),
       NavIcon: () => import('~/components/NavIcon.vue'),
       Button: () => import('~/components/Button.vue'),
@@ -236,7 +236,6 @@ export default {
     },
 
   },
-
 
   updated(){
 

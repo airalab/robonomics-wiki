@@ -1,6 +1,6 @@
 <template>
 
-  <div class="search-container"  :class="toggleClasses" tabindex="0" @focusin="focusIn" @focusout="focusOut">
+  <div v-if="isShown" class="search-container"  :class="toggleClasses" tabindex="0" @focusin="focusIn" @focusout="focusOut">
 
       <!-- v-on:keyup.down="SearchLinksFocus" -->
       <input v-model="search" type="search" :aria-label="$st('Search', $store.state.locale)" :placeholder="$st('Search', $store.state.locale)"/>
@@ -125,7 +125,9 @@ query{
       return {
         isActive: false,
         isFocused: false,
-        search: ''
+        search: '',
+        isShown: true,
+        lastScrollPosition: 0
       }
     },
 
@@ -158,6 +160,22 @@ query{
         this.isActive = false;
       },
 
+      onScroll() {
+        // Get the current scroll position
+        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+        // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+        if (currentScrollPosition < 0) {
+          return
+        }
+        // Here we determine whether we need to show or hide the navbar
+        // Set the current scroll position as the last scroll position
+          if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 50) {
+            return
+          }
+          this.isShown = currentScrollPosition < this.lastScrollPosition
+          this.lastScrollPosition = currentScrollPosition
+      }
+
       // SearchLinksFocus() {
       //   document.querySelector('.search-container nav a:first-child').focus()
       // }
@@ -169,5 +187,18 @@ query{
       }
     },
 
+    mounted () {
+      window.addEventListener('resize', () => {
+        if (window.innerWidth <= 860) {
+          window.addEventListener('scroll', this.onScroll)
+        } else {
+          window.removeEventListener('scroll', this.onScroll)
+        }
+      })
+    },
+    
+    beforeDestroy () {
+      window.removeEventListener('scroll', this.onScroll)
+    }
   }
 </script>
