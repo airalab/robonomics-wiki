@@ -114,10 +114,67 @@ export default {
     return {
       title: this.$st('Enter title', this.$store.state.locale),
       meta: [
-        { name: "description", content: this.$st('Site Description', this.$store.state.locale) }
+        { name: "description", content: this.$st('Site Description', this.$store.state.locale) },
+        {
+          property: "og:url",
+          content: 'https://wiki.robonomics.network/'
+        },
+        {
+          property: "og:title",
+          content: this.$st('Enter title', this.$store.state.locale),
+        },
+        {
+          property: "og:description",
+          content:  this.$st('Site Description', this.$store.state.locale)
+        },
+        {
+          property: "og:image",
+          content: `https://wiki.robonomics.network${require('@images/wiki-og-image-index.png')}`
+        },
+        {
+          property: "og:image:width",
+          content: 1280
+        },
+        {
+          property: "og:image:height",
+          content: 765
+        },
+        {
+          property: "og:url",
+          content: "https://wiki.robonomics.network"
+        },
+        {
+          property: "og:site_name",
+          content: "WIKI ROBONOMICS"
+        },
+
+        {
+          name: "twitter:card",
+          content: "summary_large_image"
+        },
+        {
+          name: "twitter:title",
+          content: this.$st('Enter title', this.$store.state.locale),
+        },
+        {
+          name: "twitter:description",
+          content:  this.$st('Site Description', this.$store.state.locale)
+        },
+        {
+          name: "twitter:image",
+          content: `https://wiki.robonomics.network${require('@images/wiki-og-image-index.png')}`
+        },
+        {
+          name: "twitter:site",
+          content: "@AIRA_Robonomics"
+        },
+        {
+          name: 'twitter:creator',
+          content: "@AIRA_Robonomics"
+        },
      ]
    }
-  }
+  },
 }
 
 </script>
