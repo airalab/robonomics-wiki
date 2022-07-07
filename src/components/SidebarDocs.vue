@@ -88,9 +88,9 @@ export default {
         return eval(`item.title_${this.$static.metadata.defaultLocale}`)
       }
         
-    }
+    },
 
-  }
+  },
   
 }
 </script>
