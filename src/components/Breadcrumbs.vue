@@ -113,6 +113,7 @@ export default {
     display: flex;
     align-items: center;
     list-style: none;
+    margin-left: initial;
   }
 
    .breadcrumbs__home-icon {
@@ -132,6 +133,7 @@ export default {
   .breadcrumbs__item {
     display: flex;
     align-items: center;
+    margin: initial;
   }
 
   .breadcrumbs__item:not(:last-child) {
