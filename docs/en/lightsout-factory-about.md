@@ -1,8 +1,8 @@
 ---
 title: Lightsout Factory
+cover_image: 'lightsout-factory-about-en.png' 
 contributors: [ValanisZz, GiggleSeagull, Valiento]
 translated: true
-cover_image: "../docsCovers/en/lightsout-factory-about.png"
 ---
 
 ![Lightsout Factory Preview](../images/lightsout-factory/factory_preview_numbers.jpg)

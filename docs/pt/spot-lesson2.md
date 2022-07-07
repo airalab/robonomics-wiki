@@ -1,8 +1,8 @@
 ---
 title: Lesson 2. Remote controlled and programmed motion
+cover_image: 'spot-lesson2-pt.png' 
 contributors: [LoSk-p, khssnv]
 translated: true
-cover_image: "../docsCovers/pt/spot-lesson2.png"
 ---
 
 In the second lesson you will learn how to use Spot Command services and walk with Spot.

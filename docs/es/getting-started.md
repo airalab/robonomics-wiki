@@ -1,8 +1,8 @@
 ---
 title: Getting Started
+cover_image: 'getting-started-es.png' 
 contributors: [Vourhey, positivecrash]
 translated: false
-cover_image: "../docsCovers/es/getting-started.png"
 ---
 
 ## What is Robonomics

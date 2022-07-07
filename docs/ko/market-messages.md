@@ -1,8 +1,8 @@
 ---
 title:  Market messages
+cover_image: 'market-messages-ko.png' 
 # contributors: []
 translated: false
-cover_image: "../docsCovers/ko/market-messages.png"
 ---
 
 Market messages is used for exchange **Demand** and **Offer** information. It also used for delivery **Result** messages with liability execution reports.

@@ -1,8 +1,8 @@
 ---
 title: Robonomics DApp Overview
+cover_image: 'robonomics-dapp-overview-pt.png' 
 contributors: [Vourhey]
 translated: true
-cover_image: "../docsCovers/pt/robonomics-dapp-overview.png"
 ---
 
 You can operate with Robonomics Network using the interface of [Robonomics Network Dapp (decentralized application)](https://dapp.robonomics.network/#/). It is available in browsers with [Metamask extension](https://metamask.io). On the first page you will see the statistics of the network:

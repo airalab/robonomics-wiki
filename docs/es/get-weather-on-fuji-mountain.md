@@ -1,8 +1,8 @@
 ---
 title: DEMO "Obtenga el clima en la montaña de Fuji"
+cover_image: 'get-weather-on-fuji-mountain-es.png' 
 contributors: [Vourhey]
 translated: true
-cover_image: "../docsCovers/es/get-weather-on-fuji-mountain.png"
 ---
 
 **Comencemos con un ejemplo rápido de lo que Robonomics es capaz de hacer en 5 minutos. Requisitos: [extensión Metamask](https://metamask.io/)**

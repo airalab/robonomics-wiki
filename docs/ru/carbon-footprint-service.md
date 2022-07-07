@@ -1,8 +1,8 @@
 ---
 title: Offsetting Service 
+cover_image: 'carbon-footprint-service-ru.png' 
 contributors: [tubleronchik]
 translated: false
-cover_image: "../docsCovers/ru/carbon-footprint-service.png"
 ---
 
 Example of work is in the video:

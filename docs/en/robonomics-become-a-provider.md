@@ -1,8 +1,8 @@
 ---
 title: Become a Provider
+cover_image: 'robonomics-become-a-provider-en.png' 
 contributors: [ensrationis, akru]
 translated: true
-cover_image: "../docsCovers/en/robonomics-become-a-provider.png"
 ---
 
 This page describes how to create a lighthouse and become a provider in the Robonomics network.

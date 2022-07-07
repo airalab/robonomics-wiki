@@ -1,8 +1,8 @@
 ---
 title: Robonomics Liability
+cover_image: 'robonomics-liability-pt.png' 
 contributors: [ensrationis, akru]
 translated: true
-cover_image: "../docsCovers/pt/robonomics-liability.png"
 ---
 
 The package is responsible for receiving `New Liability` events (`listener` node) and playing topics from `objective` field (`executor` node).

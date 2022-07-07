@@ -1,8 +1,8 @@
 ---
 title: 과, 실제 ROBONOMICS  파라체인
+cover_image: 'wschool2021-robonomics-parachain-in-practice-ko.png' 
 contributors: [akru, arinaml]
 translated: true
-cover_image: "../docsCovers/ko/wschool2021-robonomics-io-in-practice.png"
 ---
 import Asciinema from '~/components/Asciinema.vue'
 

@@ -1,8 +1,8 @@
 ---
 title: Robonomics Smart Home
+cover_image: 'notifications-pt.png' 
 contributors: [LoSk-p]
 translated: true
-cover_image: "../docsCovers/pt/notifications.png"
 ---
 
 You can receive notifications on your smartphone with [notify](https://notify.events/). Girstly register there and on `Control Panel` creae new channel:

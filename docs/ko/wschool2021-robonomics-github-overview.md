@@ -1,8 +1,8 @@
 ---
 title: 레슨 2, ROBONOMICS AIRA 개요
+cover_image: 'wschool2021-robonomics-github-overview-ko.png' 
 contributors: [Ensrationis, arinaml]
 translated: true
-cover_image: "../docsCovers/ko/wschool2021-robonomics-github-overview.png"
 ---
 
 ## 1 단계 : VIRTUALBOX에 AIRA 설치

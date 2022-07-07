@@ -1,8 +1,8 @@
 ---
 title: DEMO "Get Weather on Fuji Mountain"
+cover_image: 'get-weather-on-fuji-mountain-ko.png' 
 contributors: [Vourhey]
 translated: false
-cover_image: "../docsCovers/ko/get-weather-on-fuji-mountain.png"
 ---
 
 **Let's start from a quick example of what Robonomics is able to do within 5 minutes. Requirements: [Metamask extension](https://metamask.io/)**

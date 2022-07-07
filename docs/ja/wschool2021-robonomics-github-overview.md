@@ -1,8 +1,8 @@
 ---
 title: Lesson 2, RobonomicsのAIRA概要
+cover_image: 'wschool2021-robonomics-github-overview-ja.png' 
 contributors: [KiichiSugihara]
 translated: true
-cover_image: "../docsCovers/ja/wschool2021-robonomics-github-overview.png"
 ---
 
 ## Step 1: VirtualBox上にAIRAをインストール

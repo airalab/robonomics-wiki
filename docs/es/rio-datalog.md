@@ -1,8 +1,8 @@
 ---
 title: Robonomics IO Datalog
+cover_image: 'rio-datalog-es.png' 
 contributors: [Vourhey, PaTara43]
 translated: false
-cover_image: "../docsCovers/es/rio-datalog.png"
 ---
 
 Datalog module allows you to store any string on blockchain

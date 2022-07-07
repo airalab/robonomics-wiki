@@ -1,8 +1,8 @@
 ---
 title: Robonomics Smart Home
+cover_image: 'home-assistant-begin-pt.png' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: true
-cover_image: "../docsCovers/pt/home-assistant-begin.png"
 ---
 There are instructions on how to connect your smart home devices to the Robonomics network. You need Robonomics [accounts](/docs/create-account-in-dapp/) for each device, they will publish encrypted data in datalog. Also you need user account that will send commands to devices end encrypt/decrypt data.
 

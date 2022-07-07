@@ -1,8 +1,8 @@
 ---
 title: Robonomics + Prometheus + Grafana
+cover_image: 'robonomics-prometheus-grafana-ru.png' 
 contributors: [Vourhey]
 translated: false
-cover_image: "../docsCovers/ru/robonomics-prometheus-grafana.png"
 ---
 
 **The following instruction is provided by [Hubo Bubo](https://github.com/hubobubo)**

@@ -53,9 +53,9 @@
 
         <div id="sidebarContent">
           <robo-wiki-note v-if="$page.doc.tools.length" type="note" title="Tested for">
-            <a v-for="tool in $page.doc.tools" :href="tool.match(/\bhttps?:\/\/\S+/gi) ||  '#' " :key="tool" class="testedFor__link">
+            <g-link v-for="tool in $page.doc.tools" :href="tool.match(/\bhttps?:\/\/\S+/gi) ||  '#' " :key="tool" class="testedFor__link">
              {{tool.replace(/\bhttps?:\/\/\S+/gi, '')}}
-            </a>
+            </g-link>
           </robo-wiki-note>
 
           <SidebarContent />
@@ -184,7 +184,13 @@
     border-radius: 2px;
     background: var(--color-note-accent);
     color: var(--color-note-pale) !important;
-    text-decoration: none
+    text-decoration: none;
+    cursor: default;
+
+  }
+
+  a[href^="http"].testedFor__link {
+    cursor: pointer;
   }
 
   @media screen and (max-width: 1080px) {
@@ -285,7 +291,8 @@ export default {
       ghUpdateName: null,
       ghUpdateUrl: null,
       octokit: null,
-      ghIssueTitle: null
+      ghIssueTitle: null,
+      ogImageSrc: null,
     }
   },
 
@@ -294,6 +301,7 @@ export default {
       this.github_lastupdated()
       this.github_link()
       this.getTitleForIssue()
+      this.ogImageSrc = this.$page.doc.cover_image;
     },
   },
 
@@ -362,7 +370,7 @@ export default {
     getTitleForIssue() {
       const url = new URL('https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&');
       const params = new URLSearchParams(url.search);
-      params.append('title', `issue for document page - ${this.$page.doc.title}`);
+      params.append('title', `issue for document page - ${this.$page.doc.title}(${this.locale})`);
       this.ghIssueTitle = params.toString()
     }
 
@@ -417,7 +425,7 @@ export default {
           },
           {
             property: "og:image",
-            content: cover_image && `https://wiki.robonomics.network${cover_image.src}`  
+            content: cover_image && `https://wiki.robonomics.network${require('/docs/docsCovers/'+ this.ogImageSrc)}`  
           },
           {
             property: "og:image:width",
@@ -450,7 +458,7 @@ export default {
           },
           {
             name: "twitter:image",
-            content: cover_image && `https://wiki.robonomics.network${cover_image.src}` 
+            content: cover_image && `https://wiki.robonomics.network${require('/docs/docsCovers/'+ this.ogImageSrc)}`
           },
           {
             name: "twitter:site",
@@ -464,18 +472,22 @@ export default {
 	    }
 	  },
 
+  created() {
+    this.getTitleForIssue()
+    this.ogImageSrc =  this.$page.doc.cover_image;
+  },
+
   mounted() {
     this.octokit = new Octokit()
     this.github_lastupdated()
     this.github_link()
-    this.getTitleForIssue()
   },
 
-  // mounted(){
-  //   // if( !localStorage.getItem('lang') ){
-  //   //   localStorage.setItem('lang', 'en')
-  //   // }
-  // },
+  mounted(){
+    // if( !localStorage.getItem('lang') ){
+    //   localStorage.setItem('lang', 'en')
+    // }
+  },
 
   updated(){
     //Hide popup mobile menu after clickcing (cause - no real page reload in Gridsome)

@@ -1,8 +1,8 @@
 ---
 title: How to Run Robonomics Dev Node
+cover_image: 'run-dev-node-ja.png' 
 contributors: [LoSk-p]
 translated: false
-cover_image: "../docsCovers/ja/run-dev-node.png"
 ---
 
 For testing your applications on Robonomics you may want to need to run it in the dev mode.

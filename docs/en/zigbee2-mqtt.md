@@ -1,8 +1,8 @@
 ---
 title: Connect Sensors with Zigbee2MQTT 
+cover_image: 'zigbee2-mqtt-en.png' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: true
-cover_image: "../docsCovers/en/zigbee2-mqtt.png"
 ---
 
 ## Mosquitto MQTT broker

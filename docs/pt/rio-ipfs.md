@@ -1,8 +1,8 @@
 ---
 title: Robonomics IO IPFS
+cover_image: 'rio-ipfs-pt.png' 
 contributors: [Vourhey]
 translated: true
-cover_image: "../docsCovers/pt/rio-ipfs.png"
 ---
 
 It serves downloading and uploading files from/to IPFS network

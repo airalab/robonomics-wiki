@@ -1,8 +1,8 @@
 ---
 title: IoT Firmware Upload
+cover_image: 'iot-firmware-upload-ja.png' 
 # contributors: []
 translated: false
-cover_image: "../docsCovers/ja/iot-firmware-upload.png"
 ---
 
 There are few firmwares for ESP like boards:

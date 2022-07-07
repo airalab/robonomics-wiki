@@ -1,8 +1,8 @@
 ---
 title: 레슨 1, 로봇을 사용자 앱에 연결
+cover_image: 'wschool2021-connect-robotics-to-user-app-ko.png' 
 contributors: [Ensrationis, arinaml]
 translated: true
-cover_image: "../docsCovers/ko/wschool2021-connect-robotics-to-user-app.png"
 ---
 
 https://youtu.be/NOQxyojvaao

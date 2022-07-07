@@ -1,8 +1,8 @@
 ---
 title: Glossary
+cover_image: 'glossary-en.png' 
 contributors: [Vourhey]
 translated: true
-cover_image: "../docsCovers/en/glossary.png"
 ---
 
 ## Agent

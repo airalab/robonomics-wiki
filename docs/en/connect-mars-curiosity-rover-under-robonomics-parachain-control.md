@@ -1,8 +1,8 @@
 ---
-title: Connect Mars Curiosity rover under Robonomics parachain control
+title: Connect Mars Curiosity rover under Robonomics parachain control   
+cover_image: 'connect-mars-curiosity-rover-under-robonomics-parachain-control-en.png' 
 contributors: [Vourhey, PaTara43]
 translated: true
-cover_image: "../docsCovers/en/connect-mars-curiosity-rover-under-robonomics-parachain-control.png"
 ---
 
 **Let's see how Robonomics Parachain control allows to make Mars Curiosity rover move. Requirements:**

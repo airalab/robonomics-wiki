@@ -1,8 +1,8 @@
 ---
 title: Control Kuka manipulator with robonomics
+cover_image: 'kuka-es.png' 
 contributors: [LoSk-p]
 translated: false
-cover_image: "../docsCovers/es/kuka.png"
 ---
 
 Video with an example of work can be found here:

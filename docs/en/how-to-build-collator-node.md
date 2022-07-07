@@ -1,5 +1,6 @@
 ---
 title: How to build collator node from source
+cover_image: 'how-to-build-collator-node-en.png' 
 contributors: [dergudzon, Leemo94]
 translated: false
 ---

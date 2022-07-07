@@ -1,8 +1,8 @@
 ---
 title: Connect the simplest CPS
+cover_image: 'connect-simple-cps-ko.png' 
 contributors: [ensrationis, akru]
 translated: false
-cover_image: "../docsCovers/ko/connect-simple-cps.png"
 ---
 
 In this section we will build the simplest real cyber-physical system!

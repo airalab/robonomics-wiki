@@ -1,8 +1,8 @@
 ---
 title: Drone control with robonomics
+cover_image: 'iris-drone-ja.png' 
 contributors: [tubleronchik, Vourhey]
 translated: false
-cover_image: "../docsCovers/ja/iris-drone.png"
 ---
 
 **Drone starts moving after transcation and store file with the coordinates in IPFS. The control script is based on the [GAAS demo script](https://github.com/generalized-intelligence/GAAS)**  

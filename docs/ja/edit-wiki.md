@@ -1,8 +1,8 @@
 ---
 title: How to edit WIKI
+cover_image: 'edit-wiki-ja.png' 
 contributors: [positivecrash]
 translated: false
-cover_image: "../docsCovers/ja/edit-wiki.png"
 ---
 
 **Robonomics WIKI is open source. Any corrections are welcome: fixing errors, typos, some unclear or outdated information, translation into any language. You'll need a [GitHub](https://github.com/) account.**
