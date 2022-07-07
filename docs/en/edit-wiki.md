@@ -4,6 +4,12 @@ contributors: [positivecrash]
 description: Ways to help us improve our wiki
 cover_image: "../docsCovers/en/edit-wiki.png"
 translated: true
+tools: 
+  - rust 1.62.0 
+    https://blog.rust-lang.org/2022/06/30/Rust-1.62.0.html
+  - Robonomics 1.4.0
+  - baxter
+    http://wiki.ros.org/melodic/Installation
 ---
 
 **Robonomics WIKI is open source. Any corrections are welcome: fixing errors, typos, some unclear or outdated information, translation into any language. You'll need a [GitHub](https://github.com/) account.**
