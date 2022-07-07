@@ -1,8 +1,8 @@
 ---
 title: 레슨 3, ROBONOMICS IO 실제
+cover_image: 'wschool2021-robonomics-io-in-practice-ko.png' 
 contributors: [akru, arinaml]
 translated: true
-cover_image: "../docsCovers/ko/wschool2021-robonomics-io-in-practice.png"
 ---
 import Asciinema from '~/components/Asciinema.vue'
 

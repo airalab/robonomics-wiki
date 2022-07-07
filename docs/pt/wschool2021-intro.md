@@ -1,8 +1,8 @@
 ---
 title: Robonomics Winter School 2021 introduction
+cover_image: 'wschool2021-intro-pt.png' 
 # contributors: []
 translated: true
-cover_image: "../docsCovers/pt/wschool2021-intro.png"
 ---
 
 Robonomics Winter School 2021 is held from 10 to 24 February **online**. It's **free**.

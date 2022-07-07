@@ -1,8 +1,8 @@
 ---
 title: Lesson 5, Connectivity
+cover_image: 'wschool2021-connectivity-service-ru.png' 
 contributors: [vourhey]
 translated: false
-cover_image: "../docsCovers/ru/wschool2021-connectivity-service.png"
 ---
 
 ## IoT as a Multiple Pie

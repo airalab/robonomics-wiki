@@ -1,8 +1,8 @@
 ---
 title: Sensors Connectivity
+cover_image: 'sensors-connectivity-on-aira-ru.png' 
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: true
-cover_image: "../docsCovers/ru/sensors-connectivity-on-aira.png"
 ---
 
 Для получения и обработки данных Sensors Robonomics Network использует модуль sensors community от Робономики. Этот модуль позволяет любому пользователю поднять свой собственный сервер для получения данных с датчиков и дальнейшей их обработки. Сейчас разработчиками запущено несколько таких серверов и любой датчик может отправлять данные на них. Запуск нескольких серверов позволяет избежать потери данных при проблемах в работе одного из них, поскольку датчики с нерабочего сервера переключатся на рабочий.

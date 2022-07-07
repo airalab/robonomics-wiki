@@ -1,8 +1,8 @@
 ---
-title: Interact with AIRA
+title: Interact with AIRA  
+cover_image: 'interact-with-aira-en.png' 
 contributors: [akru]
 translated: true
-cover_image: "../docsCovers/en/interact-with-aira.png"
 ---
 
 At this point you should be familiar with a [DApp](/docs/get-weather-on-fuji-mountain/) and how to launch [AIRA image](/docs/aira-installation-on-vb/).

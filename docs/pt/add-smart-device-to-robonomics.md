@@ -1,8 +1,8 @@
 ---
 title: Add Device to Robonomics
+cover_image: 'add-smart-device-to-robonomics-pt.png' 
 contributors: [LoSk-p]
 translated: true
-cover_image: "../docsCovers/pt/add-smart-device-to-robonomics.png"
 ---
 For each device you need separate [Robonomics accounts](/docs/create-account-in-dapp/). After you've added your devices, you need to add them in a `config.config` file with their seeds. Firstly in `Configuration/Entities` tab in your Home Assistant find entity ids of your devices:
 

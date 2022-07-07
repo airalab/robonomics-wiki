@@ -1,8 +1,8 @@
 ---
 title: Lección 2, Robonomics AIRA Descripción General
+cover_image: 'wschool2021-robonomics-github-overview-es.png' 
 contributors: [Ensrationis]
 translated: true
-cover_image: "../docsCovers/es/wschool2021-robonomics-github-overview.png"
 ---
 
 ## Paso 1: Instalación de AIRA en VirtualBox

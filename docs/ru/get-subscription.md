@@ -1,8 +1,8 @@
 ---
 title: Как купить подписку
+cover_image: 'get-subscription-ru.png' 
 contributors: [LoSk-p, katerina510]
 translated: true
-cover_image: "../docsCovers/ru/get-subscription.png"
 ---
 
 https://youtu.be/EsUiG_4ZGcw

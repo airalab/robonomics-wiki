@@ -1,8 +1,8 @@
 ---
-title: Configuration Options Description
+title: Configuration Options Description 
+cover_image: 'configuration-options-description-en.png' 
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: true
-cover_image: "../docsCovers/en/configuration-options-description.png"
 ---
 
 Basically, you can think of the package as a black box with one input (sensor data) and many outputs.

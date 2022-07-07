@@ -1,8 +1,8 @@
 ---
 title: Create digital identity run by Ethereum
+cover_image: 'create-digital-identity-run-by-ethereum-ja.png' 
 contributors: [Vourhey]
 translated: false
-cover_image: "../docsCovers/ja/create-digital-identity-run-by-ethereum.png"
 ---
 
 One of the Robonomics services is [Digital Passport Registration](https://dapp.robonomics.network/#/passport/) for arbitrary data. The service allows you to create a digital identity saving the hashes of the data to the public blockchain and assigning a unique address.

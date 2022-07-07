@@ -3,7 +3,7 @@
 name: '🤖 Wiki Robonomics document Issues'
 about: 'create an issue for the specific document'
 title: '[Issue]: Short Description of the problem'
-labels: ['documentation', wiki-rodonomics-doc]
+labels: ['documentation', 'wiki-rodonomics-doc']
 assignees: ''
 
 ---

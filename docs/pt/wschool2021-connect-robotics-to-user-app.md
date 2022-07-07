@@ -1,8 +1,8 @@
 ---
 title: Lesson 1, Connect Robotics to User App
+cover_image: 'wschool2021-connect-robotics-to-user-app-pt.png' 
 contributors: [Ensrationis, Houman]
 translated: true
-cover_image: "../docsCovers/pt/wschool2021-connect-robotics-to-user-app.png"
 ---
 
 **In this lesson, we will show you how to connect to a sensor on top of Fuji Mountain in Japan to get actual data through Robonomics DAPP.**

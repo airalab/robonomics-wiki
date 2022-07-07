@@ -1,8 +1,8 @@
 ---
 title: Create Account for Robonomics Parachain
+cover_image: 'create-account-in-dapp-pt.png' 
 contributors: [PaTara43, Fingerling42]
 translated: true
-cover_image: "../docsCovers/pt/create-account-in-dapp.png"
 ---
 
 **In order to interact and operate with Robonomics Parachain, developers and users need to create an account on the Polkadot / Substrate Portal. The account performs basic functions for the network: your public network address(the public key), the access control to the address and funds (the private key), sending transactions to the network, showing your tokens and their amount, etc. Below are two main ways to create an account for Robonomics Parachain.**

@@ -1,8 +1,8 @@
 ---
 title: How to Buy a Subscription
+cover_image: 'get-subscription-ja.png' 
 contributors: [LoSk-p]
 translated: false
-cover_image: "../docsCovers/ja/get-subscription.png"
 ---
 
 https://youtu.be/EsUiG_4ZGcw

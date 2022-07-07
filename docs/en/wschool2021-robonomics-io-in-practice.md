@@ -1,8 +1,8 @@
 ---
-title: Lesson 3, Robonomics IO in Practice
+title: Lesson 3, Robonomics IO in Practice 
+cover_image: 'wschool2021-robonomics-io-in-practice-en.png' 
 contributors: [akru]
 translated: true
-cover_image: "../docsCovers/en/wschool2021-robonomics-io-in-practice.png"
 ---
 
 In this lesson we will show you how to use Robonomics to connect to an I/O device. 

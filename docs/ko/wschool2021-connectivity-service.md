@@ -1,8 +1,8 @@
 ---
 title: 5과, 연결성
+cover_image: 'wschool2021-connectivity-service-ko.png' 
 contributors: [vourhey, arinaml]
 translated: true
-cover_image: "../docsCovers/ko/wschool2021-connectivity-service.png"
 ---
 
 ## 다중 파이로 IOT

@@ -25,7 +25,6 @@ const defaultOptions = {
   imgHeight: "1080px", // The height of your cover image
   domain: "wiki.robonomics.network", // Edmund includes this in their generated images
   outputDir:  "docs/docsCovers/", // Where the cover images should be generated to
-  langs: ['es', 'en', 'ja', 'ko', 'pt', 'ru'],
 };
 
 module.exports = function (api) {
@@ -42,16 +41,13 @@ module.exports = function (api) {
       if (node.internal.typeName === options.typeName) {
 
         fsExtra.ensureDirSync(options.outputDir);
-        options.langs.forEach(lang => {
-          fsExtra.ensureDirSync(options.outputDir  + lang);
-        })
 
         // Using the same filename as the file for easy frontmatter
         const imgName = node.fileInfo.name;
         const imgLang = node.fileInfo.directory;
 
         if(imgLang === 'en') {
-          const output = `${options.outputDir}${imgLang}/${imgName}.png`;
+          const output = `${options.outputDir}${imgName}-${imgLang}.png`;
           // Only generate images for files that don't exist already
           console.log("Generating Missing Cover Images");
           fsExtra.access(output, (error) => {
@@ -59,10 +55,21 @@ module.exports = function (api) {
               createImage({
                 output,
                 html: generateHtml(node.title, options),
-              }).then(() => console.log('The image was created successfully!'))
+              }).then(() => {
+                console.log('The image was created successfully!')
+              })
                 .catch(e => console.log(e.message));
             } else {
               console.log(`The image ${imgName} already exists!`)
+            }
+
+            let data = fs.readFileSync('docs/' + node.fileInfo.path).toString().split("\n");
+            if (JSON.stringify(data).toLowerCase().indexOf("cover_image") === -1 || !JSON.stringify(data).includes('cover_image')) {
+              data.splice(2, 0, `cover_image: '${imgName}-${imgLang}.png' `);
+              let text = data.join("\n");
+              fs.writeFile('docs/' + node.fileInfo.path, text, function (err) {
+                if (err) return console.log(err);
+              });
             }
           });
         }

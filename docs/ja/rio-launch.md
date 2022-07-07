@@ -1,8 +1,8 @@
 ---
 title: Robonomics IO Launch
+cover_image: 'rio-launch-ja.png' 
 contributors: [Vourhey, PaTara43]
 translated: false
-cover_image: "../docsCovers/ja/rio-launch.png"
 ---
 
 A simple way to turn on and off an IoT device or a robot. Basically sending "ON" will result in `true` state for a device, anything else will result in `false`.

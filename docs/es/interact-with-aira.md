@@ -1,8 +1,8 @@
 ---
 title: Interactuar con AIRA
+cover_image: 'interact-with-aira-es.png' 
 contributors: [akru]
 translated: true
-cover_image: "../docsCovers/es/interact-with-aira.png"
 ---
 
 En este punto, debe estar familiarizado con una [DApp](/docs/get-weather-on-fuji-mountain/) y cómo iniciar [la imagen AIRA](/docs/aira-installation-on-vb/). Ahora está listo para hacer cosas más complicadas como instalar un paquete e interactuar con él a través de DApp.

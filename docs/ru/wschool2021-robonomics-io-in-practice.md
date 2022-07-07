@@ -1,8 +1,8 @@
 ---
 title: Lesson 3, Robonomics IO in practice
+cover_image: 'wschool2021-robonomics-io-in-practice-ru.png' 
 contributors: [akru]
 translated: false
-cover_image: "../docsCovers/ru/wschool2021-robonomics-io-in-practice.png"
 ---
 import Asciinema from '~/components/Asciinema.vue'
 

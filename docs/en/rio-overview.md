@@ -1,8 +1,8 @@
 ---
 title: Robonomics IO Overview
+cover_image: 'rio-overview-en.png' 
 contributors: [Vourhey]
 translated: true
-cover_image: "../docsCovers/en/rio-overview.png"
 ---
 
 The [crate](https://crates.robonomics.network/robonomics_io/index.html) provides a convenient way to interact with blockchain and includes a set of tools. The latest release can be found [here](https://github.com/airalab/robonomics/releases)

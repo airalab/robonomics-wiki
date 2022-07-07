@@ -1,8 +1,8 @@
 ---
 title: Connect sensor
+cover_image: 'carbon-footprint-sensor-es.png' 
 contributors: [LoSk-p, makyul]
 translated: false
-cover_image: "../docsCovers/es/carbon-footprint-sensor.png"
 ---
 
 Example of work is in the video:

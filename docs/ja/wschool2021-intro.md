@@ -1,8 +1,8 @@
 ---
 title: ロボノミクスウィンタースクール2021 紹介
+cover_image: 'wschool2021-intro-ja.png' 
 contributors: [KiichiSugihara]
 translated: true
-cover_image: "../docsCovers/ja/wschool2021-intro.png"
 ---
 
 ロボノミクスウィンタースクール2021は、 2/10~2/24に**オンライン**で開催される。参加費は**無料**です。

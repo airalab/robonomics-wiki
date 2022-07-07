@@ -1,8 +1,8 @@
 ---
 title: IPFS Common Messages
+cover_image: 'ipfs-common-messages-ru.png' 
 contributors: [ensrationis, akru]
 translated: false
-cover_image: "../docsCovers/ru/ipfs-common-messages.png"
 ---
 
 ## ipfs_common/Filepath.msg
