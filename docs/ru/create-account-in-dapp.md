@@ -79,6 +79,10 @@ cover_image: "../docsCovers/ru/create-account-in-dapp.png"
 
 У нее есть две формы: *Mnemonic* (человекочитаемая) и *Raw* (последовательность цифр и букв). Сохраните сид-фразу в надежном месте и нажмите `Next`.
 
+> Так же вы можете поменять тип шифрования аккаунта, для этого откройте `Advances creation options` и выберите тип (на картинке `ED25519`).
+
+![Тип аккаунта ed25519](../images/creating-an-account/ed-account.jpg)
+
 В следующем меню нужно задать имя и пароль аккаунта, как было рассмотрено выше в инструкции для расширения.
 
 ![Генерация имени и пароля аккаунта](../images/creating-an-account/2.3-robonomics-app-name-pass.png "Генерация имени и пароля аккаунта")
@@ -86,6 +90,20 @@ cover_image: "../docsCovers/ru/create-account-in-dapp.png"
 Кликнув на кнопку `Next`, Вы увидите последнее окно. Нажмите `Save`, чтобы завершить создание аккаунта. Это также сгенерирует резервный файл JSON, который нужно сохранить в надежном месте. Вы можете использовать этот файл позже для восстановления аккаунта, если помните пароль.
 
 ![Успешное создание аккаунта](../images/creating-an-account/2.4-robonomics-app-account-created.png "Успешное создание аккаунта")
+
+## 2.3 Добавить аккаунт типа ed25519 в Polkadot расширение
+
+Вам может понадобиться добавить аккаунт в раширение Polkadot.js (для аккаунтов типа ed25519 это возможно только с использованием JSON файла). Для этого создайте JSON файл для нужного аккаунта: на портале нажмите на три точки справа от аккаунта и нажмите `Create a backup file for this account`, потом введите пароль.
+
+![Backup file](../images/creating-an-account/backup-file.jpg)
+
+Далее откройте расширение и нажмите `+` в правом верхнем углу, выберите `Restore account from backup JSON file`.
+
+![Restore backup in extention](../images/creating-an-account/extention-add-backup.jpg)
+
+Перетащите в открывшееся окно ранее сохраненный файл, введите пароль и нажмите `Restore`.
+
+![Restore backup in extention 2](../images/creating-an-account/file-backup.jpg)
 
 ## 3. Аккаунт успешно создан
 

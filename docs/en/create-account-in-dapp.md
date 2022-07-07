@@ -79,6 +79,10 @@ You should see the following popup menu with account seed.
 
 It has two forms: *Mnemonic* (human-readable) and *Raw* (a sequence of digits and letters). Save the seed phrase securely and press `Next`.
 
+> Also you can change the crypto type of creating account, for that open `Advanced creation options` and choose the type (`ed25519` on the picture).
+
+![ed25519 crypto type account](../images/creating-an-account/ed-account.jpg)
+
 In the next menu, you need to set the account name and password, similar to the extension instructions described above.
 
 ![Generating account name and password](../images/creating-an-account/2.3-robonomics-app-name-pass.png "Generating account name and password")
@@ -86,6 +90,20 @@ In the next menu, you need to set the account name and password, similar to the 
 Clicking on the `Next` button will take you to the last window. Click `Save` to finish account creation. It will also generate a backup JSON-files that you should safely store. You can later use this file to recover your account if you remember the password.
 
 ![Successful account creation](../images/creating-an-account/2.4-robonomics-app-account-created.png "Successful account creation")
+
+## 2.3 Add ed25519 account to Polkadot extention
+
+You may need to add created account to Polkadot.js extention (for ed25519 account you can do that only with bacup JSON file). For that you need to create backup file of the account. Press on three dots on your account and choose `Create a backup file for this account` and write your password.
+
+![Backup file](../images/creating-an-account/backup-file.jpg)
+
+Then open an extention and press `+` button on the top right, then choose `Restore account from backup JSON file`.
+
+![Restore backup in extention](../images/creating-an-account/extention-add-backup.jpg)
+
+In opened window drop saved file, enter the password and press `Restore`.
+
+![Restore backup in extention 2](../images/creating-an-account/file-backup.jpg)
 
 ## 3. Account Сreated Successfully 
 
