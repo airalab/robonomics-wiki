@@ -1,6 +1,5 @@
 ---
-title: Ethereum Common
-cover_image: 'ethereum-common-ko.png' 
+title: Ethereum Common 
 contributors: [ensrationis, akru]
 translated: false
 ---

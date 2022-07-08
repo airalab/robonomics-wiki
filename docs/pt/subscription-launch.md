@@ -1,6 +1,5 @@
 ---
-title: How to Send Launch with Subscription
-cover_image: 'subscription-launch-pt.png' 
+title: How to Send Launch with Subscription 
 contributors: [LoSk-p]
 translated: true
 ---

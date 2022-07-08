@@ -1,6 +1,5 @@
 ---
-title: Troubleshooting
-cover_image: 'troubleshooting-ru.png' 
+title: Troubleshooting 
 contributors: [nakata5321]
 translated: true
 ---

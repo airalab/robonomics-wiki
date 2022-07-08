@@ -1,6 +1,5 @@
 ---
 title: How to participate in the Wiki translation
-cover_image: 'translate-wiki-pt.png' 
 contributors: [positivecrash]
 translated: true
 ---

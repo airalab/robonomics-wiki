@@ -1,6 +1,5 @@
 ---
 title: Robonomics Smart Home
-cover_image: 'notifications-pt.png' 
 contributors: [LoSk-p]
 translated: true
 ---

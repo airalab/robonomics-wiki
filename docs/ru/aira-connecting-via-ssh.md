@@ -1,6 +1,5 @@
 ---
-title: Connecting AIRA via SSH
-cover_image: 'aira-connecting-via-ssh-ru.png' 
+title: Connecting AIRA via SSH 
 contributors: [akru]
 translated: false
 ---

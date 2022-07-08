@@ -1,6 +1,5 @@
 ---
-title: Become a Provider
-cover_image: 'robonomics-become-a-provider-en.png' 
+title: Become a Provider 
 contributors: [ensrationis, akru]
 translated: true
 ---

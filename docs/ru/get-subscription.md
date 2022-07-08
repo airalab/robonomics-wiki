@@ -1,6 +1,5 @@
 ---
 title: Как купить подписку
-cover_image: 'get-subscription-ru.png' 
 contributors: [LoSk-p, katerina510]
 translated: true
 ---

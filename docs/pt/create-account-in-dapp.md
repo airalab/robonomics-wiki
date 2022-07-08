@@ -1,6 +1,5 @@
 ---
 title: Create Account for Robonomics Parachain
-cover_image: 'create-account-in-dapp-pt.png' 
 contributors: [PaTara43, Fingerling42]
 translated: true
 ---

@@ -1,6 +1,5 @@
 ---
 title: Say "Hello Baxter!" with robonomics
-cover_image: 'baxter2-pt.png' 
 contributors: [nakata5321]
 translated: true
 ---

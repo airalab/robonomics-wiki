@@ -1,6 +1,5 @@
 ---
 title: Community
-cover_image: 'community-ja.png' 
 contributors: [positivecrash]
 translated: false
 ---

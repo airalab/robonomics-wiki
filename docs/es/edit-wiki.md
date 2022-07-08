@@ -1,6 +1,5 @@
 ---
 title: Cómo editar WIKI
-cover_image: 'edit-wiki-es.png' 
 contributors: [positivecrash, arinaml]
 translated: false
 ---

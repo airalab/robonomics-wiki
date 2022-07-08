@@ -1,6 +1,5 @@
 ---
 title:  Agent development examples
-cover_image: 'agent-development-examples-ru.png' 
 # contributors: []
 translated: false
 ---

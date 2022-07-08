@@ -1,6 +1,5 @@
 ---
 title: Adding funds to your account on Robonomics Portal 
-cover_image: 'adding-funds-to-account-in-dapp-en.png' 
 contributors: [Houman]
 translated: true
 ---

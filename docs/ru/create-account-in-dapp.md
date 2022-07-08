@@ -1,6 +1,5 @@
 ---
 title: Создать аккаунт для парачейна Робономики
-cover_image: 'create-account-in-dapp-ru.png' 
 contributors: [PaTara43, Fingerling42, katerina510]
 translated: true
 ---

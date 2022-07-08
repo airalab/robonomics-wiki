@@ -1,6 +1,5 @@
 ---
 title: Raspberry Setup
-cover_image: 'raspberry-setup-ru.png' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
 ---

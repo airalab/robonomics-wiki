@@ -1,6 +1,5 @@
 ---
-title: IoT Firmware Upload
-cover_image: 'iot-firmware-upload-pt.png' 
+title: IoT Firmware Upload 
 # contributors: []
 translated: true
 ---

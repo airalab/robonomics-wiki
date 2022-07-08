@@ -1,6 +1,5 @@
 ---
-title: How to contribute
-cover_image: 'sensors-connectivity-contribution-ko.png' 
+title: How to contribute 
 contributors: [LoSk-p]
 translated: false
 ---

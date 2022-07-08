@@ -1,6 +1,5 @@
 ---
 title: Обзор Playground
-cover_image: 'playground-overview-ru.png' 
 contributors: [LoSk-p, katerina510]
 translated: true
 ---

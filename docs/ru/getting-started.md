@@ -1,6 +1,5 @@
 ---
 title: Введение
-cover_image: 'getting-started-ru.png' 
 contributors: [Vourhey, positivecrash]
 translated: true
 ---

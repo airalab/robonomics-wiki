@@ -1,6 +1,5 @@
 ---
 title: Robonomics IO Launch
-cover_image: 'rio-launch-en.png' 
 contributors: [Vourhey, PaTara43]
 translated: true
 ---

@@ -1,6 +1,5 @@
 ---
-title: Lesson 0. Configure and test connection to Spot
-cover_image: 'spot-lesson0-ja.png' 
+title: Lesson 0. Configure and test connection to Spot 
 contributors: [LoSk-p, vitl2907, khssnv]
 translated: false
 ---

@@ -1,6 +1,5 @@
 ---
-title: Cómo participar en la traducción Wiki
-cover_image: 'translate-wiki-es.png' 
+title: Cómo participar en la traducción Wiki 
 contributors: [positivecrash, arinamml]
 translated: false
 ---

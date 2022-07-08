@@ -1,6 +1,5 @@
 ---
 title: Substrate Cumulus Parachain Testsuite for cross-chain messaging 
-cover_image: 'xcm-robobank-ko.png' 
 contributors: [ddulesov, boogerwooger, tubleronchik] 
 translated: false 
 ---

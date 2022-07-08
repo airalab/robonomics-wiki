@@ -1,6 +1,5 @@
 ---
 title: Robonomics Smart Home
-cover_image: 'home-assistant-begin-es.png' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
 ---

@@ -1,6 +1,5 @@
 ---
 title: How to contribute
-cover_image: 'contributing-ja.png' 
 contributors: [positivecrash]
 translated: false
 ---

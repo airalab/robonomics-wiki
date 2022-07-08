@@ -1,6 +1,5 @@
 ---
 title: Lightsout Factory
-cover_image: 'lightsout-factory-about-pt.png' 
 contributors: [ValanisZz, GiggleSeagull, Valiento]
 translated: true
 ---

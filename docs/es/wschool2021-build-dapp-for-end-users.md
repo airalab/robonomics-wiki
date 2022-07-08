@@ -1,6 +1,5 @@
 ---
-title: Lección 6.1, Crear dApps IoT para usuarios finales
-cover_image: 'wschool2021-build-dapp-for-end-users-es.png' 
+title: Lección 6.1, Crear dApps IoT para usuarios finales 
 contributors: [vol4tim]
 translated: true
 ---

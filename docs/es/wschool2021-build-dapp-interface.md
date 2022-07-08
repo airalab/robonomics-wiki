@@ -1,6 +1,5 @@
 ---
 title: Construir la interfaz de la DApp, Parte 2
-cover_image: 'wschool2021-build-dapp-interface-es.png' 
 contributors: [positivecrash]
 translated: true
 ---

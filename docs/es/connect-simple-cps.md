@@ -1,6 +1,5 @@
 ---
 title: Connect the simplest CPS
-cover_image: 'connect-simple-cps-es.png' 
 contributors: [ensrationis, akru]
 translated: false
 ---

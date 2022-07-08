@@ -1,6 +1,5 @@
 ---
 title: Setup SLS Gateway
-cover_image: 'sls-setup-pt.png' 
 contributors: [LoSk-p, Fingerling42]
 translated: true
 ---

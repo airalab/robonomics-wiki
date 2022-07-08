@@ -1,6 +1,5 @@
 ---
 title: How to edit WIKI 
-cover_image: 'edit-wiki-en.png' 
 contributors: [positivecrash]
 description: Ways to help us improve our wiki
 translated: true

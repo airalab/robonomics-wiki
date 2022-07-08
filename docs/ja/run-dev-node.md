@@ -1,6 +1,5 @@
 ---
 title: How to Run Robonomics Dev Node
-cover_image: 'run-dev-node-ja.png' 
 contributors: [LoSk-p]
 translated: false
 ---

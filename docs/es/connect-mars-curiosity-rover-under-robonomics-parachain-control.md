@@ -1,6 +1,5 @@
 ---
 title: Connect Mars Curiosity rover under Robonomics parachain control
-cover_image: 'connect-mars-curiosity-rover-under-robonomics-parachain-control-es.png' 
 contributors: [Vourhey, PaTara43]
 translated: false
 ---

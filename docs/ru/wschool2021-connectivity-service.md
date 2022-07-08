@@ -1,6 +1,5 @@
 ---
-title: Lesson 5, Connectivity
-cover_image: 'wschool2021-connectivity-service-ru.png' 
+title: Lesson 5, Connectivity 
 contributors: [vourhey]
 translated: false
 ---

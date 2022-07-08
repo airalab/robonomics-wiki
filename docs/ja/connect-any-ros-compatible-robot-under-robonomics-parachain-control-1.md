@@ -1,6 +1,5 @@
 ---
 title: Connect ROS-compatibale Drone To Robonomics Parachain. Part 1. Launch by Transaction
-cover_image: 'connect-any-ros-compatible-robot-under-robonomics-parachain-control-1-ja.png' 
 contributors: [PaTara43]
 translated: false
 ---

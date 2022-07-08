@@ -1,6 +1,5 @@
 ---
 title: Connect Sensor To Robonomics Network
-cover_image: 'connect-sensor-to-robonomics-pt.png' 
 contributors: [LoSk-p, Vourhey]
 translated: true
 ---

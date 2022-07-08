@@ -1,6 +1,5 @@
 ---
-title: IPFS Common Messages
-cover_image: 'ipfs-common-messages-en.png' 
+title: IPFS Common Messages 
 contributors: [ensrationis, akru]
 translated: true
 ---

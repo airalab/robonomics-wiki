@@ -1,6 +1,5 @@
 ---
 title: Lesson 2. Remote controlled and programmed motion
-cover_image: 'spot-lesson2-ru.png' 
 contributors: [LoSk-p, khssnv]
 translated: false
 ---

@@ -1,6 +1,5 @@
 ---
 title: Connect Vacuum Cleaner
-cover_image: 'vacuum-connect-en.png' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: true
 ---

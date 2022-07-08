@@ -1,6 +1,5 @@
 ---
 title: Manual start of the Robonomics network, consisting of 3 nodes
-cover_image: 'robonomics-test-network-manual-ko.png' 
 contributors: [dergudzon, Vourhey]
 translated: false
 ---

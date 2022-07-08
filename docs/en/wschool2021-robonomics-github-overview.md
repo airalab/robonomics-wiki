@@ -1,6 +1,5 @@
 ---
 title: Lesson 2, Robonomics AIRA Overview 
-cover_image: 'wschool2021-robonomics-github-overview-en.png' 
 contributors: [Ensrationis]
 translated: true
 ---

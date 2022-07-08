@@ -1,6 +1,5 @@
 ---
 title: Как редактировать Вики
-cover_image: 'edit-wiki-ru.png' 
 contributors: [positivecrash]
 translated: true
 ---

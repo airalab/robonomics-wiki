@@ -1,6 +1,5 @@
 ---
 title: Robonomics Winter School 2021 introduction
-cover_image: 'wschool2021-intro-ko.png' 
 contributors: [arinaml]
 translated: true
 ---

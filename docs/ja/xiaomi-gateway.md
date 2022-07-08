@@ -1,6 +1,5 @@
 ---
 title: Connect Sensors with Xiaomi Gateway
-cover_image: 'xiaomi-gateway-ja.png' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
 ---

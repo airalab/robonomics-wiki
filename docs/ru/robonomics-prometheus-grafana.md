@@ -1,6 +1,5 @@
 ---
 title: Robonomics + Prometheus + Grafana
-cover_image: 'robonomics-prometheus-grafana-ru.png' 
 contributors: [Vourhey]
 translated: false
 ---

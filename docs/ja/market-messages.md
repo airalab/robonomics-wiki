@@ -1,6 +1,5 @@
 ---
 title:  Market messages
-cover_image: 'market-messages-ja.png' 
 # contributors: []
 translated: false
 ---

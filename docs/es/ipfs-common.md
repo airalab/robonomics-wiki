@@ -1,6 +1,5 @@
 ---
 title: IPFS Common
-cover_image: 'ipfs-common-es.png' 
 contributors: [ensrationis, akru]
 translated: false
 ---

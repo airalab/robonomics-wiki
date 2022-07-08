@@ -1,6 +1,5 @@
 ---
-title: Lesson 5, コネクティビティ
-cover_image: 'wschool2021-connectivity-service-ja.png' 
+title: Lesson 5, コネクティビティ 
 contributors: [KiichiSugihara]
 translated: true
 ---
