@@ -1,8 +1,8 @@
 ---
 title: Robonomics Liability Messages
+cover_image: 'robonomics-liability-messages-es.png' 
 contributors: [ensrationis, akru]
 translated: false
-cover_image: "../docsCovers/es/robonomics-liability-messages.png"
 ---
 
 

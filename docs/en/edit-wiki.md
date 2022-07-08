@@ -1,8 +1,8 @@
 ---
-title: How to edit WIKI
+title: How to edit WIKI 
+cover_image: 'edit-wiki-en.png' 
 contributors: [positivecrash]
 description: Ways to help us improve our wiki
-cover_image: "../docsCovers/en/edit-wiki.png"
 translated: true
 tools: 
   - rust 1.62.0 

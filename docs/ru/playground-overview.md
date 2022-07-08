@@ -1,8 +1,8 @@
 ---
 title: Обзор Playground
+cover_image: 'playground-overview-ru.png' 
 contributors: [LoSk-p, katerina510]
 translated: true
-cover_image: "../docsCovers/ru/playground-overview.png"
 ---
 
 Робономика позволяет использовать роботов как автономных агентов, которые принимают команды от человека или другого робота и делают какую-то полезную работу, сохраняя отчет о своих действиях в блокчейне. Взаимодействие между роботом и платформой Робономики достаточно простое при использовании [Robonomics IO](/docs/ru/rio-overview).

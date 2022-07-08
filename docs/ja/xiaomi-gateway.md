@@ -1,8 +1,8 @@
 ---
 title: Connect Sensors with Xiaomi Gateway
+cover_image: 'xiaomi-gateway-ja.png' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
-cover_image: "../docsCovers/ja/xiaomi-gateway.png"
 ---
 
 You need your Xiaomi gateway along with all the sensors to be connected to the Mi Home app. If you haven't done this yet press `+` button on the top right corner, find your hub (it must be in connecting mode which is achieved via a long press of the power button) and follow instructions in the app. After you add the gateway, you need to add sensors: press on your gateway, then go to `Child device` and press `+`. Find required device and follow the instructions on the screen. For more details refer to the user manual of your Xiaomi Gateway hub.

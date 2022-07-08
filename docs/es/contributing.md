@@ -1,8 +1,8 @@
 ---
 title: Cómo Contribuir
+cover_image: 'contributing-es.png' 
 contributors: [positivecrash]
 translated: false
-cover_image: "../docsCovers/es/contributing.png"
 ---
 
 La red Robonomics es un proyecto de código abierto creado por mantenedores centrales de Airalab y colaboradores. Queremos que sea fácil para cualquiera contribuir. Puede contribuir al núcleo, sugerir cambios, mejorar la documentación o escribir una publicación de blog. Por favor, lea algunas reglas y sugerencias para contribuir.

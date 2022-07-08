@@ -1,8 +1,8 @@
 ---
 title: Gaka-Chu setup and software Installation
+cover_image: 'gaka-chu-ko.png' 
 contributors: [PaTara43]
 translated: false
-cover_image: "../docsCovers/ko/gaka-chu.png"
 ---
 
 https://www.youtube.com/watch?v=GxlYxaykqTU

@@ -1,8 +1,8 @@
 ---
 title: Lesson 6.1, Build IoT Dapps For End Users
+cover_image: 'wschool2021-build-dapp-for-end-users-pt.png' 
 contributors: [vol4tim]
 translated: true
-cover_image: "../docsCovers/pt/wschool2021-build-dapp-for-end-users.png"
 ---
 
 Having organized the connection of devices to the blockchain and set up their work, the next stage is the actual creation of a convenient and user-friendly application that performs the main functionality for the user, which would wrap the basic functions of Robonomics. For blockchain systems, the human-machine interface is provided by decentralized applications (dapps).

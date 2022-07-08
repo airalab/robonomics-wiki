@@ -1,13 +1,22 @@
 <template>
   <div class="breadcrumbs">
-    <ul class="breadcrumbs__list">
+    <nav aria-label="breadcrumbs" class="breadcrumbs__list">
 
       <li class="breadcrumbs__item">
-        <g-link  to="https://wiki.robonomics.network" class="breadcrumbs__home-icon">
-          <g-image src="../assets/images/robonomics-logo-sign-sm.svg" alt="robonomics logo"></g-image>
+        <g-link to="https://wiki.robonomics.network" class="breadcrumbs__home-icon">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 50 44.4" style="enable-background:new 0 0 50 44.4;" xml:space="preserve">
+            <g>
+              <polygon class="st0" points="25.3,18.8 16.2,33.4 33.8,33.4 	"/>
+              <polygon class="st1" points="25.3,3.1 2.8,41.2 47.2,41.2 	"/>
+              <circle class="st0" cx="25" cy="3.1" r="3.1"/>
+              <g>
+                <circle class="st0" cx="46.9" cy="41.2" r="3.1"/>
+                <circle class="st0" cx="3.1" cy="41.2" r="3.1"/>
+              </g>
+            </g>
+          </svg>
         </g-link>
-        <div class="breadcrumbs__divider">
-        </div>
       </li>
 
       <li class="breadcrumbs__item" v-for="(breadcrumb, index) in breadcrumbs" :key="breadcrumb.id">
@@ -16,16 +25,15 @@
           v-if="breadcrumb.link"
           :to="breadcrumb.link" 
           class="breadcrumbs__link"
+          :aria-current="index === breadcrumbs.length-1 ? 'location' : ''"
         >
           {{breadcrumb.title}}
         </g-link>
 
         <span class="breadcrumbs__link" v-else>{{breadcrumb.title}}</span>
 
-        <div class="breadcrumbs__divider" v-if="index != breadcrumbs.length-1">
-        </div>
       </li>
-    </ul>
+    </nav>
   </div>
 </template>
 
@@ -66,7 +74,6 @@ export default {
       for (let i = 0; i < root.length; i++) {
           node = root[i];
           if (node.link === link || node.link === link + '/' || node.items && (t = this.getParentItem(node.items, link))) {
-            console.log(node)
             const link = node.link ? this.$path(node.link, this.locale) : null;
             const breadcrumb = {
               id: Math.floor(Math.random() * 1000000),
@@ -79,25 +86,6 @@ export default {
       }
       return null;
     },
-    hascurrent (a) {
-      let path = this.$route.matched[0].path + '/'
-      let contains = false
-
-      for (var i = 0; i < a.length; i++) {
-
-        if(!a[i].items){
-          if(this.$path(a[i].link, this.locale) == path){
-            contains = true;
-          }
-        }
-        else{
-          if( this.hascurrent(a[i].items) ){
-            contains = true;
-          }
-        }
-      }
-      return contains;
-    }, 
   },
 
   mounted() {
@@ -117,39 +105,55 @@ export default {
   }
 
    .breadcrumbs__home-icon {
-    padding: 10px;
+    padding: 10px 10px 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-dark);
     border-radius: 10px;
    }
 
-  .breadcrumbs__home-icon img {
-    width: 15px;
-    height: 15px;
+  .breadcrumbs__home-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .st0 {
+    fill: var(--title-color)
+  }
+
+  .st1 {
+    fill: none;
+    stroke: var(--title-color);
+    stroke-width: 2;
+    stroke-miterlimit: 10;
   }
 
   .breadcrumbs__item {
+    position: relative;
     display: flex;
     align-items: center;
     margin: initial;
   }
 
   .breadcrumbs__item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
-  .breadcrumbs__divider {
-    margin-left: 20px;
-    padding-top: 5px;
-    width: 15px;
-    height: 15px;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z'/%3E%3C/svg%3E");
-    background-size: 15px 15px;
-    background-position: center;
+  .breadcrumbs__item:not(:last-child)::after {
+    content: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 595.28 841.89' style='enable-background:new 0 0 595.28 841.89;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bdisplay:none;%7D .st1%7Bdisplay:inline;fill:transparent;stroke:%23000000;stroke-miterlimit:10;%7D .st2%7Bfill:transparent;stroke:%23162128;stroke-width:5;stroke-miterlimit:10;%7D%0A%3C/style%3E%3Cg id='Layer_1' class='st0'%3E%3Cline class='st1' x1='86.49' y1='256.21' x2='86.49' y2='307.02'/%3E%3C/g%3E%3Cg id='Layer_2'%3E%3Cpolyline class='st2' points='90.06,256.21 121.72,281.62 90.06,305.74 '/%3E%3C/g%3E%3C/svg%3E%0A");
+    position: absolute;
+    top: -44px;
+    right: -102px;
+    width: 119px;
   }
 
+  body[data-theme="dark"] .breadcrumbs__item:not(:last-child)::after {
+    content: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 595.28 841.89' style='enable-background:new 0 0 595.28 841.89;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bdisplay:none;%7D .st1%7Bdisplay:inline;fill:%23FFFFFF;stroke:%23FFF;stroke-miterlimit:10;%7D .st2%7Bfill:transparent;stroke:%23FFF;stroke-width:5;stroke-miterlimit:10;%7D%0A%3C/style%3E%3Cg id='Layer_1' class='st0'%3E%3Cline class='st1' x1='86.49' y1='256.21' x2='86.49' y2='307.02'/%3E%3C/g%3E%3Cg id='Layer_2'%3E%3Cpolyline class='st2' points='90.06,256.21 121.72,281.62 90.06,305.74 '/%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  .breadcrumbs__item:first-child::after {
+    top: -36px;
+  }
 
   .breadcrumbs__link {
     padding: 3px 10px;
@@ -162,13 +166,12 @@ export default {
   }
 
   .breadcrumbs__link.active {
-    color: var(--header-color-text);
-    background-color: var(--color-dark);
+    font-weight: 600;
+    color: var(--text-color);
   }
 
-  .breadcrumbs__link:hover {
-    color: var(--header-color-text);
-    background-color: var(--color-dark);
+  a.breadcrumbs__link:hover {
+    color: var(--link-color);
   }
 
 

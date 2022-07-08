@@ -1,8 +1,8 @@
 ---
 title: Robonomics-js
+cover_image: 'robonomics-js-pt.png' 
 contributors: [Vourhey]
 translated: true
-cover_image: "../docsCovers/pt/robonomics-js.png"
 ---
 
 [Robonomics-js](https://github.com/airalab/robonomics-js) is a simple Javascript library for working with Robonomics Network.

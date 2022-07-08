@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting
+cover_image: 'troubleshooting-en.png' 
 contributors: [nakata5321]
 translated: true
-cover_image: "../docsCovers/en/troubleshooting.png"
 ---
 
 ## Couldn't create HRMP channel

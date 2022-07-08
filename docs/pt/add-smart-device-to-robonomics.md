@@ -1,8 +1,8 @@
 ---
 title: Robonomics Integration Configuration
+cover_image: 'add-smart-device-to-robonomics-pt.png' 
 contributors: [LoSk-p]
 translated: false
-cover_image: "../docsCovers/en/add-smart-device-to-robonomics.png"
 ---
 
 Integration allow Home Assistant to record datalogs with encrypted data from Home Assistant and listen launch commands to control smart devices. Integration use IPFS to store data and send IPFS hash in datalog or launch.

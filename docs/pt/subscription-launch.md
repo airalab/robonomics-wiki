@@ -1,8 +1,8 @@
 ---
 title: How to Send Launch with Subscription
+cover_image: 'subscription-launch-pt.png' 
 contributors: [LoSk-p]
 translated: true
-cover_image: "../docsCovers/pt/subscription-launch.png"
 ---
 
 If your address has an active subscription, then any devices set up with that account's secret can send extrinsics with no fee. 

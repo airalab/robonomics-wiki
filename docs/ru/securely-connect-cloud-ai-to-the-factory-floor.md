@@ -1,8 +1,8 @@
 ---
 title: Securely connect cloud AI to the factory floor
+cover_image: 'securely-connect-cloud-ai-to-the-factory-floor-ru.png' 
 contributors: [vitl2907]
 translated: false
-cover_image: "../docsCovers/ru/securely-connect-cloud-ai-to-the-factory-floor.png"
 ---
 
 Robonomics technologies can already solve the challenges that Industry 4.0 faces and they are already applied to real-world scenarios in the industrial environment.

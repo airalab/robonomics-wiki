@@ -1,8 +1,8 @@
 ---
 title: Lesson 1, Connect robotics to user app
+cover_image: 'wschool2021-connect-robotics-to-user-app-ru.png' 
 contributors: [Ensrationis]
 translated: false
-cover_image: "../docsCovers/ru/wschool2021-connect-robotics-to-user-app.png"
 ---
 
 https://youtu.be/NOQxyojvaao

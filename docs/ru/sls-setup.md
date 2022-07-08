@@ -1,8 +1,8 @@
 ---
 title: Setup SLS Gateway
+cover_image: 'sls-setup-ru.png' 
 contributors: [LoSk-p, Fingerling42]
 translated: false
-cover_image: "../docsCovers/ru/sls-setup.png"
 ---
 
 You can use [SLS Gateway from Robonomics](https://easyeda.com/ludovich88/robonomics_sls_gateway_v01) instead of Xiaomi/Aqara gateways. It works only in your local network and don't send any data to external servers, so you can control all data about your home.

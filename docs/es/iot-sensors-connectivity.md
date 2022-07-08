@@ -1,8 +1,8 @@
 ---
 title: IoT Sensors Connectivity
+cover_image: 'iot-sensors-connectivity-es.png' 
 contributors: [LoSk-p, Vourhey]
 translated: false
-cover_image: "../docsCovers/es/iot-sensors-connectivity.png"
 ---
 
 Robonomics Network allows you to communicate with any sensor you wish and get data from the sensor all around the world. This data can be transferred to different destinations.

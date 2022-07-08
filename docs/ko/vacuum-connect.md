@@ -1,8 +1,8 @@
 ---
 title: Connect Vacuum Cleaner
+cover_image: 'vacuum-connect-ko.png' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
-cover_image: "../docsCovers/ko/vacuum-connect.png"
 ---
 
 ## Connect to Home Assistant

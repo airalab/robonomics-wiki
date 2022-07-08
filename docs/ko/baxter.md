@@ -1,8 +1,8 @@
 ---
 title: Control Baxter robot with robonomics
+cover_image: 'baxter-ko.png' 
 contributors: [nakata5321, Vourhey]
 translated: false
-cover_image: "../docsCovers/ko/baxter.png"
 ---
 
 Example of how it works:

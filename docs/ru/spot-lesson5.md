@@ -1,8 +1,8 @@
 ---
 title: Lesson 5. Robot service. Camera calibration and "Spot check" procedure
+cover_image: 'spot-lesson5-ru.png' 
 contributors: [LoSk-p]
 translated: false
-cover_image: "../docsCovers/ru/spot-lesson5.png"
 ---
 
 In this lesson you will learn what should you do if you just got the robot: the first run and network setup. Also you will learn how to run the calibration process that should be run monthly.

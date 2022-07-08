@@ -1,8 +1,8 @@
 ---
 title: Lesson 3, Robonomics IOの実践
+cover_image: 'wschool2021-robonomics-io-in-practice-ja.png' 
 contributors: [KiichiSugihara]
 translated: true
-cover_image: "../docsCovers/ja/wschool2021-robonomics-io-in-practice.png"
 ---
 import Asciinema from '~/components/Asciinema.vue'
 

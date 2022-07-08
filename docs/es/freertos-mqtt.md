@@ -1,8 +1,8 @@
 ---
 title: Connect an Amazon FreeRTOS Device to Robonomics by MQTT
+cover_image: 'freertos-mqtt-es.png' 
 contributors: [khssnv]
 translated: false
-cover_image: "../docsCovers/es/freertos-mqtt.png"
 ---
 
 Here's the demonstration of how a microcontroller running [Amazon Web Services FreeRTOS](https://aws.amazon.com/freertos/) may be connected to Robonomics Network via MQTT. Please check [this repository](http://github.com/khssnv/freertos_mqtt_robonomics_example) for the project source code.

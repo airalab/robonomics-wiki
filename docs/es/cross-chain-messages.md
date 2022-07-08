@@ -1,8 +1,8 @@
 ---
 title: Cross-chain Message
+cover_image: 'cross-chain-messages-es.png' 
 contributors: [Vourhey, LoSk-p]
 translated: false
-cover_image: "../docsCovers/es/cross-chain-messages.png"
 ---
 
 XCM (Cross-chain Message) allows sending messages between parachains. You can send launchXcm transaction to run/stop your robot or datalogXcm transaction to save data to blockchain.

@@ -1,8 +1,8 @@
 ---
 title: Как отправить Launch с помощью подписки
+cover_image: 'subscription-launch-ru.png' 
 contributors: [LoSk-p, katerina510]
 translated: true
-cover_image: "../docsCovers/ru/subscription-launch.png"
 ---
 
 Если Ваш адрес относится к устройствам с любой подпиской, Вы можете отправлять экстринсики без комиссии. Давайте попробуем отправить `launch`.

@@ -1,8 +1,8 @@
 ---
 title: Lesson 4, Robonomics parachain in practice
+cover_image: 'wschool2021-robonomics-parachain-in-practice-ru.png' 
 contributors: [akru]
 translated: false
-cover_image: "../docsCovers/ru/wschool2021-robonomics-parachain-in-practice.png"
 ---
 import Asciinema from '~/components/Asciinema.vue'
 

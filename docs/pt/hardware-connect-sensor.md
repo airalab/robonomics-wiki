@@ -1,8 +1,8 @@
 ---
 title: Connect an Air Pollution Sensor
+cover_image: 'hardware-connect-sensor-pt.png' 
 contributors: [ensrationis, akru]
 translated: true
-cover_image: "../docsCovers/pt/hardware-connect-sensor.png"
 ---
 
 In this lesson you are going to learn how to connect your sensor to the network and make it publish data. You will see how it is easy to become a member of a global sensor network!

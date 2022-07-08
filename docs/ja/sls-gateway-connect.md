@@ -1,8 +1,8 @@
 ---
 title: Connect SLS Gateway to Home Assistant
+cover_image: 'sls-gateway-connect-ja.png' 
 contributors: [LoSk-p]
 translated: false
-cover_image: "../docsCovers/ja/sls-gateway-connect.png"
 ---
 
 ## MQTT Integration

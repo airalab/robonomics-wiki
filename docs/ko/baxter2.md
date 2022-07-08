@@ -1,8 +1,8 @@
 ---
 title: Say "Hello Baxter!" with robonomics
+cover_image: 'baxter2-ko.png' 
 contributors: [nakata5321]
 translated: false
-cover_image: "../docsCovers/ko/baxter2.png"
 ---
 Example of how it works:
 

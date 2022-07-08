@@ -1,8 +1,8 @@
 ---
 title: Lesson 0. Configure and test connection to Spot
+cover_image: 'spot-lesson0-ru.png' 
 contributors: [LoSk-p, vitl2907, khssnv]
 translated: false
-cover_image: "../docsCovers/ru/spot-lesson0.png"
 ---
 
 Let's start establishing connection to the robot.

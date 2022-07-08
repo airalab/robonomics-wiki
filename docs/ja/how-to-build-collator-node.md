@@ -1,8 +1,8 @@
 ---
 title: How to build collator node from source
+cover_image: 'how-to-build-collator-node-ja.png' 
 contributors: [dergudzon, Leemo94]
 translated: false
-cover_image: "../docsCovers/ja/how-to-build-collator-node.png"
 ---
 
 https://youtu.be/wnAtD7w0Pxk

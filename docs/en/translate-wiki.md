@@ -1,8 +1,8 @@
 ---
 title: How to participate in the Wiki translation
+cover_image: 'translate-wiki-en.png' 
 contributors: [positivecrash]
 translated: true
-cover_image: "../docsCovers/en/translate-wiki.png"
 ---
 
 Everyone can contribute to Robonomics. If you want to contribute to the translation of the documentation, you are on the right track: this article will tell you how to do it.

@@ -1,8 +1,8 @@
 ---
 title: Construir la interfaz de la DApp, Parte 2
+cover_image: 'wschool2021-build-dapp-interface-es.png' 
 contributors: [positivecrash]
 translated: true
-cover_image: "../docsCovers/es/wschool2021-build-dapp-interface.png"
 ---
 
 <!-- ![Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot](../images/build-dapp-interface/sum.gif "Building User Interface for Decentralized Applications, on top of Robonomics and Polkadot") -->

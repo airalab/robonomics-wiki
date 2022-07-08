@@ -1,8 +1,8 @@
 ---
 title: Setup with Prepared Image
+cover_image: 'raspberry-image-es.png' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
-cover_image: "../docsCovers/es/raspberry-image.png"
 ---
 ## Image
 We prepared an image to make it easier to use the Home Assistant with Xiaomi Miio and Robonomics with the Raspberry Pi.
