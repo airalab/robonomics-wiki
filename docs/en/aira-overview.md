@@ -1,6 +1,5 @@
 ---
-title: AIRA Overview
-cover_image: 'aira-overview-en.png' 
+title: AIRA Overview 
 contributors: [ensrationis, akru, positivecrash]
 translated: true
 ---

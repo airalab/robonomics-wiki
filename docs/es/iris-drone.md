@@ -1,6 +1,5 @@
 ---
 title: Drone control with robonomics
-cover_image: 'iris-drone-es.png' 
 contributors: [tubleronchik, Vourhey]
 translated: false
 ---

@@ -1,6 +1,5 @@
 ---
 title: Control Kuka manipulator with robonomics
-cover_image: 'kuka-pt.png' 
 contributors: [LoSk-p]
 translated: true
 ---

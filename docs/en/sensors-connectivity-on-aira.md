@@ -1,6 +1,5 @@
 ---
 title: Sensors Connectivity
-cover_image: 'sensors-connectivity-on-aira-en.png' 
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: true
 ---

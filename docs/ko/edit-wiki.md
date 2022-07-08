@@ -1,6 +1,5 @@
 ---
 title: How to edit WIKI
-cover_image: 'edit-wiki-ko.png' 
 contributors: [positivecrash]
 translated: false
 ---

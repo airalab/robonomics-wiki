@@ -1,6 +1,5 @@
 ---
-title: Connect SLS Gateway to Home Assistant
-cover_image: 'sls-gateway-connect-ja.png' 
+title: Connect SLS Gateway to Home Assistant 
 contributors: [LoSk-p]
 translated: false
 ---

@@ -62,15 +62,6 @@ module.exports = function (api) {
             } else {
               console.log(`The image ${imgName} already exists!`)
             }
-
-            let data = fs.readFileSync('docs/' + node.fileInfo.path).toString().split("\n");
-            if (JSON.stringify(data).toLowerCase().indexOf("cover_image") === -1 || !JSON.stringify(data).includes('cover_image')) {
-              data.splice(2, 0, `cover_image: '${imgName}-${imgLang}.png' `);
-              let text = data.join("\n");
-              fs.writeFile('docs/' + node.fileInfo.path, text, function (err) {
-                if (err) return console.log(err);
-              });
-            }
           });
         }
       }

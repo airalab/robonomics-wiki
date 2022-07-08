@@ -1,6 +1,5 @@
 ---
-title: Подключить марсоход Curiosity под управлением парачейна Робономики
-cover_image: 'connect-mars-curiosity-rover-under-robonomics-parachain-control-ru.png' 
+title: Подключить марсоход Curiosity под управлением парачейна Робономики 
 contributors: [Vourhey, PaTara43, katerina510]
 translated: true
 ---

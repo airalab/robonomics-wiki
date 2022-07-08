@@ -1,6 +1,5 @@
 ---
 title: Passing dynamic parameters
-cover_image: 'hardware-passing-dynamic-parameters-ko.png' 
 contributors: [ensrationis, akru]
 translated: false
 ---

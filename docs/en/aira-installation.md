@@ -1,6 +1,5 @@
 ---
 title: AIRA Installation
-cover_image: 'aira-installation-en.png' 
 contributors: [akru]
 translated: true
 ---

@@ -1,6 +1,5 @@
 ---
 title: Connect any ROS-compatible robot under Robonomics parachain control. Part 2, IPFS
-cover_image: 'connect-any-ros-compatible-robot-under-robonomics-parachain-control-2-ja.png' 
 contributors: [PaTara43]
 translated: false
 ---

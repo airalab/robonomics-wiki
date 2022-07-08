@@ -1,6 +1,5 @@
 ---
 title: Gaka-Chu setup and software Installation
-cover_image: 'gaka-chu-ru.png' 
 contributors: [PaTara43]
 translated: false
 ---

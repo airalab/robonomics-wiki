@@ -1,6 +1,5 @@
 ---
-title: Configuration Options Description
-cover_image: 'configuration-options-description-pt.png' 
+title: Configuration Options Description 
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: true
 ---

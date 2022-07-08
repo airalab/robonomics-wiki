@@ -1,6 +1,5 @@
 ---
 title: DEMO "Get Weather on Fuji Mountain"
-cover_image: 'get-weather-on-fuji-mountain-ja.png' 
 contributors: [Vourhey]
 translated: false
 ---

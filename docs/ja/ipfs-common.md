@@ -1,6 +1,5 @@
 ---
-title: IPFS Common
-cover_image: 'ipfs-common-ja.png' 
+title: IPFS Common 
 contributors: [ensrationis, akru]
 translated: false
 ---

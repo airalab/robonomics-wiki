@@ -1,6 +1,5 @@
 ---
 title: Robonomics Integration Configuration
-cover_image: 'add-smart-device-to-robonomics-ko.png' 
 contributors: [LoSk-p]
 translated: false
 ---

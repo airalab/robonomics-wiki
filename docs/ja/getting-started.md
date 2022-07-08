@@ -1,6 +1,5 @@
 ---
 title: Getting Started
-cover_image: 'getting-started-ja.png' 
 contributors: [Vourhey, positivecrash]
 translated: false
 ---

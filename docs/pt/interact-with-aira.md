@@ -1,6 +1,5 @@
 ---
 title: Interact with AIRA
-cover_image: 'interact-with-aira-pt.png' 
 contributors: [akru]
 translated: true
 ---

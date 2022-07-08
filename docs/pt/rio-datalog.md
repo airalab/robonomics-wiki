@@ -1,6 +1,5 @@
 ---
 title: Robonomics IO Datalog
-cover_image: 'rio-datalog-pt.png' 
 contributors: [Vourhey, PaTara43]
 translated: true
 ---

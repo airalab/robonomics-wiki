@@ -1,6 +1,5 @@
 ---
 title: Lección 5, Conectividad
-cover_image: 'wschool2021-connectivity-service-es.png' 
 contributors: [vourhey]
 translated: false
 ---

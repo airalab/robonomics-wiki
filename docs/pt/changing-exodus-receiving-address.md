@@ -1,6 +1,5 @@
 ---
 title: Changing Exodus Bridge Receiving Address
-cover_image: 'changing-exodus-receiving-address-pt.png' 
 contributors: [Leemo94]
 translated: true
 ---

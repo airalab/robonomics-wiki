@@ -1,6 +1,5 @@
 ---
 title: Как отправить Launch с помощью подписки
-cover_image: 'subscription-launch-ru.png' 
 contributors: [LoSk-p, katerina510]
 translated: true
 ---

@@ -1,6 +1,5 @@
 ---
-title: Lesson 3, Robonomics IO in practice
-cover_image: 'wschool2021-robonomics-io-in-practice-ru.png' 
+title: Lesson 3, Robonomics IO in practice 
 contributors: [akru]
 translated: false
 ---

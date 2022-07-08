@@ -1,6 +1,5 @@
 ---
 title: DEMO "Obtenga el clima en la montaña de Fuji"
-cover_image: 'get-weather-on-fuji-mountain-es.png' 
 contributors: [Vourhey]
 translated: true
 ---

@@ -240,7 +240,6 @@ query ($id: ID!) {
   	id
     title
     description
-    cover_image
     contributors
     translated
     headings (depth: h1) {
@@ -253,6 +252,10 @@ query ($id: ID!) {
     }
     content
     tools
+    fileInfo {
+      path
+      name
+    }
   }
 }
 </page-query>
@@ -301,7 +304,7 @@ export default {
       this.github_lastupdated()
       this.github_link()
       this.getTitleForIssue()
-      this.ogImageSrc = this.$page.doc.cover_image;
+      this.ogImageSrc =  `${this.$page.doc.fileInfo.name}-${this.locale}.png`;
     },
   },
 
@@ -403,7 +406,7 @@ export default {
   },
 
 	metaInfo () {
-	    const { title, headings, description, content, cover_image } = this.$page.doc;
+	    const { title, headings, description, content } = this.$page.doc;
 	    return {
 	      title: title  || (headings.length ? headings[0].value : undefined),
         meta: [
@@ -425,7 +428,7 @@ export default {
           },
           {
             property: "og:image",
-            content: cover_image && `https://wiki.robonomics.network${require('/docs/docsCovers/'+ this.ogImageSrc)}`  
+            content: `https://wiki.robonomics.network${require('/docs/docsCovers/'+ this.ogImageSrc)}`  
           },
           {
             property: "og:image:width",
@@ -458,7 +461,7 @@ export default {
           },
           {
             name: "twitter:image",
-            content: cover_image && `https://wiki.robonomics.network${require('/docs/docsCovers/'+ this.ogImageSrc)}`
+            content: `https://wiki.robonomics.network${require('/docs/docsCovers/'+ this.ogImageSrc)}`
           },
           {
             name: "twitter:site",
@@ -474,7 +477,7 @@ export default {
 
   created() {
     this.getTitleForIssue()
-    this.ogImageSrc =  this.$page.doc.cover_image;
+    this.ogImageSrc =  `${this.$page.doc.fileInfo.name}-${this.locale}.png`;
   },
 
   mounted() {

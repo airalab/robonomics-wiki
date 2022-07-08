@@ -1,6 +1,5 @@
 ---
 title: Basic usage of AIRA
-cover_image: 'aira-basic-usage-ru.png' 
 contributors: [akru]
 translated: false
 ---

@@ -1,6 +1,5 @@
 ---
 title: ROS-based Projects for Smart Spaces
-cover_image: 'ros-smart-projects-pt.png' 
 contributors: [Fingerling42]
 translated: true
 ---

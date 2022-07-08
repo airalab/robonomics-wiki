@@ -1,6 +1,5 @@
 ---
 title: Robonomics DApp Overview
-cover_image: 'robonomics-dapp-overview-ko.png' 
 contributors: [Vourhey]
 translated: false
 ---

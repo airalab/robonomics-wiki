@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting
-cover_image: 'spot-troubleshooting-ko.png' 
 contributors: [LoSk-p]
 translated: false
 

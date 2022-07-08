@@ -1,6 +1,5 @@
 ---
 title: How Robonomics Network Works
-cover_image: 'robonomics-how-it-works-es.png' 
 contributors: [ensrationis, akru]
 translated: false
 ---

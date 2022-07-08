@@ -1,6 +1,5 @@
 ---
 title: Introduction
-cover_image: 'sensors-network-introduction-es.png' 
 contributors: [LoSk-p]
 translated: false
 ---

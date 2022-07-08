@@ -1,6 +1,5 @@
 ---
 title: Frequently Asked Questions about AIRA
-cover_image: 'aira-faq-ru.png' 
 contributors: [Vourhey]
 translated: false
 ---

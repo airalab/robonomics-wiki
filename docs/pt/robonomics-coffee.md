@@ -1,6 +1,5 @@
 ---
 title: Robonomics Coffee
-cover_image: 'robonomics-coffee-pt.png' 
 contributors: [PaTara43]
 translated: true
 ---

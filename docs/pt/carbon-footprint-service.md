@@ -1,6 +1,5 @@
 ---
-title: Offsetting Service 
-cover_image: 'carbon-footprint-service-pt.png' 
+title: Offsetting Service  
 contributors: [tubleronchik]
 translated: true
 ---

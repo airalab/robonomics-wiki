@@ -1,6 +1,5 @@
 ---
 title: Glossary
-cover_image: 'glossary-pt.png' 
 contributors: [Vourhey]
 translated: true
 ---

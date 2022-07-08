@@ -1,6 +1,5 @@
 ---
-title: Robonomics Liability
-cover_image: 'robonomics-liability-pt.png' 
+title: Robonomics Liability 
 contributors: [ensrationis, akru]
 translated: true
 ---

@@ -1,6 +1,5 @@
 ---
 title: Create digital identity run by Ethereum
-cover_image: 'create-digital-identity-run-by-ethereum-es.png' 
 contributors: [Vourhey]
 translated: false
 ---

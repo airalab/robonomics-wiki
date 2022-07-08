@@ -1,6 +1,5 @@
 ---
 title: How to Buy a Subscription
-cover_image: 'get-subscription-pt.png' 
 contributors: [LoSk-p]
 translated: true
 ---

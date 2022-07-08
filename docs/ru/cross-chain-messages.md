@@ -1,6 +1,5 @@
 ---
 title: Межсетевой обмен сообщениями
-cover_image: 'cross-chain-messages-ru.png' 
 contributors: [Vourhey, LoSk-p, katerina510]
 translated: true
 ---

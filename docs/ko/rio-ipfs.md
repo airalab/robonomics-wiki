@@ -1,6 +1,5 @@
 ---
 title: Robonomics IO IPFS
-cover_image: 'rio-ipfs-ko.png' 
 contributors: [Vourhey]
 translated: false
 ---

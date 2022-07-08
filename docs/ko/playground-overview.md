@@ -1,6 +1,5 @@
 ---
 title: Playground Overview
-cover_image: 'playground-overview-ko.png' 
 contributors: [LoSk-p]
 translated: false
 ---

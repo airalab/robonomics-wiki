@@ -1,6 +1,5 @@
 ---
 title: Conexión de Aira a través de SSH
-cover_image: 'aira-connecting-via-ssh-es.png' 
 contributors: [akru]
 translated: true
 ---
