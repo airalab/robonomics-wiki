@@ -1,6 +1,5 @@
 ---
-title: how to update robonomics collator node version
-cover_image: 'how to update robonomics collator node version-pt.png' 
+title: how to update robonomics collator node version 
 contributors: [Leemo94]
 translated: false
 ---

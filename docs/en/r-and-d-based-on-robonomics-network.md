@@ -1,6 +1,5 @@
 ---
-title: R&D Based on Robonomics Network
-cover_image: 'r-and-d-based-on-robonomics-network-en.png' 
+title: R&D Based on Robonomics Network 
 contributors: [PaTara43]
 translated: true
 ---

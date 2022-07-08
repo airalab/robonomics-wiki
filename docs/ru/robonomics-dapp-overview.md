@@ -1,6 +1,5 @@
 ---
 title: Обзор децентрализованного приложения Робономики
-cover_image: 'robonomics-dapp-overview-ru.png' 
 contributors: [Vourhey, katerina510]
 translated: true
 ---

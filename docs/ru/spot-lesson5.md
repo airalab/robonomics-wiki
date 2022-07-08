@@ -1,6 +1,5 @@
 ---
 title: Lesson 5. Robot service. Camera calibration and "Spot check" procedure
-cover_image: 'spot-lesson5-ru.png' 
 contributors: [LoSk-p]
 translated: false
 ---

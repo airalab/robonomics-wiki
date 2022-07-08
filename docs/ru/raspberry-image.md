@@ -1,6 +1,5 @@
 ---
 title: Setup with Prepared Image
-cover_image: 'raspberry-image-ru.png' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
 ---

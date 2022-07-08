@@ -1,6 +1,5 @@
 ---
 title: Robonomics Winter School 2021 Introducción y Ceremonia de Apertura
-cover_image: 'wschool2021-intro-es.png' 
 # contributors: []
 translated: true
 ---

@@ -1,6 +1,5 @@
 ---
 title: Lesson 2, RobonomicsのAIRA概要
-cover_image: 'wschool2021-robonomics-github-overview-ja.png' 
 contributors: [KiichiSugihara]
 translated: true
 ---

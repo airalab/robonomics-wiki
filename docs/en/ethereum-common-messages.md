@@ -1,6 +1,5 @@
 ---
-title: Ethereum Common Messages
-cover_image: 'ethereum-common-messages-en.png' 
+title: Ethereum Common Messages 
 contributors: [ensrationis, akru]
 translated: true
 ---

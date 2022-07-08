@@ -1,6 +1,5 @@
 ---
 title: Setup with Prepared Image
-cover_image: 'raspberry-image-ja.png' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
 ---

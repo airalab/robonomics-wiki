@@ -1,6 +1,5 @@
 ---
 title: Robonomics-js
-cover_image: 'robonomics-js-ja.png' 
 contributors: [Vourhey]
 translated: true
 ---

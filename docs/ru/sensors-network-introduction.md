@@ -1,6 +1,5 @@
 ---
-title: Введение
-cover_image: 'sensors-network-introduction-ru.png' 
+title: Введение 
 contributors: [LoSk-p]
 translated: true
 ---

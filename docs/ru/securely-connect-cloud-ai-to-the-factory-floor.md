@@ -1,6 +1,5 @@
 ---
 title: Securely connect cloud AI to the factory floor
-cover_image: 'securely-connect-cloud-ai-to-the-factory-floor-ru.png' 
 contributors: [vitl2907]
 translated: false
 ---

@@ -1,6 +1,5 @@
 ---
-title: Say "Hello Baxter!" with robonomics
-cover_image: 'baxter2-ko.png' 
+title: Say "Hello Baxter!" with robonomics 
 contributors: [nakata5321]
 translated: false
 ---

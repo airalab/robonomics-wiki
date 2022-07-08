@@ -1,6 +1,5 @@
 ---
-title: 6.2 강, 스크래치에서 DAPP 인터페이스 구축
-cover_image: 'wschool2021-build-dapp-interface-ko.png' 
+title: 6.2 강, 스크래치에서 DAPP 인터페이스 구축 
 contributors: [positivecrash, arinaml]
 translated: true
 ---

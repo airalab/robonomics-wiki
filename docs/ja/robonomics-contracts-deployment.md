@@ -1,6 +1,5 @@
 ---
-title: Contracts deployment
-cover_image: 'robonomics-contracts-deployment-ja.png' 
+title: Contracts deployment 
 contributors: [ensrationis, akru]
 translated: false
 ---

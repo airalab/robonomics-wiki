@@ -1,6 +1,5 @@
 ---
 title: Cómo Contribuir
-cover_image: 'contributing-es.png' 
 contributors: [positivecrash]
 translated: false
 ---

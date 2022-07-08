@@ -1,6 +1,5 @@
 ---
 title: Cross-chain Message
-cover_image: 'cross-chain-messages-en.png' 
 contributors: [Vourhey, LoSk-p]
 translated: true
 ---

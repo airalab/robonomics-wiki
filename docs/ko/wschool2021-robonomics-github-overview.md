@@ -1,6 +1,5 @@
 ---
-title: 레슨 2, ROBONOMICS AIRA 개요
-cover_image: 'wschool2021-robonomics-github-overview-ko.png' 
+title: 레슨 2, ROBONOMICS AIRA 개요 
 contributors: [Ensrationis, arinaml]
 translated: true
 ---

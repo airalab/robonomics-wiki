@@ -1,6 +1,5 @@
 ---
-title: Lesson 4, 実践でのRobonomics parachain
-cover_image: 'wschool2021-robonomics-parachain-in-practice-ja.png' 
+title: Lesson 4, 実践でのRobonomics parachain 
 contributors: [KiichiSugihara]
 translated: true
 ---

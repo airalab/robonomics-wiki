@@ -1,6 +1,5 @@
 ---
-title: Lesson 4. GraphNav service. Mapping and navigating on the map
-cover_image: 'spot-lesson4-es.png' 
+title: Lesson 4. GraphNav service. Mapping and navigating on the map 
 contributors: [LoSk-p, khssnv]
 translated: false
 ---

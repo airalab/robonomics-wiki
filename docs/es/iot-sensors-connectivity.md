@@ -1,6 +1,5 @@
 ---
-title: IoT Sensors Connectivity
-cover_image: 'iot-sensors-connectivity-es.png' 
+title: IoT Sensors Connectivity 
 contributors: [LoSk-p, Vourhey]
 translated: false
 ---

@@ -1,6 +1,5 @@
 ---
 title: Control Baxter robot with robonomics
-cover_image: 'baxter-en.png' 
 contributors: [nakata5321, Vourhey]
 translated: true
 ---

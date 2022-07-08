@@ -1,6 +1,5 @@
 ---
 title: 용어 사전
-cover_image: 'glossary-ko.png' 
 contributors: [Vourhey, arinaml]
 translated: true
 ---

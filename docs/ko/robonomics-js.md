@@ -1,6 +1,5 @@
 ---
 title: 로노미크스-JS
-cover_image: 'robonomics-js-ko.png' 
 contributors: [Vourhey, arinaml]
 translated: true
 ---

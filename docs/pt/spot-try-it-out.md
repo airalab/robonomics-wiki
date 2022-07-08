@@ -1,6 +1,5 @@
 ---
 title: Try It Out
-cover_image: 'spot-try-it-out-pt.png' 
 contributors: [LoSk-p]
 translated: true
 ---

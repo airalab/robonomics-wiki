@@ -1,6 +1,5 @@
 ---
 title: ロボノミクスウィンタースクール2021 紹介
-cover_image: 'wschool2021-intro-ja.png' 
 contributors: [KiichiSugihara]
 translated: true
 ---

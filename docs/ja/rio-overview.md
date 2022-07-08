@@ -1,6 +1,5 @@
 ---
 title: Robonomics IO Overview
-cover_image: 'rio-overview-ja.png' 
 contributors: [Vourhey]
 translated: false
 ---

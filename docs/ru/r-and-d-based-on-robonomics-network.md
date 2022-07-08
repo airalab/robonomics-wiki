@@ -1,6 +1,5 @@
 ---
-title: R&D на базе Робономики
-cover_image: 'r-and-d-based-on-robonomics-network-ru.png' 
+title: R&D на базе Робономики 
 contributors: [PaTara43]
 translated: true
 ---

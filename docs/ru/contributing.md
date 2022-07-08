@@ -1,6 +1,5 @@
 ---
-title: Как стать контрибьютором
-cover_image: 'contributing-ru.png' 
+title: Как стать контрибьютором 
 contributors: [positivecrash]
 translated: true
 ---

@@ -1,6 +1,5 @@
 ---
 title: Как участвовать в переводе Вики
-cover_image: 'translate-wiki-ru.png' 
 contributors: [positivecrash]
 translated: true
 ---

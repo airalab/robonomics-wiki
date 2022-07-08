@@ -1,6 +1,5 @@
 ---
-title: AIRA Installation on VirtualBox
-cover_image: 'aira-installation-on-vb-ko.png' 
+title: AIRA Installation on VirtualBox 
 contributors: [akru]
 translated: false
 ---

@@ -1,6 +1,5 @@
 ---
 title: Connect an Air Pollution Sensor
-cover_image: 'hardware-connect-sensor-en.png' 
 contributors: [ensrationis, akru]
 translated: true
 ---

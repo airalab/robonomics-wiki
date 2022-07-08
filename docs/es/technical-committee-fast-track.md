@@ -1,6 +1,5 @@
 ---
 title: How the technical committee is fast-tracking the democracy proposals
-cover_image: 'technical-committee-fast-track-es.png' 
 contributors: [dergudzon, Leemo94]
 translated: false
 ---

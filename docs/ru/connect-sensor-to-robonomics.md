@@ -1,6 +1,5 @@
 ---
 title: Подключение датчика к Робономике
-cover_image: 'connect-sensor-to-robonomics-ru.png' 
 contributors: [LoSk-p, Vourhey, Ludovich88]
 translated: true
 ---

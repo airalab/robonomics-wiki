@@ -1,6 +1,5 @@
 ---
 title: How to launch the Robonomics collator
-cover_image: 'how-to-launch-the-robonomics-collator-pt.png' 
 contributors: [dergudzon, Leemo94]
 translated: false
 ---

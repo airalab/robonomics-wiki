@@ -1,6 +1,5 @@
 ---
 title: Как установить ноду Робономики в режиме разработчика
-cover_image: 'run-dev-node-ru.png' 
 contributors: [LoSk-p, katerina510]
 translated: true
 ---

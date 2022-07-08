@@ -1,6 +1,5 @@
 ---
 title: Lesson 6.2, Build IoT Dapps For End Users
-cover_image: 'wschool2021-build-dapp-interface-ru.png' 
 contributors: [positivecrash]
 translated: false
 ---

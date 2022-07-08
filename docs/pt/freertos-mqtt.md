@@ -1,6 +1,5 @@
 ---
-title: Connect an Amazon FreeRTOS Device to Robonomics by MQTT
-cover_image: 'freertos-mqtt-pt.png' 
+title: Connect an Amazon FreeRTOS Device to Robonomics by MQTT 
 contributors: [khssnv]
 translated: true
 ---

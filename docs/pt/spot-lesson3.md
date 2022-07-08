@@ -1,6 +1,5 @@
 ---
-title: Lesson 3. Find and follow an object, navigate between them
-cover_image: 'spot-lesson3-pt.png' 
+title: Lesson 3. Find and follow an object, navigate between them 
 contributors: [LoSk-p, khssnv]
 translated: true
 ---

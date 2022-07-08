@@ -1,6 +1,5 @@
 ---
 title: 5과, 연결성
-cover_image: 'wschool2021-connectivity-service-ko.png' 
 contributors: [vourhey, arinaml]
 translated: true
 ---
