@@ -305,7 +305,7 @@ export default {
       this.github_link()
       this.getTitleForIssue()
       this.ogImageSrc =  `${this.$page.doc.fileInfo.name}-${this.locale}.png`;
-    },
+    }
   },
 
   
@@ -375,8 +375,7 @@ export default {
       const params = new URLSearchParams(url.search);
       params.append('title', `issue for document page - ${this.$page.doc.title}(${this.locale})`);
       this.ghIssueTitle = params.toString()
-    }
-
+    },
   },
 
 
@@ -486,11 +485,11 @@ export default {
     this.github_link()
   },
 
-  mounted(){
-    // if( !localStorage.getItem('lang') ){
-    //   localStorage.setItem('lang', 'en')
-    // }
-  },
+  // mounted(){
+  //   // if( !localStorage.getItem('lang') ){
+  //   //   localStorage.setItem('lang', 'en')
+  //   // }
+  // },
 
   updated(){
     //Hide popup mobile menu after clickcing (cause - no real page reload in Gridsome)

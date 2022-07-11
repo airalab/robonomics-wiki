@@ -39,7 +39,7 @@ Upload image in folder `/docs/images/url-of-your-doc`
 
 ### How to insert images
 
-There are two ways for inerting pictures in your documents:
+There are two ways for inserting pictures in your documents:
 
 <robo-wiki-note type="warning">
 
