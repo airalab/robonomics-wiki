@@ -22,7 +22,7 @@ module.exports = {
           ['remark-highlight.js'],
           ['remark-autolink-headings', {content: {
               type: 'text',
-              value: '#'
+              value: '#',
             }}],
           [ '@noxify/gridsome-plugin-remark-embed', {
               'enabledProviders' : ['Youtube', 'Twitter', 'Gist']

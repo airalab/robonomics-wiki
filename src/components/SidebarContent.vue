@@ -22,7 +22,6 @@
 	      </li>
 	    </ul>
 	<!-- </details> -->
-
 </template>
 
 <script>
@@ -34,6 +33,14 @@
 			}
 		},
 
+		watch: {
+			'$route.hash': function(curr, old) {
+				setTimeout(() => {
+					this.scrollToElement();
+				}, 200);
+			}
+		},
+
 		computed: {
 			subtitles() {
 				// Remove h1, h5, h6 titles
@@ -42,26 +49,54 @@
 			})
 			return subtitles
 	    },
+
+			locale() {
+				return this.$store.state.locale
+			},
 	  },
 
 		methods: {
 			activateLinkOnScroll() {
-				const allHeads = document.querySelector('.page').querySelectorAll('h2, h3');
+	 			const allHeads = document.querySelector('.page').querySelectorAll('h2, h3, h4, h5');
+
 					allHeads.forEach(ha => {
 						const rect = ha.getBoundingClientRect();
+
 						if(rect.top > 0 && rect.top < 150) {
 							const location = window.location.toString().split('#')[0];
-							history.replaceState(null, null, location + '#' + ha.getAttribute('id'));
-							this.manualHush = `#${ha.getAttribute('id')}`;
+							if(ha.getAttribute('id') === null) {
+								return
+							} else {
+								history.replaceState(null, null, location + '#' + ha.getAttribute('id'));
+								this.manualHush = `#${ha.getAttribute('id')}`;
+							}
 						}
 
 					});
-			}
+			},
+
+			scrollToElement() {
+				
+				if (this.$route.hash == '') {
+					return false;
+				}
+				const el = document.querySelector(`[id='${this.$route.hash.substring(1)}']`) || this.manualHush && document.querySelector(`[id='${this.manualHush.substring(1)}']`);
+
+				if (el !== null ) {
+
+					const top = el.offsetTop;
+					window.scrollTo(0, top);;
+
+					this.manualHush = `#${el.getAttribute('id')}`;
+				}
+			},
 		},
 
 		mounted () {
+			this.scrollToElement();
 			window.addEventListener('scroll', this.activateLinkOnScroll)
 			this.manualHush = this.$route.hash;
+			console.log(this.prevRoute)
     },
     
     beforeDestroy () {

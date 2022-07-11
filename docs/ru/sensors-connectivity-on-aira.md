@@ -94,7 +94,7 @@ poetry install
 
 Чтобы подготовить датчик к работе с собственным сервером, пройдите инструкцию на [Robonomics Wiki](/docs/connect-sensor-to-robonomics/).
 
-### Configuration
+### Конфигурация
 
 [Здесь](/docs/configuration-options-description/) вы можете найти статью о том, как установить правильную конфигурацию для вашего сервера.
 
