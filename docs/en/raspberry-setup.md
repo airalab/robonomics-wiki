@@ -8,12 +8,18 @@ cover_image: "../docsCovers/en/raspberry-setup.png"
 For all methods from ["Overview"](./home-assistant-begin.md), the first thing you need to do is setup a Raspberry Pi.
 
 ## Preinstalled image
-The easiest way is use our prepared image. You can download it [here.]() Then read "Configuration RPi" and install image.
+The easiest way is use our prepared image. You can download it [here.](https://disk.yandex.ru/d/R4vYp9Jhn2O25A) Then read "Configuration RPi" and install image.
 
 
-<robo-wiki-note type="note">Password is "ubuntu-hass".
+<robo-wiki-note type="note">Password is "ubuntu".
 User and password for mosquito broker is - user/pass
 </robo-wiki-note>
+
+If you want to change MQTT user and password use next command:
+
+```shell
+sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
+```
 
 ### Configuration RPi
 Install [balena etcher](https://www.balena.io/etcher/) on your computer. Then, insert the SD card and run the Imager program. Select required image as the operating system and ensure to select your SD card from the storage dropdown, and then `flash` image.
@@ -35,7 +41,7 @@ wifis:
     dhcp4: true
     optional: true
     access-points:
-      "YOUR_WIFI_NAME":
+      YOUR_WIFI_NAME:
         password: "YOUR_WIFI_PASSWORD"
 ```
 
@@ -91,6 +97,22 @@ For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com
 ### Home Assistant installation
 Now we need to install Home Assistant to the Raspberry Pi. Detailed instructions can be found [here](https://www.home-assistant.io/installation/linux#install-home-assistant-core). You need to install `Home Assistant Core`. It's actual version is 2022.6.2  and instruction assumes that we already have installed Python 3.9 or newer.
 
+Next You can use our bash script `installation.sh`  to update system and install all dependencies automatically.
+For this download file from [here](https://github.com/LoSk-p/robonomics-hass-utils/tree/main/raspberry_pi) to your rassbery Pi. Then change user's rights to this file and start it:
+
+```shell
+chmod a+x instalation.sh
+bash instalation.sh
+```
+
+During installation process you could see next request:
+
+<robo-wiki-picture src="home-assistant/installation.jpg" alt="RPI installer" />
+
+Just choose **ok** and press **enter**.
+
+**Alternatively**, you can do all job manually. 
+
 Update your system and install necessary packages:
 
 ```bash
@@ -112,7 +134,7 @@ Next up is to create and change to a virtual environment for Home Assistant Core
 ```bash
 sudo -u homeassistant -H -s
 cd /srv/homeassistant
-python3.9 -m venv .
+python3 -m venv .
 source bin/activate
 ```
 
@@ -190,14 +212,13 @@ systemctl status mosquitto
 <robo-wiki-picture src="home-assistant/mosquitto.jpg" alt="Broker status" />
 
 ### IPFS installation
-Also we need [IPFS](https://ipfs.io/) for working with robonomics. For today the latest release of IPFS is 0.13.1.
+Also we need [IPFS](https://ipfs.io/) for working with robonomics. For today the latest release of IPFS is 0.12.2. You can use our script to download ipfs and create systemd service with it.
 
 ```shell
-https://dist.ipfs.io/go-ipfs/v0.13.1/go-ipfs_v0.13.1_linux-arm.tar.gz
-tar -xvzf go-ipfs_v0.13.1_linux-arm.tar.gz
-cd go-ipfs
-sudo bash install.sh
-ipfs init
+cd ~
+wget https://raw.githubusercontent.com/LoSk-p/robonomics_smart_home/main/install_ipfs.sh
+sudo chmod +x install_ipfs.sh
+./install_ipfs.sh
 ```
 
 ### Systemd services
@@ -234,7 +255,36 @@ sudo systemctl enable home-assistant@homeassistant.service
 sudo systemctl start home-assistant@homeassistant.service
 ```
 
-After that you can connect your devices:
+### Add custom integration
+
+Integration allow Home Assistant to record datalogs with encrypted data from Home Assistant and listen launch commands to control smart devices. Integration use IPFS to store data and send IPFS hash in datalog or launch.
+
+On your raspberry pi with Home Assistant log in homeassistant user:
+```bash 
+sudo -u homeassistant -H -s
+```
+Source virtual environment and install python packages:
+
+```bash
+source /srv/homeassistant/bin/activate
+pip install http3
+pip install robonomics-interface~=1.0
+```
+
+Then go to `.homeassistant` directory:
+
+```bash
+cd /home/homeassistant/.homeassistant
+```
+Create directory `custom_components` and clone there the repository with the integration:
+
+```bash
+mkdir custom_components
+cd custom_components
+git clone https://github.com/LoSk-p/robonomics_smart_home.git
+```
+
+That all. Now you can connect your devices:
 - [Connection with zigbee2MQTT](/docs/zigbee2-mqtt/)
 - [Setup SLS Gateway](/docs/sls-setup) and [connect it to Home Assistant](/docs/sls-gateway-connect)
 - [Connection through Xiaomi Gateway](/docs/xiaomi-gateway/)
