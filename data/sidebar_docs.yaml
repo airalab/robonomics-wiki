@@ -124,14 +124,14 @@
           link: /docs/sls-setup
         - title_en: Connect SLS Gateway to Home Assistant
           link: /docs/sls-gateway-connect
+        - title_en: Robonomics Integration Configuration
+          link: /docs/add-smart-device-to-robonomics
         - title_en: Connect Sensors with Xiaomi Gateway
           link: /docs/xiaomi-gateway
         - title_en: Connect Vacuum Cleaner
           link: /docs/vacuum-connect
         - title_en: Connect Sensors with Zigbee2MQTT 
           link: /docs/zigbee2-mqtt
-        - title_en: Add Robonomics Integration
-          link: /docs/add-smart-device-to-robonomics
     - title_en: Carbon Footprint Offsetting Service
       items:
         - title_en: Offsetting Service

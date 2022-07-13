@@ -1,8 +1,7 @@
 ---
-title: How Robonomics Network Works
+title: How Robonomics Network Works 
 contributors: [ensrationis, akru]
 translated: false
-cover_image: "../docsCovers/ja/robonomics-how-it-works.png"
 ---
 
 In this section we will discuss the Robonomics Network scenario.

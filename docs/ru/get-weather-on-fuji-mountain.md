@@ -2,7 +2,6 @@
 title: DEMO "Get Weather on Fuji Mountain"
 contributors: [Vourhey]
 translated: false
-cover_image: "../docsCovers/ru/get-weather-on-fuji-mountain.png"
 ---
 
 **Давайте начнем с быстрого примера того, что Робономика способна сделать за 5 минут. Необходимо: [Расширение Метамаск](https://metamask.io/)**

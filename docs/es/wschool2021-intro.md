@@ -2,7 +2,6 @@
 title: Robonomics Winter School 2021 Introducción y Ceremonia de Apertura
 # contributors: []
 translated: true
-cover_image: "../docsCovers/es/wschool2021-intro.png"
 ---
 
 Robonomics Winter School 2021 se llevo a cabo del 10 al 24 de febrero de manera online y gratis. Para mas información del evento entren al siguiente link con toda la información de Robonomics Winter School 2021: [Robonomics Winter School 2021](https://medium.com/robonomics-espa%C3%B1ol/robonomics-winter-school-2021-1ce2d37fb158)

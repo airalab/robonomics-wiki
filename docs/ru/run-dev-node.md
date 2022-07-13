@@ -2,7 +2,6 @@
 title: Как установить ноду Робономики в режиме разработчика
 contributors: [LoSk-p, katerina510]
 translated: true
-cover_image: "../docsCovers/ru/run-dev-node.png"
 ---
 
 Для тестирования Ваших приложений для Робономики Вам может понадобиться установка ноды в режиме разработчика.

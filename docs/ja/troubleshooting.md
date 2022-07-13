@@ -2,7 +2,6 @@
 title: Troubleshooting
 contributors: [nakata5321]
 translated: true
-cover_image: "../docsCovers/ja/troubleshooting.png"
 ---
 
 ## Can't create HRMP channel

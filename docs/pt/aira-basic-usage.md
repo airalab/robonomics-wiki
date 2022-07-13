@@ -1,8 +1,7 @@
 ---
-title: Basic usage of AIRA
+title: Basic usage of AIRA 
 contributors: [akru]
 translated: true
-cover_image: "../docsCovers/pt/aira-basic-usage.png"
 ---
 
 To get familiar with AIRA, let's see what is under the hood.

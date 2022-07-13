@@ -2,7 +2,6 @@
 title: How the technical committee is fast-tracking the democracy proposals
 contributors: [dergudzon, Leemo94]
 translated: false
-cover_image: "../docsCovers/es/technical-committee-fast-track.png"
 ---
 
 Note: The screenshots contained in this article were taken using v1.9.0 of Robonomics node implementation, launched in **dev** mode.

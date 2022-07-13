@@ -2,7 +2,6 @@
 title: Межсетевой обмен сообщениями
 contributors: [Vourhey, LoSk-p, katerina510]
 translated: true
-cover_image: "../docsCovers/ru/cross-chain-messages.png"
 ---
 
 XCM (протокол межсетевого обмена) позволяет отправлять сообщения между парачейнами.Вы можете отправлять транзакцию launchXcm для запуска/остановки Вашего робота или транзакцию datalogXcm для сохранения данных в блокчейне.

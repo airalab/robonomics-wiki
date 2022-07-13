@@ -2,7 +2,6 @@
 title: How to contribute
 contributors: [LoSk-p]
 translated: false
-cover_image: "../docsCovers/ja/sensors-connectivity-contribution.png"
 ---
 
 ## Issues

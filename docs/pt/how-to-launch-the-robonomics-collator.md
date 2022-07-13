@@ -2,7 +2,6 @@
 title: How to launch the Robonomics collator
 contributors: [dergudzon, Leemo94]
 translated: false
-cover_image: "../docsCovers/pt/how-to-launch-the-robonomics-collator.png"
 ---
 
 Note: In the screencast and screenshots of this article, we used version 1.4.0 of Robonomics. You need to use the same commands, but replace the version of Robonomics with the current one.

@@ -1,8 +1,7 @@
 ---
-title: IPFS Common
+title: IPFS Common 
 contributors: [ensrationis, akru]
 translated: false
-cover_image: "../docsCovers/ja/ipfs-common.png"
 ---
 
 The package handle IPFS connections, provides useful services for working with IPFS Network. 

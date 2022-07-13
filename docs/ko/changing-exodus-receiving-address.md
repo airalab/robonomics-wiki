@@ -2,7 +2,6 @@
 title: Changing Exodus Bridge Receiving Address
 contributors: [Leemo94]
 translated: false
-cover_image: "../docsCovers/ko/changing-exodus-receiving-address.png"
 ---
 
 This article will provide guidance on how you can change your Robonomics parachain receiving address in the event that you have input the wrong receiving address in the [Exodus bridge dapp](https://dapp.robonomics.network/#/exodus)

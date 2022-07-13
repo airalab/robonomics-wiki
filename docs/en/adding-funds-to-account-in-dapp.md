@@ -1,8 +1,7 @@
 ---
-title: Adding funds to your account on Robonomics Portal
+title: Adding funds to your account on Robonomics Portal 
 contributors: [Houman]
 translated: true
-cover_image: "../docsCovers/en/adding-funds-to-account-in-dapp.png"
 ---
 
 **After successfully creating your accounts on Robonomics portal, it is time to add funds to them so that you would able to initiate transactions.**

@@ -1,8 +1,7 @@
 ---
-title: Lesson 3. Find and follow an object, navigate between them
+title: Lesson 3. Find and follow an object, navigate between them 
 contributors: [LoSk-p, khssnv]
 translated: true
-cover_image: "../docsCovers/pt/spot-lesson3.png"
 ---
 
 In the third lesson you will learn how to find World Objects and go to them.

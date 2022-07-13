@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" :class="{'hide-bar': !searchIsShown}">
     <div class="layout__page">
 
       <div class="header-top">
@@ -10,7 +10,7 @@
         </g-link>
 
         <div class="header-center">
-          <Search/>
+          <Search :isShown="searchIsShown"/>
         </div>
 
         <div class="header-nav">
@@ -33,7 +33,7 @@
     --header-padding: 1rem;
     --width-logo-sign: 2rem;
 
-    padding: var(--header-padding) 0;
+    padding: var(--header-padding) 0 ;
     background-color: var(--header-color-bg);
 
     position: sticky;
@@ -72,6 +72,11 @@
   }
 
   .header-nav { text-align: right; }
+
+  .hide-bar {
+    padding-top: calc(var(--header-padding) * 0.5);
+    padding-bottom: 0;
+  }
 
 
   @media screen and (max-width: 860px) {
@@ -116,17 +121,54 @@
 
 export default {
 
+  data() {
+    return {
+      searchIsShown: true,
+    }
+  },
+
   components: {
     NavIcon: () => import("~/components/NavIcon.vue"),
     Search: () => import("~/components/Search.vue"),
     ToggleTheme: () => import("~/components/ToggleTheme.vue"),
     ToggleLang: () => import("~/components/ToggleLang.vue"),
-},
+  },
 
   computed:{
     homePage(){
       return this.$route.path == "/" || this.$route.path == "/" + this.$store.state.locale || this.$route.path == "/" + this.$store.state.locale + "/"
     }
+  },
+
+  methods: {
+    onScroll() {
+    // Get the current scroll position
+    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+    // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+    if (currentScrollPosition < 0) {
+      return
+    }
+    // Here we determine whether we need to show or hide the navbar
+    // Set the current scroll position as the last scroll position
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 100) {
+        return
+      }
+      this.searchIsShown = currentScrollPosition < this.lastScrollPosition
+      this.lastScrollPosition = currentScrollPosition
+    }
+  },
+
+  mounted () {
+    if (window.innerWidth <= 860) {
+      window.addEventListener('scroll', this.onScroll)
+    } else {
+      window.removeEventListener('scroll', this.onScroll)
+    }
+  },
+  
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
   }
+
 }
 </script>

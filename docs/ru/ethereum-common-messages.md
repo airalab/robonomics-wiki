@@ -2,7 +2,6 @@
 title: Ethereum Common Messages
 contributors: [ensrationis, akru]
 translated: false
-cover_image: "../docsCovers/ru/ethereum-common-messages.png"
 ---
 
 ## ethereum_common/Address.msg

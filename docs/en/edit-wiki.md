@@ -1,8 +1,7 @@
 ---
-title: How to edit WIKI
+title: How to edit WIKI 
 contributors: [positivecrash]
 description: Ways to help us improve our wiki
-cover_image: "../docsCovers/en/edit-wiki.png"
 translated: true
 tools: 
   - rust 1.62.0 
@@ -40,7 +39,7 @@ Upload image in folder `/docs/images/url-of-your-doc`
 
 ### How to insert images
 
-There are two ways for inerting pictures in your documents:
+There are two ways for inserting pictures in your documents:
 
 <robo-wiki-note type="warning">
 

@@ -2,7 +2,6 @@
 title: Try It Out
 contributors: [LoSk-p]
 translated: false
-cover_image: "../docsCovers/ko/spot-try-it-out.png"
 ---
 
 With this tutorial you will be able to see in simulation what real Spot did.

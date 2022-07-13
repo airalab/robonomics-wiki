@@ -1,8 +1,7 @@
 ---
-title: R&D Based on Robonomics Network
+title: R&D Based on Robonomics Network 
 contributors: [PaTara43]
 translated: true
-cover_image: "../docsCovers/pt/r-and-d-based-on-robonomics-network.png"
 ---
 
 For over 4 years, the Robonomics project participants completed 13 R&D projects in the process of writing the current version of the Robonomics platform, including:

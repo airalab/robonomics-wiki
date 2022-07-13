@@ -1,5 +1,5 @@
 ---
-title: How to launch the Robonomics collator
+title: How to launch the Robonomics collator 
 contributors: [dergudzon, Leemo94]
 translated: false
 ---

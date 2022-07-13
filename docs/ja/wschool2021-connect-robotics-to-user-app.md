@@ -1,8 +1,7 @@
 ---
-title: Lesson 1, ユーザーアプリにロボットを繋ぐ
+title: Lesson 1, ユーザーアプリにロボットを繋ぐ 
 contributors: [KiichiSugihara]
 translated: true
-cover_image: "../docsCovers/ja/wschool2021-connect-robotics-to-user-app.png"
 ---
 
 https://youtu.be/NOQxyojvaao

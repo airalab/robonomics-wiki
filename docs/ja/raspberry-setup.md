@@ -2,7 +2,6 @@
 title: Raspberry Pi Setup
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
-cover_image: "../docsCovers/ja/raspberry-setup.png"
 ---
 
 For all methods from ["Overview"](./home-assistant-begin.md), the first thing you need to do is setup a Raspberry Pi.

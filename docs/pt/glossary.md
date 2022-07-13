@@ -2,7 +2,6 @@
 title: Glossary
 contributors: [Vourhey]
 translated: true
-cover_image: "../docsCovers/pt/glossary.png"
 ---
 
 ## Agent

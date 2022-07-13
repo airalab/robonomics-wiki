@@ -2,7 +2,6 @@
 title: Robonomics Winter School 2021 introduction
 contributors: [arinaml]
 translated: true
-cover_image: "../docsCovers/ko/wschool2021-intro.png"
 ---
 
 ROBONOMICS 겨울 학교 2021은 2 월 10 일부터 24 일까지 온라인으로 열립니다. 무료입니다.

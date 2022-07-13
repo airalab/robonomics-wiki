@@ -1,8 +1,7 @@
 ---
-title: Lesson 6.1, Build IoT Dapps For End Users
+title: Lesson 6.1, Build IoT Dapps For End Users 
 contributors: [vol4tim]
 translated: false
-cover_image: "../docsCovers/ru/wschool2021-build-dapp-for-end-users.png"
 ---
 
 ## Getting ready

@@ -1,8 +1,7 @@
 ---
-title: Lesson 5, Connectivity
+title: Lesson 5, Connectivity  
 contributors: [vourhey]
 translated: true
-cover_image: "../docsCovers/en/wschool2021-connectivity-service.png"
 ---
 
 This lesson will show you how to build a large scale network of sensors using the `sensors-connectivity` module from Robonomics. The idea is that usually the devices are very low-powered and unable to send transactions to the blockchain on their own. It is not safe to use one central server due to failures and hacks, so we suggest using the module to create servers that maintain several hundred devices and exchange data through decentralized channels. This allows to achieve a balance between security and scalability of the network.

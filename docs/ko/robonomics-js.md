@@ -2,7 +2,6 @@
 title: 로노미크스-JS
 contributors: [Vourhey, arinaml]
 translated: true
-cover_image: "../docsCovers/ko/robonomics-js.png"
 ---
 
 [Robonomics-js](https://github.com/airalab/robonomics-js) 는 Robonomics 네트워크 작업을위한 간단한 자바 스크립트 라이브러리입니다.

@@ -2,7 +2,6 @@
 title: Manual start of the Robonomics network, consisting of 3 nodes
 contributors: [dergudzon, Vourhey]
 translated: true
-cover_image: "../docsCovers/pt/robonomics-test-network-manual.png"
 ---
 
 **Need to start Robonomics network of N (N> = 2) nodes**

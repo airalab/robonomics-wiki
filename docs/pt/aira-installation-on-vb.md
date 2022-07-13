@@ -1,8 +1,7 @@
 ---
-title: AIRA Installation on VirtualBox
+title: AIRA Installation on VirtualBox 
 contributors: [akru]
 translated: true
-cover_image: "../docsCovers/pt/aira-installation-on-vb.png"
 ---
 
 AIRA stands for "Autonomous Intelligent Robot Agent". It is the client for Robonomics Network developed by [Airalab](https://aira.life). It is an operating system based on [NixOS](https://nixos.org/). With AIRA you can  turn any cyber-physical system in an economic agent, where robots operate as a services for the reasonable payments. [More theory about AIRA here](/docs/aira-overview).

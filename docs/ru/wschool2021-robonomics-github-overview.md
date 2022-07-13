@@ -1,8 +1,7 @@
 ---
-title: Lesson 2, Robonomics AIRA overview
+title: Lesson 2, Robonomics AIRA overview 
 contributors: [Ensrationis]
 translated: false
-cover_image: "../docsCovers/ru/wschool2021-robonomics-github-overview.png"
 ---
 
 ## Step 1: AIRA Installation on VirtualBox

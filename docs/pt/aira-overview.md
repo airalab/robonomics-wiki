@@ -2,7 +2,6 @@
 title: AIRA Overview
 contributors: [ensrationis, akru, positivecrash]
 translated: true
-cover_image: "../docsCovers/pt/aira-overview.png"
 ---
 
 ## Introduction

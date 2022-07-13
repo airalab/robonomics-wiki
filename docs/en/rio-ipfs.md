@@ -2,7 +2,6 @@
 title: Robonomics IO IPFS
 contributors: [Vourhey]
 translated: true
-cover_image: "../docsCovers/en/rio-ipfs.png"
 ---
 
 It serves downloading and uploading files from/to IPFS network

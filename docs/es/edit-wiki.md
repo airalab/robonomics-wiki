@@ -2,7 +2,6 @@
 title: Cómo editar WIKI
 contributors: [positivecrash, arinaml]
 translated: false
-cover_image: "../docsCovers/es/edit-wiki.png"
 ---
 
 **Robonomics WIKI es de código abierto. Cualquier corrección es bienvenida: corrección de errores, errores tipográficos, información poco clara o desactualizada, traducción a cualquier idioma. Necesitará una cuenta de [GitHub](https://github.com/).** 

@@ -1,8 +1,7 @@
 ---
-title: Digital Twins
+title: Digital Twins 
 contributors: [nakata5321]
 translated: false
-cover_image: "../docsCovers/ko/digital-twins.png"
 ---
 
 ## Requirements

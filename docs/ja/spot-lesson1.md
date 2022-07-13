@@ -1,8 +1,7 @@
 ---
-title: Lesson 1. Emergency stop, initialization, body position control
+title: Lesson 1. Emergency stop, initialization, body position control 
 contributors: [LoSk-p, vitl2907, khssnv]
 translated: false
-cover_image: "../docsCovers/ja/spot-lesson1.png"
 ---
 
 Welcome to the first lesson!

@@ -1,8 +1,7 @@
 ---
-title: Sensors Connectivity
+title: Sensors Connectivity 
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: false
-cover_image: "../docsCovers/ko/sensors-connectivity-on-aira.png"
 ---
 
 The Sensors Robonomics Network uses the sensors community module from Robonomics to receive and process data. This module allows any user to raise his own server to receive data from sensors and process it further. Now the developers have launched several such servers and any sensor can send data to them. Running several servers allows to avoid data loss in case of problems with one of them, because sensors from a non-working server will switch to a working one.

@@ -2,7 +2,6 @@
 title: Community
 contributors: [positivecrash]
 translated: false
-cover_image: "../docsCovers/es/community.png"
 ---
 
 **Here you can learn how to get involved in the Robonomics Network Community.**

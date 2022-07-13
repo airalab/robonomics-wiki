@@ -2,7 +2,6 @@
 title: Lección 1, Conectar la robótica a la dapp
 contributors: [Ensrationis]
 translated: true
-cover_image: "../docsCovers/es/wschool2021-connect-robotics-to-user-app.png"
 ---
 
 https://youtu.be/NOQxyojvaao
