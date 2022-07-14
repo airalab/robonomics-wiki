@@ -4,6 +4,9 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const yaml = require('js-yaml')
+const fs   = require('fs')
+
 module.exports = {
   siteName: 'Robonomics Wiki',
   siteUrl: 'https://wiki.robonomics.network/',
@@ -37,6 +40,22 @@ module.exports = {
         include: ['/docs', '/docs/**']
       }
     },
+
+    {
+      use: "gridsome-plugin-google-sheets-post"
+    },
+    // {
+    //   use: "gridsome-plugin-translateit",
+    //   options: {
+    //       locales: ["en", "ru", "ja", "ko", "pt", "es"],
+    //       defaultLocale: "en",
+    //       slugifyDefaultLocale: true, // this is default value; set 'true' if you want to add locale to all pathes, including default
+    //       translations: yaml.load(fs.readFileSync('./data/localazation_strings.yaml', 'utf8')),
+    //       collections: ['docs'], // any collection name
+    //       exclude: ["/404/", "/sitemap.xml/"], // this is default value
+    //       routes: yaml.load(fs.readFileSync('./data/locales/routes.yaml', 'utf8')),
+    //   }
+    // }
   ],
 
 

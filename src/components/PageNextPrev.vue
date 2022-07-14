@@ -2,8 +2,8 @@
 
     <section class="pageNextPrev">
 
-      <Button v-if="pagePrev" :label="'← ' + getTitleLocalazide(pagePrev)" :link="pagePrev.link"/>
-      <Button v-if="pageNext" :label="getTitleLocalazide(pageNext) + ' →'" :link="pageNext.link"/>
+      <Button v-if="pagePrev" :label="'← ' + getTitleLocalazide(pagePrev)" :link="pagePrev.link" type="secondary"/>
+      <Button v-if="pageNext" :label="getTitleLocalazide(pageNext) + ' →'" :link="pageNext.link" type="secondary"/>
 
     </section>
 

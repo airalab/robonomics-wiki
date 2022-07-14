@@ -34,7 +34,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   appOptions.store = new Vuex.Store({
     state: {
       // locale: isClient ? (window.navigator.language.split('-')[0] || localeSettings.defaultLocale) : localeSettings.defaultLocale
-      locale: localeSettings.defaultLocale
+      locale: localeSettings.defaultLocale,
+      showSearchbar: true,
     },
     mutations: {
       setlocale (state, lang) {
@@ -42,6 +43,9 @@ export default function (Vue, { router, head, isClient, appOptions }) {
         if(isClient) {
           localStorage.setItem('lang', lang)
         }
+      }, 
+      toggleShowSearchbar(state, showSearchbar) {
+        state.showSearchbar = showSearchbar
       }
     }
   });

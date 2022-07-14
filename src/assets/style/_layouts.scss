@@ -38,3 +38,8 @@
 .page {
 	padding-top: var(--space);
 }
+
+.removeScroll {
+	// position: fixed;
+	overflow: hidden;
+}

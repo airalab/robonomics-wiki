@@ -28,6 +28,13 @@ Docs in Robonomics WIKI contain frontmatter block. It must be at the top of the 
 title: How to contribute # Title for the page, you do not need to duplicate it in text
 contributors: [positivecrash] # Main contributors (who actively curates this page). GitHub nickname required, without any additional symbols
 translated: true # "true" if it has been translated in current language (see locale folder name of doc)
+tools:   
+  - rust 1.62.0 
+    https://blog.rust-lang.org/2022/06/30/Rust-1.62.0.html
+  - Robonomics 1.4.0
+  - baxter
+    http://wiki.ros.org/melodic/Installation
+    # Tools that were used for technology testing
 ---
 ```
 
@@ -35,7 +42,7 @@ translated: true # "true" if it has been translated in current language (see loc
 Upload image in folder `/docs/images/url-of-your-doc`
 * If image needs to be localized, insert all of them in one folder
 * Use locale appendix in name of images if it's localized, e.g. `image_en.jpg`
-* Make sure your image is web optimised and at the same time it looks good
+* Make sure your image is web optimized and at the same time it looks good
 
 ### How to insert images
 
@@ -43,7 +50,7 @@ There are two ways for inserting pictures in your documents:
 
 <robo-wiki-note type="warning">
 
-It is recommended to insert pictures with built-in tag `<robo-wiki-picture>`, however you may also use standart way for Markdown files.
+It is recommended to insert pictures with built-in tag `<robo-wiki-picture>`, however you may also use standard way for Markdown files.
 
 </robo-wiki-note>
 
@@ -151,6 +158,41 @@ You can add notes and give them specific types:
 [Join Robonomics Developers Discord](https://discord.gg/jTxqGeF5Qy) to connect with community and get technical support.
 
 </robo-wiki-note>
+
+### Custom title with anchors
+You can create custom titles with anchors and give them certain value
+
+`title with anchor`
+
+```c
+<robo-wiki-title :type="2" anchor="Some information about robots"> 
+  Learn Robonomics with AIRA :)
+</robo-wiki-title>
+```
+
+or
+
+`title without anchor`
+
+```c
+<robo-wiki-title :type="5"> 
+  Learn Robonomics with AIRA :)
+</robo-wiki-title>
+```
+
+**Props for robo-wiki-title**
+
+`type (required, must be a number (2 - 6))` - choose heading level
+
+`anchor` - value for the anchor
+
+<robo-wiki-title :type="2" anchor="I'm custom title :)">
+  I'm custom title with anchor :)
+</robo-wiki-title>
+
+<robo-wiki-title :type="6"> 
+ I'm custom title :)
+</robo-wiki-title>
 
 
 ## Add new doc

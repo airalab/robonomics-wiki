@@ -1,6 +1,6 @@
 <template>
 
-  <div v-if="isShown" class="search-container"  :class="toggleClasses" tabindex="0" @focusin="focusIn" @focusout="focusOut">
+  <div v-if="$store.state.showSearchbar" class="search-container"  :class="toggleClasses" tabindex="0" @focusin="focusIn" @focusout="focusOut">
 
       <!-- v-on:keyup.down="SearchLinksFocus" -->
       <input v-model="search" type="search" :aria-label="$st('Search', $store.state.locale)" :placeholder="$st('Search', $store.state.locale)"/>
@@ -123,19 +123,12 @@ query{
 <script>
 
   export default {
-    props: {
-      isShown: {
-        type: Boolean,
-        required: true
-      }
-    },
 
     data () {
       return {
         isActive: false,
         isFocused: false,
         search: '',
-        lastScrollPosition: 0,
       }
     },
 
