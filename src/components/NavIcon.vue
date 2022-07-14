@@ -84,20 +84,47 @@ export default {
   },
 
   methods: {
+
+    preventDefault(e){
+      e.preventDefault();
+    },
+    
+    disableScroll(){
+      document.body.addEventListener('touchmove', this.preventDefault, { passive: false });
+    },
+
+    enableScroll(){
+      document.body.removeEventListener('touchmove', this.preventDefault);
+    },
+
     showBlock: function(bID, event){
       var element = document.getElementById(bID),
-          classClose = 'hiddenMobile';
+          classClose = 'hiddenMobile',
+          classClose_720 = 'hiddenMobile--720';
 
-      if (element.classList.contains(classClose)) {
+      this.enableScroll()
+
+      if (element.classList.contains(classClose) || element.classList.remove(classClose_720)) {
         element.classList.remove(classClose);
+        element.classList.remove(classClose_720);
         event.currentTarget.classList.add('close');
         event.currentTarget.classList.remove('open');
+        document.body.classList.add('removeScroll')
+      } else if (element.classList.contains(classClose_720)) {
+        element.classList.remove(classClose_720);
+        event.currentTarget.classList.add('close');
+        event.currentTarget.classList.remove('open');
+        document.body.classList.add('removeScroll')
+        this.disableScroll()
       } else {
         element.classList.add(classClose);
+        element.classList.add(classClose_720);
         event.currentTarget.classList.add('open');
         event.currentTarget.classList.remove('close');
-      }
+        document.body.classList.remove('removeScroll')
+        this.enableScroll()
 
+      }
     },
 
   },

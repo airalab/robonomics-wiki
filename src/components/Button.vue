@@ -98,7 +98,7 @@ export default {
       -webkit-appearance: none;
       outline: 0;
 
-      transition: 0.1s color linear;
+      transition: 0.1s color linear, background-color 0.1s linear;
 
       display: inline-block;
       padding: .6rem 1rem;

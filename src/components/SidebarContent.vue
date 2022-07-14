@@ -96,7 +96,6 @@
 			this.scrollToElement();
 			window.addEventListener('scroll', this.activateLinkOnScroll)
 			this.manualHush = this.$route.hash;
-			console.log(this.prevRoute)
     },
     
     beforeDestroy () {

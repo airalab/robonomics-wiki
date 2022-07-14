@@ -5,7 +5,7 @@
       <Header />
         <main class="main layout__page post">
           <div class="page">
-            <div id="sidebarDocs" class="page__sidebar hiddenMobile">
+            <div id="sidebarDocs" class="page__sidebar hiddenMobile" :class=" $store.state.showSearchbar ? null : 'menu-without-search'">
               <SidebarDocs :items="items" />
               <!-- <Banner /> -->
             </div>
@@ -148,7 +148,7 @@ query {
 
         position: fixed !important;
         
-        top: 7rem;
+        top: 4rem;
 
         left: 0;
         right: 0;
@@ -167,13 +167,25 @@ query {
       top: 4rem;
       z-index: 1000;
     }
+
+    #sidebarDocs, #sidebarContent {
+      max-height: 100%;
+      height: 100vh;
+      
+      top: 6rem;
+    }
+
+    #sidebarDocs.menu-without-search,
+    #sidebarContent.menu-without-search {
+      top: 3rem;
+    }
   }
 
 
   @media screen and (max-width: 720px) {
     .page-title-meta { display: block; }
     .page-content { grid-template-columns: minmax(0, 1fr) }
-    #sidebarContent { display: none; }
+    // #sidebarContent { display: none; }
   }
 
 </style>
@@ -244,6 +256,8 @@ export default {
       
       el.addEventListener('click', function(event){
         event.target.closest('.page__sidebar').classList.add('hiddenMobile');
+        document.body.classList.remove('removeScroll');
+        
         var id = event.target.closest('.page__sidebar').id;
         
         document.querySelectorAll('.sectionToggler').forEach(function(el) {

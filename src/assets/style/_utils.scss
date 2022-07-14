@@ -24,8 +24,20 @@
 	}
 }
 
+.hiddenMobile--720{ 
+	@media screen and (max-width: 720px) {
+		display: none !important;
+	}
+}
+
 .hiddenDesktop{ 
 	@media screen and (min-width: 1080px) {
+		display: none !important;
+	}
+}
+
+.hiddenDesktop--720{ 
+	@media screen and (min-width: 720px) {
 		display: none !important;
 	}
 }

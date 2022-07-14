@@ -3,7 +3,14 @@
 export default {
   name: "robo-wiki-title",
   props: {
-    type: Number,
+    
+    type: {
+      type: Number,
+      required: true,
+      validator: function (value) {
+        return [ 2, 3, 4, 5, 6].indexOf(value) !== -1;
+      }
+    },
     anchor: String
   },
   render(createElement) {
@@ -11,15 +18,16 @@ export default {
       'h' + this.type,
       {
         attrs: {
-          id: this.anchor.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').replace(/\s/g, '-'),
+          id: this.anchor && this.anchor.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').replace(/\s/g, '-').toLowerCase(),
           class: 'robo-wiki-title'
         }
       }, 
       [
         createElement('a', {
           attrs: {
-            href: '#' + this.anchor.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').replace(/\s/g, '-'),
-            'aria-hidden': true
+            href: this.anchor && '#' + this.anchor.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').replace(/\s/g, '-').toLowerCase(),
+            'aria-hidden': true,
+            class: !this.anchor ? 'hide' : null
           }
         }, '#'),
         this.$slots.default
@@ -29,3 +37,9 @@ export default {
 }
 
 </script>
+
+<style scoped>
+  .hide {
+    display: none;
+  }
+</style>

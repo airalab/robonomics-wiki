@@ -47,11 +47,13 @@
               </div>
           </section>
 
+          <Feedback/>
+
           <PageNextPrev :itemsList="itemsList" :current="currentIndex"/>
 
         </div>
 
-        <div id="sidebarContent">
+        <div id="sidebarContent" class="page__sidebar hiddenMobile--720" :class="$store.state.showSearchbar ? null : 'menu-without-search'">
           <robo-wiki-note v-if="$page.doc.tools.length" type="note" title="Tested for">
             <g-link v-for="tool in $page.doc.tools" :href="tool.match(/\bhttps?:\/\/\S+/gi) ||  '#' " :key="tool" class="testedFor__link">
              {{tool.replace(/\bhttps?:\/\/\S+/gi, '')}}
@@ -93,7 +95,7 @@
       gap: var(--space);
       align-items: start;
 
-      &__sidebar{
+      &__sidebar#sidebarDoc {
         word-break: break-word;
 
         overflow-y: auto;
@@ -216,6 +218,17 @@
       }
     }
 
+    #sidebarDocs, #sidebarContent {
+      height: 100vh;
+    }
+
+    #sidebarContent.page__sidebar {
+      position: sticky !important;
+      padding: 0;
+      background-color: transparent;
+      z-index: 0;
+    }
+
     .sidebarMobileToggle {
       opacity: 1;
       visibility: visible;
@@ -223,13 +236,32 @@
       top: 4rem;
       z-index: 1000;
     }
+
+    #sidebarDocs, #sidebarContent {
+      max-height: 100%;
+      height: 120vh;
+      
+      top: 6rem;
+    }
+
+    #sidebarDocs.menu-without-search,
+    #sidebarContent.menu-without-search {
+      top: 3rem;
+    }
   }
 
 
   @media screen and (max-width: 720px) {
     .page-title-meta { display: block; }
     .page-content { grid-template-columns: minmax(0, 1fr) }
-    #sidebarContent { display: none; }
+    // #sidebarContent { display: none; }
+
+    #sidebarContent.page__sidebar {
+      position: fixed !important;
+      padding: var(--space);
+      background-color: var(--body-bg);
+      z-index: 99;
+    }
   }
 
 </style>
@@ -278,13 +310,14 @@ import M from 'minimatch';
 export default {
 
 	components: {
-      SidebarDocs: () => import("~/components/SidebarDocs.vue"),
-      SidebarContent: () => import("~/components/SidebarContent.vue"),
-      Banner: () => import("~/components/Banner.vue"),
-      NavIcon: () => import('~/components/NavIcon.vue'),
-      PageNextPrev: () => import('~/components/PageNextPrev.vue'),
-      Button: () => import('~/components/Button.vue'),
-	  },
+    SidebarDocs: () => import("~/components/SidebarDocs.vue"),
+    SidebarContent: () => import("~/components/SidebarContent.vue"),
+    Banner: () => import("~/components/Banner.vue"),
+    NavIcon: () => import("~/components/NavIcon.vue"),
+    PageNextPrev: () => import("~/components/PageNextPrev.vue"),
+    Button: () => import("~/components/Button.vue"),
+    Feedback: () => import("~/components/Feedback.vue"),
+  },
 
   data(){
     return {
@@ -360,6 +393,8 @@ export default {
         })
         .then(result => {
           this.ghLink = result.data.html_url
+        }).catch(e =>{
+          console.error(e.message)
         })
     },
 
@@ -480,7 +515,9 @@ export default {
   },
 
   mounted() {
-    this.octokit = new Octokit()
+    this.octokit = new Octokit({
+      auth: process.env.GRIDSOME_PERSONAL_TOKEN
+    })
     this.github_lastupdated()
     this.github_link()
   },

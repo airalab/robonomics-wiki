@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="{'hide-bar': !searchIsShown}">
+  <header class="header" :class="{'hide-bar': !$store.state.showSearchbar}">
     <div class="layout__page">
 
       <div class="header-top">
@@ -10,13 +10,14 @@
         </g-link>
 
         <div class="header-center">
-          <Search :isShown="searchIsShown"/>
+          <Search />
         </div>
 
         <div class="header-nav">
           <ToggleTheme class="inline-block" />
           <ToggleLang class="inline-block" />
           <NavIcon class="inline-block hiddenDesktop" :section="'sidebarDocs'" :icon="'Menu'" v-if="!homePage"/>
+          <NavIcon class="inline-block hiddenDesktop--720" :section="'sidebarContent'" :icon="'Dots'" v-if="!homePage"/>
         </div>
 
       </div>
@@ -123,7 +124,7 @@ export default {
 
   data() {
     return {
-      searchIsShown: true,
+      lastScrollPosition: 0,
     }
   },
 
@@ -148,22 +149,29 @@ export default {
     if (currentScrollPosition < 0) {
       return
     }
-    // Here we determine whether we need to show or hide the navbar
-    // Set the current scroll position as the last scroll position
+      // Here we determine whether we need to show or hide the navbar
+      // Set the current scroll position as the last scroll position
       if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 100) {
         return
       }
-      this.searchIsShown = currentScrollPosition < this.lastScrollPosition
+
+
+      // this.searchIsShown = currentScrollPosition < this.lastScrollPosition
+      this.$store.commit('toggleShowSearchbar', currentScrollPosition < this.lastScrollPosition)
+
       this.lastScrollPosition = currentScrollPosition
     }
   },
 
   mounted () {
-    if (window.innerWidth <= 860) {
-      window.addEventListener('scroll', this.onScroll)
-    } else {
-      window.removeEventListener('scroll', this.onScroll)
-    }
+    window.addEventListener('resize', () => {
+      if (window.innerWidth <= 860) {
+        window.addEventListener('scroll', this.onScroll)
+      } else {
+      this.$store.commit('toggleShowSearchbar', true)
+        window.removeEventListener('scroll', this.onScroll)
+      }
+    })
   },
   
   beforeDestroy () {
