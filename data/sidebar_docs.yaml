@@ -118,7 +118,7 @@
       items:
         - title_en: Overview
           link: /docs/home-assistant-begin
-        - title_en: Raspberry Setup
+        - title_en: Raspberry Pi Setup
           link: /docs/raspberry-setup
         - title_en: Setup SLS Gateway
           link: /docs/sls-setup
