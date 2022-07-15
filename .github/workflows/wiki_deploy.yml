@@ -25,6 +25,10 @@ jobs:
           sudo yarn global add @gridsome/cli
           yarn install
           gridsome build
+        env: 
+          GRIDSOME_PERSONAL_TOKEN: ${{ secrets.GRIDSOME_PERSONAL_TOKEN }}
+          GRIDSOME_GSCRIPTID: ${{ secrets.GRIDSOME_GSCRIPTID }}
+          GRIDSOME_CAPTCHAID: ${{ secrets.CAPTCHAID }}
 
       - name: Deploy
         #uses: JamesIves/github-pages-deploy-action@3.7.1
