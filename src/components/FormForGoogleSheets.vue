@@ -47,7 +47,7 @@ export default {
       required: true,
       default: 'smile',
       validator: function (value) {
-        return ['smile', 'worry_grin', 'rolling_eyes'].indexOf(value) !== -1;
+        return ['smile', 'worry_grin', 'rolling_eyes', 'no_reaction'].indexOf(value) !== -1;
       }
     }
   },

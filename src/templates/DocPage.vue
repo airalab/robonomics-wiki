@@ -338,6 +338,8 @@ export default {
       this.github_link()
       this.getTitleForIssue()
       this.ogImageSrc =  `${this.$page.doc.fileInfo.name}-${this.locale}.png`;
+
+          console.log(this.ghLink);
     }
   },
 
@@ -372,6 +374,7 @@ export default {
         })
         .then(({ data }) => {
 
+
           let d = new Date(data[0].commit.author.date)
           this.ghUpdateDate = d.toLocaleDateString()
 
@@ -392,10 +395,12 @@ export default {
           path: this.currentDoc
         })
         .then(result => {
+          console.log(result)
           this.ghLink = result.data.html_url
         }).catch(e =>{
           console.error(e.message)
         })
+
     },
 
     isCurrent(url){
@@ -519,7 +524,8 @@ export default {
       auth: process.env.GRIDSOME_PERSONAL_TOKEN
     })
     this.github_lastupdated()
-    this.github_link()
+    this.github_link();
+
   },
 
   // mounted(){
