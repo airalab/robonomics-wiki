@@ -34,7 +34,7 @@
 
           <VueRemarkContent />
 
-          <section class="docContribution" v-if="ghLink">
+          <section class="docContribution" v-show="ghLink">
 
               <div class="content" v-if="ghLink">
                 <h5>{{$st('Github Contribution Title', $store.state.locale)}}</h5>
@@ -338,8 +338,6 @@ export default {
       this.github_link()
       this.getTitleForIssue()
       this.ogImageSrc =  `${this.$page.doc.fileInfo.name}-${this.locale}.png`;
-
-          console.log(this.ghLink);
     }
   },
 
@@ -395,7 +393,6 @@ export default {
           path: this.currentDoc
         })
         .then(result => {
-          console.log(result)
           this.ghLink = result.data.html_url
         }).catch(e =>{
           console.error(e.message)
