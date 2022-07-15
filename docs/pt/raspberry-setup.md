@@ -2,10 +2,9 @@
 title: Raspberry Pi Setup
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
-cover_image: "../docsCovers/pt/raspberry-setup.png"
 ---
 
-For all methods from ["Overview"](./home-assistant-begin.md), the first thing you need to do is setup a Raspberry Pi.
+For all methods from ["Overview"](./home-assistant-begin.md), the first thing you need to do is set up a Raspberry Pi.
 
 ## Preinstalled image
 The easiest way is use our prepared image. You can download it [here.](https://disk.yandex.ru/d/R4vYp9Jhn2O25A) Then read "Configuration RPi" and install image.
@@ -45,12 +44,12 @@ wifis:
         password: "YOUR_WIFI_PASSWORD"
 ```
 
-<robo-wiki-note type="warning">Make sure that you input your actual wifi name and your wifi password.</robo-wiki-note>
+<robo-wiki-note type="warning">Make sure that you input your actual Wi-Fi name and your Wi-Fi password.</robo-wiki-note>
 
 Then you need to save the file, and insert the SD card to the Raspberry Pi and turn it on. It must connect to your wi-fi network. 
 
 Now you need to find its address. To find address you can use [Fing app](https://www.fing.com/products). 
-Also you can find address nmap tool.
+Also, you can find address nmap tool.
 First, install nmap. For ubuntu:
 
 ```shell
@@ -95,10 +94,12 @@ If It's necessary, you can create PRi image manually.
 For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat **" Configuration RPi"**. The required image you can find in RPi imager program.
 
 ### Home Assistant installation
-Now we need to install Home Assistant to the Raspberry Pi. Detailed instructions can be found [here](https://www.home-assistant.io/installation/linux#install-home-assistant-core). You need to install `Home Assistant Core`. It's actual version is 2022.6.2  and instruction assumes that we already have installed Python 3.9 or newer.
+Now we need to install Home Assistant to the Raspberry Pi. Official website oh Home Assistant can be found [here](https://www.home-assistant.io/). 
 
-Next You can use our bash script `installation.sh`  to update system and install all dependencies automatically.
-For this download file from [here](https://github.com/LoSk-p/robonomics-hass-utils/tree/main/raspberry_pi) to your rassbery Pi. Then change user's rights to this file and start it:
+We will install `Home Assistant Core`. It's actual version is 2022.6.2  and instruction assumes that we already have installed Python 3.9 or newer.
+
+Let's start. The easiest way is use our bash script `installation.sh`  to update system and install all dependencies automatically.
+For this download file from [here](https://github.com/LoSk-p/robonomics-hass-utils/tree/main/raspberry_pi) to your raspberry Pi. Then change user's rights to this file and start it:
 
 ```shell
 chmod a+x instalation.sh
@@ -203,7 +204,7 @@ Then restart the service:
 sudo systemctl restart mosquitto
 ```
 
-And check the brocker status:
+And check the Brocker status:
 
 ```bash
 systemctl status mosquitto
@@ -212,7 +213,7 @@ systemctl status mosquitto
 <robo-wiki-picture src="home-assistant/mosquitto.jpg" alt="Broker status" />
 
 ### IPFS installation
-Also we need [IPFS](https://ipfs.io/) for working with robonomics. For today the latest release of IPFS is 0.12.2. You can use our script to download ipfs and create systemd service with it.
+Also, we need [IPFS](https://ipfs.io/) for working with robonomics. For today the latest release of IPFS is 0.12.2. You can use our script to download ipfs and create systemd service with it.
 
 ```shell
 cd ~
@@ -223,7 +224,7 @@ sudo chmod +x install_ipfs.sh
 
 ### Systemd services
 
-If you don'tr want to start Home assistant manually everytime - let's create systemd service.
+If you don't want to start Home assistant manually everytime - let's create systemd service.
 
 Create new service for home assistant start: 
 
