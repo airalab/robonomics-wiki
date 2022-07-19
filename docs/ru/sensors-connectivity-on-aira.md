@@ -1,5 +1,6 @@
 ---
 title: Sensors Connectivity
+locale: 'ru' 
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: true
 ---

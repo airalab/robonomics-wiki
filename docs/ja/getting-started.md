@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+locale: 'ja' 
 contributors: [Vourhey, positivecrash]
 translated: false
 ---

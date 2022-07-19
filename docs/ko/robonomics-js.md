@@ -1,5 +1,6 @@
 ---
 title: 로노미크스-JS
+locale: 'ko' 
 contributors: [Vourhey, arinaml]
 translated: true
 ---

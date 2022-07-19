@@ -1,5 +1,6 @@
 ---
 title: How to contribute
+locale: 'ja' 
 contributors: [positivecrash]
 translated: false
 ---

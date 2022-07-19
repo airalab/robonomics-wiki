@@ -1,5 +1,6 @@
 ---
 title: Robonomics IO IPFS
+locale: 'pt' 
 contributors: [Vourhey]
 translated: true
 ---

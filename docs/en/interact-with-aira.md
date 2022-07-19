@@ -1,5 +1,6 @@
 ---
 title: Interact with AIRA  
+locale: 'en' 
 contributors: [akru]
 translated: true
 ---

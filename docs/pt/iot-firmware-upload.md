@@ -1,5 +1,6 @@
 ---
 title: IoT Firmware Upload 
+locale: 'pt' 
 # contributors: []
 translated: true
 ---

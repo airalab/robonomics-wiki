@@ -1,5 +1,6 @@
 ---
 title: Connect the simplest CPS
+locale: 'es' 
 contributors: [ensrationis, akru]
 translated: false
 ---

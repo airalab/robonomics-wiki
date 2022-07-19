@@ -1,5 +1,6 @@
 ---
 title: Как редактировать Вики
+locale: 'ru' 
 contributors: [positivecrash]
 translated: true
 ---

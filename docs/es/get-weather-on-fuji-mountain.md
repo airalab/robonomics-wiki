@@ -1,5 +1,6 @@
 ---
 title: DEMO "Obtenga el clima en la montaña de Fuji"
+locale: 'es' 
 contributors: [Vourhey]
 translated: true
 ---

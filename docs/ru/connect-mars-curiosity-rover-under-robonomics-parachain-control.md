@@ -1,5 +1,6 @@
 ---
 title: Подключить марсоход Curiosity под управлением парачейна Робономики 
+locale: 'ru' 
 contributors: [Vourhey, PaTara43, katerina510]
 translated: true
 ---

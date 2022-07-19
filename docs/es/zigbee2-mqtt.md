@@ -1,5 +1,6 @@
 ---
 title: Connect Sensors with Zigbee2MQTT 
+locale: 'es' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
 ---

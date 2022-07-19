@@ -1,5 +1,6 @@
 ---
 title: Lesson 6.1, エンドユーザー向けのIoT Dappsの構築 
+locale: 'ja' 
 contributors: [KiichiSugihara]
 translated: true
 ---

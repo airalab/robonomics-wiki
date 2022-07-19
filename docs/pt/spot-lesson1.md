@@ -1,5 +1,6 @@
 ---
 title: Lesson 1. Emergency stop, initialization, body position control
+locale: 'pt' 
 contributors: [LoSk-p, vitl2907, khssnv]
 translated: true
 ---

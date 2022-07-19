@@ -1,5 +1,6 @@
 ---
 title: Как купить подписку
+locale: 'ru' 
 contributors: [LoSk-p, katerina510]
 translated: true
 ---

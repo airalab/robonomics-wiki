@@ -1,5 +1,6 @@
 ---
 title: Lesson 1, ユーザーアプリにロボットを繋ぐ 
+locale: 'ja' 
 contributors: [KiichiSugihara]
 translated: true
 ---

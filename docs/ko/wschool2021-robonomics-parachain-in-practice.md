@@ -1,5 +1,6 @@
 ---
 title: 과, 실제 ROBONOMICS  파라체인 
+locale: 'ko' 
 contributors: [akru, arinaml]
 translated: true
 ---

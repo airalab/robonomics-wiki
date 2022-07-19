@@ -1,5 +1,6 @@
 ---
 title: Robonomics Integration Configuration
+locale: 'en' 
 contributors: [LoSk-p]
 translated: true
 ---

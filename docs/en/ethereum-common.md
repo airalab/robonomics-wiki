@@ -1,5 +1,6 @@
 ---
 title: Ethereum Common
+locale: 'en'  
 contributors: [ensrationis, akru]
 translated: true
 ---

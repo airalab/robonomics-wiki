@@ -1,5 +1,6 @@
 ---
 title: 5과, 연결성
+locale: 'ko' 
 contributors: [vourhey, arinaml]
 translated: true
 ---

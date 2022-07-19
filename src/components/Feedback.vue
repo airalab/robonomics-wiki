@@ -115,15 +115,15 @@ export default {
     }
 
   .feedback__icon--smile svg path {
-    fill: var(--color-note-accent--okay);
+    fill: var(--color-emoji-green);
   }
 
   .feedback__icon--rolling-eyes svg path {
-    fill: var(--code-text-inline);
+    fill: var(--color-emoji-pink);
   }
 
   .feedback__icon--worry-grin svg path {
-    fill: var(--color-note-accent--warning);
+    fill: var(--color-emoji-orange);
   }
 
   @media screen and (max-width: 900px)  {

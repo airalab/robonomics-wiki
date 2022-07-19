@@ -1,5 +1,6 @@
 ---
 title: Raspberry Setup
+locale: 'es' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
 ---

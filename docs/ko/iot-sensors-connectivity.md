@@ -1,5 +1,6 @@
 ---
 title: IoT Sensors Connectivity
+locale: 'ko' 
 contributors: [LoSk-p, Vourhey]
 translated: false
 ---

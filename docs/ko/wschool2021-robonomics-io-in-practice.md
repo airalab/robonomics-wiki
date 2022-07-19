@@ -1,5 +1,6 @@
 ---
 title: 레슨 3, ROBONOMICS IO 실제
+locale: 'ko' 
 contributors: [akru, arinaml]
 translated: true
 ---

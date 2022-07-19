@@ -1,5 +1,6 @@
 ---
 title: Lesson 2. Remote controlled and programmed motion
+locale: 'ru' 
 contributors: [LoSk-p, khssnv]
 translated: false
 ---

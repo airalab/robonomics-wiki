@@ -1,5 +1,6 @@
 ---
 title: Lesson 2, Robonomics AIRA overview 
+locale: 'ru' 
 contributors: [Ensrationis]
 translated: false
 ---

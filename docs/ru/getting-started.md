@@ -1,5 +1,6 @@
 ---
 title: Введение
+locale: 'ru' 
 contributors: [Vourhey, positivecrash]
 translated: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+locale: 'ko' 
 contributors: [Vourhey, positivecrash]
 translated: false
 ---

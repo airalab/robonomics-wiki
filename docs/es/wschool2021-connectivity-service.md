@@ -1,5 +1,6 @@
 ---
 title: Lección 5, Conectividad
+locale: 'es' 
 contributors: [vourhey]
 translated: false
 ---

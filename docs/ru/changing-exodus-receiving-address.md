@@ -1,5 +1,6 @@
 ---
 title: Changing Exodus Bridge Receiving Address 
+locale: 'ru' 
 contributors: [Leemo94]
 translated: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: Create Account for Robonomics Parachain
+locale: 'ko' 
 contributors: [PaTara43, Fingerling42]
 translated: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: Robonomics Winter School 2021 Introducción y Ceremonia de Apertura
+locale: 'es' 
 # contributors: []
 translated: true
 ---

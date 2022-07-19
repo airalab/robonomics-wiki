@@ -1,5 +1,6 @@
 ---
 title: Control Kuka manipulator with robonomics
+locale: 'ko' 
 contributors: [LoSk-p]
 translated: false
 ---

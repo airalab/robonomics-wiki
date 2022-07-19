@@ -1,5 +1,6 @@
 ---
 title:  Market messages
+locale: 'ko' 
 # contributors: []
 translated: false
 ---

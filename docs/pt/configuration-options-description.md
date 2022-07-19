@@ -1,5 +1,6 @@
 ---
 title: Configuration Options Description 
+locale: 'pt' 
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: true
 ---

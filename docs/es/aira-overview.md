@@ -1,5 +1,6 @@
 ---
 title: AIRA Overview
+locale: 'es' 
 contributors: [ensrationis, akru, positivecrash]
 translated: false
 ---

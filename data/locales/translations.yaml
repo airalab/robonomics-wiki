@@ -1,0 +1,262 @@
+- alias: Enter title
+  en: Explore Robonomics wiki
+  es: Explore wiki Robonomics
+  ja: Explore Robonomics wiki
+  ko: Explore Robonomics wiki
+  pt: Explore Robonomics wiki
+  ru: Изучайте Робономику в Вики
+
+- alias: Site Description
+  en: Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.
+  es: Aprenda a través de tutoriales y prácticas útiles experimentando. Esta documentación esta diseñada para ayudarle a conectar robots o códigos de Aplicaciones Descentralizadas DApps.
+  ja: Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.
+  ko: Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.
+  pt: Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.
+  ru: Изучите Робономику с помощью наших уроков и практически полезных экспериментов. Эта документация призвана помочь вам в подключении роботов или создании децентрализованных приложений в сети Робономики.
+
+- alias: Enter Nav 1
+  en: Quick overview
+  es: Vista Rápida
+  ja: Quick overview
+  ko: Quick overview
+  pt: Quick overview
+  ru: Быстрое погружение
+
+- alias: Enter Nav 2
+  en: Connect robots
+  es: Conectando Robots
+  ja: Connect robots
+  ko: Connect robots
+  pt: Connect robots
+  ru: Подключайте роботов
+
+- alias: Enter Nav 3
+  en: Maintenance Guide
+  es: Guía de Mantenimiento
+  ja: Maintenance Guide
+  ko: Maintenance Guide
+  pt: Maintenance Guide
+  ru: Администрируйте
+
+- alias: Enter Nav 4
+  en: Use Cases
+  es: Casos de Uso
+  ja: Use Cases
+  ko: Use Cases
+  pt: Use Cases
+  ru: Практические примеры
+
+- alias: Enter Nav 5
+  en: Developers' documentation
+  es: Documentación para Desarrolladores
+  ja: Developers' documentation
+  ko: Developers' documentation
+  pt: Developers' documentation
+  ru: Документация для разработчиков
+
+- alias: Enter Nav 6
+  en: Make a contribution
+  es: Hacer una contribución
+  ja: Make a contribution
+  ko: Make a contribution
+  pt: Make a contribution
+  ru: Внесите свой вклад
+
+- alias: Menu
+  en: Menu
+  es: Menú
+  ja: Menu
+  ko: Menu
+  pt: Menu
+  ru: Меню
+
+- alias: Search
+  en: Search
+  es: Búsqueda
+  ja: サイト検索
+  ko: 사이트 검색
+  pt: 사이트 검색
+  ru: Поиск
+
+- alias: Robonomics WIKI
+  en: Robonomics WIKI
+  es: Robonomics WIKI
+  ja: Robonomics WIKI
+  ko: Robonomics WIKI
+  pt: Robonomics WIKI
+  ru: WIKI Робономика
+
+- alias: Search Found
+  en: Found results
+  es: Resultados encontrados
+  ja: Found results
+  ko: Found results
+  pt: Found results
+  ru: Количество найденных записей
+
+- alias: In this article
+  en: In this article
+  es: En este articulo
+  ja: In this article
+  ko: In this article
+  pt: In this article
+  ru: Содержание страницы
+
+- alias: Github Contribution Title
+  en: Make a contribution
+  es: Hacer una Contribución
+  ja: Make a contribution
+  ko: Make a contribution
+  pt: Make a contribution
+  ru: Станьте контрибьютором
+
+- alias: Github Contribution Text
+  en: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
+  es: Robonomics es de código abierto. ¿Ves algo que está mal o no está claro? Envíe una solicitud.
+  ja: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
+  ko: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
+  pt: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
+  ru: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
+
+- alias: Github Contribution Button
+  en: Edit page
+  es: Editar Página
+  ja: Edit page
+  ko: Edit page
+  pt: Edit page
+  ru: Редактировать страницу
+
+- alias: Latest (commit)
+  en: Latest
+  es: Último
+  ja: Latest
+  ko: Latest
+  pt: Latest
+  ru: Последний
+
+- alias: commit
+  en: commit
+  es: cometer
+  ja: commit
+  ko: commit
+  pt: commit
+  ru: коммит
+
+- alias: on (date of commit)
+  en: on
+  es: en
+  ja: on
+  ko: on
+  pt: on
+  ru:
+
+- alias: by (author of commit)
+  en: by
+  es: por
+  ja: by
+  ko: by
+  pt: by
+  ru: сделан
+
+- alias: Main contributors
+  en: Main contributors
+  es: Principales Contribuyentes
+  ja: Main contributors
+  ko: Main contributors
+  pt: Main contributors
+  ru: Основные контрибьюторы
+
+- alias: How to contribute
+  en: How to contribute
+  es: Cómo Contribuir
+  ja: How to contribute
+  ko: How to contribute
+  pt: How to contribute
+  ru: Как стать контрибьютором
+
+- alias: This page needs translation
+  en: This page needs translation
+  es: Esta página necesita traducción
+  ja: このページは翻訳が必要です
+  ko: 이 페이지는 번역이 필요합니다
+  pt: This page needs translation
+  ru: Эта страница нуждается в переводе
+
+- alias: This page not found
+  en: This page not found
+  es: Página no Encontrada
+  ja: このページは見つかりませんでした
+  ko: 이 페이지를 찾을 수 없습니다
+  ru: Страница не найдена
+
+- alias: 404string_1
+  en: There can be many reasons for this, for example
+  es: Puede haber muchas razones para esto, por ejemplo
+  ja: これには多くの理由があります。たとえば、
+  ko: 여기에는 여러 가지 이유가 있을 수 있습니다. 예를 들어
+  pt: There can be many reasons for this, for example
+  ru: У этого может быть много причин, например
+
+- alias: 404reason_1
+  en: there is a typo in the url
+  es: hay un error tipográfico en la URL
+  ja: URLにタイプミスがあります
+  ko: URL에 오타가 있습니다
+  pt: there is a typo in the url
+  ru: в url опечатка
+
+- alias: 404reason_2
+  en: such a page never existed
+  es: tal página nunca existió
+  ja: そのようなページは存在しませんでした
+  ko: 그런 페이지는 존재하지 않았습니다
+  pt: such a page never existed
+  ru: такой страницы никогда не существовало
+
+- alias: 404reason_3
+  en: the page was deleted for some reason or the content was combined with another page
+  es: la página se eliminó por algún motivo o el contenido se combinó con otra página
+  ja: 何らかの理由でページが削除されたか、コンテンツが別のページと結合されました
+  ko: 어떤 이유로 페이지가 삭제되었거나 콘텐츠가 다른 페이지와 결합되었습니다.
+  pt: the page was deleted for some reason or the content was combined with another page
+  ru: страницу по какой-то причине удалили или совместили контент с другой страницей
+
+- alias: This page may need translation
+  en: This page may need translation
+  es: Esta página puede necesitar traducción
+  ja: このページは翻訳が必要な場合があります
+  ko: 이 페이지는 번역이 필요할 수 있습니다
+  pt: This page may need translation
+  ru: Возможно, эта страница нуждается в переводе
+
+- alias: If you want to help us
+  en: If you want to help us
+  es: Esta página puede necesitar traducción
+  ja: このページは翻訳が必要な場合があります
+  ko: 이 페이지는 번역이 필요할 수 있습니다
+  pt: If you want to help us
+  ru: Если вы хотите нам помочь
+
+- alias: contact us at
+  en: contact us at
+  es: por favor envíenos un correo electrónico
+  ja: メールでお問い合わせください
+  ko: 이메일을 보내주세요
+  pt: contact us at
+  ru: пишите на email
+
+- alias: or
+  en: or
+  es: o
+  ja: または
+  ko: 또는
+  pt: or
+  ru: или
+
+- alias: send
+  en: send
+  es: enviar
+  ja: 送信
+  ko: 보내다
+  pt: send
+  ru: отправляйте

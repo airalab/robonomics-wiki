@@ -1,5 +1,6 @@
 ---
 title: Create digital identity run by Ethereum 
+locale: 'ja' 
 contributors: [Vourhey]
 translated: false
 ---

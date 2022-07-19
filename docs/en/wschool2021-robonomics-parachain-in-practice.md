@@ -1,5 +1,6 @@
 ---
 title: Lesson 4, Robonomics Parachain in Practice  
+locale: 'en' 
 contributors: [akru]
 translated: true
 ---

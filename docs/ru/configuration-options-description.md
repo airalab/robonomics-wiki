@@ -1,5 +1,6 @@
 ---
 title: Configuration Options Description 
+locale: 'ru' 
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: true
 ---

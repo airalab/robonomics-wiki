@@ -1,5 +1,6 @@
 ---
 title: Passing dynamic parameters
+locale: 'ja' 
 contributors: [ensrationis, akru]
 translated: false
 ---

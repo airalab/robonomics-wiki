@@ -1,5 +1,6 @@
 ---
 title: Manual start of the Robonomics network, consisting of 3 nodes 
+locale: 'es' 
 contributors: [dergudzon, Vourhey]
 translated: false
 ---

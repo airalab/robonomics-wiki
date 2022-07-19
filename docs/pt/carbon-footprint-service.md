@@ -1,5 +1,6 @@
 ---
 title: Offsetting Service  
+locale: 'pt' 
 contributors: [tubleronchik]
 translated: true
 ---

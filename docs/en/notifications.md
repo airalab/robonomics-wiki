@@ -1,5 +1,6 @@
 ---
 title: Robonomics Smart Home
+locale: 'en' 
 contributors: [LoSk-p]
 translated: true
 ---

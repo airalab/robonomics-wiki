@@ -1,5 +1,6 @@
 ---
 title: Setup SLS Gateway
+locale: 'es' 
 contributors: [LoSk-p, Fingerling42]
 translated: false
 ---

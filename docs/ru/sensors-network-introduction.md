@@ -1,5 +1,6 @@
 ---
 title: Введение 
+locale: 'ru' 
 contributors: [LoSk-p]
 translated: true
 ---

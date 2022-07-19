@@ -1,5 +1,6 @@
 ---
 title: Ethereum Common Messages
+locale: 'pt' 
 contributors: [ensrationis, akru]
 translated: true
 ---

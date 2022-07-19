@@ -1,5 +1,6 @@
 ---
 title: Connect an Amazon FreeRTOS Device to Robonomics by MQTT 
+locale: 'pt' 
 contributors: [khssnv]
 translated: true
 ---

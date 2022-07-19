@@ -1,5 +1,6 @@
 ---
 title: 6.2 강, 스크래치에서 DAPP 인터페이스 구축 
+locale: 'ko' 
 contributors: [positivecrash, arinaml]
 translated: true
 ---

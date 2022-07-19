@@ -1,6 +1,3 @@
 - path: '/'
-  component: './src/pages/index.vue'
-  typename: 'page'
-- path: '/docs/'
-  component: './src/templates/DocPage.vue'
+  component: './src/pages/Index.vue'
   typename: 'component'

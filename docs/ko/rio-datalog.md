@@ -1,5 +1,6 @@
 ---
 title: Robonomics IO Datalog
+locale: 'ko' 
 contributors: [Vourhey, PaTara43]
 translated: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: Ports mapping
+locale: 'en' 
 contributors: [ValanisZz, GiggleSeagul, Valiento]
 translated: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Frequently Asked Questions about AIRA
+locale: 'ja' 
 contributors: [Vourhey]
 translated: false
 ---

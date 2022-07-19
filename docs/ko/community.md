@@ -1,5 +1,6 @@
 ---
 title: Community
+locale: 'ko' 
 contributors: [positivecrash]
 translated: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: AIRA Installation on VirtualBox
+locale: 'ru' 
 contributors: [akru]
 translated: false
 ---

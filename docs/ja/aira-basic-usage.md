@@ -1,5 +1,6 @@
 ---
 title: Basic usage of AIRA
+locale: 'ja' 
 contributors: [akru]
 translated: false
 ---

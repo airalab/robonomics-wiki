@@ -1,5 +1,6 @@
 ---
 title: Lesson 0. Configure and test connection to Spot
+locale: 'ru' 
 contributors: [LoSk-p, vitl2907, khssnv]
 translated: false
 ---

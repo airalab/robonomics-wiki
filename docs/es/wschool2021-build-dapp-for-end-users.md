@@ -1,5 +1,6 @@
 ---
 title: Lección 6.1, Crear dApps IoT para usuarios finales 
+locale: 'es' 
 contributors: [vol4tim]
 translated: true
 ---

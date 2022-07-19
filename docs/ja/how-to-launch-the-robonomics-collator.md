@@ -1,5 +1,6 @@
 ---
 title: How to launch the Robonomics collator 
+locale: 'ja' 
 contributors: [dergudzon, Leemo94]
 translated: false
 ---

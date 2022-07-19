@@ -1,5 +1,6 @@
 ---
 title: Conexión de Aira a través de SSH
+locale: 'es' 
 contributors: [akru]
 translated: true
 ---

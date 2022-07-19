@@ -1,5 +1,6 @@
 ---
 title: Robonomics-js
+locale: 'ja' 
 contributors: [Vourhey]
 translated: true
 ---

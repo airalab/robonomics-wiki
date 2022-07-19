@@ -1,5 +1,6 @@
 ---
 title: Playground Overview
+locale: 'ko' 
 contributors: [LoSk-p]
 translated: false
 ---

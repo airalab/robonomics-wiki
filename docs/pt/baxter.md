@@ -1,5 +1,6 @@
 ---
 title: Control Baxter robot with robonomics
+locale: 'pt' 
 contributors: [nakata5321, Vourhey]
 translated: true
 ---

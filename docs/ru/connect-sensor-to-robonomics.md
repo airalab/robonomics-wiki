@@ -1,5 +1,6 @@
 ---
 title: Подключение датчика к Робономике
+locale: 'ru' 
 contributors: [LoSk-p, Vourhey, Ludovich88]
 translated: true
 ---

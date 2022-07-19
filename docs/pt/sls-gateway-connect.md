@@ -1,5 +1,6 @@
 ---
 title: Connect SLS Gateway to Home Assistant
+locale: 'pt' 
 contributors: [LoSk-p]
 translated: true
 ---

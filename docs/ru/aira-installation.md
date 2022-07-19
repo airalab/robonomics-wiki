@@ -1,5 +1,6 @@
 ---
 title: AIRA Installation
+locale: 'ru' 
 contributors: [akru]
 translated: false
 ---

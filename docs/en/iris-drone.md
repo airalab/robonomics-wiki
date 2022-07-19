@@ -1,5 +1,6 @@
 ---
 title: Drone control with robonomics
+locale: 'en' 
 contributors: [tubleronchik, Vourhey]
 translated: true
 ---

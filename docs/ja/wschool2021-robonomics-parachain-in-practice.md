@@ -1,5 +1,6 @@
 ---
 title: Lesson 4, 実践でのRobonomics parachain 
+locale: 'ja' 
 contributors: [KiichiSugihara]
 translated: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Создать аккаунт для парачейна Робономики
+locale: 'ru' 
 contributors: [PaTara43, Fingerling42, katerina510]
 translated: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: IPFS Common
+locale: 'es' 
 contributors: [ensrationis, akru]
 translated: false
 ---

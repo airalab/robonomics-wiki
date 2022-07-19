@@ -1,5 +1,6 @@
 ---
 title: Connecting AIRA via SSH 
+locale: 'ko' 
 contributors: [akru]
 translated: false
 ---

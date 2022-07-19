@@ -1,5 +1,6 @@
 ---
 title: 레슨 1, 로봇을 사용자 앱에 연결
+locale: 'ko' 
 contributors: [Ensrationis, arinaml]
 translated: true
 ---

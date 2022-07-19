@@ -1,5 +1,6 @@
 ---
 title: How to contribute
+locale: 'ko' 
 contributors: [positivecrash]
 translated: false
 ---

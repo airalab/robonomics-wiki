@@ -34,6 +34,19 @@ module.exports = {
       }
     },
 
+    // {
+    //   use: "gridsome-plugin-translateit",
+    //   options: {
+    //     locales: ["en", "ru", "ja", "ko", "pt", "es"],
+    //     defaultLocale: "en",
+    //     translations: yaml.load(fs.readFileSync("./data/locales/translations.yaml", 'utf8')),
+    //     slugifyDefaultLocale: true,
+    //     collections: ["docs"],
+    //     exclude: ["/404/", "/sitemap.xml/"],
+    //     routes: yaml.load(fs.readFileSync("./data/locales/routes.yaml", 'utf8')),
+    //   }
+    // },
+
     {
       use: '@gridsome/plugin-sitemap',
       options: {
@@ -43,19 +56,7 @@ module.exports = {
 
     {
       use: "gridsome-plugin-google-sheets-post"
-    },
-    // {
-    //   use: "gridsome-plugin-translateit",
-    //   options: {
-    //       locales: ["en", "ru", "ja", "ko", "pt", "es"],
-    //       defaultLocale: "en",
-    //       slugifyDefaultLocale: true, // this is default value; set 'true' if you want to add locale to all pathes, including default
-    //       translations: yaml.load(fs.readFileSync('./data/localazation_strings.yaml', 'utf8')),
-    //       collections: ['docs'], // any collection name
-    //       exclude: ["/404/", "/sitemap.xml/"], // this is default value
-    //       routes: yaml.load(fs.readFileSync('./data/locales/routes.yaml', 'utf8')),
-    //   }
-    // }
+    }
   ],
 
 

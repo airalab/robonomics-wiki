@@ -1,5 +1,6 @@
 ---
 title: R&D Based on Robonomics Network
+locale: 'ko' 
 contributors: [PaTara43]
 translated: false
 ---

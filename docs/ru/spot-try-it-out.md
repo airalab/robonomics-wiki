@@ -1,5 +1,6 @@
 ---
 title: Try It Out
+locale: 'ru' 
 contributors: [LoSk-p]
 translated: false
 ---

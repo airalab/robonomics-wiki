@@ -1,5 +1,6 @@
 ---
 title: Become a Provider
+locale: 'pt' 
 contributors: [ensrationis, akru]
 translated: true
 ---

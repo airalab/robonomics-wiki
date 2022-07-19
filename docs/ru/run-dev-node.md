@@ -1,5 +1,6 @@
 ---
 title: Как установить ноду Робономики в режиме разработчика
+locale: 'ru' 
 contributors: [LoSk-p, katerina510]
 translated: true
 ---

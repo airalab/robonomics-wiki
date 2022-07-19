@@ -1,5 +1,6 @@
 ---
 title: Try It Out
+locale: 'ja' 
 contributors: [LoSk-p]
 translated: false
 ---

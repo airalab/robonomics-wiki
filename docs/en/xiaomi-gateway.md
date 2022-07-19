@@ -1,5 +1,6 @@
 ---
 title: Connect Sensors with Xiaomi Gateway
+locale: 'en' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: How to edit WIKI
+locale: 'pt' 
 contributors: [positivecrash]
 translated: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: 레슨 2, ROBONOMICS AIRA 개요 
+locale: 'ko' 
 contributors: [Ensrationis, arinaml]
 translated: true
 ---

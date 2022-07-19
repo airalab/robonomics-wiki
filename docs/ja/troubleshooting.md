@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting
+locale: 'ja' 
 contributors: [nakata5321]
 translated: true
 ---

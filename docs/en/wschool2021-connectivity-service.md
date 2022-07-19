@@ -1,5 +1,6 @@
 ---
 title: Lesson 5, Connectivity  
+locale: 'en' 
 contributors: [vourhey]
 translated: true
 ---

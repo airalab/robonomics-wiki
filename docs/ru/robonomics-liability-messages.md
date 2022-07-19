@@ -1,5 +1,6 @@
 ---
 title: Robonomics Liability Messages
+locale: 'ru' 
 contributors: [ensrationis, akru]
 translated: false
 ---

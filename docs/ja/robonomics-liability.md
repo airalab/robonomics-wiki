@@ -1,5 +1,6 @@
 ---
 title: Robonomics Liability
+locale: 'ja' 
 contributors: [ensrationis, akru]
 translated: false
 ---

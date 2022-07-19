@@ -1,5 +1,6 @@
 ---
 title: Introduction
+locale: 'ko' 
 contributors: [LoSk-p]
 translated: false
 ---

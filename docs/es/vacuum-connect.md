@@ -1,5 +1,6 @@
 ---
 title: Connect Vacuum Cleaner
+locale: 'es' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: How to build collator node from source 
+locale: 'ru' 
 contributors: [dergudzon, Leemo94]
 translated: false
 ---

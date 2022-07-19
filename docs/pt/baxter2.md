@@ -1,5 +1,6 @@
 ---
 title: Say "Hello Baxter!" with robonomics
+locale: 'pt' 
 contributors: [nakata5321]
 translated: true
 ---

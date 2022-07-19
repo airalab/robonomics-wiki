@@ -1,5 +1,6 @@
 ---
 title: Glossary
+locale: 'ja' 
 contributors: [Vourhey]
 translated: false
 ---

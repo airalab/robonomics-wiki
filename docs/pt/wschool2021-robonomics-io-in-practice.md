@@ -1,5 +1,6 @@
 ---
 title: Lesson 3, Robonomics IO in Practice 
+locale: 'pt' 
 contributors: [akru]
 translated: true
 ---

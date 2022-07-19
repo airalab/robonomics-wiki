@@ -1,5 +1,6 @@
 ---
 title: Connect an Air Pollution Sensor
+locale: 'ko' 
 contributors: [ensrationis, akru]
 translated: false
 ---

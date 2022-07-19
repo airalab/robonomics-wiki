@@ -1,5 +1,6 @@
 ---
 title: Lesson 3. Find and follow an object, navigate between them 
+locale: 'ja' 
 contributors: [LoSk-p, khssnv]
 translated: false
 ---

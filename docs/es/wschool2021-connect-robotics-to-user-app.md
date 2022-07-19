@@ -1,5 +1,6 @@
 ---
 title: Lección 1, Conectar la robótica a la dapp
+locale: 'es' 
 contributors: [Ensrationis]
 translated: true
 ---

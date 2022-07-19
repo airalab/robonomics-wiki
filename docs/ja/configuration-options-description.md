@@ -1,5 +1,6 @@
 ---
 title: Configuration Options Description
+locale: 'ja' 
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: false
 ---

@@ -1,5 +1,6 @@
 ---
 title:  Agent development examples
+locale: 'ko' 
 # contributors: []
 translated: false
 ---

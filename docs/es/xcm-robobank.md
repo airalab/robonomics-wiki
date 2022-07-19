@@ -1,5 +1,6 @@
 ---
 title: Substrate Cumulus Parachain Testsuite for cross-chain messaging 
+locale: 'es' 
 contributors: [ddulesov, boogerwooger, tubleronchik] 
 translated: false 
 ---

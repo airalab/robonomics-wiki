@@ -1,5 +1,6 @@
 ---
 title: How the technical committee is fast-tracking the democracy proposals 
+locale: 'ko' 
 contributors: [dergudzon, Leemo94]
 translated: false
 ---

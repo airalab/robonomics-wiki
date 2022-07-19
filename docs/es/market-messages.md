@@ -1,5 +1,6 @@
 ---
 title:  Market messages
+locale: 'es' 
 # contributors: []
 translated: false
 ---

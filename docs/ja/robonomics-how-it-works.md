@@ -1,5 +1,6 @@
 ---
 title: How Robonomics Network Works 
+locale: 'ja' 
 contributors: [ensrationis, akru]
 translated: false
 ---

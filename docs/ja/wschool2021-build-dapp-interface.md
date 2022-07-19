@@ -1,5 +1,6 @@
 ---
 title: Lesson 6.2, Dapp インターフェースの構築 
+locale: 'ja' 
 contributors: [KiichiSugihara]
 translated: true
 ---

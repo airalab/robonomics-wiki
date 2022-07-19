@@ -1,5 +1,6 @@
 ---
 title: Robonomics Coffee 
+locale: 'en' 
 contributors: [PaTara43]
 translated: true
 ---

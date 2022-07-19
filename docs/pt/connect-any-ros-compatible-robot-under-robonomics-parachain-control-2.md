@@ -1,5 +1,6 @@
 ---
 title: Connect any ROS-compatible robot under Robonomics parachain control. Part 2, IPFS 
+locale: 'pt' 
 contributors: [PaTara43]
 translated: true
 ---

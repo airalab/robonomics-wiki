@@ -21,7 +21,7 @@
             <g-link to="/docs/contributing/">{{$st('How to contribute', $store.state.locale)}}</g-link>
           </li>
 
-          <li v-if="!$page.doc.translated&& !isCurrent('/docs/translate-wiki/')">
+          <li v-if="!$page.doc.translated && !isCurrent('/docs/translate-wiki/')">
             <g-link to="/docs/translate-wiki/">{{$st('This page needs translation', $store.state.locale)}}</g-link>
           </li>
         </ul>

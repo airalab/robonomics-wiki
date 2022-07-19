@@ -1,5 +1,6 @@
 ---
 title: Robonomics DApp Overview
+locale: 'es' 
 contributors: [Vourhey]
 translated: false
 ---

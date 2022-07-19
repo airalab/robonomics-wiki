@@ -1,5 +1,6 @@
 ---
 title: Contracts deployment
+locale: 'es' 
 contributors: [ensrationis, akru]
 translated: false
 ---

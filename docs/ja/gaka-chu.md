@@ -1,5 +1,6 @@
 ---
 title: Gaka-Chu setup and software Installation
+locale: 'ja' 
 contributors: [PaTara43]
 translated: false
 ---

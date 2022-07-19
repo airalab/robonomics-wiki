@@ -1,5 +1,6 @@
 ---
 title: Connect Mars Curiosity rover under Robonomics parachain control 
+locale: 'ja' 
 contributors: [Vourhey, PaTara43]
 translated: false
 ---

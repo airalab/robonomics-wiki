@@ -1,5 +1,6 @@
 ---
 title: Interactuar con AIRA
+locale: 'es' 
 contributors: [akru]
 translated: true
 ---

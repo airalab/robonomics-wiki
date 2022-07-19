@@ -1,5 +1,6 @@
 ---
 title: Robonomics IO Overview 
+locale: 'pt' 
 contributors: [Vourhey]
 translated: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Adding funds to your account on Robonomics Portal
+locale: 'pt' 
 contributors: [Houman]
 translated: true
 ---

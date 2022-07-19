@@ -1,5 +1,6 @@
 ---
 title: IPFS Common Messages 
+locale: 'en'  
 contributors: [ensrationis, akru]
 translated: true
 ---

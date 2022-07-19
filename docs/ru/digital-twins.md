@@ -1,5 +1,6 @@
 ---
 title: Digital Twins
+locale: 'ru' 
 contributors: [nakata5321]
 translated: false
 ---

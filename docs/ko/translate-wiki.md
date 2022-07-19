@@ -1,5 +1,6 @@
 ---
 title: How to participate in the Wiki translation
+locale: 'ko' 
 contributors: [positivecrash]
 translated: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: Cross-chain Message
+locale: 'ja' 
 contributors: [Vourhey, LoSk-p]
 translated: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: Межсетевой обмен сообщениями
+locale: 'ru' 
 contributors: [Vourhey, LoSk-p, katerina510]
 translated: true
 ---

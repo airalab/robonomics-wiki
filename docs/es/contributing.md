@@ -1,5 +1,6 @@
 ---
 title: Cómo Contribuir
+locale: 'es' 
 contributors: [positivecrash]
 translated: false
 ---

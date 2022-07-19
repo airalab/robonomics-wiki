@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting 
+locale: 'ja' 
 contributors: [LoSk-p]
 translated: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: Community 
+locale: 'ru' 
 contributors: [positivecrash]
 translated: false
 ---

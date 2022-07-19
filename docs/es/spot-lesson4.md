@@ -1,5 +1,6 @@
 ---
 title: Lesson 4. GraphNav service. Mapping and navigating on the map 
+locale: 'es' 
 contributors: [LoSk-p, khssnv]
 translated: false
 ---

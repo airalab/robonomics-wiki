@@ -1,5 +1,6 @@
 ---
 title: How to contribute
+locale: 'ru' 
 contributors: [LoSk-p]
 translated: false
 ---

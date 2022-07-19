@@ -1,5 +1,6 @@
 ---
 title: Robonomics + Prometheus + Grafana 
+locale: 'pt' 
 contributors: [Vourhey]
 translated: true
 ---

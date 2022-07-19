@@ -1,5 +1,6 @@
 ---
 title: How to Run Robonomics Dev Node
+locale: 'en' 
 contributors: [LoSk-p]
 translated: true
 ---

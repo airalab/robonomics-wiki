@@ -1,5 +1,6 @@
 ---
 title: Connect sensor
+locale: 'pt' 
 contributors: [LoSk-p, makyul]
 translated: true
 ---

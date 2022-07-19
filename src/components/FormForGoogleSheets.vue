@@ -146,7 +146,7 @@ export default {
     display: flex;
     align-items: center;
     border: 1px solid transparent;
-    background-color: var(--color-note-accent);
+    background-color: var(--color-note-pale);
     color: var(--text-color-invert);
   }
 
@@ -155,7 +155,7 @@ export default {
     height: 30px;
   }
 
-  .google-sheets-form__button--smile  {background-color: var(--color-note-accent--okay);}
-  .google-sheets-form__button--rolling_eyes {background-color: var(--code-text-inline);}
-  .google-sheets-form__button--worry_grin {background-color: var(--color-note-accent--warning);}
+  .google-sheets-form__button--smile  {background-color: var(--color-emoji-green);}
+  .google-sheets-form__button--rolling_eyes {background-color: var(--color-emoji-pink);}
+  .google-sheets-form__button--worry_grin {background-color: var(---color-emoji-orange);}
 </style>

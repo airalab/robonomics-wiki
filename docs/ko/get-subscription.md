@@ -1,5 +1,6 @@
 ---
 title: How to Buy a Subscription
+locale: 'ko' 
 contributors: [LoSk-p]
 translated: false
 ---

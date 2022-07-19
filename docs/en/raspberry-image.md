@@ -1,5 +1,6 @@
 ---
 title: Setup with Prepared Image
+locale: 'en' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: true
 ---

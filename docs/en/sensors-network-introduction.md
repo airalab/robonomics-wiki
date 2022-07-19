@@ -1,5 +1,6 @@
 ---
 title: Introduction
+locale: 'en' 
 contributors: [LoSk-p]
 translated: true
 ---

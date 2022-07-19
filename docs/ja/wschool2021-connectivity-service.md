@@ -1,5 +1,6 @@
 ---
 title: Lesson 5, コネクティビティ 
+locale: 'ja' 
 contributors: [KiichiSugihara]
 translated: true
 ---

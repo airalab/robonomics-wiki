@@ -1,5 +1,6 @@
 ---
 title: Connect Sensor To Robonomics Network 
+locale: 'es' 
 contributors: [LoSk-p, Vourhey, Ludovich88]
 translated: false
 ---

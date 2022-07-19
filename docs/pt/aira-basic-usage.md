@@ -1,5 +1,6 @@
 ---
 title: Basic usage of AIRA 
+locale: 'pt' 
 contributors: [akru]
 translated: true
 ---

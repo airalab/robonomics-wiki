@@ -1,5 +1,6 @@
 ---
 title: Как участвовать в переводе Вики
+locale: 'ru' 
 contributors: [positivecrash]
 translated: true
 ---

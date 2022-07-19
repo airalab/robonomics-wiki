@@ -1,5 +1,6 @@
 ---
 title: Robonomics Winter School 2021 introduction
+locale: 'en'  
 # contributors: []
 translated: true
 ---

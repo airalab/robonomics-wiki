@@ -1,5 +1,6 @@
 ---
 title: Securely connect cloud AI to the factory floor
+locale: 'en' 
 contributors: [vitl2907]
 translated: true
 ---

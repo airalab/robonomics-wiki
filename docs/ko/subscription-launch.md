@@ -1,5 +1,6 @@
 ---
 title: How to Send Launch with Subscription
+locale: 'ko' 
 contributors: [LoSk-p]
 translated: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: Lesson 3, Robonomics IOの実践
+locale: 'ja' 
 contributors: [KiichiSugihara]
 translated: true
 ---

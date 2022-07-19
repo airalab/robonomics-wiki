@@ -1,5 +1,6 @@
 ---
 title: IoT Firmware Upload   
+locale: 'en' 
 cover_image: 'iot-firmware-upload-en.png' 
 # contributors: []
 translated: true
