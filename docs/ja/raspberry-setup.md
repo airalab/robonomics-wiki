@@ -1,22 +1,38 @@
 ---
 title: Raspberry Setup
-locale: 'ja' 
 contributors: [LoSk-p, dergudzon, Leemo94]
+locale: 'ja' 
 translated: false
 ---
 
-For both methods, the first thing you need to do is setup a Raspberry Pi.
+For all methods from ["Overview"](./home-assistant-begin.md), the first thing you need to do is set up a Raspberry Pi.
 
-Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on your computer. Then, insert the SD card and run the Imager program. From the menu, select 64-bit Ubuntu Server as the operating system and ensure to select your SD card from the storage dropdown, and then press `write`.
+## Preinstalled image
+The easiest way is use our prepared image. You can download it [here.](https://disk.yandex.ru/d/R4vYp9Jhn2O25A) Then read "Configuration RPi" and install image.
 
-![pi](../images/home-assistant/pi.png)
+
+<robo-wiki-note type="note">Password is "ubuntu".
+User and password for mosquito broker is - user/pass
+</robo-wiki-note>
+
+If you want to change MQTT user and password use next command:
+
+```shell
+sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
+```
+
+### Configuration RPi
+Install [balena etcher](https://www.balena.io/etcher/) on your computer. Then, insert the SD card and run the Imager program. Select required image as the operating system and ensure to select your SD card from the storage dropdown, and then `flash` image.
+
+<robo-wiki-picture src="home-assistant/pi.jpg" alt="RPI installer" />
 
 Open the SD card's storage from your computer and navigate inside the root folder of the card. The name of the folder should be something similar to `system-boot`.
 
 Find the file named `network-config` and open it in a text editor. Copy the below text and paste it into the file:
+
 ```
 version: 2
-ethernets:
+ethernets: 
   eth0:
     dhcp4: true
     optional: true
@@ -25,14 +41,28 @@ wifis:
     dhcp4: true
     optional: true
     access-points:
-      "YOUR_WIFI_NAME":
+      YOUR_WIFI_NAME:
         password: "YOUR_WIFI_PASSWORD"
 ```
 
-**Make sure that you input your actual wifi name and your wifi password.** Then you need to save the file, and insert the SD card to the Raspberry Pi and turn it on. It must connect to your wi-fi network, now you need to find its address. Firstly find your address in the local network with:
+<robo-wiki-note type="warning">Make sure that you input your actual Wi-Fi name and your Wi-Fi password.</robo-wiki-note>
+
+Then you need to save the file, and insert the SD card to the Raspberry Pi and turn it on. It must connect to your wi-fi network. 
+
+Now you need to find its address. To find address you can use [Fing app](https://www.fing.com/products). 
+Also, you can find address nmap tool.
+First, install nmap. For ubuntu:
+
+```shell
+sudo apt-get install nmap
+```
+
+Then find your address in the local network with:
+
 ```bash
 ip a
 ```
+
 It must look like `192.168.xx.xx` or `172.xx.xx.xx`.
 
 Then scan the network with your address and zero in the end (also you can use `arp -a`):
@@ -55,16 +85,38 @@ Nmap done: 256 IP addresses (4 hosts up) scanned in 2.07 seconds
 ```
 
 In this example we can see that the Raspberry Pi's address is `192.168.43.56`. Now you can connect to it over ssh:
+
 ```bash
 ssh ubuntu@192.168.43.56
 ```
-Password is "ubuntu".
 
-## Home Assistant
+## Manually Installation
+If It's necessary, you can create PRi image manually. 
+For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat **" Configuration RPi"**. The required image you can find in RPi imager program.
 
-Now we need to install Home Assistant to the Raspberry Pi. Detailed instructions can be found [here](https://www.home-assistant.io/installation/linux#install-home-assistant-core). You need to install `Home Assistant Core`. It's actual version is 2021.11.5 and instruction assumes that we already have installed Python 3.9 or newer.
+### Home Assistant installation
+Now we need to install Home Assistant to the Raspberry Pi. Official website oh Home Assistant can be found [here](https://www.home-assistant.io/). 
+
+We will install `Home Assistant Core`. It's actual version is 2022.6.2  and instruction assumes that we already have installed Python 3.9 or newer.
+
+Let's start. The easiest way is use our bash script `installation.sh`  to update system and install all dependencies automatically.
+For this download file from [here](https://github.com/LoSk-p/robonomics-hass-utils/tree/main/raspberry_pi) to your raspberry Pi. Then change user's rights to this file and start it:
+
+```shell
+chmod a+x instalation.sh
+bash instalation.sh
+```
+
+During installation process you could see next request:
+
+<robo-wiki-picture src="home-assistant/installation.jpg" alt="RPI installer" />
+
+Just choose **ok** and press **enter**.
+
+**Alternatively**, you can do all job manually. 
 
 Update your system and install necessary packages:
+
 ```bash
 sudo apt-get update
 sudo apt-get upgrade -y
@@ -72,6 +124,7 @@ sudo apt-get install -y python3 python3-dev python3-venv python3-pip libffi-dev 
 ```
 
 Create user `homeassistant` and the directory for homeassistant core:
+
 ```bash
 sudo useradd -rm homeassistant
 sudo mkdir /srv/homeassistant
@@ -79,23 +132,28 @@ sudo chown homeassistant:homeassistant /srv/homeassistant
 ```
 
 Next up is to create and change to a virtual environment for Home Assistant Core. This will be done as the homeassistant account.
+
 ```bash
 sudo -u homeassistant -H -s
 cd /srv/homeassistant
-python3.9 -m venv .
+python3 -m venv .
 source bin/activate
 ```
-![terminal1](../images/home-assistant/terminal1.png)
+
+<robo-wiki-picture src="home-assistant/terminal1.jpg" alt="terminal image" />
+
 
 Then install required Python packages:
+
 ```bash
-python3 -m pip install wheel
-pip3 install homeassistant==2022.6.2
+(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ python3 -m pip install wheel
+(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ pip3 install homeassistant==2022.6.2
 ```
 
 Start Home Assistant Core for the first time. This will complete the installation for you, automatically creating the `.homeassistant `configuration directory in the `/home/homeassistant` directory, and installing any basic dependencies:
+
 ```bash
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant$ hass
+(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ hass
 ```
 
 You can now reach your installation via the web interface on `http://%RASPBERRY_IP_ADDRESS%:8123`. 
@@ -105,13 +163,69 @@ In this example: `http://192.168.43.56:8123`
 
 Create user and finish setup (first setup is described [here](https://www.home-assistant.io/getting-started/onboarding/) in more details), then stop Home Assistant with `Ctrl+C`.
 
-## Systemd services
+### MQTT installation
 
-Now change user (you can run under any user, which allows you to use sudo):
+After finishing with Home Assistant installation you have to install MQTT broker. Go back  under `ubuntu` login.
 
 ```bash
 (homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ exit
 ```
+
+Then install [Mosquitto Brocker](https://mosquitto.org/):
+
+```bash
+sudo apt update -y && sudo apt install mosquitto mosquitto-clients -y
+```
+
+Configure username (you can use any username you want) and password (you will be asked to enter the password after the command):
+
+```bash
+sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
+```
+
+<robo-wiki-note type="note">Default user and password is - user/pass.</robo-wiki-note>
+
+Then edit configuration file:
+
+```bash
+sudo nano /etc/mosquitto/mosquitto.conf
+```
+
+Add the following at the end of the file:
+
+```
+listener 1883
+allow_anonymous false
+password_file /etc/mosquitto/passwd
+```
+
+Then restart the service:
+
+```bash
+sudo systemctl restart mosquitto
+```
+
+And check the Brocker status:
+
+```bash
+systemctl status mosquitto
+```
+
+<robo-wiki-picture src="home-assistant/mosquitto.jpg" alt="Broker status" />
+
+### IPFS installation
+Also, we need [IPFS](https://ipfs.io/) for working with robonomics. For today the latest release of IPFS is 0.12.2. You can use our script to download ipfs and create systemd service with it.
+
+```shell
+cd ~
+wget https://raw.githubusercontent.com/LoSk-p/robonomics_smart_home/main/install_ipfs.sh
+sudo chmod +x install_ipfs.sh
+./install_ipfs.sh
+```
+
+### Systemd services
+
+If you don't want to start Home assistant manually everytime - let's create systemd service.
 
 Create new service for home assistant start: 
 
@@ -136,12 +250,43 @@ Environment="PATH=/srv/%i/bin"
 WantedBy=multi-user.target
 ```
 
-And enable service:
+After that enable and start service:
+
 ```bash
-ubuntu@ubuntu:~$ sudo systemctl enable home-assistant@homeassistant.service
+sudo systemctl enable home-assistant@homeassistant.service
+sudo systemctl start home-assistant@homeassistant.service
 ```
 
-After that you can connect your devices:
+### Add custom integration
+
+Integration allow Home Assistant to record datalogs with encrypted data from Home Assistant and listen launch commands to control smart devices. Integration use IPFS to store data and send IPFS hash in datalog or launch.
+
+On your raspberry pi with Home Assistant log in homeassistant user:
+```bash 
+sudo -u homeassistant -H -s
+```
+Source virtual environment and install python packages:
+
+```bash
+source /srv/homeassistant/bin/activate
+pip install http3
+pip install robonomics-interface~=1.0
+```
+
+Then go to `.homeassistant` directory:
+
+```bash
+cd /home/homeassistant/.homeassistant
+```
+Create directory `custom_components` and clone there the repository with the integration:
+
+```bash
+mkdir custom_components
+cd custom_components
+git clone https://github.com/LoSk-p/robonomics_smart_home.git
+```
+
+That all. Now you can connect your devices:
 - [Connection with zigbee2MQTT](/docs/zigbee2-mqtt/)
 - [Setup SLS Gateway](/docs/sls-setup) and [connect it to Home Assistant](/docs/sls-gateway-connect)
 - [Connection through Xiaomi Gateway](/docs/xiaomi-gateway/)

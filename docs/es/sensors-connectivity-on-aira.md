@@ -1,7 +1,7 @@
 ---
 title: Sensors Connectivity 
-locale: 'es' 
 contributors: [LoSk-p, Vourhey, tubleronchik]
+locale: 'es'
 translated: false
 ---
 
@@ -25,7 +25,6 @@ In addition, every once in a while, a file with data from the last time period i
 
 The source code for Sensors Connectivity is available at [link](https://github.com/airalab/sensors-connectivity). To see the data from your server on the map, you need to contact the development team at vm@multi-agent.io and send the ipfs id of your server. 
 
-# Run your own Sensors Connectivity
 
 ## Pre-requirements
 
