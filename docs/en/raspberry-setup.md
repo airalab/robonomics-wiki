@@ -1,8 +1,8 @@
 ---
 title: Raspberry Setup
-locale: 'en' 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: true
+locale: 'en' 
 ---
 
 For both methods, the first thing you need to do is setup a Raspberry Pi.
