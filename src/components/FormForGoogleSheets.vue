@@ -190,9 +190,14 @@ export default {
     display: flex;
     align-items: center;
     border: 1px solid transparent;
-    background-color: var(--color-note-accent);
-    color: var(--color-light);
+    background-color: var(--link-color);
+    color: var(--text-color-invert);
+    transition: background-color 0.2s ease-in-out;
   }
+
+    .google-sheets-form__button:disabled {
+      background-color: var(--color-note-accent);
+    }
 
   .spinner svg{
     width: 40px;
