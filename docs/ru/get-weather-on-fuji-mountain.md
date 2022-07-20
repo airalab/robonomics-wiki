@@ -1,6 +1,6 @@
 ---
 title: DEMO "Get Weather on Fuji Mountain"
-locale: 'ru' 
+ 
 contributors: [Vourhey]
 translated: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: Glossary
-locale: 'ru' 
+ 
 contributors: [Vourhey]
 translated: false
 ---

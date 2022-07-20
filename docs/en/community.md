@@ -1,6 +1,6 @@
 ---
 title: Community
-locale: 'en' 
+
 contributors: [positivecrash]
 translated: true
 ---

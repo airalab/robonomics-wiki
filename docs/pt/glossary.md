@@ -1,6 +1,6 @@
 ---
 title: Glossary
-locale: 'pt' 
+ 
 contributors: [Vourhey]
 translated: true
 ---

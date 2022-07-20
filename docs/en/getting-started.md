@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-locale: 'en' 
+
 contributors: [Vourhey, positivecrash]
 translated: true
 ---
@@ -18,7 +18,7 @@ The following chart describes what place Robonomics takes in the scenario:
 Find more in [Building dApps on Robonomics deck](https://gateway.pinata.cloud/ipfs/QmNNdLG3vuTsJtZtNByWaDTKRYPcBZSZcsJ1FY6rTYCixQ/Robonomics_keypoint_March_2021.pdf)
 
 ## Robonomics Network quick start
-**For newcomer's convenience core Robonomics developers came up with a [6 lessons learning curve](https://wiki.robonomics.network/docs/en/wschool2021-intro/)!**
+**For newcomer's convenience core Robonomics developers came up with a [6 lessons learning curve](/docs/wschool2021-intro/)!**
 
 You'll explore the serverless IoT architecture! Robonomics Web Services (RWS) is the basic infrastructural service for Robotics and IoT on top of Polkadot && IPFS.
 

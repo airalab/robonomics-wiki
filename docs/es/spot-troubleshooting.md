@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-locale: 'es' 
+ 
 contributors: [LoSk-p]
 translated: false
 ---

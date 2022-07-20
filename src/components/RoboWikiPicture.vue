@@ -6,23 +6,21 @@
       target="_blank"
     >
       <g-image 
-        v-if="type === 'markdown'" 
+        v-if="!isGif() && type === 'markdown'" 
         ref="image" 
         v-bind="$attrs"
         :src="picture" 
       />
 
-      <g-image 
-        v-else 
-        v-bind="$attrs"
-        :src="require(`!!assets-loader!@images/${src}`)" 
-      /> 
+      <img v-if="isGif() && type === 'markdown'" v-bind="$attrs" :src="picture.src" >
+
     </g-link>
     <figcaption v-if="caption" class="robo-wiki-picture__text">{{caption}}</figcaption>
   </figure>
 </template>
 
 <script>
+
 export default {
   name: 'RoboWikiPicture',
   inheritAttrs: false,
@@ -50,6 +48,19 @@ export default {
   data(){
     return {
       picture: require(`!!assets-loader!@imagesMarkdown/${this.src}`)
+    }
+  },
+
+  methods: {
+    isGif() {
+      const dotIndex = this.src.lastIndexOf('.');
+      const format = this.src.substring(dotIndex);
+
+      if(format === '.gif') {
+        return true
+      } else {
+        return false
+      }
     }
   },
 

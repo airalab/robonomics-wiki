@@ -1,6 +1,6 @@
 ---
 title: Try It Out
-locale: 'ko' 
+ 
 contributors: [LoSk-p]
 translated: false
 ---

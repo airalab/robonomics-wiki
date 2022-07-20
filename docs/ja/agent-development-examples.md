@@ -1,6 +1,6 @@
 ---
 title:  Agent development examples
-locale: 'ja' 
+ 
 # contributors: []
 translated: false
 ---

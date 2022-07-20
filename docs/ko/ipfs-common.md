@@ -1,6 +1,6 @@
 ---
 title: IPFS Common
-locale: 'ko' 
+ 
 contributors: [ensrationis, akru]
 translated: false
 ---

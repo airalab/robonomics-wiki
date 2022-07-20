@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions about AIRA
-locale: 'ru' 
+ 
 contributors: [Vourhey]
 translated: false
 ---

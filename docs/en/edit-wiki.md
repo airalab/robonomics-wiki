@@ -1,6 +1,5 @@
 ---
 title: How to edit WIKI 
-locale: 'en' 
 contributors: [positivecrash]
 description: Ways to help us improve our wiki
 translated: true

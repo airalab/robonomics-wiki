@@ -34,19 +34,6 @@ module.exports = {
       }
     },
 
-    // {
-    //   use: "gridsome-plugin-translateit",
-    //   options: {
-    //     locales: ["en", "ru", "ja", "ko", "pt", "es"],
-    //     defaultLocale: "en",
-    //     translations: yaml.load(fs.readFileSync("./data/locales/translations.yaml", 'utf8')),
-    //     slugifyDefaultLocale: true,
-    //     collections: ["docs"],
-    //     exclude: ["/404/", "/sitemap.xml/"],
-    //     routes: yaml.load(fs.readFileSync("./data/locales/routes.yaml", 'utf8')),
-    //   }
-    // },
-
     {
       use: '@gridsome/plugin-sitemap',
       options: {

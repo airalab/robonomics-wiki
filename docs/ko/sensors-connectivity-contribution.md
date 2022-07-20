@@ -1,6 +1,6 @@
 ---
 title: How to contribute 
-locale: 'ko' 
+ 
 contributors: [LoSk-p]
 translated: false
 ---

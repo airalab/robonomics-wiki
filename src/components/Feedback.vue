@@ -58,6 +58,9 @@ export default {
               this.currentResponse = !this.worry_grin ? 'worry_grin' : '';
               return this.worry_grin = !this.worry_grin;
           default: 
+            this.rolling_eyes = false;
+            this.smile = false;
+            this.worry_grin = false;
             return this.currentResponse = !this.currentResponse ? 'no_reaction' : '';
         }
       }

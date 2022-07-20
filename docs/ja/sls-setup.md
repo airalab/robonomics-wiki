@@ -1,6 +1,6 @@
 ---
 title: Setup SLS Gateway
-locale: 'ja' 
+ 
 contributors: [LoSk-p, Fingerling42]
 translated: false
 ---

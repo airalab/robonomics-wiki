@@ -1,6 +1,6 @@
 ---
 title: Configuration Options Description
-locale: 'ko' 
+ 
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: false
 ---

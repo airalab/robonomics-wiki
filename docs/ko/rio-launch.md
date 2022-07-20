@@ -1,6 +1,6 @@
 ---
 title: Robonomics IO Launch
-locale: 'ko' 
+ 
 contributors: [Vourhey, PaTara43]
 translated: false
 ---

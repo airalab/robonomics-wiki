@@ -1,6 +1,6 @@
 ---
 title: Robonomics Coffee
-locale: 'ko' 
+ 
 contributors: [PaTara43]
 translated: false
 ---

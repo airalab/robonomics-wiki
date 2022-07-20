@@ -372,7 +372,6 @@ export default {
         })
         .then(({ data }) => {
 
-
           let d = new Date(data[0].commit.author.date)
           this.ghUpdateDate = d.toLocaleDateString()
 
@@ -421,7 +420,7 @@ export default {
     //seems to be broken, needs checks
     currentDoc () {
       let doc = this.$route.matched[0].path
-      if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/getting-started'
+      if((doc.match(new RegExp("/", "g")) || []).length == 2) doc += '/getting-started'
       return doc+'.md';
     },
 

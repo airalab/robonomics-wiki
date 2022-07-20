@@ -1,6 +1,6 @@
 ---
 title: Interact with AIRA
-locale: 'ja' 
+ 
 contributors: [akru]
 translated: false
 ---

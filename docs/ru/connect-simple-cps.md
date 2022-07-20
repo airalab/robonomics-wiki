@@ -1,6 +1,6 @@
 ---
 title: Connect the simplest CPS 
-locale: 'ru' 
+ 
 contributors: [ensrationis, akru]
 translated: false
 ---

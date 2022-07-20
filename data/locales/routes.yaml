@@ -1,3 +1,0 @@
-- path: '/'
-  component: './src/pages/Index.vue'
-  typename: 'component'

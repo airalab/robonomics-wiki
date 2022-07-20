@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-locale: 'pt' 
+ 
 contributors: [Vourhey, positivecrash]
 translated: true
 ---

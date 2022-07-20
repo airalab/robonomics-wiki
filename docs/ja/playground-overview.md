@@ -1,6 +1,6 @@
 ---
 title: Playground Overview
-locale: 'ja' 
+ 
 contributors: [LoSk-p]
 translated: false
 ---

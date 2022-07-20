@@ -1,6 +1,6 @@
 ---
 title: How to contribute
-locale: 'pt' 
+ 
 contributors: [positivecrash]
 translated: true
 ---

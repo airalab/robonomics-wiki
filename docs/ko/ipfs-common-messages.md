@@ -1,6 +1,6 @@
 ---
 title: IPFS Common Messages
-locale: 'ko' 
+ 
 contributors: [ensrationis, akru]
 translated: false
 ---
