@@ -1,5 +1,6 @@
 ---
 title: Как стать контрибьютором 
+ 
 contributors: [positivecrash]
 translated: true
 ---

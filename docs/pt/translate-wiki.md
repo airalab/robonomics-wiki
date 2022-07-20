@@ -1,5 +1,6 @@
 ---
 title: How to participate in the Wiki translation
+ 
 contributors: [positivecrash]
 translated: true
 ---

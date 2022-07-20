@@ -1,5 +1,6 @@
 ---
 title: Lesson 2, RobonomicsのAIRA概要
+ 
 contributors: [KiichiSugihara]
 translated: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Обзор децентрализованного приложения Робономики
+ 
 contributors: [Vourhey, katerina510]
 translated: true
 ---

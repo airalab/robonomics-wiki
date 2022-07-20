@@ -1,5 +1,6 @@
 ---
 title: Introduction
+
 contributors: [LoSk-p]
 translated: true
 ---

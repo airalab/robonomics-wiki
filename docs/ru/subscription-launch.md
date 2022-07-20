@@ -1,5 +1,6 @@
 ---
 title: Как отправить Launch с помощью подписки
+ 
 contributors: [LoSk-p, katerina510]
 translated: true
 ---

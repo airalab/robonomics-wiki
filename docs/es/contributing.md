@@ -1,5 +1,6 @@
 ---
 title: Cómo Contribuir
+ 
 contributors: [positivecrash]
 translated: false
 ---

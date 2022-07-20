@@ -1,5 +1,6 @@
 ---
 title: How to edit WIKI
+ 
 contributors: [positivecrash]
 translated: true
 ---

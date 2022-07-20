@@ -1,5 +1,6 @@
 ---
 title: 용어 사전
+ 
 contributors: [Vourhey, arinaml]
 translated: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Как купить подписку
+ 
 contributors: [LoSk-p, katerina510]
 translated: true
 ---

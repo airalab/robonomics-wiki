@@ -1,7 +1,7 @@
 <template>
   <div class="feedback">
     <div class="feedback__info">
-      <h3 class="feedback__title" :class="{'feedback__title--withForm': currentResponse}"> Was this information helpful? </h3>
+      <h3 class="feedback__title" @click="toggleResponse()" :class="{'feedback__title--withForm': currentResponse}"> Was this information helpful? </h3>
       <div class="feedback__options">
         <div @click="toggleResponse('smile')" class="feedback__icon " :class="{'feedback__icon--smile' : smile}">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -57,6 +57,11 @@ export default {
               this.smile = false;
               this.currentResponse = !this.worry_grin ? 'worry_grin' : '';
               return this.worry_grin = !this.worry_grin;
+          default: 
+            this.rolling_eyes = false;
+            this.smile = false;
+            this.worry_grin = false;
+            return this.currentResponse = !this.currentResponse ? 'no_reaction' : '';
         }
       }
   },
@@ -66,7 +71,7 @@ export default {
 <style scoped>
 
   .feedback {
-    margin: 1rem 0;
+    margin: 3rem 0;
   }
 
   .feedback__info {
@@ -80,6 +85,7 @@ export default {
     margin-right: 20px;
     font-weight: 600;
     color: var(--link-color);
+    cursor: pointer;
   }
 
   .feedback__title--withForm {
@@ -112,15 +118,15 @@ export default {
     }
 
   .feedback__icon--smile svg path {
-    fill: var(--color-note-accent--okay);
+    fill: var(--color-emoji-green);
   }
 
   .feedback__icon--rolling-eyes svg path {
-    fill: var(--code-text-inline);
+    fill: var(--color-emoji-pink);
   }
 
   .feedback__icon--worry-grin svg path {
-    fill: var(--color-note-accent--warning);
+    fill: var(--color-emoji-orange);
   }
 
   @media screen and (max-width: 900px)  {

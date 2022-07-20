@@ -1,5 +1,6 @@
 ---
 title: Lightsout Factory
+ 
 contributors: [ValanisZz, GiggleSeagull, Valiento]
 translated: true
 ---

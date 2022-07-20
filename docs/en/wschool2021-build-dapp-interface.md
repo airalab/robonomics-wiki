@@ -1,5 +1,6 @@
 ---
 title: Lesson 6.2, Build IoT Dapps For End Users
+
 contributors: [positivecrash]
 translated: true
 ---

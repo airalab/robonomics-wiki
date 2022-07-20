@@ -1,5 +1,6 @@
 ---
 title: DEMO "Get Weather on Fuji Mountain"
+
 contributors: [Vourhey]
 translated: true
 ---

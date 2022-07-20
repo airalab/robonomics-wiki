@@ -21,7 +21,7 @@
             <g-link to="/docs/contributing/">{{$st('How to contribute', $store.state.locale)}}</g-link>
           </li>
 
-          <li v-if="!$page.doc.translated&& !isCurrent('/docs/translate-wiki/')">
+          <li v-if="!$page.doc.translated && !isCurrent('/docs/translate-wiki/')">
             <g-link to="/docs/translate-wiki/">{{$st('This page needs translation', $store.state.locale)}}</g-link>
           </li>
         </ul>
@@ -34,7 +34,7 @@
 
           <VueRemarkContent />
 
-          <section class="docContribution" v-if="ghLink">
+          <section class="docContribution" v-show="ghLink">
 
               <div class="content" v-if="ghLink">
                 <h5>{{$st('Github Contribution Title', $store.state.locale)}}</h5>
@@ -396,6 +396,7 @@ export default {
         }).catch(e =>{
           console.error(e.message)
         })
+
     },
 
     isCurrent(url){
@@ -419,7 +420,7 @@ export default {
     //seems to be broken, needs checks
     currentDoc () {
       let doc = this.$route.matched[0].path
-      if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/getting-started'
+      if((doc.match(new RegExp("/", "g")) || []).length == 2) doc += '/getting-started'
       return doc+'.md';
     },
 
@@ -519,7 +520,8 @@ export default {
       auth: process.env.GRIDSOME_PERSONAL_TOKEN
     })
     this.github_lastupdated()
-    this.github_link()
+    this.github_link();
+
   },
 
   // mounted(){

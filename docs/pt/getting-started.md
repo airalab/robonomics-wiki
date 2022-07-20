@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+ 
 contributors: [Vourhey, positivecrash]
 translated: true
 ---

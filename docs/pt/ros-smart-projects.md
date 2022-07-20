@@ -1,5 +1,6 @@
 ---
 title: ROS-based Projects for Smart Spaces
+ 
 contributors: [Fingerling42]
 translated: true
 ---

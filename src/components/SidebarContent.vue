@@ -80,7 +80,12 @@
 				if (this.$route.hash == '') {
 					return false;
 				}
-				const el = document.querySelector(`[id='${this.$route.hash.substring(1)}']`) || this.manualHush && document.querySelector(`[id='${this.manualHush.substring(1)}']`);
+
+				const hash = decodeURIComponent(this.$route.hash.substring(1));
+
+
+				const el = document.querySelector(`[id='${hash}']`) || this.manualHush && document.querySelector(`[id='${decodeURIComponent(this.manualHush.substring(1))}']`);
+
 
 				if (el !== null ) {
 

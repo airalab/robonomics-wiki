@@ -11,14 +11,17 @@
       :sitekey="captcha">
     </vue-recaptcha>
 
-    <button v-if="!isSent" :class="classList">
-      <span v-if="!isLoading">Send Feedback</span>
-      <span v-else>Sending Feedback...</span>
-      <span class="spinner">
-        <Spinner v-if="isLoading"/>
-      </span>
-    </button>
-    <button disabled v-else class="button google-sheets-form__button">Feedback was sent, thanks</button>
+    <div class="google-sheets-form__actions">
+      <button v-if="!isSent" :class="classList" :disabled="error">
+        <span v-if="!isLoading">Send Feedback</span>
+        <span v-else>Sending Feedback...</span>
+        <span class="spinner">
+          <Spinner v-if="isLoading"/>
+        </span>
+      </button>
+      <button disabled v-else class="button google-sheets-form__button">Feedback was sent, thanks</button>
+      <div v-if="error" class="error">{{errorMessage}}</div>
+    </div>
   </form>
 </template>
 
@@ -45,70 +48,106 @@ export default {
     response: {
       type: String,
       required: true,
-      default: 'smile',
+      default: null,
       validator: function (value) {
-        return ['smile', 'worry_grin', 'rolling_eyes'].indexOf(value) !== -1;
+        return ['smile', 'worry_grin', 'rolling_eyes', 'no_reaction'].indexOf(value) !== -1;
       }
     }
   },
 
-    data() {
-        return {
-          gscript:  process.env.GRIDSOME_GSCRIPTID,
-          captcha:  process.env.GRIDSOME_CAPTCHAID,
-          data_feedback: '',
-          data_email: '',
-          isSent: false,
-          isLoading: false,
-        };
+  data() {
+    return {
+      gscript:  process.env.GRIDSOME_GSCRIPTID,
+      captcha:  process.env.GRIDSOME_CAPTCHAID,
+      // "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" //test localhost
+      data_feedback: '',
+      data_email: '',
+      isSent: false,
+      isLoading: false,
+      error: false,
+      errorMessage: ''
+    };
+  },
+
+  methods: {
+    onSubmit: async function () {
+
+      if (this.data_email === '' && this.data_feedback === '' && this.response === 'no_reaction') {
+        this.error = true;
+        this.errorMessage = 'Please, add some feedback or choose one of reaction emoji';
+
+        return
+      }
+
+      this.$refs.recaptcha.execute();
     },
 
-    methods: {
-      onSubmit: async function () {
-        this.$refs.recaptcha.execute();
-      },
+    onVerify: async function() {
+      let response = '' ;
+      const data = document.querySelectorAll('[data-gsp-data]');
 
-      onVerify: async function() {
-        let response = '' ;
-        const data = document.querySelectorAll('[data-gsp-data]');
+      this.isSent = false;
+      this.isLoading = true;
+      this.error = false;
 
-        this.isSent = false;
-        this.isLoading = true;
-
-        data.forEach(function(item) {
-          if (response != '') {
-            response += '&'
-          }
-          response += encodeURIComponent(item.dataset.gspName) + '=' + encodeURIComponent(item.dataset.gspData)
-        });
-
-        const fullResponse = 'Reaction=' + encodeURIComponent(this.response) + '&Location=' + encodeURIComponent('https://wiki.robonomics.network' + this.$route.path) + '&' + response;
-
-        try {
-          await this.$gspPostForm(this.gscript, fullResponse)
-          this.isLoading = false;
-          this.isSent = true;
-        } catch(e) {
-          this.isSent = false;
-          this.isLoading = false;
-          console.log(e.message);
+      data.forEach(function(item) {
+        if (response != '') {
+          response += '&'
         }
+        response += encodeURIComponent(item.dataset.gspName) + '=' + encodeURIComponent(item.dataset.gspData)
+      });
+
+      const fullResponse = 'Reaction=' + encodeURIComponent(this.response) + '&Location=' + encodeURIComponent('https://wiki.robonomics.network' + this.$route.path) + '&' + response;
+
+      try {
+        await this.$gspPostForm(this.gscript, fullResponse)
+        this.isLoading = false;
+        this.isSent = true;
+        this.error = false;
+      } catch(e) {
+        this.isSent = false;
+        this.isLoading = false;
+        this.error = true;
+        this.errorMessage = e.message
+        console.log(e.message);
+      }
+    }
+  },
+
+  computed: {
+    classList() {
+      return {
+        [`button google-sheets-form__button`]: true,
+        [`google-sheets-form__button--${this.response}`]: this.response,
+      };
+    },
+  },
+
+  watch: {
+    'response': function(curr, old) {
+      if (curr !== 'no_reaction') {
+        this.error = false;
       }
     },
 
-    computed: {
-      classList() {
-        return {
-          [`button google-sheets-form__button`]: true,
-          [`google-sheets-form__button--${this.response}`]: this.response,
-        };
-      },
+    'data_feedback': function(curr, old) {
+      if (curr !== '') {
+        this.error = false;
+      }
     },
 
+    'data_email': function(curr, old) {
+      if (curr !== '') {
+        this.error = false;
+      }
+    }
+  }
+
 }
+
 </script>
 
-<style>
+<style scoped>
   .google-sheets-form {
     position: relative;
     display: flex;
@@ -141,13 +180,18 @@ export default {
     opacity: 0.7;
   }
 
+  .google-sheets-form__actions {
+    display: flex;
+    align-items: center;
+  }
+
   .google-sheets-form__button {
     padding: 10px 40px;
     display: flex;
     align-items: center;
     border: 1px solid transparent;
     background-color: var(--color-note-accent);
-    color: var(--text-color-invert);
+    color: var(--color-light);
   }
 
   .spinner svg{
@@ -155,7 +199,16 @@ export default {
     height: 30px;
   }
 
-  .google-sheets-form__button--smile  {background-color: var(--color-note-accent--okay);}
-  .google-sheets-form__button--rolling_eyes {background-color: var(--code-text-inline);}
-  .google-sheets-form__button--worry_grin {background-color: var(--color-note-accent--warning);}
+  .google-sheets-form__button--smile  {background-color: var(--color-emoji-green);}
+  .google-sheets-form__button--rolling_eyes {background-color: var(--color-emoji-pink);}
+  .google-sheets-form__button--worry_grin {background-color: var(--color-emoji-orange);}
+
+  .error {
+    margin-left: 25px;
+    color: rgb(190, 50, 50);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+
 </style>

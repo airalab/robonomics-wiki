@@ -1,3 +1,0 @@
-- path: '/docs/'
-  component: './src/templates/DocPage.vue'
-  typename: 'component'

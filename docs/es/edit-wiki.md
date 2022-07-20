@@ -1,5 +1,6 @@
 ---
 title: Cómo editar WIKI
+ 
 contributors: [positivecrash, arinaml]
 translated: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: How to update robonomics collator node version
+
 contributors: [Leemo94]
 translated: false
 ---

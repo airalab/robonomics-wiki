@@ -1,5 +1,6 @@
 ---
 title: Sensors Connectivity
+ 
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: true
 ---

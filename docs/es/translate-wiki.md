@@ -1,5 +1,6 @@
 ---
 title: Cómo participar en la traducción Wiki 
+ 
 contributors: [positivecrash, arinamml]
 translated: false
 ---

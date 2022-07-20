@@ -2,6 +2,7 @@
 title: Raspberry Pi Setup
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: true
+
 ---
 
 For all methods from ["Overview"](./home-assistant-begin.md), the first thing you need to do is set up a Raspberry Pi.

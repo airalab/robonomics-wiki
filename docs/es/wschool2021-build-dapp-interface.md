@@ -1,5 +1,6 @@
 ---
 title: Construir la interfaz de la DApp, Parte 2
+ 
 contributors: [positivecrash]
 translated: true
 ---
