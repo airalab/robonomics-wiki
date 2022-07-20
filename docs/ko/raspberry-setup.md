@@ -1,7 +1,6 @@
 ---
 title: Raspberry Setup
 contributors: [LoSk-p, dergudzon, Leemo94]
-
 translated: false
 ---
 
