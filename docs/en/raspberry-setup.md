@@ -8,14 +8,20 @@ translated: true
 For all methods from ["Overview"](./home-assistant-begin.md), the first thing you need to do is set up a Raspberry Pi.
 
 ## Preinstalled image
-The easiest way to setup you Raspberry is to use our prepared image. You can download it [here.](https://disk.yandex.ru/d/R4vYp9Jhn2O25A) Then read "Configuration RPi" and install image.
+The easiest way to setup you Raspberry is to use our prepared image. You can download it [here.](https://gateway.ipfs.io/ipfs/Qmc2CsaPSWzZRDcMBn3cDv5r45SJnn8uUmreEAAYPCT637) After finishing of download, change name of the file to `rpi.img.gz`:
+
+```
+mv Qmc2CsaPSWzZRDcMBn3cDv5r45SJnn8uUmreEAAYPCT637 rpi.img.gz
+```
+
+Then read the next chapter and install image.
 
 
 <robo-wiki-note type="note">Password is "ubuntu".
 User and password for mosquitto broker is - user/pass
 </robo-wiki-note>
 
-If you want to change MQTT user and password use the next command:
+If you want to change MQTT user and password use the following command:
 
 ```shell
 sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
@@ -64,7 +70,7 @@ ip a
 
 It should look like `192.168.xx.xx` or `172.xx.xx.xx`.
 
-Then scan your network as shown below replacing the last octet of the address with 0. (One may also use arp -a):
+Then scan your network as shown below replacing the last octet of the address with 0. (One may also use `arp -a` ):
 
 ```bash 
 $ sudo nmap -sP 192.168.xx.0/24
@@ -283,6 +289,12 @@ Create directory `custom_components` and clone there the repository with the int
 mkdir custom_components
 cd custom_components
 git clone https://github.com/LoSk-p/robonomics_smart_home.git
+```
+
+After that restart Home Assistant:
+
+```shell
+sudo systemctl restart home-assistant@homeassistant.service
 ```
 
 That all. Now you can connect your devices:
