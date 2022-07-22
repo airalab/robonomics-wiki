@@ -2,7 +2,7 @@
 title: How to edit WIKI 
 contributors: [positivecrash]
 description: Ways to help us improve our wiki
-translated: true
+translated: false
 tools: 
   - rust 1.62.0 
     https://blog.rust-lang.org/2022/06/30/Rust-1.62.0.html
