@@ -34,9 +34,11 @@
 
           <VueRemarkContent />
 
+          <Feedback/>
+
           <section class="docContribution" v-show="ghLink">
 
-              <div class="content" v-if="ghLink">
+              <div class="content" v-show="ghLink">
                 <h5>{{$st('Github Contribution Title', $store.state.locale)}}</h5>
                 <p>{{$st('Github Contribution Text', $store.state.locale)}}</p>
                 <Button :label="$st('Github Contribution Button', $store.state.locale)" :link="ghLink" type="secondary" icon="github" size="small"/>
@@ -46,8 +48,6 @@
                 {{$st('Latest (commit)', $store.state.locale)}} <g-link :to="ghUpdateUrl">{{$st('commit', $store.state.locale)}}</g-link> {{$st('on (date of commit)', $store.state.locale)}} {{ghUpdateDate}} {{$st('by (author of commit)', $store.state.locale)}} {{ghUpdateName}}
               </div>
           </section>
-
-          <Feedback/>
 
           <PageNextPrev :itemsList="itemsList" :current="currentIndex"/>
 
@@ -241,13 +241,24 @@
       max-height: 100%;
       height: 120vh;
       
-      top: 6rem;
+      top: 4rem;
     }
 
     #sidebarDocs.menu-without-search,
     #sidebarContent.menu-without-search {
       top: 3rem;
     }
+  }
+
+  @media screen and (max-width: 860px) {
+
+    #sidebarDocs, #sidebarContent {
+      max-height: 100%;
+      height: 120vh;
+      
+      top: 6rem;
+    }
+
   }
 
 
@@ -306,7 +317,6 @@ query {
 import items from '../../data/sidebar_docs.yaml'
 import {Octokit} from '@octokit/rest'
 import M from 'minimatch';
-
 export default {
 
 	components: {
@@ -517,11 +527,9 @@ export default {
 
   mounted() {
     this.octokit = new Octokit({
-      auth: process.env.GRIDSOME_PERSONAL_TOKEN
     })
     this.github_lastupdated()
     this.github_link();
-
   },
 
   // mounted(){

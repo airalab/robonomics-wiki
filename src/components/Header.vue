@@ -165,7 +165,7 @@ export default {
 
   mounted () {
     window.addEventListener('resize', () => {
-      if (window.innerWidth <= 860) {
+      if (window.innerWidth <= 880) {
         window.addEventListener('scroll', this.onScroll)
       } else {
       this.$store.commit('toggleShowSearchbar', true)

@@ -172,7 +172,7 @@ query {
       max-height: 100%;
       height: 100vh;
       
-      top: 6rem;
+      top: 5rem;
     }
 
     #sidebarDocs.menu-without-search,
