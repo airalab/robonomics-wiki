@@ -84,7 +84,7 @@
 				const hash = decodeURIComponent(this.$route.hash.substring(1));
 
 
-				const el = document.querySelector(`[id='${hash}']`) || this.manualHush && document.querySelector(`[id='${decodeURIComponent(this.manualHush.substring(1))}']`);
+				const el = document.querySelector(`[id='${hash}']`) || this.manualHush && document.querySelector(`[id='${hush}']`);
 
 
 				if (el !== null ) {
@@ -98,9 +98,9 @@
 		},
 
 		mounted () {
-			this.scrollToElement();
 			window.addEventListener('scroll', this.activateLinkOnScroll)
 			this.manualHush = this.$route.hash;
+			this.scrollToElement()
     },
     
     beforeDestroy () {
