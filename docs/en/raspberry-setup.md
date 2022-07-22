@@ -8,14 +8,14 @@ translated: true
 For all methods from ["Overview"](./home-assistant-begin.md), the first thing you need to do is set up a Raspberry Pi.
 
 ## Preinstalled image
-The easiest way is use our prepared image. You can download it [here.](https://disk.yandex.ru/d/R4vYp9Jhn2O25A) Then read "Configuration RPi" and install image.
+The easiest way to setup you Raspberry is to use our prepared image. You can download it [here.](https://disk.yandex.ru/d/R4vYp9Jhn2O25A) Then read "Configuration RPi" and install image.
 
 
 <robo-wiki-note type="note">Password is "ubuntu".
-User and password for mosquito broker is - user/pass
+User and password for mosquitto broker is - user/pass
 </robo-wiki-note>
 
-If you want to change MQTT user and password use next command:
+If you want to change MQTT user and password use the next command:
 
 ```shell
 sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
@@ -24,7 +24,7 @@ sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
 ### Configuration RPi
 Install [balena etcher](https://www.balena.io/etcher/) on your computer. Then, insert the SD card and run the Imager program. Select required image as the operating system and ensure to select your SD card from the storage dropdown, and then `flash` image.
 
-<robo-wiki-picture src="home-assistant/pi.jpg" alt="RPI installer" />
+<robo-wiki-picture src="home-assistant/balena.jpg" alt="Balena installer" />
 
 Open the SD card's storage from your computer and navigate inside the root folder of the card. The name of the folder should be something similar to `system-boot`.
 
@@ -50,8 +50,7 @@ wifis:
 Then you need to save the file, and insert the SD card to the Raspberry Pi and turn it on. It must connect to your wi-fi network. 
 
 Now you need to find its address. To find address you can use [Fing app](https://www.fing.com/products). 
-Also, you can find address nmap tool.
-First, install nmap. For ubuntu:
+You can also find an RPi address with a `nmap` tool. Install it with:
 
 ```shell
 sudo apt-get install nmap
@@ -63,9 +62,9 @@ Then find your address in the local network with:
 ip a
 ```
 
-It must look like `192.168.xx.xx` or `172.xx.xx.xx`.
+It should look like `192.168.xx.xx` or `172.xx.xx.xx`.
 
-Then scan the network with your address and zero in the end (also you can use `arp -a`):
+Then scan your network as shown below replacing the last octet of the address with 0. (One may also use arp -a):
 
 ```bash 
 $ sudo nmap -sP 192.168.xx.0/24
@@ -84,23 +83,23 @@ Host is up.
 Nmap done: 256 IP addresses (4 hosts up) scanned in 2.07 seconds
 ```
 
-In this example we can see that the Raspberry Pi's address is `192.168.43.56`. Now you can connect to it over ssh:
+In this example the Raspberry Pi's address is `192.168.43.56`. Now connect to it over ssh:
 
 ```bash
 ssh ubuntu@192.168.43.56
 ```
 
-## Manually Installation
+## Manual Installation
 If It's necessary, you can create PRi image manually. 
-For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat **" Configuration RPi"**. The required image you can find in RPi imager program.
+For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat [Configuration RPi](###Configuration RPi). The required image you can find in RPi imager program.
 
 ### Home Assistant installation
 Now we need to install Home Assistant to the Raspberry Pi. Official website oh Home Assistant can be found [here](https://www.home-assistant.io/). 
 
-We will install `Home Assistant Core`. It's actual version is 2022.6.2  and instruction assumes that we already have installed Python 3.9 or newer.
+We will install `Home Assistant Core`. It's actual version is 2022.6.2  and instruction assumes that we already have Python 3.9 or newer installed.
 
-Let's start. The easiest way is use our bash script `installation.sh`  to update system and install all dependencies automatically.
-For this download file from [here](https://github.com/LoSk-p/robonomics-hass-utils/tree/main/raspberry_pi) to your raspberry Pi. Then change user's rights to this file and start it:
+Let's start. The easiest way is to use our bash script `installation.sh`  to update system and install all dependencies automatically.
+For this download file from [here](https://github.com/LoSk-p/robonomics-hass-utils/tree/main/raspberry_pi) to your Raspberry Pi. Then change user's rights for this file and start it:
 
 ```shell
 chmod a+x instalation.sh
@@ -113,7 +112,7 @@ During installation process you could see next request:
 
 Just choose **ok** and press **enter**.
 
-**Alternatively**, you can do all job manually. 
+**Alternatively**, you can do all the job manually. 
 
 Update your system and install necessary packages:
 
