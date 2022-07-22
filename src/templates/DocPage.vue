@@ -34,7 +34,7 @@
 
           <VueRemarkContent />
 
-          <Feedback/>
+          <robo-wiki-feedback/>
 
           <section class="docContribution" v-show="ghLink">
 
@@ -44,7 +44,7 @@
                 <Button :label="$st('Github Contribution Button', $store.state.locale)" :link="ghLink" type="secondary" icon="github" size="small"/>
               </div>
 
-              <div class="head" v-if="ghUpdateName">
+              <div class="head" v-show="ghUpdateName">
                 {{$st('Latest (commit)', $store.state.locale)}} <g-link :to="ghUpdateUrl">{{$st('commit', $store.state.locale)}}</g-link> {{$st('on (date of commit)', $store.state.locale)}} {{ghUpdateDate}} {{$st('by (author of commit)', $store.state.locale)}} {{ghUpdateName}}
               </div>
           </section>
@@ -326,7 +326,6 @@ export default {
     NavIcon: () => import("~/components/NavIcon.vue"),
     PageNextPrev: () => import("~/components/PageNextPrev.vue"),
     Button: () => import("~/components/Button.vue"),
-    Feedback: () => import("~/components/Feedback.vue"),
   },
 
   data(){
