@@ -97,7 +97,7 @@ ssh ubuntu@192.168.43.56
 
 ## Manual Installation
 If It's necessary, you can create PRi image manually. 
-For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat [Configuration RPi](###Configuration RPi). The required image you can find in RPi imager program.
+For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat [Configuration RPi](#configuration-rpi). The required image you can find in RPi imager program.
 
 ### Home Assistant installation
 Now we need to install Home Assistant to the Raspberry Pi. Official website oh Home Assistant can be found [here](https://www.home-assistant.io/). 
