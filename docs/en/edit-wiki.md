@@ -195,6 +195,17 @@ or
 </robo-wiki-title>
 
 
+## Feedback Form
+
+You can add feedback form to the doc. Use component like that:
+
+```c
+<robo-wiki-feedback /> 
+```
+
+And it will look like that: 
+<robo-wiki-feedback /> 
+
 ## Add new doc
 
 If you need to add new page in docs of Robonomics WIKI, please, follow these steps:
