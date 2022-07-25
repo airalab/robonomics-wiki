@@ -2,10 +2,17 @@
 title: Raspberry Pi Setup
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: false
-
+tools:   
+  - Ubuntu Server 22.04 LTS
+    https://ubuntu.com/download/raspberry-pi
+  - Home Assistant 2022.6.2
+  - robonomics-interface 1.0.5
+    https://github.com/Multi-Agent-io/robonomics-interface/releases/tag/1.0.5
+  - IPFS 0.12.2
+    https://docs.ipfs.io/install/command-line/
 ---
 
-For all methods from ["Overview"](./home-assistant-begin.md), the first thing you need to do is set up a Raspberry Pi.
+For all methods from ["Overview"](/docs/home-assistant-begin/), the first thing you need to do is set up a Raspberry Pi.
 
 ## Preinstalled image
 The easiest way to setup you Raspberry is to use our prepared image. You can download it [here.](https://gateway.ipfs.io/ipfs/Qmc2CsaPSWzZRDcMBn3cDv5r45SJnn8uUmreEAAYPCT637) After finishing of download, change name of the file to `rpi.img.gz`:
@@ -27,7 +34,10 @@ If you want to change MQTT user and password use the following command:
 sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
 ```
 
-### Configuration RPi
+
+<robo-wiki-title type="3" anchor="configuration-rpi"> 
+  Configuration RPi
+</robo-wiki-title>
 Install [balena etcher](https://www.balena.io/etcher/) on your computer. Then, insert the SD card and run the Imager program. Select required image as the operating system and ensure to select your SD card from the storage dropdown, and then `flash` image.
 
 <robo-wiki-picture src="home-assistant/balena.jpg" alt="Balena installer" />
@@ -97,7 +107,7 @@ ssh ubuntu@192.168.43.56
 
 ## Manual Installation
 If It's necessary, you can create PRi image manually. 
-For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat [Configuration RPi](###Configuration RPi). The required image you can find in RPi imager program.
+For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat [Configuration RPi](#configuration-rpi). The required image you can find in RPi imager program.
 
 ### Home Assistant installation
 Now we need to install Home Assistant to the Raspberry Pi. Official website oh Home Assistant can be found [here](https://www.home-assistant.io/). 
@@ -223,7 +233,7 @@ Also, we need [IPFS](https://ipfs.io/) for working with robonomics. For today th
 
 ```shell
 cd ~
-wget https://raw.githubusercontent.com/LoSk-p/robonomics_smart_home/main/install_ipfs.sh
+wget https://raw.githubusercontent.com//airalab/homeassistant-robonomics-integration/main/install_ipfs.sh
 sudo chmod +x install_ipfs.sh
 ./install_ipfs.sh
 ```
@@ -286,9 +296,10 @@ cd /home/homeassistant/.homeassistant
 Create directory `custom_components` and clone there the repository with the integration:
 
 ```bash
+sudo apt-get install subversion
 mkdir custom_components
 cd custom_components
-git clone https://github.com/LoSk-p/robonomics_smart_home.git
+svn checkout https://github.com/airalab/homeassistant-robonomics-integration/trunk/custom_components/robonomics
 ```
 
 After that restart Home Assistant:
