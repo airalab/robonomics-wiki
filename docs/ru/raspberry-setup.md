@@ -15,10 +15,10 @@ tools:
 For all methods from ["Overview"](/docs/home-assistant-begin/), the first thing you need to do is set up a Raspberry Pi.
 
 ## Preinstalled image
-The easiest way to setup you Raspberry is to use our prepared image. You can download it [here.](https://gateway.ipfs.io/ipfs/Qmc2CsaPSWzZRDcMBn3cDv5r45SJnn8uUmreEAAYPCT637) After finishing of download, change name of the file to `rpi.img.gz`:
+The easiest way to setup you Raspberry is to use our prepared image. You can download it [here.](https://gateway.ipfs.io/ipfs/QmbR221UatNzq2sxoXivmbiGSDQdfqeR8kyKKesj7zn3pR) After finishing of download, change name of the file to `rpi.img.gz`:
 
 ```
-mv Qmc2CsaPSWzZRDcMBn3cDv5r45SJnn8uUmreEAAYPCT637 rpi.img.gz
+mv QmbR221UatNzq2sxoXivmbiGSDQdfqeR8kyKKesj7zn3pR rpi.img.gz
 ```
 
 Then read the next chapter and install image.
@@ -233,7 +233,7 @@ Also, we need [IPFS](https://ipfs.io/) for working with robonomics. For today th
 
 ```shell
 cd ~
-wget https://raw.githubusercontent.com/airalab/homeassistant-robonomics-integration/main/install_ipfs.sh
+wget https://raw.githubusercontent.com//airalab/homeassistant-robonomics-integration/main/install_ipfs.sh
 sudo chmod +x install_ipfs.sh
 ./install_ipfs.sh
 ```
