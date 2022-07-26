@@ -22,6 +22,15 @@
       <li class="breadcrumbs__item" v-for="(breadcrumb, index) in breadcrumbs" :key="breadcrumb.id">
 
         <g-link 
+          v-if="breadcrumbs[0] === breadcrumb"
+          :to="'/summary/' + getCleanTitleLink(breadcrumb.title)" 
+          class="breadcrumbs__link"
+          :aria-current="index === breadcrumbs.length-1 ? 'location' : ''"
+        >
+          {{breadcrumb.title}} 
+        </g-link>
+
+        <g-link 
           v-if="breadcrumb.link"
           :to="breadcrumb.link" 
           class="breadcrumbs__link"
@@ -30,7 +39,7 @@
           {{breadcrumb.title}}
         </g-link>
 
-        <span class="breadcrumbs__link" v-else>{{breadcrumb.title}}</span>
+        <span class="breadcrumbs__link" v-if="!breadcrumb.link && breadcrumbs[0] !== breadcrumb">{{breadcrumb.title}}</span>
 
       </li>
     </nav>
@@ -64,7 +73,7 @@ export default {
   computed: {
     locale() {
       return this.$store.state.locale
-    }
+    },
   },
 
   methods: {
@@ -86,6 +95,10 @@ export default {
       }
       return null;
     },
+
+    getCleanTitleLink(title) {
+      return title.split(" ").join("-").toLowerCase();
+    }
   },
 
   mounted() {

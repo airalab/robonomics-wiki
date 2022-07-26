@@ -80,8 +80,8 @@
           link: /docs/configuration-options-description
         - title_en: Connect an Amazon FreeRTOS device to Robonomics by MQTT
           link: /docs/freertos-mqtt/
-        - title_en: How to Contribute
-          link: /docs/freertos-mqtt/
+        # - title_en: How to Contribute
+        #   link: /docs/freertos-mqtt/
     - title_en: Securely Connect Cloud AI To The Factory Floor
       link: /docs/securely-connect-cloud-ai-to-the-factory-floor
     - title_en: Create digital identity run by Ethereum
