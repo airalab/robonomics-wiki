@@ -20,7 +20,7 @@
 	          {{ subtitle.value }}
 	        </a>
 	      </li>
-	    </ul>
+		</ul>
 	<!-- </details> -->
 </template>
 
