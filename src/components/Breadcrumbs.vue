@@ -22,8 +22,8 @@
       <li class="breadcrumbs__item" v-for="(breadcrumb, index) in breadcrumbs" :key="breadcrumb.id">
 
         <g-link 
-          v-if="breadcrumbs[0] === breadcrumb"
-          :to="'/summary/' + getCleanTitleLink(breadcrumb.title)" 
+          v-if="breadcrumbs[breadcrumbs.length - 1] !== breadcrumb"
+          :to="$path('/summary/' + getCleanTitleLink(breadcrumb.title), locale)" 
           class="breadcrumbs__link"
           :aria-current="index === breadcrumbs.length-1 ? 'location' : ''"
         >
@@ -38,8 +38,6 @@
         >
           {{breadcrumb.title}}
         </g-link>
-
-        <span class="breadcrumbs__link" v-if="!breadcrumb.link && breadcrumbs[0] !== breadcrumb">{{breadcrumb.title}}</span>
 
       </li>
     </nav>
