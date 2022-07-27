@@ -52,6 +52,11 @@ export default {
     methods: {
       getItemsForTitle() {
         this.allItems.map(item => {
+
+          if(!this.title) {
+            return 
+          }
+
           const cleanTitle = this.title.replace(/-/g, ' ');
           this.title = cleanTitle;
 
@@ -92,10 +97,10 @@ export default {
       }
     },
 
-    mounted() {
-      const { title } = this.$route.params;
-      this.title = title;
-      this.getItemsForTitle();
+  created() {
+    const { title } = this.$route.params;
+    this.title = title;
+    this.getItemsForTitle();
   },
 }
 </script>
