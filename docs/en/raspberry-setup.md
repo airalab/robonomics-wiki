@@ -15,7 +15,21 @@ tools:
 For all methods from ["Overview"](/docs/home-assistant-begin/), the first thing you need to do is set up a Raspberry Pi.
 
 ## Preinstalled image
-The easiest way to setup you Raspberry is to use our prepared image. You can download it [here.](https://gateway.ipfs.io/ipfs/QmbR221UatNzq2sxoXivmbiGSDQdfqeR8kyKKesj7zn3pR) After finishing of download, change name of the file to `rpi.img.gz`:
+The easiest way to setup you Raspberry is to use our prepared image. 
+For downloading it, we will use IPFS. For this [install IPFS](https://docs.ipfs.tech/install/command-line/) and start it (Don't forget to make `ipfs init` for the first start):
+```shell
+ipfs daemon
+```
+
+In other terminal window download image:
+
+```shell
+ipfs get QmbR221UatNzq2sxoXivmbiGSDQdfqeR8kyKKesj7zn3pR
+```
+
+Alternatively, you can download it [from url.](https://gateway.ipfs.io/ipfs/QmbR221UatNzq2sxoXivmbiGSDQdfqeR8kyKKesj7zn3pR) (**Only with started IPFS Daemon**)
+
+After finishing of download, change name of the file to `rpi.img.gz`:
 
 ```
 mv QmbR221UatNzq2sxoXivmbiGSDQdfqeR8kyKKesj7zn3pR rpi.img.gz
@@ -28,16 +42,11 @@ Then read the next chapter and install image.
 User and password for mosquitto broker is - user/pass
 </robo-wiki-note>
 
-If you want to change MQTT user and password use the following command:
-
-```shell
-sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
-```
-
 
 <robo-wiki-title type="3" anchor="configuration-rpi"> 
   Configuration RPi
 </robo-wiki-title>
+
 Install [balena etcher](https://www.balena.io/etcher/) on your computer. Then, insert the SD card and run the Imager program. Select required image as the operating system and ensure to select your SD card from the storage dropdown, and then `flash` image.
 
 <robo-wiki-picture src="home-assistant/balena.jpg" alt="Balena installer" />
@@ -104,6 +113,19 @@ In this example the Raspberry Pi's address is `192.168.43.56`. Now connect to it
 ```bash
 ssh ubuntu@192.168.43.56
 ```
+
+If you installed our "ready to use" image, there is already installed MQTT broker - *Mosquitto*. 
+<robo-wiki-note type="note">
+User and password for mosquitto broker is - user/pass
+</robo-wiki-note>
+
+If you want to change MQTT user and password use the following command, where `<username>` is new user:
+
+```shell
+sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
+```
+
+It will **delete** previous password file and create new with your username and password.
 
 ## Manual Installation
 If It's necessary, you can create PRi image manually. 
