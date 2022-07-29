@@ -2,7 +2,7 @@
   <Layout>
     <div class="summary" v-if="title">
       <h2 class="summary-title">{{title}} :</h2>
-      <ol  class="menu summary-menu">
+      <ol  class="menu summary-menu" v-if="items">
         <li v-for="item in items" :key="item.title_en">
           <g-link v-if="item.link" class="menu-link" :to="$path(item.link, locale)" exact>
             {{ item[`title_${locale}`] ? item[`title_${locale}`] : item[`title_en`] }}
@@ -20,7 +20,7 @@
         </li>
       </ol>
     </div>
-    <div class="summary__not-exist" v-else>
+    <div class="summary__not-exist" v-if="!items.length">
       Sorry, nothing here :(
     </div>
   </Layout>
@@ -34,10 +34,13 @@ export default {
       List: () => import("../../components/SidebarDocs.vue")
     },
 
+    metaInfo: {
+      title: 'Summary',
+    },
+
     data() {
       return {
           title: null,
-          isExist: false,
           items: [],
           allItems: items,
       };
@@ -50,20 +53,33 @@ export default {
     },
 
     methods: {
-      getItemsForTitle() {
-        this.allItems.map(item => {
+        
+      getItemsForTitle(elements) {
 
-          if(!this.title) {
-            return 
+        if(!this.title) {
+          return 
+        }
+        
+
+        const cleanTitle = this.title.replace(/-/g, ' ');
+
+        this.title = cleanTitle;
+
+
+        let item = null;
+        let t = null;
+        for (let i = 0; i < elements.length; i++) {
+
+          item = elements[i];
+
+          if(this.title.toLowerCase() === (item[`title_${this.locale}`] && item[`title_${this.locale}`].toLowerCase().replace(/-/g, ' ')) || this.title.toLowerCase() === item[`title_en`].toLowerCase().replace(/-/g, ' ') || item.items && (t = this.getItemsForTitle(item.items))) {
+            if(!this.items.length) {
+              this.items = item.items;
+            }
+            return item;
           }
-
-          const cleanTitle = this.title.replace(/-/g, ' ');
-          this.title = cleanTitle;
-
-          if(this.title.toLowerCase() === (item[`title_${this.locale}`] && item[`title_${this.locale}`].toLowerCase()) || this.title.toLowerCase() === item[`title_en`].toLowerCase()) {
-            this.items = item.items;
-          }
-        })
+        }
+        return null;
       },
 
       toggle (event) {
@@ -93,14 +109,16 @@ export default {
 
     watch: {
       '$route.path': function(curr, old) {
-        this.getItemsForTitle();
+        const { title } = this.$route.params;
+        this.title = title;
+        this.getItemsForTitle(this.allItems);
       }
     },
 
   created() {
     const { title } = this.$route.params;
     this.title = title;
-    this.getItemsForTitle();
+    this.getItemsForTitle(this.allItems);
   },
 }
 </script>
@@ -146,5 +164,10 @@ export default {
 
   .menu-subtitle.open:after {
     content: "[-]"
+  }
+
+  .summary__not-exist {
+    text-align: center;
+    font-weight: 600;
   }
 </style>
