@@ -5,23 +5,9 @@ contributors: [LoSk-p]
 translated: true
 ---
 
-## MQTT Integration
-
-Now you need to add MQTT integration to Home Assistant. Open web interface then go to `Configuration/Integrations` page and press `Add Integration` button. Find MQTT:
-
-<robo-wiki-picture src="home-assistant/mqtt.jpg" />
-
-Press on it and set up your brocker address (localhost), port (1883) and your username and password (default `user` and `pass` if you haven't changed it [here](/docs/raspberry-setup/)), then press `submit`:
-
-<robo-wiki-picture src="home-assistant/mqtt-setup.jpg" />
-
-Then press on three dots on MQTT integration and choose `System Options` and check if automatically adding new devices is enabled:
-
-<robo-wiki-picture src="home-assistant/add-dev.jpg" />
-
 ## MQTT on SLS Gateway
 
-Also you need to configure MQTT on SLS Gateway. Come back to your [SLS Gateway](https://wiki.robonomics.network/docs/en/sls-setup/#setup) go to `Settings/Link` -> `MQTT Setup`:
+You need to configure MQTT on SLS Gateway. Come back to your [SLS Gateway](https://wiki.robonomics.network/docs/en/sls-setup/#setup) go to `Settings/Link` -> `MQTT Setup`:
 
 <robo-wiki-picture src="home-assistant/sls-mqtt-menu.jpg" />
 

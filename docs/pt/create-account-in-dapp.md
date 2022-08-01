@@ -1,8 +1,8 @@
 ---
-title: Create Account for Robonomics Parachain
- 
+title: Create Account for Robonomics Parachain 
+
 contributors: [PaTara43, Fingerling42]
-translated: true
+translated: false
 ---
 
 **In order to interact and operate with Robonomics Parachain, developers and users need to create an account on the Polkadot / Substrate Portal. The account performs basic functions for the network: your public network address(the public key), the access control to the address and funds (the private key), sending transactions to the network, showing your tokens and their amount, etc. Below are two main ways to create an account for Robonomics Parachain.**
@@ -61,7 +61,7 @@ Also, the account will appear in the **Accounts -> Accounts** menu on the portal
 
 ## 2. Directly on Robonomics Parachain App
 
-You can use the user interface on the Polkadot / Substrate Portal to create an account, although this is not recommended as it is the less secure method for the account creation. It should be used when other methods are not applicable or for development and tests. 
+You can use the user interface on the Polkadot / Substrate Portal to create an account. It could be used for development and tests. 
 
 ## 2.1. Open Robonomics Parachain App
 
@@ -79,7 +79,7 @@ You should see the following popup menu with account seed.
 
 It has two forms: *Mnemonic* (human-readable) and *Raw* (a sequence of digits and letters). Save the seed phrase securely and press `Next`.
 
-> Also you can change the crypto type of creating account, for that open `Advances creation options` and choose the type (`ED25519` on the picture).
+> Also you can change the crypto type of creating account, for that open `Advanced creation options` and choose the type (`ed25519` on the picture).
 
 ![ed25519 crypto type account](../images/creating-an-account/ed-account.jpg)
 
@@ -91,19 +91,19 @@ Clicking on the `Next` button will take you to the last window. Click `Save` to 
 
 ![Successful account creation](../images/creating-an-account/2.4-robonomics-app-account-created.png "Successful account creation")
 
-## 2.3 Add ed25519 account to Polkadot extention
+## 2.3 Add ed25519 account to Polkadot extension
 
-You may need to add created account to Polkadot.js extention (for ed25519 account you can do that only with bacup JSON file). For that you need to create backup file of the account. Press on three dots on your account and choose `Create a backup file for this account` and write your password.
+You may need to add created account to Polkadot.js extension (for ed25519 account you can do that only with backup JSON file). For that you need to create backup file of the account. Press on three dots on your account and choose `Create a backup file for this account` and write your password.
 
 ![Backup file](../images/creating-an-account/backup-file.jpg)
 
-Then open an extention and press `+` button on the top right, then choose `Restore account from backup JSON file`.
+Then open an extension and press `+` button on the top right, then choose `Restore account from backup JSON file`.
 
-![Restore backup in extention](../images/creating-an-account/extention-add-backup.jpg)
+![Restore backup in extension](../images/creating-an-account/extention-add-backup.jpg)
 
 In opened window drop saved file, enter the password and press `Restore`.
 
-![Restore backup in extention 2](../images/creating-an-account/file-backup.jpg)
+![Restore backup in extension 2](../images/creating-an-account/file-backup.jpg)
 
 ## 3. Account Сreated Successfully 
 
