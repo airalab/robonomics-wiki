@@ -2,7 +2,7 @@
 title: Connect sensor
  
 contributors: [LoSk-p, makyul]
-translated: true
+translated: false
 ---
 
 Example of work is in the video:

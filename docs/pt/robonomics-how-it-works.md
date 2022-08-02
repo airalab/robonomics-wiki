@@ -2,7 +2,7 @@
 title: How Robonomics Network Works 
  
 contributors: [ensrationis, akru]
-translated: true
+translated: false
 ---
 
 In this section we will discuss the Robonomics Network scenario.

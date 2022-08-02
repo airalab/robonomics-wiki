@@ -2,7 +2,7 @@
 title: Lesson 3, Robonomics IO in Practice 
  
 contributors: [akru]
-translated: true
+translated: false
 ---
 
 In this lesson we will show you how to use Robonomics to connect to an I/O device. 

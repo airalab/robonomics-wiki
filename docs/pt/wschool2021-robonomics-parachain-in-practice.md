@@ -2,7 +2,7 @@
 title: Lesson 4, Robonomics Parachain in Practice 
  
 contributors: [akru]
-translated: true
+translated: false
 ---
 import Asciinema from '~/components/Asciinema.vue'
 

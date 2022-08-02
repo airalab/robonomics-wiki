@@ -2,7 +2,7 @@
 title: Frequently Asked Questions about AIRA 
  
 contributors: [Vourhey]
-translated: true
+translated: false
 ---
 
 ## How to see logs from main services?

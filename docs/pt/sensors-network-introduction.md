@@ -2,7 +2,7 @@
 title: Introduction 
  
 contributors: [LoSk-p]
-translated: true
+translated: false
 ---
 
 ## What is Sensors Robonomics Network?

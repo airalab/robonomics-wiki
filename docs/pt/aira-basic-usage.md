@@ -2,7 +2,7 @@
 title: Basic usage of AIRA 
  
 contributors: [akru]
-translated: true
+translated: false
 ---
 
 To get familiar with AIRA, let's see what is under the hood.

@@ -2,7 +2,7 @@
 title: Robonomics DApp Overview
  
 contributors: [Vourhey]
-translated: true
+translated: false
 ---
 
 You can operate with Robonomics Network using the interface of [Robonomics Network Dapp (decentralized application)](https://dapp.robonomics.network/#/). It is available in browsers with [Metamask extension](https://metamask.io). On the first page you will see the statistics of the network:

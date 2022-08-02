@@ -2,7 +2,7 @@
 title: Robonomics-js
  
 contributors: [Vourhey]
-translated: true
+translated: false
 ---
 
 [Robonomics-js](https://github.com/airalab/robonomics-js) is a simple Javascript library for working with Robonomics Network.

@@ -2,7 +2,7 @@
 title: Connect SLS Gateway to Home Assistant
  
 contributors: [LoSk-p]
-translated: true
+translated: false
 ---
 
 ## MQTT Integration

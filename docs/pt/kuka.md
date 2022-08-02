@@ -2,7 +2,7 @@
 title: Control Kuka manipulator with robonomics
  
 contributors: [LoSk-p]
-translated: true
+translated: false
 ---
 
 Video with an example of work can be found here:

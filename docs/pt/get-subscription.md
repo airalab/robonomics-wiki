@@ -2,7 +2,7 @@
 title: How to Buy a Subscription
  
 contributors: [LoSk-p]
-translated: true
+translated: false
 ---
 
 https://youtu.be/EsUiG_4ZGcw

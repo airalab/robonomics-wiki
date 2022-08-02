@@ -2,7 +2,7 @@
 title: Lightsout Factory
  
 contributors: [ValanisZz, GiggleSeagull, Valiento]
-translated: true
+translated: false
 ---
 
 ![Lightsout Factory Preview](../images/lightsout-factory/factory_preview_numbers.jpg)

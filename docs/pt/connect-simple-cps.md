@@ -2,7 +2,7 @@
 title: Connect the simplest CPS 
  
 contributors: [ensrationis, akru]
-translated: true
+translated: false
 ---
 
 In this section we will build the simplest real cyber-physical system!

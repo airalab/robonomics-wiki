@@ -2,7 +2,7 @@
 title: Try It Out
  
 contributors: [LoSk-p]
-translated: true
+translated: false
 ---
 
 With this tutorial you will be able to see in simulation what real Spot did.

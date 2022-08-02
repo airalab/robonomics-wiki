@@ -2,7 +2,7 @@
 title: Troubleshooting
  
 contributors: [nakata5321]
-translated: true
+translated: false
 ---
 
 ## Couldn't create HRMP channel

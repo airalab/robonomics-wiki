@@ -2,7 +2,7 @@
 title: Lesson 1, Connect Robotics to User App
  
 contributors: [Ensrationis, Houman]
-translated: true
+translated: false
 ---
 
 **In this lesson, we will show you how to connect to a sensor on top of Fuji Mountain in Japan to get actual data through Robonomics DAPP.**

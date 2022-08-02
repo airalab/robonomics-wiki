@@ -2,7 +2,7 @@
 title: Offsetting Service  
  
 contributors: [tubleronchik]
-translated: true
+translated: false
 ---
 
 Example of work is in the video:

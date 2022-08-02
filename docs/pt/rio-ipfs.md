@@ -2,7 +2,7 @@
 title: Robonomics IO IPFS
  
 contributors: [Vourhey]
-translated: true
+translated: false
 ---
 
 It serves downloading and uploading files from/to IPFS network

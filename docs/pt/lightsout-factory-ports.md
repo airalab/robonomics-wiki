@@ -2,7 +2,7 @@
 title: Ports mapping
  
 contributors: [ValanisZz, GiggleSeagul, Valiento]
-translated: true
+translated: false
 ---
 
 ## PLC scheme

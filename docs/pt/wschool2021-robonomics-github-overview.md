@@ -2,7 +2,7 @@
 title: Lesson 2, Robonomics AIRA Overview 
  
 contributors: [Ensrationis]
-translated: true
+translated: false
 ---
 In this lesson you will learn about Autonomous Intelligent Robot Agent (AIRA). 
 

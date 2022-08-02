@@ -2,7 +2,7 @@
 title: Troubleshooting 
  
 contributors: [LoSk-p]
-translated: true
+translated: false
 ---
 
 ### Admin socket already exists 

@@ -2,7 +2,7 @@
 title: How to contribute
  
 contributors: [LoSk-p]
-translated: true
+translated: false
 ---
 
 If you find any bugs or would like to propose an improvement, please, open a new issue in one of tre repositories, that you want to contribute.

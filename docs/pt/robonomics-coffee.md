@@ -2,7 +2,7 @@
 title: Robonomics Coffee
  
 contributors: [PaTara43]
-translated: true
+translated: false
 ---
 
 ## About

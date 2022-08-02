@@ -2,7 +2,7 @@
 title: Glossary
  
 contributors: [Vourhey]
-translated: true
+translated: false
 ---
 
 ## Agent

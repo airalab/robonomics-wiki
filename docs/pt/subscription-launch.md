@@ -2,7 +2,7 @@
 title: How to Send Launch with Subscription 
  
 contributors: [LoSk-p]
-translated: true
+translated: false
 ---
 
 If your address has an active subscription, then any devices set up with that account's secret can send extrinsics with no fee. 

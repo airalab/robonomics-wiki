@@ -2,7 +2,7 @@
 title: Control Baxter robot with robonomics
  
 contributors: [nakata5321, Vourhey]
-translated: true
+translated: false
 ---
 
 Example of how it works:

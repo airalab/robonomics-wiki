@@ -2,7 +2,7 @@
 title: IPFS Common Messages
  
 contributors: [ensrationis, akru]
-translated: true
+translated: false
 ---
 
 ## ipfs_common/Filepath.msg
