@@ -14,15 +14,15 @@ Also `SUB_ADMIN` will send to Robonomics encrypted telemetry with states of all 
 
 ## Requirements
 
-* Raspberry Pi 4 or 3
+* Raspberry Pi 4
 * SD card and SD adapter
 * Zigbee smart devices (any from [supported devices](https://slsys.io/action/supported_devices.html))
 
-### Method 1 (with SLS Gateway)
-* [Robonomics SLS Gateway](https://easyeda.com/ludovich88/robonomics_sls_gateway_v01)
-
-### Method 2 (with zigbee2MQTT)
+### Method 1 (with zigbee2MQTT)
 * Zigbee adapter [JetHome USB JetStick Z2](https://jhome.ru/catalog/parts/PCBA/293/) (or one of [supported](https://www.zigbee2mqtt.io/information/supported_adapters.html))
+
+### Method 2 (with SLS Gateway)
+* [Robonomics SLS Gateway](https://easyeda.com/ludovich88/robonomics_sls_gateway_v01)
 
 ## Start
 

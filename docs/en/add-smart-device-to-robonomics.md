@@ -1,7 +1,7 @@
 ---
 title: Robonomics integration setup
 
-contributors: [LoSk-p]
+contributors: [LoSk-p, nakata5321]
 translated: true
 ---
 
