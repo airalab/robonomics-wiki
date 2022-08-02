@@ -132,6 +132,8 @@
           link: /docs/iot-sub-setup
         - title_en: Robonomics integration setup
           link: /docs/add-smart-device-to-robonomics
+        - title_en: DApp Usage
+          link: /docs/use-dapp
         - title_en: Connect Sensors with Xiaomi Gateway
           link: /docs/xiaomi-gateway
         - title_en: Connect Vacuum Cleaner

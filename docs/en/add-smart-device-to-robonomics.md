@@ -38,4 +38,4 @@ And Press `DECRYPT PASSWORD`. You will get login and password for your Home Assi
 
 <robo-wiki-picture src="home-assistant/acc-login.jpg" />
 
-Now you can use `SmartHome Telemetry` DApp to control your home through the Robonomics.
+Now you can use `SmartHome Telemetry` DApp to control your home through the Robonomics. Go to the [article](/docs/use-dapp/).

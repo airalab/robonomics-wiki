@@ -92,4 +92,4 @@ Give it a name and press "+" button. Write password in popup window and wait act
 
 <robo-wiki-note type="okay">Do the same thing for `SUB_OWNER` account.</robo-wiki-note>
 
-That's all. Now got to the next article ["Robonomics integration setup"]()
+That's all. Now got to the next article ["Robonomics integration setup"](/docs/add-smart-device-to-robonomics/)
