@@ -1,88 +1,117 @@
 ---
-title: Connect Sensors with Zigbee2MQTT 
+title: Zigbee2MQTT setup
 
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: true
+tools:
+  - Zigbee2MQTT 1.26.0
 ---
 
-## Mosquitto MQTT broker
-
-For this method, you neet to install MQTT broker to the Raspberry Pi:
-
-```bash
-sudo apt update
-sudo apt install mosquitto mosquitto-clients
-```
-The Mosquitto program will run automatically after installation.
-
-## Zigbee2MQTT setup
+After installing [MQTT broker](/docs/mqtt-broker/) to the Raspberry Pi, we can now set up Zigbee2MQTT stick.
 
 If you have the JetHome USB JetStick Z2 it will already have the necessary firmware so you don't need to flash it. However, if you have another adapter the first thing you need to flash it with zigbee2MQTT software. You can find instructions for your device [here](https://www.zigbee2mqtt.io/information/supported_adapters.html).
 
-Then we need to install the ziqbee2mqtt software on the  Raspberry PI. Connect the adapter and verify the adapter address (it also may be `/dev/ttyUSB1`):
+Necessary ziqbee2mqtt software has already been installed on the  Raspberry PI on previous steps. 
+
+First, Connect the adapter to Raspberry PI. Now we need to find the location of our stick. For this write next command:
+
 ```bash
-$ ls -l /dev/ttyUSB0
-crw-rw---- 1 root dialout 166, 0 May 16 19:15 /dev/ttyUSB0 
+$ ls -l /dev/serial/by-id
 ```
-Install zigbee2MQTT:
-```bash
-# Setup Node.js repository
-sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
-# NOTE 1: If you see the message below please follow: https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb.
-# ## You appear to be running on ARMv6 hardware. Unfortunately this is not currently supported by the NodeSource Linux distributions. Please use the 'linux-armv6l' binary tarballs available directly from nodejs.org for Node.js 4 and later.
-# IMPORTANT: In this case instead of the apt-get install mentioned below; do: sudo apt-get install -y git make g++ gcc
+Output should look like:
 
-# NOTE 2: On x86, Node.js 10 may not work. It's recommended to install an unofficial Node.js 14 build which can be found here: https://unofficial-builds.nodejs.org/download/release/ (e.g. v14.16.0)
+<robo-wiki-picture src="home-assistant/devices.jpg" alt="connected devices" />
 
-# Install Node.js;
-sudo apt-get install -y nodejs git make g++ gcc
+In example Stick connection place is - `ttyUSB0`.
 
-# Verify that the correct nodejs and npm (automatically installed with nodejs)
-# version has been installed
-node --version  # Should output v10.X, v12.X, v14.X or v15.X
-npm --version  # Should output 6.X or 7.X
+Then you need to configure it. Before start Zigbee2MQTT we need to edit the configuration.yaml file. This file contains the configuration which will be used by Zigbee2MQTT.:
 
-# Clone Zigbee2MQTT repository
-sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
-sudo chown -R ubuntu:ubuntu /opt/zigbee2mqtt
-
-# Install dependencies (as user "ubuntu")
-cd /opt/zigbee2mqtt
-npm ci
-```
-Then you need to configure it. Open configuration file:
 ```bash
 nano /opt/zigbee2mqtt/data/configuration.yaml
 ```
-And paste this:
-```
+
+For a basic configuration, the default settings are probably good. We just need to change statements:
+ - `homeassistant:` to `true`. It will automatically connect sensors to Home Assistant.
+ - uncommit `user` and `password`statements on `mqtt` and fill them with our username and password from MQTT Broker.(You create it in the previous article.)
+ - change port in `serial`-> `port` to `/dev/stick_connection_place>`. In example `/dev/ttyUSB0`.
+
+Ready configuration file will look like:
+
+```shell
+# Home Assistant integration (MQTT discovery)
+homeassistant: true
+
+# allow new devices to join
 permit_join: true
+
+# MQTT settings
 mqtt:
-  # MQTT base topic for Zigbee2MQTT MQTT messages
+  # MQTT base topic for zigbee2mqtt MQTT messages
   base_topic: zigbee2mqtt
   # MQTT server URL
   server: 'mqtt://localhost'
+  # MQTT server authentication, uncomment if required:
+  user: <YOUR_USERNAME>
+  password: <YOUR_PASSWORD>
+
+# Serial settings
+serial:
+  # Location of CC2531 USB sniffer
+  port: /dev/<YOUR_PORT> # /dev/ttyUSB0 for example
 ```
+
 Now you can run zigbee2mqtt:
+
 ```bash
 cd /opt/zigbee2mqtt
 npm start
 ```
+
+When started successfully, you will see something like:
+```shell
+Building Zigbee2MQTT... (initial build), finished
+Zigbee2MQTT:info  2022-07-29 14:36:36: Logging to console and directory: '/opt/zigbee2mqtt/data/log/2022-07-29.14-36-36' filename: log.txt
+Zigbee2MQTT:info  2022-07-29 14:36:36: Starting Zigbee2MQTT version 1.26.0 (commit #bc4ffc0)
+Zigbee2MQTT:info  2022-07-29 14:36:36: Starting zigbee-herdsman (0.14.40)
+Zigbee2MQTT:info  2022-07-29 14:36:49: zigbee-herdsman started (resumed)
+Zigbee2MQTT:info  2022-07-29 14:36:49: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20211219,"transportrev":2},"type":"zStack3x0"}'
+Zigbee2MQTT:info  2022-07-29 14:36:49: Currently 0 devices are joined:
+Zigbee2MQTT:warn  2022-07-29 14:36:49: `permit_join` set to  `true` in configuration.yaml.
+Zigbee2MQTT:warn  2022-07-29 14:36:49: Allowing new devices to join.
+Zigbee2MQTT:warn  2022-07-29 14:36:49: Set `permit_join` to `false` once you joined all devices.
+Zigbee2MQTT:info  2022-07-29 14:36:49: Zigbee: allowing new devices to join.
+Zigbee2MQTT:info  2022-07-29 14:36:49: Connecting to MQTT server at mqtt://localhost
+Zigbee2MQTT:info  2022-07-29 14:36:49: Connected to MQTT server
+Zigbee2MQTT:info  2022-07-29 14:36:49: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online'
+Zigbee2MQTT:info  2022-07-29 14:36:49: MQTT publish: topic 'zigbee2mqtt/bridge/config', payload '{"commit":"bc4ffc0","coordinator":{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20211219,"transportrev":2},"type":"zStack3x0"},"log_level":"info","network":{"channel":11,"extendedPanID":"0x00124b0020cd133d","panID":6754},"permit_join":true,"version":"1.26.0"}'
+Zigbee2MQTT:info  2022-07-29 14:36:49: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online
+```
+
+
 ## Pairing device
 
-Then you need to pair your sensor. For that just long press the power button until it starts to blink (zigbee2MQTT must be launched). After sensor connects you will see the message like:
+Then you need to pair your sensor. Usually you need just long press the power button until it starts to blink (zigbee2MQTT must be launched). After sensor connects you will see the message like:
 ```
-Zigbee2MQTT:info  2019-11-09T12:19:56: Successfully interviewed '0x00158d0001dc126a', device has successfully been paired
+Zigbee2MQTT:info  2022-07-29 14:44:39: Successfully interviewed '0x00158d0003eeeacf', device has successfully been paired
 ```
-> Remember this number `0x00158d0001dc126a` it will be the topic name for your sensor's data.
-Then open configuration file again and set `permit_join: false`.
+And a lot of additional data about this sensor. Remember ID of sensor - in example `0x00158d0003eeeacf`.
+
+Now you should see this sensor with ID in your Home Assistant WebUI. Go to `settings` -> `Devices & Services` -> `Devices`:
+
+<robo-wiki-picture src="home-assistant/mqtt-devices.jpg" />
+
+
+> After adding all sensors, you could stop program and open configuration file again and set `permit_join: false`, if you don't want to give ability to add other sensors.
 
 Then lets make a service. Create the file:
+
 ```bash
 sudo nano /etc/systemd/system/zigbee2mqtt.service
 ```
+
 Add the following to this file:
+
 ```
 [Unit]
 Description=zigbee2mqtt
@@ -92,10 +121,9 @@ After=network.target
 ExecStart=/usr/bin/npm start
 WorkingDirectory=/opt/zigbee2mqtt
 StandardOutput=inherit
-# Or use StandardOutput=null if you don't want Zigbee2MQTT messages filling syslog, for more options see systemd.exec(5)
 StandardError=inherit
 Restart=always
-User=pi
+User=ubuntu
 
 [Install]
 WantedBy=multi-user.target
@@ -135,85 +163,4 @@ Now that everything works, we want systemctl to start Zigbee2MQTT automatically 
 ```bash
 sudo systemctl enable zigbee2mqtt.service
 ```
-
-## Home Assistant Setup
-
-Open Home Assistant configuration file:
-
-```bash
-nano ~/.homeassistant/configuration.yaml
-```
-
-And add the following to setup MQTT broker and sensor (replace `topic_name` with the topic name from previous step):
-
-```
-# MQTT broker setup
-mqtt:
-  broker: localhost
-  port: 1883
-
-# Sensor setup
-sensor:
-  - platform: mqtt
-    state_topic: "zigbee2mqtt/<topic_name>"
-    name: "MQTT Climate Humidity"
-    unit_of_measurement: '%'
-    value_template: "{{ value_json.humidity }}"
-  - platform: mqtt
-    state_topic: "zigbee2mqtt/<topic_name>"
-    name: "MQTT Climate Temperature"
-    unit_of_measurement: ''
-    value_template: "{{ value_json.temperature }}"
-  - platform: mqtt
-    state_topic: "zigbee2mqtt/<topic_name>"
-    name: "MQTT Climate Pressure"
-    unit_of_measurement: ''
-    value_template: "{{ value_json.pressure }}"
-  - platform: mqtt
-    state_topic: "zigbee2mqtt/<topic_name>"
-    name: "MQTT Climate Battery"
-    unit_of_measurement: ''
-    value_template: "{{ value_json.battery }}"
-  - platform: mqtt
-    state_topic: "zigbee2mqtt/<topic_name>"
-    name: "MQTT Climate Link Quality"
-    unit_of_measurement: ''
-    value_template: "{{ value_json.linkquality }}"
-  - platform: mqtt
-    state_topic: "zigbee2mqtt/<topic_name>"
-    name: "MQTT Climate Voltage"
-    unit_of_measurement: ''
-    value_template: "{{ value_json.voltage }}"
-```
-
-Then restart Home Assistant with new configuration:
-
-```bash
-systemctl restart home-assistant@homeassistant.service
-```
-
-To see the sensor data in Home Assistant you need to add it. For that open the browser on your computer and go to:
-```
-http://<raspberry_address>:8123
-```
-Press on three dots on the right side and choose `Edit Dashboard`
-
-![edit_dashboard](../images/home-assistant/dashboard.png)
-
-Then press `Add Card`
-
-![card](../images/home-assistant/card.png)
-
-Go to `By Entity` and tick all sensors that you need
-
-![sensors](../images/home-assistant/sensors.png)
-
-Press continue and you will be able to see sensor data at the homepage (you may see `unknown` before sensor send new data)
-
-In a similar way you can add card for Robonomics Service. With this you can start or stop the servise or send current measurements with `run action` button.
-
-![action](../images/home-assistant/datalog.png)
-
-You homepage will look like this
-
-![home](../images/home-assistant/home.png)
+That's all. Go to the next article ["IOT subscription setup"](/docs/iot-sub-setup/) to create robonomics parachain's accounts and activate subscription.

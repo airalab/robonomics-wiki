@@ -120,18 +120,24 @@
           link: /docs/home-assistant-begin
         - title_en: Raspberry Pi Setup
           link: /docs/raspberry-setup
+        - title_en: MQTT Broker setup
+          link: /docs/mqtt-broker
+        - title_en: Zigbee2MQTT setup
+          link: /docs/zigbee2-mqtt
         - title_en: Setup SLS Gateway
           link: /docs/sls-setup
         - title_en: Connect SLS Gateway to Home Assistant
           link: /docs/sls-gateway-connect
-        - title_en: Robonomics Integration Configuration
+        - title_en: IOT subscription setup
+          link: /docs/iot-sub-setup
+        - title_en: Robonomics integration setup
           link: /docs/add-smart-device-to-robonomics
+        - title_en: DApp Usage
+          link: /docs/use-dapp
         - title_en: Connect Sensors with Xiaomi Gateway
           link: /docs/xiaomi-gateway
         - title_en: Connect Vacuum Cleaner
           link: /docs/vacuum-connect
-        - title_en: Connect Sensors with Zigbee2MQTT 
-          link: /docs/zigbee2-mqtt
     - title_en: Carbon Footprint Offsetting Service
       items:
         - title_en: Offsetting Service

@@ -1,0 +1,95 @@
+---
+title: IOT subscription setup
+contributors: [nakata5321]
+translated: true
+---
+
+After setting up [Zigbee2MQTT stick](/docs/zigbee2-mqtt/), It is time to create robonomics parachain's accounts and buy subscription. 
+
+## Create accounts
+
+First, let's create account.
+
+Go to [Robonomics Parachain app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) on Polkadot / Substrate Portal. **Check at the top left corner that you are connected to Robonomics Parachain**.  
+
+Go to **Accounts -> Accounts** and press `Add account` button. 
+
+<robo-wiki-picture src="home-assistant/add-account.jpg" />
+
+You should see the following popup menu with account seed. 
+
+<robo-wiki-picture src="home-assistant/mnemonic.jpg" />
+
+It has two forms: *Mnemonic* (human-readable) and *Raw* (a sequence of digits and letters). Save the mnemonic seed phrase securely and press `Next`.
+
+<robo-wiki-note type="warning">
+Then open `Advanced creation options` and change the crypto type of creating account to `Edwards - ed25519`.
+</robo-wiki-note>
+
+<robo-wiki-picture src="home-assistant/edw.jpg" />
+
+In the next menu, you need to set the account name and password, similar to the extension instructions described above. Let's give a name - `sub_owner`.
+
+<robo-wiki-picture src="home-assistant/name.jpg" />
+
+Clicking on the `Next` button will take you to the last window. Click `Save` to finish account creation. It will also generate a backup JSON-files that you should safely store. You can later use this file to recover your account if you remember the password.
+
+<robo-wiki-picture src="home-assistant/done.jpg" />
+
+<robo-wiki-note type="note">The same way create account with name `sub_admin` </robo-wiki-note>
+
+### add to extension
+
+You need to add created account to [Polkadot.js extension](https://polkadot.js.org/extension/) (for ed25519 account you can do that only with backup JSON file). 
+For that you need to create backup file of the account. Press on three dots on your account and choose `Create a backup file for this account` and write your password.
+
+![Backup file](../images/creating-an-account/backup-file.jpg)
+
+Then open an extension and press `+` button on the top right, then choose `Restore account from backup JSON file`.
+
+![Restore backup in extension](../images/creating-an-account/extention-add-backup.jpg)
+
+In opened window drop saved file, enter the password and press `Restore`.
+
+![Restore backup in extension 2](../images/creating-an-account/file-backup.jpg)
+
+## Buy subscription 
+
+Now it's time to buy a subscription. 
+
+<robo-wiki-note type="okay"> To buy subscription you should have free XRT on our `SUB_OWNER` account. </robo-wiki-note>
+
+Go to our DaPP to **subscription** [page](https://dapp.robonomics.network/#/subscription) and press `add account` at right sidebar.
+
+<robo-wiki-picture src="home-assistant/dapp.jpg" />
+
+In the following popup menu connect `Polkadot{.js}` extension. Now you will see your account address with balance:
+
+<robo-wiki-picture src="home-assistant/connect.jpg" />
+
+**Let's buy a subscription!** 
+
+<robo-wiki-note type="warning">First, check which address connected to dapp.</robo-wiki-note>
+
+`Check owner account` should be the same as in extension account with name `SUB_owner`.
+   
+
+
+Press `submit` button and write `password` for your account. After that wait until activation process is completed.
+You will see state of your subscription:
+
+<robo-wiki-picture src="home-assistant/subscription.jpg" />
+
+Add `SUB_ADMIN` account to **access list**. For this open extension and click on "colorized round" near account name. It will copy account address.
+
+<robo-wiki-picture src="home-assistant/sub-admin.jpg" />
+
+and parse this address to `Robonomics parachain address` in **Manage access** part:
+
+<robo-wiki-picture src="home-assistant/access.jpg" />
+
+Give it a name and press "+" button. Write password in popup window and wait activation process is completed. 
+
+<robo-wiki-note type="okay">Do the same thing for `SUB_OWNER` account.</robo-wiki-note>
+
+That's all. Now got to the next article ["Robonomics integration setup"](/docs/add-smart-device-to-robonomics/)

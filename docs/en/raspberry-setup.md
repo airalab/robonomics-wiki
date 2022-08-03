@@ -12,7 +12,7 @@ tools:
     https://docs.ipfs.io/install/command-line/
 ---
 
-For all methods from ["Overview"](/docs/home-assistant-begin/), the first thing you need to do is set up a Raspberry Pi.
+For all methods from ["Overview"](/docs/home-assistant-begin/), the first thing you need to do is set up a Raspberry Pi. To set up Raspberry Pi you could use our "ready to use" image in **"Preinstalled image"** part or install all software by hand in **"Manual installation"** part.
 
 ## Preinstalled image
 The easiest way to setup you Raspberry is to use our prepared image. 
@@ -24,23 +24,18 @@ ipfs daemon
 In other terminal window download image:
 
 ```shell
-ipfs get QmbR221UatNzq2sxoXivmbiGSDQdfqeR8kyKKesj7zn3pR
+ipfs get QmRf5f2siwsUy1JSeV7FRNseeAxEBW1LJEpCr1yDyDdKDf
 ```
 
-Alternatively, you can download it [from url.](https://gateway.ipfs.io/ipfs/QmbR221UatNzq2sxoXivmbiGSDQdfqeR8kyKKesj7zn3pR) (**Only with started IPFS Daemon**)
+Alternatively, you can download it [from url.](https://gateway.ipfs.io/ipfs/QmRf5f2siwsUy1JSeV7FRNseeAxEBW1LJEpCr1yDyDdKDf) (**Only with started IPFS Daemon**)
 
 After finishing of download, change name of the file to `rpi.img.gz`:
 
 ```
-mv QmbR221UatNzq2sxoXivmbiGSDQdfqeR8kyKKesj7zn3pR rpi.img.gz
+mv QmRf5f2siwsUy1JSeV7FRNseeAxEBW1LJEpCr1yDyDdKDf rpi.img.gz
 ```
 
 Then read the next chapter and install image.
-
-
-<robo-wiki-note type="note">Password is "ubuntu".
-User and password for mosquitto broker is - user/pass
-</robo-wiki-note>
 
 
 <robo-wiki-title type="3" anchor="configuration-rpi"> 
@@ -53,7 +48,7 @@ Install [balena etcher](https://www.balena.io/etcher/) on your computer. Then, i
 
 Open the SD card's storage from your computer and navigate inside the root folder of the card. The name of the folder should be something similar to `system-boot`.
 
-Find the file named `network-config` and open it in a text editor. Copy the below text and paste it into the file:
+Find the file named `network-config` and open it in a text editor. Copy the below text and paste it into the file and insert your **wi-fi name** and **wi-fi password**:
 
 ```
 version: 2
@@ -110,38 +105,30 @@ Nmap done: 256 IP addresses (4 hosts up) scanned in 2.07 seconds
 
 In this example the Raspberry Pi's address is `192.168.43.56`. Now connect to it over ssh:
 
+<robo-wiki-note type="note"> User is "ubuntu". Password is "ubuntu". </robo-wiki-note>
+
 ```bash
 ssh ubuntu@192.168.43.56
 ```
-
-If you installed our "ready to use" image, there is already installed MQTT broker - *Mosquitto*. 
-<robo-wiki-note type="note">
-User and password for mosquitto broker is - user/pass
-</robo-wiki-note>
-
-If you want to change MQTT user and password use the following command, where `<username>` is new user:
-
-```shell
-sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
-```
-
-It will **delete** previous password file and create new with your username and password.
+If you install our "ready to use" image, then go to the next article [MQTT Broker](/docs/mqtt-broker/).
+Otherwise, continue manual installation.
 
 ## Manual Installation
 If It's necessary, you can create PRi image manually. 
-For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat [Configuration RPi](#configuration-rpi). The required image you can find in RPi imager program.
+For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat [Configuration RPi](#configuration-rpi).
 
 ### Home Assistant installation
 Now we need to install Home Assistant to the Raspberry Pi. Official website oh Home Assistant can be found [here](https://www.home-assistant.io/). 
 
 We will install `Home Assistant Core`. It's actual version is 2022.6.2  and instruction assumes that we already have Python 3.9 or newer installed.
 
-Let's start. The easiest way is to use our bash script `installation.sh`  to update system and install all dependencies automatically.
-For this download file from [here](https://github.com/LoSk-p/robonomics-hass-utils/tree/main/raspberry_pi) to your Raspberry Pi. Then change user's rights for this file and start it:
+Let's start. The easiest way is to use our bash script `install.sh` to update system and install all dependencies automatically.
+Download file to your Raspberry Pi. Then change user's rights for this file and start it:
 
 ```shell
-chmod a+x instalation.sh
-bash instalation.sh
+curl -O https://raw.githubusercontent.com/LoSk-p/robonomics-hass-utils/main/raspberry_pi/install.sh
+chmod a+x install.sh
+bash install.sh
 ```
 
 During installation process you could see next request:
@@ -198,67 +185,46 @@ In this example: `http://192.168.43.56:8123`
 
 > You don't need to connect you raspberry to the screen, you can open Web UI from any computer connected to your local network
 
-Create user and finish setup (first setup is described [here](https://www.home-assistant.io/getting-started/onboarding/) in more details), then stop Home Assistant with `Ctrl+C`.
-
-### MQTT installation
-
-After finishing with Home Assistant installation you have to install MQTT broker. Go back  under `ubuntu` login.
-
-```bash
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ exit
-```
-
-Then install [Mosquitto Brocker](https://mosquitto.org/):
-
-```bash
-sudo apt update -y && sudo apt install mosquitto mosquitto-clients -y
-```
-
-Configure username (you can use any username you want) and password (you will be asked to enter the password after the command):
-
-```bash
-sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
-```
-
-<robo-wiki-note type="note">Default user and password is - user/pass.</robo-wiki-note>
-
-Then edit configuration file:
-
-```bash
-sudo nano /etc/mosquitto/mosquitto.conf
-```
-
-Add the following at the end of the file:
-
-```
-listener 1883
-allow_anonymous false
-password_file /etc/mosquitto/passwd
-```
-
-Then restart the service:
-
-```bash
-sudo systemctl restart mosquitto
-```
-
-And check the Brocker status:
-
-```bash
-systemctl status mosquitto
-```
-
-<robo-wiki-picture src="home-assistant/mosquitto.jpg" alt="Broker status" />
+Wait until you will get "Hello window" in browser and then stop Home Assistant with `Ctrl+C`.
 
 ### IPFS installation
 Also, we need [IPFS](https://ipfs.io/) for working with robonomics. For today the latest release of IPFS is 0.12.2. You can use our script to download ipfs and create systemd service with it.
 
 ```shell
+(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ exit
 cd ~
 wget https://raw.githubusercontent.com//airalab/homeassistant-robonomics-integration/main/install_ipfs.sh
 sudo chmod +x install_ipfs.sh
 ./install_ipfs.sh
 ```
+
+## Zigbee2MQTT setup
+Now install necessary software for Zigbee2MQTT sticks:
+
+```bash
+# Set up Node.js repository and install Node.js + required dependencies
+# NOTE: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v16.15.0/ e.g. Version 16.15.0 should work.
+sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs git make g++ gcc
+
+# Verify that the correct nodejs and npm (automatically installed with nodejs)
+# version has been installed
+node --version  # Should output v14.X, V16.x, V17.x or V18.X
+npm --version  # Should output 6.X, 7.X or 8.X
+
+# Create a directory for zigbee2mqtt and set your user as owner of it
+sudo mkdir /opt/zigbee2mqtt
+sudo chown -R ${USER}: /opt/zigbee2mqtt
+
+# Clone Zigbee2MQTT repository
+git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
+
+# Install dependencies (as user "pi")
+cd /opt/zigbee2mqtt
+npm ci
+```
+
+Note that the `npm ci` could produce some `warning` which can be ignored.
 
 ### Systemd services
 
@@ -330,8 +296,4 @@ After that restart Home Assistant:
 sudo systemctl restart home-assistant@homeassistant.service
 ```
 
-That all. Now you can connect your devices:
-- [Connection with zigbee2MQTT](/docs/zigbee2-mqtt/)
-- [Setup SLS Gateway](/docs/sls-setup) and [connect it to Home Assistant](/docs/sls-gateway-connect)
-- [Connection through Xiaomi Gateway](/docs/xiaomi-gateway/)
-- [Connect Vacuum Cleaner](/docs/vacuum-connect/)
+That all. Next step is install [MQTT Broker.](/docs/mqtt-broker/)
