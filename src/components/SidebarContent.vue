@@ -25,6 +25,7 @@
 </template>
 
 <script>
+
 	export default {
 
 		data() {
@@ -42,8 +43,10 @@
 			},
 			'$route.path': function(curr, old) {
 				setTimeout(() => {
-					this.getSubtitlesWithCustom()
-				}, 200);
+					if(this.allSubtitles.length) {
+						this.getSubtitlesWithCustom()
+					}
+				}, 300);
 			}
 		},
 
@@ -105,6 +108,11 @@
 
 			// subtitles with custom component
 			getSubtitlesWithCustom() {
+
+				if (!document) {
+					return
+				}
+				
 				const allHeads = document.querySelector('.docs-content').querySelectorAll('h2, h3, h4, h5');
 
 				if(this.allSubtitles.length) {
@@ -129,6 +137,7 @@
 			window.addEventListener('scroll', this.activateLinkOnScroll)
 			this.manualHush = this.$route.hash;
 			this.scrollToElement()
+			this.allSubtitles.push('mounted')
 			this.getSubtitlesWithCustom()
     },
     
