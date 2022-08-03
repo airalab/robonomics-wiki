@@ -24,15 +24,15 @@ ipfs daemon
 In other terminal window download image:
 
 ```shell
-ipfs get QmbR221UatNzq2sxoXivmbiGSDQdfqeR8kyKKesj7zn3pR
+ipfs get QmRf5f2siwsUy1JSeV7FRNseeAxEBW1LJEpCr1yDyDdKDf
 ```
 
-Alternatively, you can download it [from url.](https://gateway.ipfs.io/ipfs/QmbR221UatNzq2sxoXivmbiGSDQdfqeR8kyKKesj7zn3pR) (**Only with started IPFS Daemon**)
+Alternatively, you can download it [from url.](https://gateway.ipfs.io/ipfs/QmRf5f2siwsUy1JSeV7FRNseeAxEBW1LJEpCr1yDyDdKDf) (**Only with started IPFS Daemon**)
 
 After finishing of download, change name of the file to `rpi.img.gz`:
 
 ```
-mv QmbR221UatNzq2sxoXivmbiGSDQdfqeR8kyKKesj7zn3pR rpi.img.gz
+mv QmRf5f2siwsUy1JSeV7FRNseeAxEBW1LJEpCr1yDyDdKDf rpi.img.gz
 ```
 
 Then read the next chapter and install image.
@@ -48,7 +48,7 @@ Install [balena etcher](https://www.balena.io/etcher/) on your computer. Then, i
 
 Open the SD card's storage from your computer and navigate inside the root folder of the card. The name of the folder should be something similar to `system-boot`.
 
-Find the file named `network-config` and open it in a text editor. Copy the below text and paste it into the file:
+Find the file named `network-config` and open it in a text editor. Copy the below text and paste it into the file and insert your **wi-fi name** and **wi-fi password**:
 
 ```
 version: 2
@@ -110,11 +110,12 @@ In this example the Raspberry Pi's address is `192.168.43.56`. Now connect to it
 ```bash
 ssh ubuntu@192.168.43.56
 ```
-
+If you install our "ready to use" image, then go to the next article [MQTT Broker](/docs/mqtt-broker/).
+Otherwise, continue manual installation.
 
 ## Manual Installation
 If It's necessary, you can create PRi image manually. 
-For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat [Configuration RPi](#configuration-rpi). The required image you can find in RPi imager program.
+For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat [Configuration RPi](#configuration-rpi).
 
 ### Home Assistant installation
 Now we need to install Home Assistant to the Raspberry Pi. Official website oh Home Assistant can be found [here](https://www.home-assistant.io/). 
@@ -125,7 +126,7 @@ Let's start. The easiest way is to use our bash script `install.sh` to update sy
 Download file to your Raspberry Pi. Then change user's rights for this file and start it:
 
 ```shell
-wget https://github.com/LoSk-p/robonomics-hass-utils/blob/main/raspberry_pi/install.sh
+curl -O https://raw.githubusercontent.com/LoSk-p/robonomics-hass-utils/main/raspberry_pi/install.sh
 chmod a+x install.sh
 bash install.sh
 ```
@@ -184,7 +185,7 @@ In this example: `http://192.168.43.56:8123`
 
 > You don't need to connect you raspberry to the screen, you can open Web UI from any computer connected to your local network
 
-Create user and finish setup (first setup is described [here](https://www.home-assistant.io/getting-started/onboarding/) in more details), then stop Home Assistant with `Ctrl+C`.
+Wait until you will get "Hello window" in browser and then stop Home Assistant with `Ctrl+C`.
 
 ### IPFS installation
 Also, we need [IPFS](https://ipfs.io/) for working with robonomics. For today the latest release of IPFS is 0.12.2. You can use our script to download ipfs and create systemd service with it.

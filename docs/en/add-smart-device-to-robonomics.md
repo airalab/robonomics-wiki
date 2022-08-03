@@ -13,19 +13,19 @@ Now you can add integration to Home Assistant. In web interface go to `Settings/
 
 <robo-wiki-picture src="home-assistant/add-integration.jpg" />
 
-Click on it and fill the configuration. Here you need to add seed from `SUB_ADMIN` snd `SUB_OWNER` accounts (which you've just created. they are ED25519 type, so don't forget to check the boxes under your seeds).
+Click on it and fill the configuration. Here you need to add seed from `SUB_ADMIN` and public address of `SUB_OWNER` accounts (which you've just created).
  Also you can set sending interval, by default it is 10 minutes.
 
 Moreover, you can add your Pinata credentials. It is not necessary, if you will not do it, data will be pinned with your local node and Infura. If you add it, files also will be pinned in Pinata, it may help to faster access it.
 
-<robo-wiki-picture src="home-assistant/cobfiguration.jpg" />
+<robo-wiki-picture src="home-assistant/config.jpg" />
 
  Fill in everything and press `Submit`. If everything correct, you will see **Success** window. Close it.
 
 ## Use DApp
 
 Now it's time to create the first user for your Home Assistant.(It's shouldn't be `SUB_OWNER` or `SUB_ADMIN` accounts). Create account, as we did in previous [article](/docs/iot-sub-setup/). 
-Add this account to subscription [here](https://dapp.robonomics.network/#/subscription/devices). Now in access lsit should be three addresses - `SUB_OWNER`, `SUB_ADMIN` and `user`.
+Add this account to subscription [here](https://dapp.robonomics.network/#/subscription/devices). Now in access list should be three addresses - `SUB_OWNER`, `SUB_ADMIN` and `user`.
 
 <robo-wiki-picture src="home-assistant/user.jpg" />
 
@@ -34,7 +34,7 @@ In next two raws insert `SUB_OWNER` and `SUB_ADMIN` addresses. Then write `USER`
 
 <robo-wiki-picture src="home-assistant/acc-pass.jpg" />
 
-And Press `DECRYPT PASSWORD`. You will get login and password for your Home Assistant. Go to login page and login:
+Create password for Home Assistant in **Enter Password** field. And Press `REGISTRATON`. Confirm transaction. After finishing of registration process, you can login to Home Assistant with your address as `login` and just created password. Go to login page and login:
 
 <robo-wiki-picture src="home-assistant/acc-login.jpg" />
 

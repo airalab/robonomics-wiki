@@ -14,7 +14,7 @@ After finishing with [Raspberry Pi Setup](/docs/raspberry-setup/), next step is 
 First, to install MQTT Broker with script you need to download it:
 
 ```shell
-wget https://github.com/LoSk-p/robonomics-hass-utils/blob/main/raspberry_pi/mqtt-install.sh
+curl -O https://raw.githubusercontent.com/LoSk-p/robonomics-hass-utils/main/raspberry_pi/mqtt-install.sh
 ```
 
 then start the script:
