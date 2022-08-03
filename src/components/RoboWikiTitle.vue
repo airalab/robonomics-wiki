@@ -5,10 +5,10 @@ export default {
   props: {
     
     type: {
-      type: Number,
+      type: Number | String,
       required: true,
       validator: function (value) {
-        return [ 2, 3, 4, 5, 6].indexOf(value) !== -1;
+        return [ 2, 3, 4, 5, 6, '1', '2', '3', '4', '5', '6'].indexOf(value) !== -1;
       }
     },
     anchor: String

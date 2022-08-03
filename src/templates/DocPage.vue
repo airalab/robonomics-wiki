@@ -32,7 +32,7 @@
 
         <div>
 
-          <VueRemarkContent />
+          <VueRemarkContent class="docs-content" />
 
           <robo-wiki-feedback/>
 
