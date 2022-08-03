@@ -11,8 +11,8 @@
 	<!-- <details v-if="subtitles.length > 0 && subtitles[0].depth !== 4" open>
 		<summary>{{$st('In this article', $store.state.locale)}}</summary> -->
 
-		<ul v-if="subtitles.length" class="menu">
-	      <li @click="manualHush = subtitle.anchor" :class="'menu__item-depth-' + subtitle.depth" v-for="subtitle in subtitles" :key="subtitle.value">
+		<ul v-if="allSubtitles.length" class="menu">
+	      <li @click="manualHush = subtitle.anchor" :class="'menu__item-depth-' + subtitle.depth" v-for="subtitle in allSubtitles" :key="subtitle.id">
 	        <a 
 						:class="['menu__item', ' menu-link', {active: manualHush === subtitle.anchor }]" 
 						:href="subtitle.anchor"
@@ -25,11 +25,13 @@
 </template>
 
 <script>
+
 	export default {
 
 		data() {
 			return {
 				manualHush: null,
+				allSubtitles: [],
 			}
 		},
 
@@ -38,10 +40,18 @@
 				setTimeout(() => {
 					this.scrollToElement();
 				}, 200);
+			},
+			'$route.path': function(curr, old) {
+				setTimeout(() => {
+					if(this.allSubtitles.length) {
+						this.getSubtitlesWithCustom()
+					}
+				}, 300);
 			}
 		},
 
 		computed: {
+			// subtitles without custom component
 			subtitles() {
 				// Remove h1, h5, h6 titles
 				let subtitles = this.$page.doc.subtitles.filter(function(value, index, arr){
@@ -57,7 +67,7 @@
 
 		methods: {
 			activateLinkOnScroll() {
-	 			const allHeads = document.querySelector('.page').querySelectorAll('h2, h3, h4, h5');
+	 			const allHeads = document.querySelector('.docs-content').querySelectorAll('h2, h3, h4, h5');
 
 					allHeads.forEach(ha => {
 						const rect = ha.getBoundingClientRect();
@@ -95,12 +105,40 @@
 					this.manualHush = `#${el.getAttribute('id')}`;
 				}
 			},
+
+			// subtitles with custom component
+			getSubtitlesWithCustom() {
+
+				if (!document) {
+					return
+				}
+				
+				const allHeads = document.querySelector('.docs-content').querySelectorAll('h2, h3, h4, h5');
+
+				if(this.allSubtitles.length) {
+					this.allSubtitles = [];
+				}
+
+				allHeads.forEach(title => {
+					const titleObj = {
+						id: Date.now() + Math.floor(Math.random() * 100000),
+						anchor: '#' + title.getAttribute('id'),
+						depth: +title.tagName.match(/\d+/)[0],
+						value: title.textContent.substring(1)
+					}
+					
+					this.allSubtitles.push(titleObj);
+
+				})
+			},
 		},
 
 		mounted () {
 			window.addEventListener('scroll', this.activateLinkOnScroll)
 			this.manualHush = this.$route.hash;
 			this.scrollToElement()
+			this.allSubtitles.push('mounted')
+			this.getSubtitlesWithCustom()
     },
     
     beforeDestroy () {
