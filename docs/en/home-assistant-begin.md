@@ -6,7 +6,7 @@ translated: true
 ---
 If you don't want your data to be stored in some Xiaomi or another server that you can't access, you can use you own local server with Home Assistant and Robonomics to control your smart devices outdoors. There are instructions on how to connect your smart home devices to the Robonomics network. 
 
-You need Robonomics [account](/docs/create-account-in-dapp/) with a subscription (lets call it `SUB_OWNER`) and another account in devices of this subscription (it will be `SUB_ADMIN`). Both accounts should be ED25519 crypto type. 
+You need Robonomics account(we will create them later) with a subscription, lets call it `SUB_OWNER`, and another account in devices of this subscription (it will be `SUB_ADMIN`). Both accounts should be ED25519 crypto type. 
 
 Devices in the subscription are connected with Home Assistant users, so `SUB_OWNER` can add the device to the subscription and the user with the device account name will be added to Home Assistant. They can send `Launch` transactions with commands on `SUB_ADMIN` account to control smart devices connected to Home Assistant.
 
