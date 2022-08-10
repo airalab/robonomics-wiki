@@ -206,6 +206,105 @@ You can add feedback form to the doc. Use component like that:
 And it will look like that: 
 <robo-wiki-feedback /> 
 
+
+### Tabs
+You can add tabs to the doc:
+
+- Use tabs wrapper component: 
+
+```c
+<robo-wiki-tabs></robo-wiki-tabs>
+```
+
+- And then use as many tab items components as you like inside wrapper:
+
+```c
+  <robo-wiki-tabs>
+    <robo-wiki-tab title="Linux">
+      <pre>ip a</pre>
+    </robo-wiki-tab>
+    <robo-wiki-tab title="OSX">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    </robo-wiki-tab>
+  </robo-wiki-tabs>
+```
+
+
+`horizontal tabs`
+
+```c
+  <robo-wiki-tabs>
+    <robo-wiki-tab title="Linux">
+      <pre>ip a</pre>
+    </robo-wiki-tab>
+    <robo-wiki-tab title="OSX">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    </robo-wiki-tab>
+  </robo-wiki-tabs>
+```
+
+`vertical tabs`
+
+```c
+  <robo-wiki-tabs mode="vertical">
+    <robo-wiki-tab title="Linux">
+      <pre>ip a</pre>
+    </robo-wiki-tab>
+    <robo-wiki-tab title="OSX">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    </robo-wiki-tab>
+  </robo-wiki-tabs>
+```
+
+`tab item with border`
+
+```c
+  <robo-wiki-tabs>
+    <robo-wiki-tab title="Linux">
+      <pre>ip a</pre>
+    </robo-wiki-tab>
+    <robo-wiki-tab title="OSX" :border="true">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    </robo-wiki-tab>
+  </robo-wiki-tabs>
+```
+
+**Props for robo-wiki-tabs (wrapper)**
+
+`mode (must be string)` - you can choose tabs mode:
+
+ * horizontal (default)
+
+ * vertical
+
+
+**Props for robo-wiki-tab (item)**
+
+`title (required, must be a string )` - title for the tab
+
+`border (must be a boolean, default - false)` - add border to the content wrapper
+
+
+
+<robo-wiki-tabs>
+  <robo-wiki-tab title="Linux">
+    <pre>ip a</pre>
+  </robo-wiki-tab>
+  <robo-wiki-tab title="OSX" :border="true">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+  </robo-wiki-tab>
+</robo-wiki-tabs>
+
+
+<robo-wiki-tabs mode="vertical">
+  <robo-wiki-tab title="Linux">
+    <pre>ip a</pre>
+  </robo-wiki-tab>
+  <robo-wiki-tab title="OSX">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+  </robo-wiki-tab>
+</robo-wiki-tabs>
+
 ## Add new doc
 
 If you need to add new page in docs of Robonomics WIKI, please, follow these steps:

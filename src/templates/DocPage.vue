@@ -185,10 +185,9 @@
     font-weight: 600;
     border-radius: 2px;
     background: var(--color-note-accent);
-    color: var(--color-note-pale) !important;
+    color: var(--color-testedFor-text) !important;
     text-decoration: none;
     cursor: default;
-
   }
 
   a[href^="http"].testedFor__link {

@@ -78,9 +78,18 @@ sudo apt-get install nmap
 
 Then find your address in the local network with:
 
-```bash
+<robo-wiki-tabs mode="vertical">
+  <robo-wiki-tab title="Linux">
+    <pre>ip a</pre>
+  </robo-wiki-tab>
+  <robo-wiki-tab title="OSX" :border="true">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+  </robo-wiki-tab>
+</robo-wiki-tabs>
+
+<!-- ```bash
 ip a
-```
+``` -->
 
 It should look like `192.168.xx.xx` or `172.xx.xx.xx`.
 

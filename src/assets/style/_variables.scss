@@ -44,7 +44,9 @@ body {
 	--color-emoji-green: #5ecf71;
 	--color-emoji-pink: #cf64c6;
 	--color-emoji-orange: #dd9837;
- 	
+
+
+ 	--color-testedFor-text: #f2f2f2;
 
   --space: 3.5rem;
   --space-text: 1.25rem;
@@ -92,4 +94,6 @@ body[data-theme="dark"] {
 	--color-note-pale--okay: #559a61;
 	--color-note-accent--warning: #8b560c;
 	--color-note-pale--warning: #d19746;
+
+	--color-testedFor-text: #ececec;
 }
