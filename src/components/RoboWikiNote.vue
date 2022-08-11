@@ -66,7 +66,6 @@ export default {
     margin-bottom: 0;
   }
 
-
   .robo-wiki-note--okay { 
     --type-color-accent: var(--color-note-accent--okay);
     --type-color-pale: var(--color-note-pale--okay);

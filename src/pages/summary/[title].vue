@@ -140,7 +140,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    list-style:decimal;
+    list-style: decimal;
   }
 
   .menu-link,
@@ -169,5 +169,11 @@ export default {
   .summary__not-exist {
     text-align: center;
     font-weight: 600;
+  }
+
+  @media screen and (max-width: 680px) {
+    .summary-menu {
+      align-items: flex-start;
+    }
   }
 </style>

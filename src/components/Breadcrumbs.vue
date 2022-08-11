@@ -108,6 +108,11 @@ export default {
 </script>
 
 <style scoped>
+
+  .breadcrumbs {
+    word-break: inherit;
+  }
+
   .breadcrumbs__list {
     display: flex;
     align-items: center;
@@ -183,6 +188,35 @@ export default {
 
   a.breadcrumbs__link:hover {
     color: var(--link-color);
+  }
+
+  @media screen and (max-width : 640px) {
+
+    .breadcrumbs {
+      margin-bottom: 1rem;
+    }
+
+    .breadcrumbs__list {
+      align-items: flex-start;
+      flex-direction: column;
+      margin-left: 0;
+    }
+
+    .breadcrumbs__link {
+      padding: 5px 0;
+    }
+
+    .breadcrumbs__item:first-child {
+      position: relative;
+      width: 100%;
+      border-bottom: 4px solid var(--text-color);
+      margin-bottom: 10px;
+    }
+
+    .breadcrumbs__item::after {
+      display: none;
+    }
+    
   }
 
 
