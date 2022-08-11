@@ -9,7 +9,7 @@ After installing [MQTT broker](/docs/mqtt-broker/) to the Raspberry Pi, you can 
 
 ## Firmware
 
-First you need to flash gateway. For this:
+First you need to flash the gateway. For this:
 
 1. Set to `ON` switches 1 and 3 at the bottom part of SLS Gateway, others must be `OFF`.
 2. Connect gateway to your computer via USB type-C port on the gateway.
@@ -30,28 +30,23 @@ cd linux
 sudo chmod +x Clear.sh
 sudo chmod +x Flash_16mb.sh
 ./Clear.sh
-```
-
-After that use `Flash_16mb` script. For Linux:
-
-```bash
 ./Flash_16mb.sh
 ```
 
 ## Setup
 
-1. Ensure that the switches on the back of the gateway are properly positioned. Switches 5 (RX Zigbee to ESP) and 6 (TX Zigbee to ESP) must be in the `ON` position, the others must be `OFF`. 
+1. Set the switches on the back of the gateway are properly positioned. Switches 5 (RX Zigbee to ESP) and 6 (TX Zigbee to ESP) must be in the `ON` position, the others must be `OFF`. 
 
 2. Connect the type C power cable. The indicator light in the center should turn green.
 
-3. The first time it starts up, the gateway will begin distributing Wi-Fi with the SSID 'zgw****' to set up the SLS gateway connection. Connect to this network. Keep in mind that the signal may be quite weak, so it is best to keep the SLS Gateway closer to your computer. 
+3. On the first startup, the gateway will start sharing Wi-Fi with the SSID `zgw****`. Connect to this network. Keep in mind that the signal may be quite weak, so it is better to keep the SLS Gateway closer to your computer. 
 
-4. If the connection is successful, the web interface will open (or you can find it on 192.168.1.1 address). 
-5. Go to `WI-FI` page and insert your Wi-Fi credentials by entering the user / pass and press `Save` button. After that  press `Reboot` button. The gateway will be restarted and connect to your WI-Fi network. 
+4. If the connection is successful, the web interface will open (or you can find it on 192.168.1.1). 
+5. Go to `WI-FI` page and insert your Wi-Fi credentials by entering the user / pass and press `Save` button. After that  press `Reboot` button. The gateway will restart and connect to your WI-Fi network. 
 
 <robo-wiki-picture src="home-assistant/sls-wifi.jpg" />
 
-6. Find the local IP of the SLS gateway to access the web interface. For that you can use [Fing app](https://www.fing.com/products). Also you can use the command ```arp -a``` or 
+6. Find the local IP of the SLS gateway to access the web interface. For that you can use [Fing app](https://www.fing.com/products). Also, you can use ```arp -a``` in your terminal or:
 
 ```bash
 nmap -sn 192.168.xxx.0/24
@@ -78,7 +73,7 @@ Here is the table with required values:
 | I2C SDA                 | 255                |
 | I2C SCL                 | 255                |
 
-8. Then reboot the gateway. Choose `Actions` -> `eboot system` at the right top corner.
+8. Then reboot the gateway. Choose `Actions` -> `Reboot system` at the right top corner.
 
 9. Configure automatically adding devices to Home Assistant. Go to `Zigbee` -> `Config` then tick `Home Assistant MQTT Discovery` and `Clear States`. Then `Save` button and again **reboot** SLS gateway:
 
@@ -86,4 +81,4 @@ Here is the table with required values:
 
 10. Connect your devices by going to `Zigbee` -> `Join`. Press the `Enable Join` button to start searching Zigbee devices. Put your sensors in pairing mode. You will see active sensors. 
 
-After connecting all sensors to SLS Gateway, it's time to connect SLS Gateway to Home assistant with the following [guide](/docs/sls-gateway-connect).
+After connecting all sensors to the SLS Gateway, it's time to connect SLS Gateway to Home assistant with the following [guide](/docs/sls-gateway-connect).
