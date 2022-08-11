@@ -224,7 +224,7 @@ You can add tabs to the doc:
       <pre>ip a</pre>
     </robo-wiki-tab>
     <robo-wiki-tab title="OSX">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+      ifconfig
     </robo-wiki-tab>
   </robo-wiki-tabs>
 ```
@@ -238,7 +238,7 @@ You can add tabs to the doc:
       <pre>ip a</pre>
     </robo-wiki-tab>
     <robo-wiki-tab title="OSX">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+      ifconfig
     </robo-wiki-tab>
   </robo-wiki-tabs>
 ```
@@ -251,7 +251,7 @@ You can add tabs to the doc:
       <pre>ip a</pre>
     </robo-wiki-tab>
     <robo-wiki-tab title="OSX">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+      <pre>ifconfig</pre>
     </robo-wiki-tab>
   </robo-wiki-tabs>
 ```
@@ -263,8 +263,8 @@ You can add tabs to the doc:
     <robo-wiki-tab title="Linux">
       <pre>ip a</pre>
     </robo-wiki-tab>
-    <robo-wiki-tab title="OSX" :border="true">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    <robo-wiki-tab title="OSX" border>
+      ifconfig
     </robo-wiki-tab>
   </robo-wiki-tabs>
 ```
@@ -290,8 +290,8 @@ You can add tabs to the doc:
   <robo-wiki-tab title="Linux">
     <pre>ip a</pre>
   </robo-wiki-tab>
-  <robo-wiki-tab title="OSX" :border="true">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+  <robo-wiki-tab title="OSX" border>
+      ifconfig
   </robo-wiki-tab>
 </robo-wiki-tabs>
 
@@ -301,7 +301,7 @@ You can add tabs to the doc:
     <pre>ip a</pre>
   </robo-wiki-tab>
   <robo-wiki-tab title="OSX">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    <pre>ifconfig</pre>
   </robo-wiki-tab>
 </robo-wiki-tabs>
 
