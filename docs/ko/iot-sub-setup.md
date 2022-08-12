@@ -4,13 +4,13 @@ contributors: [nakata5321]
 translated: false
 ---
 
-After setting up [Zigbee2MQTT stick](/docs/zigbee2-mqtt/), It is time to create robonomics parachain's accounts and buy subscription. 
+After setting up [Zigbee2MQTT stick](/docs/zigbee2-mqtt/), It is time to create Robonomics Parachain accounts and buy subscription. 
 
 ## Create accounts
 
-First, let's create account.
+First, let's create A Robonomics account.
 
-Go to [Robonomics Parachain app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) on Polkadot / Substrate Portal. **Check at the top left corner that you are connected to Robonomics Parachain**.  
+Go to [Robonomics Parachain app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) on Polkadot / Substrate Portal. **Check the top left corner to ensure that you are connected to Robonomics Parachain**.  
 
 Go to **Accounts -> Accounts** and press `Add account` button. 
 
@@ -28,7 +28,7 @@ Then open `Advanced creation options` and change the crypto type of creating acc
 
 <robo-wiki-picture src="home-assistant/edw.jpg" />
 
-In the next menu, you need to set the account name and password, similar to the extension instructions described above. Let's give a name - `sub_owner`.
+In the next menu, you need to set the account name and password, similar to the extension instructions described above. give it a name - `sub_owner`.
 
 <robo-wiki-picture src="home-assistant/name.jpg" />
 
@@ -41,7 +41,7 @@ Clicking on the `Next` button will take you to the last window. Click `Save` to 
 ### add to extension
 
 You need to add created account to [Polkadot.js extension](https://polkadot.js.org/extension/) (for ed25519 account you can do that only with backup JSON file). 
-For that you need to create backup file of the account. Press on three dots on your account and choose `Create a backup file for this account` and write your password.
+For that you need to create backup file of the account(or use a file saved when created the account). Press on three dots on your account and choose `Create a backup file for this account` and type in your password.
 
 ![Backup file](../images/creating-an-account/backup-file.jpg)
 
@@ -49,7 +49,7 @@ Then open an extension and press `+` button on the top right, then choose `Resto
 
 ![Restore backup in extension](../images/creating-an-account/extention-add-backup.jpg)
 
-In opened window drop saved file, enter the password and press `Restore`.
+In an opened window upload the JSON file, enter the password and press `Restore`.
 
 ![Restore backup in extension 2](../images/creating-an-account/file-backup.jpg)
 
@@ -57,7 +57,7 @@ In opened window drop saved file, enter the password and press `Restore`.
 
 Now it's time to buy a subscription. 
 
-<robo-wiki-note type="okay"> To buy subscription you should have free XRT on our `SUB_OWNER` account. </robo-wiki-note>
+<robo-wiki-note type="okay"> To buy subscription you should have free XRT on `SUB_OWNER` account. </robo-wiki-note>
 
 Go to our DaPP to **subscription** [page](https://dapp.robonomics.network/#/subscription) and press `add account` at right sidebar.
 
@@ -71,16 +71,16 @@ In the following popup menu connect `Polkadot{.js}` extension. Now you will see 
 
 <robo-wiki-note type="warning">First, check which address connected to dapp.</robo-wiki-note>
 
-`Check owner account` should be the same as in extension account with name `SUB_owner`.
+`Check owner account` should be `SUB_owner`.
    
 
 
-Press `submit` button and write `password` for your account. After that wait until activation process is completed.
+Press `submit` button and enter `password` for your account. After that wait until activation process is completed.
 You will see state of your subscription:
 
 <robo-wiki-picture src="home-assistant/subscription.jpg" />
 
-Add `SUB_ADMIN` account to **access list**. For this open extension and click on "colorized round" near account name. It will copy account address.
+Add `SUB_ADMIN` account to **access list**. For this open extension and click on icon near account name. It will copy account address.
 
 <robo-wiki-picture src="home-assistant/sub-admin.jpg" />
 
@@ -88,7 +88,7 @@ and parse this address to `Robonomics parachain address` in **Manage access** pa
 
 <robo-wiki-picture src="home-assistant/access.jpg" />
 
-Give it a name and press "+" button. Write password in popup window and wait activation process is completed. 
+Give it a name and press "+" button. Enter your `SUB_OWNER` password in popup window and wait activation process is completed. 
 
 <robo-wiki-note type="okay">Do the same thing for `SUB_OWNER` account.</robo-wiki-note>
 
