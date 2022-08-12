@@ -5,14 +5,15 @@ translated: false
 tools:   
   - Ubuntu Server 22.04 LTS
     https://ubuntu.com/download/raspberry-pi
-  - Home Assistant 2022.6.2
-  - robonomics-interface 1.0.5
+  - Home Assistant 2022.8.2
+  - robonomics-interface 1.1.0
     https://github.com/Multi-Agent-io/robonomics-interface/releases/tag/1.0.5
-  - IPFS 0.12.2
+  - IPFS 0.14.0
     https://docs.ipfs.io/install/command-line/
 ---
 
-For all methods from ["Overview"](/docs/home-assistant-begin/), the first thing you need to do is set up a Raspberry Pi. To set up Raspberry Pi you could use our "ready to use" image in **"Preinstalled image"** section or install all software directly in **"Manual installation"** section.
+For all methods from ["Overview"](/docs/home-assistant-begin/), the first thing you need to do is set up a Raspberry Pi. 
+To set up Raspberry Pi you could use our "ready to use" image in **"Preinstalled image"** section or install all software directly in **"Manual installation"** section.
 
 ## Preinstalled image
 The easiest way to setup you Raspberry is to use our prepared image. 
@@ -24,7 +25,7 @@ ipfs daemon
 In other terminal window download image:
 
 ```shell
-ipfs get QmRf5f2siwsUy1JSeV7FRNseeAxEBW1LJEpCr1yDyDdKDf
+ipfs get QmPKdpNgnoEMEccqfKkKiQuHWzePPbwxBKAxSqqLAgqfqx
 ```
 
 Alternatively, you can download it [from url.](https://gateway.ipfs.io/ipfs/QmRf5f2siwsUy1JSeV7FRNseeAxEBW1LJEpCr1yDyDdKDf) (**Only with started IPFS Daemon**)
@@ -32,7 +33,7 @@ Alternatively, you can download it [from url.](https://gateway.ipfs.io/ipfs/QmRf
 When downloaded, change name of the file to `rpi.img.gz`:
 
 ```
-mv QmRf5f2siwsUy1JSeV7FRNseeAxEBW1LJEpCr1yDyDdKDf rpi.img.gz
+mv QmPKdpNgnoEMEccqfKkKiQuHWzePPbwxBKAxSqqLAgqfqx rpi.img.gz
 ```
 
 Then read the next chapter to install image.
@@ -42,7 +43,8 @@ Then read the next chapter to install image.
   Configuration RPi
 </robo-wiki-title>
 
-Install [balena etcher](https://www.balena.io/etcher/) on your computer. Then, insert the SD card and run the Imager program. Select required image as the operating system and ensure to select your SD card from the storage dropdown, and then `flash` image.
+Install [balena etcher](https://www.balena.io/etcher/) on your computer. Then, insert the SD card and run the Imager program. 
+Select required image as the operating system and ensure to select your SD card from the storage dropdown, and then `flash` image.
 
 <robo-wiki-picture src="home-assistant/balena.jpg" alt="Balena installer" />
 
@@ -115,12 +117,13 @@ Otherwise, continue manual installation.
 
 ## Manual Installation
 If It's necessary, you can create PRi image manually. 
-For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and then repeat [Configuration RPi](#configuration-rpi).
+For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and 
+then repeat [Configuration RPi](#configuration-rpi).
 
 ### Home Assistant installation
 Now we need to install Home Assistant to the Raspberry Pi. Official website of Home Assistant can be found [here](https://www.home-assistant.io/). 
 
-We will install `Home Assistant Core`. Its actual version is 2022.6.2  and instruction assumes that you already have Python 3.9 or newer installed.
+We will install `Home Assistant Core`. Its actual version is 2022.8.2  and instruction assumes that you already have Python 3.9 or newer installed.
 
 Let's start. The easiest way is to use our bash script `install.sh` to update system and install all dependencies automatically.
 Download file to your Raspberry Pi. Then change user's rights for this file and start it:
@@ -172,10 +175,12 @@ Then install required Python packages:
 
 ```bash
 (homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ python3 -m pip install wheel
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ pip3 install homeassistant==2022.6.2
+(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ pip3 install sqlalchemy fnvhash
+(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ pip3 install homeassistant==2022.8.2
 ```
 
-Start Home Assistant Core for the first time. This will complete the installation for you,by automatically creating the `.homeassistant `configuration directory in the `/home/homeassistant` directory, and installing any basic dependencies:
+Start Home Assistant Core for the first time. 
+This will complete the installation for you,by automatically creating the `.homeassistant `configuration directory in the `/home/homeassistant` directory, and installing any basic dependencies:
 
 ```bash
 (homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ hass
@@ -245,6 +250,8 @@ Description=Home Assistant
 After=network-online.target
 [Service]
 Type=simple
+Restart=on-failure
+
 User=%i
 WorkingDirectory=/srv/%i/
 ExecStart=/srv/homeassistant/bin/hass -c "/home/%i/.homeassistant"
@@ -274,7 +281,7 @@ Source virtual environment and install python packages:
 ```bash
 source /srv/homeassistant/bin/activate
 pip install http3
-pip install robonomics-interface~=1.0
+pip install robonomics-interface~=1.1
 ```
 
 Then go to `.homeassistant` directory:
