@@ -11,24 +11,19 @@ After finishing with [Raspberry Pi Setup](/docs/raspberry-setup/), next step is 
 
 ## Install with script
 
-First, to install MQTT Broker with script you need to download it:
+Here is a quick installation option with a pre-written script:
 
 ```shell
 curl -O https://raw.githubusercontent.com/LoSk-p/robonomics-hass-utils/main/raspberry_pi/mqtt-install.sh
-```
-
-then start the script:
-
-```shell
 bash mqtt-install.sh
 ```
 
-He will ask you to insert **USERNAME** and **PASSWORD** for Broker.
+You will be asked to insert **USERNAME** and **PASSWORD** for Broker.
 After finishing, you can go to the next part - "[Home Assistant](#home-assistant)"
 
 ## Manual Installation
 
-Alternatively, you could install all by hangs.
+Alternatively, you can install the broker directly.
 
 First, install [Mosquitto Broker](https://mosquitto.org/):
 
@@ -71,14 +66,16 @@ systemctl status mosquitto
 <robo-wiki-picture src="home-assistant/mosquitto.jpg" alt="Broker status" />
 
 
-<robo-wiki-title :type="3" anchor="home-assistant"> 
+<robo-wiki-title :type="2" anchor="home-assistant"> 
   Home Assistant
 </robo-wiki-title>
 
 Alright, you made it here. The tough part is done.
 
 With Home Assistant installed, it’s time to configure it. Here you will create the owner account of Home Assistant. 
-This account will be an administrator and will always be able to change everything. Enter a name, username, password and click on “create account”.
+This account will be an administrator and will always be able to change everything. Open web browser and go to `http://%RASPBERRY_IP_ADDRESS%:8123`(RASPBERRY_IP_ADDRESS you have found in previous article).
+
+At the first page, enter a name, username, password and click on “create account”.
 
 <robo-wiki-picture src="home-assistant/username.jpg" alt="create user" />
 
