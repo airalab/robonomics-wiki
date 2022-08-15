@@ -74,9 +74,20 @@ Then you need to save the file, and insert the SD card to the Raspberry Pi and t
 Now you need to find its address. To find address you can use [Fing app](https://www.fing.com/products). 
 You can also find an RPi address with a `nmap` tool. Install it with:
 
-```shell
-sudo apt-get install nmap
-```
+<robo-wiki-tabs>
+  <robo-wiki-tab title="Linux">
+    <pre>sudo apt-get install nmap</pre>
+  </robo-wiki-tab>
+  <robo-wiki-tab title="OSX">
+    <pre>brew install nmap</pre>
+  </robo-wiki-tab>
+
+  <robo-wiki-tab title="Other">
+
+  [https://nmap.org/download.html#macosx](https://nmap.org/download.html#macosx)
+
+  </robo-wiki-tab>
+</robo-wiki-tabs>
 
 Then find your address in the local network with:
 
