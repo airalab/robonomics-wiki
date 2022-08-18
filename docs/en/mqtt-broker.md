@@ -73,7 +73,7 @@ systemctl status mosquitto
 Alright, you made it here. The tough part is done.
 
 With Home Assistant installed, it’s time to configure it. Here you will create the owner account of Home Assistant. 
-This account will be an administrator and will always be able to change everything. Open web browser and go to `http://%RASPBERRY_IP_ADDRESS%:8123`(RASPBERRY_IP_ADDRESS you have found in previous article).
+This account will be an administrator and will always be able to change everything. Open web browser and go to `http://%RASPBERRY_IP_ADDRESS%:8123`(RASPBERRY_IP_ADDRESS you have found in previous [article]()).
 
 At the first page, enter a name, username, password and click on “create account”.
 
@@ -100,7 +100,7 @@ And press `ADD INTEGRATION` at the right bottom corner. In the opened window fin
 
 <robo-wiki-picture src="home-assistant/mqtt.jpg" />
 
-Press on it and set up your broker address `(localhost)`, port `(1883)` 
+Press on it and set up your broker address - `localhost`, port - `1883` 
 and your username and password, which you've created earlier, then press `submit`:
 
 <robo-wiki-picture src="home-assistant/mqtt-setup.jpg" />
@@ -113,7 +113,7 @@ Then press on three dots on MQTT integration and choose `System Options` and che
 After finishing, you can go to the next article:
 
 ### Method 1 (with zigbee2MQTT)
-* If you have Zigbee adapter [JetHome USB JetStick Z2](https://jhome.ru/catalog/parts/PCBA/293/) (or one of [supported](https://www.zigbee2mqtt.io/information/supported_adapters.html)) go [**here.**](/docs/zigbee2-mqtt/)
+* If you have Zigbee adapter [JetHome USB JetStick Z2](https://jethome.ru/z2/) (or one of [supported](https://www.zigbee2mqtt.io/information/supported_adapters.html)) go [**here.**](/docs/zigbee2-mqtt/)
 
 ### Method 2 (with SLS Gateway)
 * If you have [Robonomics SLS Gateway](https://easyeda.com/ludovich88/robonomics_sls_gateway_v01) go [**here.**](/docs/sls-setup/)

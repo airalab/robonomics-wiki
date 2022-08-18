@@ -6,7 +6,14 @@ translated: false
 
 After setting up [Zigbee2MQTT stick](/docs/zigbee2-mqtt/), It is time to create Robonomics Parachain accounts and buy subscription. 
 
-## Create accounts
+To control Home Assistant with Robonomics, You will need 2 accounts in Robonomics parachain. 
+To the one of accounts you will buy the Robonomics subscription. Let's call it `SUB_OWNER`. 
+Second account  will manage all Home Assistant processes such as telemetry and give access to other users. 
+Let's call it `SUB_ADMIN`. This accounts will provide security of your Home Assistant.
+
+Other important thing is that both accounts must be created with ***ed25519*** encryption. How to create accounts and buy robonomics subscription see below. 
+
+## Create Owner and Controller accounts
 
 First, let's create A Robonomics account.
 
@@ -38,7 +45,7 @@ Clicking on the `Next` button will take you to the last window. Click `Save` to 
 
 <robo-wiki-note type="note">The same way create account with name `sub_admin` </robo-wiki-note>
 
-### add to extension
+## Add accounts to extension
 
 You need to add created account to [Polkadot.js extension](https://polkadot.js.org/extension/) (for ed25519 account you can do that only with backup JSON file). 
 For that you need to create backup file of the account(or use a file saved when created the account). Press on three dots on your account and choose `Create a backup file for this account` and type in your password.
@@ -53,13 +60,13 @@ In an opened window upload the JSON file, enter the password and press `Restore`
 
 ![Restore backup in extension 2](../images/creating-an-account/file-backup.jpg)
 
-## Buy subscription 
+## Buy Robonomics subscription 
 
 Now it's time to buy a subscription. 
 
-<robo-wiki-note type="okay"> To buy subscription you should have free XRT on `SUB_OWNER` account. </robo-wiki-note>
+<robo-wiki-note type="okay"> To buy subscription you should have XRT on `SUB_OWNER` account. </robo-wiki-note>
 
-Go to our DaPP to **subscription** [page](https://dapp.robonomics.network/#/subscription) and press `add account` at right sidebar.
+Go to our DaPP to subscription [page](https://dapp.robonomics.network/#/subscription) and press `add account` at right sidebar.
 
 <robo-wiki-picture src="home-assistant/dapp.jpg" />
 
@@ -79,6 +86,8 @@ Press `submit` button and enter `password` for your account. After that wait unt
 You will see state of your subscription:
 
 <robo-wiki-picture src="home-assistant/subscription.jpg" />
+
+## Add accounts to subscription
 
 Add `SUB_ADMIN` account to **access list**. For this open extension and click on icon near account name. It will copy account address.
 

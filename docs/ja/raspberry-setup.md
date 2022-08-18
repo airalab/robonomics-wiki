@@ -24,20 +24,13 @@ ipfs daemon
 
 In other terminal window download image:
 
+Alternatively, you can download it [from url.](https://ipfs.io/ipfs/QmPKdpNgnoEMEccqfKkKiQuHWzePPbwxBKAxSqqLAgqfqx?filename=rpi_hass.img.gz) (**Only with started IPFS Daemon**), but then you
+
 ```shell
-ipfs get QmPKdpNgnoEMEccqfKkKiQuHWzePPbwxBKAxSqqLAgqfqx
-```
-
-Alternatively, you can download it [from url.](https://gateway.ipfs.io/ipfs/QmRf5f2siwsUy1JSeV7FRNseeAxEBW1LJEpCr1yDyDdKDf) (**Only with started IPFS Daemon**)
-
-When downloaded, change name of the file to `rpi.img.gz`:
-
-```
-mv QmPKdpNgnoEMEccqfKkKiQuHWzePPbwxBKAxSqqLAgqfqx rpi.img.gz
+ipfs get QmPKdpNgnoEMEccqfKkKiQuHWzePPbwxBKAxSqqLAgqfqx -o rpi.img.gz
 ```
 
 Then read the next chapter to install image.
-
 
 <robo-wiki-title type="3" anchor="configuration-rpi"> 
   Configuration RPi
@@ -74,17 +67,37 @@ Then you need to save the file, and insert the SD card to the Raspberry Pi and t
 Now you need to find its address. To find address you can use [Fing app](https://www.fing.com/products). 
 You can also find an RPi address with a `nmap` tool. Install it with:
 
-```shell
-sudo apt-get install nmap
-```
+<robo-wiki-tabs>
+  <robo-wiki-tab title="Linux">
+    <pre>sudo apt-get install nmap</pre>
+  </robo-wiki-tab>
+  <robo-wiki-tab title="OSX">
+    <pre>brew install nmap</pre>
+  </robo-wiki-tab>
+
+  <robo-wiki-tab title="Other">
+
+  [https://nmap.org/download.html#macosx](https://nmap.org/download.html#macosx)
+
+  </robo-wiki-tab>
+</robo-wiki-tabs>
 
 Then find your address in the local network with:
 
-```bash
-ip a
-```
+<robo-wiki-tabs>
+  <robo-wiki-tab title="Linux">
+    <pre>ip a</pre>
+  </robo-wiki-tab>
+  <robo-wiki-tab title="OSX">
+    <pre>ifconfig</pre>
+  </robo-wiki-tab>
+</robo-wiki-tabs>
 
-It should look like `192.168.xx.xx` or `172.10.xx.xx`.
+<!-- ```bash
+ip a
+``` -->
+
+It should look like `192.168.xx.xx` or `172.xx.xx.xx`.
 
 Then scan your network as shown below replacing the last octet of the address with 0. (One may also use `arp -a` ):
 
@@ -204,7 +217,7 @@ sudo chmod +x install_ipfs.sh
 ./install_ipfs.sh
 ```
 
-## Zigbee2MQTT setup
+### Zigbee2MQTT setup
 Now install necessary software for Zigbee2MQTT sticks:
 
 ```bash
