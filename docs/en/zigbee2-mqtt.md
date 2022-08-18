@@ -9,11 +9,12 @@ tools:
 
 After installing [MQTT broker](/docs/mqtt-broker/) to the Raspberry Pi, we can now set up Zigbee2MQTT stick.
 
-If you have the JetHome USB JetStick Z2 it will already have the necessary firmware so you don't need to flash it. However, if you have another adapter the first thing you need to flash it with zigbee2MQTT software. You can find instructions for your device [here](https://www.zigbee2mqtt.io/information/supported_adapters.html).
+If you have the JetHome USB JetStick Z2 it  has the necessary firmware. However, if you have another 
+adapter the first thing you need to  do is to flash it with zigbee2MQTT software. You can find instructions for your device [here.](https://www.zigbee2mqtt.io/information/supported_adapters.html)
 
 Necessary ziqbee2mqtt software has already been installed on the  Raspberry PI on previous steps. 
 
-First, Connect the adapter to Raspberry PI. Now we need to find the location of our stick. For this type in the next command.:
+First, connect the adapter to Raspberry PI. Now we need to find the location of our stick. For this type in the next command.:
 
 ```bash
 $ ls -l /dev/serial/by-id
@@ -25,7 +26,8 @@ Output should look like:
 
 In example Stick connection place is - `ttyUSB0`.
 
-Then you need to configure it. Before starting Zigbee2MQTT we need to edit the configuration.yaml file. This file contains the configuration which will be used by Zigbee2MQTT.:
+Then you need to configure it. Before starting Zigbee2MQTT we need to edit the `configuration.yaml` file. 
+This file contains the configuration which will be used by Zigbee2MQTT.:
 
 ```bash
 nano /opt/zigbee2mqtt/data/configuration.yaml
@@ -33,7 +35,7 @@ nano /opt/zigbee2mqtt/data/configuration.yaml
 
 Basic configuration needs a few adjustments. Change the following statements:
  - `homeassistant:` to `true`. It will automatically connect sensors to Home Assistant.
- - uncomment `user` and `password`statements under `mqtt` and fill them with your username and password from MQTT Broker.(You created them it in the previous article.)
+ - uncomment `user` and `password`statements under `mqtt` and fill them with your username and password from MQTT Broker. (You created them in the previous [article.](/docs/mqtt-broker/))
  - change port in `serial`-> `port` to `/dev/stick_connection_place>`. In example `/dev/ttyUSB0`.
 
 Adjusted configuration file should look like:
@@ -59,6 +61,18 @@ mqtt:
 serial:
   # Location of CC2531 USB sniffer
   port: /dev/<YOUR_PORT> # /dev/ttyUSB0 for example
+```
+
+<robo-wiki-note type="warning">
+If you already have an active zigbee2mqtt stick or a similar device in your home, 
+and you are now configuring another stick, then they will conflict with each other. 
+To solve this problem you need change channel on the new device. For this add the following strings to the end of configuration file:</robo-wiki-note>
+
+```shell
+advanced:
+  # Optional: ZigBee channel, changing requires re-pairing of all devices. (Note: use a ZLL channel: 11, 15, 20, or 25 to avoid Problems)
+  # (default: 11)
+  channel: 15
 ```
 
 Now you can run zigbee2mqtt:
@@ -102,8 +116,9 @@ Now you should see this sensor with ID in your Home Assistant WebUI. Go to `sett
 
 <robo-wiki-picture src="home-assistant/mqtt-devices.jpg" />
 
+After adding all the sensors, you stop program with `ctrl+C`.
 
-> After adding all the sensors, you can stop program and open configuration file again to set and set `permit_join: false`, if you don’t want to add any more devices.
+> After adding all the sensors, you can open configuration file again to set and set `permit_join: false`, if you don’t want to add any more devices.
 
 Then lets make a service. Create the file:
 

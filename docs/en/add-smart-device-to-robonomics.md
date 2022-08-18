@@ -24,7 +24,12 @@ Moreover, you can add your Pinata credentials. It is not necessary, if you will 
 
 ## Use DApp
 
-Now it's time to create the first user for your Home Assistant.(It shouldn't be `SUB_OWNER` or `SUB_ADMIN` accounts). Create an account, as we did in the previous [article](/docs/iot-sub-setup/). 
+Now it's time to create the first user for your Home Assistant.It shouldn't be `SUB_OWNER` or `SUB_ADMIN` accounts, because,
+as said [earlier](/docs/iot-sub-setup/) they provide security. Because of it, regular user shouldn't use them. 
+Also, you can't use user, which you created af first start of Home Assistant, because this user don't have 
+account in Robonomics Parachain.
+
+Create an account, as we did in the previous [article](/docs/iot-sub-setup/). 
 Add this account to the subscription [here](https://dapp.robonomics.network/#/subscription/devices). Now there should be three addresses in the access list - `SUB_OWNER`, `SUB_ADMIN` and `user`.
 
 <robo-wiki-picture src="home-assistant/user.jpg" />
@@ -34,7 +39,7 @@ In the next two raws type in `SUB_OWNER` and `SUB_ADMIN` addresses. Then enter `
 
 <robo-wiki-picture src="home-assistant/acc-pass.jpg" />
 
-Create a password for a new HA user which you have just registered. This will be another one apart from previously created HA Admin user. Type the passport below `Enter password` and click registration. Confirm transaction. 
+Create a password for a new HA user which you have just registered. Type the passport below `Enter password` and click registration. Confirm transaction. 
 It’s free now since the accounts are using RWS subscription. After the registration process, you can log in to Home Assistant with your address as `login` and a newly-created password. Go to login page and login:
 
 <robo-wiki-picture src="home-assistant/acc-login.jpg" />
