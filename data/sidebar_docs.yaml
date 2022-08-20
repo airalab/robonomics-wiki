@@ -165,6 +165,9 @@
         - title_en: Deploy "Feecc Analytics"
           title_ru: Развертывание "Feecc Аналитика"
           link: /docs/feecc-system-deploy-feecc-analytics
+        - title_en: "Feecc Analytics" for Developers
+          title_ru: "Feecc Аналитика" для разработчиков
+          link: /docs/feecc-system-dev-feecc-analytics
 
 - title_en: Learn
   items:
