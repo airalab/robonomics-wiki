@@ -161,7 +161,7 @@
           link: /docs/feecc-system-supporthardware
         - title_en: Deploy "Feecc Engineer's workplace"
           title_ru: Развертывание "Feecc Рабочее Место Инженера"
-          link: /docs/feecc-system-deploy-feecc-ew
+          link: /docs/feecc-system-deploy-feecc-wb
         - title_en: Deploy "Feecc Analytics"
           title_ru: Развертывание "Feecc Аналитика"
           link: /docs/feecc-system-deploy-feecc-analytics
