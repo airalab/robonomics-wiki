@@ -2,7 +2,7 @@
 title: Архитектура системы
  
 contributors: [adeptvin1, timofeev41]
-translated: true
+translated: false
 ---
 ## Описание архитектуры
 Платформа Feecc состоит из нескольких сервисов, таких как:
