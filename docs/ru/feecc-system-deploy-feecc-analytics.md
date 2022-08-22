@@ -1,5 +1,5 @@
 ---
-title: Развертывание "Feecc Аналитика"
+title: Развертывание Feecc Аналитика
  
 contributors: [timofeev41]
 translated: true

@@ -1,5 +1,5 @@
 ---
-title: "Feecc Аналитика" для разработчиков
+title: Feecc Аналитика для разработчиков
  
 contributors: [timofeev41]
 translated: true
