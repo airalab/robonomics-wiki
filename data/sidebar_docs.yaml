@@ -150,24 +150,24 @@
         - title_en: Overview
           title_ru: Обзор
           link: /docs/feecc-system-overview
-        - title_en: Systems architecture 
-          title_ru: Архитектура системы
-          link: /docs/feecc-system-architecture
-        - title_en: Quick Start
-          title_ru: Быстрый старт 
-          link: /docs/feecc-system-quickstart
-        - title_en: Support hardware
-          title_ru: Поддерживаемое оборудование
-          link: /docs/feecc-system-supporthardware
-        - title_en: Deploy "Feecc Engineer's workplace"
-          title_ru: Развертывание "Feecc Рабочее Место Инженера"
-          link: /docs/feecc-system-deploy-feecc-wb
-        - title_en: Deploy "Feecc Analytics"
-          title_ru: Развертывание "Feecc Аналитика"
-          link: /docs/feecc-system-deploy-feecc-analytics
-        - title_en: "Feecc Analytics" for Developers
-          title_ru: "Feecc Аналитика" для разработчиков
-          link: /docs/feecc-system-dev-feecc-analytics
+        # - title_en: Systems architecture 
+        #   title_ru: Архитектура системы
+        #   link: /docs/feecc-system-architecture
+        # - title_en: Quick Start
+        #   title_ru: Быстрый старт 
+        #   link: /docs/feecc-system-quickstart
+        # - title_en: Support hardware
+        #   title_ru: Поддерживаемое оборудование
+        #   link: /docs/feecc-system-supporthardware
+        # - title_en: Deploy "Feecc Engineer's workplace"
+        #   title_ru: Развертывание "Feecc Рабочее Место Инженера"
+        #   link: /docs/feecc-system-deploy-feecc-wb
+        # - title_en: Deploy "Feecc Analytics"
+        #   title_ru: Развертывание "Feecc Аналитика"
+        #   link: /docs/feecc-system-deploy-feecc-analytics
+        # - title_en: "Feecc Analytics" for Developers
+        #   title_ru: "Feecc Аналитика" для разработчиков
+        #   link: /docs/feecc-system-dev-feecc-analytics
 
 - title_en: Learn
   items:
