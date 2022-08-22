@@ -166,6 +166,17 @@ eval("module.exports = __webpack_require__.p + \"assets/img/sum.869825f2.gif\";\
 
 /***/ }),
 
+/***/ "mwvI":
+/*!******************************************************!*\
+  !*** ./docs/images/build-dapp-interface/dapp-25.gif ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"assets/img/dapp-25.d4185898.gif\";\n\n//# sourceURL=webpack:///./docs/images/build-dapp-interface/dapp-25.gif?");
+
+/***/ }),
+
 /***/ "pCpW":
 /*!******************************************************!*\
   !*** ./docs/images/build-dapp-interface/dapp-16.gif ***!

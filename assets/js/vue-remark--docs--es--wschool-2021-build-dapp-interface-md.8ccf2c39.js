@@ -182,17 +182,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
-/***/ "mwvI":
-/*!******************************************************!*\
-  !*** ./docs/images/build-dapp-interface/dapp-25.gif ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"assets/img/dapp-25.d4185898.gif\";\n\n//# sourceURL=webpack:///./docs/images/build-dapp-interface/dapp-25.gif?");
-
-/***/ }),
-
 /***/ "nMlY":
 /*!********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/gridsome/lib/webpack/loaders/assets-loader.js?alt=Paso%2022%20de%20cambio%20de%20interfaz%20Dapp&title=Dapp%20Interface%20changing%20step%2022!./docs/images/build-dapp-interface/dapp-22.png ***!
