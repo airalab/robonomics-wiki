@@ -2,7 +2,7 @@
 title: Обзор
  
 contributors: [adeptvin1]
-translated: true
+translated: false
 ---
 Feecc — это платформа, разработанная [Multi-Agent Systems](http://multi-agent.io), позволяющая предприятиям создавать и настраивать собственные системы контроля качества продуктов или услуг в соответствии с бизнес задачами.
 
