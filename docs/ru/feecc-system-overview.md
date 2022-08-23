@@ -10,7 +10,7 @@ Feecc — это платформа, разработанная [Multi-Agent Sys
 - [Архитектура Feecc](../ru/feecc-system-architecture.md)
 - [Быстрый старт](../ru/feecc-system-quickstart.md)
 - [Поддерживаемое оборудование](../ru/feecc-system-supporthardware.md)
-- [Развертывание "Feecc Рабочее Место Инженера"](../ru/feecc-system-deploy-feecc-ew.md)
+- [Развертывание "Feecc Рабочее Место Инженера"](../ru/feecc-system-deploy-feecc-wb.md)
 - [Развертывание "Feecc Аналитика"](../ru/feecc-system-deploy-feecc-analytics.md)
 - [Развертывание "Feecc Валидатор"](../ru/feecc-system-deploy-feecc-validator.md)
 
