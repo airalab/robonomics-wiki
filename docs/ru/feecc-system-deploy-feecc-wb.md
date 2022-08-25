@@ -18,7 +18,9 @@ translated: true
 
 1. Склонируйте репозиторий
 
-    `git clone https://github.com/Multi-Agent-io/feecc-hid-reader-daemon`
+    ```
+    git clone https://github.com/Multi-Agent-io/feecc-hid-reader-daemon
+    ```
 
 2. Обновите систему и установите необходимые пакеты:
 
@@ -61,14 +63,15 @@ translated: true
 
 1. Склонируйте репозиторий
 
-    `git clone https://github.com/Multi-Agent-io/feecc-workbench-daemon && cd feecc-workbench-daemon`
+    ```
+    git clone https://github.com/Multi-Agent-io/feecc-workbench-daemon && cd feecc-workbench-daemon
+    ```
 
 2. Проведите конфигурацию, открыв docker-compose.yml любым текстовым редактором
 
     Измените переменные окружения. Значения каждого параметра:
 
     ```
-    
     MONGODB_URI (Required): MongoDB connection URI
     ROBONOMICS_ENABLE_DATALOG (Optional): enable datalog posting or not (bool)
     ROBONOMICS_ACCOUNT_SEED (Optional): Your Robonomics network account seed phrase
@@ -98,7 +101,9 @@ translated: true
 
 3. Запустите Workbench daemon:
 
-    `sudo docker-compose up -d --build`
+    ```
+    sudo docker-compose up -d --build
+    ```
 
 4. Проверьте работоспособность:
 
@@ -108,7 +113,9 @@ translated: true
 
 1. Склонируйте репозитории
 
-    `git clone https://github.com/Multi-Agent-io/feecc-ipfs-gateway.git`
+    ```
+    git clone https://github.com/Multi-Agent-io/feecc-ipfs-gateway.git
+    ```
 
 2. Измените параметры
 
@@ -135,7 +142,9 @@ translated: true
 
 3. Запустите контейнер
 
-    `sudo docker-compose up --build`
+    ```
+    sudo docker-compose up --build
+    ```
 
 4. Проверьте работоспособность
 
@@ -145,7 +154,9 @@ translated: true
 
 1. Склонируйте репозиторий
 
-    `git clone https://github.com/Multi-Agent-io/feecc-print-server.git`
+    ```
+    git clone https://github.com/Multi-Agent-io/feecc-print-server.git
+    ```
 
 2. Измените параметры
 
@@ -166,7 +177,9 @@ translated: true
 
 3. Запустите контейнер
 
-    `sudo docker-compose up --build`
+    ```
+    sudo docker-compose up --build
+    ```
 
 4. Проверьте работоспособность
 
@@ -176,7 +189,9 @@ translated: true
 
 1. Склонируйте репозитории
 
-    `git clone https://github.com/Multi-Agent-io/feecc-cameraman.git`
+    ```
+    git clone https://github.com/Multi-Agent-io/feecc-cameraman.git
+    ```
 
 2. Измените параметры
 
@@ -196,7 +211,9 @@ translated: true
 
 3. Запустите контейнер
 
-    `sudo docker-compose up --build`
+    ```
+    sudo docker-compose up --build
+    ```
 
 4. Проверьте работоспособность
 
@@ -207,7 +224,9 @@ translated: true
 
 1. Склонируйте репозитории
 
-    `git clone https://github.com/Multi-Agent-io/feecc-workbench-frontend.git`
+    ```
+    git clone https://github.com/Multi-Agent-io/feecc-workbench-frontend.git
+    ```
 
 2. Измените параметры
 
@@ -228,7 +247,9 @@ translated: true
 
 3. Запустите контейнер
    
-   `docker-compose up --build -d`
+   ```
+   docker-compose up --build -d
+   ```
 
 4. Проверьте работоспособность
 

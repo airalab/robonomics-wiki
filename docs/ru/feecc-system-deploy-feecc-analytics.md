@@ -13,7 +13,10 @@ translated: true
 
 ### Исходный код
 
-Выполните `git clone https://github.com/Multi-Agent-io/feecc-analytics-backend`
+Выполните: 
+```
+git clone https://github.com/Multi-Agent-io/feecc-analytics-backend
+```
 
 Для доступа к бета-версии смените ветку на `development`
 
@@ -51,7 +54,10 @@ translated: true
 
 ### Исходный код
 
-Выполните `git clone https://github.com/Multi-Agent-io/feecc-analytics-frontend`
+Выполните: 
+```
+git clone https://github.com/Multi-Agent-io/feecc-analytics-frontend
+```
 
 Для доступа к бета-версии смените ветку на `dev`
 
