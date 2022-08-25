@@ -32,7 +32,7 @@ translated: true
 
   - Рабочая частота - 125khz.
 
-*Примерная цена - 750 руб ([ссылка](https://aliexpress.ru/item/1005003579675742.html?spm=a2g2w.productlist.0.0.190ad16cWCptVr&sku_id=12000026804509353)).*
+*([ссылка](https://aliexpress.ru/item/1005003579675742.html?spm=a2g2w.productlist.0.0.190ad16cWCptVr&sku_id=12000026804509353)).*
 
 #### **Сканер штрихкодов**
 
@@ -44,7 +44,7 @@ translated: true
 
   - Чтение в двух измерениях (желательно, но не обязательно).
 
-*Примерная цена - 2000 руб ([ссылка](https://aliexpress.ru/item/32902727438.html?spm=a2g2w.productlist.0.0.263d68c5fTwi8J&sku_id=10000009784771593)).*
+*([ссылка](https://aliexpress.ru/item/32902727438.html?spm=a2g2w.productlist.0.0.263d68c5fTwi8J&sku_id=10000009784771593)).*
 
 #### **Рабочий компьютер**
 
@@ -60,7 +60,7 @@ translated: true
 
   - Raspberry Pi4 4 GB RAM, возможно использование аналога.
 
-*Цена в [магазине](https://www.cytron.io/p-raspberry-pi-4-model-b-4gb) по ссылке с официального сайта - 60$.*
+*[ссылка](https://www.cytron.io/p-raspberry-pi-4-model-b-4gb).*
 
 #### **Сенсорный экран**
 
@@ -71,7 +71,7 @@ translated: true
 
   - Сенсорный экран (желательно, но не необходимо. Можно использовать другие устройства ввода информации).
 
-*Примерная цена в России - 18 000 руб ([ссылка](https://www.dns-shop.ru/product/d2f9158c3ba43330/156-monitor-asus-vt168n-cernyj/)).*
+*([ссылка](https://www.asus.com/Displays-Desktops/Monitors/Touch/VT168H/)).*
 
 #### **Принтер этикеток**
 
@@ -82,7 +82,7 @@ translated: true
 
   - В данном варианте используются принтеры Brother модели QL-800.
 
-*Примерная цена в России - 25 200 руб ([ссылка](https://brother-printers.ru/product/printer-brother-ql-800-dlya-pechati-nakleek/)).*
+*([ссылка](https://www.brother-usa.com/products/ql800)).*
 
 #### **IP-камера**
 
@@ -94,7 +94,7 @@ translated: true
   - RSTP-протокол передачи данных.
   - В данном варианте использовались камеры Hikvision HiWatch DS-i200d
 
-*Примерная цена в России - 5 300 руб ([ссылка](https://videoglaz.ru/ulichnye-ip-kamery/hiwatch/hiwatch-ds-i200d-28-mm)).*
+*([ссылка](https://www.hi-watch.eu/en-us/product/1986/ip-camera/bullet-camera/2-0-mp-ir-network-bullet-camera)).*
 > **В последней версии [feecc-cameraman](https://github.com/Multi-Agent-io/feecc-cameraman) появилась поддержка WEB камер, по этому при выборе оборудования обратите внимание на эту деталь.**
 
 #### **Оборудование, представленное ниже, используется сразу для нескольких столов.**
@@ -106,9 +106,9 @@ translated: true
 Необходимые технические характеристики:
 
   - PoE питание на выходных портах.
-  - В данном варианте использовался MikroTik hEX PoE - один на 3-4 стола.
+  - В данном варианте использовался MikroTik hEX PoE - один на 3-4 стола + блок питания.
 
-*Примерная цена в России - 21 375 руб ([ссылка](https://mikrotik.ru/katalog/katalog/hardware/switches/poe-switches/RB960PGS)).*
+*([ссылка](https://mikrotik.com/product/RB960PGS)), ([ссылка](https://mikrotik.com/product/48POW)).*
 
 #### **Опционально, стационарный сервер**
 
@@ -117,11 +117,12 @@ translated: true
 
 Необходимые технические характеристики:
 
-[//]: # (TODO: )
+  - Процессор от Intel® Xeon® E-2200 или аналогичный
+  - Оперативная память от 8 гигабайт
+  - Жесткий диск от 1 террабайта
+  - Сетевой интерфейс LAN от 1 Гбит/с
 
-*Примерная цена*
-
-[//]: # (TODO: )
+*([ссылка](https://www.dell.com/en-us/shop/cty/pdp/spd/poweredge-r240/pe_r240_tm_vi_vp_sb)).*
 
 ### Feecc Аналитика
 
