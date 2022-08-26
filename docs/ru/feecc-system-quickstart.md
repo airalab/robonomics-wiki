@@ -51,6 +51,7 @@ translated: true
 4. Установите Docker Engine
    
    Для Debian-based систем:
+
    ```bash
     sudo apt-get update
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
@@ -85,8 +86,8 @@ translated: true
 **ВАЖНО, использование тестового аккаунта [utl.today](https://yourls.org/) в реальном производстве строго запрещено, его можно использовать только для тестов**
 **Тестовый аккаунт YOURLS**
 `YOURLS_SERVER`:`url.today`
-`YOURLS_USERNAME`:
-`YOURLS_PASSWORD`:
+`YOURLS_USERNAME`:`demouser`
+`YOURLS_PASSWORD`:`Jhvw*s4ndnEc6ttm`
 
 #### Создание аккаунта Robonomics parachain в экосистеме Polkadot
 Для создания аккаунта Robonomics parachain в экосистеме Polkadot воспользуйтесь инструкцией по [ссылке](https://wiki.robonomics.network/docs/en/create-account-in-dapp/#1-using-polkadotjs-browser-extension). Вам необходимо сохранить ключевые фразы аккаунта так как в дальнейшем они будут использованны в переменной `ROBONOMICS_ACCOUNT_SEED`.
@@ -98,6 +99,7 @@ translated: true
 Для развертывания Feecc Рабочее Место Инженера с использованием рекомендованного оборудования вам необходимо выполнить следующие условия:
 
 1. Подключите все устройства к компьютеру/серверу на котором будет запущен Feecc Рабочее Место Инженера
+   
    - Принтер этикеток к компьютеру/серверу используя USB
    - Сканер штрихкодов и RFID сканер используя USB
    - IP камера через PoE маршрутизатор/коммутатор
@@ -105,42 +107,69 @@ translated: true
   
 
 2. Склонируйте репозиторий [feecc-demo](https://github.com/Multi-Agent-io/feecc-demo)
+   
    ```bash
    git clone https://github.com/Multi-Agent-io/feecc-demo.git
    ```
 
 3. Установите mongosh для управления вашей базой данных MongoDB.
+   
    ```bash
+   sudo apt-get install gnupg
+   wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
    echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
    sudo apt-get update
    sudo apt-get install -y mongodb-mongosh
    ```
-   Подключитесь к вашей базе данных MongoDB используя mongosh
-   ```bash
-   mongosh "mongodb+srv://....yourcluster.... --apiVersion 1 --username yourusername"
-   ```
 
-4. Перейдите в папку проекта и в папке проекта выберите раздел "feecc-quickstart-supporthardware"
+4. Перейдите в папку проекта и в папке проекта перейдите в раздел "feecc-quickstart-supporthardware"
+   
    ```bash
    cd ./feecc-demo/feecc-quickstart-supporthardware
    ```
 
    Импортируйте размеченную базу данных с коллекциями для MongoDB
+
    ```bash
-   mongosh 
+   mongoimport --uri="mongodb+srv://....yourcluster...." --file=./
    ```
    Добавьте в размеченную базу данных ID вашей RFID карты, ФИО и права доступа пользователя
+
    ```bash
-   mongosh 
+   mongosh "mongodb+srv://....yourcluster.... --apiVersion 1 --username yourusername"
    ```
 
 5. В разделе "feecc-quickstart-supporthardware" откройте файл .env любым файловым редактором и внесите информацию о переменных. Пример заполнения переменных указан в .env файле. 
    
 6. Авторизуйтесь в Digital Ocean Contaier Registry который предоставляет компания [Multi-Agent Systems](http://multi-agent.io) для скачивания готовых контейнеров необходимых для развертывание Feecc Рабочее Место Инженера и запустите docker-compose
+   
    ```bash
    docker login -u dop_v1_6debfd8d476d14847bf81aecc74dfcda1fb63a503ba2d61d66eaa113cc272596 -p dop_v1_6debfd8d476d14847bf81aecc74dfcda1fb63a503ba2d61d66eaa113cc272596 registry.digitalocean.com
    sudo docker-compose up -d --build --env-file=./.env
    ```
+
 7. Дождитесь окончания развертывания и проверьте работу системы "Feecc Рабочее Место Инженера" перейдя по ссылке в браузере [http://localhost:3000/](http://localhost:3000/) и попытайтесь авторизоваться используя личную RFID карту которую вы указалии ранее.
 
 #### Развертывание Feecc Рабочее Место Инженера в режиме эмуляции рекомендованного оборудования
+Для развертывания Feecc Рабочее Место Инженера в режиме эмуляции рекомендованного оборудования необходимо выполнить следующие условия:
+
+1. Склонируйте репозиторий [feecc-demo](https://github.com/Multi-Agent-io/feecc-demo)
+   
+   ```bash
+   git clone https://github.com/Multi-Agent-io/feecc-demo.git
+   ```
+
+2. Перейдите в папку проекта и в папке проекта перейдите в раздел "feecc-quickstart-hardwareemulation"
+   
+   ```bash
+   cd ./feecc-demo/feecc-quickstart-supporthardware
+   ```
+
+3. Авторизуйтесь в Digital Ocean Contaier Registry который предоставляет компания [Multi-Agent Systems](http://multi-agent.io) для скачивания готовых контейнеров необходимых для развертывание Feecc Рабочее Место Инженера и запустите docker-compose
+   
+   ```bash
+   docker login -u dop_v1_6debfd8d476d14847bf81aecc74dfcda1fb63a503ba2d61d66eaa113cc272596 -p dop_v1_6debfd8d476d14847bf81aecc74dfcda1fb63a503ba2d61d66eaa113cc272596 registry.digitalocean.com
+   sudo docker-compose up -d --build --env-file=./.env
+   ```
+
+4. Дождитесь окончания развертывания и проверьте работу системы "Feecc Рабочее Место Инженера" перейдя по ссылке в браузере [http://localhost:3000/](http://localhost:3000/) и проверьте работу системы в соответствии с инструкцией [feecc-demo](https://github.com/Multi-Agent-io/feecc-demo)

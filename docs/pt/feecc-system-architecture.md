@@ -6,12 +6,23 @@ translated: false
 ---
 ## Описание архитектуры
 Платформа Feecc состоит из нескольких сервисов, таких как:
+### Feecc Analytics
+
 - [feecc-analytics-frontend](https://github.com/Multi-Agent-io/feecc-analytics-frontend)
 - [feecc-analytics-backend](https://github.com/Multi-Agent-io/feecc-analytics-backend)
+
+### Feecc Workbench
+
 - [feecc-workbench-frontend](https://github.com/Multi-Agent-io/feecc-workbench-frontend)
 - [feecc-workbench-daemon](https://github.com/Multi-Agent-io/feecc-workbench-daemon)
+
+### Feecc Validator
+
 - [feecc-validator-frontend](https://github.com/Multi-Agent-io/feecc-validator-frontend)
 - [feecc-validator-backend](https://github.com/Multi-Agent-io/feecc-validator-backend)
+
+### Feecc other services
+
 - [feecc-ipfs-gateway](https://github.com/Multi-Agent-io/feecc-ipfs-gateway)
 - [feecc-print-server](https://github.com/Multi-Agent-io/feecc-print-server)
 - [feecc-cameraman](https://github.com/Multi-Agent-io/feecc-cameraman)
@@ -29,11 +40,13 @@ translated: false
   
 Feecc Рабочее Место Инженера обычно состоит из следующих контейнеров:
 Установка обязательна на компьютер с которого производится сборка изделия.
+
 - [feecc-workbench-frontend](https://github.com/Multi-Agent-io/feecc-workbench-frontend)
 - [feecc-workbench-daemon](https://github.com/Multi-Agent-io/feecc-workbench-daemon)
 - [feecc-hid-reader-daemon](https://github.com/Multi-Agent-io/feecc-hid-reader-daemon)
 
 Установка может быть осуществлена как на компьютер с которого производится сборка изделия так и на сервер или другое устройство в локальной сети.
+
 - [feecc-ipfs-gateway](https://github.com/Multi-Agent-io/feecc-ipfs-gateway)
 - [feecc-print-server](https://github.com/Multi-Agent-io/feecc-print-server)
 - [feecc-cameraman](https://github.com/Multi-Agent-io/feecc-cameraman)
@@ -56,6 +69,7 @@ Feecc Рабочее Место Инженера обычно состоит и�
 ### Feecc Аналитика
 Основная задача Feecc Аналитика - это организация процесса отслеживания готовых изделий и их предпродажная проверка в отделе контроля качества изделий.
 Feecc Аналитика зависит от работы следующих контейнеров:
+
 - [feecc-analytics-frontend](https://github.com/Multi-Agent-io/feecc-analytics-frontend)
 - [feecc-analytics-backend](https://github.com/Multi-Agent-io/feecc-analytics-backend)
 
@@ -64,6 +78,7 @@ Feecc Аналитика зависит от работы следующих к�
 ### Feecc Валидатор
 Основная задача Feecc Валидатор - это сравнение данных из различных хранилищ данных с целью подтверждения неизменности цифрового сертификата изделия. 
 Feecc Валидатор зависит от работы следующих контейнеров:
+
 - [feecc-validator-frontend](https://github.com/Multi-Agent-io/feecc-validator-frontend)
 - [feecc-validator-backend](https://github.com/Multi-Agent-io/feecc-validator-backend)
   
