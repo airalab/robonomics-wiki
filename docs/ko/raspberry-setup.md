@@ -77,7 +77,7 @@ You can also find an RPi address with a `nmap` tool. Install it with:
 
   <robo-wiki-tab title="Other">
 
-  [https://nmap.org/download.html#macosx](https://nmap.org/download.html#macosx)
+  [https://nmap.org/download.html](https://nmap.org/download.html)
 
   </robo-wiki-tab>
 </robo-wiki-tabs>

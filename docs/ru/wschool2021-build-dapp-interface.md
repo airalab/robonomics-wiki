@@ -1769,6 +1769,8 @@ div.demo-city-1 {
 
 <!-- ![Dapp Interface changing step 25](../images/build-dapp-interface/dapp-25.gif "Dapp Interface changing step 25") -->
 
+<img src="../images/build-dapp-interface/dapp-25.gif" alt="Dapp Interface changing step 25" />
+
 ## Conclusion
 
 Congratulations! Now you have redesigned the dapp and clues how to start building your application's interface.
