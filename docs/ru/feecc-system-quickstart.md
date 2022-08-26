@@ -76,9 +76,17 @@ translated: true
 В результате всех манипуляций у вас будет строка в которой будет храниться информация о методе подключения к вашему MongoDB кластеру , где вместо черного прямоугольника будет ваш логин, а вместо поля `<password>` вам необходимо будет вписать ваш пароль, в формате `mongodb+srv://yourlogin:yourpassword@......` эта строка будет использоваться в качестве значения переменной `MONGODB_URI` в .env файле при развертывании системы. 
 
 #### Создание аккаунта в Pinata.cloud
-Для обеспечения быстрой доступности файлов из IPFS в обычной сети связи используется сервис Pinata.cloud. Чтобы завести аккаунт вам необходимо пройти по [ссылке](https://app.pinata.cloud/register) и завести собственный аккаунт, это бесплатно. Вам необходимо сохранить логин и пароль а также дополнительные данные API так как в дальнейшем ои будет использоваться в "Feecc Рабочее Место Инженера" в переменных `PINATA_API`, `PINATA_SECRET_API` .
+Для обеспечения быстрой доступности файлов из IPFS в обычной сети связи используется сервис Pinata.cloud. Чтобы завести аккаунт вам необходимо пройти по [ссылке](https://app.pinata.cloud/register) и завести собственный аккаунт, это бесплатно. Вам необходимо сохранить логин и пароль а также дополнительные данные API так как в дальнейшем они будет использоваться в "Feecc Рабочее Место Инженера" в переменных `PINATA_API`, `PINATA_SECRET_API` .
 
 #### Создание аккаунта в YOURLS
+Для обеспечения работы сокращателя ссылок вы можете развернуть как свой сервис [YOURLS](https://yourls.org/) так и временно воспользоваться нашим сервисом YOURLS по ссылке [utl.today](https://yourls.org/) 
+Вам необходимо сохранить логин и пароль а также ссылку на ваш YOURLS сервис, так как в дальнейшем эти данные будут использоваться в "Feecc Рабочее Место Инженера" в переменных `YOURLS_SERVER`, `YOURLS_USERNAME`, `YOURLS_PASSWORD` 
+
+**ВАЖНО, использование тестового аккаунта [utl.today](https://yourls.org/) в реальном производстве строго запрещено, его можно использовать только для тестов**
+**Тестовый аккаунт YOURLS**
+`YOURLS_SERVER`:`url.today`
+`YOURLS_USERNAME`:
+`YOURLS_PASSWORD`:
 
 #### Создание аккаунта Robonomics parachain в экосистеме Polkadot
 Для создания аккаунта Robonomics parachain в экосистеме Polkadot воспользуйтесь инструкцией по [ссылке](https://wiki.robonomics.network/docs/en/create-account-in-dapp/#1-using-polkadotjs-browser-extension). Вам необходимо сохранить ключевые фразы аккаунта так как в дальнейшем они будут использованны в переменной `ROBONOMICS_ACCOUNT_SEED`.
@@ -101,23 +109,38 @@ translated: true
    git clone https://github.com/Multi-Agent-io/feecc-demo.git
    ```
 
-3. Импортируйте дамп базы данных для MongoDB с размеченным коллекциями для корректного хранения данных в базе
+3. Установите mongosh для управления вашей базой данных MongoDB.
    ```bash
-
+   echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+   sudo apt-get update
+   sudo apt-get install -y mongodb-mongosh
+   ```
+   Подключитесь к вашей базе данных MongoDB используя mongosh
+   ```bash
+   mongosh "mongodb+srv://....yourcluster.... --apiVersion 1 --username yourusername"
    ```
 
-4. Перейдите в папку проекта и в папке проекта выберите раздел "....."
+4. Перейдите в папку проекта и в папке проекта выберите раздел "feecc-quickstart-supporthardware"
    ```bash
-   cd ./feecc-demo/.....
+   cd ./feecc-demo/feecc-quickstart-supporthardware
    ```
 
-5. В разделе "....." откройте файл .env любым файловым редактором и внесите информацию о переменных
+   Импортируйте размеченную базу данных с коллекциями для MongoDB
+   ```bash
+   mongosh 
+   ```
+   Добавьте в размеченную базу данных ID вашей RFID карты, ФИО и права доступа пользователя
+   ```bash
+   mongosh 
+   ```
+
+5. В разделе "feecc-quickstart-supporthardware" откройте файл .env любым файловым редактором и внесите информацию о переменных. Пример заполнения переменных указан в .env файле. 
    
 6. Авторизуйтесь в Digital Ocean Contaier Registry который предоставляет компания [Multi-Agent Systems](http://multi-agent.io) для скачивания готовых контейнеров необходимых для развертывание Feecc Рабочее Место Инженера и запустите docker-compose
    ```bash
-   docker login -u -p registry.digitalocean.com
-   sudo docker-compose up -d --build
+   docker login -u dop_v1_6debfd8d476d14847bf81aecc74dfcda1fb63a503ba2d61d66eaa113cc272596 -p dop_v1_6debfd8d476d14847bf81aecc74dfcda1fb63a503ba2d61d66eaa113cc272596 registry.digitalocean.com
+   sudo docker-compose up -d --build --env-file=./.env
    ```
-
+7. Дождитесь окончания развертывания и проверьте работу системы "Feecc Рабочее Место Инженера" перейдя по ссылке в браузере [http://localhost:3000/](http://localhost:3000/) и попытайтесь авторизоваться используя личную RFID карту которую вы указалии ранее.
 
 #### Развертывание Feecc Рабочее Место Инженера в режиме эмуляции рекомендованного оборудования
