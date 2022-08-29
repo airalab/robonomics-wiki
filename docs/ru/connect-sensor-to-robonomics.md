@@ -20,13 +20,11 @@ translated: true
 - [BMP180](https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf) - температура и влажность
 - [BME/P280](https://www.mouser.com/datasheet/2/783/BST-BME280-DS002-1509607.pdf) - температура, влажность, атмосферное давление
 - [HTU21D](https://eu.mouser.com/ProductDetail/Measurement-Specialties/HTU21D?qs=tx5doIiTu8oixw1WN5Uy8A%3D%3D) - температура и влажность
-- SHT3x (I2C) - температура и влажность
 - [CCS811 VOC SENSOR](https://www.sciosense.com/wp-content/uploads/documents/Application-Note-Baseline-Save-and-Restore-on-CCS811.pdf) - Летучие органические вещества, эквивалент СО2
-- LCD1602/ 2004 / OLED SSD1306 /  SH1106 - поддерживаемые дисплеи
 
 Возможность подключения по интерфейсу 1 Wire :
 
-- DTH22(AM2302) - температура и влажность
+- DHT22(AM2302) - температура и влажность
 - DS18B20 - температура.
 
 Также существует модель MINI уменьшенного размера и с урезанным списком подключаемых устройств. Исходные схемы для обеих моделей можно найти по ссылкам для [полной модели](https://oshwlab.com/ludovich88/aira_sensor_rev0-1) и [модели MINI](https://oshwlab.com/ludovich88/aira_sensor_d1_mini).

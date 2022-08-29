@@ -24,10 +24,10 @@ ipfs daemon
 
 In other terminal window download image:
 
-Alternatively, you can download it [from url.](https://ipfs.io/ipfs/QmPKdpNgnoEMEccqfKkKiQuHWzePPbwxBKAxSqqLAgqfqx?filename=rpi_hass.img.gz) (**Only with started IPFS Daemon**), but then you
+Alternatively, you can download it [from url.](https://ipfs.io/ipfs/QmVKSwB6nXNjq8Yydb1unYWjahv2mz45ME4NTUw9mWBj2S?filename=rpi_hass.img.gz) (**Only with started IPFS Daemon**), but then you
 
 ```shell
-ipfs get QmPKdpNgnoEMEccqfKkKiQuHWzePPbwxBKAxSqqLAgqfqx -o rpi.img.gz
+ipfs get QmVKSwB6nXNjq8Yydb1unYWjahv2mz45ME4NTUw9mWBj2S -o rpi.img.gz
 ```
 
 Then read the next chapter to install image.
