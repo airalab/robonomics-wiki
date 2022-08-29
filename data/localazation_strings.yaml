@@ -111,12 +111,28 @@
   ru: Станьте контрибьютором
 
 - alias: Github Contribution Text
-  en: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
-  es: Robonomics es de código abierto. ¿Ves algo que está mal o no está claro? Envíe una solicitud.
-  ja: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
-  ko: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
-  pt: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
-  ru: Robonomics wiki is open source. See something that's wrong or unclear? Submit a pull request.
+  en: Robonomics wiki is open source. See something that's wrong or unclear?
+  es: Robonomics es de código abierto. ¿Ves algo que está mal o no está claro?
+  ja: Robonomics wiki is open source. See something that's wrong or unclear?
+  ko: Robonomics wiki is open source. See something that's wrong or unclear?
+  pt: Robonomics wiki is open source. See something that's wrong or unclear?
+  ru: Robonomics wiki is open source. See something that's wrong or unclear?
+
+- alias: Github Contribution Submit
+  en: Submit 
+  es: Envíe 
+  ja: Submit 
+  ko: Submit 
+  pt: Submit 
+  ru: Submit
+
+- alias: Github Contribution PR
+  en: a pull request.
+  es: una solicitud.
+  ja: a pull request.
+  ko: a pull request.
+  pt: a pull request.
+  ru: a pull request.
 
 - alias: Github Contribution Button
   en: Edit page

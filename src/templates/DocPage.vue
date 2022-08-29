@@ -34,22 +34,29 @@
 
           <VueRemarkContent class="docs-content" />
 
+          <PageNextPrev :itemsList="itemsList" :current="currentIndex"/>
+
           <robo-wiki-feedback/>
 
           <section class="docContribution" v-show="ghLink">
 
               <div class="content" v-show="ghLink">
-                <h5>{{$st('Github Contribution Title', $store.state.locale)}}</h5>
-                <p>{{$st('Github Contribution Text', $store.state.locale)}}</p>
-                <Button :label="$st('Github Contribution Button', $store.state.locale)" :link="ghLink" type="secondary" icon="github" size="small"/>
+                <div class="github-title">
+                  <div class="icon">
+                    <Icon icon="github"/>
+                  </div>
+                  <h5>{{$st('Github Contribution Title', $store.state.locale)}}</h5>
+                </div>
+                <p>{{$st('Github Contribution Text', $store.state.locale)}}
+                  <g-link :to="ghLink" class="submit">{{$st('Github Contribution Submit', $store.state.locale)}}</g-link> {{$st('Github Contribution PR', $store.state.locale)}}
+                </p>
+                <!-- <Button :label="$st('Github Contribution Button', $store.state.locale)" :link="ghLink" type="secondary" icon="github" size="small"/> -->
               </div>
 
               <div class="head" v-show="ghUpdateName">
                 {{$st('Latest (commit)', $store.state.locale)}} <g-link :to="ghUpdateUrl">{{$st('commit', $store.state.locale)}}</g-link> {{$st('on (date of commit)', $store.state.locale)}} {{ghUpdateDate}} {{$st('by (author of commit)', $store.state.locale)}} {{ghUpdateName}}
               </div>
           </section>
-
-          <PageNextPrev :itemsList="itemsList" :current="currentIndex"/>
 
         </div>
 
@@ -162,17 +169,61 @@
 
   .docContribution {
 
-    border: 1px solid var(--table-thead-bg);
+    // border: 1px solid var(--table-thead-bg);
 
     .head {
-      background-color: var(--table-thead-bg);
+      // background-color: var(--table-thead-bg);
       padding: calc(var(--space)/4);
-      font-weight: 500;
+      padding-top: 0;
+      font-weight: 600;
+
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+
+        &::after {
+          display: none;
+        }
+      }
     }
 
     .content {
       padding: calc(var(--space)/4);
-      background-color: var(--table-tr-hover);
+      font-weight: 600;
+      // background-color: var(--table-tr-hover);
+
+      p {
+        margin-bottom: 0;
+
+        .submit {
+          text-decoration: none;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .github-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      svg {
+        margin-right: 15px;
+        width: 32px;
+        height: 32px;
+        fill: transparent;
+
+        path {
+          fill: var(--ghLogo);
+        }
+      }
+
+      h5 {
+        margin: 0;
+        font-weight: 600;
+      }
     }
 
   }
@@ -325,6 +376,7 @@ export default {
     NavIcon: () => import("~/components/NavIcon.vue"),
     PageNextPrev: () => import("~/components/PageNextPrev.vue"),
     Button: () => import("~/components/Button.vue"),
+    Icon: () => import("~/components/Icon.vue")
   },
 
   data(){

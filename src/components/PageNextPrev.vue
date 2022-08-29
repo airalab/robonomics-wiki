@@ -2,8 +2,8 @@
 
     <section class="pageNextPrev">
 
-      <Button v-if="pagePrev" :label="'← ' + getTitleLocalazide(pagePrev)" :link="pagePrev.link" type="secondary"/>
-      <Button v-if="pageNext" :label="getTitleLocalazide(pageNext) + ' →'" :link="pageNext.link" type="secondary"/>
+      <Button v-if="pagePrev" :label="'← ' + getTitleLocalazide(pagePrev)" :link="pagePrev.link" additionalText="previous" type="secondary"/>
+      <Button class="second" v-if="pageNext" :label="getTitleLocalazide(pageNext) + ' →'" :link="pageNext.link" additionalText="next" type="secondary"/>
 
     </section>
 
@@ -16,6 +16,17 @@
 
         display: grid;
         gap: calc(var(--space)/2);
+
+        a {
+          display: inline-flex;
+          flex-direction: column;
+          text-align: right;
+          padding: 1rem 1rem;
+        }
+
+        a.second {
+          text-align: left;
+        }
 
         @media screen and (min-width:500px){
           grid-template-columns: 1fr 1fr;
