@@ -1,6 +1,6 @@
 ---
 title: Connect Sensor To Robonomics Network
- 
+
 contributors: [LoSk-p, Vourhey, Ludovich88]
 translated: false
 ---
@@ -20,13 +20,11 @@ Possibility of connection via I2C interface:
 - [BMP180](https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf) - temperature and humidity
 - [BME/P280](https://www.mouser.com/datasheet/2/783/BST-BME280-DS002-1509607.pdf) - temperature, humidity, atmospheric pressure
 - [HTU21D](https://eu.mouser.com/ProductDetail/Measurement-Specialties/HTU21D?qs=tx5doIiTu8oixw1WN5Uy8A%3D%3D) - temperature and humidity
-- SHT3x(I2C) - temperature and humidity
 - [CCS811 VOC SENSOR](https://www.sciosense.com/wp-content/uploads/documents/Application-Note-Baseline-Save-and-Restore-on-CCS811.pdf) - volatile Organic Compounds, CO2 equivalent
-- LCD1602/ 2004 / OLED SSD1306 / SH1106 - supported displays
 
 Possibility of connection via 1 Wire interface:
 
-- DTH22(AM2302) - temperature and humidity
+- DHT22(AM2302) - temperature and humidity
 - DS18B20 - temperature.
 
 There is also a smaller MINI model with a trimmed down list of connectable devices. The source circuits for both models can be found at [full model](https://oshwlab.com/ludovich88/aira_sensor_rev0-1) and [MINI model](https://oshwlab.com/ludovich88/aira_sensor_d1_mini).
