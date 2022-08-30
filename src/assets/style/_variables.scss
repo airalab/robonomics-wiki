@@ -48,6 +48,8 @@ body {
 
  	--color-testedFor-text: #f2f2f2;
 
+	--ghLogo: #212121;
+
   --space: 3.5rem;
   --space-text: 1.25rem;
   --content-width: auto;
@@ -96,4 +98,6 @@ body[data-theme="dark"] {
 	--color-note-pale--warning: #d19746;
 
 	--color-testedFor-text: #ececec;
+
+	--ghLogo: #fff;
 }

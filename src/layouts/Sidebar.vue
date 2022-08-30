@@ -122,17 +122,17 @@ query {
 
   .docContribution {
 
-    border: 1px solid var(--table-thead-bg);
+    // border: 1px solid var(--table-thead-bg);
     
     .head {
-      background-color: var(--table-thead-bg);
+      // background-color: var(--table-thead-bg);
       padding: calc(var(--space)/4);
       font-weight: 500;
     }
 
     .content {
       padding: calc(var(--space)/4);
-      background-color: var(--table-tr-hover);
+      // background-color: var(--table-tr-hover);
     }
 
   }

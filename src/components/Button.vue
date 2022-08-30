@@ -5,6 +5,7 @@
       <Icon :icon="icon" />
       <span v-if="label != ''" class="inline-block">{{ label }}</span>
     </template>
+    <span class="additional-text"  v-if="icon == 'none' & label != '' & additionalText != ''">  {{ additionalText }}</span>
     <template v-if="icon == 'none' & label != ''">
       {{ label }}
     </template>
@@ -58,6 +59,11 @@ export default {
     icon: {
       type: String,
       default: 'none'
+    },
+
+    additionalText: {
+      type: String,
+      default: '',
     }
   },
 
@@ -175,6 +181,12 @@ export default {
 
   .button.secondary:hover .icon-fill path {
     fill: var(--color-btn-text);
+  }
+
+  .button .additional-text {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
   }
 
 </style>
