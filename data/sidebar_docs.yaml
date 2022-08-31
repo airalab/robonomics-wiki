@@ -71,9 +71,10 @@
         - title_en: Introduction
           title_ru: Введение
           link: /docs/sensors-network-introduction
-        - title_en: Connect Sensor
-          title_ru: Подключение датчика к Робономике
-          link: /docs/connect-sensor-to-robonomics
+        - title_en: Sensor Hardware
+          link: /docs/sensor-hardware
+        - title_en: Sensor Setup
+          link: /docs/sensor-setup
         - title_en: Sensors Connectivity
           link: /docs/sensors-connectivity-on-aira
         - title_en: Configuration Options Description

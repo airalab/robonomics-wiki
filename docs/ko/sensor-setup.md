@@ -2,7 +2,7 @@
 title: Sensor Setup
 
 contributors: [LoSk-p, nakata]
-translated: true
+translated: false
 ---
 
 After assembling board, now it's time to set up it.
@@ -76,8 +76,8 @@ That's all with default installation. Here is  a video with full path of board a
 
 https://www.youtube.com/watch?v=OdTd1sacCso
 
-For a more detailed setup - connect additional sensors or send data to your own server, read next section.
 
+For a more detailed setup - connect additional sensors or send data to your own server, read next section.
 
 ## Additional configuration
 

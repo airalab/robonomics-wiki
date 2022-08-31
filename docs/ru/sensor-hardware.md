@@ -2,7 +2,7 @@
 title: Sensor Hardware
 
 contributors: [nakata, Ludovich88]
-translated: true
+translated: false
 ---
 
 To join  air monitoring with Robonomics Open Sensors Network you require an air pollution board with sensors. There are two ways to get sensor: 
