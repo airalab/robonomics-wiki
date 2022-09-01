@@ -1,29 +1,9 @@
 <template>
   <Layout>
-    <h1><g-link to="/">{{ $st('Home', $store.state.locale) }}</g-link> / {{title}}</h1>
+    <h1><g-link to="/">{{ $st('Home', $store.state.locale) }}</g-link> / {{titleLocal || title}}</h1>
 
-    <!-- <GridLinks :links="navLinks" /> -->
+    <GridLinks v-if="navLinks" :links="navLinks" />
 
-    <div class="summary" v-if="title">
-      <!-- <h2 class="summary-title">{{title}} :</h2> -->
-      <ol  class="menu summary-menu" v-if="items">
-        <li v-for="item in items" :key="item.title_en">
-          <g-link v-if="item.link" class="menu-link" :to="$path(item.link, locale)" exact>
-            {{ item[`title_${locale}`] ? item[`title_${locale}`] : item[`title_en`] }}
-          </g-link>
-
-          <template v-else>
-
-            <h4 class="menu-subtitle" @click="toggle" v-if="item.published!=false" :class="hascurrent(item.items) ? 'open' : 'close'">
-               {{ item[`title_${locale}`] ? item[`title_${locale}`] : item[`title_en`] }}
-            </h4>
-
-            <List :items="item.items" />
-          </template>
-
-        </li>
-      </ol>
-    </div>
     <div class="summary__not-exist" v-if="!items.length">
       Sorry, nothing here :(
     </div>
@@ -49,7 +29,8 @@
           title: null,
           items: [],
           allItems: items,
-          navLinks: []
+          navLinks: [],
+          titleLocal: null,
       };
     },
 
@@ -62,62 +43,60 @@
     methods: {
         
       getItemsForTitle(elements) {
-
         if(!this.title) {
           return 
         }
         
-
         const cleanTitle = this.title.replace(/-/g, ' ');
 
         this.title = cleanTitle;
 
-
         let item = null;
         let t = null;
+        
         for (let i = 0; i < elements.length; i++) {
-
           item = elements[i];
 
           if(this.title.toLowerCase() === (item[`title_${this.locale}`] && item[`title_${this.locale}`].toLowerCase().replace(/-/g, ' ')) || this.title.toLowerCase() === item[`title_en`].toLowerCase().replace(/-/g, ' ') || item.items && (t = this.getItemsForTitle(item.items))) {
+            if(!this.titleLocal) {
+              this.titleLocal = item[`title_${this.locale}`];
+            }
             if(!this.items.length) {
               this.items = item.items;
+              this.getNavLinks();
             }
             return item;
           }
+
         }
         return null;
+      },
+
+      getNavLinks() {
+        if(this.items.length) {
+          this.items.forEach(i => {
+            const obj = {
+              to: i.link || `/summary/${i[`title_en`].toLowerCase().replace(/ /g, '-')}`,
+              name: i[`title_${this.locale}`] || i[`title_en`]
+            };
+            
+            this.navLinks.push(obj);
+          })
+        }
       },
 
       toggle (event) {
         event.target.classList.toggle('open')
       },  
-            
-      hascurrent (a) {
-        let path = this.$route.matched[0].path + '/'
-        let contains = false
-
-        for (var i = 0; i < a.length; i++) {
-
-          if(!a[i].items){
-            if(this.$path(a[i].link, this.locale) == path){
-              contains = true;
-            }
-          }
-          else{
-            if( this.hascurrent(a[i].items) ){
-              contains = true;
-            }
-          }
-        }
-        return contains;
-      },
     },
 
     watch: {
       '$route.path': function(curr, old) {
         const { title } = this.$route.params;
         this.title = title;
+        this.items = [];
+        this.navLinks = [];
+        this.titleLocal = null;
         this.getItemsForTitle(this.allItems);
       }
     },
