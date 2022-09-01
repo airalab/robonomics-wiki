@@ -1,7 +1,11 @@
 <template>
   <Layout>
+    <h1><g-link to="/">{{ $st('Home', $store.state.locale) }}</g-link> / {{title}}</h1>
+
+    <!-- <GridLinks :links="navLinks" /> -->
+
     <div class="summary" v-if="title">
-      <h2 class="summary-title">{{title}} :</h2>
+      <!-- <h2 class="summary-title">{{title}} :</h2> -->
       <ol  class="menu summary-menu" v-if="items">
         <li v-for="item in items" :key="item.title_en">
           <g-link v-if="item.link" class="menu-link" :to="$path(item.link, locale)" exact>
@@ -29,9 +33,11 @@
 
 <script>
   import items from '../../../data/sidebar_docs.yaml'
-export default {
+
+  export default {
     components: {
-      List: () => import("../../components/SidebarDocs.vue")
+      List: () => import("../../components/SidebarDocs.vue"),
+      GridLinks: () => import('~/components/GridLinks.vue'),
     },
 
     metaInfo: {
@@ -43,6 +49,7 @@ export default {
           title: null,
           items: [],
           allItems: items,
+          navLinks: []
       };
     },
 
@@ -124,6 +131,10 @@ export default {
 </script>
 
 <style scoped>
+
+  h1 {
+    margin-top: calc(var(--space) * 2)
+  }
 
   .summary {
     display: flex;

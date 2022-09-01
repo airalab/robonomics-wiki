@@ -7,15 +7,8 @@
       <h1>{{$st('Enter title', $store.state.locale)}}</h1>
       <div class="intro-description">{{ $st('Site Description', $store.state.locale) }}</div>
     </div>
-
-    <nav class="grid-navigation">
-      <g-link :to="$path('/docs/', $store.state.locale)" :aria-label="$st('Menu', $store.state.locale) + ' ' + $st('Enter Nav 1', $store.state.locale)">{{$st('Enter Nav 1', $store.state.locale)}}</g-link>
-      <g-link :to="$path('/docs/playground-overview/', $store.state.locale)" :aria-label="$st('Menu', $store.state.locale) + ' ' + $st('Enter Nav 2', $store.state.locale)">{{$st('Enter Nav 2', $store.state.locale)}}</g-link>
-      <g-link :to="$path('/docs/robonomics-test-network-manual/', $store.state.locale)" :aria-label="$st('Menu', $store.state.locale) + ' ' + $st('Enter Nav 3', $store.state.locale)">{{$st('Enter Nav 3', $store.state.locale)}}</g-link>
-      <g-link :to="$path('/docs/connect-sensor-to-robonomics/', $store.state.locale)" :aria-label="$st('Menu', $store.state.locale) + ' ' + $st('Enter Nav 4', $store.state.locale)">{{$st('Enter Nav 4', $store.state.locale)}}</g-link>
-      <g-link :to="$path('/docs/robonomics-js/', $store.state.locale)" :aria-label="$st('Menu', $store.state.locale) + ' ' + $st('Enter Nav 5', $store.state.locale)">{{$st('Enter Nav 5', $store.state.locale)}}</g-link>
-      <g-link :to="$path('/docs/contributing/', $store.state.locale)" :aria-label="$st('Menu', $store.state.locale) + ' ' + $st('Enter Nav 6', $store.state.locale)">{{$st('Enter Nav 6', $store.state.locale)}}</g-link>
-    </nav>
+    
+    <GridLinks :links="navLinks" />
 
   </Layout>
 </template>
@@ -23,44 +16,6 @@
 
 
 <style scoped>
-  .grid-navigation {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space);
-    margin-top: var(--space);
-    margin-bottom: var(--space);
-
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-  }
-
-  .grid-navigation a {
-      transition: 0.2s ease all;
-      display: block;
-      text-decoration: none;
-      padding: var(--space);
-      border: 1px solid var(--border-color);
-
-      box-shadow: 0.2rem 0.2rem 0 0 var(--link-color);
-      border-color: var(--link-color);
-      background-color: var(--color-link-background-highlight);
-    }
-
-    .grid-navigation a:hover {
-        transform: translateY(-0.2rem);
-        box-shadow: 0.2rem 0.2rem 0.8rem var(--link-color);
-      }
-
-    @media screen and (max-width: 800px) {
-      .grid-navigation { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media screen and (max-width: 550px) {
-      .grid-navigation { grid-template-columns: 1fr; }
-    }
-
-
   .intro {
     padding-top: calc(var(--space) * 3);
     padding-bottom: calc(var(--space) * 2);
@@ -95,10 +50,6 @@
       text-align: center;
       padding-top: calc(var(--space) * 2);
     }
-
-    .grid-navigation {
-      margin-bottom: calc(var(--space) * 2);
-    }
   }
 </style>
 
@@ -106,9 +57,40 @@
 <script>
 export default {
   components: {
-      Button: () => import('~/components/Button.vue')
-    },
+      Button: () => import('~/components/Button.vue'),
+      GridLinks: () => import('~/components/GridLinks.vue'),
+  },
 
+  data() {
+    return {
+      navLinks: [
+        {
+          to: '/docs/',
+          name: 'Enter Nav 1'
+        },
+        {
+          to: '/docs/playground-overview/',
+          name: 'Enter Nav 2'
+        },
+        {
+          to: '/docs/robonomics-test-network-manual/',
+          name: 'Enter Nav 3'
+        },
+        {
+          to: '/docs/connect-sensor-to-robonomics/',
+          name: 'Enter Nav 4'
+        },
+        {
+          to: '/docs/robonomics-js/',
+          name: 'Enter Nav 5'
+        },
+        {
+          to: '/docs/contributing/',
+          name: 'Enter Nav 6'
+        },
+      ]
+    }
+  },
 
   metaInfo() {
     return {

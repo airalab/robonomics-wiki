@@ -1,3 +1,11 @@
+- alias: Home
+  en: Home
+  es: Home
+  ja: Home
+  ko: Home
+  pt: Home
+  ru: Главная
+
 - alias: Enter title
   en: Explore Robonomics wiki
   es: Explore wiki Robonomics
