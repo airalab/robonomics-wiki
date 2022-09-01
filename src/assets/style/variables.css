@@ -1,4 +1,4 @@
-// Light default theme
+/* Light default theme */
 body {
 	--font-size: 1.2rem;
 	--font-family: 'Roboto', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
@@ -60,7 +60,7 @@ body {
   --width-sidebar-right: 250px;
 }
 
-// Make  things smaller for mobile
+/* Make  things smaller for mobile */
 @media screen and (max-width: 1080px) {
 	body {
 		--space: 2rem;
@@ -68,7 +68,7 @@ body {
 }
 
 
-// Override variables for Dark theme
+/* Override variables for Dark theme */
 body[data-theme="dark"] {
  	--body-bg: #213039;
  	--text-color: #ced8de;

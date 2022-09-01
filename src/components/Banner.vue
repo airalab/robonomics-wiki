@@ -7,7 +7,7 @@
 	</div>
 </template>
 
-<style lang="scss">
+<style>
 	.banners {
 		margin-top: var(--space);
 	}
@@ -15,22 +15,22 @@
 	.banner {
 		display: block;
 		width: 100%;
-		margin-top: calc(var(--space)/2);
+		margin-top: calc(var(--space)/2)
+	}
 
-		img {
+	.banner img {
 			display: block;
 			max-width: 100%;
 			border: 0;
 		}
 
-		&:hover {
+		.banner:hover {
 			opacity: .9 !important;
 		}
 
-		&.sidebar {
+		.banner.sidebar {
 			max-width: 300px;
 		}
-	}
 </style>
 
 <script>

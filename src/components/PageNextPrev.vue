@@ -9,7 +9,7 @@
 
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 
     .pageNextPrev {
         padding: calc(var(--space)/2) 0;
@@ -17,23 +17,23 @@
         display: grid;
         gap: calc(var(--space)/2);
 
-        a {
-          display: inline-flex;
-          flex-direction: column;
-          text-align: right;
-          padding: 1rem 1rem;
-        }
-
-        a.second {
-          text-align: left;
-        }
-
-        @media screen and (min-width:500px){
-          grid-template-columns: 1fr 1fr;
-        }
-
         text-transform: uppercase
     }
+
+    .pageNextPrev a {
+        display: inline-flex;
+        flex-direction: column;
+        text-align: right;
+        padding: 1rem 1rem;
+      }
+
+      .pageNextPrev a.second {
+        text-align: left;
+      }
+
+      @media screen and (min-width:500px){
+        .pageNextPrev { grid-template-columns: 1fr 1fr; }
+      }
 
 </style>
 

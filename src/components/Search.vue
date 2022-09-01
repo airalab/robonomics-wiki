@@ -40,7 +40,7 @@ query{
 }
 </static-query>
 
-<style lang="scss" scope>
+<style scoped>
 
   .search-container {
     --background-active: var(--color-focus-light);
@@ -51,23 +51,24 @@ query{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
 
-    &, a, input[type="search"], input[type="search"]::placeholder {
+  .search-container, .search-container a, .search-container input[type="search"], .search-container input[type="search"]::placeholder {
       color: var(--text-color);
     }
 
-    .layout__content {
+    .search-container .layout__content {
       max-width: 950px;
     }
 
-    input[type="search"] {
+    .search-container input[type="search"] {
       transition: 0.2s ease all;
       width: 100%;
       text-transform: none;
       letter-spacing: 0;
     }
 
-    .searchresults {
+    .search-container .searchresults {
       position: fixed;
       top: 4rem;
       left: 0;
@@ -85,32 +86,28 @@ query{
       transition: 0.4s ease opacity;
       opacity: 0;
       visibility: hidden;
-
-      nav a {
-        transition: 0.2s ease all;
-        display: block;
-        padding: 1rem;
-        border-top: 1px dashed var(--border-separates);
-
-        &:hover {
-          background-color: var(--table-tr-hover);
-        }
-      }
     }
 
-    &.active{
-      .searchresults{
-          opacity: 1;
-          visibility: visible;
-        }
+    .search-container .searchresults nav a {
+      transition: 0.2s ease all;
+      display: block;
+      padding: 1rem;
+      border-top: 1px dashed var(--border-separates);
+    }
 
-      input[type="search"] {
-        background-color: var(--background-active);
-        border-color: var(--border-bottom)
+    .search-container .searchresults nav a:hover {
+        background-color: var(--table-tr-hover);
       }
 
+    .search-container.active .searchresults{
+      opacity: 1;
+      visibility: visible;
     }
-  }
+
+    .search-container.active input[type="search"] {
+      background-color: var(--background-active);
+      border-color: var(--border-bottom)
+    }
 
   .search-msg-count {
     padding: 1rem;

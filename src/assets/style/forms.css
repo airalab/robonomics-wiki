@@ -1,5 +1,4 @@
 input, select, textarea{
-	// border: 1px solid var(--border-color);
 	border: 0;
 	background-color: var(--body-bg);
 	border-radius: var(--radius);
@@ -24,6 +23,5 @@ select {
 }
 
 input:not([type="radio"]):not([type="checkbox"]), textarea {
-	// padding: .3rem .8rem;
 	padding: .3rem;
 }

@@ -8,41 +8,38 @@
 	</div>
 </template>
 
-<style lang="scss">
+<style>
 	.sectionToggler {
 		cursor: pointer;
     min-width: 26px;
+	}
 
-		&:hover{
+
+  .sectionToggler:hover{
 			opacity: .6;
 		}
 
-		svg{
+		.sectionToggler svg{
 			fill: var(--header-color-text);
       display: none;
       margin: 0 auto;
 		}
 
-    &.open {
-      .sectionTogglerOpen {
-         display: block;
-      }
-
-      .sectionTogglerClose {
-         display: none;
-      }
+    .sectionToggler.open .sectionTogglerOpen {
+        display: block;
     }
 
-    &.close {
-      .sectionTogglerOpen {
+    .sectionToggler.open .sectionTogglerClose {
+        display: none;
+    }
+
+    .sectionToggler.close .sectionTogglerOpen {
          display: none;
       }
 
-      .sectionTogglerClose {
+      .sectionToggler.close .sectionTogglerClose {
         display: block;
       }
-    }
-	}
 	
 </style>
 

@@ -28,18 +28,20 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 .toggle-theme {
   background-color: transparent;
   border: 0;
   color: var(--header-color-text);
   cursor: pointer;
-
-  &:hover {
-    opacity: .8
-  }
-  &:focus {
-    outline: none;
-  }
 }
+
+.toggle-theme:hover {
+  opacity: .8
+}
+
+.toggle-theme:focus {
+  outline: none;
+}
+
 </style>

@@ -50,7 +50,7 @@
   </footer>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
   .footer {
     padding-top: var(--space);
     padding-bottom: var(--space);
@@ -61,14 +61,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space);
+  }
 
-    @media screen and (max-width: 880px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  @media screen and (max-width: 880px) {
+    .layout__page { grid-template-columns: repeat(2, 1fr); }
+  }
 
-    @media screen and (max-width: 480px) {
-      grid-template-columns: 1fr;
-    }
+  @media screen and (max-width: 480px) {
+    .layout__page { grid-template-columns: 1fr; }
   }
 
   ul {

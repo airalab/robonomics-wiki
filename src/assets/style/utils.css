@@ -18,28 +18,20 @@
 	font-style: italic;
 }
 
-.hiddenMobile{ 
-	@media screen and (max-width: 1080px) {
-		display: none !important;
-	}
+@media screen and (max-width: 1080px) {
+	.hiddenMobile { display: none !important; }
 }
 
-.hiddenMobile--720{ 
-	@media screen and (max-width: 720px) {
-		display: none !important;
-	}
+@media screen and (max-width: 720px) {
+	.hiddenMobile--720 { display: none !important; }
 }
 
-.hiddenDesktop{ 
-	@media screen and (min-width: 1080px) {
-		display: none !important;
-	}
+@media screen and (min-width: 1080px) {
+	.hiddenDesktop { display: none !important; }
 }
 
-.hiddenDesktop--720{ 
-	@media screen and (min-width: 720px) {
-		display: none !important;
-	}
+@media screen and (min-width: 720px) {
+	.hiddenDesktop--720 { display: none !important; }
 }
 
 .inline-block {

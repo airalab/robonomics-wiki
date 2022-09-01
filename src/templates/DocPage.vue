@@ -76,7 +76,7 @@
   </Sidebar>
 </template>
 
-<style lang="scss">
+<style>
 
   .page-title-meta {
     border-width: 1px 0;
@@ -88,12 +88,12 @@
     margin-left: 0;
     display: flex;
     padding: 1rem 0;
+  }
 
-    li {
-      margin-right: var(--space);
-      margin-left: 1rem;
-      margin-bottom: 0;
-    }
+  .page-title-meta li {
+    margin-right: var(--space);
+    margin-left: 1rem;
+    margin-bottom: 0;
   }
 
   .page{
@@ -101,17 +101,16 @@
       grid-template-columns: minmax(0,var(--width-sidebar-left)) auto;
       gap: var(--space);
       align-items: start;
-
-      &__sidebar#sidebarDoc {
-        word-break: break-word;
-
-        overflow-y: auto;
-        max-height: calc(100vh - 80px);
-        scrollbar-width: none;  /* Firefox */
-        -ms-overflow-style: none;  /* IE and Edge */
-        &::-webkit-scrollbar { display: none; } /* Hide scrollbar for Chrome, Safari and Opera */
-      }
   }
+  .page__sidebar#sidebarDoc {
+      word-break: break-word;
+
+      overflow-y: auto;
+      max-height: calc(100vh - 80px);
+      scrollbar-width: none;  /* Firefox */
+      -ms-overflow-style: none;  /* IE and Edge */
+  }
+  .page__sidebar#sidebarDoc::-webkit-scrollbar { display: none; } /* Hide scrollbar for Chrome, Safari and Opera */
 
   #sidebarContent, #sidebarDocs {
     position: sticky;
@@ -147,86 +146,75 @@
     gap: var(--space);
     align-items: start;
     padding-top: calc(var(--space)/2);
-
-    h2, h3 {
-      &:first-child {
-        padding-top: 0;
-      }
-    }
-
-    a[target=_blank] {
-      &:after {
-        padding-left: .2rem;
-        display: inline-block;
-        content: "↗";
-      }
-
-      &:hover:after {
-        transform: translateX(0.1rem) translateY(-0.1rem);
-      }
-    }
   }
 
-  .docContribution {
+  .page-content h2:first-child, .page-content h3:first-child {
+    padding-top: 0;
+  }
 
-    // border: 1px solid var(--table-thead-bg);
+  .page-content a[target=_blank]:after {
+    padding-left: .2rem;
+    display: inline-block;
+    content: "↗";
+  }
 
-    .head {
-      // background-color: var(--table-thead-bg);
-      padding: calc(var(--space)/4);
-      padding-top: 0;
-      font-weight: 600;
-
-      a {
-        color: var(--text-color);
-        text-decoration: none;
-
-        &::after {
-          display: none;
-        }
-      }
+  .page-content a[target=_blank]:hover:after {
+      transform: translateX(0.1rem) translateY(-0.1rem);
     }
 
-    .content {
-      padding: calc(var(--space)/4);
-      font-weight: 600;
-      // background-color: var(--table-tr-hover);
+  .docContribution .head {
+    padding: calc(var(--space)/4);
+    padding-top: 0;
+    font-weight: 600;
+  }
 
-      p {
-        margin-bottom: 0;
+  .docContribution .head a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
 
-        .submit {
-          text-decoration: none;
-          &::after {
-            display: none;
-          }
-        }
-      }
-    }
+  .docContribution .head a::after {
+    display: none;
+  }
 
-    .github-title {
+  .content {
+    padding: calc(var(--space)/4);
+    font-weight: 600;
+  }
+
+  .content p {
+      margin-bottom: 0;
+  }
+
+  .content p .submit {
+    text-decoration: none;
+  }
+
+  .content p .submit::after {
+    display: none;
+  }
+
+  .github-title {
       display: flex;
       align-items: center;
       margin-bottom: 1rem;
+    }
 
-      svg {
+    .github-title svg {
         margin-right: 15px;
         width: 32px;
         height: 32px;
         fill: transparent;
-
-        path {
-          fill: var(--ghLogo);
-        }
-      }
-
-      h5 {
-        margin: 0;
-        font-weight: 600;
-      }
     }
 
-  }
+    .github-title svg path {
+      fill: var(--ghLogo);
+    }
+
+    .github-title h5 {
+      margin: 0;
+      font-weight: 600;
+    }
 
   .testedFor__link {
     display:inline-block;
@@ -250,9 +238,9 @@
     .page{
       grid-template-columns: minmax(0,1fr);
       padding-top: calc(var(--space) * 1.3);
+    }
 
-
-      &__sidebar{
+    .page__sidebar{
 
         position: fixed !important;
 
@@ -266,7 +254,6 @@
         padding: var(--space);
         background-color: var(--body-bg);
       }
-    }
 
     #sidebarDocs, #sidebarContent {
       height: 100vh;
@@ -315,7 +302,6 @@
   @media screen and (max-width: 720px) {
     .page-title-meta { display: block; }
     .page-content { grid-template-columns: minmax(0, 1fr) }
-    // #sidebarContent { display: none; }
 
     #sidebarContent.page__sidebar {
       position: fixed !important;

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;500&display=swap');
 
 
 body {
@@ -28,8 +27,10 @@ h1, h2, h3, h4, h5 {
   font-weight: 300;
 
   word-break: break-word;
+}
 
-  &:first-child { margin-top: 0 }
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child {
+  margin-top: 0 
 }
 
 
@@ -37,10 +38,10 @@ h1 {
   margin-top: 0;
   font-size: 2.5rem;
   font-weight: 700;
+}
 
-  @media screen and (max-width: 720px) {
-    font-size: 2rem;
-  }
+@media screen and (max-width: 720px) {
+  h1 { font-size: 2rem; }
 }
 
 h2 {font-size: 1.7rem;}
@@ -72,23 +73,22 @@ ul {
   list-style-type: disc; 
   margin-left: var(--space-text);
   margin-bottom: var(--space-text);
-  li {
-    margin-bottom: .6rem;
-  }
+}
+ul li {
+  margin-bottom: .6rem;
 }
 ol { 
   list-style-type: decimal; 
   margin-left: var(--space-text);
   margin-bottom: var(--space-text);
-  li {
-    margin-bottom: .6rem;
-  }
+}
+ol li {
+  margin-bottom: .6rem;
 }
 
 
-
-p, ul, ol, li, blockquote {
-  &:last-child { margin-top: 0 }
+p:last-child, ul:last-child, ol:last-child, li:last-child, blockquote:last-child {
+  margin-top: 0
 }
 
 section{
@@ -96,15 +96,15 @@ section{
 }
 
 details {
-  summary {
-    cursor: pointer;
-    padding: calc(var(--space-text)/2);
-    border: 1px dashed var(--border-color);
-    background-color: var(--border-color-light);
-    font-weight: 700;
-    margin-bottom: var(--space-text);
-  }
+  margin-bottom: var(--space-text);
+}
 
+details summary {
+  cursor: pointer;
+  padding: calc(var(--space-text)/2);
+  border: 1px dashed var(--border-color);
+  background-color: var(--border-color-light);
+  font-weight: 700;
   margin-bottom: var(--space-text);
 }
 

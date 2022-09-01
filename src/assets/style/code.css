@@ -33,18 +33,6 @@ pre{
 }
 
 
-// pre::-moz-selection, pre ::-moz-selection,
-// code::-moz-selection, code ::-moz-selection {
-// text-shadow: none;
-// }
-
-// pre::selection, pre ::selection,
-// code::selection, code ::selection {
-// text-shadow: none;
-// }
-
-
-
 .language-html {
   font-variant-ligatures: none;
 }

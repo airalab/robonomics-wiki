@@ -27,7 +27,7 @@
   </header>
 </template>
 
-<style lang="scss">
+<style>
 
   .header {
 
@@ -40,13 +40,12 @@
     position: sticky;
     top:0;
     z-index: 9999;
+  }
 
-
-    a {
+  .header a {
       text-decoration: none;
       color: var(--header-color-text);
     }
-  }
 
   .header-top {
     display: grid;
@@ -62,14 +61,12 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
-
-    img { max-width: var(--width-logo-sign) }
   }
 
-  .header-logo, .header-nav {
-    & > *:not(:last-child) {
-      margin-right: 1rem;
-    }
+  .header-logo img { max-width: var(--width-logo-sign) }
+
+  .header-logo > *:not(:last-child), .header-nav > *:not(:last-child) {
+    margin-right: 1rem;
   }
 
   .header-nav { text-align: right; }
@@ -91,11 +88,11 @@
       grid-column-start: 1;
       grid-column-end: 3;
       grid-row-start: 2;
+    }
 
-      .searchresults {
+    .header-center .searchresults {
         top: 7rem !important
       }
-    }
 
   }
 
@@ -108,10 +105,8 @@
     .header-nav { font-size: 50%; }
   }
 
-  body[data-theme="dark"] {
-    select {
+  body[data-theme="dark"] select {
       background-image: url("data:image/svg+xml;utf8,<svg fill='#ced8de' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-    }
   }
 
   html[lang="ru"] .header-logo { font-size: 1rem; }

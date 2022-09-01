@@ -22,7 +22,7 @@
 
 
 
-<style lang="scss" scoped>
+<style scoped>
   .grid-navigation {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -33,8 +33,9 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
+  }
 
-    a {
+  .grid-navigation a {
       transition: 0.2s ease all;
       display: block;
       text-decoration: none;
@@ -44,21 +45,20 @@
       box-shadow: 0.2rem 0.2rem 0 0 var(--link-color);
       border-color: var(--link-color);
       background-color: var(--color-link-background-highlight);
+    }
 
-      &:hover {
+    .grid-navigation a:hover {
         transform: translateY(-0.2rem);
         box-shadow: 0.2rem 0.2rem 0.8rem var(--link-color);
       }
-    }
 
     @media screen and (max-width: 800px) {
-      grid-template-columns: repeat(2, 1fr);
+      .grid-navigation { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media screen and (max-width: 550px) {
-      grid-template-columns: 1fr;
+      .grid-navigation { grid-template-columns: 1fr; }
     }
-  }
 
 
   .intro {
