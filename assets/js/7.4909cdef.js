@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[6],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[7],{
 
 /***/ "26lw":
 /*!**********************************************************************************************************************************************************************************************************************************************************!*\
@@ -8,7 +8,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  props: {\n    icon: {\n      type: String\n    },\n    classList: {\n      type: String\n    },\n    scale: {\n      type: String,\n      default: '1'\n    }\n  },\n  components: {\n    Github: () => __webpack_require__.e(/*! import() */ 18).then(__webpack_require__.bind(null, /*! @/assets/images/IconGithub.svg */ \"UA7s\"))\n  },\n  methods: {\n    SvgWidth(SvgWidth) {\n      return `${SvgWidth * this.scale}px`;\n    }\n\n  }\n});\n\n//# sourceURL=webpack:///./src/components/Icon.vue?./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/babel-loader/lib??ref--1-1!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  props: {\n    icon: {\n      type: String\n    },\n    classList: {\n      type: String\n    },\n    scale: {\n      type: String,\n      default: '1'\n    }\n  },\n  components: {\n    Github: () => __webpack_require__.e(/*! import() */ 19).then(__webpack_require__.bind(null, /*! @/assets/images/IconGithub.svg */ \"UA7s\"))\n  },\n  methods: {\n    SvgWidth(SvgWidth) {\n      return `${SvgWidth * this.scale}px`;\n    }\n\n  }\n});\n\n//# sourceURL=webpack:///./src/components/Icon.vue?./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/babel-loader/lib??ref--1-1!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
