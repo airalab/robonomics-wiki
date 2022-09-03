@@ -75,8 +75,10 @@
           link: /docs/sensor-hardware
         - title_en: Sensor Setup
           link: /docs/sensor-setup
-        - title_en: Sensors Connectivity
+        - title_en: Sensors Connectivity Module Introduction
           link: /docs/sensors-connectivity-on-aira
+        - title_en: Sensors Connectivity Module Setup
+          link: /docs/sensors-connectivity-setup
         - title_en: Configuration Options Description
           link: /docs/configuration-options-description
         - title_en: Connect an Amazon FreeRTOS device to Robonomics by MQTT
