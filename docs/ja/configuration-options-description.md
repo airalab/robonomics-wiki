@@ -1,112 +1,37 @@
 ---
-title: Configuration Options Description
- 
+title: Configuration Options Description 
+
 contributors: [LoSk-p, Vourhey, tubleronchik]
 translated: false
 ---
 
-Basically, you can think of the package as a black box with one input (sensor data) and many outputs.
+Basically, you can think of the Sensors Connectivity module as a black box with one input (sensor data) and many outputs.
 For now only SDS011 sensor is supported, but if you are familiar with Python it'd be easy to add other sensors as well.
 
-Have a look at [configuration](https://github.com/airalab/sensors-connectivity/blob/master/config/default.json) file:
+At the moment it's possible to publish data to [Luftdaten](https://luftdaten.info/) and [Robonomics Network Datalog](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/explorer). 
+Robonomics team prepare some ready configuration files to use.
+Full overview of configuration fields you can find [here.](https://github.com/airalab/sensors-connectivity/tree/master/connectivity/config)
 
-```json
-{
-   "general": {
-      "publish_interval": 30,
-      "db_path": ""
-   },
-   "comstation": {
-      "enable": false,
-      "port": "/dev/ttyUSB0",
-      "work_period": 300,
-      "geo": "",
-      "public_key": ""
-   },
-   "httpstation": {
-      "enable": true,
-      "port": 8001
-   },
-   "mqttstation": {
-      "enable": false,
-      "host": "localhost",
-      "port": 1883
-   },
-   "luftdaten": {
-      "enable": false
-   },
-   "robonomics": {
-      "enable": true,
-      "ipfs_provider": "/ip4/127.0.0.1/tcp/5001/http",
-      "ipfs_topic": "airalab.lighthouse.5.robonomics.eth"
-   },
-   "datalog": {
-      "enable": false,
-      "suri": "",
-      "dump_interval": 60,
-      "temporal_username": "",
-      "temporal_password": "",
-      "pinata_api": "",
-      "pinata_secret": ""
-   },
-   "dev": {
-      "sentry": ""
-   },
-   "frontier": {
-      "enable": true,
-      "suri": ""
-   },
-   "trackagro": {
-      "enable": false,
-      "token": ""
-   }
-}
-```
-At the moment it's possible to publish data to [Luftdaten](https://luftdaten.info/), [Robonomics Network](https://robonomics.network/) and [Datalog](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/explorer).
-The last one is experimental!
-
-> DO NOT edit `config/default.json` file. Instead make a copy
-
-Play around with the configuration!
-
-Explanation of options:
-
-| Field                         | Description                                                                                                                                                                                                                                           |
-|------------------------------    |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    |
-| `general/publish_interval`         | integer number from 1 and above. Tells how often send measurements. Keep in mind that if measurements from sensors come less often than this number connectivity sends last data      |
-| `general/db_path`                  |   path to the database (.db) file    |
-| `comstation/enable`                | true/false. Enabling/disabling the station      |
-| `comstation/port`                  | valid path to com port, for example `/dev/ttyUSB0`. It is where a sensor is connected to      |
-| `comstation/work_period`           | integer from 0 to 1800. For SDS011 sensor 0 means continuous work. Recommended period is 300 seconds     |
-| `comstation/geo`                   | `lat,lon` a string with two floats separated by a comma. It represents latitude and longitude of a sensor     |
-| `comstation/public_key`            | Ed25519 verifying key in hex format. If not provided connectivity generates a new one      |
-| `httpstation/enable`                | true/false. Enabling/disabling the station   |
-| `httpstation/port`                  | what port listen to      |
-| `mqttstation/enable`                | true/false. Enabling/disabling the station   |
-|`mqttstation/host`                   | the hostname or IP address of the remote broker |
-|`mqttstation/port`                   | the network port of the server host to connect to |
-| `luftdaten/enable`                 | true/false. Whether or not publish data to [Luftdaten](https://devices.sensor.community/). Don't forget to register the sensor's mac address on the site         |
-| `robonomics/enable`                | true/false. Whether or not publish data to IPFS topic according to Robonomics communication protocol      |
-| `robonomics/ipfs_proveder`         | an endpoint for IPFS daemon. By default it's `/ip4/127.0.0.1/tcp/5001/http` that means local daemon. The endpoint must by in multiaddr format. For example for [Infura.io](https://infura.io/) it would be `/dns/ipfs.infura.io/tcp/5001/https`       |
-| `robonomics/ipfs_topic`            | IPFS topic's name. If you want to use [DApp](https://sensors.robonomics.network) provided by Robonomics team leave it untouched                 |
-| `datalog/enable`                   | true/false. Enable/Disable saving log to [Robonomics Parachain](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/explorer)    |
-| `datalog/suri`                     | a private key from robonomics parachain account  |
-| `datalog/dump_interval`            | specify a period of time for collecting log in seconds                                      |
-| `datalog/temporal_username`        | set username to upload files to [Temporal.Cloud](https://temporal.cloud/) (Optional)                  |
-| `detalog/temporal_password`        | set password to upload files to [Temporal.Cloud](https://temporal.cloud/) (Optional)                  |
-| `datalog/pinata_api`                | your personal [pinata](https://docs.pinata.cloud#connecting-to-the-api) api key                      |
-| `datalog/pinata_secret`            | your personal [pinata](https://docs.pinata.cloud#connecting-to-the-api) secret api key                |
-| `dev/sentry`                       | for development purpose. If you have a [Sentry.io](https://sentry.io/) account you can put sentry's credentials in here   |
-| `frontier/enable`                  | true/false. Whether or not publish telemetry to [Robonomics Parachain](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/explorer)   |
-| `frontier/suri`                    | a private key from robonomics parachain account                                                       |
-| `trackagro/enable`                 | true/false. Enabling/disabling the station from [TrackAgro](https://tmeteo.docs.apiary.io/#)          |
-| `trackagro/token`                  | authorization token for [TrackAgro](https://tmeteo.docs.apiary.io/#)                                  |
-
+This Article contains advanced configurations scenarios. If you don't read previous article ["Sensors Connectivity Module Setup"](/docs/sensors-connectivity-setup/) first read it.
 ## Scenario #1: Connect SDS011 to serial port
 
-The easiest and the most straightforward way to connect your sensor to the network is using the serial port
+The easiest and the most straightforward way to connect your sensor to the network is using the serial port.
 
-Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` address
+First, connect you board to a USB port, and find path to board with next command:
+
+```bash
+$ ls -l /dev/serial/by-id
+total 0
+lrwxrwxrwx 1 root root 13 сен  5 14:01 usb-1a86_USB2.0-Ser_-if00-port0 -> ../../ttyUSB0
+```
+
+In the example it is `ttyUSB0`.
+Now you need to create new configuration file, or edit existing configuration file from previous [article](/docs/sensors-connectivity-setup/#json-configuration).
+Insert to configuration file what you see below. Write full path to your database in file.
+
+<robo-wiki-note type="okay">
+Don't forget to insert your Board path to port statement and your latitude and longitude of a sensor to geo statement.
+</robo-wiki-note>
 
 ```json
 {
@@ -116,13 +41,13 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
    },
    "comstation":{
       "enable":true,
-      "port":"/dev/ttyUSB0",
+      "port":"/dev/<YOUR-PATH-TO-BOARD>",
       "work_period":300,
-      "geo":"59.944954,30.294534",
+      "geo":"00.000000,00.000000",
       "public_key":""
    },
    "httpstation": {
-      "enable": true,
+      "enable": false,
       "port": 8001
    },
    "mqttstation": {
@@ -151,7 +76,7 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
       "sentry": ""
    },
    "frontier": {
-      "enable": true,
+      "enable": false,
       "suri": ""
    },
    "trackagro": {
@@ -161,74 +86,23 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
 }
 ```
 
-## Scenario #2: Connect SDS011 via HTTP
+And start Sensors Connectivity module.
 
-### Connectivity Configuration
+## Scenario #2: Connect SDS011 via MQTT
 
-```json
-{
-   "general": {
-      "publish_interval": 30,
-      "db_path": ""
-   },
-   "comstation":{
-      "enable":false,
-      "port":"/dev/ttyUSB0",
-      "work_period":300,
-      "geo":"59.944954,30.294534",
-      "public_key":""
-   },
-   "httpstation": {
-      "enable": true,
-      "port": 8001
-   },
-   "mqttstation": {
-      "enable": false,
-      "host": "localhost",
-      "port": 1883
-   },
-   "luftdaten": {
-      "enable": false
-   },
-   "robonomics": {
-      "enable": true,
-      "ipfs_provider": "/ip4/127.0.0.1/tcp/5001/http",
-      "ipfs_topic": "airalab.lighthouse.5.robonomics.eth"
-   },
-   "datalog": {
-      "enable": false,
-      "suri": "",
-      "dump_interval": 60,
-      "temporal_username": "",
-      "temporal_password": "",
-      "pinata_api": "",
-      "pinata_secret": ""
-   },
-   "dev": {
-      "sentry": ""
-   },
-   "frontier": {
-      "enable": true,
-      "suri": ""
-   },
-   "trackagro": {
-      "enable": false,
-      "token": ""
-   }
-}
-```
+**Attention**, Robonomics sensors firmware doesn't work with MQTT. These settings for additional sensors, which work throw MQTT. 
+Example of those sensors find [here.](/docs/freertos-mqtt/)
 
-> Do not forget to open the port in system firewall
->
-> On NixOS you can do:
-> ```
-> networking.firewall.allowedTCPPorts = [ 31313 ];
-> ```
+Assume that you have already had MQTT broker [mosquitto](https://mosquitto.org/download/) or similar.
 
-## Scenario #3: Connect SDS011 via MQTT
+As in previous scenario you need to create new configuration file, or edit existing configuration file from previous [article](/docs/sensors-connectivity-setup/#json-configuration).
+Insert to configuration file what you see below. Write full path to your database in file.
 
-### Connectivity Configuration
+<robo-wiki-note type="okay">
+Don't forget to insert MQTT broker port  in host statement and MQTT broker port to port statement.
+</robo-wiki-note>
 
+Sensors Connectivity Module will listen `/freertos_mqtt_robonomics_example/` topic.
 ```json
 {
    "general": {
@@ -243,13 +117,13 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
       "public_key":""
    },
    "httpstation": {
-      "enable": true,
+      "enable": false,
       "port": 8001
    },
    "mqttstation": {
       "enable": true,
-      "host": "localhost",
-      "port": 1883
+      "host": "<MQTT-broker-host>",
+      "port": <MQTT-broker-port>
    },
    "luftdaten": {
       "enable": false
@@ -272,7 +146,7 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
       "sentry": ""
    },
    "frontier": {
-      "enable": true,
+      "enable": false,
       "suri": ""
    },
    "trackagro": {
@@ -282,9 +156,27 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
 }
 ```
 
-## Scenario #4: Connect Multiple Sensors and Publish to Datalog
+And start Sensors Connectivity module.
 
-### Configuration
+## Scenario #3: Publish sensors data to Datalog
+
+In this scenario isn't matter which sensors connect type to choose. Example will you default one - over `http`.
+
+This scenario show how to upload your sensor's data to Robonomics Parachain Datalog. 
+Robonomics Datalog is analog of "Telemetry" in Web3 technologies. 
+Datalog create a sensor's data snapshot each period of time, which increase reliability of data.
+
+As in previous scenario you need to create new configuration file, or edit existing configuration file from previous [article](/docs/sensors-connectivity-setup/#json-configuration). 
+Insert to configuration file what you see below. Write full path to your database in file.
+
+Here we work with `datalog` field. It includes next lines:
+
+- `suri` - a private key from robonomics parachain account; 
+- `dump_interval` - specify a period of time for collecting log in seconds;
+- `temporal_username`, `temporal_password` - Credentials to upload files to [Temporal.Cloud](https://temporal.cloud/) (Optional);
+- `pinata_api`, `pinata_secret` - Credentials to upload files to [pinata service](https://docs.pinata.cloud#connecting-to-the-api)(Optional).
+
+Insert what required to file:
 
 ```json
 {
@@ -309,7 +201,7 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
       "port": 1883
    },
    "luftdaten": {
-      "enable": true
+      "enable": false
    },
    "robonomics": {
       "enable": true,
@@ -318,7 +210,7 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
    },
    "datalog": {
       "enable": true,
-      "suri": "",
+      "suri": "<YOUR-SECRET-KEY>", 
       "dump_interval": 60,
       "temporal_username": "",
       "temporal_password": "",
@@ -339,4 +231,4 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
 }
 ```
 
-
+And start Sensors Connectivity module.

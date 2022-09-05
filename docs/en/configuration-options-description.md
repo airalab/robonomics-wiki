@@ -8,16 +8,30 @@ translated: true
 Basically, you can think of the Sensors Connectivity module as a black box with one input (sensor data) and many outputs.
 For now only SDS011 sensor is supported, but if you are familiar with Python it'd be easy to add other sensors as well.
 
-At the moment it's possible to publish data to [Luftdaten](https://luftdaten.info/), [Robonomics Network](https://robonomics.network/) and 
-[Datalog](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/explorer). The last one is experimental! Robonomics team prepare some ready configuration files to use.
+At the moment it's possible to publish data to [Luftdaten](https://luftdaten.info/) and [Robonomics Network Datalog](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/explorer). 
+Robonomics team prepare some ready configuration files to use.
+Full overview of configuration fields you can find [here.](https://github.com/airalab/sensors-connectivity/tree/master/connectivity/config)
 
-Full overview of configuration fields you can find [here](https://github.com/airalab/sensors-connectivity/tree/master/connectivity/config)
-
+This Article contains advanced configurations scenarios. If you don't read previous article ["Sensors Connectivity Module Setup"](/docs/sensors-connectivity-setup/) first read it.
 ## Scenario #1: Connect SDS011 to serial port
 
-The easiest and the most straightforward way to connect your sensor to the network is using the serial port
+The easiest and the most straightforward way to connect your sensor to the network is using the serial port.
 
-Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` address
+First, connect you board to a USB port, and find path to board with next command:
+
+```bash
+$ ls -l /dev/serial/by-id
+total 0
+lrwxrwxrwx 1 root root 13 сен  5 14:01 usb-1a86_USB2.0-Ser_-if00-port0 -> ../../ttyUSB0
+```
+
+In the example it is `ttyUSB0`.
+Now you need to create new configuration file, or edit existing configuration file from previous [article](/docs/sensors-connectivity-setup/#json-configuration).
+Insert to configuration file what you see below. Write full path to your database in file.
+
+<robo-wiki-note type="okay">
+Don't forget to insert your Board path to port statement and your latitude and longitude of a sensor to geo statement.
+</robo-wiki-note>
 
 ```json
 {
@@ -27,13 +41,13 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
    },
    "comstation":{
       "enable":true,
-      "port":"/dev/ttyUSB0",
+      "port":"/dev/<YOUR-PATH-TO-BOARD>",
       "work_period":300,
-      "geo":"59.944954,30.294534",
+      "geo":"00.000000,00.000000",
       "public_key":""
    },
    "httpstation": {
-      "enable": true,
+      "enable": false,
       "port": 8001
    },
    "mqttstation": {
@@ -62,7 +76,7 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
       "sentry": ""
    },
    "frontier": {
-      "enable": true,
+      "enable": false,
       "suri": ""
    },
    "trackagro": {
@@ -72,74 +86,23 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
 }
 ```
 
-## Scenario #2: Connect SDS011 via HTTP
+And start Sensors Connectivity module.
 
-### Connectivity Configuration
+## Scenario #2: Connect SDS011 via MQTT
 
-```json
-{
-   "general": {
-      "publish_interval": 30,
-      "db_path": ""
-   },
-   "comstation":{
-      "enable":false,
-      "port":"/dev/ttyUSB0",
-      "work_period":300,
-      "geo":"59.944954,30.294534",
-      "public_key":""
-   },
-   "httpstation": {
-      "enable": true,
-      "port": 8001
-   },
-   "mqttstation": {
-      "enable": false,
-      "host": "localhost",
-      "port": 1883
-   },
-   "luftdaten": {
-      "enable": false
-   },
-   "robonomics": {
-      "enable": true,
-      "ipfs_provider": "/ip4/127.0.0.1/tcp/5001/http",
-      "ipfs_topic": "airalab.lighthouse.5.robonomics.eth"
-   },
-   "datalog": {
-      "enable": false,
-      "suri": "",
-      "dump_interval": 60,
-      "temporal_username": "",
-      "temporal_password": "",
-      "pinata_api": "",
-      "pinata_secret": ""
-   },
-   "dev": {
-      "sentry": ""
-   },
-   "frontier": {
-      "enable": true,
-      "suri": ""
-   },
-   "trackagro": {
-      "enable": false,
-      "token": ""
-   }
-}
-```
+**Attention**, Robonomics sensors firmware doesn't work with MQTT. These settings for additional sensors, which work throw MQTT. 
+Example of those sensors find [here.](/docs/freertos-mqtt/)
 
-> Do not forget to open the port in system firewall
->
-> On NixOS you can do:
-> ```
-> networking.firewall.allowedTCPPorts = [ 31313 ];
-> ```
+Assume that you have already had MQTT broker [mosquitto](https://mosquitto.org/download/) or similar.
 
-## Scenario #3: Connect SDS011 via MQTT
+As in previous scenario you need to create new configuration file, or edit existing configuration file from previous [article](/docs/sensors-connectivity-setup/#json-configuration).
+Insert to configuration file what you see below. Write full path to your database in file.
 
-### Connectivity Configuration
+<robo-wiki-note type="okay">
+Don't forget to insert MQTT broker port  in host statement and MQTT broker port to port statement.
+</robo-wiki-note>
 
+Sensors Connectivity Module will listen `/freertos_mqtt_robonomics_example/` topic.
 ```json
 {
    "general": {
@@ -154,13 +117,13 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
       "public_key":""
    },
    "httpstation": {
-      "enable": true,
+      "enable": false,
       "port": 8001
    },
    "mqttstation": {
       "enable": true,
-      "host": "localhost",
-      "port": 1883
+      "host": "<MQTT-broker-host>",
+      "port": <MQTT-broker-port>
    },
    "luftdaten": {
       "enable": false
@@ -183,7 +146,7 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
       "sentry": ""
    },
    "frontier": {
-      "enable": true,
+      "enable": false,
       "suri": ""
    },
    "trackagro": {
@@ -193,9 +156,27 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
 }
 ```
 
-## Scenario #4: Connect Multiple Sensors and Publish to Datalog
+And start Sensors Connectivity module.
 
-### Configuration
+## Scenario #3: Publish sensors data to Datalog
+
+In this scenario isn't matter which sensors connect type to choose. Example will you default one - over `http`.
+
+This scenario show how to upload your sensor's data to Robonomics Parachain Datalog. 
+Robonomics Datalog is analog of "Telemetry" in Web3 technologies. 
+Datalog create a sensor's data snapshot each period of time, which increase reliability of data.
+
+As in previous scenario you need to create new configuration file, or edit existing configuration file from previous [article](/docs/sensors-connectivity-setup/#json-configuration). 
+Insert to configuration file what you see below. Write full path to your database in file.
+
+Here we work with `datalog` field. It includes next lines:
+
+- `suri` - a private key from robonomics parachain account; 
+- `dump_interval` - specify a period of time for collecting log in seconds;
+- `temporal_username`, `temporal_password` - Credentials to upload files to [Temporal.Cloud](https://temporal.cloud/) (Optional);
+- `pinata_api`, `pinata_secret` - Credentials to upload files to [pinata service](https://docs.pinata.cloud#connecting-to-the-api)(Optional).
+
+Insert what required to file:
 
 ```json
 {
@@ -220,7 +201,7 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
       "port": 1883
    },
    "luftdaten": {
-      "enable": true
+      "enable": false
    },
    "robonomics": {
       "enable": true,
@@ -229,7 +210,7 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
    },
    "datalog": {
       "enable": true,
-      "suri": "",
+      "suri": "<YOUR-SECRET-KEY>", 
       "dump_interval": 60,
       "temporal_username": "",
       "temporal_password": "",
@@ -250,4 +231,4 @@ Connect you SDS011 sensor to a USB port, let's assume it got `/dev/ttyUSB0` addr
 }
 ```
 
-
+And start Sensors Connectivity module.

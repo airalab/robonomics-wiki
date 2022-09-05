@@ -2,7 +2,7 @@
 title: Sensors Connectivity Module Setup
 
 contributors: [LoSk-p, Vourhey, tubleronchik]
-translated: true
+translated: false
 tools:   
   - IPFS 0.8.0
     https://docs.ipfs.io/install/command-line/
