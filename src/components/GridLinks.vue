@@ -5,7 +5,7 @@
             v-for="item in links" :key="item.to"
             :to="$path(item.to, $store.state.locale)"
         >
-            {{$st(item.name, $store.state.locale)}}
+            {{$st(item.name, $store.state.locale) || item.name}}
         </g-link>
     </nav>
 
@@ -13,10 +13,11 @@
 
 
 <script>
+
 export default {
     props: {
         links: {
-            type: Object
+            type: Array
         }
     }
 }

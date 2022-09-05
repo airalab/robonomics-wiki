@@ -90,12 +90,6 @@
       link: /docs/gaka-chu/
     - title_en: Robonomics Coffee - Blockchain-Powered Coffee Machine
       link: /docs/robonomics-coffee/
-    - title_en: Lightsout Factory
-      items:
-        - title_en: Description
-          link: /docs/lightsout-factory-about/
-        - title_en: Ports
-          link: /docs/lightsout-factory-ports/
     - title_en: Spot Education
       items:
         - title_en: Try It Out

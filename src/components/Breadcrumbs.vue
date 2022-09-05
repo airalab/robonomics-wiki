@@ -23,7 +23,7 @@
 
         <g-link 
           v-if="breadcrumbs[breadcrumbs.length - 1] !== breadcrumb"
-          :to="$path('/summary/' + getCleanTitleLink(breadcrumb.title), locale)" 
+          :to="$path('/summary/' + getCleanTitleLink(breadcrumb.title_en), locale)" 
           class="breadcrumbs__link"
           :aria-current="index === breadcrumbs.length-1 ? 'location' : ''"
         >
@@ -85,7 +85,8 @@ export default {
             const breadcrumb = {
               id: Math.floor(Math.random() * 1000000),
               title: node[`title_${this.locale}`] ? node[`title_${this.locale}`] : node[`title_en`],
-              link
+              link,
+              title_en: node[`title_en`],
             }
             this.breadcrumbs.unshift(breadcrumb);
             return node;

@@ -25,7 +25,6 @@
 </template>
 
 <script>
-
 	export default {
 
 		data() {
@@ -47,7 +46,8 @@
 						this.getSubtitlesWithCustom()
 					}
 				}, 300);
-			}
+			},
+
 		},
 
 		computed: {
@@ -112,24 +112,30 @@
 				if (!document) {
 					return
 				}
-				
-				const allHeads = document.querySelector('.docs-content').querySelectorAll('h2, h3, h4, h5');
 
-				if(this.allSubtitles.length) {
-					this.allSubtitles = [];
-				}
+				setTimeout(() => {
+					if (document.querySelector('.docs-content')) {
+						const allHeads = document.querySelector('.docs-content').querySelectorAll('h2, h3, h4, h5');
 
-				allHeads.forEach(title => {
-					const titleObj = {
-						id: Date.now() + Math.floor(Math.random() * 100000),
-						anchor: '#' + title.getAttribute('id'),
-						depth: +title.tagName.match(/\d+/)[0],
-						value: title.textContent.substring(1)
+
+						if(this.allSubtitles.length) {
+							this.allSubtitles = [];
+						}
+
+						allHeads.forEach(title => {
+							const titleObj = {
+								id: Date.now() + Math.floor(Math.random() * 100000),
+								anchor: '#' + title.getAttribute('id'),
+								depth: +title.tagName.match(/\d+/)[0],
+								value: title.textContent.substring(1)
+							}
+							
+							this.allSubtitles.push(titleObj);
+
+						})
 					}
-					
-					this.allSubtitles.push(titleObj);
-
-				})
+				}, 100);
+				
 			},
 		},
 
