@@ -84,4 +84,40 @@ module.exports = function (api) {
   // })
 
 
+  api.createPages(({createPage}) => {
+    createPage({
+        path: '/en/summary/:title',
+        component: './src/templates/Summary.vue'
+    })
+    createPage({
+      path: '/es/summary/:title',
+      component: './src/templates/Summary.vue'
+    })
+    createPage({
+      path: '/ko/summary/:title',
+      component: './src/templates/Summary.vue'
+    })
+    createPage({
+      path: '/ja/summary/:title',
+      component: './src/templates/Summary.vue'
+    })
+    createPage({
+      path: '/pt/summary/:title',
+      component: './src/templates/Summary.vue'
+    })
+    createPage({
+      path: '/ru/summary/:title',
+      component: './src/templates/Summary.vue'
+    })
+  })
+
+  api.afterBuild(({ redirects }) => {
+    if (redirects) {
+      let rules = []
+      for (const rule of redirects) {
+        rules.push(`${rule.from}\t${rule.to}\t${rule.status}`)
+      }
+      fs.appendFileSync('./dist/_redirects', rules.join('\n'))
+    }
+  }) 
 }

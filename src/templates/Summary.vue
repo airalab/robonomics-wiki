@@ -12,11 +12,11 @@
 
 
 <script>
-  import items from '../../../data/sidebar_docs.yaml'
+  import items from '../../data/sidebar_docs.yaml'
 
   export default {
     components: {
-      List: () => import("../../components/SidebarDocs.vue"),
+      List: () => import("~/components/SidebarDocs.vue"),
       GridLinks: () => import('~/components/GridLinks.vue'),
     },
 
