@@ -9,6 +9,8 @@ After assembling board, now it's time to set up it.
 
 Robonomics firmware is extended version of the Sensor.Community firmware, with some sensors added and the data sending scheme changed. The source code can be found [at the link.](https://github.com/LoSk-p/sensors-software/tree/master/airrohr-firmware) 
 
+If you receive Robonomics board, go to the ["Connect" section.](#robonomics-board)
+
 ## Requirements 
 
 ### Linux
@@ -60,6 +62,10 @@ Next select the firmware (in English or Russian) and click `Upload`. Uploading t
 
 After downloading the firmware, reboot the ESP (just disconnect and reconnect the USB).
 
+<robo-wiki-title :type="3" anchor="robonomics-board"> 
+Connect
+</robo-wiki-title>
+
 A few time after the reboot, ESP will create a Wi-Fi network called RobonomicsSensor-xxxxxxxxx. 
 Connect to it from your phone or computer, then an authorization window will open (if it doesn't, open browser and go to `192.168.4.1`). 
 Select your Wi-Fi network from the list (or write it yourself if it's not on the list) and fill in the password field. Also write the coordinates of the place where the sensor will be installed in the field below:
@@ -77,6 +83,7 @@ That's all with default installation. Here is  a video with full path of board a
 https://www.youtube.com/watch?v=OdTd1sacCso
 
 For a more detailed setup - connect additional sensors or send data to your own server, read next section.
+
 
 ## Additional configuration
 

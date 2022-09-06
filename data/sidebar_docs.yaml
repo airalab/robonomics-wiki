@@ -81,6 +81,8 @@
           link: /docs/sensors-connectivity-setup
         - title_en: Configuration Options Description
           link: /docs/configuration-options-description
+        - title_en: Deploy Sensor Map
+          link: /docs/deploy-sensor-map
         - title_en: Connect an Amazon FreeRTOS device to Robonomics by MQTT
           link: /docs/freertos-mqtt/
         # - title_en: How to Contribute

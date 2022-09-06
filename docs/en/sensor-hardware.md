@@ -5,9 +5,10 @@ contributors: [nakata, Ludovich88]
 translated: true
 ---
 
-To join  air monitoring with Robonomics Open Sensors Network you require an air pollution board with sensors. There are two ways to get sensor: 
-Order all necessary parts and build your own  custom board. 
-Alternately, you can write to Robonomics team and get Robonomics universal board.
+If you wish to participate in the  air monitoring with Robonomics Open Sensors Network you need to obtain an air pollution board with sensors. 
+There are two ways to do it: 
+- order all necessary parts and build your own  custom board. 
+- order a ready-to-use board from Robonomics team.
 
 ## Manual board assembly
 
@@ -38,9 +39,9 @@ After assembling the sensor, all that remains is to flash and configure it. Go t
 
 ## Robonomics Board
 
-Alternatively, You can request Robonomics Board. To do so, write to one of e-mail addresses: 
-- vm@multi-agent.io
-- ping@airalab.org
+Alternatively, you can request Robonomics Board. To do so, write to one of e-mail addresses: 
+- [vm@multi-agent.io](mailto:vm@multi-agent.io)
+- [ping@airalab.org](mailto:ping@airalab.org)
 
 Also, you can check this [group.](https://vk.com/aira.monitoring)
 
@@ -67,8 +68,8 @@ There is also a smaller MINI model with a trimmed down list of connectable devic
 
 ### Assembly
 
-Let's take a closer look at the board:
-The board has several connectors for connection - they are highlighted in blue and green. Consider the blue block of terminal blocks.
+Let's take a closer look at the board: the board has several connectors for connection - they are highlighted 
+in blue and green. Consider the blue block of terminal blocks.
 ![plata1](../images/sensors-connectivity/plata1.png)
 
 From left to right (all terminals are signed):
@@ -76,7 +77,7 @@ From left to right (all terminals are signed):
 - Ground (point of zero potential). Serves both for connection of zero potential of the power supply, and for connection of sensors.
 - Supply of sensors. Configurable power output to which sensors are connected. The output can be set to 3.3 or 5 volts.
 - SDA terminal. Serial data line, is used to connect sensors via the I2C interface.
-- SSL/1-Wire terminal. Configurable terminal to which the serial clock line  is connected. Used to connect sensors via I2C or 1-Wire interface.
+- SCL/1-Wire terminal. Configurable terminal to which the serial clock line  is connected. Used to connect sensors via I2C or 1-Wire interface.
 
 Setting the power output for the sensor and selecting the interface is done by setting the jumpers, marked yellow in the image.
 The jumpers are installed horizontally, the places for installing the jumpers are signed.
