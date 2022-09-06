@@ -40,6 +40,7 @@
 					this.scrollToElement();
 				}, 200);
 			},
+			
 			'$route.path': function(curr, old) {
 				setTimeout(() => {
 					if(this.allSubtitles.length) {
@@ -117,7 +118,6 @@
 					if (document.querySelector('.docs-content')) {
 						const allHeads = document.querySelector('.docs-content').querySelectorAll('h2, h3, h4, h5');
 
-
 						if(this.allSubtitles.length) {
 							this.allSubtitles = [];
 						}
@@ -133,8 +133,12 @@
 							this.allSubtitles.push(titleObj);
 
 						})
+
+						if(this.allSubtitles.length === 0) {
+							this.allSubtitles.push('');
+						}
 					}
-				}, 100);
+				}, 150);
 				
 			},
 		},

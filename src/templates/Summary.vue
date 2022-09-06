@@ -20,10 +20,6 @@
       GridLinks: () => import('~/components/GridLinks.vue'),
     },
 
-    metaInfo: {
-      title: 'Summary',
-    },
-
     data() {
       return {
           title: null,
@@ -31,7 +27,15 @@
           allItems: items,
           navLinks: [],
           titleLocal: null,
+          metaTitle: 'Summary'
       };
+    },
+
+    metaInfo() {
+      return {
+        title: this.titleLocal && `Summary: ${this.titleLocal}` || this.title && `Summary: ${this.title}` || this.metaTitle,
+      }
+
     },
 
     computed: {
@@ -69,6 +73,7 @@
           }
 
         }
+
         return null;
       },
 

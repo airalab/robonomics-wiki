@@ -157,11 +157,13 @@ query {
     }
 
     #sidebarDocs, #sidebarContent {
-      max-height: 100%;
-      height: 100vh;
+      max-height: unset;
+      height: unset;
       
-      top: 5rem;
+      top: 7rem;
+      bottom: 0;
     }
+
 
     #sidebarDocs.menu-without-search,
     #sidebarContent.menu-without-search {
