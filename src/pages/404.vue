@@ -18,3 +18,23 @@
 
   </Sidebar> -->
 </template>
+
+<script>
+export default {
+
+  created() {
+    const path = this.$route.path; 
+    const title = path.match(/\/([^\/]+)[\/]?$/);
+
+    if(path.includes('summary')) {
+      window.location.href = `https://wiki.robonomics.network/summary/${title[1]}/`;
+      // window.location.href = `/summary/${title[1]}/`;
+    }
+    
+  }
+}
+</script>
+
+<style>
+
+</style>
