@@ -176,6 +176,10 @@ Here we work with `datalog` field. It includes next lines:
 - `temporal_username`, `temporal_password` - Credentials to upload files to [Temporal.Cloud](https://temporal.cloud/) (Optional);
 - `pinata_api`, `pinata_secret` - Credentials to upload files to [pinata service](https://docs.pinata.cloud#connecting-to-the-api)(Optional).
 
+<robo-wiki-note type="warning">
+You have to have XRT on your account!
+</robo-wiki-note>
+
 Insert what required to file:
 
 ```json
