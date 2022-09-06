@@ -251,12 +251,18 @@
         bottom: 0;
         z-index: 99;
 
+        overflow-y:scroll;
+        overflow-x:hidden;
+
         padding: var(--space);
         background-color: var(--body-bg);
-      }
+    }
 
     #sidebarDocs, #sidebarContent {
-      height: 100vh;
+      height: 100svh;
+      overflow-y:scroll;
+      overflow-x:hidden;
+      
     }
 
     #sidebarContent.page__sidebar {
@@ -275,10 +281,11 @@
     }
 
     #sidebarDocs, #sidebarContent {
-      max-height: 100%;
-      height: 120vh;
+      max-height: unset;
+      height: 120svh;
       
-      top: 4rem;
+      top: 6rem;
+      bottom: 0;
     }
 
     #sidebarDocs.menu-without-search,
@@ -290,8 +297,8 @@
   @media screen and (max-width: 860px) {
 
     #sidebarDocs, #sidebarContent {
-      max-height: 100%;
-      height: 120vh;
+      max-height: unset;
+      height: 120svh;
       
       top: 6rem;
     }

@@ -42,7 +42,7 @@
 			},
 			'$route.path': function(curr, old) {
 				setTimeout(() => {
-					if(this.allSubtitles.length) {
+					if(this.allSubtitles.length || old === '/docs/en/changing-exodus-receiving-address/') {
 						this.getSubtitlesWithCustom()
 					}
 				}, 300);
@@ -113,10 +113,10 @@
 					return
 				}
 
+
 				setTimeout(() => {
 					if (document.querySelector('.docs-content')) {
 						const allHeads = document.querySelector('.docs-content').querySelectorAll('h2, h3, h4, h5');
-
 
 						if(this.allSubtitles.length) {
 							this.allSubtitles = [];
