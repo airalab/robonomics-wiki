@@ -115,7 +115,7 @@ module.exports = function (api) {
     if (redirects) {
       let rules = []
       for (const rule of redirects) {
-        rules.push(`${rule.from}\t${rule.to}\t${rule.status}`)
+        rules.push(`/summary/:title\t${rule.to}\t${rule.status}`)
       }
       fs.appendFileSync('./dist/_redirects', rules.join('\n'))
     }
