@@ -77,7 +77,7 @@ export default {
           name: 'Enter Nav 3'
         },
         {
-          to: '/docs/connect-sensor-to-robonomics/',
+          to: '/docs/sensors-network-introduction/',
           name: 'Enter Nav 4'
         },
         {
