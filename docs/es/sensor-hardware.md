@@ -7,12 +7,12 @@ translated: false
 
 If you wish to participate in the  air monitoring with Robonomics Open Sensors Network you need to obtain an air pollution board with sensors. 
 There are two ways to do it: 
-- order all necessary parts and build your own  custom board. 
+- order all necessary parts and build your custom board. 
 - order a ready-to-use board from Robonomics team.
 
 ## Manual board assembly
 
-To build your own board, you need to buy next components:
+To build your own board, you need to buy the following components:
 
  - Laser PM2.5 and PM10 Sensor [SDS011](https://cdn-reichelt.de/documents/datenblatt/X200/SDS011-DATASHEET.pdf)
  - ESP8266 [NodeMcu V3 CH340](https://aliexpress.ru/item/1005004230942266.html?item_id=1005004230942266&sku_id=12000028462056911&spm=a2g20.search.search_results.1.4724673bFJ7jEV)
@@ -31,7 +31,7 @@ You can install additional sensors:
   - [DHT22(AM2302)](https://files.seeedstudio.com/wiki/Grove-Temperature_and_Humidity_Sensor_Pro/res/AM2302-EN.pdf) - temperature and humidity
   - [DS18B20](https://cdn.sparkfun.com/datasheets/Sensors/Temp/DS18B20.pdf) - temperature.
 
-Assembly process you can find in the next video. Also, in this video is showing setup process, but we will talk about it in the next article.
+You can find the assembly process in the video below. It also shows the flashing process, but we will talk about it in the next article.
 
 https://www.youtube.com/watch?v=OdTd1sacCso
 
@@ -39,11 +39,11 @@ After assembling the sensor, all that remains is to flash and configure it. Go t
 
 ## Robonomics Board
 
-Alternatively, you can request Robonomics Board. To do so, write to one of e-mail addresses: 
+Alternatively, you can request Robonomics Board. To do so, email one of the following addresses: 
 - [vm@multi-agent.io](mailto:vm@multi-agent.io)
 - [ping@airalab.org](mailto:ping@airalab.org)
 
-Also, you can check this [group.](https://vk.com/aira.monitoring)
+Also, you can check out this [group.](https://vk.com/aira.monitoring)
 
 Robonomics board for air quality sensor, based on ESP8266. The device is designed for 6 - 24 volt power supply, using DC-DC converter DC MINI560.
 
@@ -55,25 +55,25 @@ This board allows you to connect PM sensor:
 
 and additional sensors:
 
-- Possibility of connection via I2C interface:
+- I2C interface:
   - [BMP180](https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf) - temperature and humidity
   - [BME/P280](https://www.mouser.com/datasheet/2/783/BST-BME280-DS002-1509607.pdf) - temperature, humidity, atmospheric pressure
   - [HTU21D](https://eu.mouser.com/ProductDetail/Measurement-Specialties/HTU21D?qs=tx5doIiTu8oixw1WN5Uy8A%3D%3D) - temperature and humidity
   - [CCS811 VOC SENSOR](https://www.sciosense.com/wp-content/uploads/documents/Application-Note-Baseline-Save-and-Restore-on-CCS811.pdf) - volatile Organic Compounds, CO2 equivalent
-- Possibility of connection via 1 Wire interface:
+- 1-Wire interface:
   - [DHT22(AM2302)](https://files.seeedstudio.com/wiki/Grove-Temperature_and_Humidity_Sensor_Pro/res/AM2302-EN.pdf) - temperature and humidity
   - [DS18B20](https://cdn.sparkfun.com/datasheets/Sensors/Temp/DS18B20.pdf) - temperature.
 
-There is also a smaller MINI model with a trimmed down list of connectable devices. The source circuits for both models can be found at [full model](https://oshwlab.com/ludovich88/aira_sensor_rev0-1) and [MINI model](https://oshwlab.com/ludovich88/aira_sensor_d1_mini).
+There is also a smaller MINI model with aa shortened list of connectable devices. The source circuits for both models can be found at [full model](https://oshwlab.com/ludovich88/aira_sensor_rev0-1) and [MINI model](https://oshwlab.com/ludovich88/aira_sensor_d1_mini).
 
 ### Assembly
 
-Let's take a closer look at the board: the board has several connectors for connection - they are highlighted 
-in blue and green. Consider the blue block of terminal blocks.
+Let's take a closer look at the board: the board has several connector ports for connection - they are highlighted 
+in blue and green. Consider the blue block of terminal block.
 ![plata1](../images/sensors-connectivity/plata1.png)
 
 From left to right (all terminals are signed):
-- Terminal for connecting the power supply of the board. The recommended voltage is 12 volts.
+- Terminal for connecting the power supply to the board. The recommended voltage is 12 volts.
 - Ground (point of zero potential). Serves both for connection of zero potential of the power supply, and for connection of sensors.
 - Supply of sensors. Configurable power output to which sensors are connected. The output can be set to 3.3 or 5 volts.
 - SDA terminal. Serial data line, is used to connect sensors via the I2C interface.
@@ -84,7 +84,7 @@ The jumpers are installed horizontally, the places for installing the jumpers ar
 
 ***BE CAREFUL!!!*** You can choose the voltage for the power supply by setting only one jumper to 3.3 volts or 5 volts. Setting two jumpers to 3.3 and 5 volts will damage the device. The same rule works when choosing an interface for sensors, install only one jumper in place of I2C or 1-Wire. Installing two jumpers may damage the device.
 
-There is also an additional block of Inputs In the image it is marked in green.
+There is also an additional block of inputs, marked green in the image.
 
 > There is a power switch on the left side of the blue box to force the board to reboot. It is in the ON position by default.
 

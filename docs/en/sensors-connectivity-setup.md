@@ -15,8 +15,8 @@ Now let's start personal sensors Connectivity module.
 
 ## Pre-requirements
 
-To build a python package IPFS daemon should be installed. **This module requires IPFS daemon version not grater than 0.8.x** . 
-So, in example, IPFS daemon version is 0.8.0. Assuming, you work with linux:
+To build a python package the IPFS daemon has to be installed. **This module requires IPFS daemon version no greater than 0.8.x** . 
+So, in example, IPFS daemon version is 0.8.0. Assuming, you work on linux:
 
 ```
 wget https://dist.ipfs.io/go-ipfs/v0.8.0/go-ipfs_v0.8.0_linux-amd64.tar.gz
@@ -56,7 +56,7 @@ source .profile
 Configuration
 </robo-wiki-title>
 
-First, we need to create directory for configuration file and database file. You can create where you want, next commands is just example:
+First, we need to create directory for configuration file and database file. You can create it wherever you want, these commands below are just an example:
 
 ```shell
 cd ~
@@ -65,7 +65,7 @@ cd sensors_connectivity
 touch database.db
 ```
 
-<robo-wiki-note type="okay"> Name of database file can be any, but extension must be `.db`</robo-wiki-note>
+<robo-wiki-note type="okay"> Name of the database file can be any, but extension must be `.db`</robo-wiki-note>
 
 This database will save IPFS hashes of sensor data, timestamp and service status.
 
@@ -129,9 +129,9 @@ There is default configuration file:
 }
 ```
 
-fill `my_config.json` with example and **insert full path to database file in `db_path` field.** 
+fill `my_config.json` with example and **insert full path to the database file in `db_path` field.** 
 
-This configuration will be enough to get sensors data over http and sent it to a Robonomics map.
+This configuration will be enough to get sensors data over http and send it to the Robonomics map.
 
 ## Running
 
@@ -169,7 +169,7 @@ $ sensors_connectivity test.json
 ## Post installation
 
 To connect you **sensors-connectivity** module to Robonomics map [sensors.robonomics.network](https://sensors.robonomics.network/) and see the data,
-you have to sent your IPFS id to ***vm@multi-agent.io*** or ***ping@airalab.org***. 
+you have to send your IPFS id to ***vm@multi-agent.io*** or ***ping@airalab.org***. 
 
 You can get IPFS ID with the following command after running IPFS daemon (it is in the `ID` column):
 
@@ -181,7 +181,7 @@ $ ipfs id
     ...
 ```
 
-We require it to add your ID to ACL list.
+We require it to add your ID to еру ACL list.
 
-In the next article we will look at various combinations of configuration file. it will give the ability to connect sensor
+In the next article we will look at various combinations of configuration file. It will allow you to connect sensor
 over MQTT or COM port and send data to Robonomics Parachain datalog.

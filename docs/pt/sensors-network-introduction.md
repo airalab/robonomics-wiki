@@ -7,7 +7,7 @@ translated: false
 
 ## What is Sensors Robonomics Network?
 
-The Sensors Robonomics Network is a civilian network of sensors to monitor air quality. Anyone can build their own sensor or use an off-the-shelf solution from the development team and set it up in their home. 
+The Sensors Robonomics Network is a civilian air quality monitoring network. Anyone can build their own sensor or use an off-the-shelf solution from the development team and set it up in their home. 
 The sensors use open source software and component wiring diagrams. One of the main sensors used is the PM10 and PM2.5 fine particulate sensor.
 
 ## What is PM10 and PM2.5?
@@ -33,7 +33,7 @@ The effects of these particles on the human body can be devastating:
 ## Why the Sensors Robonomics Network?
 
 In Russia there are other public monitoring networks, such as [Breathe Moscow](https://breathe.moscow/), which are based on the German project [sensor.community](https://sensor.community/ru/). 
-But they use the usual client-server architecture, which in this case is a drawback. Data from all sensors together with user requests go to one server, 
+But they use the usual client-server architecture, which in this case is a drawback. Data from all sensors along with user requests goes to one server, 
 which cannot always handle such load. So there are situations when the map with data is not available at the most 
 responsible moments. With Sensors Robonomics Network, sensors send data to several different servers, and any user can bring up the Sensors Connectivity server for their sensor and see it on the map. 
 The map itself is not overloaded because it is a decentralized application (DApp) that works directly from your browser with the data that the servers send to the IPFS pub-sub channel.
