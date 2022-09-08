@@ -120,7 +120,8 @@ root@robokusama-collator-screencast:~# robonomics \
 
 4. Save this file, then enable and start the service:
     ```
-    root@robokusama-collator-screencast:~# systemctl enable robonomics.service root@robokusama-collator-screencast:~# systemctl start robonomics.service
+    root@robokusama-collator-screencast:~# systemctl enable robonomics.service
+    root@robokusama-collator-screencast:~# systemctl start robonomics.service
     ```
 
 Telemetry url: https://telemetry.parachain.robonomics.network/#/Robonomics
