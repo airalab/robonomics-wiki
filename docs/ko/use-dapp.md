@@ -2,7 +2,7 @@
 title: DApp Usage
 
 contributors: [nakata5321]
-translated: false
+translated: true
 ---
 
 After finishing with ["Robonomics integration setup"](/docs/add-smart-device-to-robonomics/), all options of our DApp will be available for you.
@@ -10,26 +10,26 @@ For now, you can get telemetry of all your sensors and send **launch** to device
 
 ## SmartHome Telemetry
 
-Go to DApp and  choose ["SmartHome Telemetry"](https://dapp.robonomics.network/#/services) service. You will be forwarded to a DApp website page. When visiting for the first time, you will be asked to give the site permission to use polkadot{.js} extension. After granting the access you should see the next::
+Go to DApp and  choose ["SmartHome Telemetry"](https://dapp.robonomics.network/#/smarthome-telemetry) service. You should see the next:
 
 <robo-wiki-picture src="home-assistant/telemetry-start.jpg" />
 
-First, choose `SUB_OWNER` account in the first drop-down list at the top of page.
+First, choose the `SUB_OWNER` account in the first drop-down list at the top of page. In the "Controller" field 
+find the address of `SUB_ADMIN` from the drop-down list.
+Insert the **Seed phrase** to encrypt data.
 
-In accounts list find address of `SUB_ADMIN`. Press green button opposite to the `SUB_ADMIN` address.
+Next, in the "Get telemetry" block choose a timestamp from the drop-down list and press the "download telemetry" button.
 
-<robo-wiki-picture src="home-assistant/admin-tel.jpg" />
+<robo-wiki-picture src="home-assistant/datalog-time.jpg" />
 
-the `SUB_ADMIN` address should become blue. Press on it, and you will go to datalog page. Here you will see all your **"telemetry datalogs"**.
+Telemetry downloading could take some time. After finishing, you will see the information from your sensors:
 
-<robo-wiki-picture src="home-assistant/tel-datalog.jpg" />
-
-Let's read the latest telemetry datalog. Insert `SUB_ADMIN` seed in secret key field. Then press **READ**. Wait until DApp will load telemetry and then press **DECRYPT** button. You will get your telemetry from all sensors.
-
-<robo-wiki-picture src="home-assistant/telemetry.jpg"/>
+<robo-wiki-picture src="home-assistant/telemetry.jpg" />
 
 That's all.
 
+
+<!---
 ## Launch devices
 
 Go back and  choose service ["SmartHome Telemetry"](https://dapp.robonomics.network/#/services). You will forward to DApp website. In first login give permission to website to use polkadot{.js} extension. You will see next:
@@ -77,4 +77,4 @@ Copy it and paste to field in our dapp:
 Finally, press `SEND` button and sign transaction with your password. Wait until transaction is in block and check your light. It should be turned on (sometimes it takes a bit more time).
 
 Congratulations, You have fully installed and set up Your Home Assistant with Robonomics!
-
+-->

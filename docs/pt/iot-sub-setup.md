@@ -1,7 +1,7 @@
 ---
 title: IOT subscription setup
 contributors: [nakata5321]
-translated: false
+translated: true
 ---
 
 After setting up [Zigbee2MQTT stick](/docs/zigbee2-mqtt/), It is time to create Robonomics Parachain accounts and buy subscription. 
@@ -78,9 +78,11 @@ In the following popup menu connect `Polkadot{.js}` extension. Now you will see 
 
 <robo-wiki-note type="warning">First, check which address connected to dapp.</robo-wiki-note>
 
-`Check owner account` should be `SUB_owner`.
-   
+For this press the address profile icon:
 
+<robo-wiki-picture src="home-assistant/check.jpg" />
+
+there should be the `SUB_owner` account under the `Check owner account` field.
 
 Press `submit` button and enter `password` for your account. After that wait until activation process is completed.
 You will see state of your subscription:

@@ -34,12 +34,18 @@ Add this account to the subscription [here](https://dapp.robonomics.network/#/su
 
 <robo-wiki-picture src="home-assistant/user.jpg" />
 
-Then go to the Dapp service [**"HomeAssistant Account"**](https://dapp.robonomics.network/#/home-assistant). Choose account, you've just created at the right sidebar.(Find its address in extension).
-In the next two raws type in `SUB_OWNER` and `SUB_ADMIN` addresses. Then enter `USER` seed:
+Then go to the Dapp service [**"HomeAssistant Account"**](https://dapp.robonomics.network/#/home-assistant). Choose account, 
+you've just created at the right sidebar(check that you have chosen the intended account by pressing the profile icon).
+Then enter the `USER` seed in the required field. In the next two raws type in `SUB_OWNER` and `SUB_ADMIN` addresses:
 
 <robo-wiki-picture src="home-assistant/acc-pass.jpg" />
 
-Create a password for a new HA user which you have just registered. Type the passport below `Enter password` and click registration. Confirm transaction. 
+If everything right, you will see ** 3. Verification status ** - `Verified`.
+
+Create a password for a new HA user which you have just registered. Type the passport below `Your Home Assistant password` and click "create password". Confirm transaction. (Later you can restore it in "restore" tab.)
+
+<robo-wiki-picture src="home-assistant/password.jpg" />
+
 It’s free now since the accounts are using RWS subscription. After the registration process, you can log in to Home Assistant with your address as `login` and a newly-created password. Go to login page and login:
 
 <robo-wiki-picture src="home-assistant/acc-login.jpg" />
