@@ -78,7 +78,11 @@ In the following popup menu connect `Polkadot{.js}` extension. Now you will see 
 
 <robo-wiki-note type="warning">First, check which address connected to dapp.</robo-wiki-note>
 
-`Check owner account` should be `SUB_owner`.
+For this press address profile icon:
+
+<robo-wiki-picture src="home-assistant/check.jpg" />
+
+Under `Check owner account` field should be `SUB_owner`.
    
 
 
