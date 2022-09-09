@@ -1,30 +1,31 @@
 ---
-title: Обзор
+title: Overview
  
 contributors: [adeptvin1]
-translated: false
+translated: true
 ---
-Feecc — это платформа, разработанная [Multi-Agent Systems](http://multi-agent.io), позволяющая предприятиям создавать и настраивать собственные системы контроля качества продуктов или услуг в соответствии с бизнес задачами.
 
-## Основная идея
-С помощью технологий web3 и набора гибких программных модулей платформа Feecc позволяет организовывать процесс производства любого типа продукции, проводить аудит доступа сотрудников к рабочему месту и извлекать все данные о рабочих процессах. Информация хранится в неизменном и безопасном хранилище в распределенном хранилище IPFS, хэши данных сохраняются в даталог robonomics.network с возможностью доступа для отдела контроля качества через Feecc Аналитика. Благодаря Feecc предприятие может не только оцифровать свои процессы и избавиться от бумажной бюрократии и судебных исков, но и привлечь внимание новых потребителей к продукту, повысив доверие к нему.
+Feecc is a platform developed by [Multi-Agent Systems](http://multi-agent.io) that allows companies to create and customize their own quality control systems for products or services according to business objectives
 
-Платформа представляет из себя набор программного обеспечения для осуществления контроля за производственным процессом и сбора информации для последующего анализа ОТК или другими участниками. Глобально схему интеграции платформы в бизнесс-процесс можно представить так:
-![business_schema](../images/feecc-system-overview/business_schema.png)
+## Main Idea
+Using web3 technology and a set of flexible software modules, the Feecc platform allows you to organize the production process of any type of product, audit employee access to the workplace and retrieve all workflow data. Information is stored in an unchanged and secure distributed IPFS storage, data hashes are saved in the robonomics.network datalog with access for the quality control department via Feecc Analytics. With Feecc, a company can not only digitize its processes and get rid of paperwork and lawsuits, but also attract the attention of new customers to the product, increasing trust in it.
 
-## Возможности платформы
+The platform is a set of software for controlling the production process and collecting information for subsequent analysis by the QCD or other participants. Globally, the scheme of platform integration into the business process can be represented as follows:
+![business_schema](../images/feecc-system-overview/business_schema_eng.jpg)
 
-### Надежное и безопасное хранение данных
-Feecc использует безопасное хранилище данных на основе архитектуры с адресацией по содержимому и распределенного реестра, чтобы гарантировать надежность и достоверность собранных данных рабочего процесса.
+## Platform Opportunities
 
-### Четкая связь сотрудника с продуктом
-Feecc отслеживает все этапы рабочего процесса с помощью видеозаписи, регистрации данных с периферийных устройств и авторизации доступа сотрудников. Платформа поддерживает любой последовательный рабочий процесс, включая долгосрочные или прерываемые операции.
+### Reliable and secure data storage
+Feecc uses a secure data storage based on a content-addressable architecture and a distributed registry to ensure the reliability and validity of collected workflow data.
 
-### Цифровой сертификат продукта
-Все цифровые следы рабочего процесса сводятся в единый сертификат изделия с уникальным идентификатором, который затем прикрепляется в виде QR-кода к изделию. Feecc может добавлять в сертификат пользовательские параметры процесса и автоматизировать его создание даже для составных изделий.
+### A clear link between the employee and the product
+Feecc monitors all phases of the workflow with video recording, data logging from peripheral devices and employee access authorization. The platform supports any sequential workflow, including long-term or interrupted operations.
 
-### Широкая поддержка переферийных устройств
-Feccc поддерживает стандартные цифровые интерфейсы ввода-вывода для подключения различных устройств (видеокамер, сканеров, принтеров и т. д.).
+### Digital product certificate
+All digital traces of the workflow are summarized in a single product certificate with a unique identifier which is then attached as a QR code to the product. Feecc can add custom process parameters to the certificate and automate its creation even for composite parts.
 
-## Видео демонстрации работы Feecc Рабочее Место Инженера
+### Extensive support for peripheral devices
+Feccc supports standard digital I/O interfaces for connecting various devices (video cameras, scanners, printers, etc.).
+
+## Video Demonstration of the Feecc Engineer Workplace
 https://www.youtube.com/watch?v=WhtOJtGjAok
