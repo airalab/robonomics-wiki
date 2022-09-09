@@ -78,13 +78,11 @@ In the following popup menu connect `Polkadot{.js}` extension. Now you will see 
 
 <robo-wiki-note type="warning">First, check which address connected to dapp.</robo-wiki-note>
 
-For this press address profile icon:
+For this press the address profile icon:
 
 <robo-wiki-picture src="home-assistant/check.jpg" />
 
-Under `Check owner account` field should be `SUB_owner`.
-   
-
+there should be the `SUB_owner` account under the `Check owner account` field.
 
 Press `submit` button and enter `password` for your account. After that wait until activation process is completed.
 You will see state of your subscription:
