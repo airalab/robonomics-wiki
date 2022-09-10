@@ -159,17 +159,24 @@ translated: true
    git clone https://github.com/Multi-Agent-io/feecc-demo.git
    ```
 
-2. Перейдите в папку проекта и в папке проекта перейдите в раздел "feecc-quickstart-hardwareemulation"
+2. Перейдите в папку проекта и в папке проекта перейдите в раздел "feecc-quickstart-demo"
    
    ```bash
-   cd ./feecc-demo/feecc-quickstart-supporthardware
+   cd ./feecc-demo/feecc-quickstart-demo
    ```
 
 3. Авторизуйтесь в Digital Ocean Contaier Registry который предоставляет компания [Multi-Agent Systems](http://multi-agent.io) для скачивания готовых контейнеров необходимых для развертывание Feecc Рабочее Место Инженера и запустите docker-compose
    
    ```bash
    docker login -u dop_v1_6debfd8d476d14847bf81aecc74dfcda1fb63a503ba2d61d66eaa113cc272596 -p dop_v1_6debfd8d476d14847bf81aecc74dfcda1fb63a503ba2d61d66eaa113cc272596 registry.digitalocean.com
-   sudo docker-compose up -d --build --env-file=./.env
+   sudo docker-compose up
    ```
 
 4. Дождитесь окончания развертывания и проверьте работу системы "Feecc Рабочее Место Инженера" перейдя по ссылке в браузере [http://localhost:3000/](http://localhost:3000/) и проверьте работу системы в соответствии с инструкцией [feecc-demo](https://github.com/Multi-Agent-io/feecc-demo)
+
+5. Для эмуляции прикладывания пропуска к сканеру воспользуйтесь скриптами в папке "emulate-input"
+   ```bash
+   cd ./feecc-demo/feecc-quickstart-demo/emulate-input
+   bash ./login.sh  # Для авторизации в системе
+   bash ./logout.sh  # Для выхода из системы
+   ```
