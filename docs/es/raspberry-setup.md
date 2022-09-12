@@ -130,7 +130,7 @@ Otherwise, continue manual installation.
 
 ## Manual Installation
 If It's necessary, you can create PRi image manually. 
-For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://ubuntu.com/download/raspberry-pi/thank-you?version=22.04&architecture=server-arm64+raspi) or newer**  and 
+For this you should choose **[64-bit Ubuntu Server 22.04 LTS](https://cdimage.ubuntu.com/releases/22.04/release/ubuntu-22.04.1-preinstalled-server-arm64+raspi.img.xz) or newer**  and 
 then repeat [Configuration RPi](#configuration-rpi).
 
 ### Home Assistant installation
