@@ -10,7 +10,7 @@ it is time to deploy personal decentralised sensor map.
 
 ## Requirements 
 
-Sensors Map works on JS. So, you need to install `node` and `yarn` manager.
+Sensors Map works on JS. So you need to install `node` and `yarn` manager.
 
 ```shell
 sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -20,7 +20,7 @@ sudo npm install --global yarn
 
 ## Installation
 
-Let's download and build Map:
+Let's download and build the map:
 
 ```shell
 git clone https://github.com/airalab/sensors.robonomics.network.git
@@ -28,13 +28,13 @@ cd sensors.robonomics.network/
 yarn install
 ```
 
-For tests let's run map in `development` mode. It will create map with all robonomics sensors available:
+For tests let's run the map in `development` mode. It will create map with all robonomics sensors available:
 
 ```shell
 yarn serve
 ```
 
-Go to showed url. You will see the similar:
+Go to url in terminal. You will see the similar:
 
 <robo-wiki-picture src="sensors-connectivity/robonomics_map.jpg"/>
 
@@ -42,7 +42,7 @@ Stop it with **ctrl+C**.
 
 ## Configuration
 
-Now we will create configuration files. For this go to `src` folder and change name of files:
+Now we will create configuration files. For this go to `src` folder and rename the files:
 
 ```shell
 cd src 
@@ -68,7 +68,7 @@ Insert your IPFS id in `agents.json`. It will look like:
 ]
 ```
 
-Next open `config.json` file. You interested in next part of configuration file:
+Next open `config.json` file. You need to change the next part of configuration file:
 
 ```json
 ...
@@ -96,12 +96,12 @@ To build files for release run:
 yarn build
 ```
 
-It will create `dist` directory. It contains all components of static website. To Check that everything correct,
-go inside `dist` directory and open `index.html` file. You should see similar:
+It will create `dist` directory. It contains all components of static website. To check if everything is correct,
+move to `dist` directory and open `index.html` file. You should see the similar:
 
 <robo-wiki-picture src="sensors-connectivity/local_map.jpg"/>
 
-After sometime sensors data from your Sensors Connectivity module will appearance on the map.
+After some time sensor's data from your Sensors Connectivity module will appear on the map.
 
- That all. Now you have your own Decentralized Sensors Map. Currently, it aggregates sensors data only in realtime. 
- To look throw out of history measurements, you need to set up "RoSeMAN" module. Find out setup process in next article.
+ That's all. Now you have your own Decentralized Sensors Map. Currently, it aggregates sensors data realtime only. 
+ To look throughout of history measurements, you need to set up "RoSeMAN" module. Find out setup process in the next article.

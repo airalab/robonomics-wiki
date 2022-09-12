@@ -11,14 +11,14 @@ data to show measurement history.
 ## Requirements
 
 First, RoSeMAN requires **Mongodb** [Database server.](https://www.mongodb.com/docs/manual/introduction/) 
-In this article the installation process isn't discuss, it is assumed that you already have it. 
+In this article the installation process isn't discussed, it is assumed that you already have it. 
 
 Also, I have to turn on "Datalog" option for Sensors Connectivity module, as shown in "Scenario #3" in ["Configuration Options Description" article.](/docs/configuration-options-description/)
 You should have XRT on your robonomics account, which connected to Sensors Connectivity **Datalog**.
 
 ## Setup
 
-First, download repository and go in it:
+First, download repository:
 
 ```shell
 git clone https://github.com/airalab/RoSeMAN.git
@@ -68,8 +68,8 @@ Web server launched at `http://127.0.0.1:3000`.
 
 ## Post-installation
 
-After deploy RoSeMAN service to a server you have to get public IP address or URL to server. 
-Alternatively, if you run RoSeMAN service and Sensors Map at one server, you can use local IP address.
+After deployment of the RoSeMAN service to a server you have to get public IP address or URL to server. 
+Alternatively, if you run RoSeMAN service and Sensors Map on the same server, you can use local IP address.
 
 Next, you have to open Sensors Map configuration file(check [previous article](/docs/deploy-sensor-map/)) 
 and insert URL in `config.js` file into `REMOTE_PROVIDER` field:

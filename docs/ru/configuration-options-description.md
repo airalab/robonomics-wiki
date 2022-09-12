@@ -12,10 +12,10 @@ At the moment it's possible to publish data to [Luftdaten](https://luftdaten.inf
 Robonomics team prepare some ready configuration files to use.
 Full overview of configuration fields you can find [here.](https://github.com/airalab/sensors-connectivity/tree/master/connectivity/config)
 
-This Article contains advanced configurations scenarios. If you don't read previous article ["Sensors Connectivity Module Setup"](/docs/sensors-connectivity-setup/) first read it.
+This Article contains advanced configurations scenarios. If you didn't read previous article ["Sensors Connectivity Module Setup"](/docs/sensors-connectivity-setup/) first read it.
 ## Scenario #1: Connect SDS011 to serial port
 
-The easiest and the most straightforward way to connect your sensor to the network is using the serial port.
+The easiest and the most straightforward way to connect your sensor to the network by the serial port.
 
 First, connect you board to a USB port, and find path to board with next command:
 
@@ -27,10 +27,10 @@ lrwxrwxrwx 1 root root 13 сен  5 14:01 usb-1a86_USB2.0-Ser_-if00-port0 -> ../
 
 In the example it is `ttyUSB0`.
 Now you need to create new configuration file, or edit existing configuration file from previous [article](/docs/sensors-connectivity-setup/#json-configuration).
-Insert to configuration file what you see below. Write full path to your database in file.
+Insert what you see below to configuration file . Write full path to your database in file.
 
 <robo-wiki-note type="okay">
-Don't forget to insert your Board path to port statement and your latitude and longitude of a sensor to geo statement.
+Don't forget to insert your Board path to port statement and latitude and longitude of a sensor to geo statement.
 </robo-wiki-note>
 
 ```json
@@ -90,16 +90,16 @@ And start Sensors Connectivity module.
 
 ## Scenario #2: Connect SDS011 via MQTT
 
-**Attention**, Robonomics sensors firmware doesn't work with MQTT. These settings for additional sensors, which work throw MQTT. 
-Example of those sensors find [here.](/docs/freertos-mqtt/)
+**Attention**, Robonomics sensors firmware doesn't work with MQTT. These settings for additional sensors, which work through MQTT. 
+Example of those sensors you can find [here.](/docs/freertos-mqtt/)
 
-Assume that you have already had MQTT broker [mosquitto](https://mosquitto.org/download/) or similar.
+Assume that you already have MQTT broker [mosquitto](https://mosquitto.org/download/) or similar.
 
 As in previous scenario you need to create new configuration file, or edit existing configuration file from previous [article](/docs/sensors-connectivity-setup/#json-configuration).
-Insert to configuration file what you see below. Write full path to your database in file.
+Insert what you see below to configuration file. Write full path to your database in file.
 
 <robo-wiki-note type="okay">
-Don't forget to insert MQTT broker port  in host statement and MQTT broker port to port statement.
+Don't forget to insert MQTT broker port  in host field and MQTT broker port to port field.
 </robo-wiki-note>
 
 Sensors Connectivity Module will listen `/freertos_mqtt_robonomics_example/` topic.
@@ -160,14 +160,14 @@ And start Sensors Connectivity module.
 
 ## Scenario #3: Publish sensors data to Datalog
 
-In this scenario isn't matter which sensors connect type to choose. Example will you default one - over `http`.
+In this scenario it doesn’t matter which sensors connection type to choose. Example will show you instructions is written for default one - over `http`.
 
-This scenario show how to upload your sensor's data to Robonomics Parachain Datalog. 
+This scenario shows how to upload your sensor's data to Robonomics Parachain Datalog. 
 Robonomics Datalog is analog of "Telemetry" in Web3 technologies. 
 Datalog create a sensor's data snapshot each period of time, which increase reliability of data.
 
-As in previous scenario you need to create new configuration file, or edit existing configuration file from previous [article](/docs/sensors-connectivity-setup/#json-configuration). 
-Insert to configuration file what you see below. Write full path to your database in file.
+Just like in previous scenario you need to create new configuration file, or edit existing configuration file from previous [article](/docs/sensors-connectivity-setup/#json-configuration). 
+Insert what you see below to configuration file.  Write full path to your database in file.
 
 Here we work with `datalog` field. It includes next lines:
 
