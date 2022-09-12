@@ -1,34 +1,39 @@
 ---
-title: Введение 
- 
+title: Introduction
+
 contributors: [LoSk-p]
-translated: true
+translated: false
 ---
 
-## Что такое Sensors Robonomics Network?
+## What is Sensors Robonomics Network?
 
-Sensors Robonomics Network - это гражданская сеть датчиков для мониторинга качества воздуха. Каждый может собрать собственный датчик или воспользоваться готовым решением от команды разработки и установить у себя. Для датчиков используется ПО с открытым кодом и схемой подключения компонентов. Один из основных используемых датчиков - это датчик тонкодисперсных частиц PM10 и PM2.5.
+The Sensors Robonomics Network is a civilian air quality monitoring network. Anyone can build their own sensor or use an off-the-shelf solution from the development team and set it up in their home. 
+The sensors use open source software and component wiring diagrams. One of the main sensors used is the PM10 and PM2.5 fine particulate sensor.
 
-## Что такое PM10 и PM2.5?
+## What is PM10 and PM2.5?
 
-PM10 это частицы какого-либо вещества размером 10 мкм или менее, PM2.5 это частицы диаметром 2.5 мкм и меньше. Они постоянно витают в воздухе и не оседают из-за малого размера, для сравнения толщина человеческого волоса составляет 100 мкм. Такие частицы могут появляться из-за различных причин, в том числе в результате промышленных процессов, связанных с обработкой сыпучих материалов или сжиганием и переработкой полезных ископаемых. Также они выделяются после лесных пожаров и пыльных бурь. Кроме того их источником может быть обычный транспорт при сжигании топлива либо в результате износа шин и дорожного покрытия. Шины автомобиля стираются в мелкую крошку и ветер разносит ее от дорог по всему городу.
+PM10 is a particle of a substance 10 microns or smaller, PM2.5 is a particle 2.5 microns in diameter or smaller. 
+They are constantly floating in the air and do not settle due to their small size, for comparison, the thickness of a human hair is 100 microns.
+These particles can appear for a variety of reasons, including industrial processes involving the handling of bulk materials or the burning and processing of minerals. 
+They are also emitted after forest fires and dust storms. In addition, they can come from conventional transport when burning fuel or from wear and tear on tires and pavement. 
+Car tires are wiped out into fine crumbs and the wind blows them from the roads all over the city.
 
-## Зачем их измерять?
+## Why do we need to measure them?
 
-Частицы PM10 и PM2.5 наиболее опасны, потому что их размер позволяет проникать в легкие, тогда как частицы больших размеров, как правило, задерживаются в носу или горле. Более крупные частицы PM10 раздражают дыхательные пути, нос, горло и глаза. Частицы мельче 2.5 мкм способны проникать глубоко в легкие и даже попадать в кровь. Попадание данных частиц в организм человека влечет за собой различные пагубные последствия:
-- отравление вредными веществами, попадающими в кровь
-- аллергические реакции
-- бактериальные и грибковые инфекции
-- рак
-- раздражение слизистых оболочек
-- обострение симптомов респираторных заболеваний
+PM10 and PM2.5 are the most dangerous because their size allows them to penetrate the lungs, whereas larger particles tend to linger in the nose or throat. 
+Larger PM10 particles irritate the airways, nose, throat, and eyes. Particles smaller than 2.5 microns can penetrate deep into the lungs and even enter the bloodstream. 
+The effects of these particles on the human body can be devastating:
+- poisoning by harmful substances entering the bloodstream
+- allergic reactions
+- bacterial and fungal infections
+- cancer
+- mucous membrane irritation
+- exacerbation of respiratory symptoms
 
-## Почему именно Sensors Robonomics Network?
+## Why the Sensors Robonomics Network?
 
-В России существуют другие общественные сети мониторинга, такие как [Дыши Москва](https://breathe.moscow/), которые основаны на немецком проекте [sensor.community](https://sensor.community/ru/), однако они используют обычную клиент-серверную архитектуру, что в данном случае является недостатком, поскольку данные со всех датчиков вместе с запросами пользователей идут на один сервер, который не всегда справляется с такой нагрузкой, и возникают ситуации, когда карта с данными недоступна в самые ответственные моменты. В Sensors Robonomics Network датчики отправляют данные на несколько разных серверов, а также любой пользователь может поднять сервер Sensors Connectivity для своего датчика и увидеть его на карте. Сама карта не перегружается, потому что представляет из себя децентрализованное приложение (DApp), которое напрямую из вашего браузера работает с данными, которые сервера отправляют в IPFS pub-sub канал.
-
-
-## Источники
-http://www.npi.gov.au/resource/particulate-matter-pm10-and-pm25
-
-https://habr.com/ru/company/tion/blog/396111/
+In Russia there are other public monitoring networks, such as [Breathe Moscow](https://breathe.moscow/), which are based on the German project [sensor.community](https://sensor.community/ru/). 
+But they use the usual client-server architecture, which in this case is a drawback. Data from all sensors along with user requests goes to one server, 
+which cannot always handle such load. So there are situations when the map with data is not available at the most 
+responsible moments. With Sensors Robonomics Network, sensors send data to several different servers, and any user can bring up the Sensors Connectivity server for their sensor and see it on the map. 
+The map itself is not overloaded because it is a decentralized application (DApp) that works directly from your browser with the data that the servers send to the IPFS pub-sub channel.
