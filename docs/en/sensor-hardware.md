@@ -7,7 +7,7 @@ translated: true
 
 If you wish to participate in the  air monitoring with Robonomics Open Sensors Network you need to obtain an air pollution board with sensors. 
 There are two ways to do it: 
-- order all necessary parts and build your custom board. 
+- order all necessary parts and build the custom board yourself. 
 - order a ready-to-use board from Robonomics team.
 
 ## Manual board assembly

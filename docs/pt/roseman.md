@@ -13,7 +13,7 @@ data to show measurement history.
 First, RoSeMAN requires **Mongodb** [Database server.](https://www.mongodb.com/docs/manual/introduction/) 
 In this article the installation process isn't discussed, it is assumed that you already have it. 
 
-Also, I have to turn on "Datalog" option for Sensors Connectivity module, as shown in "Scenario #3" in ["Configuration Options Description" article.](/docs/configuration-options-description/)
+Also, you have to turn on "Datalog" option for Sensors Connectivity module, as shown in "Scenario #3" in ["Configuration Options Description" article.](/docs/configuration-options-description/)
 You should have XRT on your robonomics account, which connected to Sensors Connectivity **Datalog**.
 
 ## Setup

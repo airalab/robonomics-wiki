@@ -6,7 +6,7 @@ translated: true
 ---
 
 The Sensors Robonomics Network uses the sensors-connectivity module to receive and process data. 
-This module allows any user to raise their own server to receive data from sensors and process it further. 
+This module allows any user to launch their own server to receive data from sensors and process it further. 
 At the moment the developers have launched several such servers and any sensor can send data to them. Running several servers allows to avoid data loss in case of problems with one of them,
 as sensors will switch from a non-working server will switch to a working one.
 

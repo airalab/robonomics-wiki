@@ -28,8 +28,7 @@ ipfs init
 Also, we need to install `python3 dev` package and `pip`:
 
 ```shell
-sudo apt install python3-dev
-sudo apt install python3-pip
+sudo apt install python3-dev python3-pip
 ```
 
 ## Installation as PyPi package

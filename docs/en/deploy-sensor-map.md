@@ -87,7 +87,7 @@ Next open `config.json` file. You need to change the next part of configuration 
 
 Here you have to insert latitude and longitude of your city.       
 
-Optionally, I can setup ["Wind direction" service](https://github.com/danwild/wind-js-server) and provide URL to it in `WIND_PROVIDER` field.
+Optionally, you can set up ["Wind direction" service](https://github.com/danwild/wind-js-server) and provide URL to it in `WIND_PROVIDER` field.
 
 ## Build for Release
 
