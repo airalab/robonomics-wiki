@@ -12,7 +12,8 @@ At the moment it's possible to publish data to [Luftdaten](https://luftdaten.inf
 Robonomics team has prepared a few ready-to-use configurations.
 You can find the full overview of the configuration fields [here.](https://github.com/airalab/sensors-connectivity/tree/master/connectivity/config)
 
-This Article contains advanced configurations scenarios. If you didn't read previous article ["Sensors Connectivity Module Setup"](/docs/sensors-connectivity-setup/) first read it.
+This Article contains advanced configurations scenarios. If you haven't read the previous article ["Sensors Connectivity Module Setup"](/docs/sensors-connectivity-setup/) yet, please read it first.
+
 ## Scenario #1: Connect SDS011 to serial port
 
 The easiest and the most straightforward way to connect your sensor to the network by the serial port.
@@ -160,7 +161,7 @@ And start Sensors Connectivity module.
 
 ## Scenario #3: Publish sensors data to Datalog
 
-In this scenario it doesn’t matter which sensors connection type to choose. Example will show you instructions is written for default one - over `http`.
+In this scenario it doesn't matter how data is being gathered: over HTTP, MQTT or COM. Let's look at the default HTTP configuration.
 
 This scenario shows how to upload your sensor's data to Robonomics Parachain Datalog. 
 Robonomics Datalog is analog of "Telemetry" in Web3 technologies. 
