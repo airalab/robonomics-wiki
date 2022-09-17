@@ -1,9 +1,24 @@
 ---
 title: How to build collator node from source
- 
+
 contributors: [dergudzon, Leemo94]
 translated: false
 ---
+
+Note: In the screencast and screenshots of this article, we used version 1.4.0 of Robonomics. You need to use the same commands, but replace the version of Robonomics with the current one.
+
+## What is a collator and why to run it
+
+Collator is part of the Robonomics parachain. This nodes type creates new blocks for chain.
+
+>Collators maintain parachains by collecting parachain transactions from users and producing state transition proofs for Relay Chain validators. In other words, collators maintain parachains by aggregating parachain transactions into parachain block candidates and producing state transition proofs for validators based on those blocks.
+
+You can learn more about collator on the related [Polkadot wiki page](https://wiki.polkadot.network/docs/learn-collator)
+
+In the Robonomics parachain every collator get rewards (**0.000380520 XRT**) for every block it built, if this block was sealed to the chain. 
+Also collator get **50% transactions fees** from this block.
+
+## Building process
 
 https://youtu.be/wnAtD7w0Pxk
 
@@ -20,17 +35,17 @@ Ensure you have Rust and the support software installed. The Rust installer will
 
 
 Install the required nightly toolchain and wasm target.
-Next commands actual for Robonomics v1.4.0:
+Next commands actual for Robonomics v2.3.0:
 
 ```
-  rustup install nightly-2021-11-02
+  rustup install nightly-2022-08-05
 ```
 ![Install nightly](../images/how-to-build-collator-node/install_nightly.jpg)
 
 
 ```
-  rustup default nightly-2021-11-02
-  rustup target add wasm32-unknown-unknown --toolchain nightly-2021-11-02
+  rustup default nightly-2022-08-05
+  rustup target add wasm32-unknown-unknown --toolchain nightly-2022-08-05
 ```
 You will also need to install the following packages:
 
@@ -55,7 +70,7 @@ You will also need to install the following packages:
 Now you can install the robonomics node from git source.
 
 ```
-  cargo install --force --git https://github.com/airalab/robonomics --tag v1.4.0 robonomics-node
+  cargo install --force --git https://github.com/airalab/robonomics --tag v2.3.0 robonomics-node
 ```
 ![Start build Robonomics](../images/how-to-build-collator-node/start_build_robonomics.jpg)
 ![End build Robonomics](../images/how-to-build-collator-node/end_build_robonomics.jpg)

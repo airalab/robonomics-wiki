@@ -1,6 +1,6 @@
 ---
-title: How to launch the Robonomics collator
- 
+title: How to launch the Robonomics collator 
+
 contributors: [dergudzon, Leemo94]
 translated: false
 ---
@@ -10,6 +10,17 @@ Note: In the screencast and screenshots of this article, we used version 1.4.0 o
 https://youtu.be/wUTDDLDbzTg
 
 Currently the Robonomics network is maintained by developers, but anyone can support the project. Every additional full node of the blockchain helps it to be more sustainable and fault tolerant. Robonomics node binaries are available in [release](https://github.com/airalab/robonomics/releases) assets or it could be [built from source](/docs/how-to-build-collator-node/).
+
+## What is a collator and why to run it
+
+Collator is part of the Robonomics parachain. This nodes type creates new blocks for chain.
+
+>Collators maintain parachains by collecting parachain transactions from users and producing state transition proofs for Relay Chain validators. In other words, collators maintain parachains by aggregating parachain transactions into parachain block candidates and producing state transition proofs for validators based on those blocks.
+
+You can learn more about collator on the related [Polkadot wiki page](https://wiki.polkadot.network/docs/learn-collator)
+
+In the Robonomics parachain every collator get rewards (**0.000380520 XRT**) for every block it built, if this block was sealed to the chain. 
+Also collator get **50% transactions fees** from this block.
 
 ## Requirements
 
