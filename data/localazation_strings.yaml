@@ -31,12 +31,12 @@
   ru: Быстрое погружение
 
 - alias: Enter Nav 2
-  en: Connect robots
-  es: Conectando Robots
-  ja: Connect robots
-  ko: Connect robots
-  pt: Connect robots
-  ru: Подключайте роботов
+  en: Playground
+  es: Playground
+  ja: Playground
+  ko: Playground
+  pt: Playground
+  ru: Песочница
 
 - alias: Enter Nav 3
   en: Maintenance Guide
@@ -70,6 +70,14 @@
   pt: Make a contribution
   ru: Внесите свой вклад
 
+- alias: Enter Nav 7
+  en: Basics
+  es: Basics
+  ja: Basics
+  ko: Basics
+  pt: Basics
+  ru: Основы
+
 - alias: Menu
   en: Menu
   es: Menú
@@ -83,7 +91,7 @@
   es: Búsqueda
   ja: サイト検索
   ko: 사이트 검색
-  pt: 사이트 검색
+  pt: Search
   ru: Поиск
 
 - alias: Robonomics WIKI

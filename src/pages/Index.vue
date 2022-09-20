@@ -65,29 +65,33 @@ export default {
     return {
       navLinks: [
         {
-          to: '/docs/',
+          to: '/summary/meet-robonomics/',
           name: 'Enter Nav 1'
         },
         {
-          to: '/docs/playground-overview/',
+          to: '/summary/basics/',
+          name: 'Enter Nav 7'
+        },
+        {
+          to: '/summary/playground/',
           name: 'Enter Nav 2'
         },
         {
-          to: '/docs/robonomics-test-network-manual/',
+          to: '/summary/maintain/',
           name: 'Enter Nav 3'
         },
         {
-          to: '/docs/sensors-network-introduction/',
+          to: '/summary/cases/',
           name: 'Enter Nav 4'
         },
         {
-          to: '/docs/robonomics-js/',
+          to: '/summary/learn/',
           name: 'Enter Nav 5'
         },
-        {
-          to: '/docs/contributing/',
-          name: 'Enter Nav 6'
-        },
+        // {
+        //   to: '/docs/contributing/',
+        //   name: 'Enter Nav 6'
+        // },
       ]
     }
   },
