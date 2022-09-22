@@ -27,7 +27,7 @@ In other terminal window download image:
 Alternatively, you can download it [from url.](https://ipfs.io/ipfs/QmVKSwB6nXNjq8Yydb1unYWjahv2mz45ME4NTUw9mWBj2S?filename=rpi_hass.img.gz) (**Only with started IPFS Daemon**), but then you
 
 ```shell
-ipfs get QmVKSwB6nXNjq8Yydb1unYWjahv2mz45ME4NTUw9mWBj2S -o rpi.img.gz
+ipfs get Qmb1hkvDjDbruHUkjPKf4qN2cyqtR7Lr9i3BUwwmNxxTiH -o rpi.img.xz
 ```
 
 Then read the next chapter to install image.
@@ -161,7 +161,7 @@ Update your system and install necessary packages:
 ```bash
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install -y python3 python3-dev python3-venv python3-pip libffi-dev libssl-dev libjpeg-dev zlib1g-dev autoconf build-essential libopenjp2-7 libtiff5 tzdata libcurl4-openssl-dev
+sudo apt-get install -y python3 python3-dev python3-venv python3-pip libffi-dev libssl-dev libjpeg-dev zlib1g-dev autoconf build-essential libopenjp2-7 libtiff5 tzdata libcurl4-openssl-dev subversion
 ```
 
 Create user `homeassistant` and the directory for homeassistant core:
@@ -293,8 +293,7 @@ Source virtual environment and install python packages:
 
 ```bash
 source /srv/homeassistant/bin/activate
-pip install http3
-pip install robonomics-interface~=1.1
+pip install robonomics-interface~=1.3
 ```
 
 Then go to `.homeassistant` directory:
@@ -305,7 +304,6 @@ cd /home/homeassistant/.homeassistant
 Create folder `custom_components` and clone in there the repository with the integration:
 
 ```bash
-sudo apt-get install subversion
 mkdir custom_components
 cd custom_components
 svn checkout https://github.com/airalab/homeassistant-robonomics-integration/trunk/custom_components/robonomics
