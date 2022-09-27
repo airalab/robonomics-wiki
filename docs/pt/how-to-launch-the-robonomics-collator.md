@@ -1,11 +1,14 @@
 ---
-title: How to launch the Robonomics collator 
-
+title: How to launch the Robonomics collator
 contributors: [dergudzon, Leemo94]
 translated: false
+tools:
+  - Robonomics 2.3.0
 ---
 
-Note: In the screencast and screenshots of this article, we used version 1.4.0 of Robonomics. You need to use the same commands, but replace the version of Robonomics with the current one.
+<robo-wiki-note type="note" title="Note">
+  In the screencast and screenshots of this article, we used version 1.4.0 of Robonomics. You need to use the same commands, but replace the version of Robonomics with the current one.
+</robo-wiki-note>
 
 https://youtu.be/wUTDDLDbzTg
 

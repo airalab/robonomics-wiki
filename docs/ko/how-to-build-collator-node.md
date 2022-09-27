@@ -1,11 +1,15 @@
 ---
 title: How to build collator node from source
-
 contributors: [dergudzon, Leemo94]
 translated: false
+tools:
+  - Robonomics 2.3.0
+  - Rust toolchain nightly-2022-08-05
 ---
 
-Note: In the screencast and screenshots of this article, we used version 1.4.0 of Robonomics. You need to use the same commands, but replace the version of Robonomics with the current one.
+<robo-wiki-note type="note" title="Note">
+  In the screencast and screenshots of this article, we used version 1.4.0 of Robonomics. You need to use the same commands, but replace the version of Robonomics with the current one.
+</robo-wiki-note>
 
 ## What is a collator and why to run it
 
