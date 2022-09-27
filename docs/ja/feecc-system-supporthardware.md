@@ -1,129 +1,122 @@
 ---
-title: Поддерживаемое оборудование
+title: Supported Hardware
  
 contributors: [adeptvin1]
 translated: false
 ---
-## Список поддерживаемого оборудования по системам
-### Feecc Рабочее Место Инженера
-Выбор оборудования для "Feecc Рабочее Место Инженера" обуславливается финансовыми возможностями компании эксплуатанта системы и особенностей выбранной архитектуры.
+## List of supported hardware by systems
+### Feecc Engineer Workbench
+The choice of equipment for the "Feecc Engineer Workbench" is determined by the financial capabilities of the company operating the system and the specifics of the chosen architecture.
 
-На рисунке 1 и 2 изображенны архитектуры Feecc Рабочее Место Инженера с децентрализованной и централизованной топологией организации системы в корпоративной среде.
+Figures 1 and 2 show the Feecc Engineer Workplace architecture with decentralized and centralized system organization topology in a corporate environment.
 ![architec1](../images/feecc-system-architecture/picture1.png)
 
 <p align="center">
-Рисунок 1 - Архитектура Feecc Рабочее Место Инженера с децентрализованной топологией организации системы в корпоративной среде.
+Picture 1 - Feecc Engineer Workbench architecture with decentralized system organization topology in a corporate environment.
 </p>
 
 ![architec2](../images/feecc-system-architecture/picture2.png)
 
 <p align="center">
-Рисунок 2 - Архитектура Feecc Рабочее Место Инженера с централизованной топологией организации системы в корпоративной среде.
+Picture 2 - Feecc Engineer Workbench architecture with centralized system organization topology in a corporate environment.
 </p>
 
-> **Стоит отметить, что это не все описанные архитектуры и существуют более экономные варианты: один принтер на группу столов, монитор без сенсорного ввода или без монитора вовсе. Обязательными являются сканеры RFID и штрих-кодов, одноплатный или стационарный компьютер и камера на каждом рабочем столе.** 
+> **It is worth noting that these are not all the architectures described, and there are more economical options: one printer per group of desks, a monitor without touch screen input or no monitor at all. But RFID and barcode scanners, a single board or desktop computer, and a camera on each desk are mandatory.** 
 
-#### **Сканер RFID карт**
+#### **RFID scanner**
 
-> USB сканер RFID. Необходим для авторизации инженеров на местах по их внутренним пропускам. Поступающая информация
-> обрабатывается с помощью сервиса [feecc-hid-reader-daemon](https://github.com/Multi-Agent-io/feecc-hid-reader-daemon).
+> A USB RFID scanner is needed to authorize engineers in the field with their internal badges. Incoming information is processed using the [feecc-hid-reader-daemon](https://github.com/Multi-Agent-io/feecc-hid-reader-daemon).
 
-Необходимые технические характеристики:
+Required technical specifications:
 
-  - Рабочая частота - 125khz.
+  - Operating frequency - 125kHz.
 
-*([ссылка](https://aliexpress.ru/item/1005003579675742.html?spm=a2g2w.productlist.0.0.190ad16cWCptVr&sku_id=12000026804509353)).*
+*You can buy it [here](https://aliexpress.ru/item/1005003579675742.html?spm=a2g2w.productlist.0.0.190ad16cWCptVr&sku_id=12000026804509353).*
 
-#### **Сканер штрихкодов**
+#### **Barcode scanner**
 
-> USB сканер штрих-кодов. Необходим для идентификации изделий по штрих-кодам, отправки команд сервисам и для правильного 
-> присвоения сертификатов. Также используется для чтения QR-кодов для идентификации сертификатов. Поступающая информация
-> также обрабатывается с помощью сервиса [feecc-hid-reader-daemon](https://github.com/Multi-Agent-io/feecc-hid-reader-daemon)
+> The USB barcode scanner is necessary for identifying products by barcodes, sending commands to services and for the correct assignment of certificates. It is also used to read QR codes to identify certificates. The incoming information is also processed with the [feecc-hid-reader-daemon](https://github.com/Multi-Agent-io/feecc-hid-reader-daemon).
 
-Необходимые технические характеристики:
+Required technical specifications:
 
-  - Чтение в двух измерениях (желательно, но не обязательно).
+  - Reading in two dimensions (desirable, but not required).
 
-*([ссылка](https://aliexpress.ru/item/32902727438.html?spm=a2g2w.productlist.0.0.263d68c5fTwi8J&sku_id=10000009784771593)).*
+*You can buy it [here](https://aliexpress.ru/item/32902727438.html?spm=a2g2w.productlist.0.0.263d68c5fTwi8J&sku_id=10000009784771593).*
 
-#### **Рабочий компьютер**
+#### **Work computer**
 
-> Небольшой одноплатный компьютер. На нем происходит обработка сигналов с внешних устройств (сканер штрих-кодов, сканер 
-> RFID), с этого компьютера отправляются запросы на печать изображений на принтере, начало и остановку записи видео, 
-> отправку данных в IPFS и на платформу Robonomics. На нем запускаются следующие сервисы [feecc-workbench-frontend](https://github.com/Multi-Agent-io/feecc-workbench-frontend), [feecc-workbench-daemon](https://github.com/Multi-Agent-io/feecc-workbench-daemon), [feecc-hid-reader-daemon](https://github.com/Multi-Agent-io/feecc-hid-reader-daemon)
-> Подключение к интернету - Wi-Fi или LAN.
+> A small single-board computer. It processes signals from external devices (barcode scanner, RFID scanner), sends requests for printing images on the printer, starting and stopping video recording, sending data to IPFS and the Robonomics platform. It runs the following services: [feecc-workbench-frontend](https://github.com/Multi-Agent-io/feecc-workbench-frontend), [feecc-workbench-daemon](https://github.com/Multi-Agent-io/feecc-workbench-daemon), [feecc-hid-reader-daemon](https://github.com/Multi-Agent-io/feecc-hid-reader-daemon). An Internet connection via Wi-Fi or LAN is required.
 
-Стоит уточнить, что вместо одоплатных компьютеров с монитором может использоваться любой компьютер. На нем должна быть
-нативно или посредством виртуальной машины утсановлена операционная система [GNU/LINUX](https://www.gnu.org/).
+It is worth specifying that any computer can be used instead of a single-payer computer with a monitor. The operating system [GNU/LINUX](https://www.gnu.org/) must be installed on it natively or through a virtual machine.
 
-Минимальные технические характеристики:
+Minimum technical specifications:
 
-  - Raspberry Pi4 4 GB RAM, возможно использование аналога.
+  - Raspberry Pi4 4 GB RAM, it is possible to use an analogue.
 
-*[ссылка](https://www.cytron.io/p-raspberry-pi-4-model-b-4gb).*
+*You can buy it [here](https://www.cytron.io/p-raspberry-pi-4-model-b-4gb).*
 
-#### **Сенсорный экран**
+#### **Touch screen**
 
-> Монитор. Используется сотрудником для ввода и просмотра информации о текущем этапе производства. На нем также
-> отображаются подсказки для инженера по текущему этапу.
+> The monitor is used by the employee to enter and view information about the current production step. It also displays hints for the engineer on the current stage.
 
-Необходимые технические характеристики:
+Required technical specifications:
 
-  - Сенсорный экран (желательно, но не необходимо. Можно использовать другие устройства ввода информации).
+  - Touch screen (desirable but not necessary. Other input devices can be used).
 
-*([ссылка](https://www.asus.com/Displays-Desktops/Monitors/Touch/VT168H/)).*
+*You can buy it [here](https://www.asus.com/Displays-Desktops/Monitors/Touch/VT168H/).*
 
-#### **Принтер этикеток**
+#### **Label printer**
 
-> Принтер этикеток. Используется для печати QR-кодов и штрих-кодов для дальнейшего размещения наклеек на изделии с целью
-> идентификации и проверки. Взаимодействие с принтером осуществляется с помощью служебного сервиса [feecc-print-server](https://github.com/Multi-Agent-io/feecc-print-server)
+> The label printer is used to print QR codes and bar codes for further placement of labels on the product for identification and verification purposes. Interaction with the printer is carried out with the help of the [feecc-print-server](https://github.com/Multi-Agent-io/feecc-print-server).
 
-Необходимые технические характеристики:
+Required technical specifications:
 
-  - В данном варианте используются принтеры Brother модели QL-800.
+  - This option uses Brother model QL-800 printers.
 
-*([ссылка](https://www.brother-usa.com/products/ql800)).*
+*You can buy it [here](https://www.brother-usa.com/products/ql800).*
 
-#### **IP-камера**
+#### **IP Camera**
 
-> IP-камера для съемки производственных процессов для включения в сертификат изделия. Располагается над местом сборки изделия.
-> Взаимодействие с камерой осуществляется с помощью сервиса [feecc-cameraman](https://github.com/Multi-Agent-io/feecc-cameraman).
-Необходимые технические характеристики:
+> IP camera for capturing production processes for inclusion in the product certificate. Located above the assembly area of the product. Interaction with the camera is performed using the [feecc-cameraman](https://github.com/Multi-Agent-io/feecc-cameraman) service.
 
-  - PoE питание.
-  - RSTP-протокол передачи данных.
-  - В данном варианте использовались камеры Hikvision HiWatch DS-i200d
+Required technical specifications:
 
-*([ссылка](https://www.hi-watch.eu/en-us/product/1986/ip-camera/bullet-camera/2-0-mp-ir-network-bullet-camera)).*
-> **В последней версии [feecc-cameraman](https://github.com/Multi-Agent-io/feecc-cameraman) появилась поддержка WEB камер, по этому при выборе оборудования обратите внимание на эту деталь.**
+  - PoE power supply.
+  - RSTP data transfer protocol.
+  - This option uses Hikvision HiWatch DS-i200d
 
-#### **Оборудование, представленное ниже, используется сразу для нескольких столов.**
+*You can buy it [here](https://www.hi-watch.eu/en-us/product/1986/ip-camera/bullet-camera/2-0-mp-ir-network-bullet-camera).*
 
-#### **Маршрутизатор или коммутатор с поддержкой PoE 802.3af**
+> **The latest version [feecc-cameraman](https://github.com/Multi-Agent-io/feecc-cameraman) supports WEB cameras, so pay attention to this detail when choosing equipment.**
 
-> Маршрутизатор или коммутатор с поддержкой PoE 802.3af для питания IP камер и их связи с сервисом [feecc-cameraman](https://github.com/Multi-Agent-io/feecc-cameraman). 
+<robo-wiki-note type="warning">
+The equipment shown below is used for several tables at once.
+</robo-wiki-note>
 
-Необходимые технические характеристики:
+#### **Router or switch that supports PoE 802.3af**
 
-  - PoE питание на выходных портах.
-  - В данном варианте использовался MikroTik hEX PoE - один на 3-4 стола + блок питания.
+> Router or switch with PoE 802.3af support for powering IP cameras and connecting them to the [feecc-cameraman](https://github.com/Multi-Agent-io/feecc-cameraman) service. 
 
-*([ссылка](https://mikrotik.com/product/RB960PGS)), ([ссылка](https://mikrotik.com/product/48POW)).*
+Required technical specifications:
 
-#### **Опционально, стационарный сервер**
+  - PoE power on the output ports.
+  - This variant used MikroTik hEX PoE - one for 3-4 workplaces + power supply.
 
-> Более мощный, нежели одноплатные компьютеры, сервер. На нем могут работать сервисы [feecc-ipfs-gateway](https://github.com/Multi-Agent-io/feecc-ipfs-gateway), [feecc-print-server](https://github.com/Multi-Agent-io/feecc-print-server), [feecc-cameraman](https://github.com/Multi-Agent-io/feecc-cameraman). Может быть расположен
-> на месте одного из компьютеров рабочих мест инженеров. Подключение к сети Интернет - LAN.
+*You can buy it with the following links: [router](https://mikrotik.com/product/RB960PGS) and [power adapter](https://mikrotik.com/product/48POW).*
 
-Необходимые технические характеристики:
+#### **Optional, Fixed Server**
 
-  - Процессор от Intel® Xeon® E-2200 или аналогичный
-  - Оперативная память от 8 гигабайт
-  - Жесткий диск от 1 террабайта
-  - Сетевой интерфейс LAN от 1 Гбит/с
+> A more powerful server than the single board computers. It can run [feecc-ipfs-gateway](https://github.com/Multi-Agent-io/feecc-ipfs-gateway), [feecc-print-server](https://github.com/Multi-Agent-io/feecc-print-server), [feecc-cameraman](https://github.com/Multi-Agent-io/feecc-cameraman). Can be located in place of one of the computers of the engineers' workplaces. The connection to the Internet is LAN.
 
-*([ссылка](https://www.dell.com/en-us/shop/cty/pdp/spd/poweredge-r240/pe_r240_tm_vi_vp_sb)).*
+Required technical specifications:
 
-### Feecc Аналитика
+  - Intel® Xeon® E-2200 processor or equivalent
+  - RAM from 8 Gb
+  - Hard drive from 1 Tb
+  - LAN network interface from 1 Gbit/s
 
-Единственное оборудование, которое требуется для работы модуля - это локальный или удаленный сервер(виртуальная машина), на котором/которой будет работать веб приложение "Feecc Аналитика". Каждый сотрудник имеющий на это право может со своего компьютера получить доступ к веб приложению по средствам логина и пароля.
+*You can buy it [here](https://www.dell.com/en-us/shop/cty/pdp/spd/poweredge-r240/pe_r240_tm_vi_vp_sb).*
+
+### Feecc Analitics
+
+The only hardware required for the module to work is a local or remote server (virtual machine) on which the "Feecc Analytics" web application will run. Each authorized employee can access the web application from his/her computer with a username and password.
