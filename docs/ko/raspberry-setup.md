@@ -309,9 +309,10 @@ cd custom_components
 svn checkout https://github.com/airalab/homeassistant-robonomics-integration/trunk/custom_components/robonomics
 ```
 
-After that restart Home Assistant:
+After that exit Home Assistant user and restart service:
 
 ```shell
+exit
 sudo systemctl restart home-assistant@homeassistant.service
 ```
 
