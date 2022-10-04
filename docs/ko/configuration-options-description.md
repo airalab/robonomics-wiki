@@ -54,7 +54,10 @@ Don't forget to insert your board path to port statement and latitude and longit
    "mqttstation": {
       "enable": false,
       "host": "localhost",
-      "port": 1883
+      "port": 1883,
+      "topic": "/freertos_mqtt_robonomics_example/#",
+      "username": "",
+      "password": ""
    },
    "luftdaten": {
       "enable": false
@@ -100,10 +103,13 @@ Again as in the previous scenario you need to create a new configuration file, o
 Insert what you see below to the configuration file. Write the full path to your database in the file.
 
 <robo-wiki-note type="okay">
-Don't forget to insert MQTT broker port  in host field and MQTT broker port to port field.
+Don't forget to insert MQTT broker port in the host field, MQTT broker port in the port field and topic where your sensors sends data to in the topic field.
 </robo-wiki-note>
 
-Sensors Connectivity Module will listen `/freertos_mqtt_robonomics_example/` topic.
+<robo-wiki-note type="note" title="Optional">
+You can also specify username and password to connect to the broker if it is required.
+</robo-wiki-note>
+
 ```json
 {
    "general": {
@@ -124,7 +130,10 @@ Sensors Connectivity Module will listen `/freertos_mqtt_robonomics_example/` top
    "mqttstation": {
       "enable": true,
       "host": "<MQTT-broker-host>",
-      "port": <MQTT-broker-port>
+      "port": "<MQTT-broker-port>",
+      "topic": "<Topic where your sensor sends data to>",
+      "username": "",
+      "password": ""
    },
    "luftdaten": {
       "enable": false
@@ -203,7 +212,10 @@ Insert what required to file:
    "mqttstation": {
       "enable": false,
       "host": "localhost",
-      "port": 1883
+      "port": 1883,
+      "topic": "/freertos_mqtt_robonomics_example/#",
+      "username": "",
+      "password": ""
    },
    "luftdaten": {
       "enable": false

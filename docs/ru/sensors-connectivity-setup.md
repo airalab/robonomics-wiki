@@ -95,7 +95,10 @@ There is default configuration file:
    "mqttstation": {
       "enable": false,
       "host": "localhost",
-      "port": 1883
+      "port": 1883,
+      "topic": "/freertos_mqtt_robonomics_example/#",
+      "username": "",
+      "password": ""
    },
    "luftdaten": {
       "enable": false
