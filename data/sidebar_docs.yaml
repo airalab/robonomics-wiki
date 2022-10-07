@@ -1,57 +1,212 @@
-- title_en: Meet Robonomics
-  title_ru: Начало работы
+- title_en: Robonomics Smart Home
+  items:
+#    - title_en: Introduction
+#      link: /docs/robonomics-smart-home-introduction
+#    - title_en: Demo
+#      link: /docs/robonomics-smart-home-demo
+#    - title_en: Boost Your Home Assistant
+#      items:
+#        - title_en: Requirements
+#          link: /docs/robonomics-smart-home-boost-requirements
+#        - title_en: Setup
+#          link: /docs/robonomics-smart-home-boost-setup
+    - title_en: Start From Scratch
+      items:
+# These articles are to be rewritten
+        - title_en: Overview
+          link: /docs/home-assistant-begin
+        - title_en: Raspberry Pi Setup
+          link: /docs/raspberry-setup
+        - title_en: MQTT Broker Setup
+          link: /docs/mqtt-broker
+        - title_en: Zigbee2MQTT Setup
+          link: /docs/zigbee2-mqtt
+        - title_en: Setup SLS Gateway
+          link: /docs/sls-setup
+        - title_en: Connect SLS Gateway to Home Assistant
+          link: /docs/sls-gateway-connect
+        - title_en: IOT Subscription Setup
+          link: /docs/iot-sub-setup
+        - title_en: Robonomics Integration Setup
+          link: /docs/add-smart-device-to-robonomics
+        - title_en: DApp Usage
+          link: /docs/use-dapp
+
+# These articles are to be deleted
+#            - title_en: Connect Sensors with Xiaomi Gateway
+#              link: /docs/xiaomi-gateway
+#            - title_en: Connect Vacuum Cleaner
+#              link: /docs/vacuum-connect
+
+- title_en: Learn
   items:
     - title_en: Introduction
       title_ru: Введение
       link: /docs/
-    - title_en: DEMO "Get Weather on Fuji Mountain"
-      title_es: DEMO "Obtenga el clima en la montaña de Fuji"
-      link: /docs/get-weather-on-fuji-mountain
-    - title_en: Robonomics DApp Overview
-      link: /docs/robonomics-dapp-overview
     - title_en: R&D Based on Robonomics Network
       title_ru: R&D на базе Робономики
       link: /docs/r-and-d-based-on-robonomics-network
-
-- title_en: Basics
-  items:
     - title_en: Create Account for Robonomics Parachain
       link: /docs/create-account-in-dapp
     - title_en: How to Run Robonomics Dev Node
       link: /docs/run-dev-node
     - title_en: Adding Funds To Your Account on Robonomics Portal
-      link: /docs/adding-funds-to-account-in-dapp/
+      link: /docs/adding-funds-to-account-in-dapp
+#    - title_en: "Basics: Datalog"
+#      link: /docs/datalog
+#    - title_en: "Basics: Launch"
+#      link: /docs/launch
+    - title_en: "Basics: Digital Twins"
+      link: /docs/digital-twins
+#    - title_en: "Basics: Liability"
+#      link: /docs/liability
+#    - title_en: Robonomics IO
+#      link: /docs/rio
+
+# The following are to be deleted
+#    - title_en: Robonomics IO
+#      items:
+#        - title_en: Overview
+#          link: /docs/rio-overview
+#        - title_en: IPFS
+#          link: /docs/rio-ipfs
+#        - title_en: Launch
+#          link: /docs/rio-launch
+#        - title_en: Datalog
+#          link: /docs/rio-datalog
+#    - title_en: Digital twins
+
     - title_en: How to Buy a Subscription
       link: /docs/get-subscription
     - title_en: How to Send Launch with Subscription
       link: /docs/subscription-launch
     - title_en: Cross-chain Message
       link: /docs/cross-chain-messages
+    - title_en: How the Technical Committee Is Fast-tracking the Democracy Proposals
+      link: /docs/technical-committee-fast-track
 
-- title_en: Playground
+- title_en: Use
   items:
-    - title_en: Playground Overview
-      link: /docs/playground-overview
-    - title_en: Connect Mars Curiosity Rover
-      link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control
-    - title_en: Connect ROS-compatible Drone
+#    - title_en: Introduction
+#      link: /use-introduction
+    - title_en: Use Cases
       items:
-        - title_en: Part 1. Launch by Transaction
-          link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-1
-        - title_en: Part 2. Saving Data To Blockchain
-          link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-2
-    - title_en: Connect Industrial Robot
+        - title_en: Open Sensors Network
+          items:
+            - title_en: Introduction
+              title_ru: Введение
+              link: /docs/sensors-network-introduction
+            - title_en: Sensor Hardware
+              link: /docs/sensor-hardware
+            - title_en: Sensor Setup
+              link: /docs/sensor-setup
+            - title_en: Sensors Connectivity Module Introduction
+              link: /docs/sensors-connectivity-on-aira
+            - title_en: Sensors Connectivity Module Setup
+              link: /docs/sensors-connectivity-setup
+            - title_en: Configuration Options Description
+              link: /docs/configuration-options-description
+            - title_en: Deploy Sensor Map
+              link: /docs/deploy-sensor-map
+            - title_en: RoSeMAN Setup
+              link: /docs/roseman
+            - title_en: Connect an Amazon FreeRTOS device to Robonomics by MQTT
+              link: /docs/freertos-mqtt/
+#            - title_en: How to Contribute
+#              link: /docs/freertos-mqtt/
+        - title_en: Robonomics Coffee - Blockchain-Powered Coffee Machine
+          link: /docs/robonomics-coffee/
+        - title_en: Spot Education
+          items:
+            - title_en: Try It Out
+              link: /docs/spot-try-it-out
+            - title_en: Lesson 0. Configure and test connection to Spot
+              link: /docs/spot-lesson0
+            - title_en: Lesson 1. Emergency stop, initialization, body position control
+              link: /docs/spot-lesson1
+            - title_en: Lesson 2. Remote controlled and programmed motion
+              link: /docs/spot-lesson2
+            - title_en: Lesson 3. Find and follow an object, navigate between them
+              link: /docs/spot-lesson3
+            - title_en: Lesson 4. GraphNav service. Mapping and navigating on the map
+              link: /docs/spot-lesson4
+            - title_en: Lesson 5. Robot service. Camera calibration and "Spot check"
+              link: /docs/spot-lesson5
+            - title_en: Troubleshooting
+              link: /docs/spot-troubleshooting
+
+# This article is to be rewritten when service updated
+        - title_en: Carbon Footprint Offsetting Service
+          items:
+            - title_en: Offsetting Service
+              link: /docs/carbon-footprint-service
+            - title_en: Connect Sensor
+              link: /docs/carbon-footprint-sensor
+
+        - title_en: Feecc - Quality contol system
+          title_ru: Система контроля качества производства Feecc
+          items:
+            - title_en: Overview
+              title_ru: Обзор
+              link: /docs/feecc-system-overview
+            - title_en: Systems architecture
+              title_ru: Архитектура системы
+              link: /docs/feecc-system-architecture
+            - title_en: Quick Start
+              title_ru: Быстрый старт
+              link: /docs/feecc-system-quickstart
+            - title_en: Support hardware
+              title_ru: Поддерживаемое оборудование
+              link: /docs/feecc-system-supporthardware
+            - title_en: Deploy Feecc Engineer's workplace
+              title_ru: Развертывание "Feecc Рабочее Место Инженера"
+              link: /docs/feecc-system-deploy-feecc-wb
+            - title_en: Deploy Feecc Analytics
+              title_ru: Развертывание Feecc Аналитика
+              link: /docs/feecc-system-deploy-feecc-analytics
+            - title_en: Feecc Analytics for Developers
+              title_ru: Feecc Аналитика для разработчиков
+              link: /docs/feecc-system-dev-feecc-analytics
+    - title_en: Proof of Concept
       items:
-        - title_en: Baxter simulation v1.0
-          link: /docs/baxter
-        - title_en: Baxter simulation v2.0
-          link: /docs/baxter2
-    - title_en: Connect Manipulator
-      link: /docs/kuka
-    - title_en: Connect Unmanned Aerial Vehicle
-      link: /docs/iris-drone
-    - title_en: ROS-based Projects for Smart Spaces
-      link: /docs/ros-smart-projects
+        - title_en: XCM Robobank
+          link: /docs/xcm-robobank
+        - title_en: Securely Connect Cloud AI To The Factory Floor
+          link: /docs/securely-connect-cloud-ai-to-the-factory-floor
+        - title_en: Create digital identity run by Ethereum
+          link: /docs/create-digital-identity-run-by-ethereum
+        - title_en: Run Gaka-Chu - a Robot-Artist
+          link: /docs/gaka-chu/
+    - title_en: Playground
+      items:
+        - title_en: Playground Overview
+          link: /docs/playground-overview
+        - title_en: Connect Mars Curiosity Rover
+          link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control
+        - title_en: Connect ROS-compatible Drone
+          items:
+            - title_en: Part 1. Launch by Transaction
+              link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-1
+            - title_en: Part 2. Saving Data To Blockchain
+              link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-2
+        - title_en: Connect Industrial Robot
+          items:
+            - title_en: Baxter simulation v1.0
+              link: /docs/baxter
+            - title_en: Baxter simulation v2.0
+              link: /docs/baxter2
+        - title_en: Connect Manipulator
+          link: /docs/kuka
+        - title_en: Connect Unmanned Aerial Vehicle
+          link: /docs/iris-drone
+        - title_en: ROS-based Projects for Smart Spaces
+          link: /docs/ros-smart-projects
+# These articles are to be deleted.
+#        - title_en: DEMO "Get Weather on Fuji Mountain"
+#          title_es: DEMO "Obtenga el clima en la montaña de Fuji"
+#          link: /docs/get-weather-on-fuji-mountain
+#        - title_en: Robonomics DApp Overview
+#          link: /docs/robonomics-dapp-overview
 
 - title_en: Maintain
   items:
@@ -64,142 +219,16 @@
     - title_en: Configure Metrics With Prometheus And Grafana
       link: /docs/robonomics-prometheus-grafana
 
-- title_en: Cases
+- title_en: Robonomics on Ethereum
   items:
-    - title_en: Open Sensors Network
-      items:
-        - title_en: Introduction
-          title_ru: Введение
-          link: /docs/sensors-network-introduction
-        - title_en: Sensor Hardware
-          link: /docs/sensor-hardware
-        - title_en: Sensor Setup
-          link: /docs/sensor-setup
-        - title_en: Sensors Connectivity Module Introduction
-          link: /docs/sensors-connectivity-on-aira
-        - title_en: Sensors Connectivity Module Setup
-          link: /docs/sensors-connectivity-setup
-        - title_en: Configuration Options Description
-          link: /docs/configuration-options-description
-        - title_en: Deploy Sensor Map
-          link: /docs/deploy-sensor-map
-        - title_en: RoSeMAN Setup
-          link: /docs/roseman
-        - title_en: Connect an Amazon FreeRTOS device to Robonomics by MQTT
-          link: /docs/freertos-mqtt/
-        # - title_en: How to Contribute
-        #   link: /docs/freertos-mqtt/
-    - title_en: Securely Connect Cloud AI To The Factory Floor
-      link: /docs/securely-connect-cloud-ai-to-the-factory-floor
-    - title_en: Create digital identity run by Ethereum
-      link: /docs/create-digital-identity-run-by-ethereum
-    - title_en: Run Gaka-Chu - a Robot-Artist
-      link: /docs/gaka-chu/
-    - title_en: Robonomics Coffee - Blockchain-Powered Coffee Machine
-      link: /docs/robonomics-coffee/
-    - title_en: Spot Education
-      items:
-        - title_en: Try It Out
-          link: /docs/spot-try-it-out
-        - title_en: Lesson 0. Configure and test connection to Spot
-          link: /docs/spot-lesson0
-        - title_en: Lesson 1. Emergency stop, initialization, body position control
-          link: /docs/spot-lesson1
-        - title_en: Lesson 2. Remote controlled and programmed motion
-          link: /docs/spot-lesson2
-        - title_en: Lesson 3. Find and follow an object, navigate between them
-          link: /docs/spot-lesson3
-        - title_en: Lesson 4. GraphNav service. Mapping and navigating on the map
-          link: /docs/spot-lesson4
-        - title_en: Lesson 5. Robot service. Camera calibration and "Spot check"
-          link: /docs/spot-lesson5
-        - title_en: Troubleshooting
-          link: /docs/spot-troubleshooting
-    - title_en: Robonomics Smart Home
-      items:
-        - title_en: Overview
-          link: /docs/home-assistant-begin
-        - title_en: Raspberry Pi Setup
-          link: /docs/raspberry-setup
-        - title_en: MQTT Broker setup
-          link: /docs/mqtt-broker
-        - title_en: Zigbee2MQTT setup
-          link: /docs/zigbee2-mqtt
-        - title_en: Setup SLS Gateway
-          link: /docs/sls-setup
-        - title_en: Connect SLS Gateway to Home Assistant
-          link: /docs/sls-gateway-connect
-        - title_en: IOT subscription setup
-          link: /docs/iot-sub-setup
-        - title_en: Robonomics integration setup
-          link: /docs/add-smart-device-to-robonomics
-        - title_en: DApp Usage
-          link: /docs/use-dapp
-        - title_en: Connect Sensors with Xiaomi Gateway
-          link: /docs/xiaomi-gateway
-        - title_en: Connect Vacuum Cleaner
-          link: /docs/vacuum-connect
-    - title_en: Carbon Footprint Offsetting Service
-      items:
-        - title_en: Offsetting Service
-          link: /docs/carbon-footprint-service
-        - title_en: Connect Sensor
-          link: /docs/carbon-footprint-sensor
-    - title_en: Feecc - Quality contol system
-      title_ru: Система контроля качества производства Feecc
-      items:
-        - title_en: Overview
-          title_ru: Обзор
-          link: /docs/feecc-system-overview
-        - title_en: Systems architecture 
-          title_ru: Архитектура системы
-          link: /docs/feecc-system-architecture
-        - title_en: Quick Start
-          title_ru: Быстрый старт 
-          link: /docs/feecc-system-quickstart
-        - title_en: Support hardware
-          title_ru: Поддерживаемое оборудование
-          link: /docs/feecc-system-supporthardware
-        - title_en: Deploy Feecc Engineer's workplace
-          title_ru: Развертывание "Feecc Рабочее Место Инженера"
-          link: /docs/feecc-system-deploy-feecc-wb
-        - title_en: Deploy Feecc Analytics
-          title_ru: Развертывание Feecc Аналитика
-          link: /docs/feecc-system-deploy-feecc-analytics
-        - title_en: Feecc Analytics for Developers
-          title_ru: Feecc Аналитика для разработчиков
-          link: /docs/feecc-system-dev-feecc-analytics
-
-- title_en: Learn
-  items:
+    - title_en: Glossary
+      title_ko: 용어 사전
+      link: /docs/glossary
     - title_en: Robonomics-js
       title_ko: 로노미크스-JS
       link: /docs/robonomics-js
     - title_en: Changing Exodus Bridge Receiving Address
       link: /docs/changing-exodus-receiving-address
-
-    - title_en: Glossary
-      title_ko: 용어 사전
-      link: /docs/glossary
-
-    - title_en: Robonomics IO
-      items:
-        - title_en: Overview
-          link: /docs/rio-overview
-        - title_en: IPFS
-          link: /docs/rio-ipfs
-        - title_en: Launch
-          link: /docs/rio-launch
-        - title_en: Datalog
-          link: /docs/rio-datalog
-    - title_en: Digital twins
-      link: /docs/digital-twins
-    - title_en: XCM Robobank
-      link: /docs/xcm-robobank
-      
-    - title_en: How the technical committee is fast-tracking the democracy proposals
-      link: /docs/technical-committee-fast-track
-
     - title_en: AIRA
       items:
         - title_en: Overview
@@ -219,14 +248,12 @@
           link: /docs/aira-connecting-via-ssh
         - title_en: F.A.Q.
           link: /docs/aira-faq
-
     - title_en: Agent Development
       items:
         - title_en: Market messages
           link: /docs/market-messages
         - title_en: Examples
           link: /docs/agent-development-examples
-
         - title_en: Robonomics Network
           items:
             - title_en: How it works
@@ -235,7 +262,6 @@
               link: /docs/robonomics-contracts-deployment
             - title_en: Become a Provider
               link: /docs/robonomics-become-a-provider
-
         - title_en: ROS API Reference
           items:
             - title_en: Robonomics Liability
@@ -250,59 +276,58 @@
               link: /docs/ipfs-common
             - title_en: IPFS Common Messages
               link: /docs/ipfs-common-messages
-
         - title_en: Hardware Examples
           items:
-              - title_en: Connect the simplest CPS
-                link: /docs/connect-simple-cps
-              - title_en: Passing dynamic parameters
-                link: /docs/hardware-passing-dynamic-parameters
-              - title_en: Connect an air pollution sensor
-                link: /docs/hardware-connect-sensor
+            - title_en: Connect the simplest CPS
+              link: /docs/connect-simple-cps
+            - title_en: Passing dynamic parameters
+              link: /docs/hardware-passing-dynamic-parameters
+            - title_en: Connect an air pollution sensor
+              link: /docs/hardware-connect-sensor
 
-    - title_en: Winter School 2021
-      items:
-        - title_en: Introduction
-          title_es: Introducción
-          title_ja: ロボノミクスウィンタースクール2021 紹介
-          title_ko: ROBONOMICS 겨울 학교 2021 소개
-          link: /docs/wschool2021-intro
-        - title_en: Lesson 1, Connect Robotics to User App
-          title_es: Lección 1, Conectar la robótica a la dapp
-          title_ja: Lesson 1, ユーザーアプリにロボットを繋ぐ
-          title_ko: 레슨 1, 로봇을 사용자 앱에 연결
-          link: /docs/wschool2021-connect-robotics-to-user-app
-        - title_en: Lesson 2, Robonomics AIRA Overview
-          title_es: Lección 2, Robonomics AIRA Descripción General
-          title_ja: Lesson 2, RobonomicsのAIRA概要
-          title_ko: 레슨 2, ROBONOMICS AIRA 개요
-          link: /docs/wschool2021-robonomics-github-overview
-        - title_en: Lesson 3, Robonomics IO in Practice
-          title_es: Lección 3, Robonomics IO en la Practica
-          title_ja: Lesson 3, Robonomics IOの実践
-          title_ko: 레슨 3, ROBONOMICS IO 실제
-          link: /docs/wschool2021-robonomics-io-in-practice
-        - title_en: Lesson 4, Robonomics Parachain in Practice
-          title_es: Lección 4, Robonomics Parachain en la Práctica
-          title_ja: Lesson 4, 実践でのRobonomics parachain
-          title_ko: 4과, 실제 ROBONOMICS  파라체인
-          link: /docs/wschool2021-robonomics-parachain-in-practice
-        - title_en: Lesson 5, Connectivity
-          title_es: Lección 5, Conectividad
-          title_ja: Lesson 5, コネクティビティ
-          title_ko: 5과, 연결성
-          link: /docs/wschool2021-connectivity-service
-        - title_en: Lesson 6.1, Build IoT Dapps For End Users
-          title_es: Lección 6.1, Crear dApps IoT para usuarios finales
-          title_ja: Lesson 6.1, エンドユーザー向けのIoT Dappsの構築
-          title_ko: 6.1과, 최종 사용자를위한 IOT DAPP 구축, 1 부
-          link: /docs/wschool2021-build-dapp-for-end-users
-        - title_en: Lesson 6.2, Build Dapp Interface
-          title_ja: Lesson 6.2, Dapp インターフェースの構築
-          title_ko: 6.2 강, 스크래치에서 DAPP 인터페이스 구축
-          link: /docs/wschool2021-build-dapp-interface
-        - title_en: Troubleshooting
-          link: /docs/troubleshooting
+- title_en: Winter School 2021
+  items:
+    - title_en: Introduction
+      title_es: Introducción
+      title_ja: ロボノミクスウィンタースクール2021 紹介
+      title_ko: ROBONOMICS 겨울 학교 2021 소개
+      link: /docs/wschool2021-intro
+    - title_en: Lesson 1, Connect Robotics to User App
+      title_es: Lección 1, Conectar la robótica a la dapp
+      title_ja: Lesson 1, ユーザーアプリにロボットを繋ぐ
+      title_ko: 레슨 1, 로봇을 사용자 앱에 연결
+      link: /docs/wschool2021-connect-robotics-to-user-app
+    - title_en: Lesson 2, Robonomics AIRA Overview
+      title_es: Lección 2, Robonomics AIRA Descripción General
+      title_ja: Lesson 2, RobonomicsのAIRA概要
+      title_ko: 레슨 2, ROBONOMICS AIRA 개요
+      link: /docs/wschool2021-robonomics-github-overview
+    - title_en: Lesson 3, Robonomics IO in Practice
+      title_es: Lección 3, Robonomics IO en la Practica
+      title_ja: Lesson 3, Robonomics IOの実践
+      title_ko: 레슨 3, ROBONOMICS IO 실제
+      link: /docs/wschool2021-robonomics-io-in-practice
+    - title_en: Lesson 4, Robonomics Parachain in Practice
+      title_es: Lección 4, Robonomics Parachain en la Práctica
+      title_ja: Lesson 4, 実践でのRobonomics parachain
+      title_ko: 4과, 실제 ROBONOMICS  파라체인
+      link: /docs/wschool2021-robonomics-parachain-in-practice
+    - title_en: Lesson 5, Connectivity
+      title_es: Lección 5, Conectividad
+      title_ja: Lesson 5, コネクティビティ
+      title_ko: 5과, 연결성
+      link: /docs/wschool2021-connectivity-service
+    - title_en: Lesson 6.1, Build IoT Dapps For End Users
+      title_es: Lección 6.1, Crear dApps IoT para usuarios finales
+      title_ja: Lesson 6.1, エンドユーザー向けのIoT Dappsの構築
+      title_ko: 6.1과, 최종 사용자를위한 IOT DAPP 구축, 1 부
+      link: /docs/wschool2021-build-dapp-for-end-users
+    - title_en: Lesson 6.2, Build Dapp Interface
+      title_ja: Lesson 6.2, Dapp インターフェースの構築
+      title_ko: 6.2 강, 스크래치에서 DAPP 인터페이스 구축
+      link: /docs/wschool2021-build-dapp-interface
+    - title_en: Troubleshooting
+      link: /docs/troubleshooting
 
 - title_en: Contribute
   title_ru: Внесите свой вклад
