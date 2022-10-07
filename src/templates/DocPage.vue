@@ -1,6 +1,7 @@
 <template>
   <Sidebar>
 
+    <client-only>
       <div class="page-title">
         <h1>{{ $page.doc.title }}</h1>
 
@@ -72,6 +73,7 @@
           <Button label="Create an issue" :link="`https://github.com/airalab/robonomics-wiki/issues/new?${ghIssueTitle}`" size="small" />
         </div>
       </div>
+    </client-only>
 
   </Sidebar>
 </template>
@@ -359,7 +361,7 @@ query {
 <script>
 import items from '../../data/sidebar_docs.yaml'
 import {Octokit} from '@octokit/rest'
-import M from 'minimatch';
+// import M from 'minimatch';
 export default {
 
 	components: {
@@ -382,6 +384,8 @@ export default {
       octokit: null,
       ghIssueTitle: null,
       ogImageSrc: null,
+      allLocales: ["ru", "es", "ja", "ko", "pt"],
+      localeForMeta: 'en',
     }
   },
 
@@ -390,7 +394,8 @@ export default {
       this.github_lastupdated()
       this.github_link()
       this.getTitleForIssue()
-      this.ogImageSrc =  `${this.$page.doc.fileInfo.name}-${this.locale}.png`;
+      this.getLocaleForMetaInfo();
+      this.ogImageSrc =  `${this.$page.doc.fileInfo.name}-${this.localeForMeta}.png`;
     }
   },
 
@@ -465,6 +470,14 @@ export default {
       params.append('title', `issue for document page - ${this.$page.doc.title}(${this.locale})`);
       this.ghIssueTitle = params.toString()
     },
+
+    getLocaleForMetaInfo() {
+      this.allLocales.map(locale => {
+        if(this.$route.path.includes(`/${locale}/`)) {
+          this.localeForMeta = locale;
+        } 
+      })
+    }
   },
 
 
@@ -494,9 +507,14 @@ export default {
   },
 
 	metaInfo () {
-	    const { title, headings, description, content } = this.$page.doc;
+	    const { title, headings, description, content, } = this.$page.doc;
+      const locale = this.localeForMeta;
 	    return {
 	      title: title  || (headings.length ? headings[0].value : undefined),
+        htmlAttrs: {
+          lang: locale,
+          amp: true
+        },
         meta: [
           {
             name: "description",
@@ -565,7 +583,8 @@ export default {
 
   created() {
     this.getTitleForIssue()
-    this.ogImageSrc =  `${this.$page.doc.fileInfo.name}-${this.locale}.png`;
+    this.getLocaleForMetaInfo();
+    this.ogImageSrc =  `${this.$page.doc.fileInfo.name}-${this.localeForMeta}.png`;
   },
 
   mounted() {

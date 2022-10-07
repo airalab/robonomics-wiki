@@ -46,6 +46,7 @@ module.exports = function (api) {
         const imgName = node.fileInfo.name;
         const imgLang = node.fileInfo.directory;
 
+        // creating images for only one locale at a time so it won't crash
         if(imgLang === 'en') {
           const output = `${options.outputDir}${imgName}-${imgLang}.png`;
           // Only generate images for files that don't exist already
