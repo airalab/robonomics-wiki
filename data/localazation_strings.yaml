@@ -39,7 +39,7 @@
   ru: Песочница
 
 - alias: Enter Nav 3
-  en: Maintenance Guide
+  en: Maintenance
   es: Guía de Mantenimiento
   ja: Maintenance Guide
   ko: Maintenance Guide
@@ -47,19 +47,27 @@
   ru: Администрируйте
 
 - alias: Enter Nav 4
-  en: Use Cases
+  en: Use 
   es: Casos de Uso
   ja: Use Cases
   ko: Use Cases
   pt: Use Cases
   ru: Практические примеры
 
+# - alias: Enter Nav 5
+#   en: Developers' documentation
+#   es: Documentación para Desarrolladores
+#   ja: Developers' documentation
+#   ko: Developers' documentation
+#   pt: Developers' documentation
+#   ru: Документация для разработчиков
+
 - alias: Enter Nav 5
-  en: Developers' documentation
+  en: Learn
   es: Documentación para Desarrolladores
-  ja: Developers' documentation
-  ko: Developers' documentation
-  pt: Developers' documentation
+  ja: Learn
+  ko: Learn
+  pt: Learn
   ru: Документация для разработчиков
 
 - alias: Enter Nav 6

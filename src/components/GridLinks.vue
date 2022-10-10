@@ -42,7 +42,7 @@ export default {
       text-decoration: none;
       padding: var(--space);
       border: 1px solid var(--border-color);
-
+      text-align: center;
       box-shadow: 0.2rem 0.2rem 0 0 var(--link-color);
       border-color: var(--link-color);
       background-color: var(--color-link-background-highlight);
