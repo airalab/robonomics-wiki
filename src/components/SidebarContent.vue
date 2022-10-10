@@ -12,7 +12,7 @@
 		<summary>{{$st('In this article', $store.state.locale)}}</summary> -->
 
 		<ul v-if="allSubtitles.length" class="menu">
-	      <li @click="manualHush = subtitle.anchor" :class="'menu__item-depth-' + subtitle.depth" v-for="subtitle in allSubtitles" :key="subtitle.id">
+	      <li @click="(e) => deactivateButtons(e, subtitle)" :class="'menu__item-depth-' + subtitle.depth" v-for="subtitle in allSubtitles" :key="subtitle.id">
 	        <a 
 						:class="['menu__item', ' menu-link', {active: manualHush === subtitle.anchor }]" 
 						:href="subtitle.anchor"
@@ -141,6 +141,32 @@
 				}, 150);
 				
 			},
+
+			deactivateButtons(e, subtitle) {
+
+				this.manualHush = subtitle.anchor
+
+				if(document.querySelector('.sectionToggler')) {
+
+					if (e.target.href) {
+
+						const docs = document.querySelector('[data-show="sidebarDocs"]');
+						const content = document.querySelector('[data-show="sidebarContent"]');
+
+						if(docs.classList.contains('close')) {
+							docs.classList.remove('close')
+							docs.classList.add('open')
+						}
+
+						if(content.classList.contains('close')) {
+							content.classList.remove('close')
+							content.classList.add('open')
+						}
+					}
+
+				}
+
+			}
 		},
 
 		mounted () {
