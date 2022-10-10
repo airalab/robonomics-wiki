@@ -1,11 +1,15 @@
 <template>
   <Layout>
-
-    <g-image class="intro-image" src="~/assets/images/robonomics-lab.png"/>
+<!-- 
+    <g-image class="intro-image" src="~/assets/images/robonomics-lab.png"/> -->
 
     <div class="intro">
       <h1>{{$st('Enter title', $store.state.locale)}}</h1>
       <div class="intro-description">{{ $st('Site Description', $store.state.locale) }}</div>
+    </div>
+
+    <div class="intro-main-link" >
+      <Button :label="smartHome.name" :link="smartHome.to" size="large" />
     </div>
     
     <GridLinks :links="navLinks" />
@@ -19,10 +23,13 @@
   .intro {
     padding-top: calc(var(--space) * 3);
     padding-bottom: calc(var(--space) * 2);
+    text-align: center;
   }
 
   .intro-description {
-    max-width: 60%;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .intro-image {
@@ -33,6 +40,17 @@
       right: 0;
       width: 40%;
       max-width: 620px;
+  }
+
+  .intro-main-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: calc(var(--space) * 4);
+  }
+
+  .intro-main-link a {
+    padding: 1rem 4rem;
   }
 
   @media screen and (max-width: 1080px) {
@@ -64,35 +82,44 @@ export default {
   data() {
     return {
       navLinks: [
+        // {
+        //   to: '/summary/meet-robonomics/',
+        //   name: 'Enter Nav 1'
+        // },
+        // {
+        //   to: '/summary/basics/',
+        //   name: 'Enter Nav 7'
+        // },
+        // {
+        //   to: '/summary/playground/',
+        //   name: 'Enter Nav 2'
+        // },
         {
-          to: '/summary/meet-robonomics/',
-          name: 'Enter Nav 1'
+          to: '/docs/',
+          name: 'Enter Nav 5'
         },
         {
-          to: '/summary/basics/',
-          name: 'Enter Nav 7'
-        },
-        {
-          to: '/summary/playground/',
-          name: 'Enter Nav 2'
-        },
-        {
-          to: '/summary/maintain/',
+          to: '/docs/how-to-build-collator-node//',
           name: 'Enter Nav 3'
         },
         {
-          to: '/summary/cases/',
+          to: '/docs/sensors-network-introduction',
           name: 'Enter Nav 4'
         },
-        {
-          to: '/summary/learn/',
-          name: 'Enter Nav 5'
-        },
+        // {
+        //   to: '/summary/learn/',
+        //   name: 'Enter Nav 5'
+        // },
         // {
         //   to: '/docs/contributing/',
         //   name: 'Enter Nav 6'
         // },
-      ]
+      ],
+
+      smartHome: {
+          to: '/docs/home-assistant-begin/',
+          name: 'Start Smart home'
+      },
     }
   },
 

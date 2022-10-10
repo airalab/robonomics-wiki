@@ -1,6 +1,6 @@
 <template>
-  <div class="breadcrumbs">
-    <nav aria-label="breadcrumbs" class="breadcrumbs__list">
+  <div class="breadcrumbs" v-if="breadcrumbs.length">
+    <nav  aria-label="breadcrumbs" class="breadcrumbs__list">
 
       <li class="breadcrumbs__item">
         <g-link to="https://wiki.robonomics.network" class="breadcrumbs__home-icon">

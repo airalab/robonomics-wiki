@@ -329,17 +329,17 @@
     - title_en: Troubleshooting
       link: /docs/troubleshooting
 
-- title_en: Contribute
-  title_ru: Внесите свой вклад
-  items:
-    - title_en: How to contribute
-      title_ru: Как стать контрибьютором
-      link: /docs/contributing
-    - title_en: How to edit WIKI
-      title_ru: Как редактировать Вики
-      link: /docs/edit-wiki
-    - title_en: Help us translate
-      title_ru: Как участвовать в переводе Вики
-      link: /docs/translate-wiki
-    - title_en: Community
-      link: /docs/community
+# - title_en: Contribute
+#   title_ru: Внесите свой вклад
+#   items:
+#     - title_en: How to contribute
+#       title_ru: Как стать контрибьютором
+#       link: /docs/contributing
+#     - title_en: How to edit WIKI
+#       title_ru: Как редактировать Вики
+#       link: /docs/edit-wiki
+#     - title_en: Help us translate
+#       title_ru: Как участвовать в переводе Вики
+#       link: /docs/translate-wiki
+#     - title_en: Community
+#       link: /docs/community
