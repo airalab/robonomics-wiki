@@ -40,10 +40,10 @@ sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
 Then edit configuration file:
 
 ```bash
-sudo nano /etc/mosquitto/mosquitto.conf
+sudo nano /etc/mosquitto/conf.d/local.conf
 ```
 
-Add the following at the end of the file:
+Add the following to the file:
 
 ```
 listener 1883
@@ -51,7 +51,7 @@ allow_anonymous false
 password_file /etc/mosquitto/passwd
 ```
 
-Then restart the service:
+Save and restart the service:
 
 ```bash
 sudo systemctl restart mosquitto
@@ -63,7 +63,29 @@ And check the Broker status:
 systemctl status mosquitto
 ```
 
-<robo-wiki-picture src="home-assistant/mosquitto.jpg" alt="Broker status" />
+```shell
+ubuntu@ubuntu:~$ systemctl status mosquitto
+● mosquitto.service - Mosquitto MQTT Broker
+     Loaded: loaded (/lib/systemd/system/mosquitto.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2022-10-10 01:37:04 UTC; 2min 21s ago
+       Docs: man:mosquitto.conf(5)
+             man:mosquitto(8)
+    Process: 13242 ExecStartPre=/bin/mkdir -m 740 -p /var/log/mosquitto (code=exited, status=0/SUCCESS)
+    Process: 13243 ExecStartPre=/bin/chown mosquitto /var/log/mosquitto (code=exited, status=0/SUCCESS)
+    Process: 13244 ExecStartPre=/bin/mkdir -m 740 -p /run/mosquitto (code=exited, status=0/SUCCESS)
+    Process: 13245 ExecStartPre=/bin/chown mosquitto /run/mosquitto (code=exited, status=0/SUCCESS)
+   Main PID: 13246 (mosquitto)
+      Tasks: 1 (limit: 9238)
+     Memory: 1.1M
+        CPU: 183ms
+     CGroup: /system.slice/mosquitto.service
+             └─13246 /usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
+
+Oct 10 01:37:04 ubuntu systemd[1]: Starting Mosquitto MQTT Broker...
+Oct 10 01:37:04 ubuntu mosquitto[13246]: 1665365824: Loading config file /etc/mosquitto/conf.d/local.conf
+Oct 10 01:37:04 ubuntu systemd[1]: Started Mosquitto MQTT Broker.
+
+```
 
 
 <robo-wiki-title :type="2" anchor="home-assistant"> 
@@ -74,6 +96,8 @@ Alright, you made it here. The tough part is done.
 
 With Home Assistant installed, it’s time to configure it. Here you will create the owner account of Home Assistant. 
 This account will be an administrator and will always be able to change everything. Open web browser and go to `http://%RASPBERRY_IP_ADDRESS%:8123`(RASPBERRY_IP_ADDRESS you have found in previous [article]()).
+
+<robo-wiki-note type="note">Raspberry Pi address may change in time, due router settings</robo-wiki-note>
 
 At the first page, enter a name, username, password and click on “create account”.
 

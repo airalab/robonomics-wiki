@@ -12,9 +12,13 @@ First, You need to configure MQTT on SLS Gateway. Come back to your SLS Gateway 
 
 <robo-wiki-picture src="home-assistant/sls-mqtt-menu.jpg" />
 
-And add your broker address (address of the Raspberry Pi with Home Assistant in local network, you can find it in Fing [app](https://www.fing.com/products) or with `ip a` command on your RPi), port (default is 1883) and your broker username and password (which you have created earlier). Also write the topic name (you can choose any). 
+And add your broker address (address of the Raspberry Pi with Home Assistant in local network, you can find it in Fing [app](https://www.fing.com/products) 
+or with `ip a` command on your RPi), port (default is 1883) and your broker username and password (which you have created earlier). 
+Also write the topic name (you can choose any).
 
-<robo-wiki-note type="warning">Don't forget to click `Enable` and `Retain states`.</robo-wiki-note>
+<robo-wiki-note type="okay">Don't forget to click `Enable` and `Retain states`.</robo-wiki-note>
+
+<robo-wiki-note type="warning">Paspberry Pi IP address must be static.</robo-wiki-note>
 
 <robo-wiki-picture src="home-assistant/sls-mqtt1.jpg" />
 

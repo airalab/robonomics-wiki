@@ -24,4 +24,4 @@ In this section, step by step, you will be able to set up your smart home to wor
 * Raspberry Pi 4
 * SD card and SD adapter
 * Zigbee smart devices (any from [supported devices](https://slsys.io/action/supported_devices.html))
-* Zigbee adapter [JetHome USB JetStick Z2](https://jhome.ru/catalog/parts/PCBA/293/) (or one of [supported](https://www.zigbee2mqtt.io/information/supported_adapters.html)) or [Robonomics SLS Gateway](https://easyeda.com/ludovich88/robonomics_sls_gateway_v01)
+* Zigbee adapter [JetHome USB JetStick Z2](https://jethome.ru/z2/) (or one of [supported](https://www.zigbee2mqtt.io/information/supported_adapters.html)) or [Robonomics SLS Gateway](https://easyeda.com/ludovich88/robonomics_sls_gateway_v01)
