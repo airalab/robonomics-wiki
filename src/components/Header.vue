@@ -16,8 +16,8 @@
         <div class="header-nav">
           <ToggleTheme class="inline-block" />
           <ToggleLang class="inline-block" />
-          <NavIcon class="inline-block hiddenDesktop" :section="'sidebarDocs'" :icon="'Menu'" v-if="!homePage"/>
-          <NavIcon class="inline-block hiddenDesktop--720" :section="'sidebarContent'" :icon="'Dots'" v-if="!homePage"/>
+          <NavIcon class="inline-block hiddenDesktop" :section="'sidebarDocs'" :icon="'Menu'"/>
+          <NavIcon class="inline-block hiddenDesktop--720" :section="'sidebarContent'" :icon="'Dots'" v-if="!homePage && !$route.path.includes('summary')"/>
         </div>
 
       </div>
@@ -160,7 +160,7 @@ export default {
 
   mounted () {
     window.addEventListener('resize', () => {
-      if (window.innerWidth <= 880) {
+      if (window.innerWidth <= 860) {
         window.addEventListener('scroll', this.onScroll)
       } else {
       this.$store.commit('toggleShowSearchbar', true)

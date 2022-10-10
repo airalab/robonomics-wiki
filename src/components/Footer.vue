@@ -1,82 +1,134 @@
 <template>
   <footer class="footer">
     <div class="layout__page">
-
-      <div>
-        <h4>Main Links</h4>
-
-        <ul>
-          <li><g-link to="https://robonomics.network/">Website</g-link></li>
-          <li><g-link to="https://dapp.robonomics.network/#/">Robonomics dApp</g-link></li>
-          <li><g-link to="https://robonomics.cloud">Robonomics Web Services</g-link></li>
-          <li><g-link to="https://github.com/airalab/">Github</g-link></li>
+      <div class="footer-socials">
+        <g-link class="footer-socials__link" to="https://github.com/airalab">
+          <Icon class="footer__icon" icon="github"/>
+        </g-link>
+        <g-link class="footer-socials__link" to="https://discord.gg/JpaN2XAmqY">
+          <Icon class="footer__icon" icon="discord"/>
+        </g-link>
+        <g-link class="footer-socials__link" to="https://twitter.com/AIRA_Robonomics">
+          <Icon class="footer__icon" icon="twitter"/>
+        </g-link>
+      </div>
+      <div class="footer__links">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <g-link class="footer__link" to="/docs/contributing/">
+              {{$st('How to contribute', $store.state.locale)}}
+            </g-link>
+          </li>
+          <li class="footer__item">
+            <g-link class="footer__link" to="/docs/edit-wiki/">
+              {{$st('How to edit Wiki', $store.state.locale)}}
+            </g-link>
+          </li>
+          <li class="footer__item">
+            <g-link class="footer__link" to="/docs/translate-wiki/">
+              {{$st('Help us translate', $store.state.locale)}}
+            </g-link>
+          </li>
         </ul>
       </div>
-
-      <div>
-        <h4>Ways to contribute</h4>
-
-        <ul>
-          <li><g-link to="https://robonomics.network/land/support-academia/">Academia Support Program</g-link></li>
-          <li><g-link to="https://robonomics.network/blog/community-incentive-program/">Community Incentive Program</g-link></li>
-          <li><g-link to="https://robonomics.network/blog/rewards-for-ambassadors-and-influencers/">For ambassadors and influencers</g-link></li>
-          <li><g-link to="https://robonomics.network/blog/rewards-for-researchers-developers-and-engineers/">For researchers, developers and engineers</g-link></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Announcement channels</h4>
-
-        <ul>
-          <li><g-link to="https://twitter.com/AIRA_Robonomics">Twitter</g-link></li>
-          <li><g-link to="https://t.me/robonomics">Telegram International</g-link></li>
-          <li><g-link to="https://t.me/robonomicsru">Telegram Русский</g-link></li>
-          <li><g-link to="https://t.me/robonomicsfr">Telegram Français</g-link></li>
-          <li><g-link to="https://t.me/RobonomicsESP">Telegram Español</g-link></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Ask your questions</h4>
-
-        <ul>
-          <li><g-link to="https://discord.gg/5UWNGNaAUf">Discord</g-link></li>
-          <li><g-link to="https://riot.im/app/#/room/#robonomics:matrix.org">Riot</g-link></li>   
-          <li><g-link to="https://discourse.robonomics.network">Forum</g-link></li>   
-        </ul>
-      </div>
-      
     </div>
   </footer>
 </template>
 
-<style scoped>
+<style>
   .footer {
     padding-top: var(--space);
+  }
+
+  .footer-socials {
+    padding-top: var(--space);
     padding-bottom: var(--space);
-    border-top: 1px solid var(--border-color)
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--footer-border-color);
+    border-bottom: 1px solid var(--footer-border-color);
   }
 
-  .layout__page {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space);
+  .footer-socials__link {
+    display: inline-block;
+    transition: fill 0.33s ease-in-out;
   }
 
-  @media screen and (max-width: 880px) {
-    .layout__page { grid-template-columns: repeat(2, 1fr); }
+  .footer-socials__link:focus {
+    box-shadow: unset;
   }
 
-  @media screen and (max-width: 480px) {
-    .layout__page { grid-template-columns: 1fr; }
+  .footer-socials__link:focus .footer__icon > svg path {
+    fill: var(--code-text-inline);
   }
 
-  ul {
-    list-style-type: circle;
+  .footer-socials__link:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  .footer__icon > svg {
+    width: 46px;
+    height: 35px;
+    fill: transparent;
+  }
+
+  .footer__icon svg path {
+    fill: var(--ghLogo);
+  }
+
+  .footer__links {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .footer__list {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__item:not(:last-child) {
+    margin-right: 35px;
+    margin-bottom: 0;
+  }
+
+  .footer .footer__link {
+    font-family: var(--font-family-code);
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: opacity 0.33s ease-in-out;;
+  }
+
+  .footer .footer__link:hover {
+    opacity: 0.5;
+  }
+
+  .footer .footer__link:focus {
+    box-shadow: unset;
+    color: var(--link-color)
+  }
+
+  @media screen and (max-width: 560px) {
+    .footer__list {
+      flex-direction: column;
+    }
+
+    .footer__item:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
   }
 </style>
 
 
 <script>
-
+  export default {
+    components: {
+      Icon: () => import("~/components/Icon.vue")
+    }
+  }
 </script>

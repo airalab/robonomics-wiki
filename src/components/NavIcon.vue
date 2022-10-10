@@ -67,7 +67,7 @@ export default {
     iconOpenAttr() {
       return {
         height: `20px`,
-		class: `sectionTogglerOpen`
+		    class: `sectionTogglerOpen`
       };
     },
   },
@@ -101,7 +101,7 @@ export default {
 
       this.enableScroll()
 
-      if (element.classList.contains(classClose) || element.classList.remove(classClose_720)) {
+      if (element.classList.contains(classClose)) {
         element.classList.remove(classClose);
         element.classList.remove(classClose_720);
         event.currentTarget.classList.add('close');
@@ -125,6 +125,10 @@ export default {
     },
 
   },
+
+  mounted() {
+    document.body.classList.remove('removeScroll')
+  }
 
   
 }
