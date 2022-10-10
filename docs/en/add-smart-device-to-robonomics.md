@@ -35,7 +35,7 @@ Add this account to the subscription [here](https://dapp.robonomics.network/#/su
 <robo-wiki-picture src="home-assistant/user.jpg" />
 
 Then go to the Dapp service [**"HomeAssistant Account"**](https://dapp.robonomics.network/#/home-assistant). Choose account, 
-you've just created at the right sidebar(check that you have chosen the intended account by pressing the profile icon).
+you've just created at the right sidebar (check that you have chosen the intended account by pressing the profile icon).
 Then enter the `USER` seed in the required field. In the next two raws type in `SUB_OWNER` and `SUB_ADMIN` addresses:
 
 <robo-wiki-picture src="home-assistant/acc-pass.jpg" />

@@ -4,7 +4,7 @@ title: Zigbee2MQTT setup
 contributors: [LoSk-p, dergudzon, Leemo94]
 translated: true
 tools:
-  - Zigbee2MQTT 1.26.0
+  - Zigbee2MQTT 1.28.0
 ---
 
 After installing [MQTT broker](/docs/mqtt-broker/) to the Raspberry Pi, we can now set up Zigbee2MQTT stick.
@@ -22,7 +22,12 @@ $ ls -l /dev/serial/by-id
 
 Output should look like:
 
-<robo-wiki-picture src="home-assistant/devices.jpg" alt="connected devices" />
+```shell
+ubuntu@ubuntu:~$ ls -l /dev/serial/by-id
+total 0
+lrwxrwxrwx 1 root root 13 Oct 10 01:44 usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0 -> ../../ttyUSB0
+
+```
 
 In example Stick connection place is - `ttyUSB0`.
 
