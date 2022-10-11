@@ -52,8 +52,8 @@
       link: /docs/run-dev-node
     - title_en: Adding Funds To Your Account on Robonomics Portal
       link: /docs/adding-funds-to-account-in-dapp
-#    - title_en: "Basics: Datalog"
-#      link: /docs/datalog
+    - title_en: "Basics: Datalog"
+      link: /docs/datalog
 #    - title_en: "Basics: Launch"
 #      link: /docs/launch
     - title_en: "Basics: Digital Twins"
