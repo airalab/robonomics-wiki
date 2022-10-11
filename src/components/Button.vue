@@ -122,6 +122,7 @@ export default {
       letter-spacing: 1px;
 
       text-decoration: none;
+      text-align: center;
   }   
 
   .button:not([disabled]):hover {
@@ -187,6 +188,12 @@ export default {
     display: inline-block;
     font-size: 0.8rem;
     margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 800px) {
+    .button {
+      font-size: 80%;
+    }
   }
 
 </style>

@@ -6,8 +6,8 @@ tools:
   - Ubuntu Server 22.04 LTS
     https://ubuntu.com/download/raspberry-pi
   - Home Assistant 2022.8.2
-  - robonomics-interface 1.1.0
-    https://github.com/Multi-Agent-io/robonomics-interface/releases/tag/1.0.5
+  - robonomics-interface 1.3.4
+    https://github.com/Multi-Agent-io/robonomics-interface/releases/tag/1.3.4
   - IPFS 0.14.0
     https://docs.ipfs.io/install/command-line/
 ---
@@ -27,7 +27,7 @@ In other terminal window download image:
 Alternatively, you can download it [from url.](https://ipfs.io/ipfs/QmVKSwB6nXNjq8Yydb1unYWjahv2mz45ME4NTUw9mWBj2S?filename=rpi_hass.img.gz) (**Only with started IPFS Daemon**), but then you
 
 ```shell
-ipfs get Qmb1hkvDjDbruHUkjPKf4qN2cyqtR7Lr9i3BUwwmNxxTiH -o rpi.img.xz
+ipfs get QmZTbvaBPQgeUDBGZg3WJQbP4QUyr8gSF6Uw89cLkY72sx -o rpi.img.xz
 ```
 
 Then read the next chapter to install image.
@@ -61,6 +61,10 @@ wifis:
 ```
 
 <robo-wiki-note type="warning">Make sure that you input your actual Wi-Fi name and your Wi-Fi password.</robo-wiki-note>
+
+<robo-wiki-note type="note">This Wi-Fi settings available only on first boot setup.
+If later you need to change settings, please edit configuration file in `/etc/netplan/` folder. 
+</robo-wiki-note>
 
 Then you need to save the file, and insert the SD card to the Raspberry Pi and turn it on. It should connect to your wi-fi network. 
 
@@ -181,22 +185,25 @@ python3 -m venv .
 source bin/activate
 ```
 
-<robo-wiki-picture src="home-assistant/terminal1.jpg" alt="terminal image" />
+As the result, you will find a name of the virtual environment in the brackets:
+```bash
+(homeassistant) homeassistant@ubuntu:/srv/homeassistant/$ 
+```
 
 
 Then install required Python packages:
 
 ```bash
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ python3 -m pip install wheel
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ pip3 install sqlalchemy fnvhash
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ pip3 install homeassistant==2022.8.2
+(homeassistant) homeassistant@ubuntu:/srv/homeassistant/$ python3 -m pip install wheel~=0.37
+(homeassistant) homeassistant@ubuntu:/srv/homeassistant/$ pip3 install sqlalchemy~=1.4 fnvhash~=0.1 aiodiscover==1.4.11
+(homeassistant) homeassistant@ubuntu:/srv/homeassistant/$ pip3 install homeassistant==2022.8.2
 ```
 
 Start Home Assistant Core for the first time. 
 This will complete the installation for you,by automatically creating the `.homeassistant `configuration directory in the `/home/homeassistant` directory, and installing any basic dependencies:
 
 ```bash
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ hass
+(homeassistant) homeassistant@ubuntu:/srv/homeassistant/$ hass
 ```
 
 You can now reach your installation via the web interface on `http://%RASPBERRY_IP_ADDRESS%:8123`. 
@@ -210,7 +217,7 @@ Wait until you will get "Hello window" in browser and then stop Home Assistant w
 Also, we need [IPFS](https://ipfs.io/) for working with robonomics. As for the latest release of IPFS is 0.12.2. You can use our script to download ipfs and create systemd service with it.
 
 ```shell
-(homeassistant) homeassistant@ubuntu:/srv/homeassistant/python_scripts$ exit
+(homeassistant) homeassistant@ubuntu:/srv/homeassistant/$ exit
 cd ~
 wget https://raw.githubusercontent.com//airalab/homeassistant-robonomics-integration/main/install_ipfs.sh
 sudo chmod +x install_ipfs.sh
@@ -236,7 +243,7 @@ sudo mkdir /opt/zigbee2mqtt
 sudo chown -R ${USER}: /opt/zigbee2mqtt
 
 # Clone Zigbee2MQTT repository
-git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
+git clone --depth 1 --branch 1.28.0 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
