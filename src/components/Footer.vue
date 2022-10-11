@@ -91,14 +91,17 @@
     justify-content: center;
   }
 
+  .footer__item {
+    margin-bottom: 0;
+  }
+
   .footer__item:not(:last-child) {
     margin-right: 35px;
-    margin-bottom: 0;
   }
 
   .footer .footer__link {
     font-family: var(--font-family-code);
-    color: var(--color-dark);
+    color: var(--title-color);
     text-decoration: none;
     transition: opacity 0.33s ease-in-out;;
   }
@@ -115,6 +118,7 @@
   @media screen and (max-width: 560px) {
     .footer__list {
       flex-direction: column;
+      text-align: center;
     }
 
     .footer__item:not(:last-child) {
