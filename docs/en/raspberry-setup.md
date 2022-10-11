@@ -16,7 +16,7 @@ For all methods from ["Overview"](/docs/home-assistant-begin/), the first thing 
 To set up Raspberry Pi you could use our "ready to use" image in **"Preinstalled image"** section or install all software directly in **"Manual installation"** section.
 
 ## Preinstalled image
-The easiest way to setup you Raspberry is to use our prepared image. 
+The easiest way to set up your Raspberry is to use our prepared image. 
 For downloading it, we will use IPFS. For this [install IPFS](https://docs.ipfs.tech/install/command-line/) and start it (Don't forget to make `ipfs init` for the first start):
 ```shell
 ipfs daemon
