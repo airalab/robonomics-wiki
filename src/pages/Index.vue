@@ -99,12 +99,12 @@ export default {
           name: 'Enter Nav 5'
         },
         {
-          to: '/docs/how-to-build-collator-node//',
-          name: 'Enter Nav 3'
-        },
-        {
           to: '/docs/sensors-network-introduction',
           name: 'Enter Nav 4'
+        },
+        {
+          to: '/docs/how-to-build-collator-node//',
+          name: 'Enter Nav 3'
         },
         // {
         //   to: '/summary/learn/',

@@ -53,11 +53,11 @@ export default {
         box-shadow: 0.2rem 0.2rem 0.8rem var(--link-color);
       }
 
-    @media screen and (max-width: 800px) {
+    /* @media screen and (max-width: 800px) {
       .grid-navigation { grid-template-columns: repeat(2, 1fr); }
-    }
+    } */
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 800px) {
       .grid-navigation { grid-template-columns: 1fr; }
     }
 
