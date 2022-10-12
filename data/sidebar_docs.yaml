@@ -54,8 +54,8 @@
       link: /docs/adding-funds-to-account-in-dapp
     - title_en: "Basics: Datalog"
       link: /docs/datalog
-#    - title_en: "Basics: Launch"
-#      link: /docs/launch
+    - title_en: "Basics: Launch"
+      link: /docs/launch
     - title_en: "Basics: Digital Twins"
       link: /docs/digital-twins
 #    - title_en: "Basics: Liability"
