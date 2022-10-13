@@ -58,8 +58,8 @@
       link: /docs/launch
     - title_en: "Basics: Digital Twins"
       link: /docs/digital-twins
-#    - title_en: "Basics: Liability"
-#      link: /docs/liability
+    - title_en: "Basics: Liability"
+      link: /docs/liability
 #    - title_en: Robonomics IO
 #      link: /docs/rio
 
