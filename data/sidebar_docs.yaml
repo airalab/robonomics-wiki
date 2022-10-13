@@ -76,9 +76,9 @@
 #          link: /docs/rio-datalog
 #    - title_en: Digital twins
 
-    - title_en: How to Buy a Subscription
+    - title_en: "RWS: How to Buy a Subscription"
       link: /docs/get-subscription
-    - title_en: How to Send Launch with Subscription
+    - title_en: "RWS: How to Send Launch with Subscription"
       link: /docs/subscription-launch
     - title_en: Cross-chain Message
       link: /docs/cross-chain-messages
