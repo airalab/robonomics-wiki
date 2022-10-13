@@ -27,11 +27,7 @@ Also choose an account you want to submit the extrinsic with. Fill in the target
   - For basic commands like toggling you may use "0x0000000000000000000000000000000000000000000000000000000000000001" or
   "0x0000000000000000000000000000000000000000000000000000000000000000".
   - For advanced commands including json-like you may use [IPFS](https://ipfs.tech/) CID formatted in a 
-  [proper way](https://github.com/Multi-Agent-io/robonomics-interface/blob/17a55368cadfaa086af13a96f711684417640d88/robonomicsinterface/utils.py#L64).
-  This python library will be discussed in particular [later]().
-
-[//]: # (todo)
-[//]: # (add link to rinterface.)
+  [proper way](https://multi-agent-io.github.io/robonomics-interface/modules.html#robonomicsinterface.utils.ipfs_qm_hash_to_32_bytes).
 
 </robo-wiki-note>
 
