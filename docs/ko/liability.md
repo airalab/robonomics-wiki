@@ -5,6 +5,8 @@ translated: false
 tools:   
   - Robonomics 2.3.0
     https://github.com/airalab/robonomics
+  - robonomics_interface 1.3.5
+    https://github.com/Multi-Agent-io/robonomics-interface
 ---
 
 **To turn robots into economic agents one needs a contract tool for this. Meet Liability - Robonomics pallet implementing
