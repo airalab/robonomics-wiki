@@ -31,13 +31,6 @@
           link: /docs/add-smart-device-to-robonomics
         - title_en: DApp Usage
           link: /docs/use-dapp
-
-# These articles are to be deleted
-#            - title_en: Connect Sensors with Xiaomi Gateway
-#              link: /docs/xiaomi-gateway
-#            - title_en: Connect Vacuum Cleaner
-#              link: /docs/vacuum-connect
-
 - title_en: Learn
   items:
     - title_en: Introduction
@@ -60,8 +53,8 @@
       link: /docs/digital-twins
     - title_en: "Basics: Liability"
       link: /docs/liability
-#    - title_en: Robonomics IO
-#      link: /docs/rio
+    - title_en: Python interface and Robonomics IO
+      link: /docs/rio
 
 # The following are to be deleted
 #    - title_en: Robonomics IO
