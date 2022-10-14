@@ -47,7 +47,7 @@ module.exports = function (api) {
         const imgLang = node.fileInfo.directory;
 
         // creating images for only one locale at a time so it won't crash
-        if(imgLang === 'en') {
+        // if(imgLang === 'en') {
           const output = `${options.outputDir}${imgName}-${imgLang}.png`;
           // Only generate images for files that don't exist already
           console.log("Generating Missing Cover Images");
@@ -64,7 +64,7 @@ module.exports = function (api) {
               console.log(`The image ${imgName} already exists!`)
             }
           });
-        }
+        // }
       }
     });
 
