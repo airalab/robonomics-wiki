@@ -1,8 +1,28 @@
 ---
-title: Архитектура системы
- 
+title: System Architecture
 contributors: [adeptvin1, timofeev41]
 translated: true
+tools:
+  - Feecc Analytics frontend
+    https://github.com/Multi-Agent-io/feecc-analytics-frontend
+  - Feecc Analytics backend
+    https://github.com/Multi-Agent-io/feecc-analytics-backend
+  - Feecc Workbench frontend
+    https://github.com/Multi-Agent-io/feecc-workbench-frontend
+  - Feecc Workbench daemon
+    https://github.com/Multi-Agent-io/feecc-workbench-daemon
+  - Feecc Validator frontend
+    https://github.com/Multi-Agent-io/feecc-validator-frontend
+  - Feecc Validator backend
+    https://github.com/Multi-Agent-io/feecc-validator-backend
+  - Feecc IPFS gateway
+    https://github.com/Multi-Agent-io/feecc-ipfs-gateway
+  - Feecc Print server
+    https://github.com/Multi-Agent-io/feecc-print-server
+  - Feecc Cameraman
+    https://github.com/Multi-Agent-io/feecc-cameraman
+  - Feecc HID reader daemon
+    https://github.com/Multi-Agent-io/feecc-hid-reader-daemon
 ---
 ## Описание архитектуры
 Платформа Feecc состоит из нескольких сервисов, таких как:
