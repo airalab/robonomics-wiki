@@ -31,13 +31,6 @@
           link: /docs/add-smart-device-to-robonomics
         - title_en: DApp Usage
           link: /docs/use-dapp
-
-# These articles are to be deleted
-#            - title_en: Connect Sensors with Xiaomi Gateway
-#              link: /docs/xiaomi-gateway
-#            - title_en: Connect Vacuum Cleaner
-#              link: /docs/vacuum-connect
-
 - title_en: Learn
   items:
     - title_en: Introduction
@@ -52,33 +45,19 @@
       link: /docs/run-dev-node
     - title_en: Adding Funds To Your Account on Robonomics Portal
       link: /docs/adding-funds-to-account-in-dapp
-#    - title_en: "Basics: Datalog"
-#      link: /docs/datalog
-#    - title_en: "Basics: Launch"
-#      link: /docs/launch
+    - title_en: "Basics: Datalog"
+      link: /docs/datalog
+    - title_en: "Basics: Launch"
+      link: /docs/launch
     - title_en: "Basics: Digital Twins"
       link: /docs/digital-twins
-#    - title_en: "Basics: Liability"
-#      link: /docs/liability
-#    - title_en: Robonomics IO
-#      link: /docs/rio
-
-# The following are to be deleted
-#    - title_en: Robonomics IO
-#      items:
-#        - title_en: Overview
-#          link: /docs/rio-overview
-#        - title_en: IPFS
-#          link: /docs/rio-ipfs
-#        - title_en: Launch
-#          link: /docs/rio-launch
-#        - title_en: Datalog
-#          link: /docs/rio-datalog
-#    - title_en: Digital twins
-
-    - title_en: How to Buy a Subscription
+    - title_en: "Basics: Liability"
+      link: /docs/liability
+    - title_en: Python interface and Robonomics IO
+      link: /docs/rinterface
+    - title_en: "RWS: How to Buy a Subscription"
       link: /docs/get-subscription
-    - title_en: How to Send Launch with Subscription
+    - title_en: "RWS: How to Send Launch with Subscription"
       link: /docs/subscription-launch
     - title_en: Cross-chain Message
       link: /docs/cross-chain-messages

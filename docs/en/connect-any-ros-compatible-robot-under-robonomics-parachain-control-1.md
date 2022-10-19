@@ -54,7 +54,7 @@ rostopic info /drone/land
 
 As may be seen, there should be messages of `Twist` and `Empty` types, they are parts of `std_msgs` and `geometry_msgs`, we'll use this in the controller. Shut the simulation for a while.
 ## 3. Download controller package
-Globally, the main difference from the casual ROS robot controller is a block of code, which checks all the transactions in the network using [Robonomics IO](https://wiki.robonomics.network/docs/rio-overview/). The package itself is available on GitHub. Download it and build the workspace:
+Globally, the main difference from the casual ROS robot controller is a block of code, which checks all the transactions in the network using [Robonomics IO](https://wiki.robonomics.network/docs/rinterface/). The package itself is available on GitHub. Download it and build the workspace:
 ```
 cd ~/drone_simulator_ws/src
 git clone https://github.com/PaTara43/drone_simulator_controller

@@ -233,7 +233,6 @@ That's all!
 [im5]: <../images/baxter_demo/create_account.jpg>
 [im6]: <../images/baxter_demo/accounts.jpg>
 [im7]: <../images/baxter_demo/waiting.jpg>
-[db6]: <https://wiki.robonomics.network/docs/rio-overview/>
 [im8]: <../images/baxter_demo/rob_message.jpg>
 [im9]: <../images/baxter_demo/working.jpg>
 [im10]: <../images/baxter_demo/datalog.jpg>

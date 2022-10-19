@@ -29,24 +29,10 @@ You will see the following output:
 
 ![robonomics](../images/dev-node/robonomics.png)
 
-## Get tokens
+## Connect
 
 Now you can connect to your local node through the [Polkadot Portal](https://polkadot.js.org/apps/#/explorer).
 
 Change the network to `Local Node` in the upper left corner and press `Switch`.
 
 ![local_node](../images/dev-node/portal.png)
-
-Then go to `Accounts`:
-
-![accs](../images/dev-node/accs.png)
-
-You can create a new account with the button `Add Account`.
-
-![add_acc](../images/dev-node/add_acc.png)
-
-Don't forget to save your seed phrase somewhere.
-
-And use one of existing accounts to send tokens to your new one. Choose for example Alice and press `Send`. Then choose your new account and write the amount of units you want to send and press `Make Transfer`:
-
-![send](../images/dev-node/send.png)
