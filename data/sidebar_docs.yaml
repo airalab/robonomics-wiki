@@ -55,20 +55,6 @@
       link: /docs/liability
     - title_en: Python interface and Robonomics IO
       link: /docs/rinterface
-
-# The following are to be deleted
-#    - title_en: Robonomics IO
-#      items:
-#        - title_en: Overview
-#          link: /docs/rio-overview
-#        - title_en: IPFS
-#          link: /docs/rio-ipfs
-#        - title_en: Launch
-#          link: /docs/rio-launch
-#        - title_en: Datalog
-#          link: /docs/rio-datalog
-#    - title_en: Digital twins
-
     - title_en: "RWS: How to Buy a Subscription"
       link: /docs/get-subscription
     - title_en: "RWS: How to Send Launch with Subscription"
