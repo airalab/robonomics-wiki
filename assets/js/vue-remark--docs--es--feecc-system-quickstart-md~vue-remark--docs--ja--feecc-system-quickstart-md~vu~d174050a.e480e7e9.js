@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vue-remark--docs--en--feecc-system-quickstart-md~vue-remark--docs--es--feecc-system-quickstart-md~vu~d197fb82"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vue-remark--docs--es--feecc-system-quickstart-md~vue-remark--docs--ja--feecc-system-quickstart-md~vu~d174050a"],{
 
 /***/ "Hxyj":
 /*!**********************************************************************************************************************************************!*\
