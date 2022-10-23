@@ -2,6 +2,7 @@
 title: Supported Hardware
 contributors: [adeptvin1]
 translated: true
+tools:
   - Feecc Workbench daemon
     https://github.com/Multi-Agent-io/feecc-workbench-daemon
   - Feecc IPFS gateway
