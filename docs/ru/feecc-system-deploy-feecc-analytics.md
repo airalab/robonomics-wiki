@@ -1,8 +1,12 @@
 ---
-title: Развертывание Feecc Аналитика
- 
+title: Deployment of Feecc Analytics
 contributors: [timofeev41]
 translated: true
+tools:
+  - Feecc Analytics frontend
+    https://github.com/Multi-Agent-io/feecc-analytics-frontend
+  - Feecc Analytics backend
+    https://github.com/Multi-Agent-io/feecc-analytics-backend
 ---
 
 В этом руководстве поговорим о развертывании системы Feecc Analytics.

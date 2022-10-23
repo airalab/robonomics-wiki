@@ -1,28 +1,43 @@
 ---
 title: Развертывание "Feecc Рабочее Место Инженера" (РМИ или Workbench)
- 
+
 contributors: [timofeev41]
 translated: false
+tools:
+  - Feecc Workbench frontend
+    https://github.com/Multi-Agent-io/feecc-workbench-frontend
+  - Feecc Workbench daemon
+    https://github.com/Multi-Agent-io/feecc-workbench-daemon
+  - Feecc IPFS gateway
+    https://github.com/Multi-Agent-io/feecc-ipfs-gateway
+  - Feecc Print server
+    https://github.com/Multi-Agent-io/feecc-print-server
+  - Feecc Cameraman
+    https://github.com/Multi-Agent-io/feecc-cameraman
+  - Feecc HID reader daemon
+    https://github.com/Multi-Agent-io/feecc-hid-reader-daemon
 ---
 
 ## Общая информация:
 
-Работа системы "Feecc Рабочее Место Инженера" (далее Feecc РМИ) зависит от работы сервисов feecc-workbench-frontend (Фронтенд), feecc-workbench-daemon (Daemon), feecc-ipfs-gateway (IPFS Gateway), feecc-print-server (Print Server), feecc-cameraman (Cameraman), feecc-hid-reader-daemon (HID Daemon).
+Работа системы "Feecc Рабочее Место Инженера" (далее Feecc РМИ) зависит от работы сервисов feecc-workbench-frontend (
+Фронтенд), feecc-workbench-daemon (Daemon), feecc-ipfs-gateway (IPFS Gateway), feecc-print-server (Print Server),
+feecc-cameraman (Cameraman), feecc-hid-reader-daemon (HID Daemon).
 
 Чтобы узнать больше о сервисах, обратитесь в раздел [Обзор архитектуры](/docs/feecc-system-architecture).
 
-
 ## Запуск HID Daemon
 
-> Инструкция может устареть, обратитесь к инструкции в [репозитории](https://github.com/Multi-Agent-io/feecc-hid-reader-daemon#readme)
+> Инструкция может устареть, обратитесь к инструкции
+> в [репозитории](https://github.com/Multi-Agent-io/feecc-hid-reader-daemon#readme)
 
 1. Склонируйте репозиторий
 
-    `git clone https://github.com/Multi-Agent-io/feecc-hid-reader-daemon`
+   `git clone https://github.com/Multi-Agent-io/feecc-hid-reader-daemon`
 
 2. Обновите систему и установите необходимые пакеты:
 
-    Для Debian-based систем:
+   Для Debian-based систем:
 
     ```bash
     sudo apt update -y
@@ -54,18 +69,18 @@ translated: false
     sudo rm -rf /etc/systemd/system/EventToInternet*
     ```
 
-
 ## Запуск Workbench Daemon
 
-> Инструкция может устареть, обратитесь к инструкции в [репозитории](https://github.com/Multi-Agent-io/feecc-workbench-daemon#readme)
+> Инструкция может устареть, обратитесь к инструкции
+> в [репозитории](https://github.com/Multi-Agent-io/feecc-workbench-daemon#readme)
 
 1. Склонируйте репозиторий
 
-    `git clone https://github.com/Multi-Agent-io/feecc-workbench-daemon && cd feecc-workbench-daemon`
+   `git clone https://github.com/Multi-Agent-io/feecc-workbench-daemon && cd feecc-workbench-daemon`
 
 2. Проведите конфигурацию, открыв docker-compose.yml любым текстовым редактором
 
-    Измените переменные окружения. Значения каждого параметра:
+   Измените переменные окружения. Значения каждого параметра:
 
     ```
     
@@ -98,17 +113,17 @@ translated: false
 
 3. Запустите Workbench daemon:
 
-    `sudo docker-compose up -d --build`
+   `sudo docker-compose up -d --build`
 
 4. Проверьте работоспособность:
 
-    Перейдите на `127.0.0.1:5000/docs` и убедитесь, что Swagger отдает данные о REST API
+   Перейдите на `127.0.0.1:5000/docs` и убедитесь, что Swagger отдает данные о REST API
 
 ## Запуск IPFS Gateway
 
 1. Склонируйте репозитории
 
-    `git clone https://github.com/Multi-Agent-io/feecc-ipfs-gateway.git`
+   `git clone https://github.com/Multi-Agent-io/feecc-ipfs-gateway.git`
 
 2. Измените параметры
 
@@ -117,7 +132,7 @@ translated: false
     vim docker-compose.yml
     ```
 
-    Значение параметров:
+   Значение параметров:
 
     ```
       MONGODB_URI: ''  # Your MongoDB connection URI ending with /db-name
@@ -135,17 +150,18 @@ translated: false
 
 3. Запустите контейнер
 
-    `sudo docker-compose up --build`
+   `sudo docker-compose up --build`
 
 4. Проверьте работоспособность
 
-    Проверьте развертывание, перейдя по адресу http://127.0.0.1:8082/docs в браузере. Вы должны увидеть страницу SwaggerUI. 
+   Проверьте развертывание, перейдя по адресу http://127.0.0.1:8082/docs в браузере. Вы должны увидеть страницу
+   SwaggerUI.
 
 ## Запуск Print server
 
 1. Склонируйте репозиторий
 
-    `git clone https://github.com/Multi-Agent-io/feecc-print-server.git`
+   `git clone https://github.com/Multi-Agent-io/feecc-print-server.git`
 
 2. Измените параметры
 
@@ -154,7 +170,7 @@ translated: false
     vim docker-compose.yml
     ```
 
-    Значения параметров:
+   Значения параметров:
 
     ```
     MONGODB_URI - Your MongoDB connection URI ending with /db-name
@@ -166,17 +182,18 @@ translated: false
 
 3. Запустите контейнер
 
-    `sudo docker-compose up --build`
+   `sudo docker-compose up --build`
 
 4. Проверьте работоспособность
 
-    Проверьте развертывание, перейдя по адресу http://127.0.0.1:8083/docs в браузере. Вы должны увидеть страницу SwaggerUI. 
+   Проверьте развертывание, перейдя по адресу http://127.0.0.1:8083/docs в браузере. Вы должны увидеть страницу
+   SwaggerUI.
 
 ## Запуск Cameraman
 
 1. Склонируйте репозитории
 
-    `git clone https://github.com/Multi-Agent-io/feecc-cameraman.git`
+   `git clone https://github.com/Multi-Agent-io/feecc-cameraman.git`
 
 2. Измените параметры
 
@@ -185,7 +202,7 @@ translated: false
     vim docker-compose.yml
     ```
 
-    Значение параметров:
+   Значение параметров:
 
     ```
     MONGODB_URI - Your MongoDB connection URI ending with /db-name
@@ -196,24 +213,24 @@ translated: false
 
 3. Запустите контейнер
 
-    `sudo docker-compose up --build`
+   `sudo docker-compose up --build`
 
 4. Проверьте работоспособность
 
-    Проверьте развертывание, перейдя по адресу http://127.0.0.1:8081/docs в браузере. Вы должны увидеть страницу SwaggerUI. 
-
+   Проверьте развертывание, перейдя по адресу http://127.0.0.1:8081/docs в браузере. Вы должны увидеть страницу
+   SwaggerUI.
 
 ## Запуск фронтенда
 
 1. Склонируйте репозитории
 
-    `git clone https://github.com/Multi-Agent-io/feecc-workbench-frontend.git`
+   `git clone https://github.com/Multi-Agent-io/feecc-workbench-frontend.git`
 
 2. Измените параметры
 
-    `vim configs/config.json`
+   `vim configs/config.json`
 
-    Значение параметров:
+   Значение параметров:
 
     ```json
     { 
@@ -227,9 +244,9 @@ translated: false
     ```
 
 3. Запустите контейнер
-   
+
    `docker-compose up --build -d`
 
 4. Проверьте работоспособность
 
-    Откройте в браузере страницу `localhost:3000`. Должна открыться страница авторизации.
+   Откройте в браузере страницу `localhost:3000`. Должна открыться страница авторизации.
