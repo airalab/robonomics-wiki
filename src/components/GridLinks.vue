@@ -48,10 +48,21 @@ export default {
       background-color: var(--color-link-background-highlight);
     }
 
+    body[data-theme="dark"]  .grid-navigation a {
+        color: var(--color-light);
+        box-shadow: 0.2rem 0.2rem 0 0 var(--color-light);
+        border-color: var(--color-light);
+    }
+
     .grid-navigation a:hover {
         transform: translateY(-0.2rem);
         box-shadow: 0.2rem 0.2rem 0.8rem var(--link-color);
       }
+
+
+    body[data-theme="dark"]  .grid-navigation a:hover {
+        box-shadow: 0.2rem 0.2rem 0.8rem var(--color-light);
+    }
 
     /* @media screen and (max-width: 800px) {
       .grid-navigation { grid-template-columns: repeat(2, 1fr); }
