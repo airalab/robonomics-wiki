@@ -1,64 +1,88 @@
 ---
 title: Digital Twins
- 
-contributors: [nakata5321]
+contributors: [nakata5321, PaTara43]
 translated: false
+
+tools:   
+  - Robonomics 2.3.0
+    https://github.com/airalab/robonomics
+  - robonomics_interface 1.3.6
+    https://github.com/Multi-Agent-io/robonomics-interface
 ---
+  
+**Imagine having a complicated device or system which has several modules to maintain and requires a few accounts to use.
+To keep all of them in one place or to encode some functionality with separate accounts or, for example, to set different datalog 
+sources for different information flows, Digital Twin module is to be used.**
 
-## Requirements
-- `robonomics` [executable][ln1]
-- Be familiar with [parachain.robonomics][ln2]
+## Theory overview
+Any account can create and manage a Digital Twin. The Twin may be imagined as some sort of table with the following
+contents:
 
-## Digital Twins Schema
+| DT id  | Topic Name 	| Source    	|
+|--------|------------	|-----------	|
+| 0      | 0x00...000 	| 4Gz...hQJ 	|
+| 1      | 0x00...001 	| 4GVi...Bn 	|
+| 	      | 0x00...002 	| 4Hm...vLS 	|
+| 	      | 0x00...... 	| 4HQ...RQY 	|
+| n	  | 0xFF...FFF 	| 4Hw...CyK 	|
 
-Digital twins have the following structure:
-
-| DT id 	| Topic Name 	| Source    	|
-|-------	|------------	|-----------	|
-| 0     	| 0x00...000 	| 4Gz...hQJ 	|
-| 1     	| 0x00...001 	| 4GVi...Bn 	|
-|       	| 0x00...002 	| 4Hm...vLS 	|
-|       	| 0x00...... 	| 4HQ...RQY 	|
-|       	| 0xFF...FFF 	| 4Hw...CyK 	|
-| 2     	| 0x00...000 	| 4HJ...k3o 	|
 
  Where:
-* **DT id** - is unsigned integer unique number.
-* **Topic name** - is 0x prefixed `H256 hex` or `ascii data` with 32 bytes length. For example: `0x1234....FF` and  `hello.parachain.robonomics.world`.
-* **Source** - is Account address.
+* **DT id** is unsigned integer unique Digital Twin index.
+* **Topic name** is a hex `H256` or ASCII data of 32 bytes length, same as [`Launch`](/docs/launch) extrinsic parameter. 
+For example: `0x1234....FF` or  `hello.parachain.robonomics.world`.
+* **Source** - is some Account address.
+
+<robo-wiki-note type="note" title="Topics">
+
+  As have been discussed previously in Launch extrinsic overview, the `H256` may be represented as an encoded IPFS CID (see
+  [Python tool](https://multi-agent-io.github.io/robonomics-interface/modules.html#robonomicsinterface.utils.ipfs_qm_hash_to_32_bytes) for that).
+  Therefore, topics may be used as some data storage as well, say, a Twin's module description.
+
+</robo-wiki-note>
+
 
 ## Create Digital Twin
-Go to ***Developer -> Extrinsics*** and choose `digitalTwin.create()` extrinsic.
-![digital Twin create][im1]
 
- Submit transaction and go to ***Network -> Explorer*** and in the **recent events** you will see information about digital twin.
- ![digital Twin create info][im2]
+### 1. Navigate to Developer -> Extrinsics
 
-## Add DT Topic
+<robo-wiki-picture src="digital-twin/extrinsics.jpg" />
 
-You can create multiple topics for one digital twin. for creating topic you need go to ***Developer -> Extrinsics*** and choose `digitalTwin.setSource(id,topic,source)` extrinsic. Fill in the fields and submit transaction.
-![DT topic fields][im3]
+### 2. Choose digitalTwin -> create from the dropdown list of possible extrinsics
 
-Again go to **Network -> Explorer*** and in the **recent events** you will see information about created topic.
-![info about topic][im4]
+<robo-wiki-picture src="digital-twin/twin-create.jpg" />
 
-You can create several topics for one twin.
-![topics][im5]
+Submit the transaction. Here, no parameters needed to create a Twin. It will be granted an index and only the Digital
+Twin owner is able to add/modify topics of the Twin from now on.
 
-## Chain State
+Twin ID may be found on the Explorer overview page.
 
-You can find all information about existing *digital twins in* ***Developer -> Chain state*** such as:
-- Total number of Digital twins - total()
-- Information about owner of digital twin - owner(u32)
-- Information about topics in digital twin - digitalTwin(u32)
-![chain info][im6]
+<robo-wiki-picture src="digital-twin/create-log.jpg" />
 
+## Add Topic
 
-[ln1]: <https://github.com/airalab/robonomics/releases>
-[ln2]: </docs/create-account-in-dapp>
-[im1]: <../images/digital-twin/twin-create.jpg>
-[im2]: <../images/digital-twin/create-log.jpg>
-[im3]: <../images/digital-twin/fields.jpg>
-[im4]: <../images/digital-twin/topic.jpg>
-[im5]: <../images/digital-twin/topics.jpg>
-[im6]: <../images/digital-twin/chain-state.jpg>
+### Choose digitalTwin -> setSource from the dropdown list of possible extrinsics
+
+<robo-wiki-picture src="digital-twin/set-topic.jpg" />
+
+* `id` - Digital Twin ID, which has been obtained on the Explorer page.
+* `topic` - previously discussed `H256` topic name. In this picture it's a string of 32 symbols.
+* `source` - account address to be associated with the topic.
+
+<robo-wiki-note type="note" title="Overwrite">
+
+  Pay attention that the topic may be overwritten with another source address if needed.
+
+</robo-wiki-note>
+
+Sign and submit the extrinsic.
+
+## Explore
+
+You can find all information about existing Digital Twins in `Developer -> Chain state` storage module `digitalTwin`.
+
+- Total number of Twins - `total()`;
+- Digital Twin owner - `owner(u32)`;
+- Information about topics of a Digital Twin - `digitalTwin(u32)`.
+
+<robo-wiki-picture src="digital-twin/chain-state.jpg" />
