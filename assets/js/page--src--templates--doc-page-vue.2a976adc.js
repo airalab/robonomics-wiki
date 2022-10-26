@@ -271,7 +271,7 @@ eval("module.exports = __webpack_require__.p + \"assets/img/sensors-connectivity
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"assets/img/rinterface-ja.6ec506d1.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/rinterface-ja.png?");
+eval("module.exports = __webpack_require__.p + \"assets/img/rinterface-ja.4cc71935.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/rinterface-ja.png?");
 
 /***/ }),
 
@@ -1263,7 +1263,7 @@ eval("module.exports = __webpack_require__.p + \"assets/img/wschool2021-robonomi
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"assets/img/rinterface-ko.6ec506d1.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/rinterface-ko.png?");
+eval("module.exports = __webpack_require__.p + \"assets/img/rinterface-ko.4cc71935.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/rinterface-ko.png?");
 
 /***/ }),
 
@@ -4302,7 +4302,7 @@ eval("module.exports = __webpack_require__.p + \"assets/img/create-account-in-da
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"assets/img/rinterface-pt.6ec506d1.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/rinterface-pt.png?");
+eval("module.exports = __webpack_require__.p + \"assets/img/rinterface-pt.4cc71935.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/rinterface-pt.png?");
 
 /***/ }),
 
@@ -4974,7 +4974,7 @@ eval("module.exports = __webpack_require__.p + \"assets/img/playground-overview-
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"assets/img/rinterface-ru.6ec506d1.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/rinterface-ru.png?");
+eval("module.exports = __webpack_require__.p + \"assets/img/rinterface-ru.4cc71935.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/rinterface-ru.png?");
 
 /***/ }),
 
@@ -5261,7 +5261,7 @@ eval("module.exports = __webpack_require__.p + \"assets/img/deploy-sensor-map-es
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"assets/img/rinterface-es.6ec506d1.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/rinterface-es.png?");
+eval("module.exports = __webpack_require__.p + \"assets/img/rinterface-es.4cc71935.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/rinterface-es.png?");
 
 /***/ }),
 
