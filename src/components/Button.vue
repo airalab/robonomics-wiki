@@ -91,8 +91,8 @@ export default {
   /* Some variables in /assets/style/_variables.scss */
 
   body {
-    --color-btn-bg: var(--link-color);
-    --color-btn-text: var(--text-color-invert);
+    --color-btn-bg: #5D9DEB;
+    --color-btn-text: var(--color-light);
   }
 
   /* body[data-theme="dark"] {

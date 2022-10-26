@@ -18,7 +18,7 @@ body {
  	--code-text-inline: rgb(179, 37, 133);
 
  	--title-color: #111;
- 	--link-color: #449ff2;
+ 	--link-color: #5d9deb;
  	--border-color-light:  rgba(0,0,0,.1);
  	--border-color: #dbdbdb;
 	--footer-border-color: #10161A;
@@ -80,7 +80,7 @@ body[data-theme="dark"] {
 	--code-text-inline: rgb(255, 60, 193);
 
  	--title-color: #fff;
- 	--link-color: #fceb8f;
+ 	--link-color: #76b4ff;
  	--border-color:  #5f5f5f;
 	--footer-border-color: #fff;
 
@@ -90,7 +90,7 @@ body[data-theme="dark"] {
 
 	 --color-focus: rgb(9, 61, 95);
 	 --color-focus-light: rgb(5, 94, 153);
-	 --color-link-background-highlight: var(--color-dark);
+	 --color-link-background-highlight: #5d9deb;
 
 	--color-note-accent: #384856;
 	--color-note-pale: #7f8e9c;
