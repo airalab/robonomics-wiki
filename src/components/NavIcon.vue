@@ -112,14 +112,14 @@ export default {
         event.currentTarget.classList.add('close');
         event.currentTarget.classList.remove('open');
         document.body.classList.add('removeScroll')
-        this.disableScroll()
+        // this.disableScroll()
       } else {
         element.classList.add(classClose);
         element.classList.add(classClose_720);
         event.currentTarget.classList.add('open');
         event.currentTarget.classList.remove('close');
         document.body.classList.remove('removeScroll')
-        this.enableScroll()
+        // this.enableScroll()
 
       }
     },

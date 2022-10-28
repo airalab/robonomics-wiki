@@ -1,5 +1,5 @@
 <template>
-    <div id="sidebarDocs" class="page__sidebar hiddenMobile" :class=" $store.state.showSearchbar ? null : 'menu-without-search'">
+    <div id="sidebarDocs" class="page__sidebar custom-scroll hiddenMobile" :class=" $store.state.showSearchbar ? null : 'menu-without-search'">
       <SidebarDocs :items="items" />
     </div>
 </template>
@@ -35,7 +35,7 @@ export default {
   #sidebarDocs,
   #sidebarContent {
     position: sticky;
-    top: 7rem;
+    top: 4rem;
   }
 
   .sidebarMobileToggle{

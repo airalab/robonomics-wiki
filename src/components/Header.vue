@@ -139,7 +139,7 @@ export default {
   methods: {
     onScroll() {
     // Get the current scroll position
-    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+    const currentScrollPosition =  document.querySelector('.all-content').pageYOffset || document.querySelector('.all-content').scrollTop
     // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
     if (currentScrollPosition < 0) {
       return
@@ -161,16 +161,16 @@ export default {
   mounted () {
     window.addEventListener('resize', () => {
       if (window.innerWidth <= 860) {
-        window.addEventListener('scroll', this.onScroll)
+        document.querySelector('.all-content').addEventListener('scroll', this.onScroll)
       } else {
       this.$store.commit('toggleShowSearchbar', true)
-        window.removeEventListener('scroll', this.onScroll)
+        document.querySelector('.all-content').removeEventListener('scroll', this.onScroll)
       }
     })
   },
   
   beforeDestroy () {
-    window.removeEventListener('scroll', this.onScroll)
+    document.querySelector('.all-content').removeEventListener('scroll', this.onScroll)
   }
 
 }

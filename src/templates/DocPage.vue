@@ -116,13 +116,14 @@
 
   #sidebarContent, #sidebarDocs {
     position: sticky;
-    top: 7rem;
-    height: 67vh;
+    top: 4rem;
+    /* height: 67vh; */
     overflow-y: scroll;
   }
 
   #sidebarDocs {
     height: 80vh;
+    /* overflow-y: auto; */
   }
 
   .sidebarMobileToggle{

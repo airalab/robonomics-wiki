@@ -1,25 +1,26 @@
 <template>
 
-  <ul class="menu">
+    <ul class="menu">
 
-    <li v-for="(item, key) in items" :key="key">
+      <li v-for="(item, key) in items" :key="key">
 
-      <g-link class="menu-link" v-if="item.link && item.published!=false" :to="$path(item.link, locale)" exact>
-        {{ getTitle(item) }}
-      </g-link>
-      
-      <template v-else>
-
-        <h4 class="menu-subtitle" @click="toggle" v-if="item.published!=false" :class="hascurrent(item.items) ? 'open' : 'close'">
+        <g-link class="menu-link" v-if="item.link && item.published!=false" :to="$path(item.link, locale)" exact>
           {{ getTitle(item) }}
-        </h4>
+        </g-link>
+        
+        <template v-else>
 
-        <List :items="item.items" />
-      </template>
+          <h4 class="menu-subtitle" @click="toggle" v-if="item.published!=false" :class="hascurrent(item.items) ? 'open' : 'close'">
+            {{ getTitle(item) }}
+          </h4>
 
-    </li>
+          <List :items="item.items" />
+        </template>
 
-  </ul>
+      </li>
+
+    </ul>
+
 
 </template>
 

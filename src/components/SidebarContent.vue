@@ -101,7 +101,7 @@
 				if (el !== null ) {
 
 					const top = el.offsetTop;
-					window.scrollTo(0, top);;
+					window.document.querySelector('.all-content').scrollTo(0, top);;
 
 					this.manualHush = `#${el.getAttribute('id')}`;
 				}
@@ -146,6 +146,8 @@
 
 				this.manualHush = subtitle.anchor
 
+				document.body.removeEventListener('touchmove', this.preventDefault);
+
 				if(document.querySelector('.sectionToggler')) {
 
 					if (e.target.href) {
@@ -170,7 +172,7 @@
 		},
 
 		mounted () {
-			window.addEventListener('scroll', this.activateLinkOnScroll)
+			document.querySelector('.all-content').addEventListener('scroll', this.activateLinkOnScroll)
 			this.manualHush = this.$route.hash;
 			this.scrollToElement()
 			this.allSubtitles.push('mounted')
@@ -178,7 +180,7 @@
     },
     
     beforeDestroy () {
-      window.removeEventListener('scroll', this.activateLinkOnScroll)
+      document.querySelector('.all-content').removeEventListener('scroll', this.activateLinkOnScroll)
     }
 	}
 

@@ -1,24 +1,22 @@
 <template>
   <div id="app" class="layout">
-    
-    <div class="footerPusher">
-      <Header />
+
+    <Header />
+
+    <div class="all-content custom-scroll">
+      <div class="footerPusher">
         <main class="main layout__page post">
-          <div class="page">
-
-            <SidebarItems :items="items"/>
-
-            <div>
-              <Breadcrumbs :items="items" />
-              <slot/>
-            </div>
-          </div>
-
+            <div class="page">
+              <SidebarItems :items="items"/>
+              <div>
+                <Breadcrumbs :items="items" />
+                <slot/>
+              </div>
+              </div>
         </main>
-
       </div>
-
       <Footer/>
+    </div>
 
   </div>
 </template>
@@ -42,7 +40,10 @@ query {
     align-items: start;
   }
 
-  .page::-webkit-scrollbar { display: none; } /* Hide scrollbar for Chrome, Safari and Opera */
+  .page::-webkit-scrollbar { display: none; } 
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  
+
 
   .page-title-meta {
     border-width: 1px 0;
@@ -126,6 +127,11 @@ export default {
   data(){
     return {
       items: items,
+      settings: {
+        suppressScrollY: false,
+        suppressScrollX: true,
+        wheelPropagation: false
+      }
     }
   },
 
@@ -143,10 +149,27 @@ export default {
         }
       }
       return result;
+
+
+    },
+
+    activateScrollbar() {
+      const el = document.querySelector('.custom-scroll');
+      const currentScrollPosition = el.scrollTop
+
+      el.classList.add('active')
+
+      this.currentPosition = currentScrollPosition
+
+
+      setTimeout(() => {
+        if(this.currentPosition === currentScrollPosition) {
+          el.classList.remove('active')
+        }
+      }, 150)
+
     }
-
   },
-
   
   computed: {
 
@@ -165,6 +188,14 @@ export default {
     },
 
   },
+
+    mounted () {
+      document.querySelector('.all-content').addEventListener('scroll', this.activateScrollbar)
+    },
+      
+    beforeDestroy () {
+      document.querySelector('.all-content').removeEventListener('scroll', this.activateScrollbar)
+    },
 
   updated(){
 
