@@ -2,6 +2,11 @@
 title: IOT subscription setup
 contributors: [nakata5321]
 translated: false
+tools:   
+  - Robonomics 2.3.0
+    https://github.com/airalab/robonomics
+  - Dapp Robonomics Network 
+    https://github.com/airalab/dapp.robonomics.network
 ---
 
 After setting up [Zigbee2MQTT stick](/docs/zigbee2-mqtt/), It is time to create Robonomics Parachain accounts and buy subscription. 

@@ -2,7 +2,16 @@
 title: DApp Usage
 
 contributors: [nakata5321]
-translated: true
+translated: false
+tools:   
+  - Robonomics 2.3.0
+    https://github.com/airalab/robonomics
+  - Dapp Robonomics Network 
+    https://github.com/airalab/dapp.robonomics.network
+  - Home Assistant 2022.8.2
+    https://github.com/home-assistant/core
+  - Robonomics integration 1.1.0
+    https://github.com/airalab/homeassistant-robonomics-integration
 ---
 
 After finishing with ["Robonomics integration setup"](/docs/add-smart-device-to-robonomics/), all options of our DApp will be available for you.

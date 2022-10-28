@@ -6,10 +6,13 @@ tools:
   - Ubuntu Server 22.04 LTS
     https://ubuntu.com/download/raspberry-pi
   - Home Assistant 2022.8.2
+    https://github.com/home-assistant/core
   - robonomics-interface 1.3.4
     https://github.com/Multi-Agent-io/robonomics-interface/releases/tag/1.3.4
   - IPFS 0.14.0
     https://docs.ipfs.io/install/command-line/
+  - Robonomics integration 1.1.0
+    https://github.com/airalab/homeassistant-robonomics-integration
 ---
 
 For all methods from ["Overview"](/docs/home-assistant-begin/), the first thing you need to do is set up a Raspberry Pi. 
