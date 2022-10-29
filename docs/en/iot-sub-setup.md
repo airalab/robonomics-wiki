@@ -1,5 +1,5 @@
 ---
-title: IOT subscription setup
+title: IoT Subscription Setup
 contributors: [nakata5321]
 translated: true
 tools:   
