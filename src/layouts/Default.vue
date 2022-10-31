@@ -49,19 +49,15 @@ export default {
         if(this.currentPosition === currentScrollPosition) {
           el.classList.remove('active')
         }
-      }, 150)
+      }, 300)
 
     }
   },
 
 
   mounted () {
-    document.querySelector('.all-content').addEventListener('scroll', this.activateScrollbar)
+    document.querySelector('.custom-scroll').addEventListener('scroll', this.activateScrollbar)
   },
-    
-  beforeDestroy () {
-    document.querySelector('.all-content').removeEventListener('scroll', this.activateScrollbar)
-  }
 
 }
 </script>

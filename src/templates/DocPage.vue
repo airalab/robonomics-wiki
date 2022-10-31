@@ -61,7 +61,7 @@
 
         </div>
 
-        <div id="sidebarContent" class="page__sidebar hiddenMobile--720" :class="$store.state.showSearchbar ? null : 'menu-without-search'">
+        <div id="sidebarContent" class="page__sidebar hiddenMobile--720 custom-scroll" :class="$store.state.showSearchbar ? null : 'menu-without-search'">
           <robo-wiki-note v-if="$page.doc.tools.length" type="note" title="Tested for">
             <g-link v-for="tool in $page.doc.tools" :href="tool.match(/\bhttps?:\/\/\S+/gi) ||  '#' " :key="tool" class="testedFor__link">
              {{tool.replace(/\bhttps?:\/\/\S+/gi, '')}}

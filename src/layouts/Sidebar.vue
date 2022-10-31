@@ -190,12 +190,11 @@ export default {
   },
 
     mounted () {
-      document.querySelector('.all-content').addEventListener('scroll', this.activateScrollbar)
+      document.querySelectorAll('.custom-scroll').forEach(item => {
+        item.addEventListener('scroll', this.activateScrollbar)
+      })
     },
-      
-    beforeDestroy () {
-      document.querySelector('.all-content').removeEventListener('scroll', this.activateScrollbar)
-    },
+    
 
   updated(){
 
@@ -216,6 +215,10 @@ export default {
         });
       })
     });
+
+    document.querySelectorAll('.custom-scroll').forEach(item => {
+      item.addEventListener('scroll', this.activateScrollbar)
+    })
   }
 }
 
