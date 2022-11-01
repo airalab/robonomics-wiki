@@ -168,11 +168,32 @@
 
 				}
 
-			}
+			},
+
+			activateScrollbar() {
+				const el = document.querySelector('.custom-scroll ');
+				const currentScrollPosition = el.scrollTop
+
+				el.classList.add('active')
+
+				this.currentPosition = currentScrollPosition
+
+
+				setTimeout(() => {
+					if(this.currentPosition === currentScrollPosition) {
+						el.classList.remove('active')
+					}
+				}, 150)
+
+				this.activateLinkOnScroll()
+    	}
 		},
 
 		mounted () {
-			document.querySelector('.all-content').addEventListener('scroll', this.activateLinkOnScroll)
+			// document.querySelector('.custom-scroll').addEventListener('scroll', this.activateLinkOnScroll)
+			document.querySelectorAll('.all-content ').forEach(item => {
+        item.addEventListener('scroll', this.activateScrollbar)
+      })
 			this.manualHush = this.$route.hash;
 			this.scrollToElement()
 			this.allSubtitles.push('mounted')
@@ -180,7 +201,7 @@
     },
     
     beforeDestroy () {
-      document.querySelector('.all-content').removeEventListener('scroll', this.activateLinkOnScroll)
+      document.querySelector('.custom-scroll').removeEventListener('scroll', this.activateLinkOnScroll)
     }
 	}
 
