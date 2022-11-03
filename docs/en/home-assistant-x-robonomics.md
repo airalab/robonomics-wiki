@@ -201,3 +201,9 @@ Assistant and connect your ZigBee devices to your Home Assistant via preferred h
 
 ## Add Robonomics integration to Existing Home Assistant Core
 
+**This part is under maintenance, to be updated soon.**
+
+[//]: # (## Troubleshooting)
+
+[//]: # (todo)
+[//]: # (nmap)
