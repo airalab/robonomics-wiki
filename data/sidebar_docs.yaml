@@ -1,36 +1,34 @@
 - title_en: Robonomics Smart Home
   items:
-#    - title_en: Introduction
-#      link: /docs/robonomics-smart-home-introduction
-#    - title_en: Demo
-#      link: /docs/robonomics-smart-home-demo
-#    - title_en: Boost Your Home Assistant
-#      items:
-#        - title_en: Requirements
-#          link: /docs/robonomics-smart-home-boost-requirements
-#        - title_en: Setup
-#          link: /docs/robonomics-smart-home-boost-setup
-    - title_en: Start From Scratch
+    - title_en: Overview
+      link: /docs/home-assistant-begin
+    - title_en: Install
       items:
-# These articles are to be rewritten
-        - title_en: Overview
-          link: /docs/home-assistant-begin
-        - title_en: Raspberry Pi Setup
-          link: /docs/raspberry-setup
+        - title_en: Home Assistant x Robonomics
+          link: /docs/home-assistant-x-robonomics
         - title_en: MQTT Broker Setup
           link: /docs/mqtt-broker
-        - title_en: Zigbee2MQTT Setup
-          link: /docs/zigbee2-mqtt
-        - title_en: Setup SLS Gateway
-          link: /docs/sls-setup
-        - title_en: Connect SLS Gateway to Home Assistant
-          link: /docs/sls-gateway-connect
+        - title_en: ZigBee Hardware
+          items:
+            - title_en: Zigbee2MQTT Setup
+              link: /docs/zigbee2-mqtt
+            - title_en: Setup SLS Gateway
+              link: /docs/sls-setup
+            - title_en: Connect SLS Gateway to Home Assistant
+              link: /docs/sls-gateway-connect
+    - title_en: Configure
+      items:
         - title_en: IOT Subscription Setup
           link: /docs/iot-sub-setup
         - title_en: Robonomics Integration Setup
           link: /docs/add-smart-device-to-robonomics
+    - title_en: Use
+      items:
         - title_en: DApp Usage
           link: /docs/use-dapp
+#    - title_en: Demo
+#      link: /docs/robonomics-smart-home-demo
+
 - title_en: Learn
   items:
     - title_en: Introduction
