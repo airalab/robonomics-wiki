@@ -9,7 +9,7 @@ tools:
     https://github.com/airalab/dapp.robonomics.network
 ---
 
-After setting up [Zigbee2MQTT stick](/docs/zigbee2-mqtt/), It is time to create Robonomics Parachain accounts and buy subscription. 
+After setting up Robonomics integration, It is time to create Robonomics Parachain accounts and buy subscription. 
 
 To control Home Assistant with Robonomics, You will need 2 accounts in Robonomics parachain. 
 To the one of accounts you will buy the Robonomics subscription. Let's call it `SUB_OWNER`. 
