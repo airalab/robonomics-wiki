@@ -98,7 +98,7 @@ If later you need to change settings, please edit configuration file in `/etc/ne
 Then you need to save the file, **safely eject the SD card**, and insert it into the Raspberry Pi and turn it on. It should connect to your wi-fi network. 
 
 Now find the Raspberry Pi's IP address. To find address you can use [Fing mobile app](https://www.fing.com/products)
-or [nmap CLI tool](https://nmap.org/download.html).  In this example the Raspberry Pi's address is `192.168.43.56`.
+or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).  In this example the Raspberry Pi's address is `192.168.43.56`.
 Connect to it over `ssh`:
 
 ```bash

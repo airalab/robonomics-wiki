@@ -1,5 +1,5 @@
 ---
-title: Zigbee2MQTT Setup
+title: Zigbee2MQTT
 
 contributors: [LoSk-p, dergudzon, Leemo94, PaTara43]
 translated: true
