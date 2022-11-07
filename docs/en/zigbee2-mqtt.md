@@ -158,7 +158,7 @@ After adding all the sensors, you stop program with `ctrl+C`.
 
 > After adding all the sensors, you can open configuration file again to set and set `permit_join: false`, if you don’t want to add any more devices.
 
-If needed, make a service. Create the file:
+To make the Zigbee2MQTT run after reboot, make a service. Create the file:
 
 ```bash
 sudo nano /etc/systemd/system/zigbee2mqtt.service
