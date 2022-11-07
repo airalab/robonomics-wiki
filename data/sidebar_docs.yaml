@@ -10,12 +10,10 @@
           link: /docs/mqtt-broker
         - title_en: ZigBee Hardware
           items:
-            - title_en: Zigbee2MQTT Setup
+            - title_en: Zigbee2MQTT
               link: /docs/zigbee2-mqtt
-            - title_en: Setup SLS Gateway
+            - title_en: Robonomics SLS Gateway
               link: /docs/sls-setup
-            - title_en: Connect SLS Gateway to Home Assistant
-              link: /docs/sls-gateway-connect
     - title_en: Configure
       items:
         - title_en: IOT Subscription Setup
