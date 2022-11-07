@@ -20,7 +20,7 @@ Other important thing is that both accounts must be created with ***ed25519*** e
 
 ## Create Owner and Controller accounts
 
-First, let's create A Robonomics account.
+First, let's create a Robonomics account.
 
 Go to [Robonomics Parachain app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) on Polkadot / Substrate Portal. **Check the top left corner to ensure that you are connected to Robonomics Parachain**.  
 
