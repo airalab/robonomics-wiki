@@ -152,23 +152,6 @@ export default {
 
 
     },
-
-    activateScrollbar() {
-      const el = document.querySelector('.custom-scroll');
-      const currentScrollPosition = el.scrollTop
-
-      el.classList.add('active')
-
-      this.currentPosition = currentScrollPosition
-
-
-      setTimeout(() => {
-        if(this.currentPosition === currentScrollPosition) {
-          el.classList.remove('active')
-        }
-      }, 150)
-
-    }
   },
   
   computed: {
@@ -188,12 +171,6 @@ export default {
     },
 
   },
-
-    mounted () {
-      document.querySelectorAll('.custom-scroll').forEach(item => {
-        item.addEventListener('scroll', this.activateScrollbar)
-      })
-    },
     
 
   updated(){
@@ -215,11 +192,8 @@ export default {
         });
       })
     });
+  },
 
-    document.querySelectorAll('.custom-scroll').forEach(item => {
-      item.addEventListener('scroll', this.activateScrollbar)
-    })
-  }
 }
 
 </script>

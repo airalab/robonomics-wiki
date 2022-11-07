@@ -26,7 +26,8 @@
           link: /docs/use-dapp
 #    - title_en: Demo
 #      link: /docs/robonomics-smart-home-demo
-
+        - title_en: Blueprints Usage
+          link: /docs/use-blueprints
 - title_en: Learn
   items:
     - title_en: Introduction
