@@ -212,7 +212,7 @@ Jun 07 20:27:24 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Loggi
 Jun 07 20:27:25 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Starting Zigbee2MQTT version 1.6.0 (commit #720e393)
 ```
 
-Now that everything works, yao can use `systemctl` to start Zigbee2MQTT automatically on boot, this can be done by executing:
+Now that everything works, you can use `systemctl` to start Zigbee2MQTT automatically on boot, this can be done by executing:
 
 ```bash
 sudo systemctl enable zigbee2mqtt.service
