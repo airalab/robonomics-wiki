@@ -1,36 +1,31 @@
 - title_en: Robonomics Smart Home
   items:
-#    - title_en: Introduction
-#      link: /docs/robonomics-smart-home-introduction
-#    - title_en: Demo
-#      link: /docs/robonomics-smart-home-demo
-#    - title_en: Boost Your Home Assistant
-#      items:
-#        - title_en: Requirements
-#          link: /docs/robonomics-smart-home-boost-requirements
-#        - title_en: Setup
-#          link: /docs/robonomics-smart-home-boost-setup
-    - title_en: Start From Scratch
+    - title_en: Overview
+      link: /docs/home-assistant-begin
+    - title_en: Install
       items:
-# These articles are to be rewritten
-        - title_en: Overview
-          link: /docs/home-assistant-begin
-        - title_en: Raspberry Pi Setup
-          link: /docs/raspberry-setup
+        - title_en: Home Assistant x Robonomics
+          link: /docs/home-assistant-x-robonomics
         - title_en: MQTT Broker Setup
           link: /docs/mqtt-broker
-        - title_en: Zigbee2MQTT Setup
-          link: /docs/zigbee2-mqtt
-        - title_en: Setup SLS Gateway
-          link: /docs/sls-setup
-        - title_en: Connect SLS Gateway to Home Assistant
-          link: /docs/sls-gateway-connect
+        - title_en: ZigBee Hardware
+          items:
+            - title_en: Zigbee2MQTT
+              link: /docs/zigbee2-mqtt
+            - title_en: Robonomics SLS Gateway
+              link: /docs/sls-setup
+    - title_en: Configure
+      items:
         - title_en: IOT Subscription Setup
           link: /docs/iot-sub-setup
         - title_en: Robonomics Integration Setup
           link: /docs/add-smart-device-to-robonomics
+    - title_en: Use
+      items:
         - title_en: DApp Usage
           link: /docs/use-dapp
+#    - title_en: Demo
+#      link: /docs/robonomics-smart-home-demo
         - title_en: Blueprints Usage
           link: /docs/use-blueprints
 - title_en: Learn
@@ -182,12 +177,6 @@
           link: /docs/iris-drone
         - title_en: ROS-based Projects for Smart Spaces
           link: /docs/ros-smart-projects
-# These articles are to be deleted.
-#        - title_en: DEMO "Get Weather on Fuji Mountain"
-#          title_es: DEMO "Obtenga el clima en la montaña de Fuji"
-#          link: /docs/get-weather-on-fuji-mountain
-#        - title_en: Robonomics DApp Overview
-#          link: /docs/robonomics-dapp-overview
 
 - title_en: Maintain
   items:
@@ -195,6 +184,8 @@
       link: /docs/how-to-build-collator-node
     - title_en: How to launch the Robonomics collator
       link: /docs/how-to-launch-the-robonomics-collator
+#    - title_en: Deploy Robonomics Test Network
+#      link: /docs/robonomics-test-network-manual
     - title_en: Configure Metrics With Prometheus And Grafana
       link: /docs/robonomics-prometheus-grafana
 
@@ -308,17 +299,6 @@
     - title_en: Troubleshooting
       link: /docs/troubleshooting
 
-# - title_en: Contribute
-#   title_ru: Внесите свой вклад
-#   items:
-#     - title_en: How to contribute
-#       title_ru: Как стать контрибьютором
-#       link: /docs/contributing
-#     - title_en: How to edit WIKI
-#       title_ru: Как редактировать Вики
-#       link: /docs/edit-wiki
-#     - title_en: Help us translate
-#       title_ru: Как участвовать в переводе Вики
-#       link: /docs/translate-wiki
+
 #     - title_en: Community
 #       link: /docs/community

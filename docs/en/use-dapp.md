@@ -24,7 +24,7 @@ Go to DApp and  choose ["SmartHome Telemetry"](https://dapp.robonomics.network/#
 <robo-wiki-picture src="home-assistant/telemetry-start.jpg" />
 
 First, choose the `SUB_OWNER` account in the first drop-down list at the top of page. In the "Controller" field 
-find the address of `SUB_ADMIN` from the drop-down list.
+find the address of `SUB_CONTROLLER` from the drop-down list.
 Insert the **Seed phrase** to encrypt data.
 
 Next, in the "Get telemetry" block choose a timestamp from the drop-down list and press the "download telemetry" button.

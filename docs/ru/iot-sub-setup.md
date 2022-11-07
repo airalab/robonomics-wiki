@@ -9,18 +9,18 @@ tools:
     https://github.com/airalab/dapp.robonomics.network
 ---
 
-After setting up [Zigbee2MQTT stick](/docs/zigbee2-mqtt/), It is time to create Robonomics Parachain accounts and buy subscription. 
+After setting up Robonomics integration, It is time to create Robonomics Parachain accounts and buy subscription. 
 
 To control Home Assistant with Robonomics, You will need 2 accounts in Robonomics parachain. 
 To the one of accounts you will buy the Robonomics subscription. Let's call it `SUB_OWNER`. 
 Second account  will manage all Home Assistant processes such as telemetry and give access to other users. 
-Let's call it `SUB_ADMIN`. This accounts will provide security of your Home Assistant.
+Let's call it `SUB_CONTROLLER`. This accounts will provide security of your Home Assistant.
 
 Other important thing is that both accounts must be created with ***ed25519*** encryption. How to create accounts and buy robonomics subscription see below. 
 
 ## Create Owner and Controller accounts
 
-First, let's create A Robonomics account.
+First, let's create a Robonomics account.
 
 Go to [Robonomics Parachain app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) on Polkadot / Substrate Portal. **Check the top left corner to ensure that you are connected to Robonomics Parachain**.  
 
@@ -48,7 +48,7 @@ Clicking on the `Next` button will take you to the last window. Click `Save` to 
 
 <robo-wiki-picture src="home-assistant/done.jpg" />
 
-<robo-wiki-note type="note">The same way create account with name `sub_admin` </robo-wiki-note>
+<robo-wiki-note type="note">The same way create account with name `SUB_CONTROLLER` </robo-wiki-note>
 
 ## Add accounts to extension
 
@@ -96,7 +96,7 @@ You will see state of your subscription:
 
 ## Add accounts to subscription
 
-Add `SUB_ADMIN` account to **access list**. For this open extension and click on icon near account name. It will copy account address.
+Add `SUB_CONTROLLER` account to **access list**. For this open extension and click on icon near account name. It will copy account address.
 
 <robo-wiki-picture src="home-assistant/sub-admin.jpg" />
 
