@@ -123,8 +123,8 @@ connect your Zigbee devices to your Home Assistant.
   Here, Robonomics integration and IPFS are to be installed along with existing Home Assistant Docker.
 
   1. This section is designed with an assumption that default Docker images and container of Home Assistant named 
-  `homeassistant` are used.
-  2. IPFS will be installed and run as a `systemd` service on the host machine.
+  <u>homeassistant</u> are used.
+  2. IPFS will be installed and run as a <u>systemd</u> service on the host machine.
   3. It is assumed that you have Python3.9 or higher installed.
 
 </robo-wiki-note>
