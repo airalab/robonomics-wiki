@@ -49,7 +49,7 @@ ipfs daemon
 In other terminal download image with
 
 ```shell
-ipfs get QmZTbvaBPQgeUDBGZg3WJQbP4QUyr8gSF6Uw89cLkY72sx -o rpi.img.xz
+ipfs get Qmdca36xtJe86Mni9tAKNXpzihhNVRGKcJfb7xEeUdnfW6 -o rpi.img.xz
 ```
 
 <robo-wiki-note type="Note" title="Browser alternative">
