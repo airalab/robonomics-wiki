@@ -112,10 +112,6 @@ Now that you have a Raspberry Pi with Home Assistant, Robonomics and IPFS instal
 installation where you also configure your newly installed Home Assistant and add MQTT integration to it. After that you will
 connect your Zigbee devices to your Home Assistant.
 
-## Add Robonomics integration to Existing Home Assistant OS
-
-**This part is under maintenance, to be updated soon.**
-
 ## Add Robonomics integration to Existing Home Assistant Docker
 
 <robo-wiki-note type="warning" title="DISCLAIMER">
@@ -200,6 +196,10 @@ proceed to [configuration steps](/docs/iot-sub-setup) of Robonomics subscription
 Assistant and connect your Zigbee devices to your Home Assistant via preferred hardware.
 
 ## Add Robonomics integration to Existing Home Assistant Core
+
+**This part is under maintenance, to be updated soon.**
+
+## Add Robonomics integration to Existing Home Assistant OS
 
 **This part is under maintenance, to be updated soon.**
 
