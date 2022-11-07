@@ -149,9 +149,9 @@ Let's start. The easiest way is to use our bash script `install.sh` to update sy
 Download file to your Raspberry Pi. Then change user's rights for this file and start it:
 
 ```shell
-curl -O https://raw.githubusercontent.com/LoSk-p/robonomics-hass-utils/main/raspberry_pi/install.sh
-chmod a+x install.sh
-bash install.sh
+curl -O https://raw.githubusercontent.com/LoSk-p/robonomics-hass-utils/main/raspberry_pi/complete_install.sh
+chmod a+x complete_install.sh
+bash complete_install.sh
 ```
 
 During installation process you will see the next request:
