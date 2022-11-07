@@ -13,7 +13,7 @@ Now you can add integration to Home Assistant. In web interface go to `Settings/
 
 <robo-wiki-picture src="home-assistant/add-integration.jpg" />
 
-Click on it and fill the configuration. Here you need to add seed from `SUB_ADMIN` and public address of `SUB_OWNER` accounts (which you previously created).
+Click on it and fill the configuration. Here you need to add seed from `SUB_CONTROLLER` and public address of `SUB_OWNER` accounts (which you previously created).
 Also, you can set sending interval, by default it is 10 minutes.
 
 Moreover, you can add your Pinata credentials. It is not necessary, if you will not do it, data will be pinned with your local node and Infura.If you add the credentials files will also be pinned on Pinata to help them spread wider over IPFS.
@@ -24,19 +24,19 @@ Moreover, you can add your Pinata credentials. It is not necessary, if you will 
 
 ## Use DApp
 
-Now it's time to create the first user for your Home Assistant.It shouldn't be `SUB_OWNER` or `SUB_ADMIN` accounts, because,
+Now it's time to create the first user for your Home Assistant.It shouldn't be `SUB_OWNER` or `SUB_CONTROLLER` accounts, because,
 as said [earlier](/docs/iot-sub-setup/) they provide security. Because of it, regular user shouldn't use them. 
 Also, you can't use user, which you created af first start of Home Assistant, because this user don't have 
 account in Robonomics Parachain.
 
 Create an account, as we did in the previous [article](/docs/iot-sub-setup/). 
-Add this account to the subscription [here](https://dapp.robonomics.network/#/subscription/devices). Now there should be three addresses in the access list - `SUB_OWNER`, `SUB_ADMIN` and `user`.
+Add this account to the subscription [here](https://dapp.robonomics.network/#/subscription/devices). Now there should be three addresses in the access list - `SUB_OWNER`, `SUB_CONTROLLER` and `user`.
 
 <robo-wiki-picture src="home-assistant/user.jpg" />
 
 Then go to the Dapp service [**"HomeAssistant Account"**](https://dapp.robonomics.network/#/home-assistant). Choose account, 
 you've just created at the right sidebar (check that you have chosen the intended account by pressing the profile icon).
-Then enter the `USER` seed in the required field. In the next two raws type in `SUB_OWNER` and `SUB_ADMIN` addresses:
+Then enter the `USER` seed in the required field. In the next two raws type in `SUB_OWNER` and `SUB_CONTROLLER` addresses:
 
 <robo-wiki-picture src="home-assistant/acc-pass.jpg" />
 
