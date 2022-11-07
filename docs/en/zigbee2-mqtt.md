@@ -1,20 +1,49 @@
 ---
-title: Zigbee2MQTT setup
+title: Zigbee2MQTT Setup
 
-contributors: [LoSk-p, dergudzon, Leemo94]
+contributors: [LoSk-p, dergudzon, Leemo94, PaTara43]
 translated: true
 tools:
   - Zigbee2MQTT 1.28.0
 ---
 
-After installing [MQTT broker](/docs/mqtt-broker/) to the Raspberry Pi, we can now set up Zigbee2MQTT stick.
+**After installing [MQTT broker](/docs/mqtt-broker/) to the Raspberry Pi, you can now set up your Zigbee2MQTT stick.
+If you have the JetHome USB JetStick Z2 it has the necessary firmware. However, if you have another 
+adapter the first thing you need to do is to flash it with Zigbee2MQTT software. You can find instructions for your 
+device [here](https://www.zigbee2mqtt.io/information/supported_adapters.html).**
 
-If you have the JetHome USB JetStick Z2 it  has the necessary firmware. However, if you have another 
-adapter the first thing you need to  do is to flash it with zigbee2MQTT software. You can find instructions for your device [here.](https://www.zigbee2mqtt.io/information/supported_adapters.html)
+## Software Install
 
-Necessary ziqbee2mqtt software has already been installed on the  Raspberry PI on previous steps. 
+Install necessary software for Zigbee2MQTT sticks:
 
-First, connect the adapter to Raspberry PI. Now we need to find the location of our stick. For this type in the next command.:
+```bash
+# Set up Node.js repository and install Node.js + required dependencies
+# NOTE: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v16.15.0/ e.g. Version 16.15.0 should work.
+sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs git make g++ gcc
+
+# Verify that the correct nodejs and npm (automatically installed with nodejs)
+# version has been installed
+node --version  # Should output v14.X, V16.x, V17.x or V18.X
+npm --version  # Should output 6.X, 7.X or 8.X
+
+# Create a directory for zigbee2mqtt and set your user as owner of it
+sudo mkdir /opt/zigbee2mqtt
+sudo chown -R ${USER}: /opt/zigbee2mqtt
+
+# Clone Zigbee2MQTT repository
+git clone --depth 1 --branch 1.28.0 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
+
+# Install dependencies (as user "pi")
+cd /opt/zigbee2mqtt
+npm ci
+```
+
+Note that the `npm ci` could produce some `warning` which can be ignored.
+
+## Configuration and Run
+
+First, connect the adapter to Raspberry PI. Now you need to find the location of your stick. For this type in the next command.:
 
 ```bash
 $ ls -l /dev/serial/by-id
@@ -29,9 +58,9 @@ lrwxrwxrwx 1 root root 13 Oct 10 01:44 usb-Silicon_Labs_CP2102_USB_to_UART_Bridg
 
 ```
 
-In example Stick connection place is - `ttyUSB0`.
+In this case the device is `ttyUSB0`.
 
-Then you need to configure it. Before starting Zigbee2MQTT we need to edit the `configuration.yaml` file. 
+Then you need to configure it. Before starting Zigbee2MQTT you need to edit the `configuration.yaml` file. 
 This file contains the configuration which will be used by Zigbee2MQTT.:
 
 ```bash
@@ -69,9 +98,13 @@ serial:
 ```
 
 <robo-wiki-note type="warning">
-If you already have an active zigbee2mqtt stick or a similar device in your home, 
-and you are now configuring another stick, then they will conflict with each other. 
-To solve this problem you need change channel on the new device. For this add the following strings to the end of configuration file:</robo-wiki-note>
+
+  If you already have an active Zigbee2MQTT stick or a similar device in your home, 
+  and you are now configuring another stick, then they will conflict with each other. 
+
+</robo-wiki-note>
+
+To solve this problem you need change channel on the new device. For this add the following strings to the end of configuration file:
 
 ```shell
 advanced:
@@ -107,10 +140,10 @@ Zigbee2MQTT:info  2022-07-29 14:36:49: MQTT publish: topic 'zigbee2mqtt/bridge/c
 Zigbee2MQTT:info  2022-07-29 14:36:49: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online
 ```
 
+## Pairing Device
 
-## Pairing device
-
-The most common way to switch a device to connect mode is to hold its power button. For lamps one may switch them on|off for 5 times. The zigbee2MQTT should be launched. When a device connects, you should see a message like:
+The most common way to switch a device to connect mode is to hold its power button. For lamps one may switch them on|off
+for 5 times. The zigbee2MQTT should be launched. When a device connects, you should see a message like:
 
 ```
 Zigbee2MQTT:info  2022-07-29 14:44:39: Successfully interviewed '0x00158d0003eeeacf', device has successfully been paired
@@ -125,13 +158,13 @@ After adding all the sensors, you stop program with `ctrl+C`.
 
 > After adding all the sensors, you can open configuration file again to set and set `permit_join: false`, if you don’t want to add any more devices.
 
-Then lets make a service. Create the file:
+If needed, make a service. Create the file:
 
 ```bash
 sudo nano /etc/systemd/system/zigbee2mqtt.service
 ```
 
-Add the following to this file:
+Add the following to it:
 
 ```
 [Unit]
@@ -179,9 +212,10 @@ Jun 07 20:27:24 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Loggi
 Jun 07 20:27:25 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Starting Zigbee2MQTT version 1.6.0 (commit #720e393)
 ```
 
-Now that everything works, we want systemctl to start Zigbee2MQTT automatically on boot, this can be done by executing:
+Now that everything works, yao can use `systemctl` to start Zigbee2MQTT automatically on boot, this can be done by executing:
 
 ```bash
 sudo systemctl enable zigbee2mqtt.service
 ```
-That's all. Go to the next article ["IOT subscription setup"](/docs/iot-sub-setup/) to create Robonomics Parachain accounts and activate subscription.
+That's all. Proceed to ["IOT subscription setup"](/docs/iot-sub-setup/) to create Robonomics Parachain accounts and 
+activate subscription to use Robonomics integration.

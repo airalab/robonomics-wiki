@@ -8,7 +8,7 @@ tools:
 ---
 
 **Being on this page means that you have installed Home Assistant with Robonomics and IPFS and yet don't have any
-ZigBee devices connected. To do so, you first need a MQTT broker to be set up and MQTT integration to be configured.**
+Zigbee devices connected. To do so, you first need a MQTT broker to be set up and MQTT integration to be configured.**
 
 
 ## Install MQTT broker
@@ -23,7 +23,7 @@ bash mqtt-install.sh
 You will be asked to insert **USERNAME** and **PASSWORD** for Broker.
 
 You have installed MQTT broker to your host (it's now running as a `systemd` service). If you had your existing Home Assistant OS, Core or Docker augmented with
-Robonomics, proceed directly to [integration configuration](#add-mqtt-integration). If not, and you are setting up a whole
+Robonomics, proceed directly to [MQTT integration configuration](#add-mqtt-integration). If not, and you are setting up a whole
 new Home Assistant, activate it with the below-mentioned steps.
 
 ## Home Assistant Initial Configuration
@@ -73,12 +73,12 @@ Then press on three dots on MQTT integration and choose `System Options` and che
 <robo-wiki-picture src="home-assistant/add-dev.jpg" />
 
 
-## Connect ZigBee devices to your Home Assistant
+## Connect Zigbee devices to your Home Assistant
 
 Now it's time to add some devices to your smart home. Depending on the hardware you have, pick one of the options:
 
 ### Option 1 (with zigbee2MQTT)
-* If you have ZigBee adapter [JetHome USB JetStick Z2](https://jethome.ru/z2/)
+* If you have Zigbee adapter [JetHome USB JetStick Z2](https://jethome.ru/z2/)
 (or one of [supported](https://www.zigbee2mqtt.io/information/supported_adapters.html)) go [**here.**](/docs/zigbee2-mqtt/)
 
 ### Option 2 (with SLS Gateway)

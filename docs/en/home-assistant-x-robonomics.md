@@ -110,7 +110,7 @@ ssh ubuntu@192.168.43.56
 
 Now that you have a Raspberry Pi with Home Assistant, Robonomics and IPFS installed, proceed to the [MQTT Broker](/docs/mqtt-broker/)
 installation where you also configure your newly installed Home Assistant and add MQTT integration to it. After that you will
-connect your ZigBee devices to your Home Assistant.
+connect your Zigbee devices to your Home Assistant.
 
 ## Add Robonomics integration to Existing Home Assistant OS
 
@@ -194,10 +194,10 @@ You will see the integration available while going through further steps of this
 
 Now that the integration is added to the folder of custom components of Home Assistant, you have two options:
 
-- Whether you have MQTT integration installed and some ZigBee devices connected by either ZigBee2Mqtt or any other hardware,
+- Whether you have MQTT integration installed and some Zigbee devices connected by either Zigbee2MQTT or any other hardware,
 proceed to [configuration steps](/docs/iot-sub-setup) of Robonomics subscription and Robonomics Integration.
 - Otherwise, navigate to [MQTT Broker](/docs/mqtt-broker/) installation where you also add MQTT integration to your Home
-Assistant and connect your ZigBee devices to your Home Assistant via preferred hardware.
+Assistant and connect your Zigbee devices to your Home Assistant via preferred hardware.
 
 ## Add Robonomics integration to Existing Home Assistant Core
 
