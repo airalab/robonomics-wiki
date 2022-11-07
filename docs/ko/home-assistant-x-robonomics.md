@@ -55,7 +55,7 @@ ipfs get Qmdca36xtJe86Mni9tAKNXpzihhNVRGKcJfb7xEeUdnfW6 -o rpi.img.xz
 <robo-wiki-note type="Note" title="Browser alternative">
 
   Alternatively, you can download it 
-  [from url.](https://ipfs.io/ipfs/QmVKSwB6nXNjq8Yydb1unYWjahv2mz45ME4NTUw9mWBj2S?filename=rpi_hass.img.gz) 
+  [from url.](https://ipfs.io/ipfs/Qmdca36xtJe86Mni9tAKNXpzihhNVRGKcJfb7xEeUdnfW6?filename=rpi_hass.img.gz) 
   (**Only with IPFS Daemon started**)
 
 </robo-wiki-note>
