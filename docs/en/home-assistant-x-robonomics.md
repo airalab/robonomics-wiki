@@ -197,15 +197,17 @@ Assistant and connect your Zigbee devices to your Home Assistant via preferred h
 
 ## Add Robonomics integration to Existing Home Assistant Core
 
-
 <robo-wiki-note type="warning" title="DISCLAIMER">
 
   Here, Robonomics integration and IPFS are to be installed along with existing Home Assistant Core.
 
-  1. This section is designed with an assumption that installation went completely according to instructions given by developers and added user
-  `homeassistant` with venv in it are used. If it is not the case, follow instructions below to edit script
-  2. IPFS will be installed and run as a `systemd` service on the host machine.
-  3. It is assumed that you have Python3.10 or higher installed.
+  1. This section is designed with an assumption that installation went completely according to 
+  [instructions](https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-core) given by Home Assistant
+  developers and there is a <u>homeassistant</u> user and venv. If it is not the case, follow instructions below **but edit the script accordingly**.
+  2. IPFS will be installed and run as a <u>systemd</u> service on the host machine.
+  3. It is assumed that you have Python3.9 or higher installed.
+
+</robo-wiki-note>
 
 ### 1. Install
 
@@ -216,7 +218,7 @@ wget https://raw.githubusercontent.com/LoSk-p/robonomics-hass-utils/main/raspber
 sudo bash install_integration_core.sh
 ```
 
-  You will see the following output:
+You will see the following output:
 
 ```shell
 <...>
@@ -228,7 +230,8 @@ A    robonomics/utils.py
 Checked out revision 125.
 Integration downloaded!
 ```
-  Somewhere along the way you will be asked to confirm the restart of several services. Navigating with `tab`, select the `yes` option.
+
+Somewhere along the way you will be asked to confirm the restart of several services. Navigating with `tab`, select the `yes` option.
   
 <robo-wiki-note type="note" title="`custom_components` exists.">
 
@@ -237,7 +240,32 @@ Integration downloaded!
 
 </robo-wiki-note>
   
-  Restart your Home Assistant.
+Restart your Home Assistant.
+
+### 2. Verify
+
+Check that IPFS service is up and running:
+```shell
+ubuntu@ubuntu:~$ systemctl status ipfs-daemon.service 
+● ipfs-daemon.service - IPFS Daemon Service
+     Loaded: loaded (/etc/systemd/system/ipfs-daemon.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2022-11-03 11:30:39 UTC; 14min ago
+   Main PID: 4400 (ipfs)
+      Tasks: 12 (limit: 4416)
+     Memory: 141.9M
+        CPU: 3min 5.031s
+     CGroup: /system.slice/ipfs-daemon.service
+             └─4400 /usr/local/bin/ipfs daemon
+```
+
+You will see the integration available while going through further steps of this tutorial.
+
+Now that the integration is added to the folder of custom components of Home Assistant, you have two options:
+
+- Whether you have MQTT integration installed and some Zigbee devices connected by either Zigbee2MQTT or any other hardware,
+proceed to [configuration steps](/docs/iot-sub-setup) of Robonomics subscription and Robonomics Integration.
+- Otherwise, navigate to [MQTT Broker](/docs/mqtt-broker/) installation where you also add MQTT integration to your Home
+Assistant and connect your Zigbee devices to your Home Assistant via preferred hardware
 
 ## Add Robonomics integration to Existing Home Assistant OS
 
