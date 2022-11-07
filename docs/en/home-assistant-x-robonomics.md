@@ -201,7 +201,47 @@ Assistant and connect your Zigbee devices to your Home Assistant via preferred h
 
 ## Add Robonomics integration to Existing Home Assistant Core
 
-**This part is under maintenance, to be updated soon.**
+
+<robo-wiki-note type="warning" title="DISCLAIMER">
+
+  Here, Robonomics integration and IPFS are to be installed along with existing Home Assistant Core.
+
+  1. This section is designed with an assumption that installation went completely according to instructions given by developers and added user
+  `homeassistant` with venv in it are used. If it is not the case, follow instructions below to edit script
+  2. IPFS will be installed and run as a `systemd` service on the host machine.
+  3. It is assumed that you have Python3.10 or higher installed.
+
+### 1. Install
+
+Download the installation script and run it with bash:
+  
+```shell
+wget https://raw.githubusercontent.com/LoSk-p/robonomics-hass-utils/main/raspberry_pi/install_integration_core.sh
+sudo bash install_integration_core.sh
+```
+
+  You will see the following output:
+
+```shell
+<...>
+https://raw.githubusercontent.com/LoSk-p/robonomics-hass-utils/main/raspberry_pi/install_ipfs_arc_dependent.sh
+<...>
+IPFS daemon installed and launched, use ipfs-daemon.service to manage.
+<...>
+A    robonomics/utils.py
+Checked out revision 125.
+Integration downloaded!
+```
+  Somewhere along the way you will be asked to confirm the restart of several services. Navigating with `tab`, select the `yes` option.
+  
+<robo-wiki-note type="note" title="`custom_components` exists.">
+
+  You may see an error like `mkdir: can't create directory 'custom_components': File exists`. This
+  means that you have already installed some custom components and the folder exists. Ignore this message.
+
+</robo-wiki-note>
+  
+  Restart your Home Assistant.
 
 [//]: # (## Troubleshooting)
 
