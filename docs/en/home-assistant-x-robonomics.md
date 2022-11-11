@@ -52,7 +52,7 @@ In other terminal download image with
 ipfs get Qmdca36xtJe86Mni9tAKNXpzihhNVRGKcJfb7xEeUdnfW6 -o rpi.img.xz
 ```
 
-<robo-wiki-note type="Note" title="Browser alternative">
+<robo-wiki-note type="note" title="Browser alternative">
 
   Alternatively, you can download it 
   [from url.](https://ipfs.io/ipfs/Qmdca36xtJe86Mni9tAKNXpzihhNVRGKcJfb7xEeUdnfW6?filename=rpi_hass.img.gz) 

@@ -20,7 +20,7 @@ To solve the first problem, you can install and configure a local server running
 [Home Assistant](https://www.home-assistant.io/) or [openHAB](https://www.openhab.org/). And to ensure the safe management
 of your smart home from anywhere in the world, the technologies of the [Robonomics](https://robonomics.network/) platform come to the rescue.
 
-<robo-wiki-note type="Note" title="Home Assistant x Robonomics">
+<robo-wiki-note type="note" title="Home Assistant x Robonomics">
 
   This project is aimed at both, users who already have an instance of Home Assistant and the ones who are making their
   first steps in the world of self-controlled smart homes.

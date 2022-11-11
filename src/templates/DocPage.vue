@@ -397,6 +397,8 @@ export default {
       this.getTitleForIssue()
       this.getLocaleForMetaInfo();
       this.ogImageSrc =  `${this.$page.doc.fileInfo.name}-${this.localeForMeta}.png`;
+
+      this.scrollToTop()
     }
   },
 
@@ -404,6 +406,9 @@ export default {
 
   methods: {
 
+    scrollToTop() {
+      window.document.querySelector('.all-content.custom-scroll').scrollTo(0, 0)
+    },
 
     flatten(o){
 

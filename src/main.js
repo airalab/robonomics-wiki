@@ -201,6 +201,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   // Update the lang attribute on each route change
   if (isClient) {
     router.afterEach(() => {
+      window.scrollTo(0, 0);
       head.htmlAttrs = { 'lang' : appOptions.store.state.locale }
     })
   }
