@@ -397,6 +397,10 @@ export default {
       this.getTitleForIssue()
       this.getLocaleForMetaInfo();
       this.ogImageSrc =  `${this.$page.doc.fileInfo.name}-${this.localeForMeta}.png`;
+
+      setTimeout(() => {
+        this.scrollToTop();
+      }, 150)
     }
   },
 
@@ -404,6 +408,13 @@ export default {
 
   methods: {
 
+    scrollToTop() {
+      if (process.isClient) {
+        if(document.querySelector('.custom-scroll')) {
+          document.querySelector('.all-content.custom-scroll').scrollTo(0, 0)
+        }
+      }
+    },
 
     flatten(o){
 

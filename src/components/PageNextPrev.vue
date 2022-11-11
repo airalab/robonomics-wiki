@@ -85,7 +85,7 @@ export default {
       if ( eval(`item.title_${this.$static.metadata.defaultLocale}`) ){
         return eval(`item.title_${this.$static.metadata.defaultLocale}`)
       }
-    }
+    },
   }
 
 }
