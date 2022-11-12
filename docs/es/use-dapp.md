@@ -14,8 +14,8 @@ tools:
     https://github.com/airalab/homeassistant-robonomics-integration
 ---
 
-After finishing with ["Robonomics integration setup"](/docs/add-smart-device-to-robonomics/), all options of our DApp will be available for you.
-For now, you can get telemetry of all your sensors and send **launch** to device. Let's start with telemetry.
+After finishing with ["Robonomics integration setup"](/docs/robonomics-integration-setup/), all options of our DApp will be available for you.
+For now, you can get telemetry of all your sensors.
 
 ## SmartHome Telemetry
 

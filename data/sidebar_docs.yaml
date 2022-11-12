@@ -6,20 +6,22 @@
       items:
         - title_en: Home Assistant x Robonomics
           link: /docs/home-assistant-x-robonomics
-        - title_en: MQTT Broker Setup
-          link: /docs/mqtt-broker
-        - title_en: ZigBee Hardware
-          items:
-            - title_en: Zigbee2MQTT
-              link: /docs/zigbee2-mqtt
-            - title_en: Robonomics SLS Gateway
-              link: /docs/sls-setup
     - title_en: Configure
       items:
-        - title_en: IOT Subscription Setup
-          link: /docs/iot-sub-setup
+        - title_en: MQTT and Hass Setup
+          link: /docs/mqtt-and-hass-setup
+        - title_en: ZigBee Setup
+          items:
+            - title_en: Zigbee2MQTT
+              link: /docs/zigbee-to-mqtt
+            - title_en: Robonomics SLS Gateway
+              link: /docs/sls-gateway
+    - title_en: IoT Subscription
+      items:
+        - title_en: Subscription Activate
+          link: /docs/sub-activate
         - title_en: Robonomics Integration Setup
-          link: /docs/add-smart-device-to-robonomics
+          link: /docs/robonomics-integration-setup
     - title_en: Use
       items:
         - title_en: DApp Usage
@@ -61,123 +63,123 @@
     - title_en: How the Technical Committee Is Fast-tracking the Democracy Proposals
       link: /docs/technical-committee-fast-track
 
-- title_en: Use
-  items:
-#    - title_en: Introduction
-#      link: /use-introduction
-    - title_en: Use Cases
-      items:
-        - title_en: Open Sensors Network
-          items:
-            - title_en: Introduction
-              title_ru: Введение
-              link: /docs/sensors-network-introduction
-            - title_en: Sensor Hardware
-              link: /docs/sensor-hardware
-            - title_en: Sensor Setup
-              link: /docs/sensor-setup
-            - title_en: Sensors Connectivity Module Introduction
-              link: /docs/sensors-connectivity-on-aira
-            - title_en: Sensors Connectivity Module Setup
-              link: /docs/sensors-connectivity-setup
-            - title_en: Configuration Options Description
-              link: /docs/configuration-options-description
-            - title_en: Deploy Sensor Map
-              link: /docs/deploy-sensor-map
-            - title_en: RoSeMAN Setup
-              link: /docs/roseman
-            - title_en: Connect an Amazon FreeRTOS device to Robonomics by MQTT
-              link: /docs/freertos-mqtt/
-#            - title_en: How to Contribute
+#- title_en: Use
+#  items:
+##    - title_en: Introduction
+##      link: /use-introduction
+#    - title_en: Use Cases
+#      items:
+#        - title_en: Open Sensors Network
+#          items:
+#            - title_en: Introduction
+#              title_ru: Введение
+#              link: /docs/sensors-network-introduction
+#            - title_en: Sensor Hardware
+#              link: /docs/sensor-hardware
+#            - title_en: Sensor Setup
+#              link: /docs/sensor-setup
+#            - title_en: Sensors Connectivity Module Introduction
+#              link: /docs/sensors-connectivity-on-aira
+#            - title_en: Sensors Connectivity Module Setup
+#              link: /docs/sensors-connectivity-setup
+#            - title_en: Configuration Options Description
+#              link: /docs/configuration-options-description
+#            - title_en: Deploy Sensor Map
+#              link: /docs/deploy-sensor-map
+#            - title_en: RoSeMAN Setup
+#              link: /docs/roseman
+#            - title_en: Connect an Amazon FreeRTOS device to Robonomics by MQTT
 #              link: /docs/freertos-mqtt/
-        - title_en: Robonomics Coffee - Blockchain-Powered Coffee Machine
-          link: /docs/robonomics-coffee/
-        - title_en: Spot Education
-          items:
-            - title_en: Try It Out
-              link: /docs/spot-try-it-out
-            - title_en: Lesson 0. Configure and test connection to Spot
-              link: /docs/spot-lesson0
-            - title_en: Lesson 1. Emergency stop, initialization, body position control
-              link: /docs/spot-lesson1
-            - title_en: Lesson 2. Remote controlled and programmed motion
-              link: /docs/spot-lesson2
-            - title_en: Lesson 3. Find and follow an object, navigate between them
-              link: /docs/spot-lesson3
-            - title_en: Lesson 4. GraphNav service. Mapping and navigating on the map
-              link: /docs/spot-lesson4
-            - title_en: Lesson 5. Robot service. Camera calibration and "Spot check"
-              link: /docs/spot-lesson5
-            - title_en: Troubleshooting
-              link: /docs/spot-troubleshooting
-
-# This article is to be rewritten when service updated
-        - title_en: Carbon Footprint Offsetting Service
-          items:
-            - title_en: Offsetting Service
-              link: /docs/carbon-footprint-service
-            - title_en: Connect Sensor
-              link: /docs/carbon-footprint-sensor
-
-        - title_en: Feecc - Quality contol system
-          title_ru: Система контроля качества производства Feecc
-          items:
-            - title_en: Overview
-              title_ru: Обзор
-              link: /docs/feecc-system-overview
-            - title_en: Systems architecture
-              title_ru: Архитектура системы
-              link: /docs/feecc-system-architecture
-            - title_en: Quick Start
-              title_ru: Быстрый старт
-              link: /docs/feecc-system-quickstart
-            - title_en: Support hardware
-              title_ru: Поддерживаемое оборудование
-              link: /docs/feecc-system-supporthardware
-            - title_en: Deploy Feecc Engineer's workplace
-              title_ru: Развертывание "Feecc Рабочее Место Инженера"
-              link: /docs/feecc-system-deploy-feecc-wb
-            - title_en: Deploy Feecc Analytics
-              title_ru: Развертывание Feecc Аналитика
-              link: /docs/feecc-system-deploy-feecc-analytics
-            - title_en: Feecc Analytics for Developers
-              title_ru: Feecc Аналитика для разработчиков
-              link: /docs/feecc-system-dev-feecc-analytics
-    - title_en: Proof of Concept
-      items:
-        - title_en: XCM Robobank
-          link: /docs/xcm-robobank
-        - title_en: Securely Connect Cloud AI To The Factory Floor
-          link: /docs/securely-connect-cloud-ai-to-the-factory-floor
-        - title_en: Create digital identity run by Ethereum
-          link: /docs/create-digital-identity-run-by-ethereum
-        - title_en: Run Gaka-Chu - a Robot-Artist
-          link: /docs/gaka-chu/
-    - title_en: Playground
-      items:
-        - title_en: Playground Overview
-          link: /docs/playground-overview
-        - title_en: Connect Mars Curiosity Rover
-          link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control
-        - title_en: Connect ROS-compatible Drone
-          items:
-            - title_en: Part 1. Launch by Transaction
-              link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-1
-            - title_en: Part 2. Saving Data To Blockchain
-              link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-2
-        - title_en: Connect Industrial Robot
-          items:
-            - title_en: Baxter simulation v1.0
-              link: /docs/baxter
-            - title_en: Baxter simulation v2.0
-              link: /docs/baxter2
-        - title_en: Connect Manipulator
-          link: /docs/kuka
-        - title_en: Connect Unmanned Aerial Vehicle
-          link: /docs/iris-drone
-        - title_en: ROS-based Projects for Smart Spaces
-          link: /docs/ros-smart-projects
-
+##            - title_en: How to Contribute
+##              link: /docs/freertos-mqtt/
+#        - title_en: Robonomics Coffee - Blockchain-Powered Coffee Machine
+#          link: /docs/robonomics-coffee/
+#        - title_en: Spot Education
+#          items:
+#            - title_en: Try It Out
+#              link: /docs/spot-try-it-out
+#            - title_en: Lesson 0. Configure and test connection to Spot
+#              link: /docs/spot-lesson0
+#            - title_en: Lesson 1. Emergency stop, initialization, body position control
+#              link: /docs/spot-lesson1
+#            - title_en: Lesson 2. Remote controlled and programmed motion
+#              link: /docs/spot-lesson2
+#            - title_en: Lesson 3. Find and follow an object, navigate between them
+#              link: /docs/spot-lesson3
+#            - title_en: Lesson 4. GraphNav service. Mapping and navigating on the map
+#              link: /docs/spot-lesson4
+#            - title_en: Lesson 5. Robot service. Camera calibration and "Spot check"
+#              link: /docs/spot-lesson5
+#            - title_en: Troubleshooting
+#              link: /docs/spot-troubleshooting
+#
+## This article is to be rewritten when service updated
+#        - title_en: Carbon Footprint Offsetting Service
+#          items:
+#            - title_en: Offsetting Service
+#              link: /docs/carbon-footprint-service
+#            - title_en: Connect Sensor
+#              link: /docs/carbon-footprint-sensor
+#
+#        - title_en: Feecc - Quality contol system
+#          title_ru: Система контроля качества производства Feecc
+#          items:
+#            - title_en: Overview
+#              title_ru: Обзор
+#              link: /docs/feecc-system-overview
+#            - title_en: Systems architecture
+#              title_ru: Архитектура системы
+#              link: /docs/feecc-system-architecture
+#            - title_en: Quick Start
+#              title_ru: Быстрый старт
+#              link: /docs/feecc-system-quickstart
+#            - title_en: Support hardware
+#              title_ru: Поддерживаемое оборудование
+#              link: /docs/feecc-system-supporthardware
+#            - title_en: Deploy Feecc Engineer's workplace
+#              title_ru: Развертывание "Feecc Рабочее Место Инженера"
+#              link: /docs/feecc-system-deploy-feecc-wb
+#            - title_en: Deploy Feecc Analytics
+#              title_ru: Развертывание Feecc Аналитика
+#              link: /docs/feecc-system-deploy-feecc-analytics
+#            - title_en: Feecc Analytics for Developers
+#              title_ru: Feecc Аналитика для разработчиков
+#              link: /docs/feecc-system-dev-feecc-analytics
+#    - title_en: Proof of Concept
+#      items:
+#        - title_en: XCM Robobank
+#          link: /docs/xcm-robobank
+#        - title_en: Securely Connect Cloud AI To The Factory Floor
+#          link: /docs/securely-connect-cloud-ai-to-the-factory-floor
+#        - title_en: Create digital identity run by Ethereum
+#          link: /docs/create-digital-identity-run-by-ethereum
+#        - title_en: Run Gaka-Chu - a Robot-Artist
+#          link: /docs/gaka-chu/
+#    - title_en: Playground
+#      items:
+#        - title_en: Playground Overview
+#          link: /docs/playground-overview
+#        - title_en: Connect Mars Curiosity Rover
+#          link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control
+#        - title_en: Connect ROS-compatible Drone
+#          items:
+#            - title_en: Part 1. Launch by Transaction
+#              link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-1
+#            - title_en: Part 2. Saving Data To Blockchain
+#              link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-2
+#        - title_en: Connect Industrial Robot
+#          items:
+#            - title_en: Baxter simulation v1.0
+#              link: /docs/baxter
+#            - title_en: Baxter simulation v2.0
+#              link: /docs/baxter2
+#        - title_en: Connect Manipulator
+#          link: /docs/kuka
+#        - title_en: Connect Unmanned Aerial Vehicle
+#          link: /docs/iris-drone
+#        - title_en: ROS-based Projects for Smart Spaces
+#          link: /docs/ros-smart-projects
+#
 - title_en: Maintain
   items:
     - title_en: How to build collator node from source
