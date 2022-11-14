@@ -1,9 +1,10 @@
 ---
 title: How to launch the Robonomics collator
 contributors: [dergudzon, Leemo94]
-translated: false
+translated: true
 tools:
   - Robonomics 2.3.0
+    https://github.com/airalab/robonomics
 ---
 
 <robo-wiki-note type="note" title="Note">
