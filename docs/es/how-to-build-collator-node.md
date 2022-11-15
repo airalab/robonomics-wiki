@@ -4,6 +4,7 @@ contributors: [dergudzon, Leemo94]
 translated: false
 tools:
   - Robonomics 2.3.0
+    https://github.com/airalab/robonomics
   - Rust toolchain nightly-2022-08-05
 ---
 
