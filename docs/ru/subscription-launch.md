@@ -22,9 +22,9 @@ tools:
 выберите `launch -> launch`. В поле `robot` впишите адрес, куда Вы хотите отправить транзакцию `launch` и 
 введите команду (подробнее о командах Launch [здесь](/docs/launch)). Совершите транзакцию:
 
-![launch](../images/dev-node/launch.png)
+![launch](../images/rws/launch.png)
 
 
 Перейдите в `Network/Explorer`. В `Recent Events` вы увидите два события - `rws.NewCall` и `launch.NewLaunch`:
 
-![события](../images/dev-node/events.png)
+![события](../images/rws/events.png)

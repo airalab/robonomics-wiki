@@ -23,9 +23,9 @@ Then in `subscriptionId` field paste the subscription's owner address (the one w
 choose `launch -> launch(robot, param)`. In the `robot` field type the address you want to send `launch` transaction 
 to and insert the command (for launch command description refer [here](/docs/launch)). Then submit transaction:
 
-![launch](../images/dev-node/launch.png)
+![launch](../images/rws/launch.png)
 
 
 Now go to the `Network/Explorer` page, and in the `Recent Events` area you will see two events that you created; `rws.NewCall` and `launch.NewLaunch`:
 
-![events](../images/dev-node/events.png)
+![events](../images/rws/events.png)
