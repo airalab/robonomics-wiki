@@ -3,7 +3,18 @@ title: Как купить подписку
  
 contributors: [LoSk-p, katerina510]
 translated: true
+tools:   
+  - Robonomics 1.7.0
+    https://github.com/airalab/robonomics
 ---
+
+<robo-wiki-note type="warning" title="Dev Node">
+
+  Обратите внимание, что этот туториал демонстрируется на локальной версии Робономики, на `dev` ноде. Чтобы запустить собственную
+  локальную ноду, следуйте [этим инструкциям](/docs/run-dev-node).
+
+</robo-wiki-note>
+
 
 https://youtu.be/EsUiG_4ZGcw
 

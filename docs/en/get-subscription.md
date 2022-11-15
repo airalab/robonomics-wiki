@@ -3,7 +3,16 @@ title: How to Buy a Subscription
 
 contributors: [LoSk-p]
 translated: true
+tools:   
+  - Robonomics 1.7.0
+    https://github.com/airalab/robonomics
 ---
+
+<robo-wiki-note type="warning" title="Dev Node">
+
+  Please pay attention that this tutorial is demonstrated on a local instance of Robonomics Node. Set up yours with [these instructions](/docs/run-dev-node).
+
+</robo-wiki-note>
 
 https://youtu.be/EsUiG_4ZGcw
 
