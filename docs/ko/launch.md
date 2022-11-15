@@ -10,6 +10,13 @@ tools:
 **Another basic feature of Robonomics parachain is the Launch pallet. It allows you to send commands to the accounts/any 
 entities behind them. These commands include parameter to specify the task to be executed.**
 
+<robo-wiki-note type="warning" title="Dev Node">
+
+  Please pay attention that this and following tutorials are demonstrated on a local instance of Robonomics Node. Set
+ up yours with [these instructions](/docs/run-dev-node).
+
+</robo-wiki-note>
+
 ## 1. Navigate to Developer -> Extrinsics
 
 <robo-wiki-picture src="launch/extrinsics.jpg" />
@@ -28,7 +35,7 @@ Also choose an account you want to submit the extrinsic with. Fill in the target
   "0x0000000000000000000000000000000000000000000000000000000000000000".
   - For advanced commands including json-like you may use [IPFS](https://ipfs.tech/) CID formatted in a 
   [proper way](https://multi-agent-io.github.io/robonomics-interface/modules.html#robonomicsinterface.utils.ipfs_qm_hash_to_32_bytes).
-  
+
 </robo-wiki-note>
 
 ## 3. Submit transaction

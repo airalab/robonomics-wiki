@@ -14,6 +14,13 @@ tools:
 To keep all of them in one place or to encode some functionality with separate accounts or, for example, to set different datalog 
 sources for different information flows, Digital Twin module is to be used.**
 
+<robo-wiki-note type="warning" title="Dev Node">
+
+  Please pay attention that this and following tutorials are demonstrated on a local instance of Robonomics Node. Set
+ up yours with [these instructions](/docs/run-dev-node).
+
+</robo-wiki-note>
+
 ## Theory overview
 Any account can create and manage a Digital Twin. The Twin may be imagined as some sort of table with the following
 contents:
