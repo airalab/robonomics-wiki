@@ -14,8 +14,7 @@ contracts between parachain accounts!**
 
 <robo-wiki-note type="warning" title="Dev Node">
 
-  Please pay attention that this and following tutorials are demonstrated on a local instance of Robonomics Node. Set
- up yours with [these instructions](/docs/run-dev-node).
+  Please pay attention that this tutorial is demonstrated on a local instance of Robonomics Node. Set up yours with [these instructions](/docs/run-dev-node).
 
 </robo-wiki-note>
 
