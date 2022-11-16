@@ -1,7 +1,7 @@
 - title_en: Robonomics Smart Home
   items:
     - title_en: Overview
-      link: /docs/home-assistant-begin
+      link: /docs/robonomics-smart-home-overview
     - title_en: Install
       items:
         - title_en: Home Assistant x Robonomics

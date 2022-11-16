@@ -171,7 +171,7 @@ export default {
       ],
 
       smartHome: {
-          to: '/docs/home-assistant-begin/',
+          to: '/docs/robonomics-smart-home-overview/',
           name: 'Start Smart home'
       },
     }
