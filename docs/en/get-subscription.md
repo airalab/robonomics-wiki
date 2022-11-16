@@ -32,7 +32,7 @@ Choose `rws` and `auctionQueue` and press `+` button, you will see IDs of availa
 
 ![queue](../images/rws/queue.png)
 
-You can see an information about any subscription with `rws` `auction` and ID of auction (the auction's ID in the picture is 0):
+You can see an information about any subscription with `rws` `auction` and ID of auction (the auction's ID in the picture is 79):
 
 ![auction](../images/rws/auction.png)
 
