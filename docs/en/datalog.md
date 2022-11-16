@@ -10,6 +10,13 @@ tools:
 **Now that you have some funds on your account you can submit extrinsics. The first to try is a Datalog. It allows you 
 to store data in the blockchain persistently. Imagine a distributed and crypto-protected storage for your data and this is it!**
 
+<robo-wiki-note type="warning" title="Dev Node">
+
+  Please pay attention that this and following tutorials are demonstrated on a local instance of Robonomics Node. Set
+ up yours with [these instructions](/docs/run-dev-node).
+
+</robo-wiki-note>
+
 ## 1. Navigate to Developer -> Extrinsics
 
 <robo-wiki-picture src="datalog/extrinsics.jpg" />

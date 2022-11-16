@@ -33,9 +33,9 @@
     - title_en: Introduction
       title_ru: Введение
       link: /docs/
-    - title_en: R&D Based on Robonomics Network
-      title_ru: R&D на базе Робономики
-      link: /docs/r-and-d-based-on-robonomics-network
+#    - title_en: R&D Based on Robonomics Network
+#      title_ru: R&D на базе Робономики
+#      link: /docs/r-and-d-based-on-robonomics-network
     - title_en: Create Account for Robonomics Parachain
       link: /docs/create-account-in-dapp
     - title_en: How to Run Robonomics Dev Node
@@ -56,10 +56,10 @@
       link: /docs/get-subscription
     - title_en: "RWS: How to Send Launch with Subscription"
       link: /docs/subscription-launch
-    - title_en: Cross-chain Message
-      link: /docs/cross-chain-messages
-    - title_en: How the Technical Committee Is Fast-tracking the Democracy Proposals
-      link: /docs/technical-committee-fast-track
+#    - title_en: Cross-chain Message
+#      link: /docs/cross-chain-messages
+#    - title_en: How the Technical Committee Is Fast-tracking the Democracy Proposals
+#      link: /docs/technical-committee-fast-track
 #    - title_en: Robonomics-js
 #      title_ko: 로노미크스-JS
 #      link: /docs/robonomics-js

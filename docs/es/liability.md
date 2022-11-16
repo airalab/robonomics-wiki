@@ -12,6 +12,12 @@ tools:
 **To turn robots into economic agents one needs a contract tool for this. Meet Liability - Robonomics pallet implementing
 contracts between parachain accounts!**
 
+<robo-wiki-note type="warning" title="Dev Node">
+
+  Please pay attention that this tutorial is demonstrated on a local instance of Robonomics Node. Set up yours with [these instructions](/docs/run-dev-node).
+
+</robo-wiki-note>
+
 ## Theory Overview
 
 Back on the Ethereum there was quite a complicated structure of liability interaction. You can get acquainted with it 

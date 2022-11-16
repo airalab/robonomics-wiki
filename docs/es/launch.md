@@ -10,6 +10,13 @@ tools:
 **Another basic feature of Robonomics parachain is the Launch pallet. It allows you to send commands to the accounts/any 
 entities behind them. These commands include parameter to specify the task to be executed.**
 
+<robo-wiki-note type="warning" title="Dev Node">
+
+  Please pay attention that this and following tutorials are demonstrated on a local instance of Robonomics Node. Set
+ up yours with [these instructions](/docs/run-dev-node).
+
+</robo-wiki-note>
+
 ## 1. Navigate to Developer -> Extrinsics
 
 <robo-wiki-picture src="launch/extrinsics.jpg" />

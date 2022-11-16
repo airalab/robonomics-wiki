@@ -3,9 +3,19 @@ title: Adding funds to your account on Robonomics Portal
 
 contributors: [Houman]
 translated: true
+tools:   
+  - Robonomics 2.4.0
+    https://github.com/airalab/robonomics
 ---
 
-**After successfully creating your accounts on Robonomics portal, it is time to add funds to them so that you would able to initiate transactions.**
+**After successfully creating your accounts on Robonomics portal, it is time to add funds to them so that you would be able to initiate transactions.**
+
+<robo-wiki-note type="warning" title="Dev Node">
+
+  Please pay attention that this and following tutorials are demonstrated on a local instance of Robonomics Node. Set
+ up yours with [these instructions](/docs/run-dev-node).
+
+</robo-wiki-note>
 
 ## 1. Navigate to Accounts section on Robonomics portal 
 

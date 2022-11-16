@@ -1,38 +1,57 @@
 ---
-title: Как установить ноду Робономики в режиме разработчика
- 
-contributors: [LoSk-p, katerina510]
-translated: true
+title: How to Run Robonomics Dev Node
+contributors: [LoSk-p]
+translated: false
+tools:   
+  - Robonomics 2.4.0
+    https://github.com/airalab/robonomics
 ---
 
-Для тестирования Ваших приложений для Робономики Вам может понадобиться установка ноды в режиме разработчика.
+**For testing your applications on Robonomics you may want to run it in the dev mode. This article shows step-by-step
+instructions how to get your own local testing instance of Robonomics.**
 
-https://youtu.be/04GsVkZ7aVg
 
-## Запускаем
+## Get Node Binary
 
-1. Прежде всего, Вам понадобится двоичный файл. Загрузите архив с ним из последнего [релиза](https://github.com/airalab/robonomics/releases).
+1. First, you need a binary file, download the archive with it from the latest [release](https://github.com/airalab/robonomics/releases).
 
-2. Распакуйте его и измените разрешения:
+2. Navigate to the archive folder, unpack the binary and change permissions:
 
 ```bash
-tar xf robonomics-1.7.0-x86_64-unknown-linux-gnu.tar.gz
+tar xf robonomics-2.4.0-x86_64-unknown-linux-gnu.tar.gz
 chmod +x robonomics
 ```
 
-3. Запустите в режиме разработчика:
+## Run
+
+Run the node with:
 
 ```bash
 ./robonomics --dev
 ```
-Вы увидите следующее:
+You will see the following output:
 
 ![robonomics](../images/dev-node/robonomics.png)
 
-## Подключаемся
+<robo-wiki-note type="note" title="From Scratch">
 
-Теперь Вы можете подключиться к Вашей локальной ноде через [Портал Полькадот](https://polkadot.js.org/apps/#/explorer).
+  If you want to purge existing blocks you may do this with removing RocksDB at `/tmp/substrate******/chains/dev/db/full`.
+  Replace `******` with a corresponding identifier displayed in logs on launch.
 
-Измените сеть на `Local Node` в верхнем левом углу и нажмите `Switch`.
+  If you want to start the node from scratch every time use `--tmp` flag.
 
-![локальная нода](../images/dev-node/portal.png)
+</robo-wiki-note>
+
+## Connect
+
+Now you can connect to your local node through the [Polkadot Portal](https://polkadot.js.org/apps/#/explorer).
+
+Change the network to `Local Node` in the upper left corner and press `Switch`.
+
+![switch](../images/dev-node/portal.png)
+
+Welcome to the local instance of Robonomics!
+
+![local_node](../images/dev-node/dev-portal.png)
+
+
