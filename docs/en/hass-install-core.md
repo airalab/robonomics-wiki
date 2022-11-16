@@ -1,5 +1,5 @@
 ---
-title: Home Assistant x Robonomcis
+title: Home Assistant Core
 contributors: [PaTara43, makyul]
 translated: true
 tools:   
@@ -34,7 +34,7 @@ tools:
 Download the installation script and run it with bash:
   
 ```shell
-wget https://raw.githubusercontent.com/LoSk-p/robonomics-hass-utils/main/raspberry_pi/install_integration_core.sh
+wget https://raw.githubusercontent.com/airalab/robonomics-hass-utils/main/raspberry_pi/install_integration_core.sh
 sudo bash install_integration_core.sh
 ```
 

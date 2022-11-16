@@ -35,7 +35,7 @@ tools:
 Download the installation script and run it with bash:
 
 ```shell
-wget https://raw.githubusercontent.com/LoSk-p/robonomics-hass-utils/main/raspberry_pi/install_integration_docker.sh
+wget https://raw.githubusercontent.com/airalab/robonomics-hass-utils/main/raspberry_pi/install_integration_docker.sh
 sudo bash install_integration_docker.sh
 ```
 
