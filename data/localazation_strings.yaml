@@ -7,12 +7,12 @@
   ru: Главная
 
 - alias: Enter title
-  en: Explore Robonomics wiki
-  es: Explore wiki Robonomics
-  ja: Explore Robonomics wiki
-  ko: Explore Robonomics wiki
-  pt: Explore Robonomics wiki
-  ru: Изучайте Робономику в Вики
+  en: Explore Robonomics with guides
+  es: Explore Robonomics with guides
+  ja: Explore Robonomics with guides
+  ko: Explore Robonomics with guides
+  pt: Explore Robonomics with guides
+  ru: Изучайте Робономику по гайдам
 
 - alias: Site Description
   en: Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.
@@ -39,7 +39,7 @@
   ru: Песочница
 
 - alias: Enter Nav 3
-  en: Maintenance
+  en: Maintain
   es: Guía de Mantenimiento
   ja: Maintenance Guide
   ko: Maintenance Guide
@@ -64,11 +64,11 @@
 
 - alias: Enter Nav 5
   en: Learn
-  es: Documentación para Desarrolladores
+  es: Learn
   ja: Learn
   ko: Learn
   pt: Learn
-  ru: Документация для разработчиков
+  ru: Изучайте
 
 - alias: Enter Nav 6
   en: Make a contribution
@@ -85,6 +85,14 @@
   ko: Basics
   pt: Basics
   ru: Основы
+
+- alias: Enter Nav 8
+  en: Smart Home
+  es: Smart Home
+  ja: Smart Home
+  ko: Smart Home
+  pt: Smart Home
+  ru: Smart Home
 
 - alias: Menu
   en: Menu

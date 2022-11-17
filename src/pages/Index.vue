@@ -8,7 +8,7 @@
       <div class="intro-description">{{ $st('Site Description', $store.state.locale) }}</div>
     </div>
 
-    <div class="intro-wrapper">
+    <!-- <div class="intro-wrapper">
       <div class="intro-img">
 
         <svg xmlns="http://www.w3.org/2000/svg" width="1375" height="485.931" viewBox="0 0 1375 485.931">
@@ -19,9 +19,11 @@
       <div class="intro-main-link" >
         <Button :label="smartHome.name" :link="smartHome.to" size="large" />
       </div>
-    </div>
+    </div> -->
     
-    <GridLinks :links="navLinks" />
+    <div class="nav-links">
+      <GridLinks :links="navLinks" />
+    </div>
 
   </Layout>
 </template>
@@ -39,6 +41,10 @@
     max-width: 720px;
     width: 100%;
     margin: 0 auto;
+  }
+
+  .nav-links .grid-navigation a {
+    padding: calc(var(--space) * 1.5);
   }
 
   .intro-wrapper {
@@ -149,15 +155,15 @@ export default {
         //   name: 'Enter Nav 2'
         // },
         {
+          to: '/docs/robonomics-smart-home-overview/',
+          name: 'Enter Nav 8'
+        },
+        {
           to: '/docs/',
           name: 'Enter Nav 5'
         },
         {
-          to: '/docs/sensors-network-introduction',
-          name: 'Enter Nav 4'
-        },
-        {
-          to: '/docs/how-to-build-collator-node//',
+          to: '/docs/robonomics-prometheus-grafana/',
           name: 'Enter Nav 3'
         },
         // {
