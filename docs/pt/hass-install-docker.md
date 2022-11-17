@@ -96,6 +96,6 @@ You will see the integration available while going through further steps of this
 Now that the integration is added to the folder of custom components of Home Assistant, you have two options:
 
 - Whether you have MQTT integration installed and some Zigbee devices connected by either Zigbee2MQTT or any other hardware,
-proceed to [configuration steps](/docs/sub-activate) of Robonomics subscription and Robonomics Integration.
-- Otherwise, navigate to [MQTT Broker](/docs/mqtt-and-hass-setup/) installation where you also add MQTT integration to your Home
+proceed to [Robonomics subscription activation](/docs/sub-activate) and Robonomics Integration configuration.
+- Otherwise, navigate to [MQTT Broker](/docs/mqtt-setup/) installation where you also add MQTT integration to your Home
 Assistant and connect your Zigbee devices to your Home Assistant via preferred hardware.

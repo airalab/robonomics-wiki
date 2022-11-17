@@ -12,8 +12,10 @@
           link: /docs/hass-install-core
     - title_en: Configure
       items:
-        - title_en: MQTT and Hass Setup
-          link: /docs/mqtt-and-hass-setup
+        - title_en: Home Assistant Init
+          link: /docs/hass-init
+        - title_en: MQTT Setup
+          link: /docs/mqtt-setup
         - title_en: ZigBee Setup
           items:
             - title_en: Zigbee2MQTT
