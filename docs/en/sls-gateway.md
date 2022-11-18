@@ -12,6 +12,9 @@ translated: true
 First you need to flash the gateway. For this:
 
 1. Set switches 1 and 3 at the bottom part of SLS Gateway to `ON`, others must be `OFF`.
+
+<robo-wiki-picture src="home-assistant/sls-gateway-13.gif" />
+
 2. Connect gateway to your Raspberry Pi via USB type-C port on the gateway.
 
 Then clone the repository with firmware:
@@ -37,9 +40,15 @@ sudo chmod +x Flash_16mb.sh
 
 1. Set the switches on the back of the gateway are properly positioned. Switches 5 (RX Zigbee to ESP) and 6 (TX Zigbee to ESP) must be in the `ON` position, the others must be `OFF`. 
 
+<robo-wiki-picture src="home-assistant/sls-gateway-56.gif" />
+
 2. Connect the type C power cable. The indicator light in the center should turn green.
 
+<robo-wiki-picture src="home-assistant/sls-gateway-connect.gif" />
+
 3. On the first startup, the gateway will start sharing Wi-Fi with the SSID `zgw****`. Connect to this network. Keep in mind that the signal may be quite weak, so it is better to keep the SLS Gateway closer to your computer. 
+
+<robo-wiki-picture src="home-assistant/sls-gateway-wifi.gif" />
 
 4. If the connection is successful, the web interface will open (or you can find it on 192.168.1.1). 
 5. You will see `WI-FI Settings` page. Press to your Wi-Fi and enter the password. Press `Apply` button. The gateway will restart and connect to your WI-Fi network. 
