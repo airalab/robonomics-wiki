@@ -21,7 +21,9 @@ tools:
 
   Pay attention that this method implies setting up a whole new OS on your Raspberry Pi. If you have one with some vital
   information, please install Home Assistant **Docker** or **Core** following 
-  [official guides](https://www.home-assistant.io/installation/raspberrypi) and then augment them with Robonomics.
+  [official guides](https://www.home-assistant.io/installation/raspberrypi) and then augment them with Robonomics. There 
+  are dedicated guides to add Robonomics Integration to your existing Home Assistant [Core](/docs/hass-install-core) and
+  [Docker](/docs/hass-install-docker).
 
 </robo-wiki-note>
 
@@ -102,6 +104,6 @@ ssh ubuntu@192.168.43.56
 <robo-wiki-note type="note"> User is "ubuntu". Password is "ubuntu". </robo-wiki-note>
 
 
-Now that you have a Raspberry Pi with Home Assistant, Robonomics and IPFS installed, proceed to the [MQTT Broker](/docs/mqtt-and-hass-setup/)
-installation where you also configure your newly installed Home Assistant and add MQTT integration to it. After that you will
+Now that you have a Raspberry Pi with Home Assistant, Robonomics and IPFS installed, proceed to the [Home Assistant Init](/docs/hass-init/)
+page where you initialize your new Home Assistant and then add MQTT integration to it. After that you will
 connect your Zigbee devices to your Home Assistant.
