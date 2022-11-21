@@ -62,7 +62,7 @@ Select required image as the operating system and ensure to select your SD card 
 After flashing, open the SD card's storage and navigate inside the `boot` folder of the card.
 
 Inside this folder you need to create a `wpa_supplicant.conf` file, where you will provide your network credentials.
-Parse to the file next:
+Paste the following to the file:
 ```shell
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
@@ -78,19 +78,18 @@ network={
         auth_alg=OPEN
 }
 ```
-And change fields `ssid` and `psk` to your Wi-Fi name and password. Also write your country to the `country` field. Coutry code you can find [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes). 
+And set `ssid`, `psk` and `country` code according to yours. You can find country codes [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes). 
 
 <robo-wiki-note type="warning">
   Make sure that you input your actual Wi-Fi name and your Wi-Fi password.
 </robo-wiki-note>
 
-<robo-wiki-note type="note"> This Wi-Fi settings available only on first boot setup.
-If later you need to change settings, please use `sudo raspi-config` command. 
+<robo-wiki-note type="note"> This way of setting Wi-Fi credentials is only available before the first boot. If you need to change it later, please, use `sudo raspi-config` command. 
 </robo-wiki-note>
 
 Then you need to save the file, **safely eject the SD card**, and insert it into the Raspberry Pi and turn it on. It should connect to your wi-fi network. 
 
-> After your Raspberry Pi is connected to power, make sure to wait a few (up to 5) minutes for it to boot up and register on the network. 
+> After your Raspberry Pi is plugged in, make sure to wait a few (up to 5) minutes for it to boot up and register on the network. 
 
 Now find the Raspberry Pi's IP address. To find address you can use [Fing mobile app](https://www.fing.com/products)
 or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).  In this example the Raspberry Pi's address is `192.168.43.56`.
