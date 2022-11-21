@@ -3,7 +3,7 @@ title: Subscription Activate
 contributors: [nakata5321]
 translated: false
 tools:   
-  - Robonomics 2.3.0
+  - Robonomics 2.6.0
     https://github.com/airalab/robonomics
   - Dapp Robonomics Network 
     https://github.com/airalab/dapp.robonomics.network

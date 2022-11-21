@@ -3,7 +3,7 @@ title: Home Assistant Init
 contributors: [nakata5321, PaTara43]
 translated: false
 tools:
-  - Home Assistant 2022.8.2
+  - Home Assistant 2022.11.3
     https://github.com/home-assistant/core
 ---
 

@@ -1,13 +1,11 @@
 ---
 title: Pre-installed Image For Raspberry Pi
-contributors: [LoSk-p, dergudzon, Leemo94, PaTara43]
+contributors: [LoSk-p, dergudzon, Leemo94, PaTara43, nakata5321]
 translated: false
-tools:   
-  - Ubuntu Server 22.04 LTS
-    https://ubuntu.com/download/raspberry-pi
-  - Home Assistant 2022.8.2
+tools:
+  - Home Assistant 2022.11.3
     https://github.com/home-assistant/core
-  - Robonomics integration 1.1.0
+  - Robonomics integration 1.1.3
     https://github.com/airalab/homeassistant-robonomics-integration
   - robonomics-interface 1.3.6
     https://github.com/Multi-Agent-io/robonomics-interface/
@@ -41,14 +39,13 @@ ipfs daemon
 In other terminal download image with
 
 ```shell
-ipfs get Qmdca36xtJe86Mni9tAKNXpzihhNVRGKcJfb7xEeUdnfW6 -o rpi.img.xz
+ipfs get QmR92hqCvqy5Vzxyszobb6o5tPkeFNNTy5ZZsVBFVDheFR -o rpi.img.xz
 ```
 
 <robo-wiki-note type="note" title="Browser alternative">
 
   Alternatively, you can download it 
-  [from url.](https://ipfs.io/ipfs/Qmdca36xtJe86Mni9tAKNXpzihhNVRGKcJfb7xEeUdnfW6?filename=rpi_hass.img.gz) 
-  (**Only with IPFS Daemon started**)
+  [from GitHub releases.](https://github.com/nakata5321/Robonomics-HomeAssistant-image/releases) 
 
 </robo-wiki-note>
 
@@ -62,36 +59,38 @@ Select required image as the operating system and ensure to select your SD card 
 
 <robo-wiki-picture src="home-assistant/balena.jpg" alt="Balena installer" />
 
-Open the SD card's storage and navigate inside the root folder of the card. The name of the folder should be something similar to `system-boot`.
+After flashing, open the SD card's storage and navigate inside the `boot` folder of the card.
 
-Find the file named `network-config` and open it in a text editor. Copy the text below and paste it into the file and insert your **wi-fi name** and **wi-fi password**:
+Inside this folder you need to create a `wpa_supplicant.conf` file, where you will provide your network credentials.
+Parse to the file next:
+```shell
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=<Insert 2 letter ISO 3166-1 country code here>
 
+network={
+        scan_ssid=1
+        ssid="<Name of your wireless LAN>"
+        psk="<Password for your wireless LAN>"
+        proto=RSN
+        key_mgmt=WPA-PSK
+        pairwise=CCMP
+        auth_alg=OPEN
+}
 ```
-version: 2
-ethernets: 
-  eth0:
-    dhcp4: true
-    optional: true
-wifis:
-  wlan0:
-    dhcp4: true
-    optional: true
-    access-points:
-      YOUR_WIFI_NAME:
-        password: "YOUR_WIFI_PASSWORD"
-```
+And change fields `ssid` and `psk` to your Wi-Fi name and password. Also write your country to the `country` field. Coutry code you can find [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes). 
 
 <robo-wiki-note type="warning">
-
   Make sure that you input your actual Wi-Fi name and your Wi-Fi password.
-
 </robo-wiki-note>
 
-<robo-wiki-note type="note">This Wi-Fi settings available only on first boot setup.
-If later you need to change settings, please edit configuration file in `/etc/netplan/` folder. 
+<robo-wiki-note type="note"> This Wi-Fi settings available only on first boot setup.
+If later you need to change settings, please use `sudo raspi-config` command. 
 </robo-wiki-note>
 
 Then you need to save the file, **safely eject the SD card**, and insert it into the Raspberry Pi and turn it on. It should connect to your wi-fi network. 
+
+> After your Raspberry Pi is connected to power, make sure to wait a few (up to 5) minutes for it to boot up and register on the network. 
 
 Now find the Raspberry Pi's IP address. To find address you can use [Fing mobile app](https://www.fing.com/products)
 or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).  In this example the Raspberry Pi's address is `192.168.43.56`.
