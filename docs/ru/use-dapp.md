@@ -4,13 +4,13 @@ title: DApp Usage
 contributors: [nakata5321]
 translated: false
 tools:   
-  - Robonomics 2.3.0
+  - Robonomics 2.6.0
     https://github.com/airalab/robonomics
   - Dapp Robonomics Network 
     https://github.com/airalab/dapp.robonomics.network
-  - Home Assistant 2022.8.2
+  - Home Assistant 2022.11.3
     https://github.com/home-assistant/core
-  - Robonomics integration 1.1.0
+  - Robonomics integration 1.1.3
     https://github.com/airalab/homeassistant-robonomics-integration
 ---
 

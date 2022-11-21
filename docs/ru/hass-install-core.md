@@ -5,9 +5,9 @@ translated: false
 tools:   
   - Ubuntu Server 22.04 LTS
     https://ubuntu.com/download/raspberry-pi
-  - Home Assistant 2022.8.2
+  - Home Assistant 2022.11.3
     https://github.com/home-assistant/core
-  - Robonomics integration 1.1.0
+  - Robonomics integration 1.1.3
     https://github.com/airalab/homeassistant-robonomics-integration
   - robonomics-interface 1.3.6
     https://github.com/Multi-Agent-io/robonomics-interface/

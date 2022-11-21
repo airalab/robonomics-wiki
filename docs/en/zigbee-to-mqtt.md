@@ -4,7 +4,7 @@ title: Zigbee2MQTT
 contributors: [LoSk-p, dergudzon, Leemo94, PaTara43]
 translated: true
 tools:
-  - Zigbee2MQTT 1.28.0
+  - Zigbee2MQTT 1.28.2
 ---
 
 **After installing [MQTT broker](/docs/mqtt-and-hass-setup/) to the Raspberry Pi, you can now set up your Zigbee2MQTT stick.

@@ -5,7 +5,7 @@ translated: true
 tools:
   - Mosquitto Broker 2.0.11
     https://mosquitto.org/
-  - Home Assistant 2022.8.2
+  - Home Assistant 2022.11.3
     https://github.com/home-assistant/core
 ---
 
