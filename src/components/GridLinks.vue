@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style scoped>
+
     .grid-navigation {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -38,8 +39,11 @@ export default {
 
     .grid-navigation a {
       transition: 0.2s ease all;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
+      hyphens: auto;
       padding: var(--space);
       border: 1px solid var(--border-color);
       text-align: center;
@@ -68,6 +72,10 @@ export default {
       .grid-navigation { grid-template-columns: repeat(2, 1fr); }
     } */
 
+    .nav-links .grid-navigation a {
+        padding: calc(var(--space) * 1.8);
+    }
+
     @media screen and (max-width: 800px) {
       .grid-navigation { grid-template-columns: 1fr; }
     }
@@ -76,6 +84,10 @@ export default {
 
         .grid-navigation {
         margin-bottom: calc(var(--space) * 2);
+        }
+
+        .nav-links .grid-navigation a {
+            padding: var(--space);
         }
     }
 

@@ -81,5 +81,11 @@ export default {
     --type-color-pale: var(--color-note-pale);
   }
 
+  .robo-wiki-note--note .robo-wiki-note__text :not(pre)>code { 
+    background: #fff;
+  }   
+
+
+
 
 </style>
