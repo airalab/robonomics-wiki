@@ -54,8 +54,11 @@ Proceed to the next chapter to install the image.
 
 ## Configure Image
 
-Install [balena etcher](https://www.balena.io/etcher/) on your computer. Then, insert the SD card and run the Imager program. 
-Select required image as the operating system and ensure to select your SD card from the storage dropdown, and then `flash` image.
+Install [balena etcher](https://www.balena.io/etcher/) on your computer. Then, insert the SD card.
+
+<robo-wiki-picture src="home-assistant/insert-sd-card.gif" alt="insert sd card" />
+
+Run the Imager program. Select required image as the operating system and ensure to select your SD card from the storage dropdown, and then `flash` image.
 
 <robo-wiki-picture src="home-assistant/balena.jpg" alt="Balena installer" />
 

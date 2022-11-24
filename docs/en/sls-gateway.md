@@ -17,10 +17,12 @@ First you need to flash the gateway. For this:
 
 2. Connect gateway to your Raspberry Pi via USB type-C port on the gateway.
 
+<robo-wiki-picture src="home-assistant/sls-rpi.gif" />
+
 Then clone the repository with firmware:
 
 ```bash
-git https://github.com/airalab/robonomics-hass-utils.git
+git clone https://github.com/airalab/robonomics-hass-utils.git
 ```
 
 And go to `robonomics-hass-utils/esp_firmware`. There you should navigate to a folder, which name depends on your OS: 
@@ -85,7 +87,11 @@ Here is the table with required values:
 
 <robo-wiki-picture src="home-assistant/sls-hass.jpg" />
 
-10. Connect your devices by going to `Zigbee` -> `Join`. Press the `Enable Join` button to start searching Zigbee devices. Put your sensors in pairing mode. You will see active sensors. 
+10. Connect your devices by going to `Zigbee` -> `Join`. Press the `Enable Join` button to start searching Zigbee devices. The most common way to switch a device to connect mode is to hold its power button. For lamps one may switch them on|off
+for 5 times. 
+
+<robo-wiki-picture src="home-assistant/switch-device.gif" />
+
 
 ## Pairing SLS to MQTT
 
