@@ -43,7 +43,11 @@ Note that the `npm ci` could produce some `warning` which can be ignored.
 
 ## Configuration and Run
 
-First, connect the adapter to Raspberry PI. Now you need to find the location of your stick. For this type in the next command.:
+First, connect the adapter to Raspberry PI. 
+
+<robo-wiki-picture src="home-assistant/connect-stick.gif" />
+
+Now you need to find the location of your stick. For this type in the next command.:
 
 ```bash
 $ ls -l /dev/serial/by-id
@@ -143,7 +147,11 @@ Zigbee2MQTT:info  2022-07-29 14:36:49: MQTT publish: topic 'zigbee2mqtt/bridge/s
 ## Pairing Device
 
 The most common way to switch a device to connect mode is to hold its power button. For lamps one may switch them on|off
-for 5 times. The zigbee2MQTT should be launched. When a device connects, you should see a message like:
+for 5 times. The zigbee2MQTT should be launched. 
+
+<robo-wiki-picture src="home-assistant/switch-device.gif" />
+
+When a device connects, you should see a message like:
 
 ```
 Zigbee2MQTT:info  2022-07-29 14:44:39: Successfully interviewed '0x00158d0003eeeacf', device has successfully been paired
