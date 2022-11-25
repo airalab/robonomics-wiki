@@ -30,7 +30,9 @@ tools:
 To simplify the installation process when starting from scratch, a pre-made image may be used. It contains Home Assistant
 Core with Robonomics integration and IPFS.
 
-To download it, IPFS is to be used. [Install IPFS](https://docs.ipfs.tech/install/command-line/) and start the daemon 
+You can download it [from GitHub releases.](https://github.com/airalab/Robonomics-HomeAssistant-image)
+
+Alternatively, to download it, IPFS is to be used. [Install IPFS](https://docs.ipfs.tech/install/command-line/) and start the daemon 
 (Don't forget to run `ipfs init` before the first start):
 ```shell
 ipfs daemon
@@ -39,16 +41,8 @@ ipfs daemon
 In other terminal download image with
 
 ```shell
-ipfs get QmR92hqCvqy5Vzxyszobb6o5tPkeFNNTy5ZZsVBFVDheFR -o rpi.img.xz
+ipfs get QmcvqPiFVdR436wxqcKyR98uxsMYU2jmfo1K1PX9kfj3Df -o rpi.img.xz
 ```
-
-<robo-wiki-note type="note" title="Browser alternative">
-
-  Alternatively, you can download it 
-  [from GitHub releases.](https://github.com/nakata5321/Robonomics-HomeAssistant-image/releases)
-
-</robo-wiki-note>
-
 
 Proceed to the next chapter to install the image.
 
