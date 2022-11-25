@@ -9,8 +9,8 @@ tools:
     https://github.com/home-assistant/core
 ---
 
-**Being on this page means that you have installed Home Assistant with Robonomics and IPFS and yet don't have any
-Zigbee devices connected. To do so, you first need a MQTT broker to be set up and MQTT integration to be configured.**
+**This article describes how to install MQTT broker. If you on this page, 
+this is mean that you complete one variant from "Install" section and the "Home Assistant init" article.**
 
 
 ## Install MQTT broker
@@ -18,6 +18,7 @@ Zigbee devices connected. To do so, you first need a MQTT broker to be set up an
 There is a quick installation option with a pre-written script. Connect to your Raspberry Pi, where you host Home Assistant and run:
 
 ```shell
+ubuntu@your-rpi:~$
 curl -O https://raw.githubusercontent.com/airalab/robonomics-hass-utils/main/raspberry_pi/mqtt-install.sh
 bash mqtt-install.sh
 ```
@@ -40,17 +41,11 @@ and your username and password, which you've created earlier, then press `submit
 
 <robo-wiki-picture src="home-assistant/mqtt-setup.jpg" />
 
-Then press on three dots on MQTT integration and choose `System Options` and check if automatically adding new devices is enabled:
-
-<robo-wiki-picture src="home-assistant/add-dev.jpg" />
-
-
 Now it's time to add some devices to your smart home. Depending on the hardware you have, pick one of the options:
 
 **Option 1 (with zigbee2MQTT)**
-* If you have Zigbee adapter [JetHome USB JetStick Z2](https://jethome.ru/z2/)
-(or one of [supported](https://www.zigbee2mqtt.io/information/supported_adapters.html)) go [**here.**](/docs/zigbee-to-mqtt/)
+* If you have [Zigbee adapter go here.](/docs/zigbee-to-mqtt/) (List of [supported adapter here](https://www.zigbee2mqtt.io/information/supported_adapters.html) or use [JetHome USB JetStick Z2](https://jethome.ru/z2/).)
 
 **Option 2 (with SLS Gateway)**
-* If you have [Robonomics SLS Gateway](https://easyeda.com/ludovich88/robonomics_sls_gateway_v01) go [**here.**](/docs/sls-gateway/)
+* If you have [Robonomics SLS Gateway go here.](/docs/sls-gateway/) Open hardware specs your can [find here.](https://easyeda.com/ludovich88/robonomics_sls_gateway_v01)
 
