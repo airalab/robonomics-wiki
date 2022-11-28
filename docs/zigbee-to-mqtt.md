@@ -14,8 +14,10 @@ device [here](https://www.zigbee2mqtt.io/information/supported_adapters.html).**
 ## Software Install
 
 <robo-wiki-note type="note">
+
 If you use "pre-installed" image from robonomics, this software already installed to your Rpi. 
-Go to "Configuration and Run" part.
+Go to ["Configuration and Run" part](/docs/zigbee-to-mqtt#config-and-run).
+
 </robo-wiki-note>
 
 Install necessary software for Zigbee2MQTT sticks:
@@ -46,7 +48,9 @@ npm ci
 
 Note that the `npm ci` could produce some `warning` which can be ignored.
 
-## Configuration and Run
+<robo-wiki-title :type="2" anchor="config-and-run">
+Configuration and Run
+</robo-wiki-title>
 
 First, connect the adapter to Raspberry PI. 
 

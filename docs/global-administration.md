@@ -5,13 +5,14 @@ contributors: [nakata5321]
 translated: true
 ---
 
-This article will provide you to how to set up a new user to your Home Assistant.
+This article will show you how to set up a new user to your Home Assistant.
 
 ## Use DApp
 
-Now it's time to create a new user for your Home Assistant. People, who uses Home Assistant, shouldn't use `SUB_OWNER` or `SUB_CONTROLLER` accounts, because,
-as said [earlier](/docs/sub-activate/) they provide security. Also, you can't use user, 
-which you created af first start of Home Assistant, because this user don't have account in Robonomics Parachain.
+Home Assistant users shouldn't take `SUB_OWNER` or `SUB_CONTROLLER` accounts, because,
+as said [earlier](/docs/sub-activate/) they provide security. Also, you can't take the  user, 
+which you have created at first start of Home Assistant, because this user doesn't 
+have account in Robonomics Parachain.
 
 Let's create an account, as we did in the previous [article](/docs/sub-activate/). 
 Add this account to the subscription [here](https://dapp.robonomics.network/#/subscription/devices). Now there should be three addresses in the access list - `SUB_OWNER`, `SUB_CONTROLLER` and `user`.
