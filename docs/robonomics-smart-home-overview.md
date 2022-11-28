@@ -29,6 +29,6 @@ To prepare your smart home, you will need:
 
 You have several options for installing Home Assistant with Robonomics:
 
-* [Pre-installed image](https://wiki.robonomics.network/docs/en/hass-install-image/) — This method implies setting up a whole new OS on your Raspberry Pi.
-* [Home Assistant Docker for Unix-like OS](https://wiki.robonomics.network/docs/en/hass-install-docker/) — The method is suitable for integrating Robonomics with an existing Home Assistant Docker on your Raspberry Pi with existing OS.
-* [Home Assistant Core](https://wiki.robonomics.network/docs/en/hass-install-core/) — The method is suitable for integrating Robonomics with an existing Home Assistant Core on your Raspberry Pi with existing OS.
+* [Pre-installed image](/docs/hass-install-image/) — This method implies setting up a whole new OS on your Raspberry Pi.
+* [Home Assistant Docker for Unix-like OS](/docs/hass-install-docker/) — The method is suitable for integrating Robonomics with an existing Home Assistant Docker on your Raspberry Pi with existing OS.
+* [Home Assistant Core](/docs/hass-install-core/) — The method is suitable for integrating Robonomics with an existing Home Assistant Core on your Raspberry Pi with existing OS.
