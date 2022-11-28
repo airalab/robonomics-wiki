@@ -162,13 +162,13 @@ export default {
 
     currentIndex () {
       return this.itemsList.findIndex(item => {
-        return this.$path(item.link, this.locale).replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
+        return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
       })
     },
 
-    locale() {
-      return this.$store.state.locale
-    },
+    // locale() {
+    //   return this.$store.state.locale
+    // },
 
   },
     

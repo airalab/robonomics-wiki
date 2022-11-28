@@ -15,18 +15,8 @@
       <div class="footer__links">
         <ul class="footer__list">
           <li class="footer__item">
-            <g-link class="footer__link" to="/docs/contributing/">
-              {{$st('How to contribute', $store.state.locale)}}
-            </g-link>
-          </li>
-          <li class="footer__item">
             <g-link class="footer__link" to="/docs/edit-wiki/">
-              {{$st('How to edit Wiki', $store.state.locale)}}
-            </g-link>
-          </li>
-          <li class="footer__item">
-            <g-link class="footer__link" to="/docs/translate-wiki/">
-              {{$st('Help us translate', $store.state.locale)}}
+              How to edit Wiki
             </g-link>
           </li>
         </ul>
