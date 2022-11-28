@@ -13,6 +13,13 @@ device [here](https://www.zigbee2mqtt.io/information/supported_adapters.html).**
 
 ## Software Install
 
+<robo-wiki-note type="note">
+
+If you use "pre-installed" image from robonomics, this software already installed to your Rpi. 
+Go to ["Configuration and Run" part](/docs/zigbee-to-mqtt#config-and-run).
+
+</robo-wiki-note>
+
 Install necessary software for Zigbee2MQTT sticks:
 
 ```bash
@@ -31,7 +38,7 @@ sudo mkdir /opt/zigbee2mqtt
 sudo chown -R ${USER}: /opt/zigbee2mqtt
 
 # Clone Zigbee2MQTT repository
-git clone --depth 1 --branch 1.28.0 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
+git clone --depth 1 --branch 1.28.2 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
@@ -40,7 +47,9 @@ npm ci
 
 Note that the `npm ci` could produce some `warning` which can be ignored.
 
-## Configuration and Run
+<robo-wiki-title :type="2" anchor="config-and-run">
+Configuration and Run
+</robo-wiki-title>
 
 First, connect the adapter to Raspberry PI. 
 
@@ -55,7 +64,7 @@ $ ls -l /dev/serial/by-id
 Output should look like:
 
 ```shell
-ubuntu@ubuntu:~$ ls -l /dev/serial/by-id
+$ ls -l /dev/serial/by-id
 total 0
 lrwxrwxrwx 1 root root 13 Oct 10 01:44 usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0 -> ../../ttyUSB0
 
@@ -194,9 +203,6 @@ Verify that the configuration works:
 
 ```bash
 sudo systemctl start zigbee2mqtt
-```
-
-```bash
 systemctl status zigbee2mqtt.service
 ```
 

@@ -8,8 +8,8 @@
           link: /docs/hass-install-image
         - title_en: Home Assistant Docker for Unix-like OS
           link: /docs/hass-install-docker
-        - title_en: Home Assistant Core
-          link: /docs/hass-install-core
+        - title_en: Upgrade Your Hass Core
+          link: /docs/upgrade-your-hass-core
     - title_en: Configure
       items:
         - title_en: Home Assistant Init
@@ -30,7 +30,9 @@
           link: /docs/robonomics-integration-setup
     - title_en: Use
       items:
-        - title_en: DApp Usage
+        - title_en: Global Administration
+          link: /docs/global-administration
+        - title_en: SmartHome Telemetry
           link: /docs/use-dapp
         - title_en: Blueprints Usage
           link: /docs/use-blueprints

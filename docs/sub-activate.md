@@ -64,7 +64,7 @@ In an opened window upload the JSON file, enter the password and press `Restore`
 
 ![Restore backup in extension 2](./images/creating-an-account/file-backup.jpg)
 
-## Buy Robonomics subscription 
+## Activate Robonomics subscription 
 
 Now it's time to buy a subscription. 
 
