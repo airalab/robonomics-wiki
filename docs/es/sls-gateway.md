@@ -19,18 +19,21 @@ First you need to flash the gateway. For this:
 
 <robo-wiki-picture src="home-assistant/sls-rpi.gif" />
 
-Then clone the repository with firmware:
+Then clone the repository with firmware to you the Raspberry Pi:
 
 ```bash
+ubuntu@your-rpi:~$
 git clone https://github.com/airalab/robonomics-hass-utils.git
 ```
 
-And go to `robonomics-hass-utils/esp_firmware`. There you should navigate to a folder, which name depends on your OS: 
+Next go `robonomics-hass-utils/esp_firmware`. and navigate to a folder, which name depends on your OS: 
 `windows`, `linux` or `Mac`. To flash the SLS gateway you need to run `Clear` and `Flash_16mb` scripts.
 
 The following example is for Linux. First, add permissions:
 
 ```bash
+ubuntu@your-rpi:~$
+cd robonomics-hass-utils/esp_firmware
 cd linux
 sudo chmod +x Clear.sh
 sudo chmod +x Flash_16mb.sh
@@ -84,6 +87,12 @@ Here is the table with required values:
 8. Then reboot the gateway. Choose `Actions` -> `Reboot system` at the right top corner.
 
 9. Configure automatically adding devices to Home Assistant. Go to `Zigbee` -> `Config` then click `Home Assistant MQTT Discovery` and `Clear States`. Then `Save` button and again **reboot** SLS gateway:
+
+<robo-wiki-note type="warning">
+If you already have an active SLS gateway  or a similar device in your home, 
+and you are now configuring another SLS gateway, then they will conflict with each other. 
+To solve this problem you need change channel on the new device in field "channel". 
+</robo-wiki-note>
 
 <robo-wiki-picture src="home-assistant/sls-hass.jpg" />
 

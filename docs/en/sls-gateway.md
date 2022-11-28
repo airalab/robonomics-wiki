@@ -88,6 +88,12 @@ Here is the table with required values:
 
 9. Configure automatically adding devices to Home Assistant. Go to `Zigbee` -> `Config` then click `Home Assistant MQTT Discovery` and `Clear States`. Then `Save` button and again **reboot** SLS gateway:
 
+<robo-wiki-note type="warning">
+If you already have an active SLS gateway  or a similar device in your home, 
+and you are now configuring another SLS gateway, then they will conflict with each other. 
+To solve this problem you need change channel on the new device in field "channel". 
+</robo-wiki-note>
+
 <robo-wiki-picture src="home-assistant/sls-hass.jpg" />
 
 10. Connect your devices by going to `Zigbee` -> `Join`. Press the `Enable Join` button to start searching Zigbee devices. The most common way to switch a device to connect mode is to hold its power button. For lamps one may switch them on|off

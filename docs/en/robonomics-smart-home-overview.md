@@ -28,20 +28,3 @@ To prepare a smart home, you will need:
 * SD card (minimum 16 GB) and SD adapter
 * Zigbee smart devices (any from [supported devices](https://slsys.io/action/supported_devices.html))
 * Zigbee adapter [JetHome USB JetStick Z2](https://jethome.ru/z2/) (or one of [supported](https://www.zigbee2mqtt.io/information/supported_adapters.html)) or [Robonomics SLS Gateway](https://easyeda.com/ludovich88/robonomics_sls_gateway_v01).
-
-[//]: # ()
-[//]: # (<robo-wiki-note type="warning" title="Clean set up">)
-
-[//]: # ()
-[//]: # (  Pay attention that this method implies setting up a whole new OS on your Raspberry Pi. If you have one with some vital)
-
-[//]: # (  information, please install Home Assistant **Docker** or **Core** following )
-
-[//]: # (  [official guides]&#40;https://www.home-assistant.io/installation/raspberrypi&#41; and then augment them with Robonomics. There )
-
-[//]: # (  are dedicated guides to add Robonomics Integration to your existing Home Assistant [Core]&#40;/docs/hass-install-core&#41; and)
-
-[//]: # (  [Docker]&#40;/docs/hass-install-docker&#41;.)
-
-[//]: # ()
-[//]: # (</robo-wiki-note>)

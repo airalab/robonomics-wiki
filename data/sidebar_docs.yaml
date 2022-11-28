@@ -30,7 +30,9 @@
           link: /docs/robonomics-integration-setup
     - title_en: Use
       items:
-        - title_en: DApp Usage
+        - title_en: Global Administration
+          link: /docs/global-administration
+        - title_en: SmartHome Telemetry
           link: /docs/use-dapp
         - title_en: Blueprints Usage
           link: /docs/use-blueprints

@@ -25,6 +25,7 @@ You can download it [from GitHub releases.](https://github.com/airalab/Robonomic
 
 Alternatively, to download it, IPFS is to be used. [Install IPFS](https://docs.ipfs.tech/install/command-line/) and start the daemon 
 (Don't forget to run `ipfs init` before the first start):
+
 ```shell
 username@userpc:~$
 ipfs daemon

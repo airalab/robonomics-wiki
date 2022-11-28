@@ -1,5 +1,5 @@
 ---
-title: DApp Usage
+title: SmartHome Telemetry
 
 contributors: [nakata5321]
 translated: true
