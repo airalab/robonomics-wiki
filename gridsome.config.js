@@ -54,7 +54,9 @@ module.exports = {
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
 
+    // alias for easier access to files 
     config.resolve.alias.set('@imagesMarkdown', '/docs/images')
+    config.resolve.alias.set('@videosMarkdown', '/docs/videos')
     config.resolve.alias.set('@images', '@/assets/images')
 
     config.mode('development')

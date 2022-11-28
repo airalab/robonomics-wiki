@@ -4,14 +4,14 @@
 
       <li v-for="(item, key) in items" :key="key">
 
-        <g-link class="menu-link" v-if="item.link && item.published!=false" :to="$path(item.link, locale)" exact>
+        <g-link class="menu-link" v-if="item.link && item.published!=false" :to="item.link" exact>
           {{ getTitle(item) }}
         </g-link>
         
         <template v-else>
 
           <h4 class="menu-subtitle" @click="toggle" v-if="item.published!=false" :class="hascurrent(item.items) ? 'open' : 'close'">
-            {{ getTitle(item) }}
+            {{ item['title_en'] }}
           </h4>
 
           <List :items="item.items" />
@@ -47,11 +47,11 @@ export default {
     List: () => import("./SidebarDocs.vue")
   },
 
-  computed: {
-    locale() {
-      return this.$store.state.locale
-    },
-  },
+  // computed: {
+  //   locale() {
+  //     return this.$store.state.locale
+  //   },
+  // },
 
   methods: {
 
@@ -61,13 +61,19 @@ export default {
 
 
     hascurrent (a) {
-      let path = this.$route.matched[0].path + '/'
+      let path = this.$route.matched[0].path 
+
+      if((path.match(new RegExp("/", "g")) || []).length == 1) {
+        path += '/';
+      }
+
+
       let contains = false
 
       for (var i = 0; i < a.length; i++) {
 
         if(!a[i].items){
-          if(this.$path(a[i].link, this.locale) == path){
+          if(a[i].link == path){
             contains = true;
           }
         }

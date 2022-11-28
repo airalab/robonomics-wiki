@@ -1,6 +1,0 @@
-{
-    "locales": ["en", "ru", "es", "ja", "ko", "pt"],
-    "defaultLocale": "en",
-    "goesAfter": ["docs"],
-    "exclude": ["/404/", "/sitemap.xml/"]
-}
