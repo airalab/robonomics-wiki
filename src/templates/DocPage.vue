@@ -5,9 +5,9 @@
       <div class="page-title">
         <h1>{{ $page.doc.title }}</h1>
 
-        <ul class="page-title-meta" v-if="$page.doc.contributors.length > 0 || !$page.doc.translated">
+        <ul class="page-title-meta" v-if="$page.doc.contributors.length > 0">
           <li v-if="$page.doc.contributors.length > 0">
-            <span>{{$st('Main contributors', $store.state.locale)}}: </span>
+            <span>Main contributors: </span>
             <template v-for="(contributor, index) in $page.doc.contributors">
               <span :key="index">
                 <g-link :to="'https://github.com/'+contributor">@{{contributor}}</g-link>
@@ -19,11 +19,7 @@
 
           <!-- we do not need to show this if there are no contributors-->
           <li v-if="$page.doc.contributors.length > 0 && !isCurrent('/docs/contributing/')">
-            <g-link to="/docs/contributing/">{{$st('How to contribute', $store.state.locale)}}</g-link>
-          </li>
-
-          <li v-if="!$page.doc.translated && !isCurrent('/docs/translate-wiki/')">
-            <g-link to="/docs/translate-wiki/">{{$st('This page needs translation', $store.state.locale)}}</g-link>
+            <g-link to="/docs/contributing/">How to contribute</g-link>
           </li>
         </ul>
       </div>
@@ -46,22 +42,22 @@
                   <div class="icon">
                     <Icon icon="github"/>
                   </div>
-                  <h5>{{$st('Github Contribution Title', $store.state.locale)}}</h5>
+                  <h5>Make a contribution</h5>
                 </div>
-                <p>{{$st('Github Contribution Text', $store.state.locale)}}
-                  <g-link :to="ghLink" class="submit">{{$st('Github Contribution Submit', $store.state.locale)}}</g-link> {{$st('Github Contribution PR', $store.state.locale)}}
+                <p>Robonomics wiki is open source. See something that's wrong or unclear?
+                  <g-link :to="ghLink" class="submit">Submit</g-link>  a pull request.
                 </p>
                 <!-- <Button :label="$st('Github Contribution Button', $store.state.locale)" :link="ghLink" type="secondary" icon="github" size="small"/> -->
               </div>
 
               <div class="head" v-show="ghUpdateName">
-                {{$st('Latest (commit)', $store.state.locale)}} <g-link :to="ghUpdateUrl">{{$st('commit', $store.state.locale)}}</g-link> {{$st('on (date of commit)', $store.state.locale)}} {{ghUpdateDate}} {{$st('by (author of commit)', $store.state.locale)}} {{ghUpdateName}}
+                Latest <g-link :to="ghUpdateUrl">commit</g-link> on {{ghUpdateDate}} by {{ghUpdateName}}
               </div>
           </section>
 
         </div>
 
-        <div id="sidebarContent" class="page__sidebar hiddenMobile--720 custom-scroll" :class="$store.state.showSearchbar ? null : 'menu-without-search'">
+        <div id="sidebarContent" class="page__sidebar hiddenMobile--720" :class="$store.state.showSearchbar ? null : 'menu-without-search'">
           <robo-wiki-note v-if="$page.doc.tools.length" type="note" title="Tested for">
             <g-link v-for="tool in $page.doc.tools" :href="tool.match(/\bhttps?:\/\/\S+/gi) ||  '#' " :key="tool" class="testedFor__link">
              {{tool.replace(/\bhttps?:\/\/\S+/gi, '')}}
@@ -330,7 +326,7 @@ query ($id: ID!) {
     title
     description
     contributors
-    translated
+
     headings (depth: h1) {
       value
     }
@@ -479,7 +475,7 @@ export default {
     getTitleForIssue() {
       const url = new URL('https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&');
       const params = new URLSearchParams(url.search);
-      params.append('title', `issue for document page - ${this.$page.doc.title}(${this.locale})`);
+      params.append('title', `issue for document page - ${this.$page.doc.title}`);
       this.ghIssueTitle = params.toString()
     },
 
@@ -508,7 +504,7 @@ export default {
 
     currentIndex () {
       return this.itemsList.findIndex(item => {
-        return this.$path(item.link, this.locale).replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
+        return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
       })
     },
 

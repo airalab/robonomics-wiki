@@ -6,8 +6,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 // import localeOptions from '@/data/localization.json'
-const localeOptions = require('./data/localization.json')
-const localeSettings = JSON.parse(JSON.stringify(localeOptions))
+// const localeOptions = require('./data/localization.json')
+// const localeSettings = JSON.parse(JSON.stringify(localeOptions))
 
 const fs = require('fs');
 const fsExtra = require('fs-extra');
@@ -44,7 +44,7 @@ module.exports = function (api) {
 
         // Using the same filename as the file for easy frontmatter
         const imgName = node.fileInfo.name;
-        const imgLang = node.fileInfo.directory;
+        const imgLang = 'en';
 
         // creating images for only one locale at a time so it won't crash
         // if(imgLang === 'en') {
@@ -72,8 +72,8 @@ module.exports = function (api) {
   });
 
   api.loadSource(async store => {
-    store.addMetadata('defaultLocale', localeSettings.defaultLocale) //set default locale globally
-    store.addMetadata('locales', localeSettings.locales) //set list of locales globally
+    store.addMetadata('defaultLocale', 'en') //set default locale globally
+    store.addMetadata('locales', 'en') //set list of locales globally
   })
 
   // use it for plugin
@@ -87,28 +87,8 @@ module.exports = function (api) {
 
   api.createPages(({createPage}) => {
     createPage({
-        path: '/en/summary/:title',
+        path: '/summary/:title',
         component: './src/templates/Summary.vue'
-    })
-    createPage({
-      path: '/es/summary/:title',
-      component: './src/templates/Summary.vue'
-    })
-    createPage({
-      path: '/ko/summary/:title',
-      component: './src/templates/Summary.vue'
-    })
-    createPage({
-      path: '/ja/summary/:title',
-      component: './src/templates/Summary.vue'
-    })
-    createPage({
-      path: '/pt/summary/:title',
-      component: './src/templates/Summary.vue'
-    })
-    createPage({
-      path: '/ru/summary/:title',
-      component: './src/templates/Summary.vue'
     })
   })
 

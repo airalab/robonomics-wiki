@@ -2,8 +2,8 @@
 
     <section class="pageNextPrev">
 
-      <Button v-if="pagePrev" :label="'← ' + getTitleLocalazide(pagePrev)" :link="pagePrev.link" additionalText="previous" type="secondary"/>
-      <Button class="second" v-if="pageNext" :label="getTitleLocalazide(pageNext) + ' →'" :link="pageNext.link" additionalText="next" type="secondary"/>
+      <Button v-if="pagePrev" :label="'← ' + pagePrev.title_en" :link="pagePrev.link" additionalText="previous" type="secondary"/>
+      <Button class="second" v-if="pageNext" :label="pageNext.title_en + ' →'" :link="pageNext.link" additionalText="next" type="secondary"/>
 
     </section>
 
@@ -70,9 +70,9 @@ export default {
           return this.itemsList[this.current + 1]
       },
 
-      locale() {
-        return this.$store.state.locale
-      },
+      // locale() {
+      //   return this.$store.state.locale
+      // },
   },
 
   methods: {

@@ -33,20 +33,20 @@ export default {
 
   metaInfo() {
     return {
-      title: this.$st('This page not found', this.$store.state.locale),
+      title: 'This page not found',
       meta: [
-        { name: "description", content: this.$st('There can be many reasons for this, for example', this.$store.state.locale) },
+        { name: "description", content: 'There can be many reasons for this, for example'},
         {
           property: "og:url",
           content: 'https://wiki.robonomics.network/'
         },
         {
           property: "og:title",
-          content: this.$st('This page not found', this.$store.state.locale),
+          content: 'This page not found'
         },
         {
           property: "og:description",
-          content:  this.$st('There can be many reasons for this, for example', this.$store.state.locale)
+          content:  'There can be many reasons for this, for example'
         },
         {
           property: "og:image",
@@ -75,11 +75,11 @@ export default {
         },
         {
           name: "twitter:title",
-          content: this.$st('This page not found', this.$store.state.locale),
+          content: 'This page not found'
         },
         {
           name: "twitter:description",
-          content:  this.$st('Site Description', this.$store.state.locale)
+          content:  "Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network."
         },
         {
           name: "twitter:image",

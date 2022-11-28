@@ -61,9 +61,9 @@
 			return subtitles
 	    },
 
-			locale() {
-				return this.$store.state.locale
-			},
+			// locale() {
+			// 	return this.$store.state.locale
+			// },
 	  },
 
 		methods: {

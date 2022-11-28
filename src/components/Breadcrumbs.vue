@@ -23,7 +23,7 @@
 
         <g-link 
           v-if="breadcrumbs[breadcrumbs.length - 1] !== breadcrumb"
-          :to="$path('/summary/' + getCleanTitleLink(breadcrumb.title_en), locale)" 
+          :to="'/summary/' + getCleanTitleLink(breadcrumb.title_en)" 
           class="breadcrumbs__link"
           :aria-current="index === breadcrumbs.length-1 ? 'location' : ''"
         >
@@ -63,14 +63,8 @@ export default {
     watch: {
     "$route.path": function(current, old) {
       this.breadcrumbs = [];
-      this.urlPath = '/' + this.$route.path.split('/')[1] + '/' + this.$route.path.split('/')[3];
+      this.urlPath = '/' + this.$route.path.split('/')[1] + '/' + this.$route.path.split('/')[2];
       this.getParentItem(this.items, this.urlPath);
-    },
-  },
-
-  computed: {
-    locale() {
-      return this.$store.state.locale
     },
   },
 
@@ -81,10 +75,10 @@ export default {
       for (let i = 0; i < root.length; i++) {
           node = root[i];
           if (node.link === link || node.link === link + '/' || node.items && (t = this.getParentItem(node.items, link))) {
-            const link = node.link ? this.$path(node.link, this.locale) : null;
+            const link = node.link ? node.link : null;
             const breadcrumb = {
               id: Math.floor(Math.random() * 1000000),
-              title: node[`title_${this.locale}`] ? node[`title_${this.locale}`] : node[`title_en`],
+              title: node[`title_en`],
               link,
               title_en: node[`title_en`],
             }
@@ -101,7 +95,7 @@ export default {
   },
 
   mounted() {
-    this.urlPath = '/' + this.$route.path.split('/')[1] + '/' + this.$route.path.split('/')[3];
+    this.urlPath = '/' + this.$route.path.split('/')[1] + '/' + this.$route.path.split('/')[2];
     this.getParentItem(this.items, this.urlPath);
   }
 
