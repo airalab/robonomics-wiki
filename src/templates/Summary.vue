@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1><g-link to="/">{{ $st('Home', $store.state.locale) }}</g-link> / {{titleLocal || title}}</h1>
+    <h1><g-link to="/">Home</g-link> / {{titleLocal || title}}</h1>
 
     <GridLinks v-if="navLinks" :links="navLinks" />
 

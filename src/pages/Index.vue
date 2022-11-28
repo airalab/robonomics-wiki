@@ -4,8 +4,8 @@
     <g-image class="intro-image" src="~/assets/images/robonomics-lab.png"/> -->
 
     <div class="intro">
-      <h1>{{$st('Enter title', $store.state.locale)}}</h1>
-      <div class="intro-description">{{ $st('Site Description', $store.state.locale) }}</div>
+      <h1>Explore Robonomics with guides</h1>
+      <div class="intro-description">Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.</div>
     </div>
 
     <!-- <div class="intro-wrapper">
@@ -156,15 +156,15 @@ export default {
         // },
         {
           to: '/docs/robonomics-smart-home-overview/',
-          name: 'Enter Nav 8'
+          name: 'Smart Home'
         },
         {
           to: '/docs/',
-          name: 'Enter Nav 5'
+          name: 'Learn'
         },
         {
           to: '/docs/robonomics-prometheus-grafana/',
-          name: 'Enter Nav 3'
+          name: 'Maintain'
         },
         // {
         //   to: '/summary/learn/',
@@ -185,20 +185,20 @@ export default {
 
   metaInfo() {
     return {
-      title: this.$st('Enter title', this.$store.state.locale),
+      title: 'Explore Robonomics with guides',
       meta: [
-        { name: "description", content: this.$st('Site Description', this.$store.state.locale) },
+        { name: "description", content: 'Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.' },
         {
           property: "og:url",
           content: 'https://wiki.robonomics.network/'
         },
         {
           property: "og:title",
-          content: this.$st('Enter title', this.$store.state.locale),
+          content: 'Explore Robonomics with guides'
         },
         {
           property: "og:description",
-          content:  this.$st('Site Description', this.$store.state.locale)
+          content:  'Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.'
         },
         {
           property: "og:image",
@@ -227,11 +227,11 @@ export default {
         },
         {
           name: "twitter:title",
-          content: this.$st('Enter title', this.$store.state.locale),
+          content: 'Explore Robonomics with guides'
         },
         {
           name: "twitter:description",
-          content:  this.$st('Site Description', this.$store.state.locale)
+          content: 'Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.'
         },
         {
           name: "twitter:image",

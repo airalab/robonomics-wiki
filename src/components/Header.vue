@@ -5,8 +5,8 @@
       <div class="header-top">
 
         <g-link to="/" class="header-logo">
-          <g-image :alt="$st('Robonomics WIKI', $store.state.locale)" src="~/assets/images/robonomics-logo-sign-sm.svg" class="inline-block"/>
-          <span class="inline-block">{{ $st('Robonomics WIKI', $store.state.locale) }}</span>
+          <g-image alt="Robonomics WIKI" src="~/assets/images/robonomics-logo-sign-sm.svg" class="inline-block"/>
+          <span class="inline-block">Robonomics WIKI</span>
         </g-link>
 
         <div class="header-center">
@@ -15,7 +15,6 @@
 
         <div class="header-nav">
           <ToggleTheme class="inline-block" />
-          <ToggleLang class="inline-block" />
           <NavIcon class="inline-block hiddenDesktop" :section="'sidebarDocs'" :icon="'Menu'"/>
           <NavIcon class="inline-block hiddenDesktop--720" :section="'sidebarContent'" :icon="'Dots'" v-if="!homePage && !$route.path.includes('summary')"/>
         </div>
@@ -132,7 +131,7 @@ export default {
 
   computed:{
     homePage(){
-      return this.$route.path == "/" || this.$route.path == "/" + this.$store.state.locale || this.$route.path == "/" + this.$store.state.locale + "/"
+      return this.$route.path == "/" 
     }
   },
 

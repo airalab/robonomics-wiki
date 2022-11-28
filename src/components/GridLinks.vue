@@ -3,9 +3,9 @@
     <nav class="grid-navigation">
         <g-link 
             v-for="item in links" :key="item.to"
-            :to="$path(item.to, $store.state.locale)"
+            :to="item.to"
         >
-            {{$st(item.name, $store.state.locale) || item.name}}
+            {{item.name}}
         </g-link>
     </nav>
 

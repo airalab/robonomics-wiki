@@ -85,7 +85,8 @@ export default {
     background: #fff;
   }   
 
-
-
+  .robo-wiki-note--warning .robo-wiki-note__text :not(pre)>code { 
+    background: #fff;
+  }
 
 </style>
