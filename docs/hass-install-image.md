@@ -26,14 +26,12 @@ Alternatively, to download it, IPFS is to be used. [Install IPFS](https://docs.i
 (Don't forget to run `ipfs init` before the first start):
 
 ```shell
-username@userpc:~$
 ipfs daemon
 ```
 
 In other terminal download image with
 
 ```shell
-username@userpc:~$
 ipfs get QmcvqPiFVdR436wxqcKyR98uxsMYU2jmfo1K1PX9kfj3Df -o rpi.img.xz
 ```
 
@@ -55,7 +53,6 @@ Run the Imager program. Select required image as the operating system and ensure
 
 After flashing, open the SD card's storage and navigate inside the `boot` folder of the card. Create and open a `wpa_supplicant.conf` file:
 ```shell
-username@userpc:~$
 cd /media/$USER/boot
 nano wpa_supplicant.conf
 ```
@@ -97,7 +94,6 @@ or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with
 Connect to it over `ssh`:
 
 ```bash
-username@userpc:~$
 ssh ubuntu@192.168.43.56
 ```
 

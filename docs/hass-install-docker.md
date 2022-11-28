@@ -78,7 +78,12 @@ Restart the container:
 
 Check that IPFS service is up and running:
 ```shell
-ubuntu@ubuntu:~$ systemctl status ipfs-daemon.service 
+systemctl status ipfs-daemon.service 
+```
+
+You will see the following output:
+
+```
 ● ipfs-daemon.service - IPFS Daemon Service
      Loaded: loaded (/etc/systemd/system/ipfs-daemon.service; enabled; preset: enabled)
      Active: active (running) since Thu 2022-11-03 11:30:39 UTC; 14min ago

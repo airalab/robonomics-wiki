@@ -33,7 +33,6 @@ tools:
 Download the installation script and run it with bash:
   
 ```shell
-ubuntu@your-rpi:~$
 wget https://raw.githubusercontent.com/airalab/robonomics-hass-utils/main/raspberry_pi/install_integration_core.sh
 sudo bash install_integration_core.sh
 ```
@@ -66,7 +65,12 @@ Restart your Home Assistant.
 
 Check that IPFS service is up and running:
 ```shell
-ubuntu@your-rpi:~$ systemctl status ipfs-daemon.service 
+ubuntu@ubuntu:~$ systemctl status ipfs-daemon.service 
+```
+
+You will see the following output:
+
+```
 ● ipfs-daemon.service - IPFS Daemon Service
      Loaded: loaded (/etc/systemd/system/ipfs-daemon.service; enabled; preset: enabled)
      Active: active (running) since Thu 2022-11-03 11:30:39 UTC; 14min ago

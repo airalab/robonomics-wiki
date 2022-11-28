@@ -17,7 +17,6 @@ this is mean that you complete one variant from "Install" section and the "Home 
 There is a quick installation option with a pre-written script. Connect to your Raspberry Pi, where you host Home Assistant and run:
 
 ```shell
-ubuntu@your-rpi:~$
 curl -O https://raw.githubusercontent.com/airalab/robonomics-hass-utils/main/raspberry_pi/mqtt-install.sh
 bash mqtt-install.sh
 ```

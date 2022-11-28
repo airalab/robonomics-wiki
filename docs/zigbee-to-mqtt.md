@@ -23,7 +23,6 @@ Go to ["Configuration and Run" part](/docs/zigbee-to-mqtt#config-and-run).
 Install necessary software for Zigbee2MQTT sticks:
 
 ```bash
-ubuntu@your-rpi:~$
 # Set up Node.js repository and install Node.js + required dependencies
 # NOTE: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v16.15.0/ e.g. Version 16.15.0 should work.
 sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -59,14 +58,13 @@ First, connect the adapter to Raspberry PI.
 Now you need to find the location of your stick. For this type in the next command.:
 
 ```bash
-ubuntu@your-rpi:~$
 $ ls -l /dev/serial/by-id
 ```
 
 Output should look like:
 
 ```shell
-ubuntu@your-rpi:~$ ls -l /dev/serial/by-id
+$ ls -l /dev/serial/by-id
 total 0
 lrwxrwxrwx 1 root root 13 Oct 10 01:44 usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0 -> ../../ttyUSB0
 
@@ -78,7 +76,6 @@ Then you need to configure it. Before starting Zigbee2MQTT you need to edit the 
 This file contains the configuration which will be used by Zigbee2MQTT.:
 
 ```bash
-ubuntu@your-rpi:~$
 nano /opt/zigbee2mqtt/data/configuration.yaml
 ```
 
@@ -131,7 +128,6 @@ advanced:
 Now you can run zigbee2mqtt:
 
 ```bash
-ubuntu@your-rpi:~$
 cd /opt/zigbee2mqtt
 npm start
 ```
@@ -181,7 +177,6 @@ After adding all the sensors, you stop program with `ctrl+C`.
 To make the Zigbee2MQTT run after reboot, make a service. Create the file:
 
 ```bash
-ubuntu@your-rpi:~$
 sudo nano /etc/systemd/system/zigbee2mqtt.service
 ```
 
@@ -207,7 +202,6 @@ WantedBy=multi-user.target
 Verify that the configuration works:
 
 ```bash
-ubuntu@your-rpi:~$
 sudo systemctl start zigbee2mqtt
 systemctl status zigbee2mqtt.service
 ```
@@ -234,7 +228,6 @@ Jun 07 20:27:25 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Start
 Now that everything works, you can use `systemctl` to start Zigbee2MQTT automatically on boot, this can be done by executing:
 
 ```bash
-ubuntu@your-rpi:~$
 sudo systemctl enable zigbee2mqtt.service
 ```
 That's all. Proceed to ["IOT subscription setup"](/docs/sub-activate/) to create Robonomics Parachain accounts and 

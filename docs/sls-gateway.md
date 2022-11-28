@@ -21,7 +21,6 @@ First you need to flash the gateway. For this:
 Then clone the repository with firmware to you the Raspberry Pi:
 
 ```bash
-ubuntu@your-rpi:~$
 git clone https://github.com/airalab/robonomics-hass-utils.git
 ```
 
@@ -31,7 +30,6 @@ Next go `robonomics-hass-utils/esp_firmware`. and navigate to a folder, which na
 The following example is for Linux. First, add permissions:
 
 ```bash
-ubuntu@your-rpi:~$
 cd robonomics-hass-utils/esp_firmware
 cd linux
 sudo chmod +x Clear.sh
