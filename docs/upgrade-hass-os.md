@@ -14,11 +14,15 @@ tools:
     https://docs.ipfs.tech/
 ---
 
-**This article contains instructions to upgrade your existing Home Assistant OS with Robonomics Integration.**
+**This article contains instructions to upgrade your existing Home Assistant OS with Robonomics integration.**
 
 ## Install IPFS Add-on
 
-Robonomics Integration stores the data using local IPFS daemon, so you need to install it first. There is an [IPFS Add-on for Home Assistant](https://github.com/LoSk-p/ipfs-addon).
+<robo-wiki-note type="okay">
+
+  Robonomics Integration stores the data using local IPFS daemon, so you need to install it first. There is an [IPFS Add-on for Home Assistant](https://github.com/LoSk-p/ipfs-addon).
+
+</robo-wiki-note>
 
 To install it go to `Settings/Add-ons` and press `Add-on Store` button in the lower right corner.
 
@@ -94,9 +98,7 @@ Press `Add` and you will see Robonomics in HACS Integrations. Press on it and ru
 
 <robo-wiki-picture src="home-assistant/robonomics-download.jpg" />
 
-Now that the integration is added to the folder of custom components of Home Assistant, you have two options:
+Now you have two options:
 
-- Whether you have MQTT integration installed and some Zigbee devices connected by either Zigbee2MQTT or any other hardware,
-proceed to [Robonomics subscription activation](/docs/sub-activate) and Robonomics Integration configuration.
-- Otherwise, navigate to [MQTT Broker](/docs/mqtt-setup/) installation where you also add MQTT integration to your Home
-Assistant and connect your Zigbee devices to your Home Assistant via preferred hardware.
+- If you have not yet used MQTT integration to connect smart devices via Zigbee adapter, go to the [**MQTT Setup**](/docs/mqtt-setup/) article.
+- Otherwise, go to the [**IoT Subscription**](/docs/sub-activate) section and start activating the Robonomics subscription.
