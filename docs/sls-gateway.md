@@ -102,6 +102,7 @@ The table with required values:
 <robo-wiki-note type="warning">
 
 If you already have an active SLS gateway in your home, and you are now configuring another one, then they will conflict with each other. To solve this problem you need to change the channel on the new device. To do this, go to `Zigbee` -> `Config` and change the channel to another one (e.g. channel 15).
+
 </robo-wiki-note>
 
 <robo-wiki-picture src="home-assistant/sls-hass.jpg" />

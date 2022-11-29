@@ -31,6 +31,7 @@ It has two forms: *Mnemonic* (human-readable) and *Raw* (a sequence of digits an
 <robo-wiki-note type="warning">
 
 Open `Advanced creation options`, change the crypto type of creating account to `Edwards - ed25519` and press `Next`.
+
 </robo-wiki-note>
 
 <robo-wiki-picture src="home-assistant/edw.jpg" />
@@ -46,6 +47,7 @@ Clicking on the `Next` button will take you to the last window. Click `Save` to 
 <robo-wiki-note type="note">
 
 Repeat these steps for an account with the name `SUB_CONTROLLER`.
+
 </robo-wiki-note>
 
 ## Add Accounts to Polkadot.js
@@ -69,6 +71,7 @@ In an opened window upload the JSON file, enter the password and press `Restore`
 <robo-wiki-note type="okay">
 
 For this step, you must have a sufficient amount of XRT tokens (minimum 2-3 XRTs) in your `SUB_OWNER` account.
+
 </robo-wiki-note>
 
 Go to Robonomics dapp to the [subscription page](https://dapp.robonomics.network/#/subscription) and press connect account on the right sidebar.
@@ -102,6 +105,7 @@ Give it a name and press the `+` button. Enter your `SUB_OWNER` password in the 
 <robo-wiki-note type="note">
 
 Repeat these steps for `SUB_OWNER` account.
+
 </robo-wiki-note>
 
 After that, go to the article ["Robonomics Integration Setup"](/docs/robonomics-integration-setup/) article.

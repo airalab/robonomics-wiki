@@ -80,6 +80,7 @@ Make sure to set your Wi-Fi credentials for `ssid`, `psk` fields and set a `coun
 <robo-wiki-note type="note">
   
   This way of setting Wi-Fi credentials is only available before the first boot. If you need to change it later, please, use `sudo raspi-config` command. 
+  
 </robo-wiki-note>
 
 Then save the file, **safely eject the SD card**, insert it into the Raspberry Pi and connect the power cable to your device. It should connect to your Wi-Fi network. 

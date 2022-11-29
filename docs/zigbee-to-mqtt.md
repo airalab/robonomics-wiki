@@ -12,7 +12,8 @@ tools:
 
 <robo-wiki-note type="warning">
 
-  If you use pre-installed image from Robonomics, this software already installed to your Raspberry Pi. Go to ["Configuration and Run"](/docs/zigbee-to-mqtt#config-and-run) section. 
+  If you use pre-installed image from Robonomics, this software already installed to your Raspberry Pi. Go to ["Configuration and Run"](/docs/zigbee-to-mqtt#config-and-run) section.
+
 </robo-wiki-note>
 
 Set up Node.js runtime environment repository and install it with required dependencies:
@@ -171,6 +172,7 @@ After adding all the sensors, you can stop the program with `Ctrl+C`.
 <robo-wiki-note type="note"> 
 
   If you don’t want to add any more devices, you can open the configuration file again and set `permit_join:` to `false`.
+  
 </robo-wiki-note>
 
 To make the Zigbee2MQTT run after reboot, make a service. Create the file:
