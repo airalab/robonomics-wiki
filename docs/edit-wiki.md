@@ -26,7 +26,6 @@ Docs in Robonomics WIKI contain frontmatter block. It must be at the top of the 
 ---
 title: How to contribute # Title for the page, you do not need to duplicate it in text
 contributors: [positivecrash] # Main contributors (who actively curates this page). GitHub nickname required, without any additional symbols
-translated: true # "true" if it has been translated in current language (see locale folder name of doc)
 tools:   
   - rust 1.62.0 
     https://blog.rust-lang.org/2022/06/30/Rust-1.62.0.html
@@ -82,19 +81,9 @@ It is recommended to insert pictures with built-in tag `<robo-wiki-picture>`, ho
 ```c
 <robo-wiki-picture src="example_image.jpg" caption="EXPLORE ROBONOMICS WIKI" alt="this is alternative text for image" />
 ```
+**Properties for robo-wiki-picture:**
 
-**Props for robo-wiki-picture**
-
-`src (required)` - path to the image:
-
- * if you uploaded your image directly to the `/docs/images/` use: 
- `url-of-your-doc`
-
- * if you uploaded image in one of the folders than use: `folder-name/url-of-your-doc`
-
-`link` - link to the needed page
-
-`caption` - caption for the image
+<probs-table :items="[{ id: 0, items: [{ name: 'src', code: true}, {name: 'String', code: true}, {name: true, code: true}, {name: null, code: false}, {name: [{text: `path to the image:`}, {text: `if you uploaded your image directly to the /docs/images/ use:`, codeText: 'url-of-your-doc'}, {text: `if you uploaded image in one of the folders than use:`, codeText:  `folder-name/url-of-your-doc`}]}]}, { id: 1, items: [{ name: 'link', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: `link to the needed page`}]}, {id: 2, items: [{ name: 'caption', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: `caption for the image`}]}]" />
 
 ### How to insert videos
 
@@ -109,7 +98,7 @@ It is recommended to insert videos with built-in tag `<robo-wiki-video>`, howeve
 `local file`
 
 ```c
-<robo-wiki-video :local="true" src="balena-robonomics-image-crop.mp4" />
+<robo-wiki-video local src="balena-robonomics-image-crop.mp4" />
 ```
 
 `server file` 
@@ -121,42 +110,16 @@ It is recommended to insert videos with built-in tag `<robo-wiki-video>`, howeve
 `video with controls` 
 
 ```c
-<robo-wiki-video :controls="true" src="https://static.robonomics.network/wiki/balena-robonomics-image-crop.mp4" />
+<robo-wiki-video controls src="https://static.robonomics.network/wiki/balena-robonomics-image-crop.mp4" />
 ```
 
-**Props for robo-wiki-video**
-
-`src (required)` - path to the video:
+**Properties for robo-wiki-video**
 
 ** <robo-wiki-note type="warning">
   IF YOU ADDING A FILE WITH THE SIZE OF MORE THAN <span style="color:#af1c1c">10MB</span>, PLEASE, ADD IT TO THE SERVER NOT A LOCAL FOLDER!
 </robo-wiki-note> **
 
- * if you uploaded your video directly to the `/docs/videos/` use: 
- `url-of-your-doc`
-
- * and for the server just use the link: https://some_url_here/name_of_the_file.format
-
-`local` - helps to get the right path for the file. If your video located in a local folder prop must be set to true.
-  - must be a boolean
-  - default: false
-
-`controls` - add controls to your video
-  - must be a boolean
-  - default: false
-
-`muted` - mute the video
-  - must be a boolean
-  - default: true
-
-`autoplay` - use autoplay
-  - must be a boolean
-  - default: true
-  - only works with muted = true in Chromium browsers
-
-`loop` - loop the video
-  - must be a boolean
-  - default: true
+<probs-table :items="[{ id: 0, items: [{ name: 'src', code: true}, {name: 'String', code: true}, {name: true, code: true}, {name: null, code: false}, {name: [{text: `path to the video:`}, {text: `if you uploaded your video directly to the /docs/videos/ use: `, codeText: `url-of-your-doc`}, {text: `and for the server just use the link:`, codeText:  `https://some_url_here/name_of_the_file.format`}]}]}, { id: 1, items: [{ name: 'local', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: [{text: `helps to get the right path for the file.`}, {text: `If your video located in a local folder prop must be set to`, codeText: `true.`}]}]}, {id: 2, items: [{ name: 'controls', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: `add controls to your video`}]}, {id: 3, items: [{ name: 'muted', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: `mute the video`}]}, {id: 4, items: [{ name: 'autoplay', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: [{text: `use autoplay`}, {text: `only works with muted =`, codeText: `true in Chromium browsers`}]}]}, {id: 5, items: [{ name: 'loop', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: `loop the video`}]}, ]" />
 
 ### YouTube videos
 You can embed any YouTube video in doc by inserting share link as separate paragraph without any additional quotes or tags, e.g.: `https://youtu.be/kQaSwNYHJQ8`
@@ -218,6 +181,10 @@ You can add notes and give them specific types:
 
 </robo-wiki-note>
 
+**Properties for robo-wiki-note**
+
+<probs-table :items="[{ id: 0, items: [{ name: 'type', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: 'note', code: false}, {name: [{text: `there are three types in total:`, codeText: 'note, warning, okay'}]}]}, { id: 1, items: [{ name: 'title', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: `adds title to your note`}]}]" />
+
 ### Custom title with anchors
 You can create custom titles with anchors and give them certain value
 
@@ -239,11 +206,9 @@ or
 </robo-wiki-title>
 ```
 
-**Props for robo-wiki-title**
+**Properties for robo-wiki-title**
 
-`type (required, must be a number (2 - 6))` - choose heading level
-
-`anchor` - value for the anchor
+<probs-table :items="[{ id: 0, items: [{ name: 'type', code: true}, {name: 'Number (from 2 to 6)', code: true}, {name: true, code: true}, {name: null, code: false}, {name: 'choose heading level'}]}, { id: 1, items: [{ name: 'anchor', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: `value for the anchor`}]}]" />
 
 <robo-wiki-title :type="2" anchor="I'm custom title :)">
   I'm custom title with anchor :)
@@ -328,29 +293,21 @@ You can add tabs to the doc:
   </robo-wiki-tabs>
 ```
 
-**Props for robo-wiki-tabs (wrapper)**
+**Properties for robo-wiki-tabs (wrapper)**
 
-`mode (must be string)` - you can choose tabs mode:
+<probs-table :items="[{ id: 0, items: [{ name: 'mode', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: 'horizontal', code: false}, {name: [{text: 'you can choose tabs mode:'}, {text: ``, codeText: ' horizontal'}, {text: ``, codeText: 'vertical'}]}]}]" />
 
- * horizontal (default)
+**Properties for robo-wiki-tab (item)**
 
- * vertical
-
-
-**Props for robo-wiki-tab (item)**
-
-`title (required, must be a string )` - title for the tab
-
-`border (must be a boolean, default - false)` - add border to the content wrapper
-
+<probs-table :items="[{ id: 0, items: [{ name: 'title', code: true}, {name: 'String', code: true}, {name: true, code: true}, {name: null, code: false}, {name: 'title for the tab'}]}, { id: 1, items: [{ name: 'border', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: 'add border to the content wrapper'}]}]" />
 
 
 <robo-wiki-tabs>
   <robo-wiki-tab title="Linux">
     <pre>ip a</pre>
   </robo-wiki-tab>
-  <robo-wiki-tab title="OSX" border>
-      ifconfig
+  <robo-wiki-tab title="OSX" border >
+      ifconfig 
   </robo-wiki-tab>
 </robo-wiki-tabs>
 
@@ -364,6 +321,51 @@ You can add tabs to the doc:
   </robo-wiki-tab>
 </robo-wiki-tabs>
 
+
+### Code Helper
+
+You can add helpful extras to your code: 
+
+`code with copy button`
+
+```c
+<code-helper copy>
+  YOUR CODE HERE
+</code-helper>
+```
+
+or
+
+`code with additional line`
+
+```c
+<code-helper additionalLine="this line will be added above your code :)">
+  YOUR CODE HERE
+</code-helper>
+```
+
+**Properties for code-helper**
+
+<probs-table :items="[{ id: 0, items: [{ name: 'copy', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: 'add a copy button for your code'}]}, { id: 1, items: [{ name: 'additional line', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: `additional line for you code that will be displayed above`}]}]" />
+
+<code-helper copy>
+
+```bash
+$ ls -l /dev/serial/by-id
+```
+
+</code-helper>
+
+<code-helper copy additionalLine="your@helper">
+
+```bash
+$ ls -l /dev/serial/by-id
+```
+
+</code-helper>
+
+
+
 ## Add new doc
 
 If you need to add new page in docs of Robonomics WIKI, please, follow these steps:
@@ -371,8 +373,7 @@ If you need to add new page in docs of Robonomics WIKI, please, follow these ste
 1. Find the folder with the locale that matches the language of the article you are adding, e.g. `/docs/en/`
 2. Create .md file, using in name latin characters and follow common rules for [url structure](https://developers.google.com/search/docs/advanced/guidelines/url-structure)
 3. Edit file as described above
-4. Duplicate file to other locale folders, even if you do not plan to translate them. Do not forget mark in frontmatter not translated pages as `translated: false`
-5. Add doc in menu:
+4. Add doc in menu:
 * Open file `/data/sidebar_docs.yaml`
 * Decide where to place your doc
 * If you want to create new section, provide title with locale appendix, using only locales your section is translated

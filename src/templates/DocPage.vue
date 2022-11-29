@@ -5,7 +5,7 @@
       <div class="page-title">
         <h1>{{ $page.doc.title }}</h1>
 
-        <ul class="page-title-meta" v-if="$page.doc.contributors.length > 0">
+        <!-- <ul class="page-title-meta" v-if="$page.doc.contributors.length > 0">
           <li v-if="$page.doc.contributors.length > 0">
             <span>Main contributors: </span>
             <template v-for="(contributor, index) in $page.doc.contributors">
@@ -17,11 +17,22 @@
           </li>
 
 
-          <!-- we do not need to show this if there are no contributors-->
+          we do not need to show this if there are no contributors
           <li v-if="$page.doc.contributors.length > 0 && !isCurrent('/docs/contributing/')">
             <g-link to="/docs/contributing/">How to contribute</g-link>
           </li>
-        </ul>
+        </ul> -->
+
+        <div class="page-title-meta" v-if="$page.doc.contributors.length > 0">
+          <span>Main contributors: </span>
+          <template v-for="(contributor, index) in $page.doc.contributors">
+            <span :key="index">
+              <g-link :to="'https://github.com/'+contributor">@{{contributor}}</g-link>
+              <span v-if="index != $page.doc.contributors.length-1">, </span>
+            </span>
+          </template>
+        </div>
+
       </div>
 
 
@@ -75,6 +86,11 @@
 </template>
 
 <style>
+
+  .page-title {
+    max-width: 900px;
+    width: calc(100% - var(--width-sidebar-left) - var(--space));
+  }
 
   .page-title-meta {
     border-width: 1px 0;
@@ -142,8 +158,9 @@
   .page-content {
     display: grid;
     grid-template-columns: minmax(0,var(--content-width)) minmax(0,var(--width-sidebar-left));
-    gap: var(--space);
+    gap: calc(var(--space) * 4);
     align-items: start;
+    justify-content: space-between;
     padding-top: calc(var(--space)/2);
   }
 
@@ -306,6 +323,9 @@
 
 
   @media screen and (max-width: 720px) {
+    .page-title {
+      width: 100%;
+    }
     .page-title-meta { display: block; }
     .page-content { grid-template-columns: minmax(0, 1fr) }
 
@@ -494,7 +514,7 @@ export default {
     //seems to be broken, needs checks
     currentDoc () {
       let doc = this.$route.matched[0].path
-      if((doc.match(new RegExp("/", "g")) || []).length == 2) doc += '/getting-started'
+      if((doc.match(new RegExp("/", "g")) || []).length == 1) doc += '/getting-started'
       return doc+'.md';
     },
 

@@ -48,8 +48,6 @@ Run the balenaEtcher program. Choose required image as the operating system, ens
 
 <robo-wiki-video src="https://static.robonomics.network/wiki/balena-robonomics-image-crop.mp4" />
 
-<!-- <robo-wiki-video :local="true" src="balena-robonomics-image-crop.mp4" /> -->
-
 ## First Boot
 
 After flashing, open the SD card's storage and navigate to the `boot` folder on the card. Create and open a `wpa_supplicant.conf` file:

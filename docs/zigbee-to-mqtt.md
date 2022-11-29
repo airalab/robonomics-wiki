@@ -18,34 +18,57 @@ tools:
 
 Set up Node.js runtime environment repository and install it with required dependencies:
 
+<code-helper copy>
+
 ```shell
 sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs git make g++ gcc
 ```
 
+</code-helper>
+
 Verify that the correct versions of Node.js (v14.X, V16.x, V17.x or V18.X) and package manager npm (6.X, 7.X or 8.X) automatically installed with Node.js, have been installed:
+
+<code-helper copy>
 
 ```shell
 node --version
 npm --version
 ```
 
+</code-helper>
+
 Create a directory for Zigbee2MQTT and set your user as owner of it:
+
+<code-helper copy>
+
 ```shell
 sudo mkdir /opt/zigbee2mqtt
 sudo chown -R ${USER}: /opt/zigbee2mqtt
 ```
 
+</code-helper>
+
 Clone Zigbee2MQTT repository:
+
+<code-helper copy>
+
 ```shell
 git clone --depth 1 --branch 1.28.2 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 ```
 
+</code-helper>
+
 Install dependencies (as user pi). Note that the npm ci could produce some warning which can be ignored.
+
+<code-helper copy>
+
 ```shell
 cd /opt/zigbee2mqtt
 npm ci
 ```
+
+</code-helper>
 
 <robo-wiki-title :type="2" anchor="config-and-run">
 Configuration and Run
@@ -57,9 +80,13 @@ Connect the Zigbee adapter to Raspberry Pi.
 
 Then you need to find the location of the adapter. For this run the next command:
 
+<code-helper copy>
+
 ```bash
 ls -l /dev/serial/by-id
 ```
+
+</code-helper>
 
 Output should look like:
 
@@ -74,9 +101,13 @@ In this example device connection directory is `ttyUSB0`.
 
 Before starting Zigbee2MQTT you need to edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2MQTT:
 
+<code-helper copy>
+
 ```bash
 nano /opt/zigbee2mqtt/data/configuration.yaml
 ```
+
+</code-helper>
 
 The basic configuration needs a few adjustments. Change the following statements:
  - `homeassistant:` to `true`. It will automatically connect sensors to Home Assistant.
@@ -114,6 +145,8 @@ serial:
 
 </robo-wiki-note>
 
+<code-helper copy>
+
 ```shell
 advanced:
   # Optional: ZigBee channel, changing requires re-pairing of all devices. (Note: use a ZLL channel: 11, 15, 20, or 25 to avoid Problems)
@@ -121,12 +154,18 @@ advanced:
   channel: 15
 ```
 
+</code-helper>
+
 Now you can start Zigbee2MQTT:
+
+<code-helper copy>
 
 ```bash
 cd /opt/zigbee2mqtt
 npm start
 ```
+
+</code-helper>
 
 If started successfully, you will see something like:
 
@@ -177,11 +216,17 @@ After adding all the sensors, you can stop the program with `Ctrl+C`.
 
 To make the Zigbee2MQTT run after reboot, make a service. Create the file:
 
+<code-helper copy>
+
 ```shell
 sudo nano /etc/systemd/system/zigbee2mqtt.service
 ```
 
+</code-helper>
+
 Add the following to this file:
+
+<code-helper copy>
 
 ```shell
 [Unit]
@@ -200,12 +245,18 @@ User=ubuntu
 WantedBy=multi-user.target
 ```
 
+</code-helper>
+
 Verify that the configuration works:
+
+<code-helper copy>
 
 ```shell
 sudo systemctl start zigbee2mqtt
 systemctl status zigbee2mqtt.service
 ```
+
+</code-helper>
 
 Output should look like:
 ```
@@ -228,8 +279,12 @@ Jun 07 20:27:25 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Start
 
 Enable the service to start Zigbee2MQTT automatically on boot:
 
+<code-helper copy>
+
 ```shell
 sudo systemctl enable zigbee2mqtt.service
 ```
+
+</code-helper>
 
 Now you can go to the [**IoT Subscription**](/docs/sub-activate) section and start activating the Robonomics subscription.
