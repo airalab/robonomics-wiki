@@ -8,7 +8,7 @@ tools:
     https://github.com/home-assistant/core
 ---
 
-**This article describes how to configure MQTT integration. If you are on this page.**
+**This article describes how to install MQTT broker and configure MQTT integration.**
 
 ## Install MQTT Broker
 

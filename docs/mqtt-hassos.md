@@ -6,8 +6,7 @@ tools:
     https://github.com/home-assistant/core
 ---
 
-**This article describes how to install MQTT broker to Home Assistant OS. If you are on this page, 
-this is mean that you complete "Upgrade Your Home Assistant OS" and the "Home Assistant init" articles.**
+**This article describes how to install MQTT broker to Home Assistant OS.**
 
 ## Install MQTT Broker
 
