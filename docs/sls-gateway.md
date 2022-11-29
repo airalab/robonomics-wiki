@@ -4,67 +4,79 @@ title: Robonomics SLS Gateway
 contributors: [LoSk-p, Fingerling42, nakata5321]
 ---
 
-**After installing [MQTT broker](/docs/mqtt-and-hass-setup/) on the Raspberry Pi, you can now set up the Robonomics SLS Gateway.**
+**In this article you will set up Robonomics SLS Gateway. You will install the required software for the gateway, configure it and connect it to Home Assistant.**
 
 ## Firmware
 
-First you need to flash the gateway. For this:
-
-1. Set switches 1 and 3 at the bottom part of SLS Gateway to `ON`, others must be `OFF`.
+First you need to install microcontroller firmware of the gateway. Prepare the gateway by setting switches `1` and `3` at the bottom part of SLS Gateway to `ON`, others must be `OFF`.
 
 <robo-wiki-picture src="home-assistant/sls-gateway-13.gif" />
 
-2. Connect gateway to your Raspberry Pi via USB type-C port on the gateway.
+Connect gateway to your Raspberry Pi via USB type-C port on the gateway.
 
 <robo-wiki-picture src="home-assistant/sls-rpi.gif" />
 
-Then clone the repository with firmware to you the Raspberry Pi:
+Clone the repository with firmware to your Raspberry Pi:
 
-```bash
+```shell
 git clone https://github.com/airalab/robonomics-hass-utils.git
 ```
 
-Next go `robonomics-hass-utils/esp_firmware`. and navigate to a folder, which name depends on your OS: 
-`windows`, `linux` or `Mac`. To flash the SLS gateway you need to run `Clear` and `Flash_16mb` scripts.
+Go to `robonomics-hass-utils/esp_firmware/linux`. To flash the SLS gateway you need to run `Clear` and `Flash_16mb` scripts.
 
-The following example is for Linux. First, add permissions:
-
-```bash
-cd robonomics-hass-utils/esp_firmware
-cd linux
+```shell
+cd robonomics-hass-utils/esp_firmware/linux
 sudo chmod +x Clear.sh
 sudo chmod +x Flash_16mb.sh
 ./Clear.sh
 ./Flash_16mb.sh
 ```
 
+### Troubleshooting
+
+If you are experiencing problems updating the gateway firmware, you need to take additional steps:
+
+1. Make sure you have the pySerial module installed:
+
+```shell
+pip install pyserial
+```
+
+2. Give your user access rights to the USB port:
+
+```shell
+sudo usermod -a -G dialout $USER
+```
+
+3. In some cases, it is necessary to change the bandwidth setting in the script to update the firmware. Open the `Flash_16mb.sh` script with the `nano` editor and change the baud parameter from `921600` to a smaller value (for example, `115200`).
+
 ## Configuration
 
-1. Set the switches on the back of the gateway are properly positioned. Switches 5 (RX Zigbee to ESP) and 6 (TX Zigbee to ESP) must be in the `ON` position, the others must be `OFF`. 
+1. Set the switches on the back of the gateway to the proper position. Switches `5` (RX Zigbee to ESP) and `6` (TX Zigbee to ESP) must be in the `ON` position, the others must be `OFF`. 
 
 <robo-wiki-picture src="home-assistant/sls-gateway-56.gif" />
 
-2. Connect the type C power cable. The indicator light in the center should turn green.
+2. Connect the type-C power cable. The indicator light in the center should turn green.
 
 <robo-wiki-picture src="home-assistant/sls-gateway-connect.gif" />
 
-3. On the first startup, the gateway will start sharing Wi-Fi with the SSID `zgw****`. Connect to this network. Keep in mind that the signal may be quite weak, so it is better to keep the SLS Gateway closer to your computer. 
+3. On the first startup, the gateway will start sharing Wi-Fi with the SSID `zgw****`. Connect to this network. Keep in mind that the signal may be quite weak, so it is better to keep the SLS gateway closer to your computer. 
 
 <robo-wiki-picture src="home-assistant/sls-gateway-wifi.gif" />
 
-4. If the connection is successful, the web interface will open (or you can find it on 192.168.1.1). 
-5. You will see `WI-FI Settings` page. Press to your Wi-Fi and enter the password. Press `Apply` button. The gateway will restart and connect to your WI-Fi network. 
+4. If the connection is successful, the web interface will open (or you can find it on 192.168.1.1 address). 
+
+5. You will see `Wi-Fi Settings` page. Select your Wi-Fi and enter the password. Press `Apply` button. The gateway will restart and connect to your Wi-Fi network. 
 
 <robo-wiki-picture src="home-assistant/wi-fi-connect.jpg" />
 
-6. Find the local IP of the SLS gateway to access the web interface. For that you can use [Fing app](https://www.fing.com/products). 
-Also, you can use [nmap](https://vitux.com/find-devices-connected-to-your-network-with-nmap/) in your terminal.
+6. Find the local IP of the SLS gateway to access the web interface. To find it you can use [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/). The gateway name should look like this: `zgw****`. Open the web interface of the gateway by pasting the gateway IP into a browser.
 
-7. Go to `Setting` -> `Hardware` and make sure that the settings look like this. Correct the settings if necessary and click `Save` button:
+7. Go to `Setting` -> `Hardware` and make sure that the settings look like on the image. Correct the settings if necessary and click `Save` button:
 
 <robo-wiki-picture src="home-assistant/sls-hardware.jpg" />
 
-Here is the table with required values:
+The table with required values:
 
 | Field                    | Value              |
 |--------------------------|:-------------------|
@@ -72,7 +84,7 @@ Here is the table with required values:
 | Zigbee UART RX           | 22                 |
 | Zigbee UART TX           | 23                 |
 | Zigbee RST Pin           | 18                 |
- | Zigbee BSL Pin           | 19                |
+| Zigbee BSL Pin           | 19                 |
 | Button Mode              | 33 (pullUP - true) |
 | Number addressable leds  | 0                  |
 | Led Red (or addr)        | 21                 |
@@ -81,42 +93,36 @@ Here is the table with required values:
 | I2C SDA                  | 255                |
 | I2C SCL                  | 255                |
 
-8. Then reboot the gateway. Choose `Actions` -> `Reboot system` at the right top corner.
+8. Make sure that the gateway works properly in the Zigbee info window. DeviceState should be `OK`.
 
-9. Configure automatically adding devices to Home Assistant. Go to `Zigbee` -> `Config` then click `Home Assistant MQTT Discovery` and `Clear States`. Then `Save` button and again **reboot** SLS gateway:
+9. Then reboot the gateway. Choose `Actions` -> `Reboot system` at the right top corner.
+
+10. Configure automatically adding devices to Home Assistant. Go to `Zigbee` -> `Config` then choose `Home Assistant MQTT Discovery` and `Clear States`. Save changes and again **reboot** SLS gateway.
 
 <robo-wiki-note type="warning">
-If you already have an active SLS gateway  or a similar device in your home, 
-and you are now configuring another SLS gateway, then they will conflict with each other. 
-To solve this problem you need change channel on the new device in field "channel". 
+
+If you already have an active SLS gateway in your home, and you are now configuring another one, then they will conflict with each other. To solve this problem you need to change the channel on the new device. To do this, go to `Zigbee` -> `Config` and change the channel to another one (e.g. channel 15).
 </robo-wiki-note>
 
 <robo-wiki-picture src="home-assistant/sls-hass.jpg" />
 
-10. Connect your devices by going to `Zigbee` -> `Join`. Press the `Enable Join` button to start searching Zigbee devices. The most common way to switch a device to connect mode is to hold its power button. For lamps one may switch them on|off
-for 5 times. 
+11. Connect your devices by going to `Zigbee` -> `Join`. Put your sensors in pairing mode, the most common way to switch a device to connect mode is to hold its power button or switch them on/off for 5 times. Press the `Enable Join` button to start searching Zigbee devices. You will see active sensors.
 
 <robo-wiki-picture src="home-assistant/switch-device.gif" />
 
 
 ## Pairing SLS to MQTT
 
-After connecting all sensors to the SLS Gateway, it's time to connect SLS Gateway to Home Assistant.
-On your SLS Gateway web interface go to `Settings/Link` -> `MQTT Setup`:
+After connecting all sensors to the SLS Gateway, you need to connect SLS Gateway to Home Assistant. Open SLS Gateway web interface and go to `Settings/Link` -> `MQTT Setup`:
 
 <robo-wiki-picture src="home-assistant/sls-mqtt-menu.jpg" />
 
-And add your broker address (address of the Raspberry Pi with Home Assistant in local network, you can find it in Fing [app](https://www.fing.com/products) 
-or with `ip a` command on your RPi), port (default is 1883) and your broker username and password (which you have created earlier). 
-Also write the topic name (you can choose any).
+Add your broker address (address of the Raspberry Pi with Home Assistant in local network, you can find it with [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)), port (default is `1883`) your broker username and password (which you have created earlier) and the topic name (you can choose any). Also, the Raspberry Pi IP address must be static.
 
-<robo-wiki-note type="okay">Don't forget to click `Enable` and `Retain states`.</robo-wiki-note>
-
-<robo-wiki-note type="warning">Paspberry Pi IP address must be static.</robo-wiki-note>
+Click on `Enable` and `Retain states`.
 
 <robo-wiki-picture src="home-assistant/sls-mqtt1.jpg" />
 
 Save changes. Now devices will be automatically shown in Home Assistant.
 
-That's all. Proceed to ["IOT subscription setup"](/docs/sub-activate/) to create Robonomics Parachain accounts and 
-activate subscription to use Robonomics integration.
+Now you can go to the [**IoT Subscription**](/docs/sub-activate) section and start activating the Robonomics subscription.
