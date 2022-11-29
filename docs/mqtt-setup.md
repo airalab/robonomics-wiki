@@ -8,11 +8,16 @@ tools:
     https://github.com/home-assistant/core
 ---
 
-**This article describes how to install MQTT broker. If you are on this page, 
-this is mean that you complete one variant from "Install" section and the "Home Assistant init" article.**
-
+**This article describes how to configure MQTT integration. If you are on this page, 
+this is mean that you complete one variant from "Install" section and the "Home Assistant Init" article.**
 
 ## Install MQTT broker
+
+<robo-wiki-note type="warning">
+
+  This installation method only for Core and Docker Home Assistant installations. If you have Home Assistant OS, go to [MQTT Broker for Home Assistant OS](/docs/mqtt-hassos/) to install the MQTT broker and continue with "Add MQTT Integration" section.
+
+</robo-wiki-note>
 
 There is a quick installation option with a pre-written script. Connect to your Raspberry Pi, where you host Home Assistant and run:
 
