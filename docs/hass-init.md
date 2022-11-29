@@ -6,31 +6,22 @@ tools:
     https://github.com/home-assistant/core
 ---
 
-**With Home Assistant installed, it’s time to configure it.**
+**After installing Home Assistant, it needs to be initialized.**
 
-## Configuration
+You are starting with the creation of the owner account of Home Assistant. This account is an administrator and can make any changes. Open web browser and go to `http://%RASPBERRY_IP_ADDRESS%:8123`. You can find the IP address of Raspberry Pi using [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
-Here you will create the owner account of Home Assistant. 
-This account will be an administrator and will always be able to change everything. Open web browser and go to 
-`http://%RASPBERRY_IP_ADDRESS%:8123`(RASPBERRY_IP_ADDRESS you have found in previous [article](/docs/hass-install-image)).
+<robo-wiki-note type="note">Raspberry Pi address may change in time, due router settings.</robo-wiki-note>
 
-<robo-wiki-note type="note">Raspberry Pi address may change in time, due router settings</robo-wiki-note>
-
-At the first page, enter a name, username, password and click on “create account”.
+At the first page, enter a name, username, password and click on the `CREATE ACCOUNT` buttoon.
 
 <robo-wiki-picture src="home-assistant/username.jpg" alt="create user" />
 
-
-Next, you can enter a name for your home and set your location and unit system. Click “DETECT” to find your location and set your time zone and unit system based on that location.
-If you’d rather not send your location, you can set these values manually.
+Next, enter a name for your home and set your location and unit system. Click `DETECT` to find your location and set your time zone and unit system based on that location. If you’d rather not send your location, you can set these values manually.
 
 <robo-wiki-picture src="home-assistant/location.jpg" alt="set location" />
 
-Once you are done, click Next. In this screen, Home Assistant will show any devices that it has discovered on your network.
-Don’t be alarmed if you see fewer items than what is shown below; you can always manually add devices later.
+On the next screen, Home Assistant will show any devices that it has discovered on your network. Don’t worry if you see fewer items than what is shown below; you can always manually add devices later. For now, just click `FINISH` and you will be on the main Home Assistant screen.
 
 <robo-wiki-picture src="home-assistant/add-devices.jpg" alt="additional devices" />
 
-Finally, click Finish. Now you’re brought to the Home Assistant web interface.
-This screen will show all of your devices. So let’s get that screen filled up! Proceed to [MQTT setup](/docs/mqtt-setup)
-to add MQTT integration and then - new devices!.
+After that, you will see the Home Assistant web interface, which will show all of your devices. Next you need to setup MQTT, so go to the [corresponding article](/docs/mqtt-setup).

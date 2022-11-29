@@ -1,40 +1,34 @@
 ---
 title: Global Administration
 
-contributors: [nakata5321]
+contributors: [nakata5321, Fingerling42]
 translated: true
 ---
 
-This article will show you how to set up a new user to your Home Assistant.
+**This article will show you how to set up a new user to your Home Assistant.**
 
-## Use DApp
+You cannot use previously created accounts because `SUB_OWNER` and `SUB_CONTROLLER` provide security, and the first user you created when you first started Home Assistant does not have a Robonomics Parachain account.
 
-Home Assistant users shouldn't take `SUB_OWNER` or `SUB_CONTROLLER` accounts, because,
-as said [earlier](/docs/sub-activate/) they provide security. Also, you can't take the  user, 
-which you have created at first start of Home Assistant, because this user doesn't 
-have account in Robonomics Parachain.
+Start with creating an account on Robonomics parachain, as you did in the [previous article](/docs/sub-activate/).
 
-Let's create an account, as we did in the previous [article](/docs/sub-activate/). 
-Add this account to the subscription [here](https://dapp.robonomics.network/#/subscription/devices). Now there should be three addresses in the access list - `SUB_OWNER`, `SUB_CONTROLLER` and `user`.
+Add this account to the subscription in the [dapp](https://dapp.robonomics.network/#/subscription/devices). Now there should be three addresses in the access list: `SUB_OWNER`, `SUB_CONTROLLER` and `USER`.
 
 <robo-wiki-picture src="home-assistant/user.jpg" />
 
-Then go to the Dapp service [**"HomeAssistant Account"**](https://dapp.robonomics.network/#/home-assistant). Choose account, 
-you've just created at the right sidebar (check that you have chosen the intended account by pressing the profile icon).
-Then enter the `USER` seed in the required field. In the next two raws type in `SUB_OWNER` and `SUB_CONTROLLER` addresses:
+Go to the dapp service called [Home Assistant Account](https://dapp.robonomics.network/#/home-assistant). Choose the account you've just created at the right sidebar (check that you have chosen the intended account by pressing the profile icon).
+
+Enter the `USER` seed in the required field. Add `SUB_OWNER` and `SUB_CONTROLLER` addresses in the administrator credits fields.
 
 <robo-wiki-picture src="home-assistant/acc-pass.jpg" />
 
-If everything right, you will see ** 3. Verification status ** - `Verified`.
+If everything is correct, you will see verification status `VERIFIED`.
 
-Create a password for a new HA user which you have just registered. Type the passport below `Your Home Assistant password` and click "create password". Confirm transaction. (Later you can restore it in "restore" tab.)
+Create a password for a new user which you have just registered and then confirm the transaction, that will now be without fee due to the subscription. Later you can restore the password in the Restore tab.
 
 <robo-wiki-picture src="home-assistant/password.jpg" />
 
-It’s free now since the accounts are using RWS subscription. After the registration process, you can log in to Home Assistant with your address as `login` and a newly-created password. Go to login page and login:
+After the registration process, log in to Home Assistant with your user address as login and a newly-created password.
 
 <robo-wiki-picture src="home-assistant/acc-login.jpg" />
 
-That's all. 
-
-Check ["SmartHome Telemetry"](/docs/use-dapp/) article to get data about your home through the Robonomics.
+Now you can use the dapp to control your home through Robonomics, check [**"SmartHome Telemetry"**](/docs/use-dapp/) article.

@@ -14,23 +14,19 @@ tools:
     https://docs.ipfs.tech/
 ---
 
-**This article contains instructions to upgrade your existing Home Assistant Core with Robonomics Integration.**
+**This article contains instructions to upgrade your existing Home Assistant Core with the Robonomics integration.**
 
 <robo-wiki-note type="warning" title="DISCLAIMER">
 
-  Here, Robonomics integration and IPFS are to be installed along with existing Home Assistant Core.
-
-  1. This section is designed with an assumption that installation went completely according to 
-  [instructions](https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-core) given by Home Assistant
-  developers and there is a <u>homeassistant</u> user and venv. If it is not the case, follow instructions below **but edit the script accordingly**.
+  1. It is assumed that the installation of your Home Assistant Core was completed in accordance to the [official instructions](https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-core) and there is a <u>homeassistant</u> user and the `venv` environment. If it is not the case, follow instructions below, **but edit the script accordingly**.
   2. IPFS will be installed and run as a <u>systemd</u> service on the host machine.
-  3. It is assumed that you have Python3.9 or higher installed.
+  3. It is assumed that you have [Python3.9](https://www.python.org/downloads/) or higher installed.
 
 </robo-wiki-note>
 
 ## Install
 
-Download the installation script and run it with bash:
+Download the installation script and run it in the terminal:
   
 ```shell
 wget https://raw.githubusercontent.com/airalab/robonomics-hass-utils/main/raspberry_pi/install_integration_core.sh
@@ -50,22 +46,22 @@ Checked out revision 125.
 Integration downloaded!
 ```
 
-Somewhere along the way you will be asked to confirm the restart of several services. Navigating with `tab`, select the `yes` option.
+During the process, you will be asked to confirm the restart of several services. Navigating with `tab`, select the `yes` option.
   
-<robo-wiki-note type="note" title="`custom_components` exists.">
+<robo-wiki-note type="note" title="Error: `custom_components` exists">
 
-  You may see an error like `mkdir: can't create directory 'custom_components': File exists`. This
-  means that you have already installed some custom components and the folder exists. Ignore this message.
+  You may see an error like `mkdir: can't create directory 'custom_components': File exists`. This means that you have already have this folder with some custom components installed. Just ignore this message.
 
 </robo-wiki-note>
   
-Restart your Home Assistant.
+After finishing, restart your Home Assistant.
 
 ## Verify
 
-Check that IPFS service is up and running:
+Check that the IPFS service is up and running:
+
 ```shell
-ubuntu@ubuntu:~$ systemctl status ipfs-daemon.service 
+systemctl status ipfs-daemon.service 
 ```
 
 You will see the following output:
@@ -82,11 +78,7 @@ You will see the following output:
              └─4400 /usr/local/bin/ipfs daemon
 ```
 
-You will see the integration available while going through further steps of this tutorial.
+Now you have two options:
 
-Now that the integration is added to the folder of custom components of Home Assistant, you have two options:
-
-- Whether you have MQTT integration installed and some Zigbee devices connected by either Zigbee2MQTT or any other hardware,
-proceed to [Robonomics subscription activation](/docs/sub-activate) and Robonomics Integration configuration.
-- Otherwise, navigate to [MQTT Broker](/docs/mqtt-setup/) installation where you also add MQTT integration to your Home
-Assistant and connect your Zigbee devices to your Home Assistant via preferred hardware.
+- If you have not yet used MQTT integration to connect smart devices via Zigbee adapter, go to the [**MQTT Setup**](/docs/mqtt-setup/) article.
+- Otherwise, go to the [**IoT Subscription**](/docs/sub-activate) section and start activating the Robonomics subscription.
