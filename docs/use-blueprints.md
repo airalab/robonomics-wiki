@@ -22,9 +22,9 @@ If you want to make changes, you can find it by going to `Settings/Automations &
 
 <robo-wiki-picture src="home-assistant/automations-all.jpg" alt="Automations List" />
 
-## Importing blueprints
+## Importing Blueprints
 
-Home Assistant can import blueprints from the Home Assistant forums, GitHub and GitHub gists. List of all Blueprints are located on [Blueprints Exchange](https://community.home-assistant.io/c/blueprints-exchange/53). After you chose, go to `Settings/Automations & Scenes` and open `Blueprints`. Click on `Import Blueprint` and insert URL of the chosen blueprint. Then click on “preview blueprint”. In this case we will use [Low battery level detection & notification for all battery sensors](https://community.home-assistant.io/t/low-battery-level-detection-notification-for-all-battery-sensors/258664). 
+Home Assistant can import blueprints from the Home Assistant forums, GitHub and GitHub gists. List of all Blueprints are located on [Blueprints Exchange](https://community.home-assistant.io/c/blueprints-exchange/53). After you chose, go to `Settings/Automations & Scenes` and open `Blueprints`. Click on `Import Blueprint` and insert URL of the chosen blueprint. Then click on `PREVIEW BLUEPRINT`. In this case we will use [Low battery level detection & notification for all battery sensors](https://community.home-assistant.io/t/low-battery-level-detection-notification-for-all-battery-sensors/258664). 
 
 <robo-wiki-picture src="home-assistant/importing-blueprint.jpg" alt="Importing Blueprint" /> 
 

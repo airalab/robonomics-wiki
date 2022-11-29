@@ -1,25 +1,24 @@
 ---
 title: Robonomics integration setup
 
-contributors: [LoSk-p, nakata5321]
+contributors: [LoSk-p, nakata5321, Fingerling42]
 ---
 
-After finishing with [IOT subscription](/docs/sub-activate/) it's time to install **Robonomics integration**. This integration allows Home Assistant to record datalogs with encrypted data from Home Assistant to Robonomics Parachain and listen launch commands from this Parachain to control smart devices. Integration use IPFS to store data and send IPFS hashes to  datalog or launch.
+**In this article, you will add Robonomics to Home Assistant. This allows Home Assistant to record datalogs with encrypted data to Robonomics Parachain and listen for launch commands from the parachain to control smart devices. Integration uses IPFS to store data and send IPFS hashes to datalog or launch functions.**
 
-## Configure
-
-Now you can add integration to Home Assistant. In web interface go to `Settings/Device & Services` and press `Add Integration`. Find there `Robonomics`:
+In the web interface of Home Assistant go to `Settings` -> `Device & Services` and press `ADD INTEGRATION`. Search for `Robonomics`.
 
 <robo-wiki-picture src="home-assistant/add-integration.jpg" />
 
-Click on it and fill the configuration. Here you need to add seed from `SUB_CONTROLLER` and public address of `SUB_OWNER` accounts (which you previously created).
-Also, you can set sending interval, by default it is 10 minutes.
+Click on Robonomics and fill in the configuration: 
 
-Moreover, you can add your Pinata credentials. It is not necessary, if you will not do it, data will be pinned with your local node and Infura.If you add the credentials files will also be pinned on Pinata to help them spread wider over IPFS.
+- Add seed from the `SUB_CONTROLLER` account to admin account seed.
+- Add the public address of the `SUB_OWNER` account to the subscription owner address.
+- Set the interval of data sending (by default it is 10 minutes).
+- (Optional) You can add credentials for pinning service Pinata to spread your data wider over the IPFS network.
 
 <robo-wiki-picture src="home-assistant/config.jpg" />
 
- Fill in everything and press `Submit`. If is, you will see **Success** window. Close it.
+Press `SUBMIT` after finishing the configuration. If you filled in everything correctly, you will see the success window.
 
-Congratulations! You fully set up and configurate Home Assistant with robonomics integration. Now go to "Use" chapter to start
-working with your upgraded smart home.
+Congratulations! You have fully installed and configured Home Assistant with Robonomics integration. Now go to [**"Use"**](https://wiki.robonomics.network/docs/global-administration) section to start working with your upgraded smart home.

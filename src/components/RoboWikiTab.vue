@@ -4,7 +4,7 @@
     :class="{'robo-wiki-tabs__wrapper--border': border}"
     v-show="isActive"
   >
-    <slot/>
+  <slot/>
   </div>
 </template>
 
@@ -35,15 +35,12 @@ export default {
   .robo-wiki-tabs__wrapper {
     width: 100%;
     overflow: hidden;
+    position: relative;
   }
 
   .robo-wiki-tabs__wrapper--border {
     padding: 10px;
     border: 1px solid var(--text-color);
-  }
-
-  .robo-wiki-tabs--vertical .robo-wiki-tabs__wrapper pre{
-    margin-bottom: 0;
   }
 
   .robo-wiki-tabs--vertical .robo-wiki-tabs__wrapper {
