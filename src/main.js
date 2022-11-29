@@ -22,6 +22,8 @@ import RoboWikiTitle from '~/components/RoboWikiTitle.vue';
 import RoboWikiFeedback from '~/components/RoboWikiFeedback.vue';
 import RoboWikiTabs from '~/components/RoboWikiTabs.vue';
 import RoboWikiTab from '~/components/RoboWikiTab.vue';
+import PropsTable from '~/components/PropsTable.vue';
+import CodeHelper from '~/components/CodeHelper.vue';
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, { router, head, isClient, appOptions }) {
@@ -35,6 +37,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.component('RoboWikiFeedback', RoboWikiFeedback)
   Vue.component('RoboWikiTabs', RoboWikiTabs)
   Vue.component('RoboWikiTab', RoboWikiTab)
+  Vue.component('ProbsTable', PropsTable)
+  Vue.component('CodeHelper', CodeHelper)
   Vue.use(Vuex)
     
   Vue.use(VueCookies)

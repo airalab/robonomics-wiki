@@ -12,7 +12,7 @@
         :src="picture" 
       />
 
-      <img v-if="isGif() && type === 'markdown'" v-bind="$attrs" :src="picture.src" >
+      <img v-if="isGif() && type === 'markdown'" v-bind="$attrs" :src="picture.src">
 
     </g-link>
     <figcaption v-if="caption" class="robo-wiki-picture__text">{{caption}}</figcaption>
@@ -20,7 +20,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'RoboWikiPicture',
   inheritAttrs: false,
@@ -62,7 +61,7 @@ export default {
         return false
       }
     }
-  },
+  }
 
 }
 </script>
