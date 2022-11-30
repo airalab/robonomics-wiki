@@ -43,7 +43,6 @@ export default {
 
       try {
         await navigator.clipboard.writeText(text);
-        console.log('Copied');
         this.copied = true;
 
         setTimeout(() => {
@@ -51,7 +50,6 @@ export default {
         }, 3000)
       } catch($e) {
         this.copied = false;
-        console.log('Cannot copy');
       }
     }
   }
@@ -78,6 +76,7 @@ export default {
 
   .code__additionalLine--nobg {
     background-color: var(--code-bg);
+    padding: 0;
   }
 
   .code-helper--only-copy .copy-btn {
@@ -90,6 +89,7 @@ export default {
 
   .code-helper--only-copy .copy-btn small {
     top: -10px;
+    bottom: unset;
   }
 
   .copy-btn {

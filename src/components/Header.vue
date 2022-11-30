@@ -70,17 +70,17 @@
 
   .header-nav { text-align: right; }
 
-  .hide-bar {
-    padding-top: calc(var(--header-padding) * 0.5);
-    padding-bottom: 0;
-  }
-
 
   @media screen and (max-width: 860px) {
     .header-top {
       grid-template-columns: auto auto;
       grid-template-rows: auto auto;
       gap: calc( var(--space)/2 )
+    }
+
+    .hide-bar {
+      padding-top: calc(var(--header-padding) * 0.5);
+      padding-bottom: 0;
     }
 
     .header-center {
@@ -135,10 +135,21 @@ export default {
     }
   },
 
+  watch: {
+    "$route.path": function(current, old) {
+      this.$store.commit('toggleShowSearchbar', true)
+
+      if(process.isClient) {
+        document.querySelector('.all-content').addEventListener('scroll', this.onScroll)
+      }
+    }
+  },
+
   methods: {
     onScroll() {
     // Get the current scroll position
     const currentScrollPosition =  document.querySelector('.all-content').pageYOffset || document.querySelector('.all-content').scrollTop
+
     // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
     if (currentScrollPosition < 0) {
       return
@@ -149,27 +160,28 @@ export default {
         return
       }
 
-
       // this.searchIsShown = currentScrollPosition < this.lastScrollPosition
       this.$store.commit('toggleShowSearchbar', currentScrollPosition < this.lastScrollPosition)
 
       this.lastScrollPosition = currentScrollPosition
-    }
+    },
   },
 
+
   mounted () {
-    window.addEventListener('resize', () => {
-      if (window.innerWidth <= 860) {
-        document.querySelector('.all-content').addEventListener('scroll', this.onScroll)
-      } else {
-      this.$store.commit('toggleShowSearchbar', true)
-        document.querySelector('.all-content').removeEventListener('scroll', this.onScroll)
-      }
+    this.$store.commit('toggleShowSearchbar', true)
+
+    document.querySelectorAll('.all-content ').forEach(item => {
+      item.addEventListener('scroll', this.onScroll)
     })
   },
   
   beforeDestroy () {
     document.querySelector('.all-content').removeEventListener('scroll', this.onScroll)
+
+    document.querySelectorAll('.all-content ').forEach(item => {
+      item.removeEventListener('scroll', this.onScroll)
+    })
   }
 
 }

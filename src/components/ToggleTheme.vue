@@ -16,6 +16,13 @@ export default {
     toggleTheme() {
       this.darkTheme = !this.darkTheme
 
+      if(this.darkTheme) {
+        this.$store.commit("toggleTheme", 'dark')
+      } else {
+        this.$store.commit("toggleTheme", 'light')
+      }
+
+
       // This is using a script that is added in index.html
       window.__setPreferredTheme(
         this.darkTheme ? 'dark' : 'light'
@@ -24,6 +31,10 @@ export default {
   },
   mounted() {
     if (window.__theme == 'dark') this.darkTheme = true
+
+    if (localStorage.getItem('theme')) {
+      this.$store.commit("toggleTheme", localStorage.getItem('theme'))
+    }
   }
 }
 </script>
