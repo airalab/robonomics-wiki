@@ -6,8 +6,6 @@ tools:
     https://github.com/home-assistant/core
 ---
 
-## Add MQTT Integration
-
 Install MQTT integration for Home Assistant. Open Home Assistant web interface and go to `Settings` -> `Devices & Services`.
 
 <robo-wiki-picture src="home-assistant/settings.jpg" alt="Home Assistant settings menu" />

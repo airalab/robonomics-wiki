@@ -1,5 +1,5 @@
 ---
-title: MQTT Broker for Home Assistant docker and core
+title: MQTT Broker for Home Assistant Docker and Core
 contributors: [nakata5321, PaTara43]
 tools:
   - Mosquitto Broker 2.0.11
@@ -7,8 +7,6 @@ tools:
 ---
 
 **This article describes how to install MQTT broker for Home Assistant docker or core.**
-
-## Install MQTT Broker
 
 There is a quick installation option with a pre-written script, that installs the [Mosquitto](https://mosquitto.org/) MQTT broker. Connect to your Raspberry Pi and run:
 
