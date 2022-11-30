@@ -1,5 +1,5 @@
 ---
-title: Zigbee2MQTT
+title: Zigbee Adapter with Zigbee2MQTT
 
 contributors: [nakata5321, PaTara43]
 tools:

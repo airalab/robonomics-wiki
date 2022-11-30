@@ -1,5 +1,5 @@
 ---
-title: Home Assistant Init
+title: Home Assistant Initialization
 contributors: [nakata5321, PaTara43]
 tools:
   - Home Assistant 2022.11.3
@@ -24,10 +24,10 @@ On the next screen, Home Assistant will show any devices that it has discovered 
 
 <robo-wiki-picture src="home-assistant/add-devices.jpg" alt="additional devices" />
 
-After that, you will see the Home Assistant web interface, which will show all of your devices. Next you need to setup MQTT Broker. And you have to options^
+After that, you will see the Home Assistant web interface, which will show all of your devices. Next you need to setup MQTT Broker using one of the options:
 
 **Option 1 (Home Assistant OS)**
-* If you are upgrading you Home Assistant OS, [go to the next article](/docs/mqtt-hassos/).
+* If you are upgrading you **Home Assistant OS**, [go here](/docs/mqtt-hassos/).
 
-**Option 2 (Home assistant Docker or core)**
-* If you are using "pre-used" image or upgrading your Home Assistant docker container or hass core, [go to the next article](/docs/mqtt-broker-setup-core/).
+**Option 2 (Pre-installed image or Home Assistant Docker or Home Assistant Core)**
+* If you are using **pre-installed image** or upgrading your **Home Assistant Docker** or **Core**, [go here](/docs/mqtt-image-docker-core/).

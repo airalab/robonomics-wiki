@@ -5,13 +5,13 @@
     - title_en: Install
       items:
         - title_en: Pre-installed Image For Raspberry Pi
-          link: /docs/hass-install-image
-        - title_en: Upgrade Your Home Assistant OS
-          link: /docs/upgrade-hass-os
-        - title_en: Home Assistant Docker for Unix-like OS
-          link: /docs/hass-install-docker
-        - title_en: Upgrade Your Hass Core
-          link: /docs/upgrade-your-hass-core
+          link: /docs/hass-image-install
+        - title_en: Upgrade Home Assistant OS
+          link: /docs/hass-os-upgrade
+        - title_en: Upgrade Home Assistant Docker
+          link: /docs/hass-docker-upgrade
+        - title_en: Upgrade Home Assistant Core
+          link: /docs/hass-core-upgrade
     - title_en: Configure
       items:
         - title_en: Home Assistant Init
@@ -20,13 +20,13 @@
           items:
             - title_en: MQTT Broker for Home Assistant OS
               link: /docs/mqtt-hassos
-            - title_en: MQTT Broker for Home Assistant docker and core
-              link: /docs/mqtt-broker-setup-core
+            - title_en: MQTT Broker for Image, Hass Docker, Hass Core
+              link: /docs/mqtt-image-docker-core
         - title_en: MQTT Integration Setup
           link: /docs/mqtt-integration
         - title_en: ZigBee Setup Options
           items:
-            - title_en: Zigbee2MQTT
+            - title_en: Adapter with Zigbee2MQTT
               link: /docs/zigbee-to-mqtt
             - title_en: Robonomics SLS Gateway
               link: /docs/sls-gateway
@@ -35,13 +35,13 @@
         - title_en: Subscription Activate
           link: /docs/sub-activate
         - title_en: Robonomics Integration Setup
-          link: /docs/robonomics-integration-setup
+          link: /docs/robonomics-hass-integration
     - title_en: Use
       items:
         - title_en: Global Administration
           link: /docs/global-administration
-        - title_en: SmartHome Telemetry
-          link: /docs/use-dapp
+        - title_en: Get Smart Home Telemetry
+          link: /docs/smart-home-telemetry
         - title_en: Blueprints Usage
           link: /docs/use-blueprints
 - title_en: Learn

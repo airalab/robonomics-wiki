@@ -31,4 +31,4 @@ After the registration process, log in to Home Assistant with your user address 
 
 <robo-wiki-picture src="home-assistant/acc-login.jpg" />
 
-Now you can use the dapp to control your home through Robonomics, check [**"SmartHome Telemetry"**](/docs/use-dapp/) article.
+Now you can use the dapp to control your home through Robonomics, check [**"Get Smart Home Telemetry"**](/docs/smart-home-telemetry/) article.

@@ -1,5 +1,5 @@
 ---
-title: SmartHome Telemetry
+title: Get Smart Home Telemetry
 
 contributors: [nakata5321, Fingerling42]
 tools:   
