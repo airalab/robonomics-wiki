@@ -42,8 +42,12 @@
           link: /docs/global-administration
         - title_en: SmartHome Telemetry
           link: /docs/use-dapp
-        - title_en: Blueprints Usage
+    - title_en: Blueprints
+      items:
+        - title_en: How To Use Blueprints
           link: /docs/use-blueprints
+
+
 - title_en: Learn
   items:
     - title_en: Introduction

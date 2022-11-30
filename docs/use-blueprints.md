@@ -1,12 +1,12 @@
 ---
-title: Blueprints Usage
+title: How To Use Blueprints
 contributors: [tubleronchik]
 tools:   
-  - Home Assistant 2022.8.2
+  - Home Assistant 2022.11.3
     https://github.com/home-assistant/core
 ---
 
-In this article you will know how to add automation bluerprints to your Home Assistant and configure it.
+In this article you will know how to add automation blueprints to your Home Assistant and configure it.
 
 ## Blueprint Automations
 
