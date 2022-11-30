@@ -1,7 +1,7 @@
 ---
 title: Zigbee2MQTT
 
-contributors: [LoSk-p, dergudzon, Leemo94, PaTara43]
+contributors: [nakata5321, PaTara43]
 tools:
   - Zigbee2MQTT 1.28.2
 ---
