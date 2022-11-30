@@ -24,4 +24,10 @@ On the next screen, Home Assistant will show any devices that it has discovered 
 
 <robo-wiki-picture src="home-assistant/add-devices.jpg" alt="additional devices" />
 
-After that, you will see the Home Assistant web interface, which will show all of your devices. Next you need to setup MQTT, so go to the [corresponding article](/docs/mqtt-setup).
+After that, you will see the Home Assistant web interface, which will show all of your devices. Next you need to setup MQTT Broker. And you have to options^
+
+**Option 1 (Home Assistant OS)**
+* If you start upgrading you Home Assistant OS, [go to the next article](/docs/mqtt-hassos/).
+
+**Option 2 (Home assistant Docker or core)**
+* If you are using "pre-used" image or upgrading your Home Assistant docker container or hass core, [go to the next article](/docs/mqtt-broker-setup-core/).

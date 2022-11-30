@@ -1,6 +1,6 @@
 ---
 title: Pre-installed Image For Raspberry Pi
-contributors: [LoSk-p, dergudzon, Leemo94, PaTara43, nakata5321]
+contributors: [ nakata5321, PaTara43]
 tools:
   - Home Assistant 2022.11.3
     https://github.com/home-assistant/core
