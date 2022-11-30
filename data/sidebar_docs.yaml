@@ -10,10 +10,14 @@
           link: /docs/hass-install-docker
         - title_en: Upgrade Your Hass Core
           link: /docs/upgrade-your-hass-core
+        - title_en: Upgrade Your Home Assistant OS
+          link: /docs/upgrade-hass-os
     - title_en: Configure
       items:
         - title_en: Home Assistant Init
           link: /docs/hass-init
+        - title_en: MQTT Broker for Home Assistant OS
+          link: /docs/mqtt-hassos
         - title_en: MQTT Setup
           link: /docs/mqtt-setup
         - title_en: ZigBee Setup
