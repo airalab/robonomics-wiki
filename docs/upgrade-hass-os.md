@@ -20,11 +20,11 @@ tools:
 
 <robo-wiki-note type="okay">
 
-  Robonomics Integration stores the data using local IPFS daemon, so you need to install it first. There is an [IPFS Add-on for Home Assistant](https://github.com/LoSk-p/ipfs-addon).
+  Robonomics Integration stores the data using local IPFS daemon, so you need to install it first. There is an [IPFS Add-on for Home Assistant](https://github.com/airalab/ipfs-addon).
 
 </robo-wiki-note>
 
-To install it go to `Settings/Add-ons` and press `Add-on Store` button in the lower right corner.
+To install it go to `Settings` -> `Add-ons` and press the `Add-on Store` button in the lower right corner.
 
 <robo-wiki-picture src="home-assistant/add-ons.jpg" />
 
@@ -50,7 +50,7 @@ Open it and press `Instlall`. After it installed press `Run`:
 
 [Home Assistant Community Store (HACS)](https://hacs.xyz/) allows you to install custom integrations.
 
-Firstly, you need to install add-on that allows you to connect to the Home Assistant device with SSH. In Add-on Store search `ssh`. We recommend to install `SSH & Web Terminal` add-on.
+Firstly, you need to install add-on for connecting to the Home Assistant device with SSH. In Add-on Store search `ssh`. We recommend to install `SSH & Web Terminal` add-on.
 
 <robo-wiki-picture src="home-assistant/ssh-addons.jpg" />
 
@@ -70,14 +70,16 @@ wget -O - https://get.hacs.xyz | bash -
 
 <robo-wiki-picture src="home-assistant/ssh-install-hacs.jpg" />
 
-After that restart Home Assistant (you can do it in `Settings/System`). Now HACS Integration will be available to add in Integrations. Go to `Settings/Devices & Services` and press `Add Integration`, then find HACS:
+After that restart Home Assistant (you can do it in `Settings`->`System`). Now HACS Integration will be available to add in the `Integrations` menu. Go to `Settings`->`Devices & Services`, press `Add Integration` and find HACS:
 
 <robo-wiki-picture src="home-assistant/hacs-integration.jpg" />
 
-Press on it and follow the installation instructions. 
+Click on it and follow the installation instructions. 
 
 <robo-wiki-note type="warning" title="DISCLAIMER">
+
   To use HACS you need a Github Account.
+
 </robo-wiki-note>
 
 ## Robonomics Integration Installation
@@ -90,15 +92,15 @@ Open HACS and go to `Integrations`. Press on three dots in the upper right corne
 https://github.com/airalab/homeassistant-robonomics-integration
 ```
 
-And choose `Integration` category.
+After that, choose `Integration` category.
 
 <robo-wiki-picture src="home-assistant/hacs-robonomics.jpg" />
 
-Press `Add` and you will see Robonomics in HACS Integrations. Press on it and run `Download` in the lower right corner. After downloading restart Home Assistant.
+Press `Add`. You will see Robonomics in HACS Integrations. Click on it and press the `Download` button in the lower right corner. After downloading, restart Home Assistant.
 
 <robo-wiki-picture src="home-assistant/robonomics-download.jpg" />
 
 Now you have two options:
 
-- If you have not yet used MQTT integration to connect smart devices via Zigbee adapter, go to the [**MQTT Setup**](/docs/mqtt-setup/) article.
+- If you have not yet used MQTT integration to connect smart devices via Zigbee adapter, go to the [**MQTT Broker for Home Assistant OS**](/docs/mqtt-hassos) article.
 - Otherwise, go to the [**IoT Subscription**](/docs/sub-activate) section and start activating the Robonomics subscription.

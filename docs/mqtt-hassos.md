@@ -27,4 +27,4 @@ Don't forget them, they will be needed in the future steps. Save the configurati
 
 <robo-wiki-picture src="home-assistant/mosquitto-addon-start.jpg" />
 
-Continue MQTT setup with [Add MQTT Integration](/docs/mqtt-setup#install-mqtt-broker).
+Continue MQTT setup with [Add MQTT Integration](/docs/mqtt-integration).

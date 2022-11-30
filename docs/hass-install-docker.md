@@ -94,5 +94,5 @@ You will see the following output:
 
 Now you have two options:
 
-- If you have not yet used MQTT integration to connect smart devices via Zigbee adapter, go to the [**MQTT Setup**](/docs/mqtt-setup/) article.
+- If you have not yet used MQTT integration to connect smart devices via Zigbee adapter, go to the [**MQTT Broker for Home Assistant docker and core **](/docs/mqtt-broker-setup-core/) article.
 - Otherwise, go to the [**IoT Subscription**](/docs/sub-activate) section and start activating the Robonomics subscription.
