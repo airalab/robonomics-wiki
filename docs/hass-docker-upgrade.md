@@ -1,5 +1,5 @@
 ---
-title: Upgrade Your Home Assistant Docker
+title: Upgrade Your Home Assistant Docker for Unix-like OS
 contributors: [PaTara43]
 tools:   
   - Ubuntu Server 22.04 LTS

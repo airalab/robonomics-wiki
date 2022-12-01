@@ -8,7 +8,7 @@
           link: /docs/hass-image-install
         - title_en: Upgrade Home Assistant OS
           link: /docs/hass-os-upgrade
-        - title_en: Upgrade Home Assistant Docker
+        - title_en: Upgrade Home Assistant Docker for Unix-like OS
           link: /docs/hass-docker-upgrade
         - title_en: Upgrade Home Assistant Core
           link: /docs/hass-core-upgrade
@@ -20,7 +20,7 @@
           items:
             - title_en: MQTT Broker for Home Assistant OS
               link: /docs/mqtt-hassos
-            - title_en: MQTT Broker for Image, Hass Docker, Hass Core
+            - title_en: MQTT Broker for Pre-installed Image, Hass Docker, Hass Core
               link: /docs/mqtt-image-docker-core
         - title_en: MQTT Integration Setup
           link: /docs/mqtt-integration
