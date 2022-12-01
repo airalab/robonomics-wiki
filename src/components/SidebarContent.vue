@@ -165,7 +165,6 @@
 							content.classList.add('open')
 						}
 					}
-
 				}
 
 			},
@@ -190,7 +189,6 @@
 		},
 
 		mounted () {
-			// document.querySelector('.custom-scroll').addEventListener('scroll', this.activateLinkOnScroll)
 			document.querySelectorAll('.all-content ').forEach(item => {
         item.addEventListener('scroll', this.activateScrollbar)
       })
@@ -203,6 +201,7 @@
     beforeDestroy () {
       document.querySelector('.custom-scroll').removeEventListener('scroll', this.activateLinkOnScroll)
     }
+
 	}
 
 </script>

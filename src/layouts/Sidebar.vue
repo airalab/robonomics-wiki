@@ -8,7 +8,7 @@
         <main class="main layout__page post">
             <div class="page">
               <SidebarItems :items="items"/>
-              <div>
+              <div class="page-content--withBC">
                 <Breadcrumbs :items="items" />
                 <slot/>
               </div>
@@ -43,7 +43,9 @@ query {
   .page::-webkit-scrollbar { display: none; } 
   /* Hide scrollbar for Chrome, Safari and Opera */
   
-
+  .page-title {
+    padding-bottom: calc(var(--space)/2);
+  }
 
   .page-title-meta {
     border-width: 1px 0;
@@ -63,12 +65,14 @@ query {
       margin-bottom: 0;
     }
 
-  .page-content {
+  .page-content--withBC {
+
     display: grid;
     grid-template-columns: minmax(0,var(--content-width)) minmax(0,var(--width-sidebar-left));
-    gap: var(--space);
+    grid-template-rows: minmax(40px, auto) minmax(40px, auto) minmax(0, auto);
+    column-gap: var(--space);
     align-items: start;
-    padding-top: calc(var(--space)/2);
+    justify-content: end;
   }
 
   .page-content h2:first-child, .page-content h3:first-child {
@@ -103,7 +107,9 @@ query {
 
   @media screen and (max-width: 720px) {
     .page-title-meta { display: block; }
-    .page-content { grid-template-columns: minmax(0, 1fr) }
+    /* .page-content { grid-template-columns: minmax(0, 1fr) } */
+
+    .page-content--withBC { grid-template-columns: minmax(0, 1fr) }
   }
 
 </style>

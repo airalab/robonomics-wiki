@@ -2,43 +2,22 @@
   <Sidebar>
 
     <client-only>
-      <div class="page-title">
-        <h1>{{ $page.doc.title }}</h1>
-
-        <!-- <ul class="page-title-meta" v-if="$page.doc.contributors.length > 0">
-          <li v-if="$page.doc.contributors.length > 0">
-            <span>Main contributors: </span>
-            <template v-for="(contributor, index) in $page.doc.contributors">
-              <span :key="index">
-                <g-link :to="'https://github.com/'+contributor">@{{contributor}}</g-link>
-                <span v-if="index != $page.doc.contributors.length-1">, </span>
-              </span>
-            </template>
-          </li>
-
-
-          we do not need to show this if there are no contributors
-          <li v-if="$page.doc.contributors.length > 0 && !isCurrent('/docs/contributing/')">
-            <g-link to="/docs/contributing/">How to contribute</g-link>
-          </li>
-        </ul> -->
-
-        <div class="page-title-meta" v-if="$page.doc.contributors.length > 0">
-          <span>Main contributors: </span>
-          <template v-for="(contributor, index) in $page.doc.contributors">
-            <span :key="index">
-              <g-link :to="'https://github.com/'+contributor">@{{contributor}}</g-link>
-              <span v-if="index != $page.doc.contributors.length-1">, </span>
-            </span>
-          </template>
-        </div>
-
-      </div>
-
-
+      <h1 class="page__title-main">{{ $page.doc.title }}</h1>
       <div class="page-content">
-
         <div>
+          <div class="page-title">
+
+            <div class="page-title-meta" v-if="$page.doc.contributors.length > 0">
+              <span>Main contributors: </span>
+              <template v-for="(contributor, index) in $page.doc.contributors">
+                <span :key="index">
+                  <g-link :to="'https://github.com/'+contributor">@{{contributor}}</g-link>
+                  <span v-if="index != $page.doc.contributors.length-1">, </span>
+                </span>
+              </template>
+            </div>
+
+          </div>
 
           <VueRemarkContent class="docs-content" />
 
@@ -55,10 +34,9 @@
                   </div>
                   <h5>Make a contribution</h5>
                 </div>
-                <p>Robonomics wiki is open source. See something that's wrong or unclear?
+                <p> Robonomics wiki is open source. See something that's wrong or unclear?
                   <g-link :to="ghLink" class="submit">Submit</g-link>  a pull request.
                 </p>
-                <!-- <Button :label="$st('Github Contribution Button', $store.state.locale)" :link="ghLink" type="secondary" icon="github" size="small"/> -->
               </div>
 
               <div class="head" v-show="ghUpdateName">
@@ -67,18 +45,19 @@
           </section>
 
         </div>
+        
+      </div>
 
-        <div id="sidebarContent" class="page__sidebar hiddenMobile--720" :class="$store.state.showSearchbar ? null : 'menu-without-search'">
-          <robo-wiki-note v-if="$page.doc.tools.length" type="note" title="Tested for">
-            <g-link v-for="tool in $page.doc.tools" :href="tool.match(/\bhttps?:\/\/\S+/gi) ||  '#' " :key="tool" class="testedFor__link">
-             {{tool.replace(/\bhttps?:\/\/\S+/gi, '')}}
-            </g-link>
-          </robo-wiki-note>
+      <div id="sidebarContent" class="page__sidebar hiddenMobile--720" :class="$store.state.showSearchbar ? null : 'menu-without-search'">
+        <robo-wiki-note v-if="$page.doc.tools.length" type="note" title="Tested for">
+          <g-link v-for="tool in $page.doc.tools" :href="tool.match(/\bhttps?:\/\/\S+/gi) ||  '#' " :key="tool" class="testedFor__link">
+            {{tool.replace(/\bhttps?:\/\/\S+/gi, '')}}
+          </g-link>
+        </robo-wiki-note>
 
-          <SidebarContent />
-          
-          <Button label="Create an issue" :link="`https://github.com/airalab/robonomics-wiki/issues/new?${ghIssueTitle}`" size="small" />
-        </div>
+        <SidebarContent />
+        
+        <Button label="Create an issue" :link="`https://github.com/airalab/robonomics-wiki/issues/new?${ghIssueTitle}`" size="small" />
       </div>
     </client-only>
 
@@ -86,11 +65,6 @@
 </template>
 
 <style>
-
-  .page-title {
-    max-width: 900px;
-    width: calc(100% - var(--width-sidebar-left) - var(--space));
-  }
 
   .page-title-meta {
     border-width: 1px 0;
@@ -104,10 +78,18 @@
     padding: 1rem 0;
   }
 
+  .page-title-meta a:after {
+    display: none !important;
+  }
+
   .page-title-meta li {
     margin-right: var(--space);
     margin-left: 1rem;
     margin-bottom: 0;
+  }
+
+  .page__title-main {
+    grid-row: 2;
   }
 
   .page{
@@ -133,6 +115,11 @@
     overflow-y: scroll;
   }
 
+  #sidebarContent {
+    /* padding-top: 72px; */
+    grid-row: 3;
+  }
+
   #sidebarDocs {
     height: 80vh;
     /* overflow-y: auto; */
@@ -156,12 +143,17 @@
   }
 
   .page-content {
-    display: grid;
+    grid-row: 3;
+    /* display: grid;
     grid-template-columns: minmax(0,var(--content-width)) minmax(0,var(--width-sidebar-left));
     gap: calc(var(--space) * 4);
     align-items: start;
     justify-content: space-between;
-    padding-top: calc(var(--space)/2);
+    padding-top: calc(var(--space)/2); */
+  }
+
+  .page-content__wrapper {
+    margin-right: auto;
   }
 
   .page-content h2:first-child, .page-content h3:first-child {
@@ -191,6 +183,14 @@
 
   .docContribution .head a::after {
     display: none;
+  }
+
+  .docs-content {
+    text-align: justify !important;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
   }
 
   .content {
