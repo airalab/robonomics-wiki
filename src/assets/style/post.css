@@ -27,7 +27,7 @@
 .post h2 {
 	padding-top: calc(var(--space)/2);
 	margin-top: var(--space);
-	border-top: 1px solid var(--border-color);
+	/* border-top: 1px solid var(--border-color); */
 }
 
 .post div > h2:first-child {
