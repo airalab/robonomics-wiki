@@ -6,7 +6,7 @@ contributors: [Fingerling42, nakata5321]
 
 ## Introduction
 
-For your smart home the modern IoT market provides a wide range of solutions. But you are usually tied to centralized cloud providers or expensive proprietary gateways. As a result, you as a user are always dependent on the hardware and infrastructure vendor to run the your smart system. At the same time, your smart home cannot be truly smart without cloud statistics and analytics.
+For your smart home, the modern IoT market provides a wide range of solutions. But you are usually tied to centralized cloud providers or expensive proprietary gateways. As a result, you as a user are always dependent on the hardware and infrastructure vendor to run your smart system. At the same time, your smart home cannot be truly smart without cloud statistics and analytics.
 
 **We see two main problems with current smart homes:**
 
@@ -58,7 +58,7 @@ To prepare your smart home, you will need:
 
 You have several options for installing Home Assistant with Robonomics:
 
-* [Pre-installed image](/docs/hass-install-image/) — This method implies setting up a whole new OS on your Raspberry Pi.
-* [Home Assistant OS](/docs/upgrade-hass-os/) — The method is suitable for integrating Robonomics with an existing Home Assistant OS.
-* [Home Assistant Docker for Unix-like OS](/docs/hass-install-docker/) — The method is suitable for integrating Robonomics with an existing Home Assistant Docker for Unix-like OS.
-* [Upgrade Your Hass Core](/docs/upgrade-your-hass-core/) — The method is suitable for integrating Robonomics with an existing Upgrade Your Hass Core.
+* [Pre-installed image](/docs/hass-image-install/) — This method implies setting up a whole new OS on your Raspberry Pi.
+* [Home Assistant OS](/docs/hass-os-upgrade/) — The method is suitable for integrating Robonomics with an existing Home Assistant OS.
+* [Home Assistant Docker for Unix-like OS](/docs/hass-docker-upgrade/) — The method is suitable for integrating Robonomics with an existing Home Assistant Docker for Unix-like OS.
+* [Home Assistant Core](/docs/hass-core-upgrade/) — The method is suitable for integrating Robonomics with an existing Home Assistant Core.

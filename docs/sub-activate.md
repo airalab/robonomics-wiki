@@ -44,7 +44,7 @@ Clicking on the `Next` button will take you to the last window. Click `Save` to 
 
 <robo-wiki-picture src="home-assistant/done.jpg" />
 
-<robo-wiki-note type="note">
+<robo-wiki-note type="warning">
 
 Repeat these steps for an account with the name `SUB_CONTROLLER`.
 
@@ -108,4 +108,4 @@ Repeat these steps for `SUB_OWNER` account.
 
 </robo-wiki-note>
 
-After that, go to the article ["Robonomics Integration Setup"](/docs/robonomics-integration-setup/) article.
+After that, go to the article ["Robonomics Integration Setup"](/docs/robonomics-hass-integration/) article.

@@ -1,12 +1,14 @@
 ---
-title: MQTT Integration
+title: MQTT Integration Setup
 contributors: [nakata5321]
 tools:
   - Home Assistant 2022.11.3
     https://github.com/home-assistant/core
 ---
 
-Install MQTT integration for Home Assistant. Open Home Assistant web interface and go to `Settings` -> `Devices & Services`.
+**In this article you will add MQTT integration to Home Assistant.**
+
+Open Home Assistant web interface and go to `Settings` -> `Devices & Services`.
 
 <robo-wiki-picture src="home-assistant/settings.jpg" alt="Home Assistant settings menu" />
 
@@ -14,7 +16,13 @@ Press `ADD INTEGRATION` at the right bottom corner. In the opened window find `M
 
 <robo-wiki-picture src="home-assistant/mqtt.jpg" />
 
-Select MQTT and set up your broker address — `localhost`, port — `1883`, your username and password (the same which you created earlier for Mosquitto Broker), then press `SUBMIT`.
+Select MQTT and enter:
+
+- Broker address — `localhost`
+- Port — `1883`
+- Username & password — your credentials which you created earlier for Mosquitto Broker.
+
+After that, press `SUBMIT`.
 
 <robo-wiki-picture src="home-assistant/mqtt-setup.jpg" />
 
