@@ -106,13 +106,12 @@ export default {
 
   .breadcrumbs {
     word-break: inherit;
-    grid-row: 1;
-    grid-column: 1/3;
   }
 
   .breadcrumbs__list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     list-style: none;
     margin-left: initial;
   }

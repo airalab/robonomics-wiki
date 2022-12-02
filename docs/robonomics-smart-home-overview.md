@@ -21,7 +21,39 @@ To solve both problems, we suggest you to try Robonomics, our **secure**, **serv
 
 To prepare your smart home, you will need:
 
- <table>
+
+  <robo-wiki-grid-element-wrapper textAlign="center" :columns="4">
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_1.png" /> 
+      <p><a href="https://www.home-assistant.io/">Home Assistant</a> as control system software</p> 
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_2.png" /> 
+      <p>Raspberry Pi 4 (at least 2 GB RAM)</p>  
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_3.png" /> 
+      <p>SD card (minimum 16 GB)</p>  
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_4.png" /> 
+      <p>SD adapter</p>
+    </robo-wiki-grid-element>
+  </robo-wiki-grid-element-wrapper>
+
+  <robo-wiki-grid-element-wrapper :columns="2" textAlign="center">
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_5.png" />
+      <p>Zigbee smart devices (any from <a href="https://slsys.io/action/supported_devices.html">supported devices</a>)</p>
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_6.png" /> 
+      <p>Zigbee adapter <a href="https://jethome.ru/z2/">JetHome USB JetStick Z2</a> (or one of <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html">supported</a>) or 
+      <a href="https://easyeda.com/ludovich88/robonomics_sls_gateway_v01">Robonomics SLS Gateway</a></p>
+    </robo-wiki-grid-element/>
+  </robo-wiki-grid-element-wrapper>
+
+ <!-- <table>
   <tr>
     <th width = "25%">
         <robo-wiki-picture src="home-assistant/need_1.png" /> 
@@ -52,7 +84,7 @@ To prepare your smart home, you will need:
     <a href="https://easyeda.com/ludovich88/robonomics_sls_gateway_v01">Robonomics SLS Gateway</a></p>
     </th>
   </tr>
-</table> 
+</table>  -->
 
 ## Options 
 

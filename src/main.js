@@ -22,6 +22,8 @@ import RoboWikiTitle from '~/components/RoboWikiTitle.vue';
 import RoboWikiFeedback from '~/components/RoboWikiFeedback.vue';
 import RoboWikiTabs from '~/components/RoboWikiTabs.vue';
 import RoboWikiTab from '~/components/RoboWikiTab.vue';
+import RoboWikiGridElementWrapper from '~/components/RoboWikiGridElementWrapper.vue';
+import RoboWikiGridElement from '~/components/RoboWikiGridElement.vue';
 import PropsTable from '~/components/PropsTable.vue';
 import CodeHelper from '~/components/CodeHelper.vue';
 
@@ -39,6 +41,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.component('RoboWikiTab', RoboWikiTab)
   Vue.component('ProbsTable', PropsTable)
   Vue.component('CodeHelper', CodeHelper)
+  Vue.component('RoboWikiGridElementWrapper', RoboWikiGridElementWrapper)
+  Vue.component('RoboWikiGridElement', RoboWikiGridElement)
   Vue.use(Vuex)
     
   Vue.use(VueCookies)

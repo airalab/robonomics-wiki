@@ -8,11 +8,14 @@
         <main class="main layout__page post">
             <div class="page">
               <SidebarItems :items="items"/>
+
               <div class="page-content--withBC">
                 <Breadcrumbs :items="items" />
-                <slot/>
+                <slot></slot>
               </div>
-              </div>
+
+              <slot name="sidebar"></slot> <!-- Sidebar slot -->
+            </div>
         </main>
       </div>
       <Footer/>
@@ -35,9 +38,10 @@ query {
 
 .page{
     display: grid;
-    grid-template-columns: minmax(0,var(--width-sidebar-left)) auto;
+    grid-template-columns: minmax(0,var(--width-sidebar-left)) minmax(0,var(--content-width)) minmax(0,var(--width-sidebar-left));
     gap: var(--space);
     align-items: start;
+    justify-content: space-between;
   }
 
   .page::-webkit-scrollbar { display: none; } 
@@ -65,16 +69,6 @@ query {
       margin-bottom: 0;
     }
 
-  .page-content--withBC {
-
-    display: grid;
-    grid-template-columns: minmax(0,var(--content-width)) minmax(0,var(--width-sidebar-left));
-    grid-template-rows: minmax(40px, auto) minmax(40px, auto) minmax(0, auto);
-    column-gap: var(--space);
-    align-items: start;
-    justify-content: end;
-  }
-
   .page-content h2:first-child, .page-content h3:first-child {
     padding-top: 0;
   }
@@ -91,7 +85,7 @@ query {
 
     @media screen and (max-width: 1080px) {
       .page{
-        grid-template-columns: minmax(0,1fr);
+        grid-template-columns: minmax(0,var(--content-width)) minmax(0,var(--width-sidebar-left));
         padding-top: calc(var(--space) * 1.3);
       }
 
@@ -99,17 +93,26 @@ query {
         max-height: unset;
         height: unset;
         
-        top: 7rem;
+        /* top: 7rem; */
         bottom: 0;
       }
     }
+
+  @media screen and (max-width: 860px) {
+
+    #sidebarDocs, #sidebarContent {
+      
+      top: 6rem;
+    }
+
+  }   
 
 
   @media screen and (max-width: 720px) {
     .page-title-meta { display: block; }
     /* .page-content { grid-template-columns: minmax(0, 1fr) } */
 
-    .page-content--withBC { grid-template-columns: minmax(0, 1fr) }
+    .page { grid-template-columns: minmax(0, 1fr) }
   }
 
 </style>

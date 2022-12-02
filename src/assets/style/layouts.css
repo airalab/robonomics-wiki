@@ -50,8 +50,8 @@
 	box-sizing: border-box;
 	width: 100%;
 	margin: 0 auto;
-	padding-left: var(--space);
-	padding-right: var(--space);
+	padding-left: calc(var(--space) * 0.5);
+	padding-right: calc(var(--space) * 0.5);
 }
 
 .layout__content {

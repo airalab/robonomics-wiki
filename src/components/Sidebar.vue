@@ -84,15 +84,24 @@ export default {
       max-height: unset;
       height: unset;
       
-      top: 7rem;
+      /* top: 7rem; */
       bottom: 0;
     }
 
+  }
+
+  @media screen and (max-width: 860px) {
+
+    #sidebarDocs, #sidebarContent {
+      
+      top: 6rem;
+    }
 
     #sidebarDocs.menu-without-search,
     #sidebarContent.menu-without-search {
       top: 3rem;
     }
-  }
+
+  } 
 
 </style>

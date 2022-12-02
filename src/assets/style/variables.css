@@ -54,6 +54,7 @@ body {
 
   --space: 3.5rem;
   --space-text: 1.6rem;
+	--grid-space: 2rem;
   /* --content-width: auto; */
 	--content-width: 900px;
   --page-width: 1920px;
@@ -67,6 +68,7 @@ body {
 @media screen and (max-width: 1080px) {
 	body {
 		--space: 2rem;
+		--grid-space: 1rem;
 	}
 }
 
