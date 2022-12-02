@@ -2,7 +2,9 @@
 title: How to launch the Robonomics collator
 contributors: [dergudzon, Leemo94]
 tools:
-  - Robonomics 2.3.0
+  - Ubuntu 22.04.1
+    https://releases.ubuntu.com/22.04/
+  - Robonomics 2.6.0
     https://github.com/airalab/robonomics
 ---
 
@@ -14,7 +16,7 @@ https://youtu.be/wUTDDLDbzTg
 
 Currently the Robonomics network is maintained by developers, but anyone can support the project. Every additional full node of the blockchain helps it to be more sustainable and fault tolerant. Robonomics node binaries are available in [release](https://github.com/airalab/robonomics/releases) assets or it could be [built from source](/docs/how-to-build-collator-node/).
 
-## What is a collator and why to run it
+## What is a collator
 
 Collator is part of the Robonomics parachain. This nodes type creates new blocks for chain.
 
@@ -116,9 +118,11 @@ root@robokusama-collator-screencast:~# robonomics \
       --telemetry-url="wss://telemetry.parachain.robonomics.network/submit/ 0" \
       --base-path="%BASE_PATH%" \
       --state-cache-size=0 \
+      --execution=Wasm \
       -- \
       --database=RocksDb \
       --unsafe-pruning \
+      --execution=Wasm \
       --pruning=1000
 
     [Install]
@@ -140,14 +144,14 @@ root@robokusama-collator-screencast:~# robonomics \
 
 Telemetry url: https://telemetry.parachain.robonomics.network/#/Robonomics
 
-Collators logs can be monitored with : `journalctl -u robonomics.service -f` 
+Collators logs can be monitored with: `journalctl -u robonomics.service -f` 
 
 Now the robonomics collator is launched it will sync with the Kusama Relay Chain, this can take up quite some time depending on your network speed and system specifications, so we recommend to download a Kusama snapshot and use it. 
 
 
 ## Speeding up the sync process using a Kusama snapshot
 
-We recommend to do this immediately after you've created and started the robonomics service. You can find more info about snapshots and usage instructions on the followin page: https://ksm-rocksdb.polkashots.io/
+We recommend to do this immediately after you've created and started the robonomics service. You can find more info about snapshots and usage instructions on the following page: https://ksm-rocksdb.polkashots.io/
 
 Instructions:
 
@@ -181,3 +185,65 @@ Instructions:
     root@robokusama-collator-screencast:~# journalctl -u robonomics.service -f
     ```    
     ![Check service logs](./images/how-to-launch-the-robonomics-collator/finish_journalctl.png)
+
+## Troubleshooting
+### Error: "State Database error: Too many sibling blocks inserted"
+For fix this error you can just launch your collator in archive mode: 
+
+1) First, need to stop the robonomics service: 
+    
+    root@robokusama-collator-screencast:~# systemctl stop robonomics.service
+    
+
+2) Then add the parameter `--state-pruning=archive` to the parachain part of the service file. Example of the edited service file:
+    ```
+    [Unit]
+    Description=robonomics
+    After=network.target
+    
+    [Service]
+    User=robonomics
+    Group=robonomics
+    Type=simple
+    Restart=on-failure
+
+    ExecStart=/usr/local/bin/robonomics \
+    --parachain-id=2048 \
+    --name="%NODE_NAME%" \
+    --validator \
+    --lighthouse-account="%POLKADOT_ACCOUNT_ADDRESS%" \
+    --telemetry-url="wss://telemetry.parachain.robonomics.network/submit/ 0" \
+    --base-path="%BASE_PATH%" \
+    --state-cache-size=0 \
+    --execution=Wasm \
+    --state-pruning=archive \
+    -- \
+    --database=RocksDb \
+    --unsafe-pruning \
+    --execution=Wasm \
+    --pruning=1000
+
+    [Install]
+    WantedBy=multi-user.target
+    ```
+
+3) Reload the systemd manager configuration:
+    ```
+    root@robokusama-collator-screencast:~# systemctl daemon-reload
+    ```
+
+4) Remove the exists parachain database:
+    ```
+    root@robokusama-collator-screencast:~# rm -rf %BASE_PATH%/chains/robonomics/db/
+    ```
+
+5) Start the robonomics service:
+    ```
+    root@robokusama-collator-screencast:~# systemctl start robonomics.service
+    ```
+    After that need to wait for the synchronization of the parahain database.
+
+### Error: "cannot create module: compilation settings are not compatible with the native host"
+This error related to the virtualization parameters. Need to use "host-model" type of the emulated processor. You can set up this on the virtualisation host.
+
+But, if you catch this error on any hosting, you need to ask the technical support about this problem only.
