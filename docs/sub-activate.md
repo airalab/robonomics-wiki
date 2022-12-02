@@ -44,7 +44,7 @@ Clicking on the `Next` button will take you to the last window. Click `Save` to 
 
 <robo-wiki-picture src="home-assistant/done.jpg" />
 
-<robo-wiki-note type="note">
+<robo-wiki-note type="warning">
 
 Repeat these steps for an account with the name `SUB_CONTROLLER`.
 
@@ -60,11 +60,11 @@ You can get these files again by creating a backup file of the account. Press on
 
 Open an extension and press `+` button on the top right, then choose `Restore account from backup JSON file`.
 
-<robo-wiki-picture src="/creating-an-account/extention-add-backup.jpg" />
+<robo-wiki-picture src="creating-an-account/extention-add-backup.jpg" />
 
 In an opened window upload the JSON file, enter the password and press `Restore`.
 
-<robo-wiki-picture src="/creating-an-account/file-backup.jpg" />
+<robo-wiki-picture src="creating-an-account/file-backup.jpg" />
 
 ## Activate Robonomics Subscription 
 
@@ -108,4 +108,4 @@ Repeat these steps for `SUB_OWNER` account.
 
 </robo-wiki-note>
 
-After that, go to the article ["Robonomics Integration Setup"](/docs/robonomics-integration-setup/) article.
+After that, go to the article ["Robonomics Integration Setup"](/docs/robonomics-hass-integration/) article.

@@ -106,6 +106,8 @@ export default {
 
   .breadcrumbs {
     word-break: inherit;
+    grid-row: 1;
+    grid-column: 1/3;
   }
 
   .breadcrumbs__list {
