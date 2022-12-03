@@ -2,11 +2,10 @@
   <Sidebar>
 
     <client-only>
-      <h1 class="page__title-main">{{ $page.doc.title }}</h1>
       <div class="page-content">
-        <div>
-          <div class="page-title">
 
+        <div class="page-title">
+            <h1 class="page__title-main">{{ $page.doc.title }}</h1>
             <div class="page-title-meta" v-if="$page.doc.contributors.length > 0">
               <span>Main contributors: </span>
               <template v-for="(contributor, index) in $page.doc.contributors">
@@ -43,22 +42,23 @@
                 Latest <g-link :to="ghUpdateUrl">commit</g-link> on {{ghUpdateDate}} by {{ghUpdateName}}
               </div>
           </section>
+        
+      </div>
 
+      <template slot="sidebar">
+        <div id="sidebarContent" class="page__sidebar hiddenMobile--720" :class="$store.state.showSearchbar ? null : 'menu-without-search'">
+          <robo-wiki-note v-if="$page.doc.tools.length" type="note" title="Tested for">
+            <g-link v-for="tool in $page.doc.tools" :href="tool.match(/\bhttps?:\/\/\S+/gi) ||  '#' " :key="tool" class="testedFor__link">
+              {{tool.replace(/\bhttps?:\/\/\S+/gi, '')}}
+            </g-link>
+          </robo-wiki-note>
+
+          <SidebarContent />
+          
+          <Button label="Create an issue" :link="`https://github.com/airalab/robonomics-wiki/issues/new?${ghIssueTitle}`" size="small" />
         </div>
-        
-      </div>
-
-      <div id="sidebarContent" class="page__sidebar hiddenMobile--720" :class="$store.state.showSearchbar ? null : 'menu-without-search'">
-        <robo-wiki-note v-if="$page.doc.tools.length" type="note" title="Tested for">
-          <g-link v-for="tool in $page.doc.tools" :href="tool.match(/\bhttps?:\/\/\S+/gi) ||  '#' " :key="tool" class="testedFor__link">
-            {{tool.replace(/\bhttps?:\/\/\S+/gi, '')}}
-          </g-link>
-        </robo-wiki-note>
-
-        <SidebarContent />
-        
-        <Button label="Create an issue" :link="`https://github.com/airalab/robonomics-wiki/issues/new?${ghIssueTitle}`" size="small" />
-      </div>
+      </template>
+      
     </client-only>
 
   </Sidebar>
@@ -88,10 +88,6 @@
     margin-bottom: 0;
   }
 
-  .page__title-main {
-    grid-row: 2;
-  }
-
   .page{
       display: grid;
       grid-template-columns: minmax(0,var(--width-sidebar-left)) auto;
@@ -116,8 +112,7 @@
   }
 
   #sidebarContent {
-    /* padding-top: 72px; */
-    grid-row: 3;
+    justify-self: end;
   }
 
   #sidebarDocs {
@@ -143,17 +138,8 @@
   }
 
   .page-content {
-    grid-row: 3;
-    /* display: grid;
-    grid-template-columns: minmax(0,var(--content-width)) minmax(0,var(--width-sidebar-left));
-    gap: calc(var(--space) * 4);
-    align-items: start;
-    justify-content: space-between;
-    padding-top: calc(var(--space)/2); */
-  }
-
-  .page-content__wrapper {
-    margin-right: auto;
+    max-width: var(--content-width);
+    width: 100%;
   }
 
   .page-content h2:first-child, .page-content h3:first-child {
@@ -260,7 +246,7 @@
 
         position: fixed !important;
 
-        top: 7rem;
+        /* top: 7rem; */
 
         left: 0;
         right: 0;

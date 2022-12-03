@@ -322,6 +322,68 @@ You can add tabs to the doc:
 </robo-wiki-tabs>
 
 
+### Grid 
+Helps to add grid layout to elements:
+
+- Use grid wrapper component first: 
+
+```c
+<robo-wiki-grid-element-wrapper></robo-wiki-grid-element-wrapper>
+```
+
+- And then use as many grid items components as you like inside wrapper:
+
+```c
+  <robo-wiki-grid-element-wrapper :columns="2" textAlign="center">
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_5.png" />
+      <p>Zigbee smart devices (any from <a href="https://slsys.io/action/supported_devices.html">supported devices</a>)</p>
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_6.png" /> 
+      <p>Zigbee adapter <a href="https://jethome.ru/z2/">JetHome USB JetStick Z2</a> (or one of <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html">supported</a>) or 
+      <a href="https://easyeda.com/ludovich88/robonomics_sls_gateway_v01">Robonomics SLS Gateway</a></p>
+    </robo-wiki-grid-element/>
+  </robo-wiki-grid-element-wrapper>
+```
+
+**Properties for robo-wiki-grid-element-wrapper**
+
+<probs-table :items="[{ id: 0, items: [{ name: 'columns', code: true}, {name: 'Number', code: true}, {name: false, code: true}, {name: 4, code: true}, {name: [{text: 'you can choose column number:'}, {text: `from`, codeText: ' 1 to 5'}]}]}, { id: 1, items: [{ name: 'align', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: [{text: 'align items on the block axis:'}, {text: `options:`, codeText: 'start, center, end'}]}]}, { id: 2, items: [{ name: 'justify', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: [{text: 'align items on the inline axis:'}, {text: `options:`, codeText: 'start, center, end'}]}]}, { id: 3, items: [{ name: 'textAlign', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: 'left', code: true}, {name: [{text: 'align text inside grid'}, {text: `options:`, codeText: 'left, center, right'}]}]}, ]" />
+
+
+  <robo-wiki-grid-element-wrapper textAlign="center">
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_1.png" /> 
+      <p><a href="https://www.home-assistant.io/">Home Assistant</a> as control system software</p> 
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_2.png" /> 
+      <p>Raspberry Pi 4 (at least 2 GB RAM)</p>  
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_3.png" /> 
+      <p>SD card (minimum 16 GB)</p>  
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_4.png" /> 
+      <p>SD adapter</p>
+    </robo-wiki-grid-element>
+  </robo-wiki-grid-element-wrapper>
+
+  <robo-wiki-grid-element-wrapper :columns="2" textAlign="center">
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_5.png" />
+      <p>Zigbee smart devices (any from <a href="https://slsys.io/action/supported_devices.html">supported devices</a>)</p>
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_6.png" /> 
+      <p>Zigbee adapter <a href="https://jethome.ru/z2/">JetHome USB JetStick Z2</a> (or one of <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html">supported</a>) or 
+      <a href="https://easyeda.com/ludovich88/robonomics_sls_gateway_v01">Robonomics SLS Gateway</a></p>
+    </robo-wiki-grid-element/>
+  </robo-wiki-grid-element-wrapper>
+
+
 ### Code Helper
 
 You can add helpful extras to your code: 
