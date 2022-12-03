@@ -87,7 +87,7 @@ Then save the file, **safely eject the SD card**, insert it into the Raspberry P
 
 Once your Raspberry Pi is connected, the red LED will light up and the green LED will flash for some time. Wait up to 5 minutes for the Raspberry Pi to boot up and register on the network. 
 
-Now find the IP address of Raspberry Pi. To find it you can use [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/). In this example the the address is `192.168.43.56`.
+Now find the IP address of Raspberry Pi. To find it you can use [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/). Find the `robonomics-rpi` name of the host machine in the IP list. In this example the the address is `192.168.43.56`.
 
 Connect to it with `ssh` command: 
 

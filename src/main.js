@@ -51,10 +51,14 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   appOptions.store = new Vuex.Store({
     state: {
       showSearchbar: true,
+      theme: 'light'
     },
     mutations: {
       toggleShowSearchbar(state, showSearchbar) {
         state.showSearchbar = showSearchbar
+      },
+      toggleTheme(state, theme) {
+        state.theme = theme
       }
     }
   });

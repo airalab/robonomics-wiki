@@ -56,8 +56,18 @@ export default {
 
 
   mounted () {
-    document.querySelector('.custom-scroll').addEventListener('scroll', this.activateScrollbar)
+    // document.querySelector('.custom-scroll').addEventListener('scroll', this.activateScrollbar)
+
+    document.querySelectorAll('.all-content ').forEach(item => {
+      item.addEventListener('scroll', this.activateScrollbar)
+    })
   },
+
+  beforeDestroy() {
+    document.querySelectorAll('.all-content ').forEach(item => {
+      item.removeEventListener('scroll', this.activateScrollbar)
+    })
+  }
 
 }
 </script>

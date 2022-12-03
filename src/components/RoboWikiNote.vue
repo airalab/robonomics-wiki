@@ -89,4 +89,12 @@ export default {
     background: #fff;
   }
 
+  .robo-wiki-note--okay .robo-wiki-note__text :not(pre)>code { 
+    background: #fff;
+  }
+
+  body[data-theme="dark"]  .robo-wiki-note a {
+    color: #78fffd;
+  }
+
 </style>
