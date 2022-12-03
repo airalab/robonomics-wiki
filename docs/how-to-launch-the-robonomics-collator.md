@@ -14,18 +14,18 @@ tools:
 
 https://youtu.be/wUTDDLDbzTg
 
-Currently the Robonomics network is maintained by developers, but anyone can support the project. Every additional full node of the blockchain helps it to be more sustainable and fault tolerant. Robonomics node binaries are available in [release](https://github.com/airalab/robonomics/releases) assets or it could be [built from source](/docs/how-to-build-collator-node/).
+Currently the Robonomics network is primarily maintained by the initial developers, but anyone can support the project. Every additional full node of the blockchain helps it to become more sustainable and fault tolerant. Robonomics node binaries are available in [release](https://github.com/airalab/robonomics/releases) assets or it can be [built from source](/docs/how-to-build-collator-node/).
 
 ## What is a collator
 
-Collator is part of the Robonomics parachain. This nodes type creates new blocks for chain.
+A Collator is part of the Robonomics parachain. This type of node creates new blocks for the Robonomics chain.
 
 >Collators maintain parachains by collecting parachain transactions from users and producing state transition proofs for Relay Chain validators. In other words, collators maintain parachains by aggregating parachain transactions into parachain block candidates and producing state transition proofs for validators based on those blocks.
 
-You can learn more about collator on the related [Polkadot wiki page](https://wiki.polkadot.network/docs/learn-collator)
+You can learn more about collators on the related [Polkadot wiki page](https://wiki.polkadot.network/docs/learn-collator)
 
-In the Robonomics parachain every collator get rewards (**0.000380520 XRT**) for every block it built, if this block was sealed to the chain. 
-Also collator get **50% transactions fees** from this block.
+In the Robonomics parachain every collator gets rewards of (**0.000380520 XRT**) for every block that the collator builds (rewards occur when blocks are sealed to the chain). 
+Also the collator that builds the block gets **50% of transactions fees** contained within the block they create.
 
 ## Requirements
 
@@ -35,7 +35,7 @@ Also collator get **50% transactions fees** from this block.
 + 8GB RAM
 
 
-But we recommend that you launch a collator using the **standard hardware requirements** for [Polkadot validators](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#standard-hardware):
+However, it is recommended that you launch a collator using the **standard hardware requirements** for [Polkadot validators](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#standard-hardware):
 + CPU - Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz.
 + Storage - A NVMe solid state drive. Should be reasonably sized to deal with the blockchain growth. Currently the Kusama db uses around 90GB of space. We recommend 200-240GB for first months, but it will need to be re-evaluated every six months. Again: The ability to expand this disk space is required.
 + Memory - 64GB ECC
@@ -53,13 +53,13 @@ In this article we use next specifications:
     + **%BASE_PATH%** is the path to mounted volume. Example: */mnt/HC_Volume_16056435/*
     + **%POLKADOT_ACCOUNT_ADDRESS%** is the account address in the Polkadot ecosystem in SS58 format. Example: *4Gp3QpacQhp4ZReGhJ47pzExQiwoNPgqTWYqEQca9XAvrYsu*
 
-2. Note that you need use *--state-cache-size=0* in the collator's service launch. This parameter is important for the stability of the collator.
+2. Note that you need to include *--state-cache-size=0* in the collator's service launch. This parameter is important for the stability of the collator.
 You can see more info in the related [issue](https://github.com/airalab/robonomics/issues/234) on github.
 
 ## Easily launch a Robonomics collator
 
-You can simply launch a collator directly in the command line to check for errors.
-After that we strongly recommend to launch the Robonomics collator as a service.
+You can easily launch a collator directly in the command line to check for errors.
+After doing this it is strongly recommended to launch the Robonomics collator as a service.
 
 ```
 root@robokusama-collator-screencast:~# robonomics \
@@ -146,12 +146,12 @@ Telemetry url: https://telemetry.parachain.robonomics.network/#/Robonomics
 
 Collators logs can be monitored with: `journalctl -u robonomics.service -f` 
 
-Now the robonomics collator is launched it will sync with the Kusama Relay Chain, this can take up quite some time depending on your network speed and system specifications, so we recommend to download a Kusama snapshot and use it. 
+Once the Robonomics collator is launched it will begin to sync with the Kusama Relay Chain, this can take a considerable amount of time, depending on your network speed and system specifications, so we recommend to download a Kusama snapshot. 
 
 
 ## Speeding up the sync process using a Kusama snapshot
 
-We recommend to do this immediately after you've created and started the robonomics service. You can find more info about snapshots and usage instructions on the following page: https://ksm-rocksdb.polkashots.io/
+We recommend to do this immediately after you've created and started the Robonomics service. You can find more info about snapshots and usage instructions on the following page: https://ksm-rocksdb.polkashots.io/
 
 Instructions:
 
@@ -190,7 +190,7 @@ Instructions:
 ### Error: "State Database error: Too many sibling blocks inserted"
 For fix this error you can just launch your collator in archive mode: 
 
-1) First, need to stop the robonomics service: 
+1) First, need to stop the Robonomics service: 
     
     root@robokusama-collator-screencast:~# systemctl stop robonomics.service
     
