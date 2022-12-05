@@ -8,25 +8,21 @@ tools:
 
 **In this article you will add MQTT integration to Home Assistant.**
 
-Open Home Assistant web interface and go to `Settings` -> `Devices & Services`.
+<robo-wiki-video src="https://static.robonomics.network/wiki/mqtt-hass-setup.mp4" />
 
-<robo-wiki-picture src="home-assistant/settings.jpg" alt="Home Assistant settings menu" />
+1. Open Home Assistant web interface and go to `Settings` -> `Devices & Services`.
 
-Press `ADD INTEGRATION` at the right bottom corner. In the opened window find `MQTT`:
+2. Press `ADD INTEGRATION` at the right bottom corner. In the opened window find `MQTT`:
 
-<robo-wiki-picture src="home-assistant/mqtt.jpg" />
-
-Select MQTT and enter:
+3. Select MQTT and enter:
 
 - Broker address — `localhost`
 - Port — `1883`
 - Username & password — your credentials which you created earlier for Mosquitto Broker.
 
-After that, press `SUBMIT`.
+4. After that, press `SUBMIT`.
 
-<robo-wiki-picture src="home-assistant/mqtt-setup.jpg" />
-
-After that, you can proceed to add devices. Depending on the hardware you have, choose one of the options:
+Now, you can proceed to add devices. Depending on the hardware you have, choose one of the options:
 
 **Option 1 (with zigbee2MQTT)**
 * For Zigbee adapter [go here](/docs/zigbee-to-mqtt/). Ideal for [JetHome USB JetStick Z2](https://jethome.ru/z2/?sl=en) or similar [supported adapters](https://www.zigbee2mqtt.io/information/supported_adapters.html).
