@@ -82,10 +82,14 @@ export default {
 
     #sidebarDocs, #sidebarContent {
       max-height: unset;
-      height: unset;
+      /* height: unset; */
       
       /* top: 7rem; */
       bottom: 0;
+    }
+
+    #sidebarDocs {
+      height: unset;
     }
 
   }
@@ -94,12 +98,15 @@ export default {
 
     #sidebarDocs, #sidebarContent {
       
-      top: 6rem;
+      /* top: 6rem; */
+      top: 7rem;
     }
 
     #sidebarDocs.menu-without-search,
     #sidebarContent.menu-without-search {
-      top: 3rem;
+      /* top: 3rem; */
+      /* top: 4rem; */
+      top: 3.6rem;
     }
 
   } 

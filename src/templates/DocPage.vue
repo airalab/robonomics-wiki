@@ -46,7 +46,7 @@
       </div>
 
       <template slot="sidebar">
-        <div id="sidebarContent" class="page__sidebar hiddenMobile--720" :class="$store.state.showSearchbar ? null : 'menu-without-search'">
+        <div id="sidebarContent" class="page__sidebar hiddenMobile--720 custom-scroll" :class="$store.state.showSearchbar ? null : 'menu-without-search'">
           <robo-wiki-note v-if="$page.doc.tools.length" type="note" title="Tested for">
             <g-link v-for="tool in $page.doc.tools" :href="tool.match(/\bhttps?:\/\/\S+/gi) ||  '#' " :key="tool" class="testedFor__link">
               {{tool.replace(/\bhttps?:\/\/\S+/gi, '')}}
@@ -108,7 +108,7 @@
     position: sticky;
     top: 4rem;
     /* height: 67vh; */
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
   }
 
   #sidebarContent {
@@ -262,9 +262,13 @@
 
     #sidebarDocs, #sidebarContent {
       height: 100svh;
-      overflow-y:scroll;
       overflow-x:hidden;
+      overflow-y:scroll;
       
+    }
+
+    #sidebarDocs {
+      height: unset;
     }
 
     #sidebarContent.page__sidebar {
@@ -286,13 +290,16 @@
       max-height: unset;
       height: 120svh;
       
-      top: 6rem;
+      /* top: 6rem; */
+      top: 7rem;
       bottom: 0;
     }
 
     #sidebarDocs.menu-without-search,
     #sidebarContent.menu-without-search {
-      top: 3rem;
+      /* top: 3rem; */
+      /* top: 4rem; */
+      top: 3.6rem;
     }
   }
 
@@ -302,7 +309,8 @@
       max-height: unset;
       height: 120svh;
       
-      top: 6rem;
+      /* top: 6rem; */
+      top: 7rem;
     }
 
   }
@@ -320,6 +328,11 @@
       padding: var(--space);
       background-color: var(--body-bg);
       z-index: 99;
+      overflow-y: scroll;
+    }
+
+    #sidebarContent {
+      height: unset;
     }
   }
 

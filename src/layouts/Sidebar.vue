@@ -91,10 +91,14 @@ query {
 
       #sidebarDocs, #sidebarContent {
         max-height: unset;
-        height: unset;
+        /* height: unset; */
         
         /* top: 7rem; */
         bottom: 0;
+      }
+
+      #sidebarDocs {
+        height: unset;
       }
     }
 
@@ -102,7 +106,8 @@ query {
 
     #sidebarDocs, #sidebarContent {
       
-      top: 6rem;
+      /* top: 6rem; */
+      top: 7rem;
     }
 
   }   
