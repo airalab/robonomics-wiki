@@ -68,13 +68,13 @@ sudo usermod -a -G dialout $USER
 
 5. You will see `Wi-Fi Settings` page. Select your Wi-Fi and enter the password. Press `Apply` button. The gateway will restart and connect to your Wi-Fi network. 
 
-<robo-wiki-picture src="home-assistant/wi-fi-connect.jpg" />
+<robo-wiki-video local src="sls-gateway-wifi.mp4" />
 
 6. Find the local IP of the SLS gateway to access the web interface. To find it you can use [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/). The gateway name should look like this: `zgw****`. Open the web interface of the gateway by pasting the gateway IP into a browser.
 
 7. Go to `Setting` -> `Hardware` and make sure that the settings look like on the image. Correct the settings if necessary and click `Save` button:
 
-<robo-wiki-picture src="home-assistant/sls-hardware.jpg" />
+<robo-wiki-video src="https://static.robonomics.network/wiki/sls-gateway-hardware.mp4" />
 
 The table with required values:
 
@@ -105,7 +105,7 @@ If you already have an active SLS gateway in your home, and you are now configur
 
 </robo-wiki-note>
 
-<robo-wiki-picture src="home-assistant/sls-hass.jpg" />
+<robo-wiki-video local src="sls-gateway-zigbee.mp4" />
 
 11. Connect your devices by going to `Zigbee` -> `Join`. Put your sensors in pairing mode, the most common way to switch a device to connect mode is to hold its power button or switch them on/off for 5 times. Press the `Enable Join` button to start searching Zigbee devices. You will see active sensors.
 
@@ -116,13 +116,10 @@ If you already have an active SLS gateway in your home, and you are now configur
 
 After connecting all sensors to the SLS Gateway, you need to connect SLS Gateway to Home Assistant. Open SLS Gateway web interface and go to `Settings/Link` -> `MQTT Setup`:
 
-<robo-wiki-picture src="home-assistant/sls-mqtt-menu.jpg" />
 
-Add your broker address (address of the Raspberry Pi with Home Assistant in local network, you can find it with [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)), port (default is `1883`) your broker username and password (which you have created earlier) and the topic name (you can choose any). Also, the Raspberry Pi IP address must be static.
+Add your broker address (address of the Raspberry Pi with Home Assistant in local network, you can find it with [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)), port (default is `1883`) your broker username and password (which you have created earlier) and the topic name (you can choose any). Also, the Raspberry Pi IP address must be static. Click on `Enable` and `Retain states`.
 
-Click on `Enable` and `Retain states`.
-
-<robo-wiki-picture src="home-assistant/sls-mqtt1.jpg" />
+<robo-wiki-video src="https://static.robonomics.network/wiki/sls-gateway-mqtt-hass.mp4" />
 
 Save changes. Now devices will be automatically shown in Home Assistant.
 
