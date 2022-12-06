@@ -18,11 +18,17 @@ Connect gateway to your Raspberry Pi via USB type-C port on the gateway.
 
 Clone the repository with firmware to your Raspberry Pi:
 
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
+
 ```shell
 git clone https://github.com/airalab/robonomics-hass-utils.git
 ```
 
+</code-helper>
+
 Go to `robonomics-hass-utils/esp_firmware/linux`. To flash the SLS gateway you need to run `Clear` and `Flash_16mb` scripts.
+
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 cd robonomics-hass-utils/esp_firmware/linux
@@ -32,21 +38,29 @@ sudo chmod +x Flash_16mb.sh
 ./Flash_16mb.sh
 ```
 
+</code-helper>
+
 ### Troubleshooting
 
 If you are experiencing problems updating the gateway firmware, you need to take additional steps:
 
 1. Make sure you have the pySerial module installed:
 
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
+
 ```shell
 pip install pyserial
 ```
+</code-helper>
 
 2. Give your user access rights to the USB port:
+
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 sudo usermod -a -G dialout $USER
 ```
+</code-helper>
 
 3. In some cases, it is necessary to change the bandwidth setting in the script to update the firmware. Open the `Flash_16mb.sh` script with the `nano` editor and change the baud parameter from `921600` to a smaller value (for example, `115200`).
 

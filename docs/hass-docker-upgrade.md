@@ -30,12 +30,18 @@ tools:
 
 Download the installation script and run it in the terminal:
 
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
+
 ```shell
 wget https://raw.githubusercontent.com/airalab/robonomics-hass-utils/main/raspberry_pi/install_integration_docker.sh
 sudo bash install_integration_docker.sh
 ```
 
+</code-helper>
+
 You will see the following output:
+
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 <...>
@@ -52,6 +58,8 @@ Checked out revision 120.
 Integration downloaded!
 ```
 
+</code-helper>
+
 <robo-wiki-note type="note" title="Error: `custom_components` exists">
 
   You may see an error like `mkdir: can't create directory 'custom_components': File exists`. This means that you have already have this folder with some custom components installed. Just ignore this message.
@@ -62,10 +70,14 @@ Restart the container:
 
 <robo-wiki-tabs>
   <robo-wiki-tab title="Docker">
+    <code-helper additionalLine="rasppi_username@rasppi_hostname">
     <pre>docker restart homeassistant</pre>
+    </code-helper>
   </robo-wiki-tab>
   <robo-wiki-tab title="Docker Compose">
+    <code-helper additionalLine="rasppi_username@rasppi_hostname">
     <pre>docker compose restart</pre>
+    </code-helper>
   </robo-wiki-tab>
 </robo-wiki-tabs>
 
@@ -74,11 +86,18 @@ Restart the container:
 
 Check that the IPFS service is up and running:
 
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
+
 ```shell
 systemctl status ipfs-daemon.service 
 ```
 
+</code-helper>
+
 You will see the following output:
+
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
+
 
 ```
 ● ipfs-daemon.service - IPFS Daemon Service
@@ -91,6 +110,8 @@ You will see the following output:
      CGroup: /system.slice/ipfs-daemon.service
              └─4400 /usr/local/bin/ipfs daemon
 ```
+
+</code-helper>
 
 Now you have two options:
 
