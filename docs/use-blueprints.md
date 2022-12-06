@@ -6,7 +6,7 @@ tools:
     https://github.com/home-assistant/core
 ---
 
-In this article you will know how to add automation bluerprints to your Home Assistant and configure it.
+In this article you will know how to add automation blueprints to your Home Assistant and configure it.
 
 ## Blueprint Automations
 

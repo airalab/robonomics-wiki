@@ -86,7 +86,7 @@ Click on it and follow the installation instructions.
 
 Now you can install Robonomics Integration using HACS.
 
-Open HACS and go to `Integrations`. Press on three dots in the upper right corner and choose `Custop Repositories`. In the opened window paste the following link:
+Open HACS and go to `Integrations`. Press on three dots in the upper right corner and choose `Custom Repositories`. In the opened window paste the following link:
 
 ```
 https://github.com/airalab/homeassistant-robonomics-integration
