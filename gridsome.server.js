@@ -98,7 +98,7 @@ module.exports = function (api) {
       for (const rule of redirects) {
         rules.push(`/summary/:title\t${rule.to}\t${rule.status}`)
       }
-      fs.appendFileSync('./dist/_redirects', rules.join('\n'))
+      // fs.appendFileSync('./dist/_redirects', rules.join('\n'))
     }
   }) 
 }

@@ -1,0 +1,39 @@
+- current_link:  /docs/robonomics-smart-home-overview
+  options: 
+    - /docs/robonomics-smart-home-introduction
+    - /docs/home-assistant-begin
+
+- current_link: /docs/hass-image-install
+  options: 
+    - /docs/raspberry-setup
+
+- current_link: /docs/mqtt-hassos
+  options: 
+   - /docs/mqtt-broker
+
+- current_link: /docs/zigbee-to-mqtt
+  options: 
+    - /docs/zigbee2-mqtt
+
+- current_link: /docs/sub-activate
+  options: 
+   - /docs/iot-sub-setup
+
+- current_link: /docs/robonomics-hass-integration
+  options: 
+    - /docs/add-smart-device-to-robonomics
+
+- current_link: /docs/global-administration
+  options:
+   - /docs/use-dapp
+
+- current_link: /docs/
+  options: 
+    - /docs/en
+    - /docs/ru
+    - /docs/es
+    - /docs/ja
+    - /docs/ko
+    - /docs/pt
+
+
