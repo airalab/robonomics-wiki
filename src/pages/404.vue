@@ -147,10 +147,12 @@ export default {
 
     removeLocale() {
       const title = this.$route.path;
-      const locales = ['en', 'ru', 'es', 'ja', 'pt', 'ko'];
+      const locales = ['en/', 'ru/', 'es/', 'ja/', 'pt/', 'ko/'];
       locales.map(local => {
+        const l = title.replace(local, "");
         if(title.includes(local)) {
-          window.location.href = `https://wiki.robonomics.network${title.replace(local + '/', "")}`;
+          console.log(title)
+          window.location.href = `https://wiki.robonomics.network${l}`;
         }
       })
     }
