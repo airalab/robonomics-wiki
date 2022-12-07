@@ -31,9 +31,14 @@ To install it go to `Settings` -> `Add-ons` and press the `Add-on Store` button 
 
 Then press on three dots in the upper right corner and choose `Repositories`. Add there the following link:
 
+<code-helper copy>
+
 ```
 https://github.com/airalab/ipfs-addon
 ```
+
+</code-helper>
+
 Then press `Add` button:
 
 <robo-wiki-picture src="home-assistant/add-addon-repo.jpg" />
@@ -64,9 +69,13 @@ After that in the `Info` tab press `Start`. If you want to see the addon in the 
 
 Open SSH Add-on and run the following command:
 
+<code-helper copy additionalLine="Hass Command Line">
+
 ```bash
 wget -O - https://get.hacs.xyz | bash -
 ```
+
+</code-helper>
 
 <robo-wiki-picture src="home-assistant/ssh-install-hacs.jpg" />
 
@@ -86,11 +95,15 @@ Click on it and follow the installation instructions.
 
 Now you can install Robonomics Integration using HACS.
 
-Open HACS and go to `Integrations`. Press on three dots in the upper right corner and choose `Custop Repositories`. In the opened window paste the following link:
+Open HACS and go to `Integrations`. Press on three dots in the upper right corner and choose `Custom Repositories`. In the opened window paste the following link:
+
+<code-helper copy>
 
 ```
 https://github.com/airalab/homeassistant-robonomics-integration
 ```
+
+</code-helper>
 
 After that, choose `Integration` category.
 

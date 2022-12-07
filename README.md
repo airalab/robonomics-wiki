@@ -1,17 +1,89 @@
-# [EN README] Robonomics Wiki
+# Welcome to Robonomics Wiki Repository!
 
-Robonomics network is an open-source project built by core maintainers from Airalab and contributors. We want to make it easy for anyone to contribute. You may contribute to core, suggest changes, improve documentation or write a blog post. Please, read some rules and suggestions for contributing.
+## [EN] How to Help Robonomics Wiki
 
-* [How to contribute](/docs/contributing.md)
-* [How to edit docs](/docs/edit-wiki.md)
+Robonomics Network is an open-source project and we want to make it easy for anyone to contribute. But before that, please read the rules and suggestions for making a contribution:
 
-If you have any specific questions, that are not covered in docs below, please, open an Issue and describe your suggestion. It is preferred to open Issue in English, so that as many people as possible have the opportunity to understand it.
+* [How to Contribute](/docs/contributing.md)
+* [How to Edit Docs](/docs/edit-wiki.md)
 
-## [RU README] Участие в развитии Вики Робономики
+If you have any specific questions that are not covered in the articles above, please, open an Issue and describe your suggestion in English.
 
-Робономика - это сеть с открытым программным кодом. Мы приветствуем ваши предложения, замечания или непосредственное участие в улучшении любых сервисов Робономики, в том числе Вики. Вы можете принять участие как в небольших правках (например, опечатки), так и предлагать добавление переводов статей, добавление новых статей, изменения в коде Вики.
+### How to Deploy Wiki Locally
 
-* [Как стать контрибьютором](/docs/contributing.md)
-* [Как править документы](/docs/edit-wiki.md)
+1. Install [Node.js](https://nodejs.org/en/download/package-manager/).
 
-Если вы заметили какие-то ошибки или у вас есть предложения по работе с Вики, можете создать Issue и описать в нем ваше предложение. Лучше если вы всё опишете Issue на английском, чтобы как можно больше людей в сообществе смогли его понять.
+2. Activate [Yarn Package Manager](https://yarnpkg.com/), shipped with Node.js Corepack:
+
+```
+corepack enable
+```
+
+3. Clone the wiki repository:
+
+```
+git clone https://github.com/airalab/robonomics-wiki.git
+```
+
+4. Go to the directory of the repository and run the following commands:
+
+```
+cd robonomics-wiki
+sudo yarn global add @gridsome/cli
+yarn install
+```
+
+5. Deploy the wiki locally:
+
+```
+gridsome develop
+```
+
+> If you have the error `node: --openssl-legacy-provider is not allowed in NODE_OPTIONS`, run the following command:
+```
+export NODE_OPTIONS=--openssl-legacy-provider
+```
+
+## [RU] Как помочь Robonomics Wiki
+
+Robonomics Network — это проект с открытым исходным кодом, и мы хотим, чтобы каждый мог легко внести свой вклад в развитие проекта. Но перед этим, пожалуйста, ознакомьтесь, с правилами и советам о том, как добавлять и редактировать материалы Wiki. 
+
+* [Как стать контрибьютером](/docs/contributing.md)
+* [Как редактировать статьи](/docs/edit-wiki.md)
+
+Если у вас есть какие-либо конкретные вопросы, не затронутые в статьях выше, пожалуйста, откройте Issue и опишите свой вопрос на английском языке.
+
+### Как развернуть Wiki локально
+
+1. Установите [Node.js](https://nodejs.org/en/download/package-manager/).
+
+2. Активируйте [Yarn Package Manager](https://yarnpkg.com/), установленный вместе с Node.js Corepack:
+
+```
+corepack enable
+```
+
+3. Клонируйте репозиторий Wiki:
+
+```
+git clone https://github.com/airalab/robonomics-wiki.git
+```
+
+4. Перейдите в каталог репозитория и выполните следующие команды:
+
+```
+cd robonomics-wiki
+sudo yarn global add @gridsome/cli
+yarn install
+```
+
+5. Разверните Wiki локально:
+
+```
+gridsome develop
+```
+
+> Если вы столкнулись с ошибкой `node: --openssl-legacy-provider is not allowed in NODE_OPTIONS`, выполните следующую команду:
+```
+export NODE_OPTIONS=--openssl-legacy-provider
+```

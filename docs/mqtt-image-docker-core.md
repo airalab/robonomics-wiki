@@ -10,10 +10,13 @@ tools:
 
 There is a quick installation option with a pre-written script, that installs the [Mosquitto](https://mosquitto.org/) MQTT broker. Connect to your Raspberry Pi and run:
 
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
+
 ```shell
 curl -O https://raw.githubusercontent.com/airalab/robonomics-hass-utils/main/raspberry_pi/mqtt-install.sh
 bash mqtt-install.sh
 ```
+</code-helper>
 
 You will be asked to enter `USERNAME` and `PASSWORD` for the broker. After finishing, the broker will be running as a `systemd` service.
 
