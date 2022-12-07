@@ -18,23 +18,33 @@
 
       <p>Page disappeared, we are sorry</p>
 
-      <Button label="GO HOME" link="/" size="large" />
+      <div class="page-404__wrapper">
+        <p>Some content moved to <g-link to="https://robonomics.academy">academy</g-link> or try to find updated content here on <g-link to="https://wiki.robonomics.network">wiki</g-link>.</p>
+      </div>
     </div>
 
   </Layout>
 </template>
 
 <script>
+import redirects from '../../data/redirects_docs.yaml'
 export default {
 
   components: {
     Button: () => import('~/components/Button.vue'),
   },
 
+  data() {
+    return {
+      redirectLink: null
+    }
+  },
+
   metaInfo() {
     return {
       title: 'This page not found',
       meta: [
+        this.movedPage,
         { name: "description", content: 'There can be many reasons for this, for example'},
         {
           property: "og:url",
@@ -93,17 +103,65 @@ export default {
           name: 'twitter:creator',
           content: "@AIRA_Robonomics"
         },
-     ]
+     ],
+     link: this.metaRedirectLink
    }
   },
 
-  created() {
-    const path = this.$route.path; 
-    const title = path.match(/\/([^\/]+)[\/]?$/);
+  computed: {
+    redirects() {
+      return redirects
+    },
 
-    if(path.includes('summary')) {
-      window.location.href = `https://wiki.robonomics.network/summary/${title[1]}/`;
+    movedPage() {
+      if(this.redirectLink) {
+        return { 'http-equiv': 'refresh', content:`2; URL=https://wiki.robonomics.network${this.redirectLink}`}
+      } else {
+        return []
+      }
+
+  },
+
+  metaRedirectLink() {
+    if(this.redirectLink) {
+      return [{ rel: 'canonical', href: this.redirectLink }]
+    } else {
+      return []
     }
+  },
+  },
+
+  methods: {
+    checkIfPageMoved() {
+      const title = this.$route.path.match(/\/([^\/]+)[\/]?$/)[0]
+      const route = '/docs' + title;
+
+      this.redirects.map(item => {
+        item.options.map(link => {
+          if(link === route) {
+            this.redirectLink = item.current_link;
+          }
+        })
+      })
+    },
+
+    removeLocale() {
+      const title = this.$route.path;
+      const locales = ['en', 'ru', 'es', 'ja', 'pt', 'ko'];
+      locales.map(local => {
+        if(title.includes(local)) {
+          window.location.href = `https://wiki.robonomics.network${title.replace(local + '/', "")}`;
+        }
+      })
+    }
+  },
+
+  created() {
+    setTimeout(() => {
+      this.checkIfPageMoved();
+    }, 500)
+
+    this.removeLocale();
     
   }
 }
@@ -127,12 +185,29 @@ export default {
   }
 
   .page-404 p {
-    font-weight: 600;
+    font-weight: 300;
     font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: calc( var(--space) * 2);
   }
 
-  .page-404 a {
-    padding: 0.6rem 6rem;
+  .page-404 p.small {
+    margin-top: 0;
+    font-size: 0.8rem;
+    font-family: var(--font-family-code);
+    margin-bottom:0;
+  }
+
+  .page-404__wrapper {
+    max-width: 460px;
+    width: 100%;
+  }
+
+  .page-404__wrapper p {
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-style: normal;
+    text-align: center;
   }
 
   .page-404__image {
@@ -341,6 +416,10 @@ export default {
     .page-404 p {
       font-size: 1.2rem;
       text-align: center;
+    }
+
+    .page-404__wrapper p {
+      font-size: 1rem;
     }
   } 
 
