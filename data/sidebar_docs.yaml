@@ -203,10 +203,10 @@
 #
 - title_en: Maintain
   items:
-#    - title_en: How to build collator node from source
-#      link: /docs/how-to-build-collator-node
-#    - title_en: How to launch the Robonomics collator
-#      link: /docs/how-to-launch-the-robonomics-collator
+    - title_en: How to build collator node from source
+      link: /docs/how-to-build-collator-node
+    - title_en: How to launch the Robonomics collator
+      link: /docs/how-to-launch-the-robonomics-collator
 #    - title_en: Deploy Robonomics Test Network
 #      link: /docs/robonomics-test-network-manual
     - title_en: Configure Metrics With Prometheus And Grafana

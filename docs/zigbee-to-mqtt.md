@@ -18,7 +18,7 @@ tools:
 
 Set up Node.js runtime environment repository and install it with required dependencies:
 
-<code-helper copy>
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -29,7 +29,7 @@ sudo apt-get install -y nodejs git make g++ gcc
 
 Verify that the correct versions of Node.js (v14.X, V16.x, V17.x or V18.X) and package manager npm (6.X, 7.X or 8.X) automatically installed with Node.js, have been installed:
 
-<code-helper copy>
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 node --version
@@ -40,7 +40,7 @@ npm --version
 
 Create a directory for Zigbee2MQTT and set your user as owner of it:
 
-<code-helper copy>
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 sudo mkdir /opt/zigbee2mqtt
@@ -51,7 +51,7 @@ sudo chown -R ${USER}: /opt/zigbee2mqtt
 
 Clone Zigbee2MQTT repository:
 
-<code-helper copy>
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 git clone --depth 1 --branch 1.28.2 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
@@ -61,7 +61,7 @@ git clone --depth 1 --branch 1.28.2 https://github.com/Koenkk/zigbee2mqtt.git /o
 
 Install dependencies (as user pi). Note that the npm ci could produce some warning which can be ignored.
 
-<code-helper copy>
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 cd /opt/zigbee2mqtt
@@ -80,7 +80,7 @@ Connect the Zigbee adapter to Raspberry Pi.
 
 Then you need to find the location of the adapter. For this run the next command:
 
-<code-helper copy>
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```bash
 ls -l /dev/serial/by-id
@@ -90,6 +90,9 @@ ls -l /dev/serial/by-id
 
 Output should look like:
 
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
+
+
 ```shell
 $ ls -l /dev/serial/by-id
 total 0
@@ -97,11 +100,13 @@ lrwxrwxrwx 1 root root 13 Oct 10 01:44 usb-Silicon_Labs_CP2102_USB_to_UART_Bridg
 
 ```
 
+</code-helper>
+
 In this example device connection directory is `ttyUSB0`.
 
 Before starting Zigbee2MQTT you need to edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2MQTT:
 
-<code-helper copy>
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```bash
 nano /opt/zigbee2mqtt/data/configuration.yaml
@@ -115,6 +120,8 @@ The basic configuration needs a few adjustments. Change the following statements
  - change port in `serial`-> `port` to `/dev/DEVICE_CONNECTION_DIRECTORY>`. In this example — `/dev/ttyUSB0`.
 
 Adjusted configuration file should look like:
+
+<code-helper copy>
 
 ```shell
 # Home Assistant integration (MQTT discovery)
@@ -139,6 +146,8 @@ serial:
   port: /dev/<YOUR_PORT> # /dev/ttyUSB0 for example
 ```
 
+</code-helper>
+
 <robo-wiki-note type="warning">
 
   If you already have an active Zigbee adapter or gateway in your home, and you are now configuring another adapter, then they will conflict with each other. To solve this problem you need to change the channel on the new device. For this add the following strings to the end of configuration file:
@@ -158,7 +167,7 @@ advanced:
 
 Now you can start Zigbee2MQTT:
 
-<code-helper copy>
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```bash
 cd /opt/zigbee2mqtt
@@ -169,6 +178,7 @@ npm start
 
 If started successfully, you will see something like:
 
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 Building Zigbee2MQTT... (initial build), finished
@@ -189,6 +199,8 @@ Zigbee2MQTT:info  2022-07-29 14:36:49: MQTT publish: topic 'zigbee2mqtt/bridge/c
 Zigbee2MQTT:info  2022-07-29 14:36:49: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online
 ```
 
+</code-helper>
+
 ## Pairing Device
 
 It's time to connect your smart device. The most common way to switch a device to connect mode is to hold its power button or switch them on/off 5 times. Make sure Zigbee2MQTT is running.
@@ -197,9 +209,13 @@ It's time to connect your smart device. The most common way to switch a device t
 
 When the device connects, you should see a message like:
 
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
+
 ```
 Zigbee2MQTT:info  2022-07-29 14:44:39: Successfully interviewed '0x00158d0003eeeacf', device has successfully been paired
 ```
+</code-helper>
+
 Remember the ID of the sensor: in this example `0x00158d0003eeeacf`.
 
 Now you should see this sensor with ID in your Home Assistant WebUI. Go to `Settings` -> `Devices & Services` -> `Devices`:
@@ -216,7 +232,7 @@ After adding all the sensors, you can stop the program with `Ctrl+C`.
 
 To make the Zigbee2MQTT run after reboot, make a service. Create the file:
 
-<code-helper copy>
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 sudo nano /etc/systemd/system/zigbee2mqtt.service
@@ -249,7 +265,7 @@ WantedBy=multi-user.target
 
 Verify that the configuration works:
 
-<code-helper copy>
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 sudo systemctl start zigbee2mqtt
@@ -259,6 +275,9 @@ systemctl status zigbee2mqtt.service
 </code-helper>
 
 Output should look like:
+
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
+
 ```
 pi@raspberry:/opt/zigbee2mqtt $ systemctl status zigbee2mqtt.service
 ● zigbee2mqtt.service - zigbee2mqtt
@@ -277,9 +296,11 @@ Jun 07 20:27:24 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Loggi
 Jun 07 20:27:25 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Starting Zigbee2MQTT version 1.6.0 (commit #720e393)
 ```
 
+</code-helper>
+
 Enable the service to start Zigbee2MQTT automatically on boot:
 
-<code-helper copy>
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 sudo systemctl enable zigbee2mqtt.service

@@ -14,10 +14,14 @@ We will use [Mosquitto](https://mosquitto.org/) MQTT broker. In the Add-on Store
 
 Press on it and press `Install`. After installation go to `Configuration` tab and add `USERNAME` and `PASSWORD` for the broker in `Logins` section in the following format:
 
+<code-helper copy additionalLine="Mosquitto Broker Options">
+
 ```
 - username: USERNAME
   password: PASSWORD
 ```
+
+</code-helper>
 
 <robo-wiki-note type="warning">
   

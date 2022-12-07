@@ -12,19 +12,17 @@ You are starting with the creation of the owner account of Home Assistant. This 
 
 <robo-wiki-note type="note">Raspberry Pi address may change in time, due router settings.</robo-wiki-note>
 
-At the first page, enter a name, username, password and click on the `CREATE ACCOUNT` buttoon.
+<robo-wiki-video src="https://static.robonomics.network/wiki/hass-init.mp4" />
 
-<robo-wiki-picture src="home-assistant/username.jpg" alt="create user" />
+1. At the first page, enter a name, username, password and click on the `CREATE ACCOUNT` button.
 
-Next, enter a name for your home and set your location and unit system. Click `DETECT` to find your location and set your time zone and unit system based on that location. If you’d rather not send your location, you can set these values manually.
+2. On the next screen, enter a name for your home and set your location and unit system. Click `DETECT` to find your location and set your time zone and unit system based on that location. If you don't want to send your location, you can set these values manually.
 
-<robo-wiki-picture src="home-assistant/location.jpg" alt="set location" />
+3. After that, Home Assistant will show any devices that it has discovered on your network. Don’t worry if you see fewer items than what is shown below; you can always manually add devices later. For now, just click `FINISH` and you will be on the main Home Assistant screen.
 
-On the next screen, Home Assistant will show any devices that it has discovered on your network. Don’t worry if you see fewer items than what is shown below; you can always manually add devices later. For now, just click `FINISH` and you will be on the main Home Assistant screen.
+4. Finally, you will see the Home Assistant web interface, which will show all of your devices. 
 
-<robo-wiki-picture src="home-assistant/add-devices.jpg" alt="additional devices" />
-
-After that, you will see the Home Assistant web interface, which will show all of your devices. Next you need to setup MQTT Broker using one of the options:
+Next you need to setup MQTT Broker using one of the options:
 
 **Option 1 (Home Assistant OS)**
 * If you are upgrading you **Home Assistant OS**, [go here](/docs/mqtt-hassos/).

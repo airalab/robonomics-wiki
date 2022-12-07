@@ -27,13 +27,21 @@ tools:
 ## Install
 
 Download the installation script and run it in the terminal:
+
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
+
   
 ```shell
 wget https://raw.githubusercontent.com/airalab/robonomics-hass-utils/main/raspberry_pi/install_integration_core.sh
 sudo bash install_integration_core.sh
 ```
 
+</code-helper>
+
 You will see the following output:
+
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
+
 
 ```shell
 <...>
@@ -45,6 +53,8 @@ A    robonomics/utils.py
 Checked out revision 125.
 Integration downloaded!
 ```
+
+</code-helper>
 
 During the process, you will be asked to confirm the restart of several services. Navigating with `tab`, select the `yes` option.
   
@@ -60,11 +70,17 @@ After finishing, restart your Home Assistant.
 
 Check that the IPFS service is up and running:
 
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
+
 ```shell
 systemctl status ipfs-daemon.service 
 ```
 
+</code-helper>
+
 You will see the following output:
+
+<code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```
 ● ipfs-daemon.service - IPFS Daemon Service
@@ -77,6 +93,8 @@ You will see the following output:
      CGroup: /system.slice/ipfs-daemon.service
              └─4400 /usr/local/bin/ipfs daemon
 ```
+
+</code-helper>
 
 Now you have two options:
 
