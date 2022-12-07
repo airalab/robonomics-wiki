@@ -40,8 +40,14 @@
 	border-spacing: 0;
 	display: block;
 	margin-top: 0;
-	overflow: auto;
+	max-width: var(--content-width);
 	width: 100%;
+	color: var(--text-color);
+	font-size: 90%;
+	background-color: var(--body-bg);
+	white-space: nowrap;
+	font-family: var(--font-family-code);
+	overflow-y: auto;
 
 	margin-bottom: var(--space-text);
 }
