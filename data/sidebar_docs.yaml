@@ -46,6 +46,8 @@
       items:
         - title_en: How To Use Blueprints
           link: /docs/use-blueprints
+        - title_en: Get Notified When Door Opens
+          link: /docs/door-notification
 - title_en: Learn
   items:
     - title_en: Introduction
