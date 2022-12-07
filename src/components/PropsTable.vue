@@ -89,7 +89,7 @@ export default {
   .props-table__descr {
     padding: 0;
     margin: 0;
-    word-wrap: break-word;
+    /* word-wrap: break-word; */
     font-size: 85%;
   }
 

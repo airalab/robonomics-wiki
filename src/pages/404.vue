@@ -17,10 +17,10 @@
       <h1>404</h1>
 
       <p>Page disappeared, we are sorry</p>
-      <p class="small">You may be redirected to a similar page in a second</p>
 
-      <p class="small accent">if nothing happened, you can always</p>
-      <Button label="GO HOME" link="/" size="large" />
+      <div class="page-404__wrapper">
+        <p>Some content moved to <g-link to="https://robonomics.academy">academy</g-link> or try to find updated content here on <g-link to="https://wiki.robonomics.network">wiki</g-link>.</p>
+      </div>
     </div>
 
   </Layout>
@@ -185,25 +185,29 @@ export default {
   }
 
   .page-404 p {
-    font-weight: 600;
+    font-weight: 300;
     font-size: 1.5rem;
-    margin-bottom: 0;
+    font-style: italic;
+    margin-bottom: calc( var(--space) * 2);
   }
 
   .page-404 p.small {
     margin-top: 0;
     font-size: 0.8rem;
     font-family: var(--font-family-code);
-    margin-bottom: var(--space-text);
+    margin-bottom:0;
   }
 
-  .page-404 p.accent {
-    margin-bottom: 0;
-    opacity: 0.5;
+  .page-404__wrapper {
+    max-width: 460px;
+    width: 100%;
   }
 
-  .page-404 a {
-    padding: 0.6rem 6rem;
+  .page-404__wrapper p {
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-style: normal;
+    text-align: center;
   }
 
   .page-404__image {
@@ -412,6 +416,10 @@ export default {
     .page-404 p {
       font-size: 1.2rem;
       text-align: center;
+    }
+
+    .page-404__wrapper p {
+      font-size: 1rem;
     }
   } 
 
