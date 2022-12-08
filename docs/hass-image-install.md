@@ -53,7 +53,7 @@ Install [balenaEtcher](https://github.com/balena-io/etcher/releases) on your com
 
 Run the balenaEtcher program. Choose required image as the operating system, ensure to select your SD card from the storage dropdown menu, and then `Flash!` image.
 
-<robo-wiki-video src="https://static.robonomics.network/wiki/balena-robonomics-image-crop.mp4" />
+<robo-wiki-video controls src="https://static.robonomics.network/wiki/balena-robonomics-image-crop.mp4" />
 
 ## First Boot
 
