@@ -25,7 +25,7 @@ You are starting with the creation of the owner account of Home Assistant. This 
 Next you need to setup MQTT Broker using one of the options:
 
 **Option 1 (Home Assistant OS)**
-* If you are upgrading you **Home Assistant OS**, [go here](/docs/mqtt-hassos/).
+* If you are upgrading your **Home Assistant OS**, [go here](/docs/mqtt-hassos/).
 
 **Option 2 (Pre-installed image or Home Assistant Docker or Home Assistant Core)**
 * If you are using **pre-installed image** or upgrading your **Home Assistant Docker** or **Core**, [go here](/docs/mqtt-image-docker-core/).
