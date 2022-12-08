@@ -1,8 +1,8 @@
 ---
-title: Blueprints Usage
+title: How To Use Blueprints
 contributors: [tubleronchik]
 tools:   
-  - Home Assistant 2022.8.2
+  - Home Assistant 2022.11.3
     https://github.com/home-assistant/core
 ---
 
