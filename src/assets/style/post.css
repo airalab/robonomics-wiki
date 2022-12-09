@@ -64,6 +64,7 @@
 
 .post table th{
 	text-align: left;
+	width: 100%
 }
 
 .post table tbody tr:hover{
