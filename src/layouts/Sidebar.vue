@@ -16,6 +16,7 @@
 
               <slot name="sidebar"></slot> <!-- Sidebar slot -->
             </div>
+            <Support link="https://discord.com/invite/JpaN2XAmqY"/>
         </main>
       </div>
       <Footer/>
@@ -136,6 +137,7 @@ export default {
       Button: () => import('~/components/Button.vue'),
       Header: () => import('~/components/Header.vue'),
       Footer: () => import('~/components/Footer.vue'),
+      Support: () => import('~/components/Support.vue'),
 	  },
 
   data(){
