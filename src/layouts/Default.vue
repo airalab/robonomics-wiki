@@ -8,6 +8,7 @@
         <main class="main layout__page post">
           <SidebarItems :items="items" class="sidebar"/>
           <slot/>
+          <Support v-if="$route.path.length > 1" link="https://discord.com/invite/JpaN2XAmqY"/>
         </main>
 
         </div>
@@ -26,6 +27,7 @@ export default {
     SidebarItems: () => import("~/components/Sidebar.vue"),
     Header: () => import("~/components/Header.vue"),
     Footer: () => import("~/components/Footer.vue"),
+    Support: () => import("~/components/Support.vue"),
   },
 
   data() {

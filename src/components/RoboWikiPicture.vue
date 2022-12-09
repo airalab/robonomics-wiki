@@ -101,8 +101,24 @@ export default {
 
   mounted() {
     this.getDarkThemeImage();
-  }
 
+    
+    this.$nextTick(() => {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          this.$store.commit("toggleTheme", 'dark')
+        } else {
+          this.$store.commit("toggleTheme", 'light')
+        }
+        this.getDarkThemeImage();
+      })
+    })
+  },
+
+
+  beforeDestroy () {
+    window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', this.getDarkThemeImage)
+  }
 }
 </script>
 
