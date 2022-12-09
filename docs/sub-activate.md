@@ -10,7 +10,7 @@ tools:
 
 In this article you will create Robonomics parachain accounts and buy IoT subscription. 
 
-To control Home Assistant with Robonomics, you need 2 accounts on the Robonomics parachain. For one of the accounts (`sub_owner`), you will buy a Robonomics subscription. Second account (`sub_admin`) will control all Home Assistant processes (such as telemetry) and will give access to other users. These accounts will provide security for your Home Assistant. 
+To control Home Assistant with Robonomics, you need 2 accounts on the Robonomics parachain. For one of the accounts (`sub_owner`), you will buy a Robonomics subscription. Second account (`sub_controller`) will control all Home Assistant processes (such as telemetry) and will give access to other users. These accounts will provide security for your Home Assistant. 
 
 <robo-wiki-note type="warning" title="WARNING">
 
@@ -18,7 +18,7 @@ Both accounts must be created with **ed25519** encryption.
 
 </robo-wiki-note>
 
-## Create Owner and Admin Accounts
+## Create Owner and Controller Accounts
 
 <robo-wiki-video controls local src="create-acc.mp4" />
 
@@ -35,7 +35,7 @@ Both accounts must be created with **ed25519** encryption.
 
 6. On the last window click `Save` to finish account creation. It will also generate a backup JSON-files that you should safely store. You can later use this file to recover your account if you remember the password.
 
-7. Repeat these steps for an account with the name `sub_admin`.
+7. Repeat these steps for an account with the name `sub_controller`.
 
 
 ## Add Accounts to Polkadot.js
@@ -77,11 +77,12 @@ For this step, you must have a sufficient amount of XRT tokens (minimum 2-3 XRTs
 
 ## Add Accounts to Subscription
 
-Now you need to add a `sub_admin` account to the **access list**. 
+Now you need to add a `sub_controller` account to the **access list**. 
 
 <robo-wiki-video controls src="https://static.robonomics.network/wiki/add-accs.mp4" />
 
 1. Open extension and click on the icon near the account name. It will copy the account address.
+
 
 2. Paste this address to the `Robonomics parachain address` field in the **Manage access** part. Give it a name and press the `+` button. 
 
