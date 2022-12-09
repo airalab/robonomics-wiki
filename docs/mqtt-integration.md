@@ -8,7 +8,7 @@ tools:
 
 **In this article you will add MQTT integration to Home Assistant.**
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/mqtt-hass-setup.mp4" />
+<robo-wiki-video controls local src="mqtt-hass-setup.mp4" />
 
 1. Open Home Assistant web interface and go to `Settings` -> `Devices & Services`.
 
