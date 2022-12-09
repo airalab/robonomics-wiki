@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[23],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[24],{
 
 /***/ "7lhq":
 /*!********************************************!*\
