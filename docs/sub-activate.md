@@ -10,45 +10,33 @@ tools:
 
 In this article you will create Robonomics parachain accounts and buy IoT subscription. 
 
-To control Home Assistant with Robonomics, you need 2 accounts on the Robonomics parachain. For one of the accounts (`SUB_OWNER`), you will buy a Robonomics subscription. Second account (`SUB_CONTROLLER`) will control all Home Assistant processes (such as telemetry) and will give access to other users. These accounts will provide security for your Home Assistant. 
+To control Home Assistant with Robonomics, you need 2 accounts on the Robonomics parachain. For one of the accounts (`sub_owner`), you will buy a Robonomics subscription. Second account (`sub_controller`) will control all Home Assistant processes (such as telemetry) and will give access to other users. These accounts will provide security for your Home Assistant. 
+
+<robo-wiki-note type="warning" title="WARNING">
 
 Both accounts must be created with **ed25519** encryption. 
 
+</robo-wiki-note>
+
 ## Create Owner and Controller Accounts
 
-Go to [Robonomics Parachain app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) on Polkadot / Substrate Portal. **Check the top left corner to ensure that you are connected to Robonomics Parachain.**
+<robo-wiki-video controls local src="create-acc.mp4" />
 
-Go to `Accounts` -> `Accounts` and press `Add account` button. 
+1. Go to [Robonomics Parachain app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) on Polkadot / Substrate Portal. **Check the top left corner to ensure that you are connected to Robonomics Parachain.**
 
-<robo-wiki-picture src="home-assistant/add-account.jpg" />
+2. Go to `Accounts` -> `Accounts` and press `Add account` button. You will see the popup menu with account seed. It has two forms: *Mnemonic* (human-readable) and *Raw* (a sequence of digits and letters). 
 
-You should see the following popup menu with account seed:
+3. Open `Advanced creation options`, change the crypto type of creating account to `Edwards - ed25519` and press `Next`.
 
-<robo-wiki-picture src="home-assistant/mnemonic.jpg" />
 
-It has two forms: *Mnemonic* (human-readable) and *Raw* (a sequence of digits and letters). Save the mnemonic seed phrase securely and press `Next`.
+4. Save the mnemonic seed phrase securely and press `Next`.
 
-<robo-wiki-note type="warning">
+5. In the next menu, you need to set the account name and password. Give it a name `sub_owner` for convenience. Press `Next`.
 
-Open `Advanced creation options`, change the crypto type of creating account to `Edwards - ed25519` and press `Next`.
+6. On the last window click `Save` to finish account creation. It will also generate a backup JSON-files that you should safely store. You can later use this file to recover your account if you remember the password.
 
-</robo-wiki-note>
+7. Repeat these steps for an account with the name `sub_controller`.
 
-<robo-wiki-picture src="home-assistant/edw.jpg" />
-
-In the next menu, you need to set the account name and password. Give it a name SUB_OWNER for convenience.
-
-<robo-wiki-picture src="home-assistant/name.jpg" />
-
-Clicking on the `Next` button will take you to the last window. Click `Save` to finish account creation. It will also generate a backup JSON-files that you should safely store. You can later use this file to recover your account if you remember the password.
-
-<robo-wiki-picture src="home-assistant/done.jpg" />
-
-<robo-wiki-note type="warning">
-
-Repeat these steps for an account with the name `SUB_CONTROLLER`.
-
-</robo-wiki-note>
 
 ## Add Accounts to Polkadot.js
 
@@ -56,56 +44,50 @@ For convenience, you should use the [Polkadot.js extension](https://polkadot.js.
 
 You can get these files again by creating a backup file of the account. Press on three dots on your account, choose `Create a backup file for this account` and type in your password.
 
-<robo-wiki-picture src="creating-an-account/backup-file.jpg" />
+<robo-wiki-video controls local src="add-ext.mp4" />
 
-Open an extension and press `+` button on the top right, then choose `Restore account from backup JSON file`.
+1. Open an extension and press `+` button on the top right, then choose `Restore account from backup JSON file`.
 
-<robo-wiki-picture src="creating-an-account/extention-add-backup.jpg" />
+2. In an opened window upload the JSON file, enter the password and press `Restore`.
 
-In an opened window upload the JSON file, enter the password and press `Restore`.
+3. Make sure the Robonomics network is selected for accounts in the Polkadot.js extension. On on Polkadot / Substrate Portal go to `Setting` -> `Metadata` and click on the `Update metadata` button. 
 
-<robo-wiki-picture src="creating-an-account/file-backup.jpg" />
+4. Confirm the metadata update in the popup. Now the extension will show the label of the network for which the address is used.
+
+<robo-wiki-video controls local src="metadata.mp4" />
 
 ## Activate Robonomics Subscription 
 
 <robo-wiki-note type="okay">
 
-For this step, you must have a sufficient amount of XRT tokens (minimum 2-3 XRTs) in your `SUB_OWNER` account.
+For this step, you must have a sufficient amount of XRT tokens (minimum 2-3 XRTs) in your `sub_owner` account.
 
 </robo-wiki-note>
 
-Go to Robonomics dapp to the [subscription page](https://dapp.robonomics.network/#/subscription) and press connect account on the right sidebar.
+<robo-wiki-video controls src="https://static.robonomics.network/wiki/buy-sub.mp4" />
 
-<robo-wiki-picture src="home-assistant/dapp.jpg" />
+1. Go to Robonomics dapp to the [subscription page](https://dapp.robonomics.network/#/subscription) and press connect account on the right sidebar.
 
-In the following popup menu connect Polkadot.js extension. You will see your account address with balance.
+2. In the following popup menu connect Polkadot.js extension. You will see your account address with balance.
 
-<robo-wiki-picture src="home-assistant/connect.jpg" />
+3. Before purchasing, check that you chose the `sub_owner` account. Press the address profile icon, you should see the `sub_owner` account under the `Check owner account` field.
 
-Before purchasing, check that you chose the `SUB_OWNER` account. Press the address profile icon, you should see the `SUB_OWNER` account under the `Check owner account` field.
+4. Finally, press the `SUBMIT` button and enter the password for your account. After that wait until the activation process is completed. You will see the state of your subscription after a while.
 
-<robo-wiki-picture src="home-assistant/check.jpg" />
-
-Finally, press the `SUBMIT` button and enter the password for your account. After that wait until the activation process is completed. You will see the state of your subscription after a while.
-
-<robo-wiki-picture src="home-assistant/subscription.jpg" />
 
 ## Add Accounts to Subscription
 
-You need to add a `SUB_CONTROLLER` account to the **access list**. Open extension and click on the icon near the account name. It will copy the account address.
+Now you need to add a `sub_controller` account to the **access list**. 
 
-<robo-wiki-picture src="home-assistant/sub-admin.jpg" />
+<robo-wiki-video controls src="https://static.robonomics.network/wiki/add-accs.mp4" />
 
-Paste this address to the `Robonomics parachain address` field in the **Manage access** part.
+1. Open extension and click on the icon near the account name. It will copy the account address.
 
-<robo-wiki-picture src="home-assistant/access.jpg" />
 
-Give it a name and press the `+` button. Enter your `SUB_OWNER` password in the popup window and wait until the activation process is completed.
+2. Paste this address to the `Robonomics parachain address` field in the **Manage access** part. Give it a name and press the `+` button. 
 
-<robo-wiki-note type="note">
+3. Repeat steps 1 and 2 for `sub_owner` account.
 
-Repeat these steps for `SUB_OWNER` account.
-
-</robo-wiki-note>
+3. Press `Save`. Enter your `sub_owner` password in the popup window and wait until the activation process is completed.
 
 After that, go to the article ["Robonomics Integration Setup"](/docs/robonomics-hass-integration/) article.

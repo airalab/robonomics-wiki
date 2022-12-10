@@ -12,7 +12,7 @@ You are starting with the creation of the owner account of Home Assistant. This 
 
 <robo-wiki-note type="note">Raspberry Pi address may change in time, due router settings.</robo-wiki-note>
 
-<robo-wiki-video src="https://static.robonomics.network/wiki/hass-init.mp4" />
+<robo-wiki-video controls src="https://static.robonomics.network/wiki/hass-init.mp4" />
 
 1. At the first page, enter a name, username, password and click on the `CREATE ACCOUNT` button.
 
