@@ -8,6 +8,8 @@ tools:
 
 **This article describes how to install MQTT broker to Home Assistant OS.**
 
+<robo-wiki-picture src="home-assistant/mqtt_broker_os.png" />
+
 We will use [Mosquitto](https://mosquitto.org/) MQTT broker. In the Add-on Store find the `Mosquitto broker` add-on:
 
 <robo-wiki-picture src="home-assistant/mosquitto-addon.jpg" />

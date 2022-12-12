@@ -16,6 +16,8 @@ tools:
 
 **This article contains instructions to upgrade your existing Home Assistant Core with the Robonomics integration.**
 
+<robo-wiki-picture src="home-assistant/ha_core.png" />
+
 <robo-wiki-note type="warning" title="DISCLAIMER">
 
   1. It is assumed that the installation of your Home Assistant Core was completed in accordance to the [official instructions](https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-core) and there is a <u>homeassistant</u> user and the `venv` environment. If it is not the case, follow instructions below, **but edit the script accordingly**.

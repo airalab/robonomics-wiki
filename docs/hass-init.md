@@ -8,6 +8,8 @@ tools:
 
 **After installing Home Assistant, it needs to be initialized.**
 
+<robo-wiki-picture src="home-assistant/ha_init.png" />
+
 You are starting with the creation of the owner account of Home Assistant. This account is an administrator and can make any changes. Open web browser and go to `http://%RASPBERRY_IP_ADDRESS%:8123`. You can find the IP address of Raspberry Pi using [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
 <robo-wiki-note type="note">Raspberry Pi address may change in time, due router settings.</robo-wiki-note>

@@ -6,7 +6,12 @@ tools:
   - Zigbee2MQTT 1.28.2
 ---
 
-**In this article you will set up your Zigbee adapter. If you have the [JetHome USB JetStick Z2](https://jethome.ru/z2/?sl=en) (which has all of the necessary firmware), you can simply proceed with these instructions. However, if you have another adapter, the first thing you need to do is to flash it with Zigbee2MQTT software. You can find instructions for your device [here](https://www.zigbee2mqtt.io/information/supported_adapters.html).**
+**In this article you will set up your Zigbee adapter.**
+
+<robo-wiki-picture src="home-assistant/zigbee2mqtt.png" />
+
+**If you have the [JetHome USB JetStick Z2](https://jethome.ru/z2/?sl=en) (which has all of the necessary firmware), you can simply proceed with these instructions. However, if you have another adapter, the first thing you need to do is to flash it with Zigbee2MQTT software. You can find instructions for your device [here](https://www.zigbee2mqtt.io/information/supported_adapters.html).**
+
 
 ## Software Install
 

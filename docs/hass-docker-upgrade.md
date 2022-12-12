@@ -18,6 +18,8 @@ tools:
 
 **This article contains instructions to upgrade your existing Home Assistant Docker (on a Unix-like OS) with the Robonomics integration.**
 
+<robo-wiki-picture src="home-assistant/ha_docker.png" />
+
 <robo-wiki-note type="warning" title="DISCLAIMER">
 
   1. It is assumed that default Docker images and container of Home Assistant named <u>homeassistant</u> are used.

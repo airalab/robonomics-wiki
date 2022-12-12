@@ -16,6 +16,8 @@ tools:
 
 **This article contains instructions to upgrade your existing Home Assistant OS with Robonomics integration.**
 
+<robo-wiki-picture src="home-assistant/homeassistant_os.png" />
+
 ## Install IPFS Add-on
 
 <robo-wiki-note type="okay">

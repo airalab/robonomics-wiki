@@ -8,6 +8,8 @@ tools:
 
 **This article describes how to install MQTT broker for Robonomics pre-installed image or for Home Assistant Docker or Core.**
 
+<robo-wiki-picture src="home-assistant/mqtt_broker_core.png" />
+
 There is a quick installation option with a pre-written script, that installs the [Mosquitto](https://mosquitto.org/) MQTT broker. Connect to your Raspberry Pi and run:
 
 <code-helper additionalLine="rasppi_username@rasppi_hostname">

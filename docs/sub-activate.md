@@ -10,6 +10,9 @@ tools:
 
 In this article you will create Robonomics parachain accounts and buy IoT subscription. 
 
+<robo-wiki-picture src="home-assistant/sub_activate.png" />
+
+
 To control Home Assistant with Robonomics, you need 2 accounts on the Robonomics parachain. For one of the accounts (`sub_owner`), you will buy a Robonomics subscription. Second account (`sub_controller`) will control all Home Assistant processes (such as telemetry) and will give access to other users. These accounts will provide security for your Home Assistant. 
 
 <robo-wiki-note type="warning" title="WARNING">

@@ -14,6 +14,7 @@ tools:
 
 **This article contains instructions to install Home Assistant with Robonomics on your Raspberry Pi.**
 
+<robo-wiki-picture src="home-assistant/pre_installed_image.png" />
 
 ## Get Image
 
