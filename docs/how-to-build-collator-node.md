@@ -84,4 +84,4 @@ Now you can install the robonomics node from git source.
 
 After this command the compiled robonomics binary will be in `~/.cargo/bin` directory.
 
-The next step is how to launch the collator node. You can read about it in the ["How to launch the Robonomics collator"](/docs/how-to-launch-the-robonomics-collator) article.
+The next step is how to launch the collator node. You can read about it in the ["How to launch the Robonomics collator"](https://github.com/airalab/robonomics-wiki/blob/master/docs/how-to-launch-the-robonomics-collator.md) article.
