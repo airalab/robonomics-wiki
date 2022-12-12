@@ -6,6 +6,8 @@ contributors: [LoSk-p, Fingerling42, nakata5321]
 
 **In this article you will set up Robonomics SLS Gateway. You will install the required software for the gateway, configure it and connect it to Home Assistant.**
 
+<robo-wiki-picture src="home-assistant/sls_gateway.png" />
+
 ## Firmware
 
 First you need to install microcontroller firmware of the gateway. Prepare the gateway by setting switches `1` and `3` at the bottom part of SLS Gateway to `ON`, others must be `OFF`.
