@@ -260,7 +260,7 @@ WorkingDirectory=/opt/zigbee2mqtt
 StandardOutput=inherit
 StandardError=inherit
 Restart=always
-User=ubuntu
+User=<YOUR_USER_HERE>
 
 [Install]
 WantedBy=multi-user.target
@@ -268,7 +268,13 @@ WantedBy=multi-user.target
 
 </code-helper>
 
-Verify that the configuration works:
+<robo-wiki-note type="note">
+
+If you don't know your username, use `whoami` command.
+
+</robo-wiki-note>
+
+Save file and verify that the configuration works:
 
 <code-helper additionalLine="rasppi_username@rasppi_hostname">
 
