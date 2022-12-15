@@ -60,4 +60,84 @@ This article contains the commands required to update a Robonomics collator node
 
 Note: releases of Robonomics can be found here: https://github.com/airalab/robonomics/releases/ 
 
+# **Changing Kusama Relay Chain Db with no base path set**
 
+There are times where certain snapshots of the Kusama Relay Chain cause your node to have errors. This will often cause your node to stop working. 
+
+Example error caused by a corrupt Relay Chain Db:
+
+``Dec 08 19:14:31 ns3159483 robonomics[1019836]: 2022-12-08 19:14:31 [Relaychain] GRANDPA voter error: could not complete a round on disk: Database``
+
+``Dec 08 19:14:31 ns3159483 robonomics[1019836]: 2022-12-08 19:14:31 [Relaychain] Essential task `grandpa-voter` failed. Shutting down service.``
+
+``Dec 08 19:14:32 ns3159483 robonomics[1019836]: Error: Service(Other("Essential task failed."))``
+
+``Dec 08 19:14:32 ns3159483 systemd[1]: robonomics.service: Main process exited, code=exited, status=1/FAILURE``
+
+``Dec 08 19:14:32 ns3159483 systemd[1]: robonomics.service: Failed with result 'exit-code'.``
+
+``Dec 08 19:14:33 ns3159483 robonomics[1022922]: Error: Service(Client(Backend("Invalid argument: Column families not opened: col12, col11, col10, col9, col8, col7, col6, col5, col4, col3, col2, col1, col0")))``
+
+``Dec 08 19:14:33 ns3159483 systemd[1]: robonomics.service: Main process exited, code=exited, status=1/FAILURE``
+
+``Dec 08 19:14:33 ns3159483 systemd[1]: robonomics.service: Failed with result 'exit-code'.``
+
+In order to fix this error, you should remove your existing Kusama Relay Chain Db (likely RocksDb) and replace it with another Db such as ParityDb.
+
+``cd /home/robonomics/``
+
+``ls -a``
+
+Confirm that you see the polkadot directory, and then navigate to the chains directory.
+
+``cd /polkadot/chains/``
+
+``ls -a``
+
+Delete the ksmcc3 directory.
+
+``rm -r ksmcc3``
+
+Make a new ksmcc3 directory.
+
+``mkdir ksmcc3``
+
+``chown -R robonomics:robonomics ksmcc3``
+
+``cd ksmcc3``
+
+Now you need to download a new snapshot. This example uses a heavily pruned relay chain snapshot, but you can swap it for any snapshot you prefer.
+
+``wget wget https://snaps.sik.rocks/ksm_pruned.tar.gz``
+
+Whilst the snapshot is downloading, open a new session and edit your service file.
+
+``sudo nano /etc/systemd/system/robonomics.service``
+
+Modify lines within the service file which relate to the database and pruning.
+
+  ``--database=paritydb \``
+  
+  ``--state-pruning=100 \``
+  
+  ``--blocks-pruning=100 \``
+  
+  ``--execution=Wasm``
+  
+Ctrl + S and then Ctrl + X to save and exit the service file.
+
+Now you need to reload your daemon.
+
+``systemctl daemon-reload``
+
+By this time, in your other session, hopefully the new Db has downloaded, so use the following command on the file.
+
+``tar -xvzf ksm_pruned.tar.gz``
+
+Then after the unpacking is completed.
+
+``chown -R robonomics:robonomics paritydb``
+
+Now you can start the service, monitor it for any errors, and check that it is peering on both the relay chain and the parachain.
+
+``systemctl start robonomics && journalctl -fu robonomics``
