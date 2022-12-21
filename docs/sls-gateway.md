@@ -55,12 +55,13 @@ pip install pyserial
 ```
 </code-helper>
 
-2. Give your user access rights to the USB port:
+2. Give your user access rights to the USB port and reboot computer:
 
 <code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
 sudo usermod -a -G dialout $USER
+sudo reboot
 ```
 </code-helper>
 
@@ -101,7 +102,7 @@ The table with required values:
 | Zigbee UART TX           | 23                 |
 | Zigbee RST Pin           | 18                 |
 | Zigbee BSL Pin           | 19                 |
-| Button Mode              | 33 (pullUP - true) |
+| Service Button Pin       | 33 (pullUP - true) |
 | Number addressable leds  | 0                  |
 | Led Red (or addr)        | 21                 |
 | Led Green                | 5                  |
@@ -123,16 +124,9 @@ If you already have an active SLS gateway in your home, and you are now configur
 
 <robo-wiki-video controls local src="sls-gateway-zigbee.mp4" />
 
-11. Connect your devices by going to `Zigbee` -> `Join`. Put your sensors in pairing mode, the most common way to switch a device to connect mode is to hold its power button or switch them on/off for 5 times. Press the `Enable Join` button to start searching Zigbee devices. You will see active sensors.
-
-<robo-wiki-picture src="home-assistant/switch-device.gif" />
-
-<robo-wiki-video controls local src="sls-gateway-add-devices.mp4" />
-
-
 ## Pairing SLS to MQTT
 
-After connecting all sensors to the SLS Gateway, you need to connect SLS Gateway to Home Assistant. Open SLS Gateway web interface and go to `Settings/Link` -> `MQTT Setup`:
+After configuring the SLS Gateway, you need to connect SLS Gateway to Home Assistant. Open SLS Gateway web interface and go to `Settings/Link` -> `MQTT Setup`:
 
 
 Add your broker address (address of the Raspberry Pi with Home Assistant in local network, you can find it with [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)), port (default is `1883`) your broker username and password (which you have created earlier) and the topic name (you can choose any). Also, the Raspberry Pi IP address must be static. Click on `Enable` and `Retain states`.
@@ -140,5 +134,14 @@ Add your broker address (address of the Raspberry Pi with Home Assistant in loca
 <robo-wiki-video controls local src="sls-gateway-mqtt-hass.mp4" />
 
 Save changes. Now devices will be automatically shown in Home Assistant.
+
+## Connect Devices
+
+Connect your devices by going to `Zigbee` -> `Join`. Put your sensors in pairing mode, the most common way to switch a device to connect mode is to hold its power button or switch them on/off for 5 times. Press the `Enable Join` button to start searching Zigbee devices. You will see active sensors.
+
+<robo-wiki-picture src="home-assistant/switch-device.gif" />
+
+<robo-wiki-video controls local src="sls-gateway-add-devices.mp4" />
+
 
 Now you can go to the [**IoT Subscription**](/docs/sub-activate) section and start activating the Robonomics subscription.
