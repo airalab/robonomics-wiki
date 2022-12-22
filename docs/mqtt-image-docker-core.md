@@ -22,4 +22,10 @@ bash mqtt-install.sh
 
 You will be asked to enter `USERNAME` and `PASSWORD` for the broker. After finishing, the broker will be running as a `systemd` service.
 
+## Next step
+
 After that, go to the [MQTT Integration Setup](/docs/mqtt-integration/) article.
+
+## Related videos
+
+https://youtu.be/n4PX25aB1JU
