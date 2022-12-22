@@ -2,6 +2,9 @@
 title: Robonomics integration setup
 
 contributors: [LoSk-p, nakata5321, Fingerling42]
+tools:
+  - Robonomics integration 1.1.3
+    https://github.com/airalab/homeassistant-robonomics-integration
 ---
 
 **In this article, you will add Robonomics to Home Assistant. This allows Home Assistant to record datalogs with encrypted data to Robonomics Parachain and listen for launch commands from the parachain to control smart devices. Integration uses IPFS to store data and send IPFS hashes to datalog or launch functions.**
