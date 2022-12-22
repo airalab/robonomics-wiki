@@ -14,7 +14,7 @@ In the web interface of Home Assistant go to `Settings` -> `Device & Services` a
 
 Click on Robonomics and fill in the configuration: 
 
-- Add seed from the `SUB_CONTROLLER` account to admin account seed.
+- Add seed from the `SUB_CONTROLLER` account to controller account seed.
 - Add the public address of the `SUB_OWNER` account to the subscription owner address.
 - Set the interval of data sending (by default it is 10 minutes).
 - (Optional) You can add credentials for pinning service Pinata to spread your data wider over the IPFS network.
