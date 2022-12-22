@@ -91,4 +91,13 @@ User is `smart`, password is `robot`.
 
 </robo-wiki-note>
 
+## Next step
+
 Now you have a Raspberry Pi with firmware installed, go to the [Home Assistant Init](/docs/hass-init/) article.
+
+
+<robo-wiki-note type="note">
+Related videos   
+</robo-wiki-note>
+  
+https://youtu.be/qW4sjUaShWA
