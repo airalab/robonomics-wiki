@@ -125,9 +125,6 @@ ssh ubuntu@192.168.43.56
 
 Now you have a Raspberry Pi with firmware installed, go to the [Home Assistant Init](/docs/hass-init/) article.
 
+## Related videos
 
-<robo-wiki-note type="note">
-Related videos   
-</robo-wiki-note>
-  
 https://youtu.be/qW4sjUaShWA

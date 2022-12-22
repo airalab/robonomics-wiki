@@ -24,6 +24,8 @@ You are starting with the creation of the owner account of Home Assistant. This 
 
 4. Finally, you will see the Home Assistant web interface, which will show all of your devices. 
 
+## Next step
+
 Next you need to setup MQTT Broker using one of the options:
 
 **Option 1 (Home Assistant OS)**
@@ -31,3 +33,7 @@ Next you need to setup MQTT Broker using one of the options:
 
 **Option 2 (Pre-installed image or Home Assistant Docker or Home Assistant Core)**
 * If you are using **pre-installed image** or upgrading your **Home Assistant Docker** or **Core**, [go here](/docs/mqtt-image-docker-core/).
+
+## Related videos
+
+https://youtu.be/n4PX25aB1JU

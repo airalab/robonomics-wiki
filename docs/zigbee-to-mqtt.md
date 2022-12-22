@@ -319,4 +319,10 @@ sudo systemctl enable zigbee2mqtt.service
 
 </code-helper>
 
+## Next step
+
 Now you can go to the [**IoT Subscription**](/docs/sub-activate) section and start activating the Robonomics subscription.
+
+## Related videos
+
+https://youtu.be/gWhs7Ftx5h4
