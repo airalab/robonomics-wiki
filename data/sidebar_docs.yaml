@@ -56,6 +56,8 @@
 #    - title_en: R&D Based on Robonomics Network
 #      title_ru: R&D на базе Робономики
 #      link: /docs/r-and-d-based-on-robonomics-network
+    - title_en: Glossary
+      link: /docs/glossary
     - title_en: Create Account for Robonomics Parachain
       link: /docs/create-account-in-dapp
     - title_en: How to Run Robonomics Dev Node
@@ -98,10 +100,6 @@
 #      link: /docs/robonomics-test-network-manual
     - title_en: Configure Metrics With Prometheus And Grafana
       link: /docs/robonomics-prometheus-grafana
-
-#- title_en: Glossary
-#  title_ko: 용어 사전
-#  link: /docs/glossary
 
 #     - title_en: Community
 #       link: /docs/community
