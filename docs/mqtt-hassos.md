@@ -2,8 +2,8 @@
 title: MQTT Broker for Home Assistant OS
 contributors: [LoSk-p]
 tools:
-  - Home Assistant 2022.11.4
-    https://github.com/home-assistant/core
+  - Home Assistant OS 9.3
+    https://github.com/home-assistant/operating-system/releases
 ---
 
 **This article describes how to install MQTT broker to Home Assistant OS.**

@@ -7,8 +7,6 @@ tools:
     https://github.com/airalab/robonomics
   - Dapp Robonomics Network 
     https://github.com/airalab/dapp.robonomics.network
-  - Home Assistant 2022.11.3
-    https://github.com/home-assistant/core
   - Robonomics integration 1.1.3
     https://github.com/airalab/homeassistant-robonomics-integration
 ---

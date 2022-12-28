@@ -4,8 +4,6 @@ contributors: [LoSk-p]
 tools:   
   - Home Assistant OS 9.3
     https://github.com/home-assistant/operating-system/releases
-  - Home Assistant 2022.11.4
-    https://github.com/home-assistant/core
   - Robonomics integration 1.1.3
     https://github.com/airalab/homeassistant-robonomics-integration
   - robonomics-interface 1.3.6
