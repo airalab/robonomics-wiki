@@ -1,6 +1,5 @@
 # Welcome to Robonomics Wiki Repository!
 
-
 ## [EN] How to Help Robonomics Wiki
 
 Robonomics Network is an open-source project and we want to make it easy for anyone to contribute. But before that, please read the rules and suggestions for making a contribution:
