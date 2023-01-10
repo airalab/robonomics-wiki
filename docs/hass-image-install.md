@@ -53,13 +53,11 @@ Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on your com
 <robo-wiki-picture src="home-assistant/insert-sd-card.gif" alt="insert SD card" />
 
 
-Run the Raspberry Pi Imager program. Choose required image as the operating system, ensure to select your SD card from the storage dropdown menu, 
-in settings provide your wi-fi, password, choose your country from drop-down list  and then `Write!` image.
+Run the Raspberry Pi Imager program. Choose required image as the operating system and ensure to select your SD card from the storage dropdown menu. In settings provide your Wi-Fi, password, choose your country from drop-down list and then `Write!` image. 
 
 <robo-wiki-video controls src="https://static.robonomics.network/wiki/rasp-pi-imager.mp4" />
 
-Make sure to set your Wi-Fi credentials for `ssid`, `psk` fields and set a `country` 
-filed according to your country. You can find country codes [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
+You can find country codes [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
 
 ## First Boot
 
