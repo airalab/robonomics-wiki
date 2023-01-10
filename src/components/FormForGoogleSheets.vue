@@ -90,6 +90,10 @@ export default {
       this.isLoading = true;
       this.error = false;
 
+      if(this.data_email === '') {
+        this.data_email = 'not provided';
+      }
+
       data.forEach(function(item) {
         if (response != '') {
           response += '&'

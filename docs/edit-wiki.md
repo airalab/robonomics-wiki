@@ -224,11 +224,11 @@ or
 You can add feedback form to the doc. Use component like that:
 
 ```c
-<robo-wiki-feedback /> 
+<robo-wiki-feedback-new /> 
 ```
 
 And it will look like that: 
-<robo-wiki-feedback /> 
+<robo-wiki-feedback-new /> 
 
 
 ### Tabs

@@ -1,6 +1,6 @@
 <template>
 
-  <div v-if="$store.state.showSearchbar" class="search-container"  :class="toggleClasses" tabindex="0" @focusin="focusIn" @focusout="focusOut">
+  <div  class="search-container"  :class="toggleClasses" tabindex="0" @focusin="focusIn" @focusout="focusOut">
 
       <!-- v-on:keyup.down="SearchLinksFocus" -->
       <input v-model="search" type="search" aria-label="Search" placeholder="Search"/>
