@@ -17,18 +17,24 @@
         display: grid;
         gap: calc(var(--space)/2);
 
-        text-transform: uppercase
+        text-transform: uppercase;
     }
 
     .pageNextPrev a {
         display: inline-flex;
+        height: 100%;
         flex-direction: column;
         text-align: right;
         padding: 1rem 1rem;
+        grid-column-start: 1;
+        grid-column-end: 2;
       }
 
       .pageNextPrev a.second {
         text-align: left;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        align-self: end;
       }
 
       @media screen and (min-width:500px){

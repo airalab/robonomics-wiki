@@ -60,4 +60,8 @@ export default {
 
 <style>
 
+.robo-wiki-feedback-form__wrapper svg.loader rect {
+  fill: #333;
+}
+
 </style>

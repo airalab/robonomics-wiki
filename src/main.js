@@ -20,12 +20,26 @@ import RoboWikiPicture from '~/components/RoboWikiPicture.vue';
 import RoboWikiVideo from '~/components/RoboWikiVideo.vue';
 import RoboWikiTitle from '~/components/RoboWikiTitle.vue';
 import RoboWikiFeedback from '~/components/RoboWikiFeedback.vue';
+import RoboWikiFeedbackNew from '~/components/RoboWikiFeedbackNew.vue';
 import RoboWikiTabs from '~/components/RoboWikiTabs.vue';
 import RoboWikiTab from '~/components/RoboWikiTab.vue';
 import RoboWikiGridElementWrapper from '~/components/RoboWikiGridElementWrapper.vue';
 import RoboWikiGridElement from '~/components/RoboWikiGridElement.vue';
 import PropsTable from '~/components/PropsTable.vue';
 import CodeHelper from '~/components/CodeHelper.vue';
+
+/* import the fontawesome core */
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+/* import specific icons */
+import { 
+  faEnvelope,
+  faCheck
+ } from '@fortawesome/free-solid-svg-icons'
+
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, { router, head, isClient, appOptions }) {
@@ -37,12 +51,17 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.component('RoboWikiVideo', RoboWikiVideo)
   Vue.component('RoboWikiTitle', RoboWikiTitle)
   Vue.component('RoboWikiFeedback', RoboWikiFeedback)
+  Vue.component('RoboWikiFeedbackNew', RoboWikiFeedbackNew)
   Vue.component('RoboWikiTabs', RoboWikiTabs)
   Vue.component('RoboWikiTab', RoboWikiTab)
   Vue.component('ProbsTable', PropsTable)
   Vue.component('CodeHelper', CodeHelper)
   Vue.component('RoboWikiGridElementWrapper', RoboWikiGridElementWrapper)
   Vue.component('RoboWikiGridElement', RoboWikiGridElement)
+
+  /* add font awesome icon component */
+  Vue.component('font-awesome-icon', FontAwesomeIcon)
+
   Vue.use(Vuex)
     
   Vue.use(VueCookies)
@@ -51,11 +70,18 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     // optional pluginOptions
     refreshOnceOnNavigation: true
   })
+
+  /* add icons to the library */
+  library.add(
+    faEnvelope,
+    faCheck
+  )
   
   appOptions.store = new Vuex.Store({
     state: {
       showSearchbar: true,
-      theme: 'light'
+      theme: 'light',
+      currentReaction: '',
     },
     mutations: {
       toggleShowSearchbar(state, showSearchbar) {
@@ -63,6 +89,9 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       },
       toggleTheme(state, theme) {
         state.theme = theme
+      },
+      SET_CURRENT_REACTION(state, reaction) {
+        state.currentReaction = reaction;
       }
     }
   });
@@ -74,5 +103,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       head.htmlAttrs = { 'lang' : appOptions.store.state.locale }
     })
   }
+
+
 
 }
