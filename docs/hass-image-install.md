@@ -22,7 +22,7 @@ To simplify the installation process, a pre-made image can be used. It contains 
 
 ### GitHub Release
 
-Download it from the latest [GitHub releases.](https://github.com/airalab/Robonomics-HomeAssistant-image)
+Download it from the latest [GitHub releases.](https://github.com/airalab/Robonomics-HomeAssistant-image/releases)
 
 ### Image from IPFS
 
