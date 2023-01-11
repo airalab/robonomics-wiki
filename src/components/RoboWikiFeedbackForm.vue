@@ -152,12 +152,10 @@ export default {
   .robo-wiki-feedback-form__form textarea {
     width: 100%;
     display: block;
-    /* padding:  10px ; */
     padding-left: 5px;
     margin-bottom: 5px;
-    font-size: 1rem;
     border-color: var(--link-color);
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 400;
     text-overflow: ellipsis;
     color: var(--text-color);
