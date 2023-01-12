@@ -33,7 +33,7 @@ To prepare your smart home, you will need:
     </robo-wiki-grid-element>
     <robo-wiki-grid-element>
       <robo-wiki-picture src="home-assistant/need_3.png" /> 
-      <p>SD card (minimum 16 GB)</p>  
+      <p>SD card (minimum 32 GB)</p>  
     </robo-wiki-grid-element>
     <robo-wiki-grid-element>
       <robo-wiki-picture src="home-assistant/need_4.png" /> 

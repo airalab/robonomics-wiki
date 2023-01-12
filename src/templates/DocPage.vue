@@ -6,25 +6,26 @@
 
         <div class="page-title">
             <h1 class="page__title-main">{{ $page.doc.title }}</h1>
-            <div class="page-title-meta" v-if="$page.doc.contributors.length > 0">
-              <span>Main contributors: </span>
-              <template v-for="(contributor, index) in $page.doc.contributors">
-                <span :key="index">
-                  <g-link :to="'https://github.com/'+contributor">@{{contributor}}</g-link>
-                  <span v-if="index != $page.doc.contributors.length-1">, </span>
-                </span>
-              </template>
-            </div>
-
-          </div>
+        </div>
 
           <VueRemarkContent class="docs-content" />
 
           <PageNextPrev :itemsList="itemsList" :current="currentIndex"/>
 
-          <robo-wiki-feedback/>
+          <!-- <robo-wiki-feedback/> -->
+          <robo-wiki-feedback-new/>
 
           <section class="docContribution" v-show="ghLink">
+
+            <div class="page-title-meta" v-if="$page.doc.contributors.length > 0">
+              <span>Main contributors: </span>
+              <template v-for="(contributor, index) in $page.doc.contributors">
+                <span :key="index">
+                  <g-link :to="'https://github.com/'+contributor"> @{{contributor}}</g-link>
+                  <span v-if="index != $page.doc.contributors.length-1">, </span>
+                </span>
+              </template>
+            </div>
 
               <div class="content" v-show="ghLink">
                 <div class="github-title">
@@ -76,6 +77,7 @@
     margin-left: 0;
     display: flex;
     padding: 1rem 0;
+    margin-bottom: var(--space);
   }
 
   .page-title-meta a:after {
@@ -86,6 +88,10 @@
     margin-right: var(--space);
     margin-left: 1rem;
     margin-bottom: 0;
+  }
+
+  .page-title-meta span {
+    margin-right: 5px;
   }
 
   .page{

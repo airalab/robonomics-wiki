@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="{'hide-bar': !$store.state.showSearchbar}">
+  <header v-if="$store.state.showSearchbar" class="header">
     <div class="layout__page">
 
       <div class="header-top">
