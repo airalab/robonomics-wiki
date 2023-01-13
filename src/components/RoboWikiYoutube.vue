@@ -57,6 +57,10 @@ export default {
         this.videoSrc += linkCode + '?autoplay=1&mute=1'
       }
 
+      if(!this.autoplay && this.loop) {
+        this.videoSrc += linkCode + '?loop=1&playlist=' + linkCode
+      }
+
       if (!this.autoplay && !this.loop) {
         this.videoSrc += linkCode 
       }
