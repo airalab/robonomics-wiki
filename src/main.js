@@ -35,7 +35,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 /* import specific icons */
 import { 
   faEnvelope,
-  faCheck
+  faCheck,
+  faXmark
  } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -76,7 +77,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   /* add icons to the library */
   library.add(
     faEnvelope,
-    faCheck
+    faCheck,
+    faXmark
   )
   
   appOptions.store = new Vuex.Store({
