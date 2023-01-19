@@ -5,7 +5,7 @@
       <span>{{text}}</span>
     </button>
 
-    <LessonReactionForm v-if="showFormComp && $store.state.currentReaction === text" :text="text" :lessonTitle="lessonTitle"/>
+    <LessonReactionForm v-if="showFormComp && $store.state.currentReaction === text" :text="text" :lessonTitle="lessonTitle" @closeForm="closeForm"/>
   </div>
 </template>
 
@@ -53,6 +53,10 @@ export default {
       this.showFormComp = false;
       this.$store.commit('SET_CURRENT_REACTION', this.text);
       this.showFormComp = !this.showFormComp;
+    },
+    closeForm() {
+      this.showFormComp = false;
+      this.$store.commit('SET_CURRENT_REACTION', '');
     }
   }
 
@@ -62,15 +66,15 @@ export default {
 <style scoped>
 
   .robo-wiki-feedback__wrapper {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     height: 224px;
     background-color: var(--color-light);
     border: 2px solid var(--link-color);
     border-radius: 30px;
     transition:background-color 0.33s ease-in-out;
-    overflow: hidden;
-    transform: translateZ(0)
+    /* overflow: hidden;
+    transform: translateZ(0) */
   }
 
   .robo-wiki-feedback__item {
@@ -93,6 +97,10 @@ export default {
     background-color: transparent!important;
     border-color: transparent !important;
     transform: scale(1.1);
+  }
+
+  .robo-wiki-feedback__item:focus {
+    box-shadow: none;
   }
 
   .robo-wiki-feedback__wrapper.active {

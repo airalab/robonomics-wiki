@@ -124,6 +124,16 @@ It is recommended to insert videos with built-in tag `<robo-wiki-video>`, howeve
 ### YouTube videos
 You can embed any YouTube video in doc by inserting share link as separate paragraph without any additional quotes or tags, e.g.: `https://youtu.be/kQaSwNYHJQ8`
 
+However, if you need an autoplay you must use special component: 
+
+```c
+<robo-wiki-youtube autoplay link="https://www.youtube.com/watch?v=5s4-S_z4VYE" />
+```
+
+**Properties for robo-wiki-youtube**
+
+<probs-table :items="[{ id: 0, items: [{ name: 'link', code: true}, {name: 'String', code: true}, {name: true, code: true}, {name: null, code: false}, {name: [{text: `link to youtube video`}]}]}, { id: 1, items: [{ name: 'autoplay', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: [{text: `autoplays youtube video`}]}]}, { id: 2, items: [{ name: 'loop', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: [{text: `loop youtube video`}]}]}]" />
+
 ### Asciinema
 Robonomics WIKI has support for Asciinema. To insert Asciinema, please, follow these instructions:
 * Import component after frontmatter block `import Asciinema from '~/components/Asciinema.vue'`

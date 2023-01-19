@@ -2,10 +2,16 @@
   <div class="robo-wiki-feedback-form__wrapper">
 
     <div class="robo-wiki-feedback-form__header">
-      <span class="robo-wiki-feedback-form__check" v-if="$store.state.currentReaction === text">
-        <font-awesome-icon icon="fa-solid fa-check" aria-hidden="true"/>
+      <div>
+        <span class="robo-wiki-feedback-form__check" v-if="$store.state.currentReaction === text">
+          <font-awesome-icon icon="fa-solid fa-check" aria-hidden="true"/>
+        </span>
+        <h3>{{ $store.state.currentReaction }}</h3>
+      </div>
+
+      <span tabindex="0" class="robo-wiki-feedback-form__close" @click="$emit('closeForm')">
+        <font-awesome-icon icon="fa-solid fa-xmark" aria-hidden="true"/>
       </span>
-      <h3>{{ $store.state.currentReaction }}</h3>
     </div>
 
     <gsp-form v-if="result !== 'success' && $store.state.currentReaction === text" :gscriptID="gscript" :captchaID="captcha" class="robo-wiki-feedback-form__form" :class="result">
@@ -113,47 +119,60 @@ export default {
 <style scoped>
 
   .robo-wiki-feedback-form__wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    padding: calc(var(--space) * 0.5);
+    position: fixed;
+    bottom: 123px;
+    right: 20px;
+    width: 70%;
+    height: 218px;
+    padding: calc(var(--space) * 0.5) calc(var(--space) * 1);
     background-color:  var(--color-link-background-highlight);
     transform: translateY(-100%);
     overflow: hidden;
+    z-index: 30;
   }
 
   .robo-wiki-feedback__wrapper.active .robo-wiki-feedback-form__wrapper  {
-    border: 2px solid transparent;
+    border: 2px solid var(--link-color);
     border-radius: 30px;
-    animation: moveToBottom 0.5s ease-in-out forwards;
+    animation: moveToBottom 0.5s linear forwards;
   }
 
   .robo-wiki-feedback-form__header {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    /* margin-bottom: calc(var(--gap) * 0.3); */
     margin-bottom: 10px;
+  }
+
+  .robo-wiki-feedback-form__header > div {
+    display: flex;
+    align-items: center;
   }
 
   .robo-wiki-feedback-form__header h3 {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-align: left;
     font-weight: 600;
   }
 
   .robo-wiki-feedback-form__check  {
     margin-right: 8px;
+    font-size: 1.4rem;
+  }
+
+  .robo-wiki-feedback-form__close {
+    font-size: 2rem;
+    cursor: pointer;
   }
 
   .robo-wiki-feedback-form__form input,
   .robo-wiki-feedback-form__form textarea {
-    width: 100%;
+    width: 94%;
     display: block;
     padding-left: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     border-color: var(--link-color);
     font-size: 0.7rem;
     font-weight: 400;
@@ -169,7 +188,6 @@ export default {
     resize: none;
     max-width: 100%;
     max-height: 35px;
-    margin-bottom: 0;
     padding: 10px 17px;
     padding-bottom: 0;
     padding-left: 5px;
@@ -197,7 +215,7 @@ export default {
     color: var(--text-color);
     /* padding-left: 10px; */
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.5rem;
     background: transparent;
     border: 1px solid transparent;
     transition: color 0.3s ease-in-out;
@@ -240,7 +258,7 @@ export default {
   .robo-wiki-feedback-form__btn span {
     display: inline-block;
     margin-left: 10px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: var(--font-family-code);
   }
 
@@ -256,11 +274,11 @@ export default {
 
   @keyframes moveToBottom {
     from {
-      border-color: var(--link-color);
+      opacity: 0;
       transform: translateY(-100%);
     }
     to {
-      border-color: transparent;
+      opacity: 1;
       transform: translateY(0);
     }
   }
@@ -268,6 +286,14 @@ export default {
   body[data-theme="dark"] .robo-wiki-feedback-form__form input::placeholder,
   body[data-theme="dark"] .robo-wiki-feedback-form__form textarea::placeholder {
     color: var(--color-testedFor-text);
+  }
+
+  @media screen and (max-width: 545px) {
+
+    .robo-wiki-feedback-form__wrapper {
+      width: 90%;
+    }
+
   }
 
 </style>
