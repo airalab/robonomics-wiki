@@ -18,6 +18,7 @@ import SidebarLayout from '~/layouts/Sidebar.vue'
 import RoboWikiNote from '~/components/RoboWikiNote.vue';
 import RoboWikiPicture from '~/components/RoboWikiPicture.vue';
 import RoboWikiVideo from '~/components/RoboWikiVideo.vue';
+import RoboWikiYoutube from '~/components/RoboWikiYoutube.vue';
 import RoboWikiTitle from '~/components/RoboWikiTitle.vue';
 import RoboWikiFeedback from '~/components/RoboWikiFeedback.vue';
 import RoboWikiFeedbackNew from '~/components/RoboWikiFeedbackNew.vue';
@@ -34,7 +35,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 /* import specific icons */
 import { 
   faEnvelope,
-  faCheck
+  faCheck,
+  faXmark
  } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -49,6 +51,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.component('RoboWikiNote', RoboWikiNote)
   Vue.component('RoboWikiPicture', RoboWikiPicture)
   Vue.component('RoboWikiVideo', RoboWikiVideo)
+  Vue.component('RoboWikiYoutube', RoboWikiYoutube)
   Vue.component('RoboWikiTitle', RoboWikiTitle)
   Vue.component('RoboWikiFeedback', RoboWikiFeedback)
   Vue.component('RoboWikiFeedbackNew', RoboWikiFeedbackNew)
@@ -74,7 +77,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   /* add icons to the library */
   library.add(
     faEnvelope,
-    faCheck
+    faCheck,
+    faXmark
   )
   
   appOptions.store = new Vuex.Store({

@@ -74,33 +74,6 @@ datalog_.record("Hello, Robonomics!")
 
 </robo-wiki-note>
 
-### IPFS gateway.
-
-There is an utility to upload files to IPFS via Web3-authenticate gateway provided by [Crust](https://crust.network/):
-
-```python
-from robonomicsinterface.utils import ipfs_get_content, ipfs_upload_content
-
-seed = "one two three four five six seven eight nine ten eleven twelve"
-
-content = "Hello, World!"
-cid, size = ipfs_upload_content(tester_tokens_seed, content)
-print(cid, size)
-
-content_ = ipfs_get_content(cid)
-print(content_)
-
-
-with open("path_to_file", 'rb') as f:
-    content = f.read()
-cid, size = ipfs_upload_content(tester_tokens_seed, content)
-print(cid, size)
-
-content_ = ipfs_get_content(cid)
-with open("path_to_the_fetched_file", 'wb') as f:
-    f.write(content_)
-```
-
 ## CLI tool
 
 `robonomics-interface` also contains a Python `click` CLI tools to use for purposes of prototyping and quick tests. It is installed

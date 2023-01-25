@@ -15,7 +15,8 @@ You cannot use previously created accounts because `SUB_OWNER` and `SUB_CONTROLL
 
 2. Using `SUB_OWNER` account add new user account to the subscription in the [dapp](https://dapp.robonomics.network/#/subscription/devices). Now there should be three addresses in the access list: `SUB_OWNER`, `SUB_CONTROLLER` and `USER`.
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/dapp-add-user.mp4" />
+<robo-wiki-youtube loop autoplay link="https://www.youtube.com/watch?v=_nxc6bMJPD0" />
+
 
 ## Granting Access to User
 
@@ -27,6 +28,6 @@ You cannot use previously created accounts because `SUB_OWNER` and `SUB_CONTROLL
 
 4. After the registration process, log in to Home Assistant with your user address as login and a newly-created password.
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/dapp-user-add-password.mp4" />
+<robo-wiki-youtube autoplay link="https://youtu.be/5s4-S_z4VYE" />
 
 Now you can use the dapp to control your home through Robonomics, check [**"Get Smart Home Telemetry"**](/docs/smart-home-telemetry/) article.

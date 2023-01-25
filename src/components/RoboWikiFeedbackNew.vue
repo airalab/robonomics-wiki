@@ -51,7 +51,11 @@ export default {
     grid-template-columns: repeat(auto-fill, minmax(calc(var(--content-width) / 4 - var(--grid-space)), 1fr));
     grid-template-rows: 1fr min-content ;
     align-items: center;
-    /* margin-bottom: var(--space); */
+  }
+
+  .robo-wiki-feedback {
+    position: relative;
+    padding-bottom: calc(var(--gap) * 3);
   }
 
 </style>
