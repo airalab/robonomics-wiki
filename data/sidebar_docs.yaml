@@ -181,25 +181,3 @@
 #          link: /docs/create-digital-identity-run-by-ethereum
 #        - title_en: Run Gaka-Chu - a Robot-Artist
 #          link: /docs/gaka-chu/
-#    - title_en: Playground
-#      items:
-#        - title_en: Playground Overview
-#          link: /docs/playground-overview
-#        - title_en: Connect Mars Curiosity Rover
-#          link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control
-#        - title_en: Connect ROS-compatible Drone
-#          items:
-#            - title_en: Part 1. Launch by Transaction
-#              link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-1
-#            - title_en: Part 2. Saving Data To Blockchain
-#              link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-2
-#        - title_en: Connect Industrial Robot
-#          items:
-#            - title_en: Baxter simulation v1.0
-#              link: /docs/baxter
-#            - title_en: Baxter simulation v2.0
-#              link: /docs/baxter2
-#        - title_en: Connect Manipulator
-#          link: /docs/kuka
-#        - title_en: Connect Unmanned Aerial Vehicle
-#          link: /docs/iris-drone
