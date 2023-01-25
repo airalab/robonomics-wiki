@@ -138,20 +138,6 @@
 #          items:
 #            - title_en: Try It Out
 #              link: /docs/spot-try-it-out
-#            - title_en: Lesson 0. Configure and test connection to Spot
-#              link: /docs/spot-lesson0
-#            - title_en: Lesson 1. Emergency stop, initialization, body position control
-#              link: /docs/spot-lesson1
-#            - title_en: Lesson 2. Remote controlled and programmed motion
-#              link: /docs/spot-lesson2
-#            - title_en: Lesson 3. Find and follow an object, navigate between them
-#              link: /docs/spot-lesson3
-#            - title_en: Lesson 4. GraphNav service. Mapping and navigating on the map
-#              link: /docs/spot-lesson4
-#            - title_en: Lesson 5. Robot service. Camera calibration and "Spot check"
-#              link: /docs/spot-lesson5
-#            - title_en: Troubleshooting
-#              link: /docs/spot-troubleshooting
 #
 ## This article is to be rewritten when service updated
 #        - title_en: Carbon Footprint Offsetting Service
