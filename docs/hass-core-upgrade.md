@@ -10,7 +10,7 @@ tools:
     https://github.com/airalab/homeassistant-robonomics-integration
   - robonomics-interface 1.3.6
     https://github.com/Multi-Agent-io/robonomics-interface/
-  - IPFS 0.14.0
+  - IPFS 0.17.0
     https://docs.ipfs.tech/
 ---
 

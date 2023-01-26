@@ -69,7 +69,7 @@ sudo reboot
 
 ## Configuration
 
-1. Set the switches on the back of the gateway to the proper position. Switches `5` (RX Zigbee to ESP) and `6` (TX Zigbee to ESP) must be in the `ON` position, the others must be `OFF`. 
+1. Disconnect SLS Gateway from rhe computer. Set the switches on the back of the gateway to the proper position. Switches `5` (RX Zigbee to ESP) and `6` (TX Zigbee to ESP) must be in the `ON` position, the others must be `OFF`. 
 
 <robo-wiki-picture src="home-assistant/sls-gateway-56.gif" />
 
