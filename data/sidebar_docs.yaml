@@ -82,8 +82,6 @@
       link: /docs/robonomics-ethereum
 #    - title_en: Cross-chain Message
 #      link: /docs/cross-chain-messages
-#    - title_en: How the Technical Committee Is Fast-tracking the Democracy Proposals
-#      link: /docs/technical-committee-fast-track
 #    - title_en: Robonomics-js
 #      title_ko: 로노미크스-JS
 #      link: /docs/robonomics-js
@@ -140,20 +138,6 @@
 #          items:
 #            - title_en: Try It Out
 #              link: /docs/spot-try-it-out
-#            - title_en: Lesson 0. Configure and test connection to Spot
-#              link: /docs/spot-lesson0
-#            - title_en: Lesson 1. Emergency stop, initialization, body position control
-#              link: /docs/spot-lesson1
-#            - title_en: Lesson 2. Remote controlled and programmed motion
-#              link: /docs/spot-lesson2
-#            - title_en: Lesson 3. Find and follow an object, navigate between them
-#              link: /docs/spot-lesson3
-#            - title_en: Lesson 4. GraphNav service. Mapping and navigating on the map
-#              link: /docs/spot-lesson4
-#            - title_en: Lesson 5. Robot service. Camera calibration and "Spot check"
-#              link: /docs/spot-lesson5
-#            - title_en: Troubleshooting
-#              link: /docs/spot-troubleshooting
 #
 ## This article is to be rewritten when service updated
 #        - title_en: Carbon Footprint Offsetting Service
@@ -197,27 +181,3 @@
 #          link: /docs/create-digital-identity-run-by-ethereum
 #        - title_en: Run Gaka-Chu - a Robot-Artist
 #          link: /docs/gaka-chu/
-#    - title_en: Playground
-#      items:
-#        - title_en: Playground Overview
-#          link: /docs/playground-overview
-#        - title_en: Connect Mars Curiosity Rover
-#          link: /docs/connect-mars-curiosity-rover-under-robonomics-parachain-control
-#        - title_en: Connect ROS-compatible Drone
-#          items:
-#            - title_en: Part 1. Launch by Transaction
-#              link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-1
-#            - title_en: Part 2. Saving Data To Blockchain
-#              link: /docs/connect-any-ros-compatible-robot-under-robonomics-parachain-control-2
-#        - title_en: Connect Industrial Robot
-#          items:
-#            - title_en: Baxter simulation v1.0
-#              link: /docs/baxter
-#            - title_en: Baxter simulation v2.0
-#              link: /docs/baxter2
-#        - title_en: Connect Manipulator
-#          link: /docs/kuka
-#        - title_en: Connect Unmanned Aerial Vehicle
-#          link: /docs/iris-drone
-#        - title_en: ROS-based Projects for Smart Spaces
-#          link: /docs/ros-smart-projects
