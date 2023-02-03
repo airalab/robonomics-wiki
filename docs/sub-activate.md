@@ -17,7 +17,9 @@ To control Home Assistant with Robonomics, you need 2 accounts on the Robonomics
 
 <robo-wiki-note type="warning" title="WARNING">
 
-Both accounts must be created with **ed25519** encryption. 
+Both accounts must be created with **ed25519** encryption. Because of this, you need to create an account using the Polkadot-JS UI and select the required encryption. 
+
+This feature is disabled by default on the Polkadot-JS UI. To enable it, navigate to `Settings` -> `General` -> `account options` and select `Allow local in-browser account storage` in the drop-down menu `in-browser account creation`.
 
 </robo-wiki-note>
 
