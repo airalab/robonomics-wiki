@@ -40,5 +40,4 @@ https://youtu.be/n4PX25aB1JU
 
 ## Troubleshooting
 
-1. If you forget your login or password, [check this article](https://www.home-assistant.io/docs/locked_out/) to restore your credentials.
-   (this work only for the first, local user. If you forget a password to Home Assistant from your robonomics account, [check the Dapp.](https://dapp.robonomics.network/#/home-assistant))
+1. If you forget your login or password for local user, [check this article](https://www.home-assistant.io/docs/locked_out/) to restore your credentials. If you forget a password to Home Assistant from your Robonomics account, [check the Dapp.](https://dapp.robonomics.network/#/home-assistant)
