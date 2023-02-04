@@ -99,4 +99,4 @@ https://youtu.be/qW4sjUaShWA
 
 ## Troubleshooting
 
-1. To change wi-fi setting later, use command `sudo raspi-config`. Find more information about this command on [the official site.](https://www.raspberrypi.com/documentation/computers/configuration.html)
+1. To change Wi-Fi setting later, use command `sudo raspi-config`. Find more information about this command on [the official site.](https://www.raspberrypi.com/documentation/computers/configuration.html)
