@@ -1,7 +1,7 @@
 <template>
   <video :autoplay="autoplay" :muted="muted" :loop="loop" :controls="controls">
-    <source v-if="!local" :type="`video/${this.type}`" :src="src" />
-    <source v-else :type="videoLink.mimeType" :src="videoLink.src" />
+    <source v-if="!local" :type="`video/${this.videoType}`" :src="src" />
+    <source v-else :type="this.videoType" :src="videoLink.src" />
   </video>
 </template>
 
@@ -33,6 +33,10 @@ export default {
     local: {
       type: Boolean,
       default: false
+    },
+    format: {
+      type: String,
+      default: null
     }
   },
 
@@ -47,20 +51,17 @@ export default {
       if(this.local) {
         return require(`!!assets-loader!@videosMarkdown/${this.src}`)
       }
+    },
 
+    videoType() {
+      if(this.format) {
+        return this.format
+      } else {
+        const dotIndex = this.src.lastIndexOf('.');
+        const format = this.src.substring(dotIndex);
+        return format.substring(1)
+      }
     }
-  },
-
-  methods: {
-    getType() {
-      const dotIndex = this.src.lastIndexOf('.');
-      const format = this.src.substring(dotIndex);
-      this.type = format.substring(1)
-    }
-  },
-
-  mounted() {
-    this.getType();
   }
 
 }
@@ -68,7 +69,7 @@ export default {
 
 <style scoped>
   video {
-    max-width: 760px;
+    /* max-width: 760px; */
     width: 100%;
     display: block;
     margin: 0 auto;
