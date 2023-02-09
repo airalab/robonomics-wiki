@@ -16,7 +16,7 @@ export default {
     },
     controls: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     muted: {
       type: Boolean,
