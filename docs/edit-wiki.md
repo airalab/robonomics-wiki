@@ -2,12 +2,6 @@
 title: How to edit WIKI 
 contributors: [positivecrash]
 description: Ways to help us improve our wiki
-tools: 
-  - rust 1.62.0 
-    https://blog.rust-lang.org/2022/06/30/Rust-1.62.0.html
-  - Robonomics 1.4.0
-  - baxter
-    http://wiki.ros.org/melodic/Installation
 ---
 
 **Robonomics WIKI is open source. Any corrections are welcome: fixing errors, typos, some unclear or outdated information, translation into any language. You'll need a [GitHub](https://github.com/) account.**
@@ -107,6 +101,13 @@ It is recommended to insert videos with built-in tag `<robo-wiki-video>`, howeve
 <robo-wiki-video src="https://static.robonomics.network/wiki/balena-robonomics-image-crop.mp4" />
 ```
 
+`IPFS link` 
+You need to specify format of video
+
+```c
+<robo-wiki-video src="https://crustipfs.info/ipfs/QmX5DLQAxuWkMEaCCErQya3PyrdiwgD4MhhzA58rTTPYRP" format="mp4" />
+```
+
 `video with controls` 
 
 ```c
@@ -119,7 +120,7 @@ It is recommended to insert videos with built-in tag `<robo-wiki-video>`, howeve
   IF YOU ADDING A FILE WITH THE SIZE OF MORE THAN <span style="color:#af1c1c">10MB</span>, PLEASE, ADD IT TO THE SERVER NOT A LOCAL FOLDER!
 </robo-wiki-note> **
 
-<probs-table :items="[{ id: 0, items: [{ name: 'src', code: true}, {name: 'String', code: true}, {name: true, code: true}, {name: null, code: false}, {name: [{text: `path to the video:`}, {text: `if you uploaded your video directly to the /docs/videos/ use: `, codeText: `url-of-your-doc`}, {text: `and for the server just use the link:`, codeText:  `https://some_url_here/name_of_the_file.format`}]}]}, { id: 1, items: [{ name: 'local', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: [{text: `helps to get the right path for the file.`}, {text: `If your video located in a local folder prop must be set to`, codeText: `true.`}]}]}, {id: 2, items: [{ name: 'controls', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: `add controls to your video`}]}, {id: 3, items: [{ name: 'muted', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: `mute the video`}]}, {id: 4, items: [{ name: 'autoplay', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: [{text: `use autoplay`}, {text: `only works with muted =`, codeText: `true in Chromium browsers`}]}]}, {id: 5, items: [{ name: 'loop', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: `loop the video`}]}, ]" />
+<probs-table :items="[{ id: 0, items: [{ name: 'src', code: true}, {name: 'String', code: true}, {name: true, code: true}, {name: null, code: false}, {name: [{text: `path to the video:`}, {text: `if you uploaded your video directly to the /docs/videos/ use: `, codeText: `url-of-your-doc`}, {text: `and for the server just use the link:`, codeText:  `https://some_url_here/name_of_the_file.format`}]}]}, { id: 1, items: [{ name: 'local', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: [{text: `helps to get the right path for the file.`}, {text: `If your video located in a local folder prop must be set to`, codeText: `true.`}]}]}, {id: 2, items: [{ name: 'controls', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: `add controls to your video`}]}, {id: 3, items: [{ name: 'muted', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: `mute the video`}]}, {id: 4, items: [{ name: 'autoplay', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: [{text: `use autoplay`}, {text: `only works with muted =`, codeText: `true in Chromium browsers`}]}]}, {id: 5, items: [{ name: 'loop', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: `loop the video`}]}, {id: 5, items: [{ name: 'format', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: 'null', code: true}, {name: `e.g. mp4, webm`}]}, ]" />
 
 ### YouTube videos
 You can embed any YouTube video in doc by inserting share link as separate paragraph without any additional quotes or tags, e.g.: `https://youtu.be/kQaSwNYHJQ8`
