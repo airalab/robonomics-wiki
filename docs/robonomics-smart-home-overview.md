@@ -3,10 +3,7 @@ title: Robonomics Smart Home Overview
 
 contributors: [Fingerling42, nakata5321]
 ---
-
-<robo-wiki-video src="https://crustipfs.art/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx" format="webm" autoplay preload />
-<!-- <robo-wiki-video src="https://static.robonomics.network/dapp/Robonomics-smart-home-intro.webm" format="webm" autoplay controls />
-<robo-wiki-video src="https://static.robonomics.network/dapp/Robonomics-smart-home-intro.mp4" format="mp4" autoplay controls /> -->
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}, {src: 'https://crustipfs.art/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}]" />
 
 ## Why Robonomics
 

@@ -1,7 +1,8 @@
 <template>
-  <video :autoplay="autoplay" :muted="muted" :loop="loop" :controls="controls" v-bind="$attrs">
-    <source v-if="!local" :type="`video/${this.videoType}`" :src="src" />
-    <source v-else :type="this.videoType" :src="videoLink.src" />
+  <video v-bind="$attrs" v-if="videos">
+    <template v-for="video in videos">
+      <source :src="video.src" :type="`video/${video.type}`" :key="video.id" />
+    </template>
   </video>
 </template>
 
@@ -10,59 +11,25 @@ export default {
   name: 'RoboWikiVideo',
 
   props: {
-    src: {
-      type: String,
+    videos: {
+      type: Array,
+      default: null,
       required: true
-    },
-    controls: {
-      type: Boolean,
-      default: true,
-    },
-    muted: {
-      type: Boolean,
-      default: true,
-    },
-    autoplay: {
-      type: Boolean,
-      default: true,
-    },
-    loop: {
-      type: Boolean,
-      default: true
-    },
-    local: {
-      type: Boolean,
-      default: false
-    },
-    format: {
-      type: String,
-      default: null
     }
   },
 
-  data()  {
-    return {
-      type: ''
-    }
-  },
-
-  computed: {
-    videoLink() {
-      if(this.local) {
-        return require(`!!assets-loader!@videosMarkdown/${this.src}`)
-      }
-    },
-
-    videoType() {
-      if(this.format) {
-        return this.format
-      } else {
-        const dotIndex = this.src.lastIndexOf('.');
-        const format = this.src.substring(dotIndex);
-        return format.substring(1)
-      }
-    }
-  }
+  // computed: {
+  //   videosList () {
+  //     if(this.local) {
+  //       return this.videos.map((item) => ({
+  //               ...item, 
+  //               src: require(`!!assets-loader!@videosMarkdown/${item.src}`)
+  //       }))
+  //     } else {
+  //       return this.videos
+  //     }
+  //   }
+  // }
 
 }
 </script>

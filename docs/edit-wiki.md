@@ -417,33 +417,29 @@ It is recommended to insert videos with built-in tag `<robo-wiki-video>`, howeve
 
 </robo-wiki-note>
 
-#### IPFS 
+#### IPFS / Server
 You need to specify format of video
 
 ```c
-<robo-wiki-video src="https://crustipfs.info/ipfs/QmX5DLQAxuWkMEaCCErQya3PyrdiwgD4MhhzA58rTTPYRP" format="mp4" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}, {src: 'https://crustipfs.art/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}]" />
 ```
 
 #### Local
 
 ```c
-<robo-wiki-video local src="balena-robonomics-image-crop.mp4" />
+<robo-wiki-video autoplay loop controls :videos="[{src: '/videos/add-ext.mp4', type:'mp4'}]" />
 ```
 
+##### Properties
 
-<!-- `server file` 
+- If you adding a file with the size of more than <span style="color:#af1c1c">10MB</span>, please, upload it on server, not in repo.
 
-```c
-<robo-wiki-video src="https://static.robonomics.network/wiki/balena-robonomics-image-crop.mp4" />
-``` -->
+- You may use any properties for [HTML5 video tag](https://www.w3schools.com/tags/tag_video.asp).
 
-**Properties for robo-wiki-video**
+- Acceptable formats - mp4, webm, ogg.
 
-** <robo-wiki-note type="warning">
-  IF YOU ADDING A FILE WITH THE SIZE OF MORE THAN <span style="color:#af1c1c">10MB</span>, PLEASE, ADD IT TO THE SERVER NOT A LOCAL FOLDER!
-</robo-wiki-note> **
+<probs-table :items="[{ id: 0, items: [{ name: 'videos', code: true}, {name: 'Array', code: true}, {name: true, code: true}, {name: null, code: false}, {name: [{text: `Array of objects [{src: 'path to video', type: 'type of video'}]`}]}]}]" />
 
-<probs-table :items="[{ id: 0, items: [{ name: 'src', code: true}, {name: 'String', code: true}, {name: true, code: true}, {name: null, code: false}, {name: [{text: `path to the video:`}, {text: `if you uploaded your video directly to the /docs/videos/ use: `, codeText: `url-of-your-doc`}, {text: `and for the server just use the link:`, codeText: `https://some_url_here/name_of_the_file.format`}]}]}, { id: 1, items: [{ name: 'local', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: [{text: `helps to get the right path for the file.`}, {text: `If your video located in a local folder prop must be set to`, codeText: `true.`}]}]}, {id: 2, items: [{ name: 'controls', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: `add controls to your video`}]}, {id: 3, items: [{ name: 'muted', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: `mute the video`}]}, {id: 4, items: [{ name: 'autoplay', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: [{text: `use autoplay`}, {text: `only works with muted =`, codeText: `true in Chromium browsers`}]}]}, {id: 5, items: [{ name: 'loop', code: true}, {name: 'Boolean', code: true}, {name: true, code: true}, {name: true, code: true}, {name: `loop the video`}]}, {id: 6, items: [{ name: 'format', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: 'null', code: true}, {name: `e.g. mp4, webm`}]}, ]" />
 
 #### YouTube 
 You can embed any YouTube video in doc by inserting share link as separate paragraph without any additional quotes or tags, e.g.: `https://youtu.be/kQaSwNYHJQ8`
