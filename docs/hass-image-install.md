@@ -12,11 +12,11 @@ tools:
     https://docs.ipfs.tech/
 ---
 
-**This article contains instructions to install Home Assistant with Robonomics on your Raspberry Pi.**
+**Welcome to the guide on installing Home Assistant with Robonomics integration on a Raspberry Pi. Home Assistant is an open-source home automation system that provides a centralized hub for controlling smart devices in your home network. By integrating with Robonomics, a decentralized cloud service, you can enhance the functionality and security of your smart home. In this article, we will provide step-by-step instructions on how to install Home Assistant with Robonomics on a Raspberry Pi, giving you the ability to automate and control various aspects of your home using a secure and decentralized solution. Let's get started!**
 
 <robo-wiki-picture src="home-assistant/pre_installed_image.png" />
 
-## Get Image
+## 1. Downloading the Image
 
 To simplify the installation process, a pre-made image can be used. It contains Home Assistant Core with Robonomics integration and IPFS. Options for downloading:
 
@@ -24,7 +24,7 @@ To simplify the installation process, a pre-made image can be used. It contains 
 
 Download it from the latest [GitHub releases.](https://github.com/airalab/Robonomics-HomeAssistant-image/releases)
 
-### Image from IPFS
+### IPFS get
 
 Alternatively, you can download it using IPFS. [Install IPFS](https://docs.ipfs.tech/install/command-line/), initialize and start the daemon:
 
@@ -46,7 +46,7 @@ ipfs get QmP5SxwQHB4BNEAR6BBnBmv845SoPRnEbdDqCh1SrQo7gk -o rpi.img.xz
 </code-helper>
 
 
-## Configure Image
+## 2. Configuring the Image
 
 Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on your computer. Then, insert the SD card.
 
@@ -59,7 +59,7 @@ Run the Raspberry Pi Imager program. Choose required image as the operating syst
 
 You can find country codes [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
 
-## First Boot
+## 3. First Boot
 
 **Safely eject the SD card**, insert it into the Raspberry Pi and connect the power cable to your device. It should connect to your Wi-Fi network. 
 
