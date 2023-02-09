@@ -1,6 +1,10 @@
 <template>
   <div  class="robo-wiki-feedback__wrapper" :class="{'active': $store.state.currentReaction === text}">
     <button class="robo-wiki-feedback__item" @click="showForm()">
+      <div class="robo-wiki-feedback__checkbox">
+        <input id="checkbox" type="checkbox" name="checkbox" class="custom-checkbox__field" :checked="$store.state.currentReaction === text ? true : false">
+        <span class="custom-checkbox__content"></span>
+      </div>
       <g-image :src="require(`!!assets-loader!@/assets/images/${imgSrc}`)" :alt="text" />
       <span>{{text}}</span>
     </button>
@@ -71,10 +75,10 @@ export default {
     height: 224px;
     background-color: var(--color-light);
     border: 2px solid var(--link-color);
-    border-radius: 30px;
+    /* border-radius: 30px; */
     transition:background-color 0.33s ease-in-out;
-    /* overflow: hidden;
-    transform: translateZ(0) */
+    overflow: hidden;
+    /* transform: translateZ(0) */
   }
 
   .robo-wiki-feedback__item {
@@ -121,5 +125,11 @@ export default {
   .robo-wiki-feedback__item span{
     font-size: 1rem;
     color: var(--color-brown-dark);
+  }
+
+  .robo-wiki-feedback__checkbox {
+    position: absolute;
+    top: 15px;
+    left: 10px;
   }
 </style>

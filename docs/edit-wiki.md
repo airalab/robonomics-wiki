@@ -6,12 +6,108 @@ description: Ways to help us improve our wiki
 
 **Robonomics WIKI is open source. Any corrections are welcome: fixing errors, typos, some unclear or outdated information, translation into any language. You'll need a [GitHub](https://github.com/) account.**
 
-## Edit existing doc
 
-1. Choose page
-2. Click button "Edit page" marked with the Github logo on the page you want to edit
-3. Clicking on the button will take you to the .md file.
-4. Please, follow common rules for editing [Markdown files](https://en.wikipedia.org/wiki/Markdown), bearing in mind a few features of the WIKI stack:
+## How to edit
+
+If you need to edit docs of Robonomics WIKI, please, follow these steps
+
+Make sure, you have [Node.js](https://nodejs.org/en/download/package-manager/) and [Gridsome](https://gridsome.org/docs/#1-install-gridsome-cli-tool) installed.
+
+### 1. Clone repo
+
+At first, you need to clone the wiki repository:
+
+```
+git clone https://github.com/airalab/robonomics-wiki.git
+```
+
+Go to the directory of the repository and run the following commands:
+
+`using npm`
+```
+cd robonomics-wiki
+npm install 
+```
+
+`using yarn`
+```
+cd robonomics-wiki
+yarn install
+```
+
+### 2. Serve locally (develop, develop-m1)
+
+Then deploy the project locally: 
+
+```
+gridsome develop
+```
+
+> If you have the error `node: --openssl-legacy-provider is not allowed in NODE_OPTIONS`, run the following command:
+```
+gridsome develop-m1
+```
+
+### 3. Make PR
+
+[Make pull request](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) to [wiki repo](https://github.com/airalab/robonomics-wiki)
+
+## Components
+
+### Asciinema
+Robonomics WIKI has support for Asciinema. To insert Asciinema, please, follow these instructions:
+* Import component after frontmatter block `import Asciinema from '~/components/Asciinema.vue'`
+* Insert as separate paragraph `<Asciinema vid="WCFcx8C6M8e52UKDNei1xZloU"/>`, where is vid is ID of specific asciicast
+
+> You can get the widget script for a specific asciicast by clicking on “Embed” link on asciicast page.
+> It looks like this:
+> `<script src="https://asciinema.org/a/14.js" id="asciicast-14" async></script>`
+[Asciinema docs](https://asciinema.org/docs/embedding)
+
+In the example above vid is 14.
+
+### Code
+
+You can add helpful extras to your code: 
+
+`code with copy button`
+
+```c
+<code-helper copy>
+  YOUR CODE HERE
+</code-helper>
+```
+
+or
+
+`code with additional line`
+
+```c
+<code-helper additionalLine="this line will be added above your code :)">
+  YOUR CODE HERE
+</code-helper>
+```
+
+**Properties for code-helper**
+
+<probs-table :items="[{ id: 0, items: [{ name: 'copy', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: 'add a copy button for your code'}]}, { id: 1, items: [{ name: 'additional line', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: `additional line for you code that will be displayed above`}]}]" />
+
+<code-helper copy>
+
+```bash
+$ ls -l /dev/serial/by-id
+```
+
+</code-helper>
+
+<code-helper copy additionalLine="your@helper">
+
+```bash
+$ ls -l /dev/serial/by-id
+```
+
+</code-helper>
+
 
 ### Frontmatter
 Docs in Robonomics WIKI contain frontmatter block. It must be at the top of the Markdown file, and must take the form of valid YAML set between triple-dashed lines. Between the triple-dashed lines, you can set or edit folowing options:
@@ -30,13 +126,77 @@ tools:
 ---
 ```
 
-### How to upload images
+### Grid 
+Helps to add grid layout to elements:
+
+- Use grid wrapper component first: 
+
+```c
+<robo-wiki-grid-element-wrapper></robo-wiki-grid-element-wrapper>
+```
+
+- And then use as many grid items components as you like inside wrapper:
+
+```c
+  <robo-wiki-grid-element-wrapper :columns="2" textAlign="center">
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_5.png" />
+      <p>Zigbee smart devices (any from <a href="https://slsys.io/action/supported_devices.html">supported devices</a>)</p>
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_6.png" /> 
+      <p>Zigbee adapter <a href="https://jethome.ru/z2/">JetHome USB JetStick Z2</a> (or one of <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html">supported</a>) or 
+      <a href="https://easyeda.com/ludovich88/robonomics_sls_gateway_v01">Robonomics SLS Gateway</a></p>
+    </robo-wiki-grid-element/>
+  </robo-wiki-grid-element-wrapper>
+```
+
+**Properties for robo-wiki-grid-element-wrapper**
+
+<probs-table :items="[{ id: 0, items: [{ name: 'columns', code: true}, {name: 'Number', code: true}, {name: false, code: true}, {name: 4, code: true}, {name: [{text: 'you can choose column number:'}, {text: `from`, codeText: ' 1 to 5'}]}]}, { id: 1, items: [{ name: 'align', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: [{text: 'align items on the block axis:'}, {text: `options:`, codeText: 'start, center, end'}]}]}, { id: 2, items: [{ name: 'justify', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: [{text: 'align items on the inline axis:'}, {text: `options:`, codeText: 'start, center, end'}]}]}, { id: 3, items: [{ name: 'textAlign', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: 'left', code: true}, {name: [{text: 'align text inside grid'}, {text: `options:`, codeText: 'left, center, right'}]}]}, ]" />
+
+
+<robo-wiki-grid-element-wrapper textAlign="center">
+  <robo-wiki-grid-element>
+    <robo-wiki-picture src="home-assistant/need_1.png" /> 
+    <p><a href="https://www.home-assistant.io/">Home Assistant</a> as control system software</p> 
+  </robo-wiki-grid-element>
+  <robo-wiki-grid-element>
+    <robo-wiki-picture src="home-assistant/need_2.png" /> 
+    <p>Raspberry Pi 4 (at least 2 GB RAM)</p>  
+  </robo-wiki-grid-element>
+  <robo-wiki-grid-element>
+    <robo-wiki-picture src="home-assistant/need_3.png" /> 
+    <p>SD card (minimum 16 GB)</p>  
+  </robo-wiki-grid-element>
+  <robo-wiki-grid-element>
+    <robo-wiki-picture src="home-assistant/need_4.png" /> 
+    <p>SD adapter</p>
+  </robo-wiki-grid-element>
+</robo-wiki-grid-element-wrapper>
+
+<robo-wiki-grid-element-wrapper :columns="2" textAlign="center">
+  <robo-wiki-grid-element>
+    <robo-wiki-picture src="home-assistant/need_5.png" />
+    <p>Zigbee smart devices (any from <a href="https://slsys.io/action/supported_devices.html">supported devices</a>)</p>
+  </robo-wiki-grid-element>
+  <robo-wiki-grid-element>
+    <robo-wiki-picture src="home-assistant/need_6.png" /> 
+    <p>Zigbee adapter <a href="https://jethome.ru/z2/">JetHome USB JetStick Z2</a> (or one of <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html">supported</a>) or 
+    <a href="https://easyeda.com/ludovich88/robonomics_sls_gateway_v01">Robonomics SLS Gateway</a></p>
+  </robo-wiki-grid-element/>
+</robo-wiki-grid-element-wrapper>
+
+
+### Images
+
+#### How to upload 
 Upload image in folder `/docs/images/url-of-your-doc`
 * If image needs to be localized, insert all of them in one folder
 * Use locale appendix in name of images if it's localized, e.g. `image_en.jpg`
 * Make sure your image is web optimized and at the same time it looks good
 
-### How to insert images
+#### How to insert 
 
 There are two ways for inserting pictures in your documents:
 
@@ -78,75 +238,6 @@ It is recommended to insert pictures with built-in tag `<robo-wiki-picture>`, ho
 **Properties for robo-wiki-picture:**
 
 <probs-table :items="[{ id: 0, items: [{ name: 'src', code: true}, {name: 'String', code: true}, {name: true, code: true}, {name: null, code: false}, {name: [{text: `path to the image:`}, {text: `if you uploaded your image directly to the /docs/images/ use:`, codeText: 'url-of-your-doc'}, {text: `if you uploaded image in one of the folders than use:`, codeText:  `folder-name/url-of-your-doc`}]}]}, { id: 1, items: [{ name: 'link', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: `link to the needed page`}]}, {id: 2, items: [{ name: 'caption', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: `caption for the image`}]}]" />
-
-### How to insert videos
-
-There are two ways for inserting videos in your documents:
-
-<robo-wiki-note type="warning">
-
-It is recommended to insert videos with built-in tag `<robo-wiki-video>`, however you may also use standard way for Markdown files.
-
-</robo-wiki-note>
-
-`local file`
-
-```c
-<robo-wiki-video local src="balena-robonomics-image-crop.mp4" />
-```
-
-`server file` 
-
-```c
-<robo-wiki-video src="https://static.robonomics.network/wiki/balena-robonomics-image-crop.mp4" />
-```
-
-`IPFS link` 
-You need to specify format of video
-
-```c
-<robo-wiki-video src="https://crustipfs.info/ipfs/QmX5DLQAxuWkMEaCCErQya3PyrdiwgD4MhhzA58rTTPYRP" format="mp4" />
-```
-
-`video with controls` 
-
-```c
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/balena-robonomics-image-crop.mp4" />
-```
-
-**Properties for robo-wiki-video**
-
-** <robo-wiki-note type="warning">
-  IF YOU ADDING A FILE WITH THE SIZE OF MORE THAN <span style="color:#af1c1c">10MB</span>, PLEASE, ADD IT TO THE SERVER NOT A LOCAL FOLDER!
-</robo-wiki-note> **
-
-<probs-table :items="[{ id: 0, items: [{ name: 'src', code: true}, {name: 'String', code: true}, {name: true, code: true}, {name: null, code: false}, {name: [{text: `path to the video:`}, {text: `if you uploaded your video directly to the /docs/videos/ use: `, codeText: `url-of-your-doc`}, {text: `and for the server just use the link:`, codeText:  `https://some_url_here/name_of_the_file.format`}]}]}, { id: 1, items: [{ name: 'local', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: [{text: `helps to get the right path for the file.`}, {text: `If your video located in a local folder prop must be set to`, codeText: `true.`}]}]}, {id: 2, items: [{ name: 'controls', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: `add controls to your video`}]}, {id: 3, items: [{ name: 'muted', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: `mute the video`}]}, {id: 4, items: [{ name: 'autoplay', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: [{text: `use autoplay`}, {text: `only works with muted =`, codeText: `true in Chromium browsers`}]}]}, {id: 5, items: [{ name: 'loop', code: true}, {name: 'Boolean', code: true}, {name: true, code: true}, {name: true, code: true}, {name: `loop the video`}]}, {id: 5, items: [{ name: 'format', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: 'null', code: true}, {name: `e.g. mp4, webm`}]}, ]" />
-
-### YouTube videos
-You can embed any YouTube video in doc by inserting share link as separate paragraph without any additional quotes or tags, e.g.: `https://youtu.be/kQaSwNYHJQ8`
-
-However, if you need an autoplay you must use special component: 
-
-```c
-<robo-wiki-youtube autoplay link="https://www.youtube.com/watch?v=5s4-S_z4VYE" />
-```
-
-**Properties for robo-wiki-youtube**
-
-<probs-table :items="[{ id: 0, items: [{ name: 'link', code: true}, {name: 'String', code: true}, {name: true, code: true}, {name: null, code: false}, {name: [{text: `link to youtube video`}]}]}, { id: 1, items: [{ name: 'autoplay', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: [{text: `autoplays youtube video`}]}]}, { id: 2, items: [{ name: 'loop', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: [{text: `loop youtube video`}]}]}]" />
-
-### Asciinema
-Robonomics WIKI has support for Asciinema. To insert Asciinema, please, follow these instructions:
-* Import component after frontmatter block `import Asciinema from '~/components/Asciinema.vue'`
-* Insert as separate paragraph `<Asciinema vid="WCFcx8C6M8e52UKDNei1xZloU"/>`, where is vid is ID of specific asciicast
-
-> You can get the widget script for a specific asciicast by clicking on “Embed” link on asciicast page.
-> It looks like this:
-> `<script src="https://asciinema.org/a/14.js" id="asciicast-14" async></script>`
-[Asciinema docs](https://asciinema.org/docs/embedding)
-
-In the example above vid is 14.
-
 
 ### Notes & warnings
 You can add notes and give them specific types:
@@ -195,52 +286,6 @@ You can add notes and give them specific types:
 **Properties for robo-wiki-note**
 
 <probs-table :items="[{ id: 0, items: [{ name: 'type', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: 'note', code: false}, {name: [{text: `there are three types in total:`, codeText: 'note, warning, okay'}]}]}, { id: 1, items: [{ name: 'title', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: `adds title to your note`}]}]" />
-
-### Custom title with anchors
-You can create custom titles with anchors and give them certain value
-
-`title with anchor`
-
-```c
-<robo-wiki-title :type="2" anchor="Some information about robots"> 
-  Learn Robonomics with AIRA :)
-</robo-wiki-title>
-```
-
-or
-
-`title without anchor`
-
-```c
-<robo-wiki-title :type="5"> 
-  Learn Robonomics with AIRA :)
-</robo-wiki-title>
-```
-
-**Properties for robo-wiki-title**
-
-<probs-table :items="[{ id: 0, items: [{ name: 'type', code: true}, {name: 'Number (from 2 to 6)', code: true}, {name: true, code: true}, {name: null, code: false}, {name: 'choose heading level'}]}, { id: 1, items: [{ name: 'anchor', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: `value for the anchor`}]}]" />
-
-<robo-wiki-title :type="2" anchor="I'm custom title :)">
-  I'm custom title with anchor :)
-</robo-wiki-title>
-
-<robo-wiki-title :type="6"> 
- I'm custom title :)
-</robo-wiki-title>
-
-
-### Feedback Form
-
-You can add feedback form to the doc. Use component like that:
-
-```c
-<robo-wiki-feedback-new /> 
-```
-
-And it will look like that: 
-<robo-wiki-feedback-new /> 
-
 
 ### Tabs
 You can add tabs to the doc:
@@ -333,128 +378,93 @@ You can add tabs to the doc:
 </robo-wiki-tabs>
 
 
-### Grid 
-Helps to add grid layout to elements:
+### Title with anchors
+You can create custom titles with anchors and give them certain value
 
-- Use grid wrapper component first: 
-
-```c
-<robo-wiki-grid-element-wrapper></robo-wiki-grid-element-wrapper>
-```
-
-- And then use as many grid items components as you like inside wrapper:
+`title with anchor`
 
 ```c
-  <robo-wiki-grid-element-wrapper :columns="2" textAlign="center">
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_5.png" />
-      <p>Zigbee smart devices (any from <a href="https://slsys.io/action/supported_devices.html">supported devices</a>)</p>
-    </robo-wiki-grid-element>
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_6.png" /> 
-      <p>Zigbee adapter <a href="https://jethome.ru/z2/">JetHome USB JetStick Z2</a> (or one of <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html">supported</a>) or 
-      <a href="https://easyeda.com/ludovich88/robonomics_sls_gateway_v01">Robonomics SLS Gateway</a></p>
-    </robo-wiki-grid-element/>
-  </robo-wiki-grid-element-wrapper>
-```
-
-**Properties for robo-wiki-grid-element-wrapper**
-
-<probs-table :items="[{ id: 0, items: [{ name: 'columns', code: true}, {name: 'Number', code: true}, {name: false, code: true}, {name: 4, code: true}, {name: [{text: 'you can choose column number:'}, {text: `from`, codeText: ' 1 to 5'}]}]}, { id: 1, items: [{ name: 'align', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: [{text: 'align items on the block axis:'}, {text: `options:`, codeText: 'start, center, end'}]}]}, { id: 2, items: [{ name: 'justify', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: [{text: 'align items on the inline axis:'}, {text: `options:`, codeText: 'start, center, end'}]}]}, { id: 3, items: [{ name: 'textAlign', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: 'left', code: true}, {name: [{text: 'align text inside grid'}, {text: `options:`, codeText: 'left, center, right'}]}]}, ]" />
-
-
-  <robo-wiki-grid-element-wrapper textAlign="center">
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_1.png" /> 
-      <p><a href="https://www.home-assistant.io/">Home Assistant</a> as control system software</p> 
-    </robo-wiki-grid-element>
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_2.png" /> 
-      <p>Raspberry Pi 4 (at least 2 GB RAM)</p>  
-    </robo-wiki-grid-element>
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_3.png" /> 
-      <p>SD card (minimum 16 GB)</p>  
-    </robo-wiki-grid-element>
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_4.png" /> 
-      <p>SD adapter</p>
-    </robo-wiki-grid-element>
-  </robo-wiki-grid-element-wrapper>
-
-  <robo-wiki-grid-element-wrapper :columns="2" textAlign="center">
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_5.png" />
-      <p>Zigbee smart devices (any from <a href="https://slsys.io/action/supported_devices.html">supported devices</a>)</p>
-    </robo-wiki-grid-element>
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_6.png" /> 
-      <p>Zigbee adapter <a href="https://jethome.ru/z2/">JetHome USB JetStick Z2</a> (or one of <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html">supported</a>) or 
-      <a href="https://easyeda.com/ludovich88/robonomics_sls_gateway_v01">Robonomics SLS Gateway</a></p>
-    </robo-wiki-grid-element/>
-  </robo-wiki-grid-element-wrapper>
-
-
-### Code Helper
-
-You can add helpful extras to your code: 
-
-`code with copy button`
-
-```c
-<code-helper copy>
-  YOUR CODE HERE
-</code-helper>
+<robo-wiki-title :type="2" anchor="Some information about robots"> 
+  Learn Robonomics :)
+</robo-wiki-title>
 ```
 
 or
 
-`code with additional line`
+`title without anchor`
 
 ```c
-<code-helper additionalLine="this line will be added above your code :)">
-  YOUR CODE HERE
-</code-helper>
+<robo-wiki-title :type="5"> 
+  Learn with us ;)
+</robo-wiki-title>
 ```
 
-**Properties for code-helper**
+**Properties for robo-wiki-title**
 
-<probs-table :items="[{ id: 0, items: [{ name: 'copy', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: 'add a copy button for your code'}]}, { id: 1, items: [{ name: 'additional line', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: `additional line for you code that will be displayed above`}]}]" />
+<probs-table :items="[{ id: 0, items: [{ name: 'type', code: true}, {name: 'Number (from 2 to 6)', code: true}, {name: true, code: true}, {name: null, code: false}, {name: 'choose heading level'}]}, { id: 1, items: [{ name: 'anchor', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: null, code: false}, {name: `value for the anchor`}]}]" />
 
-<code-helper copy>
+<robo-wiki-title :type="6"> 
+ I'm custom title :)
+</robo-wiki-title>
 
-```bash
-$ ls -l /dev/serial/by-id
+### Videos
+
+There are two ways for inserting videos in your documents:
+
+<robo-wiki-note type="warning">
+
+It is recommended to insert videos with built-in tag `<robo-wiki-video>`, however you may also use standard way for Markdown files.
+
+</robo-wiki-note>
+
+#### IPFS 
+You need to specify format of video
+
+```c
+<robo-wiki-video src="https://crustipfs.info/ipfs/QmX5DLQAxuWkMEaCCErQya3PyrdiwgD4MhhzA58rTTPYRP" format="mp4" />
 ```
 
-</code-helper>
+#### Local
 
-<code-helper copy additionalLine="your@helper">
-
-```bash
-$ ls -l /dev/serial/by-id
+```c
+<robo-wiki-video local src="balena-robonomics-image-crop.mp4" />
 ```
 
-</code-helper>
+
+<!-- `server file` 
+
+```c
+<robo-wiki-video src="https://static.robonomics.network/wiki/balena-robonomics-image-crop.mp4" />
+``` -->
+
+**Properties for robo-wiki-video**
+
+** <robo-wiki-note type="warning">
+  IF YOU ADDING A FILE WITH THE SIZE OF MORE THAN <span style="color:#af1c1c">10MB</span>, PLEASE, ADD IT TO THE SERVER NOT A LOCAL FOLDER!
+</robo-wiki-note> **
+
+<probs-table :items="[{ id: 0, items: [{ name: 'src', code: true}, {name: 'String', code: true}, {name: true, code: true}, {name: null, code: false}, {name: [{text: `path to the video:`}, {text: `if you uploaded your video directly to the /docs/videos/ use: `, codeText: `url-of-your-doc`}, {text: `and for the server just use the link:`, codeText: `https://some_url_here/name_of_the_file.format`}]}]}, { id: 1, items: [{ name: 'local', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: [{text: `helps to get the right path for the file.`}, {text: `If your video located in a local folder prop must be set to`, codeText: `true.`}]}]}, {id: 2, items: [{ name: 'controls', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: `add controls to your video`}]}, {id: 3, items: [{ name: 'muted', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: `mute the video`}]}, {id: 4, items: [{ name: 'autoplay', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: true, code: true}, {name: [{text: `use autoplay`}, {text: `only works with muted =`, codeText: `true in Chromium browsers`}]}]}, {id: 5, items: [{ name: 'loop', code: true}, {name: 'Boolean', code: true}, {name: true, code: true}, {name: true, code: true}, {name: `loop the video`}]}, {id: 6, items: [{ name: 'format', code: true}, {name: 'String', code: true}, {name: false, code: true}, {name: 'null', code: true}, {name: `e.g. mp4, webm`}]}, ]" />
+
+#### YouTube 
+You can embed any YouTube video in doc by inserting share link as separate paragraph without any additional quotes or tags, e.g.: `https://youtu.be/kQaSwNYHJQ8`
+
+However, if you need an autoplay you must use special component: 
+
+```c
+<robo-wiki-youtube autoplay link="https://www.youtube.com/watch?v=5s4-S_z4VYE" />
+```
+
+**Properties for robo-wiki-youtube**
+
+<probs-table :items="[{ id: 0, items: [{ name: 'link', code: true}, {name: 'String', code: true}, {name: true, code: true}, {name: null, code: false}, {name: [{text: `link to youtube video`}]}]}, { id: 1, items: [{ name: 'autoplay', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: [{text: `autoplays youtube video`}]}]}, { id: 2, items: [{ name: 'loop', code: true}, {name: 'Boolean', code: true}, {name: false, code: true}, {name: false, code: true}, {name: [{text: `loop youtube video`}]}]}]" />
 
 
+## How to edit sidebar navigation
 
-## Add new doc
+If you need to edit sidebar navigation of Robonomics WIKI, please, follow these steps:
 
-If you need to add new page in docs of Robonomics WIKI, please, follow these steps:
+* Edit file `/data/sidebar_docs.yaml`.
 
-1. Find the folder with the locale that matches the language of the article you are adding, e.g. `/docs/en/`
-2. Create .md file, using in name latin characters and follow common rules for [url structure](https://developers.google.com/search/docs/advanced/guidelines/url-structure)
-3. Edit file as described above
-4. Add doc in menu:
-* Open file `/data/sidebar_docs.yaml`
 * Decide where to place your doc
-* If you want to create new section, provide title with locale appendix, using only locales your section is translated
-* Add doc with link. The link must be only one, and must not contain locale characters. Correct is `/docs/url-of-your-doc`, not correct is `/docs/en/url-of-your-doc`
-* Use valid YAML for `/data/sidebar_docs.yaml` and rely on the existing file structure
 
-## Submit Pull Request
-
-[Make pull request](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for any content you changed including typos, translations, outdated information or broken links.
-
-Decisions about individual PRs made by Robonomics core team. Special grants in [XRT](https://robonomics.network/community#token) are also possible for extended contribution 🤖💙💛💚💎🍭🎉🔌
+* Use valid YAML for `/data/sidebar_docs.yaml` and rely on the existing file structure
