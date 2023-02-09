@@ -1,5 +1,5 @@
 <template>
-  <video :autoplay="autoplay" :muted="muted" :loop="loop" :controls="controls">
+  <video :autoplay="autoplay" :muted="muted" :loop="loop" :controls="controls" v-bind="$attrs">
     <source v-if="!local" :type="`video/${this.videoType}`" :src="src" />
     <source v-else :type="this.videoType" :src="videoLink.src" />
   </video>
