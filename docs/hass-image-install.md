@@ -12,6 +12,8 @@ tools:
     https://docs.ipfs.tech/
 ---
 
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]" />
+
 **Welcome to the guide on installing Home Assistant with Robonomics integration on a Raspberry Pi. Home Assistant is an open-source home automation system that provides a centralized hub for controlling smart devices in your home network. By integrating with Robonomics, a decentralized cloud service, you can enhance the functionality and security of your smart home. In this article, we will provide step-by-step instructions on how to install Home Assistant with Robonomics on a Raspberry Pi, giving you the ability to automate and control various aspects of your home using a secure and decentralized solution. Let's get started!**
 
 <robo-wiki-picture src="home-assistant/pre_installed_image.png" />
@@ -93,9 +95,9 @@ User is `smart`, password is `robot`.
 
 Now you have a Raspberry Pi with firmware installed, go to the [Home Assistant Init](/docs/hass-init/) article.
 
-## Related videos
+<!-- ## Related videos
 
-https://youtu.be/qW4sjUaShWA
+https://youtu.be/qW4sjUaShWA -->
 
 ## Troubleshooting
 
