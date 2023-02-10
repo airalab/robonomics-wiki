@@ -111,6 +111,12 @@ export default {
       this.result = 'init';
     }
 
+    document.body.addEventListener('click', (e) => {
+      if(this.$store.state.currentReaction) {
+        this.$emit('closeForm');
+      }
+    })
+
   }
 
 }
@@ -119,11 +125,11 @@ export default {
 <style scoped>
 
   .robo-wiki-feedback-form__wrapper {
-    position: fixed;
-    bottom: 123px;
-    right: 20px;
-    width: 70%;
-    height: 238px;
+    position: absolute;
+    bottom: -270px;
+    right: 0;
+    width: 100%;
+    height: 244px;
     padding: calc(var(--space) * 0.3) calc(var(--space) * 1);
     background-color:  var(--color-link-background-highlight);
     transform: translateY(-100%);
@@ -293,14 +299,6 @@ export default {
   body[data-theme="dark"] .robo-wiki-feedback-form__form textarea {
     color: var(--color-testedFor-text);
     font-weight: 600;
-  }
-
-  @media screen and (max-width: 545px) {
-
-    .robo-wiki-feedback-form__wrapper {
-      width: 90%;
-    }
-
   }
 
 </style>
