@@ -1,12 +1,14 @@
 <template>
-  <div  class="robo-wiki-feedback__wrapper" :class="{'active': $store.state.currentReaction === text}">
-    <button class="robo-wiki-feedback__item" @click="showForm()">
+  <div tabindex="0"  class="robo-wiki-feedback__wrapper" :class="{'active': $store.state.currentReaction === text}">
+    <button class="robo-wiki-feedback__item" @click.stop="showForm()">
       <div class="robo-wiki-feedback__checkbox">
         <input id="checkbox" type="checkbox" name="checkbox" class="custom-checkbox__field" :checked="$store.state.currentReaction === text ? true : false">
         <span class="custom-checkbox__content"></span>
       </div>
-      <g-image :src="require(`!!assets-loader!@/assets/images/${imgSrc}`)" :alt="text" />
-      <span>{{text}}</span>
+      <div class="robo-wiki-feedback__content">
+        <g-image :src="require(`!!assets-loader!@/assets/images/${imgSrc}`)" :alt="text" />
+        <span>{{text}}</span>
+      </div>
     </button>
 
     <LessonReactionForm v-if="showFormComp && $store.state.currentReaction === text" :text="text" :lessonTitle="lessonTitle" @closeForm="closeForm"/>
@@ -78,28 +80,37 @@ export default {
     /* border-radius: 30px; */
     transition:background-color 0.33s ease-in-out;
     overflow: hidden;
-    /* transform: translateZ(0) */
+    transition: border-color 0.33s ease-in-out;
+  }
+
+  .robo-wiki-feedback__wrapper:hover {
+    border-color: var(--code-text-inline);
+  }
+
+  .robo-wiki-feedback__wrapper:focus {
+    box-shadow: 0.2rem 0.2rem 0 0 var(--link-color);
   }
 
   .robo-wiki-feedback__item {
     position: relative;
-    display: flex;
     width: 100%;
     height: 100%;
-    flex-direction: column;
-    align-items: center;
     font-family: var(--font-family-code);
     justify-content: center;
     background-color: transparent;
     border: 2px solid transparent;
     border-radius: 0;
-    transition: transform 0.4s ease-in-out;
     cursor: pointer;
   }
 
-  .robo-wiki-feedback__item:hover {
-    background-color: transparent!important;
-    border-color: transparent !important;
+  .robo-wiki-feedback__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .robo-wiki-feedback__item:hover   .robo-wiki-feedback__content {
     transform: scale(1.1);
   }
 
