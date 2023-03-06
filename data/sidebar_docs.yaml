@@ -96,8 +96,8 @@
       link: /docs/how-to-update-collator-node-version
 #    - title_en: Deploy Robonomics Test Network
 #      link: /docs/robonomics-test-network-manual
-    - title_en: Configure Metrics With Prometheus And Grafana
-      link: /docs/robonomics-prometheus-grafana
+#    - title_en: Configure Metrics With Prometheus And Grafana
+#      link: /docs/robonomics-prometheus-grafana
 
 #     - title_en: Community
 #       link: /docs/community
