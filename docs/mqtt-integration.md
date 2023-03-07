@@ -10,7 +10,7 @@ tools:
 
 <robo-wiki-picture src="home-assistant/mqtt_integration.png" />
 
-<robo-wiki-video autoplay loop controls :videos="[{src: '/videos/mqtt-hass-setup.mp4', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmYm9qNfpGdePRHRvmahY2DgHXRfAWNN6CasEY4tFRBARr', type:'mp4'}]" />
 
 1. Open Home Assistant web interface and go to `Settings` -> `Devices & Services`.
 

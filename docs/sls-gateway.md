@@ -85,13 +85,13 @@ sudo reboot
 
 5. You will see `Wi-Fi Settings` page. Select your Wi-Fi and enter the password. Press `Apply` button. The gateway will restart and connect to your Wi-Fi network. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: '/videos/sls-gateway-wifi.mp4', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
 
 6. Find the local IP of the SLS gateway to access the web interface. To find it you can use [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/). The gateway name should look like this: `zgw****`. Open the web interface of the gateway by pasting the gateway IP into a browser.
 
 7. Go to `Setting` -> `Hardware` and make sure that the settings look like on the image. Correct the settings if necessary and click `Save` button:
 
-<robo-wiki-video autoplay loop controls :videos="[{src: '/videos/sls-gateway-hardware.mp4', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
 
 The table with required values:
 
@@ -122,7 +122,7 @@ If you already have an active SLS gateway in your home, and you are now configur
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: '/videos/sls-gateway-zigbee.mp4', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
 
 ## Pairing SLS to MQTT
 
@@ -131,7 +131,7 @@ After configuring the SLS Gateway, you need to connect SLS Gateway to Home Assis
 
 Add your broker address (address of the Raspberry Pi with Home Assistant in local network, you can find it with [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)), port (default is `1883`) your broker username and password (which you have created earlier) and the topic name (you can choose any). Also, the Raspberry Pi IP address must be static. Click on `Enable` and `Retain states`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: '/videos/sls-gateway-mqtt-hass.mp4', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
 
 Save changes. Now devices will be automatically shown in Home Assistant.
 
@@ -141,7 +141,7 @@ Connect your devices by going to `Zigbee` -> `Join`. Put your sensors in pairing
 
 <robo-wiki-picture src="home-assistant/switch-device.gif" />
 
-<robo-wiki-video autoplay loop controls :videos="[{src: '/videos/sls-gateway-add-devices.mp4', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
 
 
 Now you can go to the [**IoT Subscription**](/docs/sub-activate) section and start activating the Robonomics subscription.
