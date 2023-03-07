@@ -111,25 +111,6 @@
 #      items:
 #        - title_en: Open Sensors Network
 #          items:
-#            - title_en: Introduction
-#              title_ru: Введение
-#              link: /docs/sensors-network-introduction
-#            - title_en: Sensor Hardware
-#              link: /docs/sensor-hardware
-#            - title_en: Sensor Setup
-#              link: /docs/sensor-setup
-#            - title_en: Sensors Connectivity Module Introduction
-#              link: /docs/sensors-connectivity-on-aira
-#            - title_en: Sensors Connectivity Module Setup
-#              link: /docs/sensors-connectivity-setup
-#            - title_en: Configuration Options Description
-#              link: /docs/configuration-options-description
-#            - title_en: Deploy Sensor Map
-#              link: /docs/deploy-sensor-map
-#            - title_en: RoSeMAN Setup
-#              link: /docs/roseman
-#            - title_en: Connect an Amazon FreeRTOS device to Robonomics by MQTT
-#              link: /docs/freertos-mqtt/
 ##            - title_en: How to Contribute
 ##              link: /docs/freertos-mqtt/
 #        - title_en: Robonomics Coffee - Blockchain-Powered Coffee Machine
