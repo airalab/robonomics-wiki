@@ -109,10 +109,6 @@
 ##      link: /use-introduction
 #    - title_en: Use Cases
 #      items:
-#        - title_en: Open Sensors Network
-#          items:
-##            - title_en: How to Contribute
-##              link: /docs/freertos-mqtt/
 #        - title_en: Robonomics Coffee - Blockchain-Powered Coffee Machine
 #          link: /docs/robonomics-coffee/
 #
