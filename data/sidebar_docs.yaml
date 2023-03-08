@@ -42,6 +42,8 @@
           link: /docs/global-administration
         - title_en: Get Smart Home Telemetry
           link: /docs/smart-home-telemetry
+        - title_en: Backup Services
+          link: /docs/backup-services
     - title_en: Blueprints
       items:
         - title_en: How To Use Blueprints
