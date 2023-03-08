@@ -43,7 +43,7 @@ Open the new terminal and download the image:
 <code-helper additionalLine="your_username@your_hostname">
 
 ```shell
-ipfs get QmP5SxwQHB4BNEAR6BBnBmv845SoPRnEbdDqCh1SrQo7gk -o rpi.img.xz
+ipfs get QmbuaMeXG51RS6uSzVN2C2oXeJ8vsgJ1JQKnQHgshyporE -o rpi.img.xz
 ```
 </code-helper>
 
@@ -57,7 +57,7 @@ Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on your com
 
 Run the Raspberry Pi Imager program. Choose required image as the operating system and ensure to select your SD card from the storage dropdown menu. In settings provide your Wi-Fi, password, choose your country from drop-down list and then `Write!` image. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://static.robonomics.network/wiki/rasp-pi-imager.mp4', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmVgex7Aw9sH97kDbbwaHkbcHZRu8xWruh5a7hfnMstNrV', type:'mp4'}]" />
 
 You can find country codes [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
 
