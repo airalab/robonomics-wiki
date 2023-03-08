@@ -43,7 +43,7 @@ Open the new terminal and download the image:
 <code-helper additionalLine="your_username@your_hostname">
 
 ```shell
-ipfs get QmP5SxwQHB4BNEAR6BBnBmv845SoPRnEbdDqCh1SrQo7gk -o rpi.img.xz
+ipfs get QmbuaMeXG51RS6uSzVN2C2oXeJ8vsgJ1JQKnQHgshyporE -o rpi.img.xz
 ```
 </code-helper>
 
