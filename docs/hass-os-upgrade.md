@@ -39,7 +39,7 @@ https://github.com/airalab/ipfs-addon
 
 4. Close the repository manager and refresh the page. Now in the end of the page you can see IPFS Daemon Add-on.
 
-5. Open it and press `INSTALL`. After it installed press `START`.
+5. Open the addon and press `INSTALL`. After installation press `START`.
 
 ## Install HACS
 
@@ -57,7 +57,7 @@ https://github.com/airalab/ipfs-addon
 
 2. Choose the add-on and press `INSTALL`. After installation is finished, go to `Configuration` tab and add `password` or `authorized_keys`. Don't forget to save this part of configuration.
 
-3. I the `Info` tab press `START`. If you want to see the addon in the sidebar, don't forget to enable `Show in sidebar`.
+3. In the `Info` tab press `START`. If you want to see the addon in the sidebar, don't forget to enable `Show in sidebar`.
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmcijfJ45fmW9omB67xWyPKvHhZuwLMTTQ7DBqnyxHUXR1', type:'mp4'}]" />
 
