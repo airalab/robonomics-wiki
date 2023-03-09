@@ -18,18 +18,14 @@ tools:
 
 ## Install IPFS Add-on
 
-<robo-wiki-note type="okay">
 
-  Robonomics Integration stores the data using local IPFS daemon, so you need to install it first. There is an [IPFS Add-on for Home Assistant](https://github.com/airalab/ipfs-addon).
+Robonomics Integration stores the data using local IPFS daemon, so you need to install it first. 
 
-</robo-wiki-note>
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmdAmUHW9bpTU6sUwBYu4ai4DVJ6nZ5xerjM9exvooGKGq', type:'mp4'}]" />
 
-To install it go to `Settings` -> `Add-ons` and press the `Add-on Store` button in the lower right corner.
+1. There is an [IPFS Add-on for Home Assistant](https://github.com/airalab/ipfs-addon). To install it go to `Settings` -> `Add-ons` and press the `ADD-ON STORE` button in the lower right corner.
 
-<robo-wiki-picture src="home-assistant/add-ons.jpg" />
-
-
-Then press on three dots in the upper right corner and choose `Repositories`. Add there the following link:
+2. Press on three dots in the upper right corner and choose `Repositories`. Add there the following link:
 
 <code-helper copy>
 
@@ -39,35 +35,33 @@ https://github.com/airalab/ipfs-addon
 
 </code-helper>
 
-Then press `Add` button:
+3. Press `ADD` button.
 
-<robo-wiki-picture src="home-assistant/add-addon-repo.jpg" />
+4. Close the repository manager and refresh the page. Now in the end of the page you can see IPFS Daemon Add-on.
 
-Close the repository manager and refresh the page. Now in the end of the page you can see IPFS Daemon Add-on:
+5. Open the addon and press `INSTALL`. After installation press `START`.
 
-<robo-wiki-picture src="home-assistant/added-addon.jpg" />
-
-Open it and press `Instlall`. After it installed press `Run`:
-
-<robo-wiki-picture src="home-assistant/ipfs-addon-running.jpg" />
-
-## HACS Installation
+## Install HACS
 
 [Home Assistant Community Store (HACS)](https://hacs.xyz/) allows you to install custom integrations.
 
-Firstly, you need to install add-on for connecting to the Home Assistant device with SSH. In Add-on Store search `ssh`. We recommend to install `SSH & Web Terminal` add-on.
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmYJFpxrww9PRvcAUhdgKufeDbyUFoBZTREZHPgV452kzs', type:'mp4'}]" />
 
-<robo-wiki-picture src="home-assistant/ssh-addons.jpg" />
+1. Before start, you need to install add-on for connecting to the Home Assistant device with SSH. In Add-on Store search `ssh`. We recommend to install `SSH & Web Terminal` add-on.
 
-Choose the add-on and press `Install`. After installation is finished, go to `Configuration` tab and add `password` or `authorized_keys`. Don't forget to save this part of configuration.
+<robo-wiki-note type="warning" title="Warning">
 
-<robo-wiki-picture src="home-assistant/ssh-configuration.jpg" />
+  If the SSH addon is not found, try enabling Advanced Mode in your user profile settings. To do this, click on the profile icon in the lower left corner, and find the Advanced Mode option.
 
-After that in the `Info` tab press `Start`. If you want to see the addon in the sidebar, don't forget to enable `Show in sidebar`:
+</robo-wiki-note>
 
-<robo-wiki-picture src="home-assistant/ssh-addon-running.jpg" />
+2. Choose the add-on and press `INSTALL`. After installation is finished, go to `Configuration` tab and add `password` or `authorized_keys`. Don't forget to save this part of configuration.
 
-Open SSH Add-on and run the following command:
+3. In the `Info` tab press `START`. If you want to see the addon in the sidebar, don't forget to enable `Show in sidebar`.
+
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmcijfJ45fmW9omB67xWyPKvHhZuwLMTTQ7DBqnyxHUXR1', type:'mp4'}]" />
+
+4. Open SSH Add-on and run the following command:
 
 <code-helper copy additionalLine="Hass Command Line">
 
@@ -77,25 +71,25 @@ wget -O - https://get.hacs.xyz | bash -
 
 </code-helper>
 
-<robo-wiki-picture src="home-assistant/ssh-install-hacs.jpg" />
+5. Restart Home Assistant (you can do it in `Settings`->`System`). 
 
-After that restart Home Assistant (you can do it in `Settings`->`System`). Now HACS Integration will be available to add in the `Integrations` menu. Go to `Settings`->`Devices & Services`, press `Add Integration` and find HACS:
+6. Now HACS Integration will be available to add in the `Integrations` menu. Go to `Settings`->`Devices & Services`, press `Add Integration` and find HACS.
 
-<robo-wiki-picture src="home-assistant/hacs-integration.jpg" />
-
-Click on it and follow the installation instructions. 
-
-<robo-wiki-note type="warning" title="DISCLAIMER">
+<robo-wiki-note type="warning" title="Warning">
 
   To use HACS you need a Github Account.
 
 </robo-wiki-note>
 
-## Robonomics Integration Installation
+7. Click on it and follow the installation instructions. 
+
+## Install Robonomics Integration
 
 Now you can install Robonomics Integration using HACS.
 
-Open HACS and go to `Integrations`. Press on three dots in the upper right corner and choose `Custom Repositories`. In the opened window paste the following link:
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/Qmb19UEQwwHfNroCaH8NMFhPV2dc52vSC8i4ATJsqVYiZf', type:'mp4'}]" />
+
+1. Open HACS from a sidebar menu and go to `Integrations`. Press on three dots in the upper right corner and choose `Custom Repositories`. In the opened window paste the following link:
 
 <code-helper copy>
 
@@ -105,13 +99,9 @@ https://github.com/airalab/homeassistant-robonomics-integration
 
 </code-helper>
 
-After that, choose `Integration` category.
+2. After that, choose `Integration` category and press `ADD`. 
 
-<robo-wiki-picture src="home-assistant/hacs-robonomics.jpg" />
-
-Press `Add`. You will see Robonomics in HACS Integrations. Click on it and press the `Download` button in the lower right corner. After downloading, restart Home Assistant.
-
-<robo-wiki-picture src="home-assistant/robonomics-download.jpg" />
+3. In `Custom Repositories` click on Robonomics and press the `Download` button in the lower right corner. After downloading, restart Home Assistant.
 
 Now you have two options:
 
