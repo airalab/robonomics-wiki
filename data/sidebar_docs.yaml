@@ -55,9 +55,6 @@
     - title_en: Introduction
       title_ru: Введение
       link: /docs/
-#    - title_en: R&D Based on Robonomics Network
-#      title_ru: R&D на базе Робономики
-#      link: /docs/r-and-d-based-on-robonomics-network
     - title_en: Glossary
       link: /docs/glossary
     - title_en: Create Account for Robonomics Parachain
