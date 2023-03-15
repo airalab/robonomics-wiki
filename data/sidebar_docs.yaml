@@ -26,7 +26,9 @@
           link: /docs/mqtt-integration
         - title_en: ZigBee Setup Options
           items:
-            - title_en: Adapter with Zigbee2MQTT
+            - title_en: Zigbee2MQTT Adapter for HassOS
+              link: /docs/zigbee-to-mqtt-hassos
+            - title_en: Zigbee2MQTT Adapter for Pre-installed Image, Hass Docker, Hass Core
               link: /docs/zigbee-to-mqtt
             - title_en: Robonomics SLS Gateway
               link: /docs/sls-gateway

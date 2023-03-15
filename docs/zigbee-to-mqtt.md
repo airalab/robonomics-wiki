@@ -1,12 +1,14 @@
 ---
-title: Zigbee Adapter with Zigbee2MQTT
+title: Zigbee Adapter with Zigbee2MQTT for Pre-installed Image or Home Assistant Docker or Core
 
 contributors: [nakata5321, PaTara43]
 tools:
   - Zigbee2MQTT 1.28.2
+    https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.28.2
+
 ---
 
-**In this article you will set up your Zigbee adapter.**
+**In this article you will set up your Zigbee adapter for Robonomics pre-installed image or Home Assistant Docker or Home Assistant Core.**
 
 <robo-wiki-picture src="home-assistant/zigbee2mqtt.png" />
 
@@ -318,8 +320,6 @@ sudo systemctl enable zigbee2mqtt.service
 ```
 
 </code-helper>
-
-## Next step
 
 Now you can go to the [**IoT Subscription**](/docs/sub-activate) section and start activating the Robonomics subscription.
 
