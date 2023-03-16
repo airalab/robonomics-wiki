@@ -33,17 +33,6 @@ eval("module.exports = __webpack_require__.p + \"assets/img/mqtt-hassos-en.eba2f
 
 /***/ }),
 
-/***/ "3ju6":
-/*!*****************************************************!*\
-  !*** ./docs/docsCovers/cross-chain-messages-en.png ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"assets/img/cross-chain-messages-en.3ebb34ec.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/cross-chain-messages-en.png?");
-
-/***/ }),
-
 /***/ "4A+J":
 /*!**************************************************!*\
   !*** ./docs/docsCovers/door-notification-en.png ***!
@@ -255,17 +244,6 @@ eval("module.exports = __webpack_require__.p + \"assets/img/how-to-build-collato
 
 /***/ }),
 
-/***/ "KIzc":
-/*!**********************************************!*\
-  !*** ./docs/docsCovers/robonomics-js-en.png ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"assets/img/robonomics-js-en.f23c33e6.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/robonomics-js-en.png?");
-
-/***/ }),
-
 /***/ "Khtf":
 /*!******************************************!*\
   !*** ./docs/docsCovers/edit-wiki-en.png ***!
@@ -273,7 +251,7 @@ eval("module.exports = __webpack_require__.p + \"assets/img/robonomics-js-en.f23
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"assets/img/edit-wiki-en.72d7859c.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/edit-wiki-en.png?");
+eval("module.exports = __webpack_require__.p + \"assets/img/edit-wiki-en.ed98ca2f.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/edit-wiki-en.png?");
 
 /***/ }),
 
@@ -511,17 +489,6 @@ eval("module.exports = __webpack_require__.p + \"assets/img/sensors-network-intr
 
 /***/ }),
 
-/***/ "gTQY":
-/*!***************************************************************!*\
-  !*** ./docs/docsCovers/robonomics-test-network-manual-en.png ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"assets/img/robonomics-test-network-manual-en.2aa82bb6.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/robonomics-test-network-manual-en.png?");
-
-/***/ }),
-
 /***/ "imwK":
 /*!*****************************************************************!*\
   !*** ./docs/docsCovers/feecc-system-dev-feecc-analytics-en.png ***!
@@ -562,18 +529,7 @@ eval("module.exports = __webpack_require__.p + \"assets/img/hass-init-en.ffc466e
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./adding-funds-to-account-in-dapp-en.png\": \"LAy4\",\n\t\"./backup-services-en.png\": \"9NsX\",\n\t\"./carbon-footprint-sensor-en.png\": \"uKws\",\n\t\"./carbon-footprint-service-en.png\": \"z7kF\",\n\t\"./community-en.png\": \"lIBr\",\n\t\"./contributing-en.png\": \"nHSM\",\n\t\"./create-account-in-dapp-en.png\": \"4vvK\",\n\t\"./create-digital-identity-run-by-ethereum-en.png\": \"y3XH\",\n\t\"./cross-chain-messages-en.png\": \"3ju6\",\n\t\"./datalog-en.png\": \"SymH\",\n\t\"./digital-twins-en.png\": \"y4vX\",\n\t\"./door-notification-en.png\": \"4A+J\",\n\t\"./edit-wiki-en.png\": \"Khtf\",\n\t\"./feecc-system-architecture-en.png\": \"5wC+\",\n\t\"./feecc-system-deploy-feecc-analytics-en.png\": \"cJwD\",\n\t\"./feecc-system-deploy-feecc-wb-en.png\": \"FZmz\",\n\t\"./feecc-system-dev-feecc-analytics-en.png\": \"imwK\",\n\t\"./feecc-system-overview-en.png\": \"s7Gu\",\n\t\"./feecc-system-quickstart-en.png\": \"t7Vp\",\n\t\"./feecc-system-supporthardware-en.png\": \"An2I\",\n\t\"./freertos-mqtt-en.png\": \"qGfa\",\n\t\"./gaka-chu-en.png\": \"Zb/o\",\n\t\"./get-subscription-en.png\": \"Xcs0\",\n\t\"./getting-started-en.png\": \"g05E\",\n\t\"./global-administration-en.png\": \"Sb5a\",\n\t\"./glossary-en.png\": \"4HdC\",\n\t\"./hass-core-upgrade-en.png\": \"nhgA\",\n\t\"./hass-docker-upgrade-en.png\": \"JIlO\",\n\t\"./hass-image-install-en.png\": \"EnAj\",\n\t\"./hass-init-en.png\": \"j7I2\",\n\t\"./hass-os-upgrade-en.png\": \"nzXq\",\n\t\"./how-to-build-collator-node-en.png\": \"JVkh\",\n\t\"./how-to-launch-the-robonomics-collator-en.png\": \"2wET\",\n\t\"./how-to-update-collator-node-version-en.png\": \"aFrB\",\n\t\"./launch-en.png\": \"DkHd\",\n\t\"./liability-en.png\": \"C2Er\",\n\t\"./mqtt-hassos-en.png\": \"3bBO\",\n\t\"./mqtt-image-docker-core-en.png\": \"s7Z3\",\n\t\"./mqtt-integration-en.png\": \"yAZ8\",\n\t\"./notifications-en.png\": \"itmn\",\n\t\"./rinterface-en.png\": \"pEdv\",\n\t\"./robonomics-coffee-en.png\": \"7/nz\",\n\t\"./robonomics-ethereum-en.png\": \"Df7z\",\n\t\"./robonomics-hass-integration-en.png\": \"Ns3M\",\n\t\"./robonomics-js-en.png\": \"KIzc\",\n\t\"./robonomics-prometheus-grafana-en.png\": \"c3cg\",\n\t\"./robonomics-smart-home-overview-en.png\": \"GX92\",\n\t\"./robonomics-test-network-manual-en.png\": \"gTQY\",\n\t\"./run-dev-node-en.png\": \"LBOO\",\n\t\"./securely-connect-cloud-ai-to-the-factory-floor-en.png\": \"2+8B\",\n\t\"./sensors-network-introduction-en.png\": \"gHXQ\",\n\t\"./sls-gateway-en.png\": \"COFF\",\n\t\"./smart-home-telemetry-en.png\": \"Pinx\",\n\t\"./sub-activate-en.png\": \"4xtK\",\n\t\"./subscription-launch-en.png\": \"NORK\",\n\t\"./use-blueprints-en.png\": \"RUWx\",\n\t\"./xcm-robobank-en.png\": \"QwKG\",\n\t\"./zigbee-to-mqtt-en.png\": \"Yo0K\",\n\t\"./zigbee-to-mqtt-hassos-en.png\": \"UI/g\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"jEse\";\n\n//# sourceURL=webpack:///./docs/docsCovers_sync_^\\.\\/.*$?");
-
-/***/ }),
-
-/***/ "lIBr":
-/*!******************************************!*\
-  !*** ./docs/docsCovers/community-en.png ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"assets/img/community-en.af52b960.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/community-en.png?");
+eval("var map = {\n\t\"./adding-funds-to-account-in-dapp-en.png\": \"LAy4\",\n\t\"./backup-services-en.png\": \"9NsX\",\n\t\"./carbon-footprint-sensor-en.png\": \"uKws\",\n\t\"./carbon-footprint-service-en.png\": \"z7kF\",\n\t\"./contributing-en.png\": \"nHSM\",\n\t\"./create-account-in-dapp-en.png\": \"4vvK\",\n\t\"./create-digital-identity-run-by-ethereum-en.png\": \"y3XH\",\n\t\"./datalog-en.png\": \"SymH\",\n\t\"./digital-twins-en.png\": \"y4vX\",\n\t\"./door-notification-en.png\": \"4A+J\",\n\t\"./edit-wiki-en.png\": \"Khtf\",\n\t\"./feecc-system-architecture-en.png\": \"5wC+\",\n\t\"./feecc-system-deploy-feecc-analytics-en.png\": \"cJwD\",\n\t\"./feecc-system-deploy-feecc-wb-en.png\": \"FZmz\",\n\t\"./feecc-system-dev-feecc-analytics-en.png\": \"imwK\",\n\t\"./feecc-system-overview-en.png\": \"s7Gu\",\n\t\"./feecc-system-quickstart-en.png\": \"t7Vp\",\n\t\"./feecc-system-supporthardware-en.png\": \"An2I\",\n\t\"./freertos-mqtt-en.png\": \"qGfa\",\n\t\"./gaka-chu-en.png\": \"Zb/o\",\n\t\"./get-subscription-en.png\": \"Xcs0\",\n\t\"./getting-started-en.png\": \"g05E\",\n\t\"./global-administration-en.png\": \"Sb5a\",\n\t\"./glossary-en.png\": \"4HdC\",\n\t\"./hass-core-upgrade-en.png\": \"nhgA\",\n\t\"./hass-docker-upgrade-en.png\": \"JIlO\",\n\t\"./hass-image-install-en.png\": \"EnAj\",\n\t\"./hass-init-en.png\": \"j7I2\",\n\t\"./hass-os-upgrade-en.png\": \"nzXq\",\n\t\"./how-to-build-collator-node-en.png\": \"JVkh\",\n\t\"./how-to-launch-the-robonomics-collator-en.png\": \"2wET\",\n\t\"./how-to-update-collator-node-version-en.png\": \"aFrB\",\n\t\"./launch-en.png\": \"DkHd\",\n\t\"./liability-en.png\": \"C2Er\",\n\t\"./mqtt-hassos-en.png\": \"3bBO\",\n\t\"./mqtt-image-docker-core-en.png\": \"s7Z3\",\n\t\"./mqtt-integration-en.png\": \"yAZ8\",\n\t\"./notifications-en.png\": \"itmn\",\n\t\"./rinterface-en.png\": \"pEdv\",\n\t\"./robonomics-coffee-en.png\": \"7/nz\",\n\t\"./robonomics-ethereum-en.png\": \"Df7z\",\n\t\"./robonomics-hass-integration-en.png\": \"Ns3M\",\n\t\"./robonomics-prometheus-grafana-en.png\": \"c3cg\",\n\t\"./robonomics-smart-home-overview-en.png\": \"GX92\",\n\t\"./run-dev-node-en.png\": \"LBOO\",\n\t\"./securely-connect-cloud-ai-to-the-factory-floor-en.png\": \"2+8B\",\n\t\"./sensors-network-introduction-en.png\": \"gHXQ\",\n\t\"./sls-gateway-en.png\": \"COFF\",\n\t\"./smart-home-telemetry-en.png\": \"Pinx\",\n\t\"./sub-activate-en.png\": \"4xtK\",\n\t\"./subscription-launch-en.png\": \"NORK\",\n\t\"./use-blueprints-en.png\": \"RUWx\",\n\t\"./xcm-robobank-en.png\": \"QwKG\",\n\t\"./zigbee-to-mqtt-en.png\": \"Yo0K\",\n\t\"./zigbee-to-mqtt-hassos-en.png\": \"UI/g\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"jEse\";\n\n//# sourceURL=webpack:///./docs/docsCovers_sync_^\\.\\/.*$?");
 
 /***/ }),
 
@@ -596,7 +552,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"assets/img/contributing-en.69ac5db1.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/contributing-en.png?");
+eval("module.exports = __webpack_require__.p + \"assets/img/contributing-en.5bce5e10.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/contributing-en.png?");
 
 /***/ }),
 
