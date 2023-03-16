@@ -81,11 +81,6 @@
       link: /docs/subscription-launch
     - title_en: Robonomics on Ethereum
       link: /docs/robonomics-ethereum
-#    - title_en: Cross-chain Message
-#      link: /docs/cross-chain-messages
-#    - title_en: Robonomics-js
-#      title_ko: 로노미크스-JS
-#      link: /docs/robonomics-js
 
 - title_en: Maintain
   items:
@@ -99,9 +94,10 @@
 #      link: /docs/robonomics-test-network-manual
     - title_en: Configure Metrics With Prometheus And Grafana
       link: /docs/robonomics-prometheus-grafana
-
-#     - title_en: Community
-#       link: /docs/community
+    - title_en: How to Edit Wiki
+      link: /docs/edit-wiki
+    - title_en: How to Contribute
+      link: /docs/contributing
 
 
 #- title_en: Use
