@@ -112,7 +112,7 @@ export default {
     }
 
     document.body.addEventListener('click', (e) => {
-      if(this.$store.state.currentReaction) {
+      if(this.$store.state.currentReaction && !e.target.closest('form')) {
         this.$emit('closeForm');
       }
     })
