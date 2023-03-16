@@ -30,7 +30,7 @@ Now, you can proceed to add devices. Depending on the hardware you have, choose 
 * For Zigbee adapter and Home Assistant OS [go here](/docs/zigbee-to-mqtt-hassos/). Ideal for [JetHome USB JetStick Z2](https://jethome.ru/z2/?sl=en) or similar [supported adapters](https://www.zigbee2mqtt.io/information/supported_adapters.html).
 
 **Option 2 (with zigbee2MQTT for for pre-installed image or Home Assistant Docker or Core)**
-* For Zigbee adapter with others options of the Hass installation [go here](/docs/zigbee-to-mqtt/). Ideal for [JetHome USB JetStick Z2](https://jethome.ru/z2/?sl=en) or similar [supported adapters](https://www.zigbee2mqtt.io/information/supported_adapters.html).
+* For Zigbee adapter with other options of the Home Assistant installation [go here](/docs/zigbee-to-mqtt/). Ideal for [JetHome USB JetStick Z2](https://jethome.ru/z2/?sl=en) or similar [supported adapters](https://www.zigbee2mqtt.io/information/supported_adapters.html).
 
 **Option 3 (with SLS Gateway)**
-* For Robonomics SLS Gateway regardless of the Hass installation options [go here](/docs/sls-gateway/). Open SLS gateway specs your can [find here](https://easyeda.com/ludovich88/robonomics_sls_gateway_v01).
+* For Robonomics SLS Gateway regardless of the Home Assistant installation options [go here](/docs/sls-gateway/). Open SLS gateway specs your can [find here](https://easyeda.com/ludovich88/robonomics_sls_gateway_v01).

@@ -17,7 +17,7 @@ tools:
 
 ## Zigbee2MQTT Addon Install
 
-1. Go to the Add-on store, click ⋮ on the upper right corner and choose `Repositories`. Add there the following link and press `ADD`:
+1. Go to the Add-on store, click ⋮ on the upper right corner and choose `Repositories`. Paste there the following link and press `ADD`:
 ```
 https://github.com/zigbee2mqtt/hassio-zigbee2mqtt
 ```
@@ -83,6 +83,8 @@ sysfs: /sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:0
 In this example device connection directory is `/dev/ttyUSB0`.
 
 3. Before starting Zigbee2MQTT you need to configure it. Click on `Configuration` in the Zigbee2MQTT addon. The basic options needs a few adjustments, change the following statements:
+
+<robo-wiki-picture src="home-assistant/hassos-zigbee2mqtt-config.png" />
 
 - In `serial` field add the device connection directory:
 
