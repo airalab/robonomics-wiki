@@ -1,22 +1,20 @@
 ---
-title: How to contribute
+title: How to Contribute to Robonomics Resources
 
 contributors: [positivecrash]
 ---
 
-Robonomics network is an open-source project built by core maintainers from Airalab and contributors. We want to make it easy for anyone to contribute. You may contribute to core, suggest changes, improve documentation or write a blog post. Please, read some rules and suggestions for contributing.
+Robonomics Network is an open-source project and we want to make it easy for anyone to contribute. You may create articles, suggest changes, improve documentation or run tests. If you want to contribute, please, open a new issue or create a pull request in the same repository.
 
-## Main Airalab repositories 
+## Main Robonomics Repositories 
 
-- [aira](https://github.com/airalab/aira) - AIRA client for Robonomics network. 
-- [robonomics_comm](https://github.com/airalab/robonomics_comm) - Robonomics communication stack
-- [robonomics_contracts](https://github.com/airalab/robonomics_contracts) - smart contracts of Robonomics network
+- [Robonomics Wiki](https://github.com/airalab/robonomics-wiki) — Main wiki project
+- [Robonomics Main](https://github.com/airalab/robonomics.network) —  Official main website of Robonomics Network 
+- [Robonomics.cloud](https://github.com/airalab/robonomics.cloud) — Home for Robonomics Web Services
+- [Robonomics Dapp](https://github.com/airalab/dapp.robonomics.network) — Official dapp
+- [Robonomics Academy](https://github.com/airalab/robonomics.academy) — Official website of Robonomics Academy
 
-## Bugs and proposals for improvements
-
-If you find a bug in AIRA client, Robonomics repositories, this documentation or would like to propose an improvement, please, open a new issue in the same repository, that you want to contribute.
-
-### Rules for reporting
+### Rules for Reporting
 
 When opening a new issue, do not forget about a few basic rules for reporting:
 
@@ -26,12 +24,12 @@ When opening a new issue, do not forget about a few basic rules for reporting:
 
 3. Be sure to include title and clear description, as much relevant information as possible.
 
-4. Please prefix your issue with one of the following: `[BUG]`, `[PROPOSAL]`, `[QUESTION]`.
+4. Please, prefix your issue with one of the following: `[BUG]`, `[PROPOSAL]`, `[QUESTION]`.
 
 
-## Pull requests
+## Pull Requests
 
-Any Airalab repository or this documentation may be subject to pull requests or changes by contributors where you believe you have something valuable to add or change. Please, do not forget about basic rules for contributors.
+Any Robonomics repository may be subject to pull requests or changes by contributors, where you believe you have something valuable to add or change. Please, do not forget about basic rules for contributors.
 
 ### Rules for contributing
 

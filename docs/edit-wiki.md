@@ -1,15 +1,15 @@
 ---
-title: How to edit WIKI 
+title: How to Edit Wiki 
 contributors: [positivecrash]
 description: Ways to help us improve our wiki
 ---
 
-**Robonomics WIKI is open source. Any corrections are welcome: fixing errors, typos, some unclear or outdated information, translation into any language. You'll need a [GitHub](https://github.com/) account.**
+**Robonomics Wiki is open source. Any corrections are welcome: fixing errors, typos, some unclear or outdated information, translation into any language. You'll need a [GitHub](https://github.com/) account.**
 
 
 ## How to edit
 
-If you need to edit docs of Robonomics WIKI, please, follow these steps
+If you need to edit docs of Robonomics Wiki, please, follow these steps
 
 Make sure, you have [Node.js](https://nodejs.org/en/download/package-manager/) and [Gridsome](https://gridsome.org/docs/#1-install-gridsome-cli-tool) installed.
 
@@ -55,7 +55,7 @@ gridsome develop-m1
 ## Components
 
 ### Asciinema
-Robonomics WIKI has support for Asciinema. To insert Asciinema, please, follow these instructions:
+Robonomics Wiki has support for Asciinema. To insert Asciinema, please, follow these instructions:
 * Import component after frontmatter block `import Asciinema from '~/components/Asciinema.vue'`
 * Insert as separate paragraph `<Asciinema vid="WCFcx8C6M8e52UKDNei1xZloU"/>`, where is vid is ID of specific asciicast
 
@@ -110,7 +110,7 @@ $ ls -l /dev/serial/by-id
 
 
 ### Frontmatter
-Docs in Robonomics WIKI contain frontmatter block. It must be at the top of the Markdown file, and must take the form of valid YAML set between triple-dashed lines. Between the triple-dashed lines, you can set or edit folowing options:
+Docs in Robonomics Wiki contain frontmatter block. It must be at the top of the Markdown file, and must take the form of valid YAML set between triple-dashed lines. Between the triple-dashed lines, you can set or edit folowing options:
 
 ```YAML
 ---
@@ -457,7 +457,7 @@ However, if you need an autoplay you must use special component:
 
 ## How to edit sidebar navigation
 
-If you need to edit sidebar navigation of Robonomics WIKI, please, follow these steps:
+If you need to edit sidebar navigation of Robonomics Wiki, please, follow these steps:
 
 * Edit file `/data/sidebar_docs.yaml`.
 
