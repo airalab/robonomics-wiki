@@ -87,6 +87,7 @@ export default {
 
 <style scoped>
   video {
+    
     width: 100%;
     display: block;
     margin: 0 auto;
