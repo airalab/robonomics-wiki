@@ -3,29 +3,25 @@ title: Get Smart Home Telemetry
 
 contributors: [nakata5321, Fingerling42]
 tools:   
-  - Robonomics 2.6.0
+  - Robonomics 2.7.0-1
     https://github.com/airalab/robonomics
-  - Dapp Robonomics Network 
+  - Robonomics Dapp 
     https://github.com/airalab/dapp.robonomics.network
-  - Robonomics integration 1.1.3
+  - Robonomics Hass Integration 1.4.2
     https://github.com/airalab/homeassistant-robonomics-integration
 ---
 
 **In this article, you will use the Robonomics service, which queries the telemetry of smart home devices.**
 
-Go to dapp and choose [SmartHome Telemetry](https://dapp.robonomics.network/#/smarthome-telemetry) service. You should see the next:
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
 
-<robo-wiki-picture src="home-assistant/telemetry-start.png" />
+1. Go to dapp and choose [SmartHome Telemetry](https://dapp.robonomics.network/#/smarthome-telemetry) service.
 
-In the controller field enter the `SUB_CONTROLLER` address. Insert the seed phrase to encrypt data.
+2. In the controller field enter the `SUB_CONTROLLER` address. Insert the seed phrase to encrypt data.
 
-In the `Get telemetry` block choose a timestamp from the drop-down list and press the `DOWNLOAD TELEMETRY` button.
+3. In the `Get telemetry` block choose a timestamp from the drop-down list and press the `DOWNLOAD TELEMETRY` button.
 
-<robo-wiki-picture src="home-assistant/datalog-time.png" />
-
-Telemetry downloading could take some time. After finishing, you will see the information from your sensors.
-
-<robo-wiki-picture src="home-assistant/telemetry.jpg" />
+4. Telemetry downloading could take some time. After finishing, you will see the information from your devices and sensors.
 
 
 <!---
