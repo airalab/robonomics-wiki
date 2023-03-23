@@ -2,6 +2,9 @@
 title: Robonomics SLS Gateway
 
 contributors: [LoSk-p, Fingerling42, nakata5321]
+tools:
+  - SLS Firmware 2022.08.13
+    https://github.com/airalab/robonomics-hass-utils
 ---
 
 **In this article you will set up Robonomics SLS Gateway. You will install the required software for the gateway, configure it and connect it to Home Assistant.**

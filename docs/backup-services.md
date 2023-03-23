@@ -2,7 +2,9 @@
 title: Backup Services
 
 contributors: [tubleronchik]
-translated: true
+tools:
+  - Robonomics Hass Integration 1.4.2
+    https://github.com/airalab/homeassistant-robonomics-integration
 ---
 
 **In this article, you will learn how to generate backups of your Home Assistant configuration and restore it when needed. To create backups, a service is called that generates a secure archive with configuration files. This service then adds the archive to IPFS and stores the resulting CID in Robonomics Digital Twin.**

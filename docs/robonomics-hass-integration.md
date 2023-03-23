@@ -3,7 +3,7 @@ title: Robonomics integration setup
 
 contributors: [LoSk-p, nakata5321, Fingerling42]
 tools:
-  - Robonomics integration 1.1.3
+  - Robonomics Hass Integration 1.4.2
     https://github.com/airalab/homeassistant-robonomics-integration
 ---
 

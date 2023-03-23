@@ -4,9 +4,9 @@ title: Zigbee Adapter with Zigbee2MQTT Addon for Home Assistant OS
 contributors: [Fingerling42]
 tools:
   - Home Assistant OS 64-9.5 for RaspPi
-    https://github.com/home-assistant/operating-system/releases/tag/9.5
-  - Zigbee2MQTT Home Assistant Addon 1.30.2-1
-    https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/releases/tag/v1.30.2-1
+    https://github.com/home-assistant/operating-system
+  - Zigbee2MQTT Hass Addon 1.30.2-1
+    https://github.com/zigbee2mqtt/hassio-zigbee2mqtt
 ---
 
 **In this article you will set up your Zigbee adapter for HassOS.**

@@ -3,13 +3,13 @@ title: Upgrade Your Home Assistant OS
 contributors: [LoSk-p]
 tools:   
   - Home Assistant OS 64-9.5 for RaspPi 
-    https://github.com/home-assistant/operating-system/releases
-  - Robonomics Integration 1.4.1
+    https://github.com/home-assistant/operating-system
+  - HACS 1.31.0
+    https://github.com/hacs/integration/
+  - Robonomics Hass Integration 1.4.1
     https://github.com/airalab/homeassistant-robonomics-integration
-  - robonomics-interface 1.6.1
-    https://github.com/Multi-Agent-io/robonomics-interface/
-  - IPFS 0.17.0
-    https://docs.ipfs.tech/
+  - IPFS Hass Addon 1.1.0
+    https://github.com/airalab/ipfs-addon
 ---
 
 **This article contains instructions to upgrade your existing Home Assistant OS with Robonomics integration.**

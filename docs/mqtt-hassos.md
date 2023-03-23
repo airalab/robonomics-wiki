@@ -3,8 +3,8 @@ title: MQTT Broker for Home Assistant OS
 contributors: [LoSk-p]
 tools:
   - Home Assistant OS 64-9.5 for RaspPi 
-    https://github.com/home-assistant/operating-system/releases
-  - Mosquitto Broker Home Assistant Addon 6.1.3
+    https://github.com/home-assistant/operating-system
+  - Mosquitto Broker Hass Addon 6.1.3
     https://github.com/home-assistant/addons/tree/master/mosquitto
 ---
 
