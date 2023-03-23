@@ -4,7 +4,7 @@ contributors: [nakata5321, PaTara43]
 tools:
   - Home Assistant 2023.1.7
     https://github.com/home-assistant/core
-  - Robonomics Hass Integration 1.6.0
+  - Robonomics Hass Integration 1.4.0
     https://github.com/airalab/homeassistant-robonomics-integration
   - robonomics-interface 1.3.6
     https://github.com/Multi-Agent-io/robonomics-interface/
