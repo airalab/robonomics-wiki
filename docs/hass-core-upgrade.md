@@ -6,7 +6,7 @@ tools:
     https://ubuntu.com/download/raspberry-pi
   - Home Assistant 2023.1.7
     https://github.com/home-assistant/core
-  - Robonomics Hass Integration 1.2.0
+  - Robonomics Home Assistant Integration 1.2.0
     https://github.com/airalab/homeassistant-robonomics-integration
   - robonomics-interface 1.3.6
     https://github.com/Multi-Agent-io/robonomics-interface/

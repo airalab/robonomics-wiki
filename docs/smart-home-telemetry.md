@@ -7,7 +7,7 @@ tools:
     https://github.com/airalab/robonomics
   - Robonomics Dapp 
     https://github.com/airalab/dapp.robonomics.network
-  - Robonomics Hass Integration 1.4.2
+  - Robonomics Home Assistant Integration 1.4.2
     https://github.com/airalab/homeassistant-robonomics-integration
 ---
 

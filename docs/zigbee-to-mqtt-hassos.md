@@ -5,11 +5,11 @@ contributors: [Fingerling42]
 tools:
   - Home Assistant OS 64-9.5 for RaspPi
     https://github.com/home-assistant/operating-system
-  - Zigbee2MQTT Hass Addon 1.30.2-1
+  - Zigbee2MQTT Home Assistant Addon 1.30.2-1
     https://github.com/zigbee2mqtt/hassio-zigbee2mqtt
 ---
 
-**In this article you will set up your Zigbee adapter for HassOS.**
+**In this article you will set up your Zigbee adapter for Home Assistant OS.**
 
 <robo-wiki-picture src="home-assistant/zigbee2mqtt.png" />
 
@@ -31,7 +31,7 @@ https://github.com/zigbee2mqtt/hassio-zigbee2mqtt
 
 2. Find the location of the adapter. For this open SSH Add-on and run the following command:
 
-<code-helper copy additionalLine="Hass Command Line">
+<code-helper copy additionalLine="Home Assistant Command Line">
 
 ```bash
 ha hardware info
@@ -41,7 +41,7 @@ ha hardware info
 
 In output find the strings like this:
 
-<code-helper additionalLine="Hass Command Line">
+<code-helper additionalLine="Home Assistant Command Line">
 
 ```bash
 - attributes:
@@ -112,7 +112,7 @@ port: /dev/ttyUSB0
 
 </robo-wiki-note>
 
-<code-helper additionalLine="Hass Command Line">
+<code-helper additionalLine="Home Assistant Command Line">
 
 ```bash
 cd config/zigbee2mqtt

@@ -6,9 +6,9 @@ tools:
     https://github.com/home-assistant/operating-system
   - HACS 1.31.0
     https://github.com/hacs/integration/
-  - Robonomics Hass Integration 1.4.1
+  - Robonomics Home Assistant Integration 1.4.1
     https://github.com/airalab/homeassistant-robonomics-integration
-  - IPFS Hass Addon 1.1.0
+  - IPFS Home Assistant Addon 1.1.0
     https://github.com/airalab/ipfs-addon
 ---
 
@@ -63,7 +63,7 @@ https://github.com/airalab/ipfs-addon
 
 4. Open SSH Add-on and run the following command:
 
-<code-helper copy additionalLine="Hass Command Line">
+<code-helper copy additionalLine="Home Assistant Command Line">
 
 ```bash
 wget -O - https://get.hacs.xyz | bash -
