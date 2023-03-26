@@ -1,18 +1,22 @@
 ---
 title: Pre-installed Image For Raspberry Pi
-contributors: [ nakata5321, PaTara43]
+contributors: [nakata5321, PaTara43]
 tools:
-  - Home Assistant 2022.12.7
+  - Home Assistant 2023.1.7
     https://github.com/home-assistant/core
-  - Robonomics integration 1.1.3
+  - Robonomics Home Assistant Integration 1.4.0
     https://github.com/airalab/homeassistant-robonomics-integration
   - robonomics-interface 1.3.6
     https://github.com/Multi-Agent-io/robonomics-interface/
   - IPFS 0.17.0
     https://docs.ipfs.tech/
+  - Zigbee2MQTT 1.28.4
+    https://github.com/Koenkk/zigbee2mqtt
+  - Yggdrasil 0.4.7
+    https://github.com/yggdrasil-network/yggdrasil-go/
 ---
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]" />
+<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]" />
 
 **Welcome to the guide on installing Home Assistant with Robonomics integration on a Raspberry Pi. Home Assistant is an open-source home automation system that provides a centralized hub for controlling smart devices in your home network. By integrating with Robonomics, a decentralized cloud service, you can enhance the functionality and security of your smart home. In this article, we will provide step-by-step instructions on how to install Home Assistant with Robonomics on a Raspberry Pi, giving you the ability to automate and control various aspects of your home using a secure and decentralized solution. Let's get started!**
 

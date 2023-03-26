@@ -2,11 +2,11 @@
 title: Upgrade Your Home Assistant Core
 contributors: [PaTara43, makyul]
 tools:   
-  - Ubuntu Server 22.04 LTS
+  - Ubuntu Server 22.04.2 LTS for RaspPi
     https://ubuntu.com/download/raspberry-pi
-  - Home Assistant 2022.11.3
+  - Home Assistant 2023.1.7
     https://github.com/home-assistant/core
-  - Robonomics integration 1.1.3
+  - Robonomics Home Assistant Integration 1.2.0
     https://github.com/airalab/homeassistant-robonomics-integration
   - robonomics-interface 1.3.6
     https://github.com/Multi-Agent-io/robonomics-interface/

@@ -2,7 +2,11 @@
 title: Global Administration
 
 contributors: [nakata5321, Fingerling42]
-translated: true
+tools:   
+  - Robonomics 2.7.0-1
+    https://github.com/airalab/robonomics
+  - Robonomics Dapp 
+    https://github.com/airalab/dapp.robonomics.network
 ---
 
 **This article will show you how to set up a new user to your Home Assistant.**
