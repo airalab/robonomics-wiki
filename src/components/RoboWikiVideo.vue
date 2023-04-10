@@ -46,17 +46,19 @@ export default {
             let observer = new IntersectionObserver(
               (entries) => {
                 entries.forEach((entry) => {
-                    if (
-                        entry.intersectionRatio !== 1 &&
-                        !video.paused
-                    ) {
+                  video.pause();
+
+                  if(entry.isIntersecting) {
+                    if (entry.intersectionRatio !== 1 && !video.paused) {
                         video.pause();
-                    } else if (video.paused) {
+                    } else  {
                         video.play();
-                    }
+                    } 
+                  }
+      
                 });
               },
-              { threshold: 0.2 }
+              {threshold: 0.7}
             );
             observer.observe(video);
         });
