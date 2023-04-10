@@ -2,8 +2,8 @@
 title: MQTT Broker for Pre-installed Image or Home Assistant Docker or Core
 contributors: [nakata5321, PaTara43]
 tools:
-  - Mosquitto Broker 2.0.11
-    https://mosquitto.org/
+  - Mosquitto Broker 2.0.15
+    https://github.com/eclipse/mosquitto
 ---
 
 **This article describes how to install MQTT broker for Robonomics pre-installed image or for Home Assistant Docker or Core.**

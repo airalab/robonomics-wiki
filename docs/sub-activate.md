@@ -2,9 +2,9 @@
 title: Subscription Activate
 contributors: [nakata5321, Fingerling42]
 tools:   
-  - Robonomics 2.6.0
+  - Robonomics 2.7.0-1
     https://github.com/airalab/robonomics
-  - Dapp Robonomics Network 
+  - Robonomics Dapp 
     https://github.com/airalab/dapp.robonomics.network
 ---
 

@@ -20,15 +20,15 @@
           items:
             - title_en: MQTT Broker for Home Assistant OS
               link: /docs/mqtt-hassos
-            - title_en: MQTT Broker for Pre-installed Image, Hass Docker, Hass Core
+            - title_en: MQTT Broker for Pre-installed Image, HA Docker, HA Core
               link: /docs/mqtt-image-docker-core
         - title_en: MQTT Integration Setup
           link: /docs/mqtt-integration
         - title_en: ZigBee Setup Options
           items:
-            - title_en: Zigbee2MQTT Adapter for HassOS
+            - title_en: Zigbee2MQTT Adapter for Home Assistant OS
               link: /docs/zigbee-to-mqtt-hassos
-            - title_en: Zigbee2MQTT Adapter for Pre-installed Image, Hass Docker, Hass Core
+            - title_en: Zigbee2MQTT Adapter for Pre-installed Image, HA Docker, HA Core
               link: /docs/zigbee-to-mqtt
             - title_en: Robonomics SLS Gateway
               link: /docs/sls-gateway

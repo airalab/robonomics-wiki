@@ -2,7 +2,7 @@
 title: MQTT Integration Setup
 contributors: [nakata5321]
 tools:
-  - Home Assistant 2022.12.7
+  - Home Assistant 2023.1.7
     https://github.com/home-assistant/core
 ---
 
