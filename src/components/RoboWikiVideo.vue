@@ -1,7 +1,7 @@
 <template>
     <video ref="video" mute playsinline v-bind="$attrs" v-if="videos">
       <template v-for="video in videos">
-        <source :src="video.src" :type="`video/${video.type}`" :key="video.id" />
+        <source :src="video.src + '#t=0.001'" :type="`video/${video.type}`" :key="video.id" />
     </template>
     </video>
 </template>
@@ -58,7 +58,7 @@ export default {
       
                 });
               },
-              {threshold: 0.7}
+              {threshold: 0.8}
             );
             observer.observe(video);
         });
