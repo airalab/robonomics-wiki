@@ -33,11 +33,11 @@ To solve both problems, we suggest you to try Robonomics, our **secure**, **serv
     </robo-wiki-grid-element>
     <robo-wiki-grid-element>
       <robo-wiki-picture src="home-assistant/need_3.png" /> 
-      <p>SD card (minimum 32 GB)</p>  
+      <p>SD card (minimum 16 GB)</p>  
     </robo-wiki-grid-element>
     <robo-wiki-grid-element>
       <robo-wiki-picture src="home-assistant/need_4.png" /> 
-      <p>SD adapter</p>
+      <p>SD adapter (optional)</p>
     </robo-wiki-grid-element>
   </robo-wiki-grid-element-wrapper>
 
@@ -52,10 +52,3 @@ To solve both problems, we suggest you to try Robonomics, our **secure**, **serv
       <a href="https://easyeda.com/ludovich88/robonomics_sls_gateway_v01">Robonomics SLS Gateway</a></p>
     </robo-wiki-grid-element/>
   </robo-wiki-grid-element-wrapper>
-
-## How to install Home Assistant with Robonomics 
-
-* [Pre-installed image](/docs/hass-image-install/) — This method implies setting up a whole new OS on your Raspberry Pi.
-* [Home Assistant OS](/docs/hass-os-upgrade/) — The method is suitable for integrating Robonomics with an existing Home Assistant OS.
-* [Home Assistant Docker for Unix-like OS](/docs/hass-docker-upgrade/) — The method is suitable for integrating Robonomics with an existing Home Assistant Docker for Unix-like OS.
-* [Home Assistant Core](/docs/hass-core-upgrade/) — The method is suitable for integrating Robonomics with an existing Home Assistant Core.

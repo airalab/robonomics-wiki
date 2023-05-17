@@ -22,4 +22,9 @@ tools:
 
 3. Press `SUBMIT` after finishing the configuration. If you filled in everything correctly, you will see the success window.
 
-Congratulations! You have fully installed and configured Home Assistant with Robonomics integration. Now go to [**"Use"**](/docs/global-administration) section to start working with your upgraded smart home.
+<robo-wiki-note type="okay">
+
+Congratulations! You have fully installed and configured Home Assistant with Robonomics integration. Now go to 
+[**Use**](/docs/global-administration) section to start working with your upgraded smart home.
+
+</robo-wiki-note>

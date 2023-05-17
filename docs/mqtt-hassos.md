@@ -34,5 +34,3 @@ tools:
 </robo-wiki-note>
 
 3. Save the configuration and go to the `Info` tab to start the add-on.
-
-Continue MQTT setup with the [**MQTT Integration Setup**](/docs/mqtt-integration) article.

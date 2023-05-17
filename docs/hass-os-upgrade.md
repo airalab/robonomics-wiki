@@ -102,8 +102,3 @@ https://github.com/airalab/homeassistant-robonomics-integration
 2. After that, choose `Integration` category and press `ADD`. 
 
 3. In `Custom Repositories` click on Robonomics and press the `Download` button in the lower right corner. After downloading, restart Home Assistant.
-
-Now you have two options:
-
-- If you have not yet used MQTT integration to connect smart devices via Zigbee adapter, go to the [**MQTT Broker for Home Assistant OS**](/docs/mqtt-hassos) article.
-- Otherwise, go to the [**IoT Subscription**](/docs/sub-activate) section and start activating the Robonomics subscription.
