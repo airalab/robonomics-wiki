@@ -16,7 +16,7 @@ tools:
     https://github.com/yggdrasil-network/yggdrasil-go/
 ---
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]" />
+<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]" />
 
 **Welcome to the guide on installing Home Assistant with Robonomics integration on a Raspberry Pi. Home Assistant is an open-source home automation system that provides a centralized hub for controlling smart devices in your home network. By integrating with Robonomics, a decentralized cloud service, you can enhance the functionality and security of your smart home. In this article, we will provide step-by-step instructions on how to install Home Assistant with Robonomics on a Raspberry Pi, giving you the ability to automate and control various aspects of your home using a secure and decentralized solution. Let's get started!**
 
@@ -61,7 +61,7 @@ Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on your com
 
 Run the Raspberry Pi Imager program. Choose required image as the operating system and ensure to select your SD card from the storage dropdown menu. In settings provide your Wi-Fi, password, choose your country from drop-down list and then `Write!` image. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmVgex7Aw9sH97kDbbwaHkbcHZRu8xWruh5a7hfnMstNrV', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmVgex7Aw9sH97kDbbwaHkbcHZRu8xWruh5a7hfnMstNrV', type:'mp4'}]" />
 
 You can find country codes [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
 
