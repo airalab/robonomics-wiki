@@ -12,7 +12,7 @@ tools:
 
 <robo-wiki-picture src="home-assistant/mqtt_broker_os.png" />
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmaoaTBu3KqwC8NKRSopmF3KQ5BYL8skEfYJjXypcJNdNL', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmaoaTBu3KqwC8NKRSopmF3KQ5BYL8skEfYJjXypcJNdNL', type:'mp4'}]" />
 
 1. We will use [Mosquitto](https://mosquitto.org/) MQTT broker. In the Add-on Store find the `Mosquitto broker` add-on, press on it and press `INSTALL`. 
 
