@@ -13,7 +13,7 @@
         - title_en: MQTT Integration Setup
           link: /docs/mqtt-integration
         - title_en: Zigbee2MQTT Adapter
-          link: /docs/zigbee-to-mqtt
+          link: /docs/zigbee-to-mqtt-image
         - title_en: Subscription Activate
           link: /docs/sub-activate
         - title_en: Robonomics Integration Setup
