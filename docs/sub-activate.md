@@ -94,5 +94,3 @@ Now you need to add a `sub_controller` account to the **access list**.
 3. Repeat steps 1 and 2 for `sub_owner` account.
 
 3. Press `Save`. Enter your `sub_owner` password in the popup window and wait until the activation process is completed.
-
-After that, go to the article ["Robonomics Integration Setup"](/docs/robonomics-hass-integration/) article.

@@ -134,5 +134,3 @@ rm coordinator_backup.json
 <robo-wiki-picture src="home-assistant/zigbee-2-mqtt-addon-ui.png" />
 
 4. Now you should see the device with the same IEEE Address in your Home Assistant Web UI. Go to `Settings` -> `Devices & Services` -> `Devices`.
-
-Now you can go to the [**IoT Subscription**](/docs/sub-activate) section and start activating the Robonomics subscription.

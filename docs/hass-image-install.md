@@ -26,11 +26,11 @@ tools:
 
 To simplify the installation process, a pre-made image can be used. It contains Home Assistant Core with Robonomics integration and IPFS. Options for downloading:
 
-### GitHub Release
+### Option 1: GitHub Release
 
-Download it from the latest [GitHub releases.](https://github.com/airalab/Robonomics-HomeAssistant-image/releases)
+Download image-robonomics_homeassistant.img.xz with current update date from the latest [GitHub releases.](https://github.com/airalab/Robonomics-HomeAssistant-image/releases)
 
-### IPFS get
+### Option 2: IPFS get
 
 Alternatively, you can download it using IPFS. [Install IPFS](https://docs.ipfs.tech/install/command-line/), initialize and start the daemon:
 
@@ -94,10 +94,6 @@ ssh smart@192.168.43.56
 User is `smart`, password is `robot`. 
 
 </robo-wiki-note>
-
-## Next step
-
-Now you have a Raspberry Pi with firmware installed, go to the [Home Assistant Init](/docs/hass-init/) article.
 
 <!-- ## Related videos
 

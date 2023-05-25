@@ -8,68 +8,11 @@ tools:
 
 ---
 
-**In this article you will set up your Zigbee adapter for Home Assistant Docker or Home Assistant Core.**
+**In this article you will set up your Zigbee adapter for Robonomics pre-installed image.**
 
 <robo-wiki-picture src="home-assistant/zigbee2mqtt.png" />
 
 **If you have the [JetHome USB JetStick Z2](https://jethome.ru/z2/?sl=en) (which has all of the necessary firmware), you can simply proceed with these instructions. However, if you have another adapter, the first thing you need to do is to flash it with Zigbee2MQTT software. You can find instructions for your device [here](https://www.zigbee2mqtt.io/information/supported_adapters.html).**
-
-
-## Software Install
-
-Set up Node.js runtime environment repository and install it with required dependencies:
-
-<code-helper additionalLine="rasppi_username@rasppi_hostname">
-
-```shell
-sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt-get install -y nodejs git make g++ gcc
-```
-
-</code-helper>
-
-Verify that the correct versions of Node.js (v14.X, V16.x, V17.x or V18.X) and package manager npm (6.X, 7.X or 8.X) automatically installed with Node.js, have been installed:
-
-<code-helper additionalLine="rasppi_username@rasppi_hostname">
-
-```shell
-node --version
-npm --version
-```
-
-</code-helper>
-
-Create a directory for Zigbee2MQTT and set your user as owner of it:
-
-<code-helper additionalLine="rasppi_username@rasppi_hostname">
-
-```shell
-sudo mkdir /opt/zigbee2mqtt
-sudo chown -R ${USER}: /opt/zigbee2mqtt
-```
-
-</code-helper>
-
-Clone Zigbee2MQTT repository:
-
-<code-helper additionalLine="rasppi_username@rasppi_hostname">
-
-```shell
-git clone --depth 1 --branch 1.28.2 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
-```
-
-</code-helper>
-
-Install dependencies (as user pi). Note that the npm ci could produce some warning which can be ignored.
-
-<code-helper additionalLine="rasppi_username@rasppi_hostname">
-
-```shell
-cd /opt/zigbee2mqtt
-npm ci
-```
-
-</code-helper>
 
 <robo-wiki-title :type="2" anchor="config-and-run">
 Configuration and Run

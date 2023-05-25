@@ -24,38 +24,38 @@ To solve both problems, we suggest you to try Robonomics, our **secure**, **serv
 
   <robo-wiki-grid-element-wrapper textAlign="center" :columns="4">
     <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_1.png" /> 
-      <p><a href="https://www.home-assistant.io/">Home Assistant</a> as control system software</p> 
-    </robo-wiki-grid-element>
-    <robo-wiki-grid-element>
       <robo-wiki-picture src="home-assistant/need_2.png" /> 
       <p>Raspberry Pi 4 (at least 2 GB RAM)</p>  
     </robo-wiki-grid-element>
     <robo-wiki-grid-element>
       <robo-wiki-picture src="home-assistant/need_3.png" /> 
-      <p>SD card (minimum 32 GB)</p>  
+      <p>SD card (minimum 16 GB)</p>  
     </robo-wiki-grid-element>
     <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_4.png" /> 
-      <p>SD adapter</p>
+      <robo-wiki-picture src="home-assistant/need_10.png" /> 
+      <p>Power supply for Raspberry Pi4</p>
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_7.png" /> 
+      <p>Zigbee adapter <a href="https://jethome.ru/z2/">JetHome USB JetStick Z2</a> (or one of <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html">supported</a>)</p>
     </robo-wiki-grid-element>
   </robo-wiki-grid-element-wrapper>
 
-  <robo-wiki-grid-element-wrapper :columns="2" textAlign="center">
+  <robo-wiki-grid-element-wrapper textAlign="center" :columns="4">
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_1.png" /> 
+      <p><a href="https://www.home-assistant.io/">Home Assistant</a> as control system software</p> 
+    </robo-wiki-grid-element>
     <robo-wiki-grid-element>
       <robo-wiki-picture src="home-assistant/need_5.png" />
       <p>Zigbee smart devices (any from <a href="https://slsys.io/action/supported_devices.html">supported devices</a>)</p>
     </robo-wiki-grid-element>
     <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_6.png" /> 
-      <p>Zigbee adapter <a href="https://jethome.ru/z2/">JetHome USB JetStick Z2</a> (or one of <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html">supported</a>) or 
-      <a href="https://easyeda.com/ludovich88/robonomics_sls_gateway_v01">Robonomics SLS Gateway</a></p>
-    </robo-wiki-grid-element/>
+      <robo-wiki-picture src="home-assistant/need_9.png" />
+      <p>Computer for setup</p>
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_4.png" /> 
+      <p>SD adapter (optional)</p>
+    </robo-wiki-grid-element>
   </robo-wiki-grid-element-wrapper>
-
-## How to install Home Assistant with Robonomics 
-
-* [Pre-installed image](/docs/hass-image-install/) — This method implies setting up a whole new OS on your Raspberry Pi.
-* [Home Assistant OS](/docs/hass-os-upgrade/) — The method is suitable for integrating Robonomics with an existing Home Assistant OS.
-* [Home Assistant Docker for Unix-like OS](/docs/hass-docker-upgrade/) — The method is suitable for integrating Robonomics with an existing Home Assistant Docker for Unix-like OS.
-* [Home Assistant Core](/docs/hass-core-upgrade/) — The method is suitable for integrating Robonomics with an existing Home Assistant Core.

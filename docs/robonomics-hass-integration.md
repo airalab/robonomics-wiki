@@ -21,5 +21,3 @@ tools:
 - (Optional) You can add credentials for pinning service Pinata to spread your data wider over the IPFS network.
 
 3. Press `SUBMIT` after finishing the configuration. If you filled in everything correctly, you will see the success window.
-
-Congratulations! You have fully installed and configured Home Assistant with Robonomics integration. Now go to [**"Use"**](/docs/global-administration) section to start working with your upgraded smart home.
