@@ -87,18 +87,6 @@ wget -O - https://get.hacs.xyz | bash -
 
 Now you can install Robonomics Integration using HACS.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/Qmb19UEQwwHfNroCaH8NMFhPV2dc52vSC8i4ATJsqVYiZf', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmUodGanHyTE8hCJdcCHzvdnmuyVVGvnfTuYvYTPVKhh5d', type:'mp4'}]" />
 
-1. Open HACS from a sidebar menu and go to `Integrations`. Press on three dots in the upper right corner and choose `Custom Repositories`. In the opened window paste the following link:
-
-<code-helper copy>
-
-```
-https://github.com/airalab/homeassistant-robonomics-integration
-```
-
-</code-helper>
-
-2. After that, choose `Integration` category and press `ADD`. 
-
-3. In `Custom Repositories` click on Robonomics and press the `Download` button in the lower right corner. After downloading, restart Home Assistant.
+Open HACS from the sidebar menu and navigate to `Integrations`. Click on `Explore & Download Repositories`, then search for `Robonomics` and click on the `Download` button located in the lower right corner. Once the download is complete, restart Home Assistant.
