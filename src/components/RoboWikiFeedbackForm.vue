@@ -4,7 +4,7 @@
     <div class="robo-wiki-feedback-form__header">
       <div>
         <span class="robo-wiki-feedback-form__check" v-if="$store.state.currentReaction === text">
-          <font-awesome-icon icon="fa-solid fa-check" aria-hidden="true"/>
+          <!-- <font-awesome-icon icon="fa-solid fa-check" aria-hidden="true"/> -->
         </span>
         <h3>{{ $store.state.currentReaction }}</h3>
       </div>
@@ -111,6 +111,12 @@ export default {
       this.result = 'init';
     }
 
+    document.body.addEventListener('click', (e) => {
+      if(this.$store.state.currentReaction && !e.target.closest('form')) {
+        this.$emit('closeForm');
+      }
+    })
+
   }
 
 }
@@ -119,12 +125,12 @@ export default {
 <style scoped>
 
   .robo-wiki-feedback-form__wrapper {
-    position: fixed;
-    bottom: 123px;
-    right: 20px;
-    width: 70%;
-    height: 218px;
-    padding: calc(var(--space) * 0.5) calc(var(--space) * 1);
+    position: absolute;
+    bottom: -270px;
+    right: 0;
+    width: 100%;
+    height: 244px;
+    padding: calc(var(--space) * 0.3) calc(var(--space) * 1);
     background-color:  var(--color-link-background-highlight);
     transform: translateY(-100%);
     overflow: hidden;
@@ -133,7 +139,7 @@ export default {
 
   .robo-wiki-feedback__wrapper.active .robo-wiki-feedback-form__wrapper  {
     border: 2px solid var(--link-color);
-    border-radius: 30px;
+    /* border-radius: 30px; */
     animation: moveToBottom 0.5s linear forwards;
   }
 
@@ -212,18 +218,18 @@ export default {
   }
 
   .robo-wiki-feedback-form__btn {
-    color: var(--text-color);
-    /* padding-left: 10px; */
-    width: 100%;
-    font-size: 1.5rem;
-    background: transparent;
-    border: 1px solid transparent;
-    transition: color 0.3s ease-in-out;
+    color: var(--color-light);
+    padding: calc( var(--space) * 0.3) calc( var(--space) * 0.5);
+    font-size: 1.3rem;
+    background: var(--code-text-inline);
+    border: 1px solid var(--code-text-inline);
+    border-radius: 0;
+    transition: background-color 0.3s ease-in-out;
     cursor: pointer;
   }
 
   .robo-wiki-feedback-form__btn:hover {
-    color: var(--code-text-inline);
+    background-color: var(--color-emoji-pink);
   }
 
   .robo-wiki-feedback-form__btn:focus {
@@ -288,12 +294,11 @@ export default {
     color: var(--color-testedFor-text);
   }
 
-  @media screen and (max-width: 545px) {
 
-    .robo-wiki-feedback-form__wrapper {
-      width: 90%;
-    }
-
+  body[data-theme="dark"] .robo-wiki-feedback-form__form input,
+  body[data-theme="dark"] .robo-wiki-feedback-form__form textarea {
+    color: var(--color-testedFor-text);
+    font-weight: 600;
   }
 
 </style>

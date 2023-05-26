@@ -8,7 +8,7 @@ tools:
     https://github.com/home-assistant/core
   - Docker
     https://www.docker.com/
-  - Robonomics integration 1.1.3
+  - Robonomics Home Assistant Integration 1.1.3
     https://github.com/airalab/homeassistant-robonomics-integration
   - robonomics-interface 1.3.6
     https://github.com/Multi-Agent-io/robonomics-interface/

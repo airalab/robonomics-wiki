@@ -2,25 +2,27 @@
 title: MQTT Broker for Home Assistant OS
 contributors: [LoSk-p]
 tools:
-  - Home Assistant OS 9.3
-    https://github.com/home-assistant/operating-system/releases
+  - Home Assistant OS 64-9.5 for RaspPi 
+    https://github.com/home-assistant/operating-system
+  - Mosquitto Broker Home Assistant Addon 6.1.3
+    https://github.com/home-assistant/addons/tree/master/mosquitto
 ---
 
 **This article describes how to install MQTT broker to Home Assistant OS.**
 
 <robo-wiki-picture src="home-assistant/mqtt_broker_os.png" />
 
-We will use [Mosquitto](https://mosquitto.org/) MQTT broker. In the Add-on Store find the `Mosquitto broker` add-on:
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmaoaTBu3KqwC8NKRSopmF3KQ5BYL8skEfYJjXypcJNdNL', type:'mp4'}]" />
 
-<robo-wiki-picture src="home-assistant/mosquitto-addon.jpg" />
+1. We will use [Mosquitto](https://mosquitto.org/) MQTT broker. In the Add-on Store find the `Mosquitto broker` add-on, press on it and press `INSTALL`. 
 
-Press on it and press `Install`. After installation go to `Configuration` tab and add `USERNAME` and `PASSWORD` for the broker in `Logins` section in the following format:
+2. After installation go to `Configuration` tab and add `USERNAME` and `PASSWORD` for the broker in `Logins` section in the following format:
 
 <code-helper copy additionalLine="Mosquitto Broker Options">
 
 ```
-- username: USERNAME
-  password: PASSWORD
+- username: 'USERNAME'
+  password: 'PASSWORD'
 ```
 
 </code-helper>
@@ -31,10 +33,4 @@ Press on it and press `Install`. After installation go to `Configuration` tab an
   
 </robo-wiki-note>
 
-<robo-wiki-picture src="home-assistant/mosquitto-addon-conf.jpg" />
-
-Save the configuration and go to the `Info` tab to start the add-on.
-
-<robo-wiki-picture src="home-assistant/mosquitto-addon-start.jpg" />
-
-Continue MQTT setup with the [**MQTT Integration Setup**](/docs/mqtt-integration) article.
+3. Save the configuration and go to the `Info` tab to start the add-on.

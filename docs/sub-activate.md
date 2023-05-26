@@ -2,9 +2,9 @@
 title: Subscription Activate
 contributors: [nakata5321, Fingerling42]
 tools:   
-  - Robonomics 2.6.0
+  - Robonomics 2.7.0-1
     https://github.com/airalab/robonomics
-  - Dapp Robonomics Network 
+  - Robonomics Dapp 
     https://github.com/airalab/dapp.robonomics.network
 ---
 
@@ -25,7 +25,7 @@ This feature is disabled by default on the Polkadot-JS UI. To enable it, navigat
 
 ## Create Owner and Controller Accounts
 
-<robo-wiki-video controls local src="create-acc.mp4" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
 
 1. Go to [Robonomics Parachain app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) on Polkadot / Substrate Portal. **Check the top left corner to ensure that you are connected to Robonomics Parachain.**
 
@@ -49,7 +49,7 @@ For convenience, you should use the [Polkadot.js extension](https://polkadot.js.
 
 You can get these files again by creating a backup file of the account. Press on three dots on your account, choose `Create a backup file for this account` and type in your password.
 
-<robo-wiki-video controls local src="add-ext.mp4" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
 
 1. Open an extension and press `+` button on the top right, then choose `Restore account from backup JSON file`.
 
@@ -59,7 +59,7 @@ You can get these files again by creating a backup file of the account. Press on
 
 4. Confirm the metadata update in the popup. Now the extension will show the label of the network for which the address is used.
 
-<robo-wiki-video controls local src="metadata.mp4" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
 
 ## Activate Robonomics Subscription 
 
@@ -69,7 +69,7 @@ For this step, you must have a sufficient amount of XRT tokens (minimum 2-3 XRTs
 
 </robo-wiki-note>
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/buy-sub.mp4" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
 
 1. Go to Robonomics dapp to the [subscription page](https://dapp.robonomics.network/#/subscription) and press connect account on the right sidebar.
 
@@ -84,7 +84,7 @@ For this step, you must have a sufficient amount of XRT tokens (minimum 2-3 XRTs
 
 Now you need to add a `sub_controller` account to the **access list**. 
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/add-accs.mp4" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
 
 1. Open extension and click on the icon near the account name. It will copy the account address.
 
@@ -94,5 +94,3 @@ Now you need to add a `sub_controller` account to the **access list**.
 3. Repeat steps 1 and 2 for `sub_owner` account.
 
 3. Press `Save`. Enter your `sub_owner` password in the popup window and wait until the activation process is completed.
-
-After that, go to the article ["Robonomics Integration Setup"](/docs/robonomics-hass-integration/) article.
