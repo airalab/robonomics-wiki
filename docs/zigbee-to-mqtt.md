@@ -1,5 +1,5 @@
 ---
-title: Zigbee Adapter with Zigbee2MQTT for Pre-installed Image or Home Assistant Docker or Core
+title: Zigbee Adapter with Zigbee2MQTT for Home Assistant Docker or Core
 
 contributors: [nakata5321, PaTara43]
 tools:
