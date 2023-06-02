@@ -71,7 +71,7 @@ In settings:
 - Set username and password (save default username "pi" to be easy to remember),  
 - provide your Wi-Fi name and password, 
 - choose your country from drop-down list
-and then `Write!` image. 
+and then `Write` image. 
                    
 <robo-wiki-note type="note">Save Username and Password carefully, because these credentials will be needed in case of Troubleshooting</robo-wiki-note>
                         

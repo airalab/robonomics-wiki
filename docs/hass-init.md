@@ -27,4 +27,4 @@ You are starting with the creation of the owner account of Home Assistant. This 
 
 ## Troubleshooting
 
-1. If you forget your login or password for local user, [check this article](https://www.home-assistant.io/docs/locked_out/) to restore your credentials. If you forget a password to Home Assistant from your Robonomics account, [check the Dapp.](https://dapp.robonomics.network/#/home-assistant)
+1. If you forget your login or password for local user, [check this article](https://www.home-assistant.io/docs/locked_out/) to restore your credentials.

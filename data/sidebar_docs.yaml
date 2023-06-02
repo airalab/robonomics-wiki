@@ -33,7 +33,7 @@
         - title_en: Robonomics Installation
           link: /docs/hass-docker-upgrade
         - title_en: MQTT Broker
-          link: /docs/mqtt-image-docker-core
+          link: /docs/mqtt-docker-core
         - title_en: MQTT Integration Setup
           link: /docs/mqtt-integration
         - title_en: Zigbee2MQTT Adapter
@@ -47,7 +47,7 @@
         - title_en: Robonomics Installation
           link: /docs/hass-core-upgrade
         - title_en: MQTT Broker
-          link: /docs/mqtt-image-docker-core
+          link: /docs/mqtt-docker-core
         - title_en: MQTT Integration Setup
           link: /docs/mqtt-integration
         - title_en: Zigbee2MQTT Adapter
