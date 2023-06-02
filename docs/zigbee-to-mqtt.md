@@ -1,5 +1,5 @@
 ---
-title: Zigbee Adapter with Zigbee2MQTT for Pre-installed Image or Home Assistant Docker or Core
+title: Zigbee Adapter with Zigbee2MQTT for Home Assistant Docker or Core
 
 contributors: [nakata5321, PaTara43]
 tools:
@@ -270,11 +270,12 @@ If you don't know your username, use `whoami` command.
 
 </robo-wiki-note>
 
-Save file and verify that the configuration works:
+Save file. Start and verify that the configuration works:
 
 <code-helper additionalLine="rasppi_username@rasppi_hostname">
 
 ```shell
+sudo systemctl enable zigbee2mqtt.service
 sudo systemctl start zigbee2mqtt
 systemctl status zigbee2mqtt.service
 ```
@@ -305,15 +306,6 @@ Jun 07 20:27:25 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Start
 
 </code-helper>
 
-Enable the service to start Zigbee2MQTT automatically on boot:
-
-<code-helper additionalLine="rasppi_username@rasppi_hostname">
-
-```shell
-sudo systemctl enable zigbee2mqtt.service
-```
-
-</code-helper>
 
 ## Related videos
 

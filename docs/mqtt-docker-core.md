@@ -1,5 +1,5 @@
 ---
-title: MQTT Broker for Pre-installed Image or Home Assistant Docker or Core
+title: MQTT Broker for Home Assistant Docker or Core
 contributors: [nakata5321, PaTara43]
 tools:
   - Mosquitto Broker 2.0.15

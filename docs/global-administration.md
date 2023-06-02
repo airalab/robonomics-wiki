@@ -35,3 +35,8 @@ You cannot use previously created accounts because `SUB_OWNER` and `SUB_CONTROLL
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
 
 Now you can use the dapp to control your home through Robonomics, check [**"Get Smart Home Telemetry"**](/docs/smart-home-telemetry/) article.
+
+## Troubleshooting
+
+1. If you forget a password to Home Assistant from your Robonomics account, [check the Dapp.](https://dapp.robonomics.network/#/home-assistant) 
+Go to "Your Home Assistant password" part and choose "Restore" tab.
