@@ -464,3 +464,21 @@ If you need to edit sidebar navigation of Robonomics Wiki, please, follow these 
 * Decide where to place your doc
 
 * Use valid YAML for `/data/sidebar_docs.yaml` and rely on the existing file structure
+
+## How to add custom navigation for docs 
+
+* Edit file `/data/sidebar_docs.yaml`.
+
+* Find the right doc and add parameters `prev` and `next` like this: 
+
+```
+    - title_en: How to Edit Wiki
+      link: /docs/edit-wiki
+      prev: 
+        - title: title of the previous page
+          link: /docs/prev_page_url
+      next: 
+        - title: title of the next page
+          link: /docs/next_page_url
+
+```
