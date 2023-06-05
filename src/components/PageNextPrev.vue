@@ -2,8 +2,8 @@
 
     <section class="pageNextPrev">
 
-      <Button v-if="pagePrev" :label="'← ' + pagePrev.title_en" :link="pagePrev.link" additionalText="previous" type="secondary"/>
-      <Button class="second" v-if="pageNext" :label="pageNext.title_en + ' →'" :link="pageNext.link" additionalText="next" type="secondary"/>
+      <Button v-if="pagePrev" :label="'← ' + (itemsList[current].prev ? itemsList[current].prev[0].title : pagePrev.title_en)" :link=" itemsList[current].prev ? itemsList[current].prev[0].link : pagePrev.link" additionalText="previous" type="secondary"/>
+      <Button class="second" v-if="pageNext" :label="(itemsList[this.current].next ? itemsList[this.current].next[0].title : pageNext.title_en) + ' →'" :link="itemsList[this.current].next ? itemsList[this.current].next[0].link : pageNext.link" additionalText="next" type="secondary"/>
 
     </section>
 
@@ -93,7 +93,6 @@ export default {
       }
     },
   }
-
 }
 
 </script>
