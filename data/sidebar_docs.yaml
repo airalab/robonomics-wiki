@@ -105,6 +105,8 @@
       link: /docs/edit-wiki
     - title_en: How to Contribute
       link: /docs/contributing
+    - title_en: How to Connect SDS011 Sensor
+      link: /docs/sds-sensor-connect
 
 
 #- title_en: Use
