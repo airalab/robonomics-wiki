@@ -12,6 +12,7 @@ contributors: [tubleronchik]
 <robo-wiki-note type="okay" title="INFO">
 The sensor can only be connected to a 2.4GHz Wi-Fi network. 
 </robo-wiki-note> 
+<robo-wiki-picture src="sds-sensor-wifi.png"/>
 4. Write the coordinates of the place, where the sensor will be installed. You can obtain them from any maps or obtain it from the address using [this link.](https://www.latlong.net/convert-address-to-lat-long.html)
 <robo-wiki-note type="warning" title="WARNING">
 The sensor coordinates will then be displayed on a publicly available map. If you do not want to show your private information, write close, but not exact coordinates.

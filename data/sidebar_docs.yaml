@@ -99,14 +99,15 @@
       link: /docs/how-to-launch-the-robonomics-collator
     - title_en: How to Update Collator Node Version
       link: /docs/how-to-update-collator-node-version
+    - title_en: How to Connect SDS011 Sensor
+      link: /docs/sds-sensor-connect
     #- title_en: Configure Metrics With Prometheus And Grafana
     #  link: /docs/robonomics-prometheus-grafana
     - title_en: How to Edit Wiki
       link: /docs/edit-wiki
     - title_en: How to Contribute
       link: /docs/contributing
-    - title_en: How to Connect SDS011 Sensor
-      link: /docs/sds-sensor-connect
+
 
 
 #- title_en: Use
