@@ -482,3 +482,11 @@ If you need to edit sidebar navigation of Robonomics Wiki, please, follow these 
           link: /docs/next_page_url
 
 ```
+
+* If you want to remove navigation completely than add `withoutNav` parameter:
+
+```
+    - title_en: How to Edit Wiki
+      link: /docs/edit-wiki
+      withoutNav: true
+```
