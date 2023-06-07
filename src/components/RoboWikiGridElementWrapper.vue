@@ -40,6 +40,11 @@ export default {
       validator: function (value) {
         return ['left', 'center', 'right'].indexOf(value) !== -1;
       }
+    },
+
+    flexible: {
+      type: Boolean,
+      default: true
     }
   },
 
@@ -50,7 +55,8 @@ export default {
         [`grid-${this.columns}`]: true,
         [`grid-align-${this.align}`]: this.align ? true : false,
         [`grid-justify-${this.justify}`]: this.justify ? true : false,
-        [`grid-text-${this.textAlign}`]: this.textAlign ? true : false
+        [`grid-text-${this.textAlign}`]: this.textAlign ? true : false,
+        [`grid-flexible`]: this.flexible,
       };
     },
   },
@@ -61,9 +67,8 @@ export default {
   .robo-wiki-grid-container {
     display: grid;
     grid-template-rows: 1fr min-content ;
-    gap: 1rem;
-    align-items: center;
-    margin-bottom: var(--space);
+    gap: calc(var(--space) * 0.5);
+    align-items: start;
   }
 
   .robo-wiki-grid-container.grid-1 {
@@ -71,11 +76,13 @@ export default {
   }
 
   .robo-wiki-grid-container.grid-2 {
-    grid-template-columns: repeat(auto-fill, minmax(calc(var(--content-width) / 2 - var(--grid-space)), 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(calc(var(--content-width) / 2 - var(--grid-space)), 1fr)); */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .robo-wiki-grid-container.grid-3 {
-    grid-template-columns: repeat(auto-fill, minmax(calc(var(--content-width) / 3 - var(--grid-space)), 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(calc(var(--content-width) / 3 - var(--grid-space)), 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .robo-wiki-grid-container.grid-4 {
@@ -128,7 +135,7 @@ export default {
 
   @media screen and (max-width: 1080px) {
     
-    .robo-wiki-grid-container.grid-2 {
+    .robo-wiki-grid-container.grid-2.grid-flexible {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -136,11 +143,11 @@ export default {
 
   @media screen and (max-width: 520px) {
 
-    .robo-wiki-grid-container.grid-2 {
+    .robo-wiki-grid-container.grid-2.grid-flexible {
       grid-template-columns: 1fr
     }
 
-    .robo-wiki-grid-container.grid-3 {
+    .robo-wiki-grid-container.grid-3.grid-flexible {
       grid-template-columns: 1fr
     }
   }

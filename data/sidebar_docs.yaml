@@ -2,6 +2,7 @@
   items:
     - title_en: Overview
       link: /docs/robonomics-smart-home-overview
+      withoutNav: true
     - title_en: Pre-installed Image For Raspberry Pi
       items:
         - title_en: Installation

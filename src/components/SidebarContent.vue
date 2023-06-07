@@ -1,27 +1,14 @@
 <template>
-<!-- 
-	<ul v-if="subtitles.length" class="menu">
-		<li :class="'menu__item-depth-' + subtitle.depth" v-for="subtitle in subtitles" :key="subtitle.value">
-			<a class="menu__item menu-link" :href="subtitle.anchor">
-				{{ subtitle.value }}
-			</a>
+	<ul v-if="allSubtitles.length" class="menu">
+		<li @click="(e) => deactivateButtons(e, subtitle)" :class="'menu__item-depth-' + subtitle.depth" v-for="subtitle in allSubtitles" :key="subtitle.id">
+		<a 
+					:class="['menu__item', ' menu-link', {active: manualHush === subtitle.anchor }]" 
+					:href="subtitle.anchor"
+				>
+			{{ subtitle.value }}
+		</a>
 		</li>
-	</ul> -->
-
-	<!-- <details v-if="subtitles.length > 0 && subtitles[0].depth !== 4" open>
-		<summary>{{$st('In this article', $store.state.locale)}}</summary> -->
-
-		<ul v-if="allSubtitles.length" class="menu">
-	      <li @click="(e) => deactivateButtons(e, subtitle)" :class="'menu__item-depth-' + subtitle.depth" v-for="subtitle in allSubtitles" :key="subtitle.id">
-	        <a 
-						:class="['menu__item', ' menu-link', {active: manualHush === subtitle.anchor }]" 
-						:href="subtitle.anchor"
-					>
-	          {{ subtitle.value }}
-	        </a>
-	      </li>
-		</ul>
-	<!-- </details> -->
+	</ul>
 </template>
 
 <script>
@@ -207,13 +194,17 @@
 </script>
 
 <style scoped>
-.menu a {
-	font-weight: 600;
-}
+	.menu:not(:first-child) {
+		margin-top: var(--space)
+	}
 
-.menu-link.active {
-	padding: 2px 5px;
-	background-color: var(--code-bg-inline);
-	border-radius: 5px;
-}
+	.menu li {
+		padding: 0;
+	}
+
+	.menu a {
+		display: block;
+		padding: 5px 0;
+		font-weight: 600;
+	}
 </style>

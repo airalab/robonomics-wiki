@@ -30,10 +30,6 @@
 import redirects from '../../data/redirects_docs.yaml'
 export default {
 
-  components: {
-    Button: () => import('~/components/Button.vue'),
-  },
-
   data() {
     return {
       redirectLink: null

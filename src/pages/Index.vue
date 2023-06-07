@@ -135,7 +135,6 @@
 <script>
 export default {
   components: {
-      Button: () => import('~/components/Button.vue'),
       GridLinks: () => import('~/components/GridLinks.vue'),
   },
 

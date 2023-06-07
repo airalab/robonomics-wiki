@@ -56,7 +56,7 @@
 
           <SidebarContent />
           
-          <Button label="Create an issue" :link="`https://github.com/airalab/robonomics-wiki/issues/new?${ghIssueTitle}`" size="small" />
+          <robo-wiki-button label="Create an issue" :link="`https://github.com/airalab/robonomics-wiki/issues/new?${ghIssueTitle}`" size="small" />
         </div>
       </template>
       
@@ -392,7 +392,6 @@ export default {
     Banner: () => import("~/components/Banner.vue"),
     NavIcon: () => import("~/components/NavIcon.vue"),
     PageNextPrev: () => import("~/components/PageNextPrev.vue"),
-    Button: () => import("~/components/Button.vue"),
     Icon: () => import("~/components/Icon.vue")
   },
 

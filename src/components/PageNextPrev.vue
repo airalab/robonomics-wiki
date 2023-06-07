@@ -2,8 +2,8 @@
 
     <section class="pageNextPrev">
 
-      <Button v-if="pagePrev && !itemsList[current].withoutNav" :label="'← ' + (itemsList[current].prev ? itemsList[current].prev[0].title : pagePrev.title_en)" :link=" itemsList[current].prev ? itemsList[current].prev[0].link : pagePrev.link" additionalText="previous" type="secondary"/>
-      <Button class="second" v-if="pageNext && !itemsList[current].withoutNav" :label="(itemsList[this.current].next ? itemsList[this.current].next[0].title : pageNext.title_en) + ' →'" :link="itemsList[this.current].next ? itemsList[this.current].next[0].link : pageNext.link" additionalText="next" type="secondary"/>
+      <robo-wiki-button v-if="pagePrev && !itemsList[current].withoutNav" :label="'← ' + (itemsList[current].prev ? itemsList[current].prev[0].title : pagePrev.title_en)" :link=" itemsList[current].prev ? itemsList[current].prev[0].link : pagePrev.link" additionalText="previous" type="secondary"/>
+      <robo-wiki-button class="second" v-if="pageNext && !itemsList[current].withoutNav" :label="(itemsList[this.current].next ? itemsList[this.current].next[0].title : pageNext.title_en) + ' →'" :link="itemsList[this.current].next ? itemsList[this.current].next[0].link : pageNext.link" additionalText="next" type="secondary"/>
 
     </section>
 
@@ -59,10 +59,6 @@ export default {
   props: {
     current: null,
     itemsList: null
-  },
-
-  components: {
-    Button: () => import('~/components/Button.vue'),
   },
 
   computed: {
