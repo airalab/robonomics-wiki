@@ -482,7 +482,7 @@ If you need to edit sidebar navigation of Robonomics Wiki, please, follow these 
 
 MAKE SURE TO ADD `topic` PARAMETER LIKE THIS: 
 
-(for navigation to work properly)
+(for navigation to work properly) 
 
 ```
     - title_en: Upgrade Home Assistant OS
