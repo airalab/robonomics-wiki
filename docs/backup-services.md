@@ -36,7 +36,7 @@ Service arguments:
 
 ## Restoring Home Assistant Configuration from Backup
 
-In order to restore your configuration, you will need installed Home Assistant and Robonomics Integration. 
+In order to restore your configuration, you will need an installed Home Assistant and Robonomics Integration. 
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
