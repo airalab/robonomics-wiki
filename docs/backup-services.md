@@ -16,7 +16,7 @@ Creating a backup allows you to easily restore your Home Assistant configuration
 
 <robo-wiki-note type="warning" title="WARNING">
 
-In order to restore your configuration, it is necessary to use a **custom IPFS gateway** such as Pinata. Without it, your backup will be stored solely on your local IPFS node, which may prevent you from restoring your Home Assistant configuration in the event of a local node failure.
+In order to backup and restore your configuration, it is necessary to use a **custom IPFS gateway** such as Pinata. Without it, your backup will be stored solely on your local IPFS node, which may prevent you from restoring your Home Assistant configuration in the event of a local node failure.
 
 </robo-wiki-note>
 
@@ -40,13 +40,19 @@ In order to restore your configuration, you will need installed Home Assistant a
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
-1. Install Home Assisntant with Robonomics Integration, following the steps from the article for needed installation method.
+<robo-wiki-note type="warning" title="WARNING">
 
-2.  [Set up Robonomics Integration](https://wiki.robonomics.network/docs/robonomics-hass-integration) using **the same seeds** you used in previous Robonomics configuration. If you subscription has been finished, [reactivate it](https://wiki.robonomics.network/docs/sub-activate).
+To ensure successful restoration of your configuration in Home Assistant Core and Docker installation methods, you need to perform additional setup steps as described at the end of the page.
+
+</robo-wiki-note>
+
+1. Install Home Assisntant with Robonomics Integration (if it is not installed yet), following the steps from the article for the [desired installation method](https://wiki.robonomics.network/docs/robonomics-smart-home-overview/#start-here-your-smart-home).
+
+2.  [Set up Robonomics Integration](https://wiki.robonomics.network/docs/robonomics-hass-integration) using **the same seeds** you used in previous Robonomics configuration. If you subscription has ended, [reactivate it](https://wiki.robonomics.network/docs/sub-activate).
 
 3. In the web interface of Home Assistant go to `Developer Tools` -> `Services`. Search for `Robonomics: Restore from the Backup in Robonomics` and press `CALL SERVICE`. Navigate to the `Overview` page, to check the status of your backup, .
 
-4. After restoring, Home Assistant will automatically restart. If for some reason Home Assistant does not restart, you can check the restoration status by monitoring the state of the `robonomics.backup` entity. If the status changes to "restored," you will need to manually restart Home Assistant by navigating to `Settings` > `System` and clicking on the `RESTART` button located in the upper right corner.
+4. After restoring, Home Assistant will automatically restart. If for some reason Home Assistant does not restart, you can check the restoration status by monitoring the state of the `robonomics.backup` entity. If the status is `restored` you will need to manually restart Home Assistant by navigating to `Settings` > `System` and clicking on the `RESTART` button located in the upper right corner.
 
 5. If your backup includes the Zigbee2MQTT or Mosquitto configuration, you need to restart these services to enable the new configuration. You can do this manually by restarting the services individually, or you can simply restart the Home Assistant computer to ensure all services are restarted.
 
@@ -73,11 +79,29 @@ docker run -d \
   --privileged \
   --restart=unless-stopped \
   -e TZ=MY_TIME_ZONE \
-  -v HA_CONFIG_PATH:/config \
+  -v /PATH_TO_YOUR_CONFIG:/config \
   -v /etc/mosquitto:/etc/mosquitto \
   -v /etc/mosquitto:/opt/zigbee2mqtt \
   --network=host \
   ghcr.io/home-assistant/home-assistant:stable
+```
+
+or make changes in your `compose.yaml` file:
+
+```yaml
+version: '3'
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    volumes:
+      - /PATH_TO_YOUR_CONFIG:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/mosquitto:/etc/mosquitto
+      - /etc/mosquitto:/opt/zigbee2mqtt
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
 ```
 <robo-wiki-note type="note" title="Note">
 
