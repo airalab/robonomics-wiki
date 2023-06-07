@@ -61,20 +61,21 @@ export default {
   },
 
     watch: {
-    "$route.path": function(current, old) {
+    "$route": function(current, old) {
       this.breadcrumbs = [];
       this.urlPath = '/' + this.$route.path.split('/')[1] + '/' + this.$route.path.split('/')[2];
-      this.getParentItem(this.items, this.urlPath);
+      this.getParentItem(this.items, this.urlPath, this.$route.query.topic);
     },
   },
 
   methods: {
-    getParentItem(root, link) {
+    getParentItem(root, link, topic) {
       let node = null;
       let t = null;
       for (let i = 0; i < root.length; i++) {
           node = root[i];
-          if (node.link === link || node.link === link + '/' || node.items && (t = this.getParentItem(node.items, link))) {
+          if (node.link === link && !node.topic || node.link === link + '/' && !node.topic || (node.topic && node.topic == topic && node.link.split('?')[0] == link) || node.items && (t = this.getParentItem(node.items, link, topic))) {
+            let tempTopic = node.topic && node.topic === topic ? node.topic : null;
             const link = node.link ? node.link : null;
             const breadcrumb = {
               id: Math.floor(Math.random() * 1000000),
@@ -82,7 +83,15 @@ export default {
               link,
               title_en: node[`title_en`],
             }
-            this.breadcrumbs.unshift(breadcrumb);
+            if(this.breadcrumbs.length && tempTopic) {
+              this.breadcrumb.forEach(it => {
+                it.title === tempTopic
+                this.breadcrumbs.unshift(breadcrumb);
+                tempTopic = null
+              })
+            } else {
+              this.breadcrumbs.unshift(breadcrumb);
+            }
             return node;
           }
       }
@@ -96,7 +105,8 @@ export default {
 
   mounted() {
     this.urlPath = '/' + this.$route.path.split('/')[1] + '/' + this.$route.path.split('/')[2];
-    this.getParentItem(this.items, this.urlPath);
+
+    this.getParentItem(this.items, this.urlPath, this.$route.query.topic);
   }
 
 }

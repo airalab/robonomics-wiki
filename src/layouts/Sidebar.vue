@@ -134,7 +134,6 @@ export default {
       Banner: () => import("~/components/Banner.vue"),
       SidebarItems: () => import("~/components/Sidebar.vue"),
       NavIcon: () => import('~/components/NavIcon.vue'),
-      Button: () => import('~/components/Button.vue'),
       Header: () => import('~/components/Header.vue'),
       Footer: () => import('~/components/Footer.vue'),
       Support: () => import('~/components/Support.vue'),

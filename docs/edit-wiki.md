@@ -465,6 +465,39 @@ If you need to edit sidebar navigation of Robonomics Wiki, please, follow these 
 
 * Use valid YAML for `/data/sidebar_docs.yaml` and rely on the existing file structure
 
+* **IMPORTANT NOTE:** if you're using the same doc in different sections/subsections e.g: 
+
+```
+
+    - title_en: Upgrade Home Assistant OS
+      items:
+        - title_en: Buying a Subscription
+          link: /docs/sub-activate
+    - title_en: Pre-installed Image For Raspberry Pi
+      items:
+        - title_en: Buying a Subscription
+          link: /docs/sub-activate
+
+```
+
+MAKE SURE TO ADD `topic` PARAMETER LIKE THIS: 
+
+(for navigation to work properly)
+
+```
+    - title_en: Upgrade Home Assistant OS
+      items:
+        - title_en: Buying a Subscription
+          link: /docs/sub-activate
+          topic: Upgrade Home Assistant OS
+    - title_en: Pre-installed Image For Raspberry Pi
+      items:
+        - title_en: Buying a Subscription
+          link: /docs/sub-activate
+          topic: Pre-installed Image For Raspberry Pi
+
+```
+
 ## How to add custom navigation for docs 
 
 * Edit file `/data/sidebar_docs.yaml`.
@@ -489,4 +522,20 @@ If you need to edit sidebar navigation of Robonomics Wiki, please, follow these 
     - title_en: How to Edit Wiki
       link: /docs/edit-wiki
       withoutNav: true
+```
+
+* If you want to remove just `previous page` or `next page` navigation than add `withoutPrev` or `withoutNext` parameter:
+
+```
+- title_en: How to Edit Wiki
+link: /docs/edit-wiki
+withoutPrev: true
+```
+
+or
+
+```
+- title_en: How to Edit Wiki
+link: /docs/edit-wiki
+withoutNext: true
 ```
