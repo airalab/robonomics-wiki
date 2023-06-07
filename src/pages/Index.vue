@@ -111,11 +111,7 @@
     }
 
     @media screen and (max-width: 620px) {
-
-      .intro-wrapper {
-        /* min-height: 450px; */
-      }
-
+ 
       .intro-img   {
         width: unset;
         /* left: 0;
@@ -135,7 +131,6 @@
 <script>
 export default {
   components: {
-      Button: () => import('~/components/Button.vue'),
       GridLinks: () => import('~/components/GridLinks.vue'),
   },
 

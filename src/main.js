@@ -16,6 +16,7 @@ import '~/assets/style/variables.css'
 
 import DefaultLayout from '~/layouts/Default.vue'
 import SidebarLayout from '~/layouts/Sidebar.vue'
+import RoboWikiButton from '~/components/RoboWikiButton.vue';
 import RoboWikiNote from '~/components/RoboWikiNote.vue';
 import RoboWikiPicture from '~/components/RoboWikiPicture.vue';
 import RoboWikiVideo from '~/components/RoboWikiVideo.vue';
@@ -49,6 +50,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   Vue.component('Layout', DefaultLayout)
   Vue.component('Sidebar', SidebarLayout)
+  Vue.component('RoboWikiButton', RoboWikiButton)
   Vue.component('RoboWikiNote', RoboWikiNote)
   Vue.component('RoboWikiPicture', RoboWikiPicture)
   Vue.component('RoboWikiVideo', RoboWikiVideo)

@@ -16,50 +16,58 @@ tools:
     https://github.com/yggdrasil-network/yggdrasil-go/
 ---
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]" />
-
 **Welcome to the guide on installing Home Assistant with Robonomics integration on a Raspberry Pi. Home Assistant is an open-source home automation system that provides a centralized hub for controlling smart devices in your home network. By integrating with Robonomics, a decentralized cloud service, you can enhance the functionality and security of your smart home. In this article, we will provide step-by-step instructions on how to install Home Assistant with Robonomics on a Raspberry Pi, giving you the ability to automate and control various aspects of your home using a secure and decentralized solution. Let's get started!**
 
-<robo-wiki-picture src="home-assistant/pre_installed_image.png" />
+## Hardware you need for installation
 
-Robonomics Pre-installed Image contains:
+If you haven't already incorporated Home Assistant into your smart home setup, it's important to be aware of the equipment you'll need to establish a complete smart home system from the ground up.
+
+  <robo-wiki-grid-element-wrapper textAlign="center" :columns="3" flexible>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_2.png" /> 
+      <b>Raspberry Pi 4 (at least 2 GB RAM)</b>
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_3.png" /> 
+      <b>SD card 16Gb+</b>
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_7.png" /> 
+      <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html" target="_blank"><b>Zigbee adapter</b></a>
+    </robo-wiki-grid-element>
+  </robo-wiki-grid-element-wrapper>
+
+  <robo-wiki-grid-element-wrapper textAlign="center" :columns="2">
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_5.png" />
+      <a href="https://slsys.io/action/supported_devices.html" target="_blank"><b>Zigbee smart devices</b></a>
+    </robo-wiki-grid-element>
+    <robo-wiki-grid-element>
+      <robo-wiki-picture src="home-assistant/need_9.png" />
+      <b>Desktop for setup</b>
+    </robo-wiki-grid-element>
+  </robo-wiki-grid-element-wrapper>
+
+
+## 1. Download Robonomics pre-installed image
+
+Robonomics pre-installed image contains:
 - Home Assistant Core
 - IPFS
 - MQTT Broker and Integration
 - Zigbee2MQTT
 - Robonomics Integration
 
-## 1. Downloading the Image
+<robo-wiki-button label="Download image (~528 Mb)" link="https://crustipfs.info/ipfs/QmS2Zw3F1x8UiSc15HgWDG9PC5wA4ox8DEmHTgCGmrzLDx" />
 
-To simplify the installation process, a pre-made image can be used. It contains Home Assistant Core with Robonomics integration and IPFS. Options for downloading:
+<robo-wiki-note type="warning" title="For advanced users">
 
-### Option 1: GitHub Release
+You can check source code and download latest release of image on [GitHub](https://github.com/airalab/Robonomics-HomeAssistant-image/releases)
 
-Download image-robonomics_homeassistant.img.xz with current update date from the latest [GitHub releases.](https://github.com/airalab/Robonomics-HomeAssistant-image/releases)
-
-### Option 2: IPFS get
-
-Alternatively, you can download it using IPFS. [Install IPFS](https://docs.ipfs.tech/install/command-line/), initialize and start the daemon:
-
-<code-helper additionalLine="your_username@your_hostname">
-
-```shell
-ipfs init
-ipfs daemon
-```
-</code-helper>
-
-Open the new terminal and download the image:
-
-<code-helper additionalLine="your_username@your_hostname">
-
-```shell
-ipfs get QmS2Zw3F1x8UiSc15HgWDG9PC5wA4ox8DEmHTgCGmrzLDx -o rpi.img.xz
-```
-</code-helper>
+</robo-wiki-note>
 
 
-## 2. Configuring the Image
+## 2. Configure the Image
 
 Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on your computer. Then, insert the SD card.
 
@@ -75,7 +83,7 @@ and then `Write` image.
                    
 <robo-wiki-note type="note">Save Username and Password carefully, because these credentials will be needed in case of Troubleshooting</robo-wiki-note>
                         
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmSZM7uVizqQjLnKJy2kifs9uDZB91MgALDBARenkzU3mb', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSZM7uVizqQjLnKJy2kifs9uDZB91MgALDBARenkzU3mb', type:'mp4'}]" />
 
 You can find country codes [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
 
@@ -102,6 +110,8 @@ In this example the address is `192.168.43.56`.
 
 To check that everything is working, open web browser and go to web page `http://%RASPBERRY_IP_ADDRESS%:8123`. In this example, it will be `192.168.43.56:8123`.
 If everything is fine, you will see Home Assistant web interface. If webpage doesn't open, wait up to 5 minutes for the Raspberry Pi to boot up and try again. 
+
+<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]" />
 
 
 ## Troubleshooting

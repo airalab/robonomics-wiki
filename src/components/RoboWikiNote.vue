@@ -1,5 +1,5 @@
 <template>
-  <div @click="$emit('click')">
+  <div @click="$emit('click')" class="robo-wiki-note-wrap">
 
     <div v-if="(title || this.$slots.default) && type !== 'warning'" :class="classList">
       <div v-if="title" class="robo-wiki-note__title">{{title}}</div>
@@ -67,7 +67,7 @@ export default {
     color: var(--type-color-text);
   }
 
-  .robo-wiki-note:not(:last-child) {
+  .robo-wiki-note-wrap:not(:last-child) {
     margin-bottom: var(--space-text);
   }
 

@@ -12,7 +12,7 @@ tools:
 
 Creating a backup allows you to easily restore your Home Assistant configuration in the event of a failure.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmVo91dLaAYgFDM1vrL2PYfAffM6SGGC59ZERbfHR44tqW', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmVo91dLaAYgFDM1vrL2PYfAffM6SGGC59ZERbfHR44tqW', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="WARNING">
 In order to restore your configuration, it is necessary to use a custom IPFS gateway such as Pinata. Without it, your backup will be stored solely on your local IPFS node, which may prevent you from restoring your Home Assistant configuration in the event of a local node failure.
@@ -30,7 +30,7 @@ Service arguments:
 
 In order to restore your configuration, you will need installed Home Assistant and Robonomics Integration. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmWmnmkXUcPXsAnQzwN3UEuki2GMYnQDx3vhgjEypCU8aR', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmWmnmkXUcPXsAnQzwN3UEuki2GMYnQDx3vhgjEypCU8aR', type:'mp4'}]" />
 
 1. Install Home Assisntant with Robonomics Integration, following the steps from the article for needed installation method.
 

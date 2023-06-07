@@ -1,7 +1,8 @@
 <template >
   <figure class="robo-wiki-picture">
     <g-link 
-      :to="link ? link : picture.src" 
+      v-if="pictureLink"
+      :to="pictureLink" 
       class="robo-wiki-picture__link"
       target="_blank"
     >
@@ -15,6 +16,16 @@
       <img v-if="isGif() && type === 'markdown'" v-bind="$attrs" :src="pictureSrc && pictureSrc.src" />
 
     </g-link>
+    <template v-else>
+      <g-image 
+        v-if="!isGif() && type === 'markdown'" 
+        ref="image" 
+        v-bind="$attrs"
+        :src="picture" 
+      />
+
+      <img v-if="isGif() && type === 'markdown'" v-bind="$attrs" :src="pictureSrc && pictureSrc.src" />
+    </template>
     <figcaption v-if="caption" class="robo-wiki-picture__text">{{caption}}</figcaption>
   </figure>
 </template>
@@ -42,6 +53,10 @@ export default {
     type: {
       type: String,
       default: 'markdown'
+    },
+    zoom: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -68,6 +83,18 @@ export default {
         return this.picture
       }
     },
+
+    pictureLink() {
+      if(this.link) {
+        return this.link
+      } else {
+        if(this.zoom) {
+          return this.picture.src
+        } else {
+          return null
+        }
+      }
+    }
   },
 
   watch: {

@@ -421,7 +421,7 @@ It is recommended to insert videos with built-in tag `<robo-wiki-video>`, howeve
 You need to specify format of video
 
 ```c
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}, {src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}, {src: 'https://cloudflare-ipfs.com/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}]" />
 ```
 
 #### Local
@@ -464,3 +464,29 @@ If you need to edit sidebar navigation of Robonomics Wiki, please, follow these 
 * Decide where to place your doc
 
 * Use valid YAML for `/data/sidebar_docs.yaml` and rely on the existing file structure
+
+## How to add custom navigation for docs 
+
+* Edit file `/data/sidebar_docs.yaml`.
+
+* Find the right doc and add parameters `prev` and `next` like this: 
+
+```
+    - title_en: How to Edit Wiki
+      link: /docs/edit-wiki
+      prev: 
+        - title: title of the previous page
+          link: /docs/prev_page_url
+      next: 
+        - title: title of the next page
+          link: /docs/next_page_url
+
+```
+
+* If you want to remove navigation completely than add `withoutNav` parameter:
+
+```
+    - title_en: How to Edit Wiki
+      link: /docs/edit-wiki
+      withoutNav: true
+```

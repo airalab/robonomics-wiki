@@ -13,7 +13,7 @@ tools:
 
 **In this article, you will use the Robonomics service, which queries the telemetry of smart home devices.**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
 
 1. Go to dapp and choose [SmartHome Telemetry](https://dapp.robonomics.network/#/smarthome-telemetry) service.
 

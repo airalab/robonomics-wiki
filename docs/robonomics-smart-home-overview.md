@@ -3,11 +3,12 @@ title: Robonomics Smart Home Overview
 
 contributors: [Fingerling42, nakata5321]
 ---
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}, {src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}]" />
 
-## Why Robonomics
+## Secure IoT with Blockchain 
 
 For your smart home, the modern IoT market provides a wide range of solutions. But you are usually tied to centralized cloud providers or expensive proprietary gateways. As a result, you as a user are always dependent on the hardware and infrastructure vendor to run your smart system. At the same time, your smart home cannot be truly smart without cloud statistics and analytics.
+
+<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]" />
 
 **We see two main problems with current smart homes:**
 
@@ -20,42 +21,21 @@ To solve both problems, we suggest you to try Robonomics, our **secure**, **serv
 
 <robo-wiki-picture src="home-assistant/ha-robonomics.png" />
 
-## What you need for installation
+## Steps to corporate-free cloud
 
-  <robo-wiki-grid-element-wrapper textAlign="center" :columns="4">
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_2.png" /> 
-      <p>Raspberry Pi 4 (at least 2 GB RAM)</p>  
-    </robo-wiki-grid-element>
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_3.png" /> 
-      <p>SD card (minimum 16 GB)</p>  
-    </robo-wiki-grid-element>
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_10.png" /> 
-      <p>Power supply for Raspberry Pi4</p>
-    </robo-wiki-grid-element>
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_7.png" /> 
-      <p>Zigbee adapter <a href="https://jethome.ru/z2/">JetHome USB JetStick Z2</a> (or one of <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html">supported</a>)</p>
-    </robo-wiki-grid-element>
-  </robo-wiki-grid-element-wrapper>
+Here are some simple steps to create an affordable smart home using Home Assistant as a device communication application and Robonomics as a corporate-free, decentralized cloud platform. Robonomics leverages modern and secure Web3 technologies, ensuring enhanced security throughout the process.
 
-  <robo-wiki-grid-element-wrapper textAlign="center" :columns="4">
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_1.png" /> 
-      <p><a href="https://www.home-assistant.io/">Home Assistant</a> as control system software</p> 
-    </robo-wiki-grid-element>
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_5.png" />
-      <p>Zigbee smart devices (any from <a href="https://slsys.io/action/supported_devices.html">supported devices</a>)</p>
-    </robo-wiki-grid-element>
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_9.png" />
-      <p>Computer for setup</p>
-    </robo-wiki-grid-element>
-    <robo-wiki-grid-element>
-      <robo-wiki-picture src="home-assistant/need_4.png" /> 
-      <p>SD adapter (optional)</p>
-    </robo-wiki-grid-element>
-  </robo-wiki-grid-element-wrapper>
+<robo-wiki-picture src="home-assistant/robonomics-secure-blockchain-smart-home_3.png" />
+
+## Start here your smart home
+
+We have prepared detailed guides on setting up a smart home on Robonomics. The steps may vary depending on your specific situation: whether you already have an operational Home Assistant with paired devices, or if you are starting from scratch to establish your smart home.
+
+<robo-wiki-grid-element-wrapper textAlign="center" :columns="2" flexible>
+  <robo-wiki-grid-element>
+    <robo-wiki-button link="/docs/hass-os-upgrade" label="For Home Assistant users" block />
+  </robo-wiki-grid-element>
+  <robo-wiki-grid-element>
+    <robo-wiki-button link="/docs/hass-image-install" label="For new users" block />
+  </robo-wiki-grid-element>
+</robo-wiki-grid-element-wrapper>
