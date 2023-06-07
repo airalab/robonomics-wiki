@@ -11,50 +11,41 @@
           link: /docs/hass-init
         - title_en: Zigbee2MQTT Adapter
           link: /docs/zigbee-to-mqtt-image
-        - title_en: Subscription Activate
+        - title_en: Buying a Subscription
           link: /docs/sub-activate
         - title_en: Robonomics Integration Setup
           link: /docs/robonomics-hass-integration
+          next:
+            - title: Global Administration
+              link: /docs/global-administration
     - title_en: Upgrade Home Assistant OS
       items:
+        - title_en: Buying a Subscription
+          link: /docs/sub-activate
         - title_en: Robonomics Installation
           link: /docs/hass-os-upgrade
-        - title_en: MQTT Broker
-          link: /docs/mqtt-hassos
-        - title_en: MQTT Integration Setup
-          link: /docs/mqtt-integration
-        - title_en: Zigbee2MQTT Adapter
-          link: /docs/zigbee-to-mqtt-hassos
-        - title_en: Subscription Activate
-          link: /docs/sub-activate
         - title_en: Robonomics Integration Setup
           link: /docs/robonomics-hass-integration
+          next:
+            - title: Global Administration
+              link: /docs/global-administration
     - title_en: Upgrade Home Assistant Docker for Unix-like OS
       items: 
+        - title_en: Buying a Subscription
+          link: /docs/sub-activate
         - title_en: Robonomics Installation
           link: /docs/hass-docker-upgrade
-        - title_en: MQTT Broker
-          link: /docs/mqtt-docker-core
-        - title_en: MQTT Integration Setup
-          link: /docs/mqtt-integration
-        - title_en: Zigbee2MQTT Adapter
-          link: /docs/zigbee-to-mqtt
-        - title_en: Subscription Activate
-          link: /docs/sub-activate
         - title_en: Robonomics Integration Setup
           link: /docs/robonomics-hass-integration
+          next:
+            - title: Global Administration
+              link: /docs/global-administration
     - title_en: Upgrade Home Assistant Core
       items: 
+        - title_en: Buying a Subscription
+          link: /docs/sub-activate
         - title_en: Robonomics Installation
           link: /docs/hass-core-upgrade
-        - title_en: MQTT Broker
-          link: /docs/mqtt-docker-core
-        - title_en: MQTT Integration Setup
-          link: /docs/mqtt-integration
-        - title_en: Zigbee2MQTT Adapter
-          link: /docs/zigbee-to-mqtt
-        - title_en: Subscription Activate
-          link: /docs/sub-activate
         - title_en: Robonomics Integration Setup
           link: /docs/robonomics-hass-integration
     - title_en: Use
@@ -109,12 +100,15 @@
       link: /docs/how-to-launch-the-robonomics-collator
     - title_en: How to Update Collator Node Version
       link: /docs/how-to-update-collator-node-version
+    - title_en: How to Connect SDS011 Sensor
+      link: /docs/sds-sensor-connect
     #- title_en: Configure Metrics With Prometheus And Grafana
     #  link: /docs/robonomics-prometheus-grafana
     - title_en: How to Edit Wiki
       link: /docs/edit-wiki
     - title_en: How to Contribute
       link: /docs/contributing
+
 
 
 #- title_en: Use
