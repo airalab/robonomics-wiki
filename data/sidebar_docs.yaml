@@ -13,8 +13,10 @@
           link: /docs/zigbee-to-mqtt-image
         - title_en: Buying a Subscription
           link: /docs/sub-activate
+          topic: Pre-installed Image For Raspberry Pi
         - title_en: Robonomics Integration Setup
           link: /docs/robonomics-hass-integration
+          topic: Pre-installed Image For Raspberry Pi
           next:
             - title: Global Administration
               link: /docs/global-administration
@@ -22,10 +24,12 @@
       items:
         - title_en: Buying a Subscription
           link: /docs/sub-activate
+          topic: Upgrade Home Assistant OS
         - title_en: Robonomics Installation
           link: /docs/hass-os-upgrade
         - title_en: Robonomics Integration Setup
           link: /docs/robonomics-hass-integration
+          topic: Upgrade Home Assistant OS
           next:
             - title: Global Administration
               link: /docs/global-administration
@@ -33,10 +37,13 @@
       items: 
         - title_en: Buying a Subscription
           link: /docs/sub-activate
+          topic: Upgrade Home Assistant Docker for Unix-like OS
         - title_en: Robonomics Installation
           link: /docs/hass-docker-upgrade
+          topic: Upgrade Home Assistant Docker for Unix-like OS
         - title_en: Robonomics Integration Setup
           link: /docs/robonomics-hass-integration
+          topic: Upgrade Home Assistant Docker for Unix-like OS
           next:
             - title: Global Administration
               link: /docs/global-administration
@@ -44,10 +51,13 @@
       items: 
         - title_en: Buying a Subscription
           link: /docs/sub-activate
+          topic: Upgrade Home Assistant Core
         - title_en: Robonomics Installation
           link: /docs/hass-core-upgrade
+          topic: Upgrade Home Assistant Core
         - title_en: Robonomics Integration Setup
           link: /docs/robonomics-hass-integration
+          topic: Upgrade Home Assistant Core
     - title_en: Use
       items:
         - title_en: Global Administration
@@ -64,9 +74,9 @@
           link: /docs/door-notification
 - title_en: Learn
   items:
-    - title_en: Introduction
-      title_ru: Введение
-      link: /docs/
+    # - title_en: Introduction
+    #   title_ru: Введение
+    #   link: /docs/
     - title_en: Glossary
       link: /docs/glossary
     - title_en: Create Account for Robonomics Parachain
@@ -91,6 +101,8 @@
       link: /docs/subscription-launch
     - title_en: Robonomics on Ethereum
       link: /docs/robonomics-ethereum
+    - title_en: 'Robonomics OpenGov'
+      link: '/docs/robonomics-opengov'
 
 - title_en: Maintain
   items:

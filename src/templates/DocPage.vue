@@ -528,7 +528,12 @@ export default {
 
     currentIndex () {
       return this.itemsList.findIndex(item => {
-        return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
+        if(item.topic) {
+          return item.link.replace(/\/$/, '').split('?')[0] === this.$route.path.replace(/\/$/, '').split('?')[0] && item.topic === this.$route.query.topic;
+        } else {
+          return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
+        }
+
       })
     },
 

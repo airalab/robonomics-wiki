@@ -17,12 +17,13 @@ module.exports = {
       use: '@gridsome/vue-remark',
       options: {
         typeName: 'DocPage',
-        index: ['getting-started'],
+        index: [''],
         baseDir: './docs',
         pathPrefix: '/docs',
         template: './src/templates/DocPage.vue',
         plugins: [
           ['remark-highlight.js'],
+          ['gridsome-remark-katex', {displayMode: false}],
           ['remark-autolink-headings', {content: {
               type: 'text',
               value: '#',
@@ -43,8 +44,16 @@ module.exports = {
 
     {
       use: "gridsome-plugin-google-sheets-post"
-    }
+    },
   ],
+
+  transformers: {
+    remark: {
+      plugins: [
+        'gridsome-remark-katex'
+      ]
+    }
+  },
 
 
   chainWebpack: config => {

@@ -160,6 +160,11 @@ export default {
     }, 500)
 
     this.removeLocale();
+
+
+    if(this.$route.path === '/docs' || this.$route.path === '/docs/') {
+      window.location.href = `/`;
+    }
     
   }
 }

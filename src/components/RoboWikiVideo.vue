@@ -1,5 +1,5 @@
 <template>
-    <video ref="video" mute playsinline v-bind="$attrs" v-if="videos">
+    <video ref="video" controls muted :poster="cover ? require(`!!assets-loader!@imagesMarkdown/${cover}`).src : ''" playsinline v-bind="$attrs" v-if="videos">
       <template v-for="video in videos">
         <source :src="video.src + '#t=0.001'" :type="`video/${video.type}`" :key="video.id" />
     </template>
@@ -15,6 +15,11 @@ export default {
       type: Array,
       default: null,
       required: true
+    },
+
+    cover: {
+      type: String,
+      default: ''
     }
   },
 
@@ -67,7 +72,6 @@ export default {
   },
 
   mounted() {
-
     if(this.$refs.video.getAttribute('autoplay')) {
       document.querySelectorAll('.all-content ').forEach(item => {
         item.addEventListener('scroll', this.handelScroll)

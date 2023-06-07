@@ -84,6 +84,10 @@
               to: i.link || `/summary/${i[`title_en`].toLowerCase().replace(/ /g, '-')}`,
               name: i[`title_${this.locale}`] || i[`title_en`]
             };
+
+            if(i.topic) {
+              obj.to += `?topic=${i.topic}`
+            }
             
             this.navLinks.push(obj);
           })

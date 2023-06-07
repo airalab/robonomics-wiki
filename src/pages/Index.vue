@@ -154,7 +154,7 @@ export default {
           name: 'Smart Home'
         },
         {
-          to: '/docs/',
+          to: '/docs/glossary',
           name: 'Learn'
         },
         {

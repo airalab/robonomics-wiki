@@ -2,8 +2,8 @@
 
     <section class="pageNextPrev">
 
-      <robo-wiki-button v-if="pagePrev && !itemsList[current].withoutNav" :label="'← ' + (itemsList[current].prev ? itemsList[current].prev[0].title : pagePrev.title_en)" :link=" itemsList[current].prev ? itemsList[current].prev[0].link : pagePrev.link" additionalText="previous" type="secondary"/>
-      <robo-wiki-button class="second" v-if="pageNext && !itemsList[current].withoutNav" :label="(itemsList[this.current].next ? itemsList[this.current].next[0].title : pageNext.title_en) + ' →'" :link="itemsList[this.current].next ? itemsList[this.current].next[0].link : pageNext.link" additionalText="next" type="secondary"/>
+      <robo-wiki-button v-if="pagePrev && !itemsList[current].withoutNav && !itemsList[current].withoutPrev" :label="'← ' + (itemsList[current].prev ? itemsList[current].prev[0].title : pagePrev.title_en)" :link=" itemsList[current].prev ? itemsList[current].prev[0].link : pagePrev.link" additionalText="previous" type="secondary"/>
+      <robo-wiki-button class="second" v-if="pageNext && !itemsList[current].withoutNav && !itemsList[current].withoutNext" :label="(itemsList[this.current].next ? itemsList[this.current].next[0].title : pageNext.title_en) + ' →'" :link="itemsList[this.current].next ? itemsList[this.current].next[0].link : pageNext.link" additionalText="next" type="secondary"/>
 
     </section>
 
@@ -62,14 +62,24 @@ export default {
   },
 
   computed: {
-      pagePrev() {
-        if(this.current > -1)
+    pagePrev() {
+      if(this.current > -1)  {
+          if(this.itemsList[this.current - 1] && this.itemsList[this.current - 1].topic && !this.itemsList[this.current - 1].link.includes('topic')) {
+             this.itemsList[this.current - 1].link = this.itemsList[this.current - 1].link + '?topic=' + this.itemsList[this.current - 1].topic
+            return this.itemsList[this.current - 1]
+          }
           return this.itemsList[this.current - 1]
+        }
       },
 
       pageNext() {
-        if(this.current > -1)
+        if(this.current > -1)  {
+          if(this.itemsList[this.current + 1] && this.itemsList[this.current + 1].topic && !this.itemsList[this.current + 1].link.includes('topic')) {
+             this.itemsList[this.current + 1].link = this.itemsList[this.current + 1].link + '?topic=' + this.itemsList[this.current + 1].topic
+            return this.itemsList[this.current + 1]
+          }
           return this.itemsList[this.current + 1]
+        }
       },
 
       // locale() {
@@ -88,7 +98,7 @@ export default {
         return eval(`item.title_${this.$static.metadata.defaultLocale}`)
       }
     },
-  }
+  },
 }
 
 </script>
