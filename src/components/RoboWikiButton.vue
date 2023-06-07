@@ -200,7 +200,7 @@ export default {
     margin-bottom: 10px;
   }
 
-  .button__block {
+  .button.button__block {
     display: block;
   }
 
