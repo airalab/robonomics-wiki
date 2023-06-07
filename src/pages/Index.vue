@@ -111,11 +111,7 @@
     }
 
     @media screen and (max-width: 620px) {
-
-      .intro-wrapper {
-        /* min-height: 450px; */
-      }
-
+ 
       .intro-img   {
         width: unset;
         /* left: 0;
