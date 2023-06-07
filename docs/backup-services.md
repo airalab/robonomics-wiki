@@ -12,7 +12,7 @@ tools:
 
 Creating a backup allows you to easily restore your Home Assistant configuration in the event of a failure.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmVo91dLaAYgFDM1vrL2PYfAffM6SGGC59ZERbfHR44tqW', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="WARNING">
 In order to restore your configuration, it is necessary to use a custom IPFS gateway such as Pinata. Without it, your backup will be stored solely on your local IPFS node, which may prevent you from restoring your Home Assistant configuration in the event of a local node failure.
@@ -30,7 +30,7 @@ Service arguments:
 
 In order to restore your configuration, you will need installed Home Assistant and Robonomics Integration. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmWmnmkXUcPXsAnQzwN3UEuki2GMYnQDx3vhgjEypCU8aR', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
 1. Install Home Assisntant with Robonomics Integration, following the steps from the article for needed installation method.
 
@@ -77,6 +77,8 @@ Please note that the default paths for Mosquitto and Zigbee2MQTT configurations 
 ## Backup Buttons
 
 In addition to using services to work with backups, you can simplify the process by using the `button.create_backup` and `button.restore_from_backup` buttons from the Robonomics integration. These buttons invoke the respective services with default parameters (the backup button creates a backup without history).
+
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 To add buttons to your dashboard, follow these steps:
 
