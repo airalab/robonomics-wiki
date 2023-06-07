@@ -15,16 +15,24 @@ Creating a backup allows you to easily restore your Home Assistant configuration
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="WARNING">
-In order to restore your configuration, it is necessary to use a custom IPFS gateway such as Pinata. Without it, your backup will be stored solely on your local IPFS node, which may prevent you from restoring your Home Assistant configuration in the event of a local node failure.
+
+In order to restore your configuration, it is necessary to use a **custom IPFS gateway** such as Pinata. Without it, your backup will be stored solely on your local IPFS node, which may prevent you from restoring your Home Assistant configuration in the event of a local node failure.
+
 </robo-wiki-note>
 
 1. In the web interface of Home Assistant go to `Developer Tools` -> `Services`. Search for `Robonomics: Save Backup to Robonomics` and press `CALL SERVICE`.
 
 2. Wait until you see the notification `Backup was updated in Robonomics` appear in `Notification`.
 
+<robo-wiki-note type="warning" title="WARNING">
+
+Do not attempt to create a backup or restore configuration immediately after loading Home Assistant and Robonomics Integration. Please **wait for approximately 5 minutes** to allow for the initial setup to complete.
+
+</robo-wiki-note>
+
 Service arguments:
 - **Full Backup**  (default: False) - add database to the backup, so history of entity states will be stored too.
-- **Path to mosquitto password file** (default: `/etc/mosquitto`) - If you used Home Assistant Core or Docker installation methods and don't have default path to Mosquitto brocker, you should change this parameter. Not needed for Home Assistant OS or Superviser.
+- **Path to mosquitto password file** (default: `/etc/mosquitto`) - If you used Home Assistant Core or Docker installation methods and don't have default path to Mosquitto brocker, you should change this parameter. *Not needed for Home Assistant OS or Superviser*.
 
 ## Restoring Home Assistant Configuration from Backup
 
@@ -43,8 +51,8 @@ In order to restore your configuration, you will need installed Home Assistant a
 5. If your backup includes the Zigbee2MQTT or Mosquitto configuration, you need to restart these services to enable the new configuration. You can do this manually by restarting the services individually, or you can simply restart the Home Assistant computer to ensure all services are restarted.
 
 Service arguments:
-- **Path to mosquitto password file** (default: `/etc/mosquitto`) - If you used Home Assistant Core or Docker installation methods and have not default path to Mosquitto brocker, you should change this parameter. Not needed for Home Assistant OS or Superviser.
-- **Path to Zigbee2MQTT config**  (default: `/opt/zigbee2mqtt`) - If you used Home Assistant Core or Docker installation methods and have not default path to Zigbee2MQTT, you should change this parameter. Not needed for Home Assistant OS or Superviser.
+- **Path to mosquitto password file** (default: `/etc/mosquitto`) - If you used Home Assistant Core or Docker installation methods and have not default path to Mosquitto brocker, you should change this parameter. *Not needed for Home Assistant OS or Superviser*.
+- **Path to Zigbee2MQTT config**  (default: `/opt/zigbee2mqtt`) - If you used Home Assistant Core or Docker installation methods and have not default path to Zigbee2MQTT, you should change this parameter. *Not needed for Home Assistant OS or Superviser*.
 
 ## Restore Mosquitto and Zigbee2MQTT Configuration for Home Assistant Core Installation Method
 
@@ -58,20 +66,23 @@ sudo chmod a+w /opt/zigbee2mqtt /etc/mosquitto
 ## Backup Mosquitto and Zigbee2MQTT Configuration for Home Assistant Docker Installation Method
 
 To backup the Mosquitto and Zigbee2MQTT configurations from a Docker container, you need to create volumes for their respective configurations. This can be achieved by running your Home Assistant container with additional arguments:
+
 ```bash
 docker run -d \
   --name homeassistant \
   --privileged \
   --restart=unless-stopped \
   -e TZ=MY_TIME_ZONE \
-  -v /home/alena/homeassistant_config:/config \
+  -v HA_CONFIG_PATH:/config \
   -v /etc/mosquitto:/etc/mosquitto \
   -v /etc/mosquitto:/opt/zigbee2mqtt \
   --network=host \
   ghcr.io/home-assistant/home-assistant:stable
 ```
 <robo-wiki-note type="note" title="Note">
+
 Please note that the default paths for Mosquitto and Zigbee2MQTT configurations are `/etc/mosquitto` and `/opt/zigbee2mqtt`, respectively. However, these paths may vary depending on your specific setup.
+
 </robo-wiki-note>
 
 ## Backup Buttons
