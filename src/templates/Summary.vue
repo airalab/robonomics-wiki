@@ -86,7 +86,10 @@
             };
 
             if(i.topic) {
-              obj.to += `?topic=${i.topic}`
+              console.log(obj)
+              if(!obj.to.includes('?topic')) {
+                obj.to = i.link && i.link + `?topic=${i.topic}` 
+              }
             }
             
             this.navLinks.push(obj);
