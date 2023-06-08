@@ -40,7 +40,7 @@ If you haven't already incorporated Home Assistant into your smart home setup, i
   <robo-wiki-grid-element-wrapper textAlign="center" :columns="2">
     <robo-wiki-grid-element>
       <robo-wiki-picture src="home-assistant/need_5.png" />
-      <a href="https://slsys.io/action/supported_devices.html" target="_blank"><b>Zigbee smart devices</b></a>
+      <a href="https://www.zigbee2mqtt.io/supported-devices/" target="_blank"><b>Zigbee smart devices</b></a>
     </robo-wiki-grid-element>
     <robo-wiki-grid-element>
       <robo-wiki-picture src="home-assistant/need_9.png" />
