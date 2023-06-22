@@ -13,6 +13,7 @@ import '~/assets/style/reset.css'
 import '~/assets/style/typography.css'
 import '~/assets/style/utils.css'
 import '~/assets/style/variables.css'
+import '~/assets/style/fonts.css'
 
 // import 'gridsome-remark-katex/node_modules/katex/dist/katex.min.css'
 
