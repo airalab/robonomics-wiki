@@ -160,8 +160,6 @@ The Decision Deposit for the Governance Killer track itself is quite high, this 
 
 This group is a self-governing expert body which has the primary goal of representing humans who embody and possess the technical knowledge of the Robonomics network protocol. 
 
-[**NEED TO TALK WITH TEAM TO DISCUSS WHETHER OR NOT WE WILL ALLOW NON TEAM MEMBERS TO EVENTUALLY JOIN THE TC/FELLOWSHIP**]
-
 This group (and only this group) is able to originate referenda from the Whitelist pallet. This pallet does one thing, it allows one Origin to escalate the privilege level of another Origin for a certain operation. 
 
 This group can authorize referendum from a origin known as Whitelisted-Root, and these referendum can be executed with Root-level privileges, but these referendum will only successfully work with certain specified commands that have been authorized by the group. The Whitelist pallet verifies two things:
