@@ -58,7 +58,7 @@ Robonomics pre-installed image contains:
 - Zigbee2MQTT
 - Robonomics Integration
 
-<robo-wiki-button label="Download image (~528 Mb)" link="https://crustipfs.info/ipfs/QmS2Zw3F1x8UiSc15HgWDG9PC5wA4ox8DEmHTgCGmrzLDx?filename=robonomics_rpi.xz&download=true" />
+<robo-wiki-button label="Download image (~528 Mb)" link="https://crustipfs.info/ipfs/QmYkjgRZyey8PFtGoWvvd9dXL43XHRuVXdH33rx48Y42gp?filename=robonomics_rpi.xz&download=true" />
 
 <robo-wiki-note type="warning" title="For advanced users">
 

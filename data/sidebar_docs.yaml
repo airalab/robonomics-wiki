@@ -66,6 +66,8 @@
           link: /docs/smart-home-telemetry
         - title_en: Backup Services
           link: /docs/backup-services
+        - title_en: RTZ camera control in Home Assistant
+          link: /docs/ptz-camera
     - title_en: Blueprints
       items:
         - title_en: How To Use Blueprints
