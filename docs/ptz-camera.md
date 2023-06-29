@@ -3,53 +3,59 @@ title: RTZ camera control in Home Assistant
 contributors: [nakata5321]
 ---
 
-In this article, you will set up RTZ camera in Home Assistant. 
-To set up RTZ camera in Home assistant you will use ONVIF protocol. 
-To use it usually you have to set up local camera account, his process won't be covered in this article.
+In this article, you will set up an RTZ camera in Home Assistant. 
+To set up the RTZ camera in Home Assistant you will use the ONVIF protocol. 
+To use it usually you have to set up a local camera account.
+
+<robo-wiki-note type="warning">
+the process of setting up the local camera account is not going to be covered in the article.
+</robo-wiki-note>
 
 Requirements:
 - RTZ camera
 - Configured  camera **device** account
-- IP address of camera
+- IP address of the camera
 - Configured Home Assistant
 
 ## ONVIF integration
 
-Let's start with installation  **ONVIF integration**. 
+Let's start with the installation of **ONVIF integration**. 
 
-Go to "Devices & Services" in "Settings" and press "ADD INTEGRATION" button.
+Go to "Devices & Services" in "Settings" and press the "ADD INTEGRATION" button.
 Type "ONVIF" and choose the integration. You will see the next window.
 
  <robo-wiki-picture src="home-assistant/onvifsetup.jpg" />
 
-Press "Submit" button. It will try to automatic search of your camera. If it will be succeeding, choose your camera from list and 
-fill empty fields. Or you have to fill all fields manually. You will see next window.
+Press the "Submit" button. It will try to automatically search for your camera. If it will be succeeding, 
+choose your camera from the list and fill in empty fields. 
+Or you have to fill in all fields manually. You will see the next window.
 
  <robo-wiki-picture src="home-assistant/onvifconfig.jpg" />
 
-Fill the fields:
+Fill in the fields:
 - Name - give a name to your camera
 - Host - provide The IP address of your camera
 - Port - 2020 (Usually port is 2020, but your camera provider may change port)
 - Username - write a username of your camera **device** account
-- Password - write a password of your camera **device** account
+- Password - write a password for your camera **device** account
 
 and press "Submit". Choose an Area for your camera and "Finish" installation.
 
-## Add camera control to dashboard
+## Add camera control to the dashboard
 
-You already fully setup camera to Home Assistant. Now let's provide camera stream and control buttons to dashboard.
+You already fully set up the camera to Home Assistant. 
+Now let's provide a camera stream and control buttons to the dashboard.
 
-Go to dashboard and start creating a new card. Choose "Picture Glance" card.
+Go to the dashboard and start creating a new card. Choose the "Picture Glance" card.
 
  <robo-wiki-picture src="home-assistant/glance.jpg" />
 
 Change nest fields:
 - Name - Write a place where you install the camera
-- Camera Entity - Choose camera entity from drop list
+- Camera Entity - Choose a camera entity from the drop list
 - Camera View - choose "live" to get less time lag
 
-Next, change to "Code Editor" mode by press button at the bottom left side. You will se next code:
+Next, change to "Code Editor" mode by pressing the button at the bottom left side. You will see the next code:
 ```shell
 camera_view: live
 type: picture-glance
@@ -119,11 +125,11 @@ entities:
 
 </code-helper>
 
-Then copy camera entity id from "camera_image" key. (In example it's `camera.tapo_mainstream`.) 
+Then copy the camera entity id from the "camera_image" key. (In the example it's `camera.tapo_mainstream`.) 
 And insert it in place of `<YOUR_CAMERA_ENTITY>`. Save configuration.
 
-That's all. Now you should see Card at the dashboard with control buttons.
+That's all. Now you should see Card on the dashboard with control buttons.
 
 ## Troubleshooting
-If you are using Home Assistant Core and you don't see stream from camera, you should install "stream" and "FFMPEG" integrations. 
-To do this, you should add `stream: `  and `ffmpeg: `strings to the end of configuration.yaml.
+If you are using Home Assistant Core and you don't see a stream from the camera, you should install "stream" and "FFMPEG" integrations. 
+To do this, you should add `stream: `  and `ffmpeg: ` strings to the end of configuration.yaml.
