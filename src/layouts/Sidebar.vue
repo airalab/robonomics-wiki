@@ -22,6 +22,15 @@
       <Footer/>
     </div>
 
+    <client-only>
+
+      <userTracker
+        classCustom="my-tracker"
+        @activateTracker="activateTracker"
+      />
+
+    </client-only>
+
   </div>
 </template>
 
@@ -164,9 +173,15 @@ export default {
         }
       }
       return result;
-
-
     },
+
+    activateTracker() {
+      if(this.$matomo) {
+          this.$matomo && this.$matomo.setConsentGiven();
+          this.$matomo && this.$matomo.enableLinkTracking();
+          this.$matomo && this.$matomo.trackPageView();
+      }
+    }
   },
   
   computed: {
