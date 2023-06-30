@@ -17,6 +17,10 @@ import '~/assets/style/fonts.css'
 
 // import 'gridsome-remark-katex/node_modules/katex/dist/katex.min.css'
 
+// tracker component
+import userTracker from 'vue-client-actions-tracker-component'
+import '../node_modules/vue-client-actions-tracker-component/dist/vue-client-actions-tracker-component.css'
+
 import DefaultLayout from '~/layouts/Default.vue'
 import SidebarLayout from '~/layouts/Sidebar.vue'
 import RoboWikiButton from '~/components/RoboWikiButton.vue';
@@ -112,6 +116,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       window.scrollTo(0, 0);
       head.htmlAttrs = { 'lang' : appOptions.store.state.locale }
     })
+
+    Vue.use(userTracker);
   }
 
 

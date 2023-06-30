@@ -45,6 +45,14 @@ module.exports = {
     {
       use: "gridsome-plugin-google-sheets-post"
     },
+    {
+      use: 'gridsome-plugin-matomo',
+      options: {
+        host: 'https://matomo.robonomics.network/',
+        siteId: 4,
+        requireConsent: true
+      }
+    }
   ],
 
   transformers: {

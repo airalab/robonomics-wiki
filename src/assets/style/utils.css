@@ -40,3 +40,7 @@
     vertical-align: -moz-middle-with-baseline;
     vertical-align: -webkit-baseline-middle;
 }
+
+.my-tracker .user-tracker__form  {
+  padding-left: 0;
+}
