@@ -56,10 +56,10 @@ In this article we use next specifications:
 2. Note that you need to include *--state-cache-size=0* in the collator's service launch. This parameter is important for the stability of the collator.
 You can see more info in the related [issue](https://github.com/airalab/robonomics/issues/234) on github.
 
-## Easily launch a Robonomics collator
+## First time easily launch a Robonomics collator
 
 You can easily launch a collator directly in the command line to check for errors.
-After doing this it is strongly recommended to launch the Robonomics collator as a service.
+After doing this it is strongly recommended to launch the Robonomics collator as a service (watch next step).
 
 ```
 root@robokusama-collator-screencast:~# robonomics \
@@ -71,9 +71,7 @@ root@robokusama-collator-screencast:~# robonomics \
   --base-path="%BASE_PATH%" \
   --state-cache-size=0 \
   -- \
-  --database=RocksDb \
-  --unsafe-pruning \
-  --pruning=1000
+  --database=RocksDb 
 ```
 
 
@@ -121,13 +119,12 @@ root@robokusama-collator-screencast:~# robonomics \
       --execution=Wasm \
       -- \
       --database=RocksDb \
-      --unsafe-pruning \
-      --execution=Wasm \
-      --pruning=1000
+      --execution=Wasm
 
     [Install]
     WantedBy=multi-user.target
     ```
+
     ![Create Robonomics service file](./images/how-to-launch-the-robonomics-collator/nano_robonomics_service.png)
 
 
@@ -167,13 +164,13 @@ Instructions:
     ```
     ![Download Kusama snapshot](./images/how-to-launch-the-robonomics-collator/wget_kusama_snapshot.png)
 
-
     You can remove the downloaded archive after succesful unpacking:
     ```
     root@robokusama-collator-screencast:~# rm -v kusama.RocksDb.tar.lz4
-    ```   
+    ```
+
 3. Setting the right ownership for the database folder:
-    ``` 
+    ```
     root@robokusama-collator-screencast:~# chown -R robonomics:robonomics %BASE_PATH%/polkadot/chains/ksmcc3
     ```
 4. Start the Robonomics service again:
@@ -219,9 +216,7 @@ For fix this error you can just launch your collator in archive mode:
     --state-pruning=archive \
     -- \
     --database=RocksDb \
-    --unsafe-pruning \
-    --execution=Wasm \
-    --pruning=1000
+    --execution=Wasm 
 
     [Install]
     WantedBy=multi-user.target
@@ -241,6 +236,7 @@ For fix this error you can just launch your collator in archive mode:
     ```
     root@robokusama-collator-screencast:~# systemctl start robonomics.service
     ```
+
     After that need to wait for the synchronization of the parahain database.
 
 ### Error: "cannot create module: compilation settings are not compatible with the native host"
