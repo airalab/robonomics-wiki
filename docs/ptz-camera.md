@@ -3,18 +3,17 @@ title: RTZ camera control in Home Assistant
 contributors: [nakata5321]
 ---
 
-In this article, you will set up an RTZ camera in Home Assistant. 
-To set up the RTZ camera in Home Assistant you will use the ONVIF protocol. 
-To use it usually you have to set up a local camera account.
+This article covers a process of an RTZ camera set up in Home Assistant. 
+ONVIF protocol will be used. This requires a local camera account.
 
 <robo-wiki-note type="warning">
-the process of setting up the local camera account is not going to be covered in the article.
+The process of setting up the local camera account is not covered in this article.
 </robo-wiki-note>
 
 Requirements:
 - RTZ camera
-- Configured  camera **device** account
-- IP address of the camera
+- Local camera account
+- Camera IP address
 - Configured Home Assistant
 
 ## ONVIF integration
@@ -26,36 +25,35 @@ Type "ONVIF" and choose the integration. You will see the next window.
 
  <robo-wiki-picture src="home-assistant/onvifsetup.jpg" />
 
-Press the "Submit" button. It will try to automatically search for your camera. If it will be succeeding, 
+Press the "Submit" button. It will try to automatically search for your camera. If succeeded, 
 choose your camera from the list and fill in empty fields. 
-Or you have to fill in all fields manually. You will see the next window.
+Otherwise, you have to fill in all the fields manually. You will see the following window.
 
  <robo-wiki-picture src="home-assistant/onvifconfig.jpg" />
 
-Fill in the fields:
+Fill in the gaps:
 - Name - give a name to your camera
 - Host - provide The IP address of your camera
-- Port - 2020 (Usually port is 2020, but your camera provider may change port)
-- Username - write a username of your camera **device** account
-- Password - write a password for your camera **device** account
+- Port - mostly common it's 2020, but your camera provider may change it
+- Username - write a username of your camera local account
+  - Password - write a password for your camera local account
 
-and press "Submit". Choose an Area for your camera and "Finish" installation.
+and press "Submit". Choose an Area for your camera and click on "Finish".
 
 ## Add camera control to the dashboard
 
-You already fully set up the camera to Home Assistant. 
-Now let's provide a camera stream and control buttons to the dashboard.
+Now that you have fully set up the camera, you may add its stream and control buttons to the dashboard.
 
-Go to the dashboard and start creating a new card. Choose the "Picture Glance" card.
+Go to the dashboard and start with creating a new card. Choose the "Picture Glance" one.
 
  <robo-wiki-picture src="home-assistant/glance.jpg" />
 
-Change nest fields:
-- Name - Write a place where you install the camera
-- Camera Entity - Choose a camera entity from the drop list
-- Camera View - choose "live" to get less time lag
+Fill in the data:
+- Title - choose camera image title
+- Camera Entity - choose a camera entity from the drop-down list
+- Camera View - choose "live" to get less delay
 
-Next, change to "Code Editor" mode by pressing the button at the bottom left side. You will see the next code:
+Next, switch to "Code Editor" mode by pressing the button at the bottom left side. You will see the following code:
 ```shell
 camera_view: live
 type: picture-glance
@@ -64,7 +62,8 @@ image: https://demo.home-assistant.io/stub_config/kitchen.png
 entities: []
 camera_image: camera.tapo_mainstream
 ```
-Instead of `entities: []` line insert next (The list of entities could be not empty. Then delete all lines with entities):
+
+Replace the content of `entities: []` according to the example below (`<YOUR_CAMERA_ENTITY>` is the same as the `camera_image` parameter):
 
 <code-helper copy>
 
@@ -125,10 +124,7 @@ entities:
 
 </code-helper>
 
-Then copy the camera entity id from the "camera_image" key. (In the example it's `camera.tapo_mainstream`.) 
-And insert it in place of `<YOUR_CAMERA_ENTITY>`. Save configuration.
-
-That's all. Now you should see Card on the dashboard with control buttons.
+That's all. Now you should see the RTZ camera card on the dashboard along with control buttons.
 
 ## Troubleshooting
 If you are using Home Assistant Core and you don't see a stream from the camera, you should install "stream" and "FFMPEG" integrations. 
