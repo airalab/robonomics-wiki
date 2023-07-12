@@ -1,9 +1,9 @@
 ---
-title: RTZ camera control in Home Assistant
+title: PTZ camera control in Home Assistant
 contributors: [nakata5321]
 ---
 
-This article covers a process of an RTZ camera set up in Home Assistant. 
+This article covers a process of an PTZ camera set up in Home Assistant. 
 ONVIF protocol will be used. This requires a local camera account.
 
 <robo-wiki-note type="warning">
@@ -11,7 +11,7 @@ The process of setting up the local camera account is not covered in this articl
 </robo-wiki-note>
 
 Requirements:
-- RTZ camera
+- PTZ camera
 - Local camera account
 - Camera IP address
 - Configured Home Assistant
@@ -124,7 +124,7 @@ entities:
 
 </code-helper>
 
-That's all. Now you should see the RTZ camera card on the dashboard along with control buttons.
+That's all. Now you should see the PTZ camera card on the dashboard along with control buttons.
 
 ## Troubleshooting
 If you are using Home Assistant Core and you don't see a stream from the camera, you should install "stream" and "FFMPEG" integrations. 
