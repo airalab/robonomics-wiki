@@ -29,21 +29,15 @@ Also the collator that builds the block gets **50% of transactions fees** contai
 
 ## Requirements
 
-**Minimum hardware requirements** for collators:
-+ 4-cores CPU
-+ 200GB extendable NVMe space
-+ 8GB RAM
-
-
-However, it is recommended that you launch a collator using the **standard hardware requirements** for [Polkadot validators](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#standard-hardware):
+It is recommended that you launch a collator using the **standard hardware requirements** for [Polkadot validators](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#standard-hardware):
 + CPU - Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz.
-+ Storage - A NVMe solid state drive. Should be reasonably sized to deal with the blockchain growth. Currently the Kusama db uses around 90GB of space. We recommend 200-240GB for first months, but it will need to be re-evaluated every six months. Again: The ability to expand this disk space is required.
++ Storage - A NVMe solid state drive. Should be reasonably sized to deal with the blockchain growth. Currently the Kusama db uses around 360GB of space. We recommend using 700-750GB for first months, but it will need to be re-evaluated every six months. Again: The ability to expand this disk space is required.
 + Memory - 64GB ECC
 
 
 In this article we use next specifications:
 + 4 VCPU
-+ 240GB extendable volume for collator's databases
++ 700 GB of NVMe space for collator's databases 
 + 8GB RAM
 
 
