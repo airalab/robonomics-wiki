@@ -2,7 +2,7 @@
 title: Home Assistant Initialization
 contributors: [nakata5321, PaTara43]
 tools:
-  - Home Assistant 2023.1.7
+  - Home Assistant 2023.5.4
     https://github.com/home-assistant/core
 ---
 
