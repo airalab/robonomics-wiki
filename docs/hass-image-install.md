@@ -2,15 +2,15 @@
 title: Pre-installed Image For Raspberry Pi
 contributors: [nakata5321, PaTara43]
 tools:
-  - Home Assistant 2023.1.7
+  - Home Assistant 2023.5.4
     https://github.com/home-assistant/core
-  - Robonomics Home Assistant Integration 1.5.7
+  - Robonomics Home Assistant Integration 1.5.9
     https://github.com/airalab/homeassistant-robonomics-integration
   - robonomics-interface 1.6.0
     https://github.com/Multi-Agent-io/robonomics-interface/
-  - IPFS 0.17.0
+  - IPFS 0.21.0
     https://docs.ipfs.tech/
-  - Zigbee2MQTT 1.30.4
+  - Zigbee2MQTT 1.32.1
     https://github.com/Koenkk/zigbee2mqtt
   - Yggdrasil 0.4.7
     https://github.com/yggdrasil-network/yggdrasil-go/
@@ -58,7 +58,7 @@ Robonomics pre-installed image contains:
 - Zigbee2MQTT
 - Robonomics Integration
 
-<robo-wiki-button label="Download image (~528 Mb)" link="https://crustipfs.info/ipfs/QmYkjgRZyey8PFtGoWvvd9dXL43XHRuVXdH33rx48Y42gp?filename=robonomics_rpi.xz&download=true" />
+<robo-wiki-button label="Download image (~528 Mb)" link="https://crustipfs.info/ipfs/QmNhE3wPDh3uSW42ZdRRmPC3E9vU41ySjZRpk6TWZyH9gp?filename=robonomics_rpi.xz&download=true" />
 
 <robo-wiki-note type="warning" title="For advanced users">
 
