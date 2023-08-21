@@ -66,17 +66,6 @@ eval("module.exports = __webpack_require__.p + \"assets/img/sub-activate-en.9e7b
 
 /***/ }),
 
-/***/ "5wC+":
-/*!**********************************************************!*\
-  !*** ./docs/docsCovers/feecc-system-architecture-en.png ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"assets/img/feecc-system-architecture-en.32a981de.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/feecc-system-architecture-en.png?");
-
-/***/ }),
-
 /***/ "6sI9":
 /*!************************************************************!*\
   !*** ./src/templates/DocPage.vue?vue&type=script&lang=js& ***!
@@ -131,17 +120,6 @@ eval("module.exports = __webpack_require__.p + \"assets/img/backup-services-en.3
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("module.exports = __webpack_require__.p + \"assets/img/robonomics-video-en.2563420d.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/robonomics-video-en.png?");
-
-/***/ }),
-
-/***/ "An2I":
-/*!*************************************************************!*\
-  !*** ./docs/docsCovers/feecc-system-supporthardware-en.png ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"assets/img/feecc-system-supporthardware-en.8dedaddf.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/feecc-system-supporthardware-en.png?");
 
 /***/ }),
 
@@ -209,17 +187,6 @@ eval("module.exports = __webpack_require__.p + \"assets/img/launch-en.76beae80.p
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("module.exports = __webpack_require__.p + \"assets/img/hass-image-install-en.0ffe39e8.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/hass-image-install-en.png?");
-
-/***/ }),
-
-/***/ "FZmz":
-/*!*************************************************************!*\
-  !*** ./docs/docsCovers/feecc-system-deploy-feecc-wb-en.png ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"assets/img/feecc-system-deploy-feecc-wb-en.fabf899f.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/feecc-system-deploy-feecc-wb-en.png?");
 
 /***/ }),
 
@@ -502,17 +469,6 @@ eval("module.exports = __webpack_require__.p + \"assets/img/robonomics-prometheu
 
 /***/ }),
 
-/***/ "cJwD":
-/*!********************************************************************!*\
-  !*** ./docs/docsCovers/feecc-system-deploy-feecc-analytics-en.png ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"assets/img/feecc-system-deploy-feecc-analytics-en.e8960def.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/feecc-system-deploy-feecc-analytics-en.png?");
-
-/***/ }),
-
 /***/ "dDYI":
 /*!***********************************!*\
   !*** ./src/templates/DocPage.vue ***!
@@ -547,17 +503,6 @@ eval("module.exports = __webpack_require__.p + \"assets/img/sensors-network-intr
 
 /***/ }),
 
-/***/ "imwK":
-/*!*****************************************************************!*\
-  !*** ./docs/docsCovers/feecc-system-dev-feecc-analytics-en.png ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"assets/img/feecc-system-dev-feecc-analytics-en.8a8e304c.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/feecc-system-dev-feecc-analytics-en.png?");
-
-/***/ }),
-
 /***/ "itmn":
 /*!**********************************************!*\
   !*** ./docs/docsCovers/notifications-en.png ***!
@@ -587,7 +532,7 @@ eval("module.exports = __webpack_require__.p + \"assets/img/hass-init-en.ffc466e
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./adding-funds-to-account-in-dapp-en.png\": \"LAy4\",\n\t\"./backup-services-en.png\": \"9NsX\",\n\t\"./carbon-footprint-sensor-en.png\": \"uKws\",\n\t\"./carbon-footprint-service-en.png\": \"z7kF\",\n\t\"./contributing-en.png\": \"nHSM\",\n\t\"./create-account-in-dapp-en.png\": \"4vvK\",\n\t\"./create-digital-identity-run-by-ethereum-en.png\": \"y3XH\",\n\t\"./datalog-en.png\": \"SymH\",\n\t\"./digital-twins-en.png\": \"y4vX\",\n\t\"./door-notification-en.png\": \"4A+J\",\n\t\"./edit-wiki-en.png\": \"Khtf\",\n\t\"./feecc-system-architecture-en.png\": \"5wC+\",\n\t\"./feecc-system-deploy-feecc-analytics-en.png\": \"cJwD\",\n\t\"./feecc-system-deploy-feecc-wb-en.png\": \"FZmz\",\n\t\"./feecc-system-dev-feecc-analytics-en.png\": \"imwK\",\n\t\"./feecc-system-overview-en.png\": \"s7Gu\",\n\t\"./feecc-system-quickstart-en.png\": \"t7Vp\",\n\t\"./feecc-system-supporthardware-en.png\": \"An2I\",\n\t\"./freertos-mqtt-en.png\": \"qGfa\",\n\t\"./gaka-chu-en.png\": \"Zb/o\",\n\t\"./get-subscription-en.png\": \"Xcs0\",\n\t\"./getting-started-en.png\": \"g05E\",\n\t\"./global-administration-en.png\": \"Sb5a\",\n\t\"./glossary-en.png\": \"4HdC\",\n\t\"./hass-core-upgrade-en.png\": \"nhgA\",\n\t\"./hass-docker-upgrade-en.png\": \"JIlO\",\n\t\"./hass-image-install-en.png\": \"EnAj\",\n\t\"./hass-init-en.png\": \"j7I2\",\n\t\"./hass-os-upgrade-en.png\": \"nzXq\",\n\t\"./how-to-build-collator-node-en.png\": \"JVkh\",\n\t\"./how-to-launch-the-robonomics-collator-en.png\": \"2wET\",\n\t\"./how-to-update-collator-node-version-en.png\": \"aFrB\",\n\t\"./launch-en.png\": \"DkHd\",\n\t\"./liability-en.png\": \"C2Er\",\n\t\"./notifications-en.png\": \"itmn\",\n\t\"./ptz-camera-en.png\": \"IViG\",\n\t\"./rinterface-en.png\": \"pEdv\",\n\t\"./robonomics-coffee-en.png\": \"7/nz\",\n\t\"./robonomics-ethereum-en.png\": \"Df7z\",\n\t\"./robonomics-hass-integration-en.png\": \"Ns3M\",\n\t\"./robonomics-opengov-en.png\": \"Ps2t\",\n\t\"./robonomics-prometheus-grafana-en.png\": \"c3cg\",\n\t\"./robonomics-smart-home-overview-en.png\": \"GX92\",\n\t\"./robonomics-video-en.png\": \"A3gC\",\n\t\"./run-dev-node-en.png\": \"LBOO\",\n\t\"./sds-sensor-connect-en.png\": \"rb9j\",\n\t\"./securely-connect-cloud-ai-to-the-factory-floor-en.png\": \"2+8B\",\n\t\"./sensors-network-introduction-en.png\": \"gHXQ\",\n\t\"./sls-gateway-en.png\": \"COFF\",\n\t\"./smart-home-telemetry-en.png\": \"Pinx\",\n\t\"./sub-activate-en.png\": \"4xtK\",\n\t\"./subscription-launch-en.png\": \"NORK\",\n\t\"./use-blueprints-en.png\": \"RUWx\",\n\t\"./xcm-robobank-en.png\": \"QwKG\",\n\t\"./zigbee-to-mqtt-image-en.png\": \"La2U\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"jEse\";\n\n//# sourceURL=webpack:///./docs/docsCovers_sync_^\\.\\/.*$?");
+eval("var map = {\n\t\"./adding-funds-to-account-in-dapp-en.png\": \"LAy4\",\n\t\"./backup-services-en.png\": \"9NsX\",\n\t\"./carbon-footprint-sensor-en.png\": \"uKws\",\n\t\"./carbon-footprint-service-en.png\": \"z7kF\",\n\t\"./contributing-en.png\": \"nHSM\",\n\t\"./create-account-in-dapp-en.png\": \"4vvK\",\n\t\"./create-digital-identity-run-by-ethereum-en.png\": \"y3XH\",\n\t\"./datalog-en.png\": \"SymH\",\n\t\"./digital-twins-en.png\": \"y4vX\",\n\t\"./door-notification-en.png\": \"4A+J\",\n\t\"./edit-wiki-en.png\": \"Khtf\",\n\t\"./freertos-mqtt-en.png\": \"qGfa\",\n\t\"./gaka-chu-en.png\": \"Zb/o\",\n\t\"./get-subscription-en.png\": \"Xcs0\",\n\t\"./getting-started-en.png\": \"g05E\",\n\t\"./global-administration-en.png\": \"Sb5a\",\n\t\"./glossary-en.png\": \"4HdC\",\n\t\"./hass-core-upgrade-en.png\": \"nhgA\",\n\t\"./hass-docker-upgrade-en.png\": \"JIlO\",\n\t\"./hass-image-install-en.png\": \"EnAj\",\n\t\"./hass-init-en.png\": \"j7I2\",\n\t\"./hass-os-upgrade-en.png\": \"nzXq\",\n\t\"./how-to-build-collator-node-en.png\": \"JVkh\",\n\t\"./how-to-launch-the-robonomics-collator-en.png\": \"2wET\",\n\t\"./how-to-update-collator-node-version-en.png\": \"aFrB\",\n\t\"./launch-en.png\": \"DkHd\",\n\t\"./liability-en.png\": \"C2Er\",\n\t\"./notifications-en.png\": \"itmn\",\n\t\"./ptz-camera-en.png\": \"IViG\",\n\t\"./rinterface-en.png\": \"pEdv\",\n\t\"./robonomics-coffee-en.png\": \"7/nz\",\n\t\"./robonomics-ethereum-en.png\": \"Df7z\",\n\t\"./robonomics-hass-integration-en.png\": \"Ns3M\",\n\t\"./robonomics-opengov-en.png\": \"Ps2t\",\n\t\"./robonomics-prometheus-grafana-en.png\": \"c3cg\",\n\t\"./robonomics-smart-home-overview-en.png\": \"GX92\",\n\t\"./robonomics-video-en.png\": \"A3gC\",\n\t\"./run-dev-node-en.png\": \"LBOO\",\n\t\"./sds-sensor-connect-en.png\": \"rb9j\",\n\t\"./securely-connect-cloud-ai-to-the-factory-floor-en.png\": \"2+8B\",\n\t\"./sensors-network-introduction-en.png\": \"gHXQ\",\n\t\"./sls-gateway-en.png\": \"COFF\",\n\t\"./smart-home-telemetry-en.png\": \"Pinx\",\n\t\"./sub-activate-en.png\": \"4xtK\",\n\t\"./subscription-launch-en.png\": \"NORK\",\n\t\"./use-blueprints-en.png\": \"RUWx\",\n\t\"./xcm-robobank-en.png\": \"QwKG\",\n\t\"./zigbee-to-mqtt-image-en.png\": \"La2U\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"jEse\";\n\n//# sourceURL=webpack:///./docs/docsCovers_sync_^\\.\\/.*$?");
 
 /***/ }),
 
@@ -678,28 +623,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("module.exports = __webpack_require__.p + \"assets/img/sds-sensor-connect-en.057ce5bd.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/sds-sensor-connect-en.png?");
-
-/***/ }),
-
-/***/ "s7Gu":
-/*!******************************************************!*\
-  !*** ./docs/docsCovers/feecc-system-overview-en.png ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"assets/img/feecc-system-overview-en.fca00037.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/feecc-system-overview-en.png?");
-
-/***/ }),
-
-/***/ "t7Vp":
-/*!********************************************************!*\
-  !*** ./docs/docsCovers/feecc-system-quickstart-en.png ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"assets/img/feecc-system-quickstart-en.ef3abf6e.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/feecc-system-quickstart-en.png?");
 
 /***/ }),
 
