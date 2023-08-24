@@ -24,20 +24,23 @@ A Collator is part of the Robonomics parachain. This type of node creates new bl
 
 You can learn more about collators on the related [Polkadot wiki page](https://wiki.polkadot.network/docs/learn-collator)
 
-In the Robonomics parachain every collator gets rewards of (**0.000380520 XRT**) for every block that the collator builds (rewards occur when blocks are sealed to the chain). 
+In the Robonomics parachain every collator gets rewards of (**0.001598184 XRT**) for every block that the collator builds (rewards occur when blocks are sealed to the chain). 
 Also the collator that builds the block gets **50% of transactions fees** contained within the block they create.
 
 ## Requirements
 
 It is recommended that you launch a collator using the **standard hardware requirements** for [Polkadot validators](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#standard-hardware):
-+ CPU - Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz.
-+ Storage - A NVMe solid state drive. Should be reasonably sized to deal with the blockchain growth. Currently the Kusama db uses around 360GB of space. We recommend using 700-750GB for first months, but it will need to be re-evaluated every six months. Again: The ability to expand this disk space is required.
-+ Memory - 64GB ECC
++ x86-64 compatible.
++ Intel Ice Lake, or newer (Xeon or Core series); AMD Zen3, or newer (EPYC or Ryzen).
++ 4 physical cores @ 3.4GHz.
++ Simultaneous multithreading disabled (Hyper-Threading on Intel, SMT on AMD).
++ Storage - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth).
++ Memory - 32 GB DDR4 ECC
 
 
 In this article we use next specifications:
-+ 4 VCPU
-+ 700 GB of NVMe space for collator's databases 
++ 4 vCPU
++ 700 GB of NVMe space for collator's databases. The ability to expand this disk space is required.
 + 8GB RAM
 
 
