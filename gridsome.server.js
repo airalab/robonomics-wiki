@@ -90,6 +90,16 @@ module.exports = function (api) {
         path: '/summary/:title',
         component: './src/templates/Summary.vue'
     })
+
+    createPage(
+      {
+        path: `/docs/robonomics-coffee`,
+        component: 'src/pages/redirect.vue',
+        context: {
+          redirect: 'https://robonomics.network/cases/blockchain-coffee-machine/'
+        }
+      }
+    )
   })
 
   api.afterBuild(({ redirects }) => {
