@@ -2,15 +2,15 @@
 title: Upgrade Your Home Assistant Core
 contributors: [PaTara43, makyul]
 tools:   
-  - Ubuntu Server 22.04.2 LTS for RaspPi
+  - Ubuntu Server 22.04.3 LTS for RaspPi
     https://ubuntu.com/download/raspberry-pi
-  - Home Assistant 2023.1.7
+  - Home Assistant 2023.7.3
     https://github.com/home-assistant/core
-  - Robonomics Home Assistant Integration 1.2.0
+  - Robonomics Home Assistant Integration 1.6.1
     https://github.com/airalab/homeassistant-robonomics-integration
-  - robonomics-interface 1.3.6
+  - robonomics-interface 1.6.1
     https://github.com/Multi-Agent-io/robonomics-interface/
-  - IPFS 0.17.0
+  - IPFS 0.21.0
     https://docs.ipfs.tech/
 ---
 
@@ -22,7 +22,7 @@ tools:
 
   1. It is assumed that the installation of your Home Assistant Core was completed in accordance to the [official instructions](https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-core) and there is a <u>homeassistant</u> user and the `venv` environment. If it is not the case, follow instructions below, **but edit the script accordingly**.
   2. IPFS will be installed and run as a <u>systemd</u> service on the host machine.
-  3. It is assumed that you have [Python3.9](https://www.python.org/downloads/) or higher installed.
+  3. It is assumed that you have [Python3.10](https://www.python.org/downloads/) or higher installed.
 
 </robo-wiki-note>
 

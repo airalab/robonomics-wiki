@@ -4,13 +4,13 @@ contributors: [nakata5321, PaTara43]
 tools:
   - Home Assistant 2023.5.4
     https://github.com/home-assistant/core
-  - Robonomics Home Assistant Integration 1.5.9
+  - Robonomics Home Assistant Integration 1.6.1
     https://github.com/airalab/homeassistant-robonomics-integration
-  - robonomics-interface 1.6.0
+  - robonomics-interface 1.6.1
     https://github.com/Multi-Agent-io/robonomics-interface/
   - IPFS 0.21.0
     https://docs.ipfs.tech/
-  - Zigbee2MQTT 1.32.1
+  - Zigbee2MQTT 1.32.2
     https://github.com/Koenkk/zigbee2mqtt
   - Yggdrasil 0.4.7
     https://github.com/yggdrasil-network/yggdrasil-go/

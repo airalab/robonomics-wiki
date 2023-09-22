@@ -4,15 +4,15 @@ contributors: [PaTara43]
 tools:   
   - Ubuntu Server 22.04 LTS
     https://ubuntu.com/download/raspberry-pi
-  - Home Assistant 2022.11.3
+  - Home Assistant 2023.9.2
     https://github.com/home-assistant/core
   - Docker
     https://www.docker.com/
-  - Robonomics Home Assistant Integration 1.1.3
+  - Robonomics Home Assistant Integration 1.6.1
     https://github.com/airalab/homeassistant-robonomics-integration
-  - robonomics-interface 1.3.6
+  - robonomics-interface 1.6.1
     https://github.com/Multi-Agent-io/robonomics-interface/
-  - IPFS 0.17.0
+  - IPFS 0.21.0
     https://docs.ipfs.tech/
 ---
 

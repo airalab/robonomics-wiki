@@ -2,11 +2,11 @@
 title: Upgrade Your Home Assistant OS
 contributors: [LoSk-p]
 tools:   
-  - Home Assistant OS 64-9.5 for RaspPi 
+  - Home Assistant OS 10.5 for RaspPi 
     https://github.com/home-assistant/operating-system
-  - HACS 1.31.0
+  - HACS 1.32.1
     https://github.com/hacs/integration/
-  - Robonomics Home Assistant Integration 1.4.1
+  - Robonomics Home Assistant Integration 1.6.1
     https://github.com/airalab/homeassistant-robonomics-integration
   - IPFS Home Assistant Addon 1.1.0
     https://github.com/airalab/ipfs-addon
