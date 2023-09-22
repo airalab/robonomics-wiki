@@ -3,8 +3,8 @@ title: Zigbee Adapter with Zigbee2MQTT for Pre-installed Image
 
 contributors: [nakata5321, PaTara43]
 tools:
-  - Zigbee2MQTT 1.32.1
-    https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.32.1
+  - Zigbee2MQTT 1.32.2
+    https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.32.2
 
 ---
 
