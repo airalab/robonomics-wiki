@@ -118,7 +118,7 @@
       link: /docs/how-to-update-collator-node-version
     - title_en: How to Connect SDS011 Sensor
       link: /docs/sds-sensor-connect
-    - title_en: Connect SDS011 Sensor to Home Assistant
+    - title_en: How to Add SDS011 Sensor to Home Assistant
       link: /docs/sds-sensor-hass
     #- title_en: Configure Metrics With Prometheus And Grafana
     #  link: /docs/robonomics-prometheus-grafana

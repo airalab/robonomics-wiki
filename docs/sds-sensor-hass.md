@@ -1,5 +1,5 @@
 ---
-title: Connect SDS011 Sensor to Home Assistant
+title: How to Add SDS011 Sensor to Home Assistant
 
 contributors: [tubleronchik]
 ---
@@ -19,20 +19,32 @@ Once HACS is installed, navigate to HACS -> Integrations and search for the `Loc
 ### Option 2: Manual Installation
 
 Under the homeassistant user, clone the project repository:
-```
-git clone https://github.com/lichtteil/local_luftdaten.git
-```
+
+<code-helper copy>
+
+  ```shell
+  git clone https://github.com/lichtteil/local_luftdaten.git
+  ```
+</code-helper>
+
 If you already have any custom integrations, copy the `custom_components/local_luftdaten/` to your `custom_components` directory, For example:
-```
-cd local_luftdaten
-mv custom_components/local_luftdaten ~/.homeassistant/custom_components/
-```
+
+<code-helper copy>
+
+  ```
+  cd local_luftdaten
+  mv custom_components/local_luftdaten ~/.homeassistant/custom_components/
+  ```
+</code-helper>
 If you don't have any custom integrations, copy the whole `custom_components` directory to your Home Assistant configuration directory. For example:
 
-```
-cd local_luftdaten
-mv custom_components/ ~/.homeassistant/
-```
+<code-helper copy>
+
+  ```
+  cd local_luftdaten
+  mv custom_components/ ~/.homeassistant/
+  ```
+</code-helper>
 
 ## Configuration
 
@@ -45,20 +57,22 @@ Create a new sensor entry in your `configuration.yaml` and adjust the host name 
 |`name`                 | string | required     | Name of the sensor
 |`monitored_conditions` | list   | required     | List of the monitored sensors
 
+<code-helper copy>
 
-```yaml
-sensor:
-  - platform: local_luftdaten
-    host: 192.168.0.100
-    scan_interval: 150
-    name: Air quality sensor
-    monitored_conditions:
-      - SDS_P1
-      - SDS_P2
-      - HTU21D_temperature
-      - HTU21D_humidity
-      - signal
-```
+  ```yaml
+  sensor:
+    - platform: local_luftdaten
+      host: 192.168.0.100
+      scan_interval: 150
+      name: Air quality sensor
+      monitored_conditions:
+        - SDS_P1
+        - SDS_P2
+        - HTU21D_temperature
+        - HTU21D_humidity
+        - signal
+  ```
+</code-helper>
 
 > List of all supported sensors can be found in the [repository](https://github.com/lichtteil/local_luftdaten).
 
