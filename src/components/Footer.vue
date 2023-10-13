@@ -16,10 +16,16 @@
         <ul class="footer__list">
           <li class="footer__item">
             <g-link class="footer__link" to="/docs/edit-wiki/">
-              How to edit Wiki
+              {{ $t('How to edit Wiki') }}
             </g-link>
           </li>
         </ul>
+
+        <div class="footer-text"  v-if="$locale != 'en'">
+          <span class="">{{ $t('Translation was executed by AI so there may be some inaccuracies')}}. </span>
+           <g-link to="https://github.com/airalab/robonomics-wiki/issues">{{ $t('Inform us') }}</g-link>, {{ $t('please') }}, {{ $t('if you find any')}}
+        </div>
+
       </div>
     </div>
   </footer>
@@ -103,6 +109,14 @@
   .footer .footer__link:focus {
     box-shadow: unset;
     color: var(--link-color)
+  }
+
+  .footer-text {
+    border-bottom: 0.5px dashed var(--footer-border-color);
+    padding: var(--space);
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
   }
 
   @media screen and (max-width: 560px) {

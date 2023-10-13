@@ -4,7 +4,7 @@ title: Robonomics Smart Home
 contributors: [LoSk-p]
 ---
 
-You can receive notifications on your smartphone with [notify](https://notify.events/). Girstly register there and on `Control Panel` creae new channel:
+You can receive notifications on your smartphone with [notify](https://notify.events/). Girstly register there and on `Control Panel` create new channel:
 
 ![control_panel](./images/home-assistant/not_control_panel.png)
 
@@ -30,7 +30,7 @@ then press `Subscribe` to add subscribers:
 
 Choose whatever subscriber you want and follow the instructions.
 
-Now you need to edit configuration on your compuer with Home Assistant. Under `homeassistant` user open `configuration.yaml` file:
+Now you need to edit configuration on your computer with Home Assistant. Under `homeassistant` user open `configuration.yaml` file:
 
 ```bash
 sudo -u homeassistant -H -s
@@ -56,7 +56,7 @@ Also add new automation after `automation:` line:
     data:
       message: Door was changed to {{ states("binary_sensor.contact_sensor_contact") }}
 ```
-This automation will send message `Door was changed to on/off` after sensor wit entity id `binary_sensor.contact_sensor_contact` change state from `off` to `on`.
+This automation will send message `Door was changed to on/off` after sensor with entity id `binary_sensor.contact_sensor_contact` change state from `off` to `on`.
 
 And restart Home Assistant:
 ```bash

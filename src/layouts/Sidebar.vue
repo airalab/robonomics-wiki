@@ -191,8 +191,11 @@ export default {
     },
 
     currentIndex () {
+      let filteredPath = this.$route.path.split('/').filter(el => !this.$localesList.includes(el))
+      let clearedPath = filteredPath.join('/')
+
       return this.itemsList.findIndex(item => {
-        return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
+        return item.link.replace(/\/$/, '') === clearedPath.replace(/\/$/, '')
       })
     },
 

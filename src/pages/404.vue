@@ -16,10 +16,10 @@
 
       <h1>404</h1>
 
-      <p>Page disappeared, we are sorry</p>
+      <p>{{ $t('Page disappeared, we are sorry') }}</p>
 
       <div class="page-404__wrapper">
-        <p>Some content moved to <g-link to="https://robonomics.academy">academy</g-link> or try to find updated content here on <g-link to="https://wiki.robonomics.network">wiki</g-link>.</p>
+        <p>{{ $t('Some content moved to') }} <g-link to="https://robonomics.academy">academy</g-link> {{ $t('or try to find updated content here on ') }} <g-link to="https://wiki.robonomics.network">wiki</g-link>.</p>
       </div>
     </div>
 

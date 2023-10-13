@@ -41,11 +41,11 @@
         <button class="robo-wiki-feedback-form__btn" @click="form" :disabled="result === 'wait'">
           <div class="robo-wiki-feedback-form__btn-wrapper" v-if="result === 'init' || result === 'error'">
             <font-awesome-icon icon="fa-solid fa-envelope" aria-hidden="true"/>
-            <span>Tell us more</span>
+            <span>{{ $t('Tell us more') }}</span>
           </div>
           <div class="robo-wiki-feedback-form__btn-wrapper" v-if="result === 'wait'">
             <Loader class="loader"/>
-            <span>Sending your info...</span>
+            <span>{{ $t('Sending your info...') }}</span>
           </div>
         </button>
       </div>
@@ -53,7 +53,7 @@
 
     <div class="robo-wiki-feedback-form__success" v-if="result === 'success'">
       <font-awesome-icon icon="fa-solid fa-envelope" aria-hidden="true"/>
-      <div>Thanks,<br/> we’ll keep in touch!</div>
+      <div>{{ $t('Thanks') }},<br/> {{ $t("we'll keep in touch!") }}</div>
     </div>
 
   </div>

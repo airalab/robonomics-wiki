@@ -1,7 +1,7 @@
 <template>
   <div class="feedback">
     <div class="feedback__info">
-      <h3 class="feedback__title" @click="toggleResponse()" :class="{'feedback__title--withForm': currentResponse}"> Was this information helpful? </h3>
+      <h3 class="feedback__title" @click="toggleResponse()" :class="{'feedback__title--withForm': currentResponse}"> {{ $t('Was this information helpful?') }} </h3>
       <div class="feedback__options">
         <div @click="toggleResponse('smile')" class="feedback__icon " :class="{'feedback__icon--smile' : smile}">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

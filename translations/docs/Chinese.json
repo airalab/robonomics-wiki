@@ -1,0 +1,12 @@
+{
+  "Zigbee Adapter with Zigbee2MQTT for Pre-installed Image": "Zigbee适配器与预安装图像的Zigbee2MQTT",
+  "**In this article you will pair smart devices.**": "**在本文中，您将配对智能设备。**",
+  "Open a web browser and go to `http://%RASPBERRY_IP_ADDRESS%:8099`. You can find the IP address of Raspberry Pi using [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).": "打开一个网页浏览器，转到`http://%RASPBERRY_IP_ADDRESS%:8099`。您可以使用[Fing移动应用程序](https://www.fing.com/products)或[nmap CLI工具](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)找到树莓派的IP地址。",
+  "You will see web-interface of Zigbee2MQTT:": "您将看到Zigbee2MQTT的Web界面：",
+  "It's time to connect your smart device.": "是时候连接您的智能设备了。",
+  "First, press `Permit join (All)` button at the top of web-interface of Zigbee2MQTT.": "首先，在Zigbee2MQTT的Web界面顶部按下`Permit join (All)`按钮。",
+  "Then, start to pair devices. The most common way to switch a device to connect mode is to hold its power button or switch them on/off 5 times. Make sure Zigbee2MQTT is running.": "然后，开始配对设备。将设备切换到连接模式的最常见方法是按住其电源按钮或将其开/关5次。确保Zigbee2MQTT正在运行。",
+  "When the device connects, you will see them in web-interface:": "设备连接后，您将在Web界面中看到它们：",
+  "Now you should see this sensor in your Home Assistant WebUI. Go to `Settings` -> `Devices & Services` -> `Devices`:": "现在您应该在Home Assistant WebUI中看到此传感器。转到`设置`->`设备和服务`->`设备`：",
+  "After adding all the sensors, you can close web-interface of Zigbee2MQTT.": "添加完所有传感器后，您可以关闭Zigbee2MQTT的Web界面。"
+}

@@ -3,12 +3,12 @@
   <div  class="search-container"  :class="toggleClasses" tabindex="0" @focusin="focusIn" @focusout="focusOut">
 
       <!-- v-on:keyup.down="SearchLinksFocus" -->
-      <input v-model="search" type="search" aria-label="Search" placeholder="Search"/>
+      <input v-model="search" type="search" aria-label="Search" :placeholder="$t('Search')"/>
 
       <div v-if="searchResults.length > 0" role="listbox" class="searchresults">
 
         <div class="layout__content">
-          <div class="search-msg-count" aria-hidden="true">Found results: {{searchResults.length}}</div>
+          <div class="search-msg-count" aria-hidden="true">{{ $t('Found results:') }} {{searchResults.length}}</div>
 
           <nav>
             <g-link @focusout="SearchLinksNextFocus" v-for="post in searchResults" :key="post.node.id" :to="post.node.path">{{ post.node.title }}</g-link>

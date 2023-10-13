@@ -78,9 +78,7 @@ You can add helpful extras to your code:
 </code-helper>
 ```
 
-or
-
-`code with additional line`
+or `code with additional line`
 
 ```c
 <code-helper additionalLine="this line will be added above your code :)">

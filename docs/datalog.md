@@ -6,8 +6,7 @@ tools:
     https://github.com/airalab/robonomics
 ---
 
-**Now that you have some funds on your account you can submit extrinsics. The first to try is a Datalog. It allows you 
-to store data in the blockchain persistently. Imagine a distributed and crypto-protected storage for your data and this is it!**
+**Now that you have some funds on your account you can submit extrinsics. The first to try is a Datalog. It allows you to store data in the blockchain persistently. Imagine a distributed and crypto-protected storage for your data and this is it!**
 
 <robo-wiki-note type="warning" title="Dev Node">
 

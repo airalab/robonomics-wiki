@@ -1,0 +1,12 @@
+{
+  "Zigbee Adapter with Zigbee2MQTT for Pre-installed Image": "Zigbee-Adapter mit Zigbee2MQTT für vorinstalliertes Image",
+  "**In this article you will pair smart devices.**": "**In diesem Artikel werden intelligente Geräte gekoppelt.**",
+  "Open a web browser and go to `http://%RASPBERRY_IP_ADDRESS%:8099`. You can find the IP address of Raspberry Pi using [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).": "Öffnen Sie einen Webbrowser und gehen Sie zu `http://%RASPBERRY_IP_ADDRESS%:8099`. Sie können die IP-Adresse des Raspberry Pi mit der [Fing Mobile App](https://www.fing.com/products) oder dem [nmap CLI-Tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/) finden.",
+  "You will see web-interface of Zigbee2MQTT:": "Sie sehen die Web-Benutzeroberfläche von Zigbee2MQTT:",
+  "It's time to connect your smart device.": "Es ist Zeit, Ihr intelligentes Gerät zu verbinden.",
+  "First, press `Permit join (All)` button at the top of web-interface of Zigbee2MQTT.": "Drücken Sie zuerst die Schaltfläche `Permit join (All)` oben in der Web-Benutzeroberfläche von Zigbee2MQTT.",
+  "Then, start to pair devices. The most common way to switch a device to connect mode is to hold its power button or switch them on/off 5 times. Make sure Zigbee2MQTT is running.": "Dann beginnen Sie, Geräte zu koppeln. Die häufigste Methode, ein Gerät in den Verbindungsmodus zu versetzen, besteht darin, die Ein-/Aus-Taste gedrückt zu halten oder sie 5-mal ein- und auszuschalten. Stellen Sie sicher, dass Zigbee2MQTT läuft.",
+  "When the device connects, you will see them in web-interface:": "Wenn das Gerät verbunden ist, sehen Sie es in der Web-Benutzeroberfläche:",
+  "Now you should see this sensor in your Home Assistant WebUI. Go to `Settings` -> `Devices & Services` -> `Devices`:": "Jetzt sollten Sie diesen Sensor in Ihrer Home Assistant WebUI sehen. Gehen Sie zu `Einstellungen` -> `Geräte & Dienste` -> `Geräte`:",
+  "After adding all the sensors, you can close web-interface of Zigbee2MQTT.": "Nachdem Sie alle Sensoren hinzugefügt haben, können Sie die Web-Benutzeroberfläche von Zigbee2MQTT schließen."
+}

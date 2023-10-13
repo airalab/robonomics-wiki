@@ -1,6 +1,6 @@
 <template>
     <layout>
-        <div class="redirect"> <span>This page has moved to a</span> <a :href="redirect">{{ redirect }}</a> <span>Automatic redirecting...</span> </div>
+        <div class="redirect"> <span>{{ $t('This page has moved to a') }} </span> <a :href="redirect">{{ redirect }}</a> <span>{{$t('Automatic redirecting...')}}</span> </div>
     </layout>
 </template>
 

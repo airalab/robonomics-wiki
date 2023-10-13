@@ -9,20 +9,16 @@ tools:
     https://github.com/Multi-Agent-io/robonomics-interface
 ---
   
-**Imagine having a complicated device or system which has several modules to maintain and requires a few accounts to use.
-To keep all of them in one place or to encode some functionality with separate accounts or, for example, to set different datalog 
-sources for different information flows, Digital Twin module is to be used.**
+**Imagine having a complicated device or system which has several modules to maintain and requires a few accounts to use. To keep all of them in one place or to encode some functionality with separate accounts or, for example, to set different datalog sources for different information flows, Digital Twin module is to be used.**
 
 <robo-wiki-note type="warning" title="Dev Node">
 
-  Please pay attention that this and following tutorials are demonstrated on a local instance of Robonomics Node. Set
- up yours with [these instructions](/docs/run-dev-node).
+  Please pay attention that this and following tutorials are demonstrated on a local instance of Robonomics Node. Set up yours with [these instructions](/docs/run-dev-node).
 
 </robo-wiki-note>
 
 ## Theory overview
-Any account can create and manage a Digital Twin. The Twin may be imagined as some sort of table with the following
-contents:
+Any account can create and manage a Digital Twin. The Twin may be imagined as some sort of table with the following contents:
 
 | DT id  | Topic Name 	| Source    	|
 |--------|------------	|-----------	|
@@ -33,7 +29,7 @@ contents:
 | n	  | 0xFF...FFF 	| 4Hw...CyK 	|
 
 
- Where:
+Where:
 * **DT id** is unsigned integer unique Digital Twin index.
 * **Topic name** is a hex `H256` or ASCII data of 32 bytes length, same as [`Launch`](/docs/launch) extrinsic parameter. 
 For example: `0x1234....FF` or  `hello.parachain.robonomics.world`.
@@ -58,8 +54,7 @@ For example: `0x1234....FF` or  `hello.parachain.robonomics.world`.
 
 <robo-wiki-picture src="digital-twin/twin-create.jpg" />
 
-Submit the transaction. Here, no parameters needed to create a Twin. It will be granted an index and only the Digital
-Twin owner is able to add/modify topics of the Twin from now on.
+Submit the transaction. Here, no parameters needed to create a Twin. It will be granted an index and only the Digital Twin owner is able to add/modify topics of the Twin from now on.
 
 Twin ID may be found on the Explorer overview page.
 

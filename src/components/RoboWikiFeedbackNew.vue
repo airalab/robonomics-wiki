@@ -18,22 +18,22 @@ export default {
     return {
       reactions: [
         {
-          text: "Couldn't complete",
+          text: `${this.$t("Couldn't complete")}`,
           img: 'reaction-1.svg',
           id: 0
         },
         {
-          text: "It was hard",
+          text: `${this.$t("It was hard")}`,
           img: 'reaction-2.svg',
           id: 1
         },
         {
-          text: "It was ok",
+          text: `${this.$t('It was ok')}`,
           img: 'reaction-3.svg',
           id: 2
         },
         {
-          text: "It was easy",
+          text: `${this.$t('It was easy')}`,
           img: 'reaction-4.svg',
           id: 3
         },
