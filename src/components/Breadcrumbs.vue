@@ -27,16 +27,17 @@
           class="breadcrumbs__link"
           :aria-current="index === breadcrumbs.length-1 ? 'location' : ''"
         >
-          {{breadcrumb.title}} 
+          {{$t(breadcrumb.title)}} 
         </g-link>
 
         <g-link 
           v-if="breadcrumb.link"
           :to="breadcrumb.link" 
           class="breadcrumbs__link"
+          :class="{'active': breadcrumb.link == getCleanPath().slice(0, -1)}"
           :aria-current="index === breadcrumbs.length-1 ? 'location' : ''"
         >
-          {{breadcrumb.title}}
+          {{$t(breadcrumb.title)}}
         </g-link>
 
       </li>
@@ -63,7 +64,7 @@ export default {
     watch: {
     "$route": function(current, old) {
       this.breadcrumbs = [];
-      this.urlPath = '/' + this.$route.path.split('/')[1] + '/' + this.$route.path.split('/')[2];
+      this.urlPath = '/' + this.getCleanPath().split('/')[1] + '/' + this.getCleanPath().split('/')[2];
       this.getParentItem(this.items, this.urlPath, this.$route.query.topic);
     },
   },
@@ -74,7 +75,7 @@ export default {
       let t = null;
       for (let i = 0; i < root.length; i++) {
           node = root[i];
-          if (node.link === link && !node.topic || node.link === link + '/' && !node.topic || (node.topic && node.topic == topic && node.link.split('?')[0] == link) || node.items && (t = this.getParentItem(node.items, link, topic))) {
+          if (node.link === link && !node.topic || node.link === link + '/' && !node.topic || (node.topic && node.topic == topic && node.link.split('?')[0] == link + '/') || (node.topic && node.topic == topic && node.link.split('?')[0] == link) || node.items && (t = this.getParentItem(node.items, link, topic))) {
             let tempTopic = node.topic && node.topic === topic ? node.topic : null;
             const link = node.link ? node.link : null;
             const breadcrumb = {
@@ -94,17 +95,24 @@ export default {
             }
             return node;
           }
+
       }
       return null;
     },
 
     getCleanTitleLink(title) {
       return title.split(" ").join("-").toLowerCase();
+    },
+
+    getCleanPath() {
+      const filteredPath = this.$route.path.split('/').filter(el => !this.$localesList.includes(el))
+      return filteredPath.join('/')
     }
   },
 
   mounted() {
-    this.urlPath = '/' + this.$route.path.split('/')[1] + '/' + this.$route.path.split('/')[2];
+
+    this.urlPath = '/' + this.getCleanPath().split('/')[1] + '/' + this.getCleanPath().split('/')[2];
 
     this.getParentItem(this.items, this.urlPath, this.$route.query.topic);
   }
@@ -190,6 +198,7 @@ export default {
   .breadcrumbs__link.active {
     font-weight: 600;
     color: var(--text-color);
+    pointer-events: none;
   }
 
   a.breadcrumbs__link:hover {

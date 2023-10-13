@@ -52,7 +52,17 @@ module.exports = {
         siteId: 4,
         requireConsent: true
       }
-    }
+    },
+    {
+      use: "gridsome-plugin-translateit",
+      options: {
+        locales: ["en", "ru", "zh", "es", "ko", "de", "ja", "pt", "el", "it", "fr", "uk", "ar"],
+        defaultLocale: "en",
+        translations: [],
+        collections: ['docs'],
+        routes: yaml.load(fs.readFileSync('./src/data/locales/routes.yaml', 'utf8')),
+      }
+    },
   ],
 
   transformers: {

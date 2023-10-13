@@ -405,7 +405,7 @@ export default {
       octokit: null,
       ghIssueTitle: null,
       ogImageSrc: null,
-      allLocales: ["ru", "es", "ja", "ko", "pt"],
+      allLocales:  ["en", "ru", "zh", "es", "ko", "de", "ja", "pt", "el", "it", "fr", "uk", "ar"],
       localeForMeta: 'en',
     }
   },
@@ -527,11 +527,15 @@ export default {
     },
 
     currentIndex () {
+      let filteredPath = this.$route.path.split('/').filter(el => !this.$localesList.includes(el))
+      let clearedPath = filteredPath.join('/');
+
       return this.itemsList.findIndex(item => {
+
         if(item.topic) {
-          return item.link.replace(/\/$/, '').split('?')[0] === this.$route.path.replace(/\/$/, '').split('?')[0] && item.topic === this.$route.query.topic;
+          return item.link.replace(/\/$/, '').split('?')[0].includes(clearedPath.replace(/\/$/, '').split('?')[0]) && item.topic === this.$route.query.topic;
         } else {
-          return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
+          return item.link.replace(/\/$/, '') === clearedPath.replace(/\/$/, '')
         }
 
       })

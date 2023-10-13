@@ -3,7 +3,7 @@
 
     <p><g-link :href="'https://asciinema.org/a/'+vid">
       <img :src="'https://asciinema.org/a/'+ vid + '.png'"/>
-      <span>Click on picture to view asciinema video</span>
+      <span>{{ $t('Click on picture to view asciinema video') }}</span>
     </g-link></p>
 </template>
 

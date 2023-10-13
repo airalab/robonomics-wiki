@@ -5,7 +5,7 @@
     <GridLinks v-if="navLinks" :links="navLinks" />
 
     <div class="summary__not-exist" v-if="!items.length">
-      Sorry, nothing here :(
+      {{ $t('Sorry, nothing here :(') }}
     </div>
   </Layout>
 </template>
@@ -86,9 +86,28 @@
             };
 
             if(i.topic) {
-              console.log(obj)
               if(!obj.to.includes('?topic')) {
-                obj.to = i.link && i.link + `?topic=${i.topic}` 
+                if(this.$locale === 'en') {
+                  obj.to = i.link && i.link + `/?topic=${i.topic}` 
+                } else {
+                  const splitLink = i.link.split("/");
+                  const docName = splitLink[splitLink.length - 1];;
+                  obj.to = i.link && `/docs/${this.$locale}/${docName}/?topic=${i.topic}` 
+                }
+              } else {
+                const splitLink = i.link.split("/");
+                const docName = i.link.includes('topic') ? splitLink[2] : splitLink[splitLink.length - 1];
+                if(this.$locale !== 'en') {
+                  if(docName.includes('?topic')) {
+                    const splitTopic = docName.split('?')[0];
+                    obj.to = i.link && `/docs/${this.$locale}/${splitTopic}/?topic=${i.topic}`  
+                  } else {
+                    obj.to = i.link && `/docs/${this.$locale}/${docName}/?topic=${i.topic}` 
+                  }
+                } else {
+                  const readyLink = splitLink[2].includes('topic') ?  docName.split('?')[0] : splitLink[2];
+                  obj.to = `docs/${readyLink}/?topic=${i.topic}` 
+                } 
               }
             }
             

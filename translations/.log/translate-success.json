@@ -1,0 +1,47 @@
+{
+  "if you find any": {
+    "Chinese": "如果您发现任何问题"
+  },
+  "For new users": {
+    "Chinese": "对于新用户",
+    "Korean": "새로운 사용자를 위해",
+    "Japanese": "新規ユーザー向け",
+    "Russian": "Для новых пользователей",
+    "Arabic": "للمستخدمين الجدد",
+    "Spanish": "Para nuevos usuarios",
+    "German": "Für neue Benutzer",
+    "Portuguese": "Para novos usuários",
+    "Greek": "Για νέους χρήστες",
+    "Italian": "Per nuovi utenti",
+    "French": "Pour les nouveaux utilisateurs",
+    "Ukrainian": "Для нових користувачів"
+  },
+  "For Home Assistant users": {
+    "Chinese": "对于Home Assistant用户",
+    "Korean": "Home Assistant 사용자를 위해",
+    "Japanese": "Home Assistantユーザー向け",
+    "Russian": "Для пользователей Home Assistant",
+    "Arabic": "لمستخدمي Home Assistant",
+    "Spanish": "Para usuarios de Home Assistant",
+    "German": "Für Home Assistant Benutzer",
+    "Portuguese": "Para usuários do Home Assistant",
+    "Greek": "Για χρήστες του Home Assistant",
+    "Italian": "Per utenti di Home Assistant",
+    "French": "Pour les utilisateurs de Home Assistant",
+    "Ukrainian": "Для користувачів Home Assistant"
+  },
+  "Create an issue": {
+    "Chinese": "创建一个问题",
+    "Korean": "이슈를 생성하세요",
+    "Japanese": "問題を作成する",
+    "Russian": "Создать проблему",
+    "Arabic": "إنشاء مشكلة",
+    "Spanish": "Crear un problema",
+    "German": "Ein Problem erstellen",
+    "Portuguese": "Criar um problema",
+    "Greek": "Δημιουργήστε ένα θέμα",
+    "Italian": "Crea un problema",
+    "French": "Créer un problème",
+    "Ukrainian": "Створити проблему"
+  }
+}

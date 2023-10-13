@@ -4,8 +4,8 @@
     <g-image class="intro-image" src="~/assets/images/robonomics-lab.png"/> -->
 
     <div class="intro">
-      <h1>Explore Robonomics with guides</h1>
-      <div class="intro-description">Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.</div>
+      <h1>{{ $t('Explore Robonomics with guides') }}</h1>
+      <div class="intro-description">{{ $t('Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.') }}</div>
     </div>
 
     <!-- <div class="intro-wrapper">

@@ -2,8 +2,8 @@
 
     <section class="pageNextPrev">
 
-      <robo-wiki-button v-if="pagePrev && !itemsList[current].withoutNav && !itemsList[current].withoutPrev" :label="'← ' + (itemsList[current].prev ? itemsList[current].prev[0].title : pagePrev.title_en)" :link=" itemsList[current].prev ? itemsList[current].prev[0].link : pagePrev.link" additionalText="previous" type="secondary"/>
-      <robo-wiki-button class="second" v-if="pageNext && !itemsList[current].withoutNav && !itemsList[current].withoutNext" :label="(itemsList[this.current].next ? itemsList[this.current].next[0].title : pageNext.title_en) + ' →'" :link="itemsList[this.current].next ? itemsList[this.current].next[0].link : pageNext.link" additionalText="next" type="secondary"/>
+      <robo-wiki-button v-if="pagePrev && !itemsList[current].withoutNav && !itemsList[current].withoutPrev" :label="'← ' + (itemsList[current].prev ? $t(itemsList[current].prev[0].title) : ($t(pagePrev.title_en)))" :link=" itemsList[current].prev ? itemsList[current].prev[0].link : pagePrev.link" :additionalText="$t('previous')" type="secondary"/>
+      <robo-wiki-button class="second" v-if="pageNext && !itemsList[current].withoutNav && !itemsList[current].withoutNext" :label="(itemsList[this.current].next ? $t(itemsList[this.current].next[0].title) : ($t(pageNext.title_en))) + ' →'" :link="itemsList[this.current].next ? itemsList[this.current].next[0].link : pageNext.link" :additionalText="$t('next')" type="secondary"/>
 
     </section>
 
@@ -58,27 +58,64 @@ export default {
   
   props: {
     current: null,
-    itemsList: null
+    itemsList: null,
+  },
+
+  data() {
+    return {
+      prevObj: null,
+      nextObj: null
+    }
   },
 
   computed: {
     pagePrev() {
+      this.prevObj = {...this.itemsList[this.current - 1]}
       if(this.current > -1)  {
+          const splitLink = this.prevObj.link && this.prevObj.link.split("/");
+          const docName = splitLink && splitLink[splitLink.length - 1];
+
           if(this.itemsList[this.current - 1] && this.itemsList[this.current - 1].topic && !this.itemsList[this.current - 1].link.includes('topic')) {
-             this.itemsList[this.current - 1].link = this.itemsList[this.current - 1].link + '?topic=' + this.itemsList[this.current - 1].topic
-            return this.itemsList[this.current - 1]
+            if(this.$locale === 'en') {
+              this.prevObj.link =  this.prevObj.link + '/?topic=' + this.prevObj.topic;
+            } else {
+              this.prevObj.link = this.prevObj.link && `/docs/${this.$locale}/${docName}/?topic=${this.prevObj.topic}` 
+            }
+            return this.prevObj
           }
-          return this.itemsList[this.current - 1]
+
+          if(this.$locale === 'en') {
+            return this.prevObj
+          } else {
+            this.prevObj.link = this.prevObj.link && `/docs/${this.$locale}/${docName}` 
+            return this.prevObj
+          }
         }
       },
 
       pageNext() {
+        this.nextObj = {...this.itemsList[this.current + 1]}
+
         if(this.current > -1)  {
+
+          const splitLink = this.nextObj.link && this.nextObj.link.split("/");
+          const docName = splitLink && splitLink[splitLink.length - 1];
+
           if(this.itemsList[this.current + 1] && this.itemsList[this.current + 1].topic && !this.itemsList[this.current + 1].link.includes('topic')) {
-             this.itemsList[this.current + 1].link = this.itemsList[this.current + 1].link + '?topic=' + this.itemsList[this.current + 1].topic
-            return this.itemsList[this.current + 1]
+            if(this.$locale === 'en') {
+              this.nextObj.link =  this.nextObj.link + '/?topic=' + this.nextObj.topic;
+            } else {
+              this.nextObj.link = this.nextObj.link && `/docs/${this.$locale}/${docName}/?topic=${this.nextObj.topic}` 
+            }
+            return this.nextObj
           }
-          return this.itemsList[this.current + 1]
+
+          if(this.$locale === 'en') {
+            return this.nextObj
+          } else {
+            this.nextObj.link = this.nextObj.link && `/docs/${this.$locale}/${docName}` 
+            return this.nextObj
+          }
         }
       },
 
@@ -98,7 +135,7 @@ export default {
         return eval(`item.title_${this.$static.metadata.defaultLocale}`)
       }
     },
-  },
+  }
 }
 
 </script>

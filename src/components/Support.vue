@@ -2,7 +2,7 @@
   <g-link class="question__link" :to="link">
     <span class="question__icon">?</span>
     <span class="question__text">
-      Ask your question
+      {{ $t('Ask your question') }}
     </span>
   </g-link>
 </template>

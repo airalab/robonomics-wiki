@@ -52,6 +52,9 @@ import {
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+// for translations
+import { t, setI18n, withI18n } from '../translations/i18n.js'
+
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, { router, head, isClient, appOptions }) {
 
@@ -120,6 +123,9 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     Vue.use(userTracker);
   }
 
-
+  // for translations
+   Vue.prototype.$t = t; 
+   Vue.prototype.$setI18n = setI18n;
+   Vue.prototype.$withI18n = withI18n;
 
 }

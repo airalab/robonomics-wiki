@@ -13,13 +13,13 @@
 
     <div class="google-sheets-form__actions">
       <button v-if="!isSent" :class="classList" :disabled="error">
-        <span v-if="!isLoading">Send Feedback</span>
-        <span v-else>Sending Feedback...</span>
+        <span v-if="!isLoading">{{ $t('Send Feedback') }}</span>
+        <span v-else>{{ $t('Sending Feedback...') }}</span>
         <span class="spinner">
           <Spinner v-if="isLoading"/>
         </span>
       </button>
-      <button disabled v-else class="button google-sheets-form__button">Feedback was sent, thanks</button>
+      <button disabled v-else class="button google-sheets-form__button">{{ $t('Feedback was sent, thanks') }}</button>
       <div v-if="error" class="error">{{errorMessage}}</div>
     </div>
   </form>
@@ -74,7 +74,7 @@ export default {
 
       if (this.data_email === '' && this.data_feedback === '' && this.response === 'no_reaction') {
         this.error = true;
-        this.errorMessage = 'Please, add some feedback or choose one of reaction emoji';
+        this.errorMessage = `${this.$t('Please, add some feedback or choose one of reaction emoji')}`;
 
         return
       }

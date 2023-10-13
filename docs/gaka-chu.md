@@ -180,5 +180,5 @@ The robot listens to a specific ROS-topic where you need to pass the path to a d
 ```
 rostopic pub /run std_msgs/String "data: '<path_to_picture>'"
 ```
-After that. Two windows pop up showing the contours and the tracks. Close them and see Gaka-Chu drawing. Watch out for safety and alwasy be ready to press emergency stop button.
+After that. Two windows pop up showing the contours and the tracks. Close them and see Gaka-Chu drawing. Watch out for safety and always be ready to press emergency stop button.
 When Gaka-Chu finishes his art, you can send another path to picture and painter repeats the whole process.

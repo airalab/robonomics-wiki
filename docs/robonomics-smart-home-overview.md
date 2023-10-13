@@ -33,7 +33,7 @@ We have prepared detailed guides on setting up a smart home on Robonomics. The s
 
 <robo-wiki-grid-element-wrapper textAlign="center" :columns="2" flexible>
   <robo-wiki-grid-element>
-    <robo-wiki-button link="/docs/sub-activate?topic=Upgrade Home Assistant OS" label="For Home Assistant users" block />
+    <robo-wiki-button link="/docs/sub-activate/?topic=Upgrade Home Assistant OS" label="For Home Assistant users" block />
   </robo-wiki-grid-element>
   <robo-wiki-grid-element>
     <robo-wiki-button link="/docs/hass-image-install" label="For new users" block />

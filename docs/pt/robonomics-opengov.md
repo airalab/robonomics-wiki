@@ -1,0 +1,247 @@
+---
+title: Robonomics OpenGov
+
+contributors: [Leemo94]
+---
+
+## Introdução
+
+Robonomics mudou o modelo de governança da parachain para o sofisticado mecanismo OpenGov da Polkadot, que permite que a cadeia evolua ao longo do tempo, sob o comando dos detentores de tokens.
+A transição do Robonomics para o OpenGov garante que o DAO detentor de tokens, que controla a maioria das participações, possa sempre comandar a direção da parachain do Robonomics, promovendo qualquer mudança na rede que considerem adequada.
+
+<robo-wiki-note title='Note:' type="warning">
+  O OpenGov se aplica apenas à Robonomics Parachain, que é uma cadeia baseada em Substrate conectada à Kusama Relay Chain. O OpenGov não se aplica à implementação Ethereum do Robonomics, pois a mainnet Ethereum atualmente não suporta sistemas de governança sofisticados como o OpenGov.
+</robo-wiki-note>
+
+O OpenGov muda a forma como as operações diárias e a tomada de decisões são realizadas na parachain. Ele fornece maior clareza quanto ao escopo dos referendos e tem o potencial de aumentar drasticamente a velocidade das decisões tomadas na parachain.
+
+O OpenGov está em funcionamento na Kusama relay chain há alguns meses no momento da escrita, e provou que aumenta drasticamente o número de decisões (referendos individuais e discretos) que o DAO detentor de tokens pode propor, votar e, por meio da votação, controlar a direção do protocolo.
+
+**O conteúdo a seguir contido nesta seção da wiki abordará os princípios fundamentais do OpenGov na parachain do Robonomics e tem como objetivo ajudá-lo a entender melhor os conceitos por trás do OpenGov.**
+
+*É importante observar que a governança é um mecanismo em constante evolução no protocolo, especialmente nas fases iniciais de implementação.*
+
+Para aqueles interessados apenas nos parâmetros da Trilha Robonomics OpenGov, consulte [aqui](https://docs.google.com/spreadsheets/d/1CzUKxl5bEhLQRLC223NB81RTH4X4HgAoS1HPng23mXE/edit?usp=sharing).
+
+## Sobre Referendos
+
+Referendos são esquemas de votação simples, inclusivos e baseados em participação. Cada referendo tem uma proposta específica associada a ele, que assume a forma de uma chamada de função privilegiada no tempo de execução das cadeias. Isso também pode incluir a chamada mais poderosa `set_code`, que tem a capacidade de trocar todo o código do tempo de execução das cadeias - isso é exclusivo para cadeias baseadas em Substrate e remove a necessidade de um "hard fork" da cadeia ao atualizar a lógica de negócios das cadeias ( tempo de execução).
+
+Referendos são eventos discretos que têm um período de votação fixo (mais sobre os diferentes períodos durante o ciclo de vida de um referendo posteriormente). Os detentores individuais de tokens podem votar de três maneiras em referendos - AYE (concordar/sim), NAY (discordar/não) ou ABSTAIN (abster-se) de votar completamente.
+
+Todos os referendos têm um atraso de promulgação associado a eles. Este é o período entre o término do referendo e, assumindo que o referendo foi aprovado, as mudanças sendo promulgadas na rede. 
+
+<robo-wiki-note title='Note:' type="warning">
+
+  Existe um Período de Promulgação **Mínimo** especificamente definido para cada tipo diferente de Origem, mas o originador de um referendo específico pode definir as tarefas específicas desse referendo para serem executadas muitos blocos no futuro
+
+</robo-wiki-note>
+
+Os referendos são considerados "assados" se estiverem encerrados e os votos forem contabilizados. Supondo que o referendo tenha sido aprovado, ele será agendado para promulgação (no agendador das cadeias). Os referendos são considerados "não assados" se o resultado estiver pendente - como se o referendo ainda estivesse sendo votado.
+
+Com a adição do OpenGov, qualquer pessoa pode iniciar um referendo a qualquer momento e pode fazê-lo quantas vezes desejar. O OpenGov remove a limitação de apenas 1 referendo poder ser processado de cada vez (observe que, no Gov v1, apenas 1 referendo pode ser votado de cada vez. A única exceção é um referendo de emergência adicional pelo Comitê Técnico acelerado, que também pode ser votado simultaneamente pela comunidade).
+
+O OpenGov introduz várias novas funcionalidades / conceitos conhecidos como Origens e Trilhas, e estes são introduzidos para ajudar no fluxo e processamento de referendos no protocolo.
+
+Cada Origem está associada a uma única classe de referendo, e cada classe está associada a uma trilha. A trilha descreve o ciclo de vida do referendo e é específica para aquela Origem particular de onde o referendo se origina. Ter trilhas com parâmetros específicos permite que a rede modifique dinamicamente o ciclo de vida dos referendos com base em seu nível de privilégio (você pode pensar no nível de privilégio como sendo o quão poderoso um referendo pode ser / quais tipos de mudanças ele pode fazer no protocolo).
+
+*Pense nas Origens como o poder associado a um referendo e pense nas Trilhas como os parâmetros de votação associados a um referendo, como a duração de seus períodos e os critérios de aprovação e suporte.*
+
+Por exemplo, uma atualização de tempo de execução não tem as mesmas implicações para o protocolo do que uma pequena dica do tesouro, e, portanto, são necessárias origens diferentes nas quais diferentes participações, aprovações, depósitos e períodos de promulgação (Trilhas) serão predefinidos no pallet das cadeias.
+
+## Propondo um Referendo e Ciclo de Vida do Referendo 
+
+### Período de Preparação
+
+No OpenGov, quando um referendo é criado inicialmente, ele pode ser imediatamente votado pela comunidade detentora de tokens. No entanto, ele não está imediatamente em um estado em que possa ser encerrado, ou ter seus votos contados, aprovados e promulgados sumariamente. Em vez disso, os referendos devem cumprir uma série de critérios antes de serem movidos para o Período de Decisão. Até que os referendos entrem no Período de Decisão, eles permanecerão indefinidos - e eventualmente expirarão após o período de ciclo de vida geral especificado na trilha individual.
+
+<robo-wiki-picture src='robonomics-opengov/1.jpeg' alt="picture" />
+
+Os critérios para um referendo entrar no Período de Decisão são os seguintes:
+1. Um Período de Preparação que estabelece a quantidade de tempo que deve decorrer antes que o Período de Decisão possa começar. Este Período de Preparação ajuda a mitigar a possibilidade de "ataque de decisão" em que um atacante que controla uma quantidade substancial de poder de voto pode tentar usar sua grande participação para aprovar imediatamente um referendo após a proposta, contornando a possibilidade de os outros membros do token holder DAO terem tempo adequado para considerar o referendo e participar da votação. Por isso, as Origens com níveis de privilégio mais altos têm Períodos de Preparação significativamente mais longos.
+
+2. Deve haver espaço para a decisão. Cada trilha tem seus próprios limites para a quantidade de referendos que podem ser decididos simultaneamente (max_deciding). Trilhas que possuem níveis de privilégio mais poderosos terão limites mais baixos. Por exemplo, a origem de nível Root terá uma quantidade significativamente menor de referendos que podem ser decididos simultaneamente em comparação com origens de nível de privilégio mais baixo, como a origem Small Tipper.
+
+3. O Depósito de Decisão deve ser enviado. Inicialmente, criar um referendo é bastante barato, e o valor do Depósito de Submissão (reservado quando o referendo é criado inicialmente) é bastante baixo, e é composto principalmente pelo valor que custa para o armazenamento on-chain associado ao referendo. Os Depósitos de Decisão são significativamente mais altos, o que é necessário para combater o spam e faz parte do jogo econômico que o OpenGov traz, que veremos mais adiante.
+
+Uma vez que todos esses três critérios acima tenham sido atendidos, o referendo passará para o Período de Decisão. Os votos no referendo serão então contados para o resultado.
+
+### Período de Decisão
+
+*Para uma demonstração rápida em vídeo do Período de Decisão, veja [este vídeo](https://www.youtube.com/watch?v=wk58C-2CqPI)*.
+
+Uma vez que um referendo atenda a todos os critérios detalhados na seção acima, ele entrará no Período de Decisão.
+
+O Período de Decisão gira em torno de dois conceitos principais, sendo eles os critérios de Aprovação e Suporte. 
+
+A Aprovação é definida como a parcela do peso do voto de aprovação (SIMs vs NÃOs) em comparação com o peso total do voto (todos os votos SIM e NÃO combinados). A convicção de cada voto conta para o peso geral dos votos SIM/NÃO (mais sobre votação por convicção / bloqueio voluntário em uma seção posterior).
+
+O Suporte é o número total de votos (tokens) que participaram do referendo (e não é ajustado pela convicção) em comparação com o total de votos possíveis que podem ser feitos no sistema (pense nisso como a emissão total de XRT na parachain - notavelmente, o fornecimento circulante total de XRT não é o principal fator aqui, devido ao fato de que alguma parte desse número existe no Ethereum como tokens ERC-20).
+
+**Votos que estão na direção de ABSTENÇÃO NÃO contribuem para os critérios de Aprovação, mas são incluídos / contam para os critérios de Suporte**
+
+Um referendo deve atender aos critérios de Suporte E Aprovação durante o Período de Decisão para progredir para o Período de Confirmação.
+
+Para detalhes dos critérios individuais de Suporte e Aprovação para cada trilha, consulte esta [planilha](https://docs.google.com/spreadsheets/d/1CzUKxl5bEhLQRLC223NB81RTH4X4HgAoS1HPng23mXE/edit?usp=sharing).
+
+### Período de Confirmação
+
+Cada trilha tem sua própria duração específica para o Período de Confirmação. Trilhas que possuem níveis de privilégio maiores (como Root) têm Períodos de Confirmação significativamente mais longos do que aqueles com níveis de privilégio mais baixos (como Small Tipper).
+
+Os referendos devem continuar atendendo aos critérios de Aprovação e Suporte durante toda a duração do Período de Confirmação, caso contrário, eles voltarão para o Período de Decisão (observe: o Período de Decisão não é pausado durante o Período de Confirmação, portanto, é totalmente possível que um Período de Decisão expire durante o Período de Confirmação, o que significa que se um referendo for removido do Período de Confirmação por não atender mais aos critérios de Aprovação e Suporte, ele será considerado como um referendo fracassado e não promulgado).
+
+**É possível ajustar os critérios de aprovação e suporte para faixas individuais por meio de um referendo com privilégios de Origem Raiz.**
+
+Origens com níveis de privilégio mais baixos têm critérios de aprovação e suporte significativamente mais fáceis (definidos pela faixa) do que aqueles com níveis de privilégio mais altos. Da mesma forma, origens com níveis de privilégio mais altos têm curvas menos íngremes do que aquelas com menos privilégios (conforme definido na faixa), a fim de garantir que o DAO detentor do token realmente aprove o referendo e evitar o sniping de referendos de origem de alto privilégio.
+
+No OpenGov, referendos que não são aprovados após o período de decisão expirar são considerados rejeitados por padrão, e tanto os depósitos de submissão quanto de decisão são reembolsados aos seus originadores (observação: o depósito de decisão pode ser feito por alguém que não seja o originador do referendo).
+
+Se um referendo conseguir atender continuamente aos critérios de aprovação e suporte durante todo o Período de Confirmação, então ele é considerado aprovado e será agendado para ser executado a partir da origem proposta, mas o referendo só será executado após o período mínimo de promulgação ter decorrido.
+
+### Período de Promulgação
+
+O Período de Promulgação é especificado pelo originador quando o referendo é proposto, mas está sujeito ao Período Mínimo de Promulgação, que é especificado em cada faixa. Origens mais poderosas têm um período mínimo de promulgação muito maior do que aquelas com menos privilégios. Isso garante que a rede tenha tempo suficiente para se preparar para quaisquer mudanças que um referendo poderoso possa impor.
+
+## Bloqueio Voluntário / Convicção
+
+Robonomics usa um conceito conhecido como bloqueio voluntário, ou votação por convicção. Isso permite que os detentores de tokens aumentem seu poder de voto decidindo por quanto tempo estão dispostos a bloquear seus tokens para um referendo específico. Esse mecanismo afeta apenas o critério de aprovação para cada referendo, e a votação por convicção não afeta o critério de suporte.
+
+A votação por convicção pode ser calculada usando esta fórmula:
+
+$$\text{Approval Votes} = \text{Tokens} * \text{Conviction\_Multiplier}$$
+
+
+Esta tabela mostra como cada nível crescente de período de bloqueio multiplica seu voto para o critério de aprovação:
+
+| Lock Periods | Vote Multiplier | Lock Up Days |
+|--------------|-----------------|--------------|
+| No Lock      | 0.1x            | 0          |
+| 1            | 1x              | 7            |
+| 2            | 2x              | 14           |
+| 4            | 3x              | 28           |
+| 8            | 4x              | 56           |
+| 16           | 5x              | 112          |
+| 32           | 6x              | 224          |
+
+
+A quantidade máxima de convicção que um detentor de token pode usar é de 6x convicção. Você só pode definir a convicção de acordo com a tabela acima e não pode, por exemplo, usar 5,5x convicção.
+
+Enquanto um token está bloqueado devido à votação, ele ainda pode ser usado para votar em outros referendos, no entanto, ele não fará parte do seu saldo transferível (você não pode enviá-lo para outra conta) - e o saldo só se tornará transferível novamente quando todo o período de bloqueio expirar.
+
+## Delegação de Voto
+
+No OpenGov, um mecanismo foi adicionado para permitir que os detentores de tokens que não têm tempo suficiente para revisar cada referendo ainda tenham seus tokens usados como parte do sistema de governança, isso é conhecido como delegação de voto.
+
+Os detentores de tokens podem optar por delegar seu poder de voto a outro eleitor no sistema (outra conta). Os eleitores podem especificar a delegação de seu poder de voto de forma ágil, permitindo que atribuam seu poder de voto a uma conta diferente para cada Origem individual. Os eleitores também podem definir para atribuir uma quantidade diferente de poder de voto para cada Origem (número de tokens e nível de convicção).
+
+Essa função de delegação tem um objetivo, aumentar a participação dos eleitores e ajudar a garantir que as participações necessárias para atender aos critérios de aprovação e suporte sejam alcançadas.
+
+Para delegar seu poder de voto, você pode usar a função "Delegate" que pode ser encontrada na seção Governança -> Referendo do [Portal Robonomics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/explorer). Alternativamente, os usuários podem enviar a extrínseca convictionVoting(Delegate) usando a seção Desenvolvedor -> Extrínsecas do Portal Robonomics, no entanto, usar a função "Delegate" da seção de referendo do portal é muito mais fácil.
+
+## Cancelamento / Anulação de Referendo e o Jogo Econômico de Governança
+
+No OpenGov, existem Origens dedicadas a rejeitar referendos em andamento, independentemente de seu status. Essas são conhecidas como faixas de Cancelador de Governança e Assassino de Governança.
+
+Essas Origens intervêm em um referendo que já foi votado. Essas Origens, se o referendo originado por elas for aprovado, rejeitarão imediatamente um referendo em andamento, independentemente de seu status. 
+
+O cancelamento em si é um tipo de referendo que deve ser votado pelos detentores de tokens para ser executado. O cancelamento possui sua própria origem e faixa que têm um tempo de liderança menor (Período de Decisão, etc.) e têm curvas de aprovação e suporte com uma curva mais íngreme (o que significa que seus critérios são muito mais fáceis de serem atendidos ao longo do tempo) do que outras Origens. Isso ocorre devido ao fato de que o cancelamento de um referendo geralmente vem com um senso de urgência.
+
+O Cancelador de Governança tem como objetivo rejeitar imediatamente um referendo em andamento. Quando um referendo é cancelado por essa origem, tanto o Depósito de Submissão quanto o Depósito de Decisão são reembolsados aos seus originadores. Um exemplo de quando um referendo pode ser considerado cancelado é se o originador cometeu algum erro humano no conteúdo de seu referendo e não necessariamente tentou fazer algo malicioso.
+
+O Assassino de Governança tem como objetivo rejeitar imediatamente um referendo em andamento. É aí que o jogo econômico de governança entra em jogo. Origens com altos níveis de privilégio, como Root, têm um Depósito de Decisão que requer uma grande quantidade de capital (tokens XRT) para ser postado para que o referendo entre no Período de Decisão. 
+
+Se um ator malicioso enviar um referendo, como um referendo com origens Root que visa `set_code` do tempo de execução da cadeia para algo que interromperá a produção de blocos da cadeia, então o DAO detentor de tokens pode levantar um referendo contrário ao Assassino de Governança para punir essa ação. Se o referendo malicioso for rejeitado pela origem Assassino de Governança, tanto o Depósito de Submissão quanto o Depósito de Decisão serão cortados, o que significa que o originador (as contas que postaram esses depósitos) perderão esses fundos. 
+
+Isso significa que há uma consequência econômica severa para atores maliciosos que tentam levantar referendos que teriam impactos negativos graves para a cadeia, o que teoricamente impedirá qualquer ator malicioso de tentar fazer isso.
+
+O Depósito de Decisão para a própria faixa de Governança Assassina é bastante alto, isso é para impedir que atores igualmente maliciosos tentem reduzir os depósitos de referendos que, de outra forma, seriam bons. **Um referendo existente de Governança Assassina pode ser anulado por um referendo subsequente de Governança Assassina.**
+
+## Comitê Técnico Robonomics e Origem na Lista Branca
+
+Este grupo é um órgão de especialistas autônomos que tem como objetivo principal representar humanos que incorporam e possuem o conhecimento técnico do protocolo de rede Robonomics. 
+
+Este grupo (e somente este grupo) é capaz de originar referendos a partir do pallet Whitelist. Este pallet faz uma coisa, ele permite que uma Origem aumente o nível de privilégio de outra Origem para uma determinada operação. 
+
+Este grupo pode autorizar referendos de uma origem conhecida como Whitelisted-Root, e estes referendos podem ser executados com privilégios de nível Root, mas estes referendos só funcionarão com comandos específicos autorizados pelo grupo. O pallet Whitelist verifica duas coisas:
+1. A Origem realmente é a Whitelisted-Root (ou seja, que o referendo passou por esta faixa de Origem).
+2. A proposta realmente foi incluída na lista branca pelo grupo.
+
+Se ambas as condições forem verdadeiras, então a operação será executada com privilégios de nível Root.
+
+Este sistema permite a capacidade de ter uma nova faixa paralela (Origem Whitelisted-Root), cujos parâmetros permitem um tempo de resposta de votação mais curto (os critérios de Aprovação e Suporte são um pouco mais fáceis de serem atendidos do que o Root). Este processo aberto e transparente permite que este grupo de especialistas do Protocolo de Rede Robonomics proponha referendos que eles determinaram serem seguros e urgentes.
+
+Deve-se observar que os Critérios de Suporte para referendos iniciados com a origem Whitelisted-Root não tendem a zero como muitas outras origens/faixas. Isso garante que este grupo não tenha controle de fato sobre todo o Protocolo de Rede Robonomics e requer um nível mínimo de Suporte (participação dos votantes) do detentor geral de tokens.
+
+
+## Durações de Referendos 
+
+É importante entender que a duração de cada referendo individual não é algo concreto, não é fixo. Alguns períodos dentro do ciclo de vida do referendo, como o período mínimo de promulgação, de fato têm uma duração concreta, no entanto, outros, incluindo o período de decisão, não têm. Por exemplo, não é preciso somar as durações máximas dos períodos de Preparação, Decisão, Confirmação e Promulgação Mínima e afirmar que "cada referendo levará X dias", é muito mais fluido do que isso.
+
+Vamos analisar isso através da perspectiva de alguns referendos separados, todos originados da mesma Origem, neste caso, a origem Root. 
+
+A Origem Root tem sua própria faixa, onde as durações de cada período são definidas, assim como as curvas de Aprovação e Suporte.
+
+É importante lembrar que os referendos só avançarão para a próxima etapa de seu ciclo de vida se certas condições forem atendidas. 
+
+![](https://i.imgur.com/v9jwqGE.jpg)
+
+Você deve assumir nas imagens a seguir que, para um referendo avançar para a próxima etapa de seu ciclo de vida, as condições descritas na imagem acima teriam que ter sido atendidas (a menos que seja declarado o contrário).
+
+
+### Duração máxima possível com muito pouca participação dos votantes
+
+A imagem abaixo é uma representação do cronograma máximo possível para um referendo, pense nisso como um referendo que:
+1. Teve seu Depósito de Decisão publicado e, portanto, entrou no Período de Decisão.
+2. Tem um único voto, por exemplo, 1 XRT, na direção AYE - isso significa que ele só atenderá o Suporte necessário (participação dos votantes) no final do Período de Decisão (já que o Suporte geral é extremamente baixo), mas tem 100% de Aprovação, então eventualmente atenderá aos requisitos para entrar no Período de Confirmação.
+3. Continua atendendo aos critérios mencionados durante o Período de Confirmação.
+4. A proposta levantada pelo referendo será promulgada exatamente no mesmo bloco em que o Período Mínimo de Promulgação termina - tecnicamente, o originador do referendo pode definir as alterações na rede conforme detalhado no referendo para promulgar muitos blocos no futuro, então realisticamente o ciclo de vida real de um referendo individual pode durar vários dias, semanas, meses ou anos.
+
+![](https://i.imgur.com/CUwX3kf.jpg)
+
+Podemos ver que neste exemplo, o ciclo de vida do referendo seria (aproximadamente) de 17 dias.
+
+
+### Duração com muita participação dos votantes (com uma grande quantidade de votos AYE)
+
+Agora vamos dar uma olhada em um referendo em que o DAO detentor do token XRT expressou muito interesse. Neste exemplo, vamos supor que ocorreu uma participação geral de aproximadamente 248.771 XRT e todos os eleitores estão votando na direção AYE (observação: tecnicamente, nesta fase de um referendo Root, de acordo com a trilha, apenas 60% dos votos devem estar na direção AYE para que um referendo atenda aos critérios de aprovação).
+
+<robo-wiki-note title="Note:" type="warning">
+
+ Sempre consulte as informações mais atualizadas da trilha para obter informações precisas sobre cada trilha, mais informações podem ser encontradas nesta [planilha](https://docs.google.com/spreadsheets/d/1CzUKxl5bEhLQRLC223NB81RTH4X4HgAoS1HPng23mXE/edit?usp=sharing).
+
+</robo-wiki-note>
+
+Neste exemplo:
+1. O Depósito de Decisão foi publicado durante o Período de Preparação e, portanto, pôde fazer a transição para o Período de Decisão no final do Período de Preparação.
+2. Muitos eleitores votaram neste referendo - obtendo uma participação de aproximadamente 248.771 XRT em um período relativamente curto de tempo.
+3. Os votos foram majoritariamente na direção AYE (acima de 60% AYE).
+4. O referendo atende continuamente aos critérios do Período de Confirmação durante todo o seu Período de Confirmação (Observação: se um referendo deixar de atender aos critérios do Período de Confirmação, ele voltará ao seu Período de Decisão).
+5. A proposta levantada pelo referendo será promulgada exatamente no mesmo bloco em que o Período Mínimo de Promulgação termina.
+
+Devido ao fato de ter havido uma participação de aproximadamente 248.771 XRT, o referendo atenderá aos critérios para entrar em seu Período de Confirmação após cerca de 168 horas (7 dias).
+
+![](https://i.imgur.com/Y8Qf2ib.jpg)
+
+Podemos ver que neste segundo exemplo, devido ao fato de ter havido uma boa participação de eleitores, o Período de Decisão realmente terminou na metade do tempo máximo alocado. Resultando em um referendo que pode ser promulgado em cerca de 10 dias.
+
+
+### Duração quando o Depósito de Decisão nunca é publicado
+
+Agora, vamos dar uma olhada em um referendo que foi originado, mas nunca teve seu Depósito de Decisão publicado. Tais referendos estão em uma espécie de estado de "limbo", onde seu Período de Preparação terminou, mas, como o Depósito de Decisão não foi publicado, o referendo permanece no "Estado de Preparação".
+
+![](https://i.imgur.com/UK3RsGf.jpg)
+
+Podemos ver que neste terceiro exemplo, devido ao fato de o Depósito de Decisão nunca ter sido publicado, o referendo na verdade nunca entrará no Período de Decisão, em vez disso, permanecerá no "Estado de Preparação". Isso significa que, eventualmente, se nenhum Depósito de Decisão for publicado, o referendo expirará após a duração especificada na constante timeOut do pallet.
+
+Isso já aconteceu anteriormente no Kusama, em que um referendo foi publicado com origens Root, mas devido aos altos requisitos de capital para publicar o Depósito de Decisão, o referendo nunca entrou nas últimas etapas de seu ciclo de vida. Tais referendos são concluídos com a marca de "expirado".
+
+
+### Duração quando o Depósito de Decisão é publicado tarde
+
+Por fim, vamos dar uma olhada em um exemplo em que o Depósito de Decisão não foi publicado por um tempo considerável após o referendo ter sido originado. Isso já aconteceu anteriormente no Kusama, onde um referendo foi publicado com a origem Root, mas o originador teve que gastar tempo para encontrar alguém com uma grande quantidade de capital para publicar o Depósito de Decisão em seu nome.
+
+![](https://i.imgur.com/egVeaUh.jpg)
+
+Neste exemplo final, devido ao fato de o Depósito de Decisão ter sido publicado após o término do Período de Preparação, mas antes que o referendo tenha expirado - o ciclo de vida do referendo é realmente muito mais longo do que o normal, pois ele entra no Período de Decisão após um período de tempo mais longo.
+
+É importante observar que o DAO detentor do token é capaz de votar AYE/NAY em referendos que estão no Período de Preparação ou presos no "Estado de Preparação".

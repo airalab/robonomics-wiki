@@ -5,7 +5,7 @@
             v-for="item in links" :key="item.to"
             :to="item.to"
         >
-            {{item.name}}
+            {{$t(item.name)}}
         </g-link>
     </nav>
 

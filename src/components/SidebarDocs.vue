@@ -4,14 +4,14 @@
 
       <li v-for="(item, key) in items" :key="key">
 
-        <g-link class="menu-link" v-if="item.link && item.published!=false" :to="!item.topic ? item.link : addQuery(item)" exact>
-          {{ getTitle(item) }}
+        <g-link class="menu-link" v-if="item.link && item.published!=false" :to="!item.topic ? item.link : addQuery(item)" :class="{'active': $locale !== 'en' && item.link === getCleanPath().slice(0, -1) && !item.topic || $locale !== 'en' && (item.topic && item.topic === $route.query.topic && item.link === getCleanPath().slice(0, -1))}" exact>
+          {{ $t(getTitle(item)) }}
         </g-link>
         
         <template v-else>
 
           <h4 class="menu-subtitle" @click="toggle" v-if="item.published!=false" :class="hascurrent(item.items, item.title_en) ? 'open' : 'close'">
-            {{ item['title_en'] }}
+            {{  $t(item['title_en']) }}
           </h4>
 
           <List :items="item.items" />
@@ -61,12 +61,16 @@ export default {
 
 
     hascurrent (a, title) {
+
       let path = this.$route.matched[0].path 
+
+      let filteredPath = path.split('/').filter(el => !this.$localesList.includes(el))
+      let clearedPath = filteredPath.join('/')
 
       let topic = this.$route.query.topic ?? this.$route.query.topic;
 
-      if((path.match(new RegExp("/", "g")) || []).length == 1) {
-        path += '/';
+      if((clearedPath.match(new RegExp("/", "g")) || []).length == 1) {
+        clearedPath += '/';
       }
 
       let contains = false
@@ -74,7 +78,7 @@ export default {
       for (var i = 0; i < a.length; i++) {
 
         if(!a[i].items){
-          if(a[i].link == path && !topic){
+          if(a[i].link == clearedPath && !topic){
             contains = true;
 
           } else if(a[i].topic && topic == title) {
@@ -101,16 +105,35 @@ export default {
       } 
     },
 
+    getCleanPath() {
+      let filteredPath = this.$route.path.split('/').filter(el => !this.$localesList.includes(el))
+      return filteredPath.join('/')
+    },
+
     addQuery(item) {
+
+
       if(!item.link.includes('topic')) {
-        return `${item.link}?topic=${item.topic}`
+        const splitLink = item.link.split("/");
+        const docName = splitLink[splitLink.length - 1];
+        if(this.$locale !== 'en') {
+          return `/docs/${this.$locale}/${docName}/?topic=${item.topic}`
+        } else {
+          return `${item.link}/?topic=${item.topic}`
+        }
+
       } else {
-        return item.link
+        const splitTopic = item.link.split("?")[0];
+
+        if(this.$locale !== 'en') {
+          return `/docs/${this.$locale}/${splitTopic.split('/')[2]}/?topic=${item.topic}`
+        } else {
+          return `${splitTopic}/?topic=${item.topic}`
+        }
+
       }
     }
-
-  },
-  
+  }
 }
 </script>
 

@@ -15,6 +15,7 @@
 
         <div class="header-nav">
           <ToggleTheme class="inline-block" />
+          <ToggleLang class="inline-block"/>
           <NavIcon class="inline-block hiddenDesktop" :section="'sidebarDocs'" :icon="'Menu'"/>
           <NavIcon class="inline-block hiddenDesktop--720" :section="'sidebarContent'" :icon="'Dots'" v-if="!homePage && !$route.path.includes('summary')"/>
         </div>
@@ -126,7 +127,7 @@ export default {
     NavIcon: () => import("~/components/NavIcon.vue"),
     Search: () => import("~/components/Search.vue"),
     ToggleTheme: () => import("~/components/ToggleTheme.vue"),
-    ToggleLang: () => import("~/components/ToggleLang.vue"),
+    ToggleLang: () => import("~/components/LanguageSwitcher.vue"),
   },
 
   computed:{

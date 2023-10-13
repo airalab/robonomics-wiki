@@ -3,21 +3,21 @@
   <g-link v-if="link" :class="classList" class="inline-block" :to="link">
     <template v-if="icon != 'none'">
       <Icon :icon="icon" />
-      <span v-if="label != ''" class="inline-block">{{ label }}</span>
+      <span v-if="label != ''" class="inline-block"> {{ $t(label) }}</span>
     </template>
     <span class="additional-text"  v-if="icon == 'none' & label != '' & additionalText != ''">  {{ additionalText }}</span>
     <template v-if="icon == 'none' & label != ''">
-      {{ label }}
+      {{ $t(label) }}
     </template>
   </g-link>
 
   <button v-else type="button" :class="classList" @click="onClick" :disabled="disabled" class="inline-block">
     <template v-if="icon != 'none'">
       <Icon :icon="icon" />
-      <span v-if="label != ''" class="inline-block">{{ label }}</span>
+      <span v-if="label != ''" class="inline-block">{{ $t(label) }}</span>
     </template>
     <template v-if="icon == 'none' & label != ''">
-      {{ label }}
+      {{ $t(label) }}
     </template>
   </button>
 

@@ -199,7 +199,7 @@ To use new chain spec replace rococo.json file in ./config/ directory this new o
 ```
 You can freely edit the code. The above command will rebuild the project and update the collator node before starting.
 Cumulus is pre-release software that is still under heavy development.
-We are using a specific commit of polkadot [46c826f595021475fa5dbcd0987ed53f104e6e15  18 mar 2021] (https://github.com/paritytech/polkadot/tree/46c826f595021475fa5dbcd0987ed53f104e6e15)
+We are using a specific commit of polkadot [46c826f595021475fa5dbcd0987ed53f104e6e15  18 mar 2021](https://github.com/paritytech/polkadot/tree/46c826f595021475fa5dbcd0987ed53f104e6e15)
 
 You can use more recent versions of the software. To do this, change  POLKADOT_COMMIT  in ./scipt/config.sh
 to the latest commit of `rococo-v1` branch, delete ./bin/polkadot, and run 
