@@ -183,7 +183,7 @@ $$\text{Approval Votes} = \text{Tokens} * \text{Conviction\_Multiplier}$$
 
 重要的是记住，只有在满足某些条件的情况下，公投才会进入其生命周期的下一个阶段。 
 
-![](https://i.imgur.com/v9jwqGE.jpg)
+<robo-wiki-picture src='robonomics-opengov/2.jpeg' alt="picture" />
 
 在下面的图像中，您应该假设为了使公投进入其生命周期的下一个阶段，必须满足上述图像中描述的条件（除非另有说明）。
 
@@ -196,7 +196,7 @@ $$\text{Approval Votes} = \text{Tokens} * \text{Conviction\_Multiplier}$$
 3. 在确认期间继续满足上述条件。
 4. 公投提出的提案将在最小生效期结束时恰好生效 - 从技术上讲，公投的发起者可以将网络更改设置为在未来的许多区块中执行，因此实际上一个单独公投的生命周期可能跨越多天、周、月或年。
 
-![](https://i.imgur.com/CUwX3kf.jpg)
+<robo-wiki-picture src='robonomics-opengov/3.jpeg' alt="picture" />
 
 我们可以看到，在这个例子中，公投的生命周期将是（大约）17天。
 
@@ -220,7 +220,7 @@ $$\text{Approval Votes} = \text{Tokens} * \text{Conviction\_Multiplier}$$
 
 由于有约248,771个XRT的投票，公投将在约168小时（7天）后满足进入确认期的标准。
 
-![](https://i.imgur.com/Y8Qf2ib.jpg)
+<robo-wiki-picture src='robonomics-opengov/4.jpeg' alt="picture" />
 
 我们可以看到，在这个第二个例子中，由于有相当多的选民投票，决策期实际上在其最大允许时间的一半结束。这导致公投可以在约10天内生效。
 
@@ -229,7 +229,7 @@ $$\text{Approval Votes} = \text{Tokens} * \text{Conviction\_Multiplier}$$
 
 现在，让我们来看一个公投的例子，该公投已经发起，但决策存款从未发布。这样的公投处于一种“悬而未决”的状态，其准备期已经结束，但由于决策存款未发布，公投仍处于“准备状态”。
 
-![](https://i.imgur.com/UK3RsGf.jpg)
+<robo-wiki-picture src='robonomics-opengov/5.jpeg' alt="picture" />
 
 我们可以看到，在这个第三个例子中，由于决策存款从未发布，公投实际上永远不会进入决策期，而是保持在“准备状态”。这意味着，如果永远没有决策存款发布，公投将在调色板的timeOut常量指定的持续时间后超时。
 
@@ -240,7 +240,7 @@ $$\text{Approval Votes} = \text{Tokens} * \text{Conviction\_Multiplier}$$
 
 最后，让我们来看一个例子，其中决策存款在公投发起后相当长的时间内未发布。这在Kusama之前发生过，其中一个公投是由Root发起的，但发起者花费时间找到一个资本较高的人代表他们发布决策存款。
 
-![](https://i.imgur.com/egVeaUh.jpg)
+<robo-wiki-picture src='robonomics-opengov/6.jpeg' alt="picture" />
 
 在这个最后的例子中，由于决策存款是在准备期结束后发布的，但在公投超时之前 - 公投的生命周期实际上比正常情况下要长，因为它在较长的时间后进入决策期。
 

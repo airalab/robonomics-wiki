@@ -183,7 +183,7 @@ A Origem Root tem sua própria faixa, onde as durações de cada período são d
 
 É importante lembrar que os referendos só avançarão para a próxima etapa de seu ciclo de vida se certas condições forem atendidas. 
 
-![](https://i.imgur.com/v9jwqGE.jpg)
+<robo-wiki-picture src='robonomics-opengov/2.jpeg' alt="picture" />
 
 Você deve assumir nas imagens a seguir que, para um referendo avançar para a próxima etapa de seu ciclo de vida, as condições descritas na imagem acima teriam que ter sido atendidas (a menos que seja declarado o contrário).
 
@@ -196,7 +196,7 @@ A imagem abaixo é uma representação do cronograma máximo possível para um r
 3. Continua atendendo aos critérios mencionados durante o Período de Confirmação.
 4. A proposta levantada pelo referendo será promulgada exatamente no mesmo bloco em que o Período Mínimo de Promulgação termina - tecnicamente, o originador do referendo pode definir as alterações na rede conforme detalhado no referendo para promulgar muitos blocos no futuro, então realisticamente o ciclo de vida real de um referendo individual pode durar vários dias, semanas, meses ou anos.
 
-![](https://i.imgur.com/CUwX3kf.jpg)
+<robo-wiki-picture src='robonomics-opengov/3.jpeg' alt="picture" />
 
 Podemos ver que neste exemplo, o ciclo de vida do referendo seria (aproximadamente) de 17 dias.
 
@@ -220,7 +220,7 @@ Neste exemplo:
 
 Devido ao fato de ter havido uma participação de aproximadamente 248.771 XRT, o referendo atenderá aos critérios para entrar em seu Período de Confirmação após cerca de 168 horas (7 dias).
 
-![](https://i.imgur.com/Y8Qf2ib.jpg)
+<robo-wiki-picture src='robonomics-opengov/4.jpeg' alt="picture" />
 
 Podemos ver que neste segundo exemplo, devido ao fato de ter havido uma boa participação de eleitores, o Período de Decisão realmente terminou na metade do tempo máximo alocado. Resultando em um referendo que pode ser promulgado em cerca de 10 dias.
 
@@ -229,7 +229,7 @@ Podemos ver que neste segundo exemplo, devido ao fato de ter havido uma boa part
 
 Agora, vamos dar uma olhada em um referendo que foi originado, mas nunca teve seu Depósito de Decisão publicado. Tais referendos estão em uma espécie de estado de "limbo", onde seu Período de Preparação terminou, mas, como o Depósito de Decisão não foi publicado, o referendo permanece no "Estado de Preparação".
 
-![](https://i.imgur.com/UK3RsGf.jpg)
+<robo-wiki-picture src='robonomics-opengov/5.jpeg' alt="picture" />
 
 Podemos ver que neste terceiro exemplo, devido ao fato de o Depósito de Decisão nunca ter sido publicado, o referendo na verdade nunca entrará no Período de Decisão, em vez disso, permanecerá no "Estado de Preparação". Isso significa que, eventualmente, se nenhum Depósito de Decisão for publicado, o referendo expirará após a duração especificada na constante timeOut do pallet.
 
@@ -240,7 +240,7 @@ Isso já aconteceu anteriormente no Kusama, em que um referendo foi publicado co
 
 Por fim, vamos dar uma olhada em um exemplo em que o Depósito de Decisão não foi publicado por um tempo considerável após o referendo ter sido originado. Isso já aconteceu anteriormente no Kusama, onde um referendo foi publicado com a origem Root, mas o originador teve que gastar tempo para encontrar alguém com uma grande quantidade de capital para publicar o Depósito de Decisão em seu nome.
 
-![](https://i.imgur.com/egVeaUh.jpg)
+<robo-wiki-picture src='robonomics-opengov/6.jpeg' alt="picture" />
 
 Neste exemplo final, devido ao fato de o Depósito de Decisão ter sido publicado após o término do Período de Preparação, mas antes que o referendo tenha expirado - o ciclo de vida do referendo é realmente muito mais longo do que o normal, pois ele entra no Período de Decisão após um período de tempo mais longo.
 

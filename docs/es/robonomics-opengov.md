@@ -183,7 +183,7 @@ El Origen Raíz tiene su propio track, donde se fijan las duraciones de cada per
 
 Es importante recordar que los referendos sólo pasarán a la siguiente etapa de su ciclo de vida si se cumplen ciertas condiciones.
 
-![](https://i.imgur.com/v9jwqGE.jpg)
+<robo-wiki-picture src='robonomics-opengov/2.jpeg' alt="picture" />
 
 Debe asumir en las siguientes imágenes que, para que un referéndum pase a la siguiente etapa de su ciclo de vida, se tendrían que haber cumplido las condiciones descritas en la imagen de arriba (a menos que se indique lo contrario).
 
@@ -196,7 +196,7 @@ La siguiente imagen es una representación del cronograma máximo posible para u
 3. Continúe cumpliendo con los criterios antes mencionados durante el Período de Confirmación.
 4. La propuesta planteada por el referéndum se promulgará exactamente en el mismo bloque cuando finalice el Período Mínimo de Promulgación; técnicamente, el iniciador del referéndum puede establecer los cambios en la red como se detalla en el referéndum para promulgar muchos bloques en el futuro, por lo que, de manera realista, la propuesta real El ciclo de vida de un referéndum individual podría abarcar muchos días, semanas, meses o años.
 
-![](https://i.imgur.com/CUwX3kf.jpg)
+<robo-wiki-picture src='robonomics-opengov/3.jpeg' alt="picture" />
 
 Podemos ver que en este ejemplo, el ciclo de vida del referéndum sería (aproximadamente) 17 días.
 
@@ -220,7 +220,7 @@ En este ejemplo:
 
 Debido al hecho de que hubo una participación de ~248,771 XRT, el referéndum cumplirá con los criterios para ingresar a su Período de Confirmación después de ~168 horas (7 días).
 
-![](https://i.imgur.com/Y8Qf2ib.jpg)
+<robo-wiki-picture src='robonomics-opengov/4.jpeg' alt="picture" />
 
 Podemos ver que en este segundo ejemplo, debido al hecho de que hubo una buena cantidad de participación electoral, el Período de Decisión en realidad terminó a la mitad de su tiempo máximo asignado. Resultando en un referéndum que puede promulgarse en ~10 días.
 
@@ -229,7 +229,7 @@ Podemos ver que en este segundo ejemplo, debido al hecho de que hubo una buena c
 
 Ahora, echemos un vistazo a un referéndum que se originó, pero nunca se publicó su depósito de decisión. Dichos referendos se encuentran en una especie de estado de "limbo", donde su Período de Preparación ha finalizado, pero como el Depósito de Decisión no fue publicado, el referéndum permanece en el "Estado de Preparación".
 
-![](https://i.imgur.com/UK3RsGf.jpg)
+<robo-wiki-picture src='robonomics-opengov/5.jpeg' alt="picture" />
 
 Podemos ver que en este tercer ejemplo, debido al hecho de que el Depósito de Decisión nunca se publicó, el referéndum en realidad nunca entrará en el Período de Decisión, sino que permanecerá en el "Estado de Preparación". Esto significa que eventualmente, si nunca se publica un Depósito de Decisión, el referéndum expirará después de que haya transcurrido la duración especificada en la constante timeOut de la paleta.
 
@@ -240,7 +240,7 @@ Esto sucedió anteriormente en Kusama, donde se publicó un referéndum con orí
 
 Finalmente, echemos un vistazo a un ejemplo en el que el depósito de decisión no se publicó durante bastante tiempo después de que se originó el referéndum. Esto sucedió anteriormente en Kusama, donde se publicó un referéndum con el origen Root, pero el creador tuvo que dedicar tiempo a encontrar a alguien con una gran cantidad de capital para publicar el Depósito de Decisión en su nombre.
 
-![](https://i.imgur.com/egVeaUh.jpg)
+<robo-wiki-picture src='robonomics-opengov/6.jpeg' alt="picture" />
 
 En este último ejemplo, debido al hecho de que el Depósito de Decisión se publicó después de que finalizó el Período de Preparación, pero antes de que expirara el tiempo del referéndum, el ciclo de vida del referéndum es en realidad mucho más largo de lo normal, ya que entra en el Período de Decisión después una cantidad de tiempo más larga.
 

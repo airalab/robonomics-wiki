@@ -183,7 +183,7 @@ Der Root-Ursprung hat seinen eigenen Track, in dem die Dauern für jede Periode 
 
 Es ist wichtig zu bedenken, dass Referenden nur dann in die nächste Phase ihres Lebenszyklus übergehen, wenn bestimmte Bedingungen erfüllt sind. 
 
-![](https://i.imgur.com/v9jwqGE.jpg)
+<robo-wiki-picture src='robonomics-opengov/2.jpeg' alt="picture" />
 
 Sie sollten davon ausgehen, dass in den folgenden Abbildungen die Bedingungen, wie sie im obigen Bild beschrieben sind, erfüllt sein müssten, damit ein Referendum in die nächste Phase seines Lebenszyklus übergeht (sofern nicht anders angegeben).
 
@@ -196,7 +196,7 @@ Das folgende Bild ist eine Darstellung des maximal möglichen Zeitplans für ein
 3. Während der Bestätigungsphase weiterhin die oben genannten Kriterien erfüllt.
 4. Der von dem Referendum vorgeschlagene Vorschlag wird genau im selben Block umgesetzt, in dem die Mindestumsetzungsfrist endet - technisch gesehen kann der Initiator des Referendums die Netzwerkänderungen, wie sie im Referendum detailliert sind, viele Blöcke in die Zukunft setzen, sodass der tatsächliche Lebenszyklus eines einzelnen Referendums über viele Tage, Wochen, Monate oder Jahre hinweg reichen könnte.
 
-![](https://i.imgur.com/CUwX3kf.jpg)
+<robo-wiki-picture src='robonomics-opengov/3.jpeg' alt="picture" />
 
 Wir können sehen, dass in diesem Beispiel der Lebenszyklus des Referendums (ungefähr) 17 Tage betragen würde.
 
@@ -220,7 +220,7 @@ In diesem Beispiel:
 
 Aufgrund der Tatsache, dass eine Wahlbeteiligung von ~248.771 XRT stattgefunden hat, erfüllt das Referendum die Kriterien, um nach ~168 Stunden (7 Tage) in seine Bestätigungsphase einzutreten.
 
-![](https://i.imgur.com/Y8Qf2ib.jpg)
+<robo-wiki-picture src='robonomics-opengov/4.jpeg' alt="picture" />
 
 Wir können sehen, dass in diesem zweiten Beispiel aufgrund der relativ hohen Wahlbeteiligung die Entscheidungsphase tatsächlich zur Hälfte ihrer maximalen Zeit endete. Dies führt zu einem Referendum, das in ~10 Tagen umgesetzt werden kann.
 
@@ -229,7 +229,7 @@ Wir können sehen, dass in diesem zweiten Beispiel aufgrund der relativ hohen Wa
 
 Schauen wir uns nun ein Referendum an, das zwar gestartet wurde, aber nie seine Entscheidungseinlage veröffentlicht hat. Solche Referenden befinden sich in einer Art "Schwebezustand", in dem ihre Vorbereitungsphase abgelaufen ist, aber da die Entscheidungseinlage nicht veröffentlicht wurde, bleibt das Referendum im "Vorbereitungsstatus".
 
-![](https://i.imgur.com/UK3RsGf.jpg)
+<robo-wiki-picture src='robonomics-opengov/5.jpeg' alt="picture" />
 
 Wir können sehen, dass in diesem dritten Beispiel aufgrund der Tatsache, dass die Entscheidungseinlage nie veröffentlicht wurde, das Referendum tatsächlich nie in die Entscheidungsphase eintreten wird, sondern im "Vorbereitungsstatus" bleibt. Dies bedeutet, dass das Referendum schließlich, wenn keine Entscheidungseinlage veröffentlicht wird, nach Ablauf der in der Konstante timeOut des Paletts angegebenen Dauer abläuft.
 
@@ -240,7 +240,7 @@ Dies ist auf Kusama bereits zuvor passiert, als ein Referendum mit Root-Ursprung
 
 Schließlich werfen wir einen Blick auf ein Beispiel, bei dem die Entscheidungseinlage erst lange Zeit nach der Entstehung des Referendums veröffentlicht wurde. Dies ist auf Kusama bereits zuvor passiert, als ein Referendum mit Root-Ursprung veröffentlicht wurde, aber der Urheber Zeit benötigte, um jemanden mit einer großen Menge Kapital zu finden, der die Entscheidungseinlage stellvertretend veröffentlicht.
 
-![](https://i.imgur.com/egVeaUh.jpg)
+<robo-wiki-picture src='robonomics-opengov/6.jpeg' alt="picture" />
 
 In diesem letzten Beispiel ist aufgrund der Tatsache, dass die Entscheidungseinlage nach Ablauf der Vorbereitungsphase, aber vor Ablauf des Referendums veröffentlicht wurde, der Lebenszyklus des Referendums tatsächlich viel länger als normal, da es nach einer längeren Zeit in die Entscheidungsphase eintritt.
 

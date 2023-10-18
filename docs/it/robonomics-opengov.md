@@ -183,7 +183,7 @@ L'Origine Radice ha il proprio tracciato, dove vengono impostate le durate per c
 
 È importante ricordare che i referendum potranno passare alla fase successiva del loro ciclo di vita solo se verranno soddisfatte determinate condizioni.
 
-![](https://i.imgur.com/v9jwqGE.jpg)
+<robo-wiki-picture src='robonomics-opengov/2.jpeg' alt="picture" />
 
 Nelle immagini seguenti si dovrebbe presumere che, affinché un referendum possa ascendere alla fase successiva del suo ciclo di vita, le condizioni descritte nell'immagine sopra avrebbero dovuto essere soddisfatte (se non diversamente indicato).
 
@@ -196,7 +196,7 @@ L'immagine qui sotto è una rappresentazione della massima tempistica possibile 
 3. Continua a soddisfare i criteri di cui sopra durante il Periodo di Conferma.
 4. La proposta sollevata dal referendum sarà attuata esattamente nello stesso blocco in cui scade il Periodo Minimo di Emanazione – tecnicamente l’autore del referendum può impostare le modifiche alla rete come dettagliato nel referendum per attuare molti blocchi nel futuro, quindi realisticamente l’effettivo Il ciclo di vita di un singolo referendum potrebbe estendersi su molti giorni, settimane, mesi o anni.
 
-![](https://i.imgur.com/CUwX3kf.jpg)
+<robo-wiki-picture src='robonomics-opengov/3.jpeg' alt="picture" />
 
 Possiamo vedere che in questo esempio il ciclo di vita del referendum sarebbe (approssimativamente) di 17 giorni.
 
@@ -220,7 +220,7 @@ In questo esempio:
 
 Dato che c'è stata un'affluenza alle urne di circa 248.771 XRT, il referendum soddisferà i criteri per entrare nel suo periodo di conferma dopo circa 168 ore (7 giorni).
 
-![](https://i.imgur.com/Y8Qf2ib.jpg)
+<robo-wiki-picture src='robonomics-opengov/4.jpeg' alt="picture" />
 
 Possiamo vedere che in questo secondo esempio, a causa del fatto che c'è stata una buona affluenza alle urne, il Periodo Decisionale si è effettivamente concluso a metà del tempo massimo assegnato. Il risultato è un referendum che può essere emanato in circa 10 giorni.
 
@@ -229,7 +229,7 @@ Possiamo vedere che in questo secondo esempio, a causa del fatto che c'è stata 
 
 Ora, diamo un'occhiata a un referendum che è stato avviato, ma il suo deposito decisionale non è mai stato pubblicato. Tali referendum si trovano in una sorta di stato di "limbo", dove il loro periodo di preparazione è terminato, ma poiché il deposito decisionale non è stato pubblicato, il referendum rimane nello "stato di preparazione".
 
-![](https://i.imgur.com/UK3RsGf.jpg)
+<robo-wiki-picture src='robonomics-opengov/5.jpeg' alt="picture" />
 
 Possiamo vedere che in questo terzo esempio, poiché il deposito decisionale non è mai stato pubblicato, il referendum in realtà non entrerà mai nel periodo decisionale, ma rimarrà nello "Stato preparatorio". Ciò significa che alla fine, se non viene mai inviato alcun deposito decisionale, il referendum scadrà una volta trascorso il tempo specificato nella costante timeOut del pallet.
 
@@ -240,7 +240,7 @@ Ciò è già accaduto a Kusama in precedenza, quando è stato pubblicato un refe
 
 Infine, diamo un'occhiata a un esempio in cui il Deposito Decisionale non è stato depositato per un bel po' di tempo dopo l'inizio del referendum. Ciò è accaduto in precedenza a Kusama, dove è stato pubblicato un referendum con l'origine Root, ma l'originatore ha dovuto dedicare del tempo a trovare qualcuno con un importo elevato di capitale per depositare il deposito decisionale per suo conto.
 
-![](https://i.imgur.com/egVeaUh.jpg)
+<robo-wiki-picture src='robonomics-opengov/6.jpeg' alt="picture" />
 
 In questo ultimo esempio, poiché il deposito decisionale è stato versato dopo la fine del periodo di preparazione, ma prima che il referendum scadesse, il ciclo di vita del referendum è in realtà molto più lungo del normale, poiché entra nel periodo decisionale dopo un periodo di tempo più lungo.
 
