@@ -183,7 +183,7 @@ The Root Origin has it's own track, where the durations for each period are set,
 
 It is important to remember that Referendums will only proceed to the next stage in their lifecycle if certain conditions are met. 
 
-![](https://i.imgur.com/v9jwqGE.jpg)
+<robo-wiki-picture src='robonomics-opengov/2.jpeg' alt="picture" />
 
 You should assume in the following images that, in order for a referendum ascend into the next stage of it's lifecycle, the conditions as described in the above image would have to have been met (unless otherwise stated).
 
@@ -196,7 +196,7 @@ The below image is a representation of the maximum possible timeline for a refer
 3. Continues to meet the aforementioned criteria during the Confirmation Period.
 4. The proposal raised by the referendum will be enacted exactly on the same block as the Minimum Enactment Period ends – technically the originator of referendum can set the network changes as detailed in the referendum to enact many blocks into the future, so realistically the actual lifecycle of an individual referendum could span over many days, weeks, months, or years.
 
-![](https://i.imgur.com/CUwX3kf.jpg)
+<robo-wiki-picture src='robonomics-opengov/3.jpeg' alt="picture" />
 
 We can see that in this example, the lifecycle of the referendum would be (approximately) 17 days.
 
@@ -220,7 +220,7 @@ In this example:
 
 Due to the fact that there was ~248,771 XRT turnout, the referendum will meet the criteria to enter it's Confirmation Period after ~168 hours (7 days).
 
-![](https://i.imgur.com/Y8Qf2ib.jpg)
+<robo-wiki-picture src='robonomics-opengov/4.jpeg' alt="picture" />
 
 We can see that in this second example that due to the fact that there was a good amount of voter turnout, the Decision Period actually ended halfway through it's maximum alloted time. Resulting in a referendum that can be enacted in ~10 days.
 
@@ -229,7 +229,7 @@ We can see that in this second example that due to the fact that there was a goo
 
 Now, let's take a look at a referendum that was originated, but never has it's Decision Deposit posted. Such referendums are in a sort of "limbo" state, where their Preparation Period has ended, but since the Decision Deposit was not posted, the referendum stays in the "Preparing State".
 
-![](https://i.imgur.com/UK3RsGf.jpg)
+<robo-wiki-picture src='robonomics-opengov/5.jpeg' alt="picture" />
 
 We can see that in this third example, due to the fact that the Decision Deposit was never posted, the referendum will actually never enter the Decision Period, instead it stays in the "Preparing State". This means that eventually, if no Decision Deposit is ever posted, the referendum will time out after the duration as specified in the timeOut constant of the pallet has elapsed.
 
@@ -240,7 +240,7 @@ This has happened on Kusama previously, whereby a referendum was posted with Roo
 
 Finally, let's take a look at an example where the Decision Deposit was not posted for quite a while after the referendum was originated. This has happened previously on Kusama where a referendum was posted with the Root origin, but the originator had to spend time to find someone with a high amount of capital to post the Decision Deposit on their behalf.
 
-![](https://i.imgur.com/egVeaUh.jpg)
+<robo-wiki-picture src='robonomics-opengov/6.jpeg' alt="picture" />
 
 In this final example, due to the fact that the Decision Deposit was posted after the Preparation Period had ended, but before the referendum has timed out – the lifecycle of the referendum is actually a lot longer than normal, as it enters the Decision Period after a longer amount of time.
 

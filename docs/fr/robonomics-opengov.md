@@ -183,7 +183,7 @@ L'Origine Root a sa propre piste, où les durées de chaque période sont fixée
 
 Il est important de se rappeler que les référendums ne passeront à la prochaine étape de leur cycle de vie que si certaines conditions sont remplies. 
 
-![](https://i.imgur.com/v9jwqGE.jpg)
+<robo-wiki-picture src='robonomics-opengov/2.jpeg' alt="picture" />
 
 Vous devriez supposer dans les images suivantes que, pour qu'un référendum passe à la prochaine étape de son cycle de vie, les conditions décrites dans l'image ci-dessus doivent avoir été remplies (sauf indication contraire).
 
@@ -196,7 +196,7 @@ L'image ci-dessous représente la chronologie maximale possible pour un référe
 3. Continue à répondre aux critères mentionnés pendant la période de confirmation.
 4. La proposition soulevée par le référendum sera promulguée exactement au même bloc que la fin de la période de mise en œuvre minimale - techniquement, l'initiateur du référendum peut fixer les changements réseau tels que détaillés dans le référendum pour promulguer de nombreux blocs dans le futur, donc en réalité, le cycle de vie réel d'un référendum individuel pourrait s'étendre sur plusieurs jours, semaines, mois ou années.
 
-![](https://i.imgur.com/CUwX3kf.jpg)
+<robo-wiki-picture src='robonomics-opengov/3.jpeg' alt="picture" />
 
 Nous pouvons voir que dans cet exemple, le cycle de vie du référendum serait (approximativement) de 17 jours.
 
@@ -220,7 +220,7 @@ Dans cet exemple :
 
 Étant donné qu'il y a eu environ 248 771 XRT, le référendum remplira les critères pour entrer dans sa période de confirmation après environ 168 heures (7 jours).
 
-![](https://i.imgur.com/Y8Qf2ib.jpg)
+<robo-wiki-picture src='robonomics-opengov/4.jpeg' alt="picture" />
 
 Nous pouvons voir que dans ce deuxième exemple, en raison d'une forte participation électorale, la période de décision s'est en fait terminée à mi-chemin de son temps maximum imparti. Il en résulte un référendum qui peut être promulgué dans environ 10 jours.
 
@@ -229,7 +229,7 @@ Nous pouvons voir que dans ce deuxième exemple, en raison d'une forte participa
 
 Jetons maintenant un coup d'œil à un référendum qui a été organisé, mais dont le dépôt de décision n'a jamais été publié. De tels référendums se trouvent dans une sorte de « limbes », où leur période de préparation est terminée, mais comme le dépôt de décision n'a pas été déposé, le référendum reste dans « l'État de préparation ».
 
-![](https://i.imgur.com/UK3RsGf.jpg)
+<robo-wiki-picture src='robonomics-opengov/5.jpeg' alt="picture" />
 
 Nous pouvons voir que dans ce troisième exemple, du fait que le dépôt de décision n'a jamais été affiché, le référendum n'entrera en réalité jamais dans la période de décision, mais restera dans « l'état de préparation ». Cela signifie qu'à terme, si aucun dépôt de décision n'est jamais enregistré, le référendum expirera une fois la durée spécifiée dans la constante timeOut de la palette écoulée.
 
@@ -240,7 +240,7 @@ Cela s'est déjà produit à Kusama, où un référendum a été publié avec de
 
 Enfin, examinons un exemple dans lequel le dépôt de décision n'a pas été affiché pendant un certain temps après le déclenchement du référendum. Cela s'est déjà produit à Kusama, où un référendum a été publié avec l'origine racine, mais l'initiateur a dû passer du temps à trouver quelqu'un disposant d'un capital élevé pour publier le dépôt de décision en son nom.
 
-![](https://i.imgur.com/egVeaUh.jpg)
+<robo-wiki-picture src='robonomics-opengov/6.jpeg' alt="picture" />
 
 Dans ce dernier exemple, étant donné que le dépôt de décision a été publié après la fin de la période de préparation, mais avant la fin du référendum, le cycle de vie du référendum est en réalité beaucoup plus long que la normale, car il entre dans la période de décision après une durée plus longue.
 

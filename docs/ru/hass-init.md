@@ -10,7 +10,7 @@ tools:
 
 <robo-wiki-picture src="home-assistant/ha_init.png" />
 
-You are starting with the creation of the owner account of Home Assistant. Эта учетная запись является администратором и может вносить любые изменения. Откройте веб-браузер и перейдите по адресу `http://%RASPBERRY_IP_ADDRESS%:8123`. Вы можете найти IP-адрес Raspberry Pi, используя [мобильное приложение Fing](https://www.fing.com/products) или [инструмент командной строки nmap](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
+Вы начинаете с создания учетной записи владельца Home Assistant. Эта учетная запись является администратором и может вносить любые изменения. Откройте веб-браузер и перейдите по адресу `http://%RASPBERRY_IP_ADDRESS%:8123`. Вы можете найти IP-адрес Raspberry Pi, используя [мобильное приложение Fing](https://www.fing.com/products) или [инструмент командной строки nmap](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
 <robo-wiki-note type="note">Адрес Raspberry Pi может меняться со временем из-за настроек маршрутизатора.</robo-wiki-note>
 
