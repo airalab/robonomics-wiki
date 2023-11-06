@@ -14,7 +14,7 @@
       </span>
     </div>
 
-    <gsp-form v-if="result !== 'success' && $store.state.currentReaction === text" :gscriptID="gscript" :captchaID="captcha" class="robo-wiki-feedback-form__form" :class="result">
+    <gsp-form v-if="result !== 'success' && $store.state.currentReaction === text" :gscriptID="gscript" class="robo-wiki-feedback-form__form" :class="result" :captchaStyle="captchaStyle">
 
       <div>
 
@@ -79,13 +79,20 @@ export default {
     return {
 
       gscript: process.env.GRIDSOME_GSCRIPTID,
-      captcha: process.env.GRIDSOME_CAPTCHAID,
 
       email: '',
       result: this.$response,
       location: '',
       comment: '',
       interval: null,
+      captchaStyle: {     
+        width: 100,
+        height: 25,
+        textBaseline: 'top',
+        font: '25px Roboto',
+        textAlign: 'left',
+        fillStyle: '#F38488'
+      }
 
     }
   },
@@ -133,7 +140,8 @@ export default {
     padding: calc(var(--space) * 0.3) calc(var(--space) * 1);
     background-color:  var(--color-link-background-highlight);
     transform: translateY(-100%);
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow: auto;
     z-index: 30;
   }
 
@@ -238,7 +246,7 @@ export default {
   }
 
   .robo-wiki-feedback-form__form.wait .robo-wiki-feedback-form__btn {
-    padding: 0;
+    padding: calc( var(--space) * 0.1) calc( var(--space) * 0.3);
     font-size: 0.8rem;
     opacity: 0.7;
     cursor: none;
