@@ -14,7 +14,7 @@
       </span>
     </div>
 
-    <gsp-form v-if="result !== 'success' && $store.state.currentReaction === text" :gscriptID="gscript" class="robo-wiki-feedback-form__form" :class="result" :captchaStyle="captchaStyle">
+    <gsp-form v-if="result !== 'success' && $store.state.currentReaction === text" :gscriptID="gscript" class="robo-wiki-feedback-form__form" :class="result" :siteKey="siteKey">
 
       <div>
 
@@ -79,6 +79,7 @@ export default {
     return {
 
       gscript: process.env.GRIDSOME_GSCRIPTID,
+      siteKey: process.env.GRIDSOME_CAPTCHAID,
 
       email: '',
       result: this.$response,
