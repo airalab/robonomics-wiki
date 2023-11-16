@@ -24,7 +24,7 @@
     "fs-extra": "^10.1.0",
     "gridsome": "^0.7.23",
     "gridsome-plugin-flexsearch": "^0.1.20",
-    "gridsome-plugin-google-sheets-post": "^3.0.5",
+    "gridsome-plugin-google-sheets-post": "^3.0.6",
     "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-matomo": "^0.1.0",
     "gridsome-plugin-remark-asciinema": "0.0.2",
