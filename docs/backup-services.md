@@ -113,7 +113,7 @@ Please note that the default paths for Mosquitto and Zigbee2MQTT configurations 
 
 In addition to using services to work with backups, you can simplify the process by using the `button.create_backup` and `button.restore_from_backup` buttons from the Robonomics integration. These buttons invoke the respective services with default parameters (the backup button creates a backup without history).
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 To add buttons to your dashboard, follow these steps:
 
