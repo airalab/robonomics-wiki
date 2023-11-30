@@ -1,3 +1,7 @@
 - path: '/'
   component: './src/pages/Index.vue'
   typename: 'page'
+
+- path: '/privacy-policy'
+  component: './src/pages/privacy-policy.vue'
+  typename: 'page'
