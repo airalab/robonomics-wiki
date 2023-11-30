@@ -68,7 +68,9 @@ em {
 }
 
 ul { 
+  overflow: auto;
   list-style-type: disc; 
+  hyphens: auto;
   margin-left: var(--space-text);
   margin-bottom: var(--space-text);
 }
@@ -76,6 +78,7 @@ ul li {
   margin-bottom: .6rem;
 }
 ol { 
+  overflow: auto;
   list-style-type: decimal; 
   margin-left: var(--space-text);
   margin-bottom: var(--space-text);
