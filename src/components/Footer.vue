@@ -19,6 +19,11 @@
               {{ $t('How to edit Wiki') }}
             </g-link>
           </li>
+          <li class="footer__item">
+            <g-link class="footer__link" to="/privacy-policy/">
+              {{ $t('Privacy Policy') }}
+            </g-link>
+          </li>
         </ul>
 
         <div class="footer-text"  v-if="$locale != 'en'">
