@@ -28,7 +28,9 @@ Get ready for a new level of air conditioner management with our remote, and may
 
 # How to setup
 
-## Step 1 - Flashing
+<robo-wiki-title :type="2" anchor="step1">
+Step 1 — Flashing
+</robo-wiki-title>
 
 <robo-wiki-note type="warning">  
 
@@ -45,30 +47,29 @@ Take the device from the box and connect it to the computer. Then go the website
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmT6CDmmF8yahM1WTCwmAZBcrYUh6xxXpmvuboiYe42rEQ', type:'mp4'}]" />
 
 In "Firmware" drop-box choose **"IR REMOTE"** option and next in "SELECT CHIP" choose **"ESP32"**. Press **"CONNECT"** button.
-A popup window will appear where you should select the serial port to which the device is connected(usually it's ttyUSBO). Then choose **"INSTALL IR-REMOTE_EN"**. 
-On next window you can make "clear installation" by check "erase device". Next and install. Wait until firmware will be uploaded to the IR controller.
+A popup window will appear where you should select the serial port to which the device is connected (usually it's ttyUSBO). Then choose **"INSTALL IR-REMOTE_EN"**. 
+On next window you can make **CLEAR INSTALLATION** by check **ERASE DEVICE**. Press Next and then Install. Wait until firmware to upload to the IR controller.
 
-After finishing the installation process Wi-Fi configuration popup will appear. There you have an option:
+After finishing the installation process Wi-Fi configuration popup will appear. There you have options:
 
 1) You can provide Wi-Fi credentials, skip **Step 2 - Access Point** and go to [**Step 3 - Configuration**](/docs/ir-controller/#step3).
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmVbCvncuEZFVDpxnpD3VyE4LCx8TN6xKCVs4MkrJGhGDx', type:'mp4'}]" />
 
-After setting up wi-fi you can visit device via "visit device" button. Later you can visit device via it's IP address in network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
+After setting up Wi-Fi you can visit device via **VISIT DEVICE** button. Later you can visit device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
 [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
-2) Or disconnect The device from the computer and connect it to the power supply. IR Remote will start and make Wi-Fi point. To connect the infrared remote control to your home Wi-Fi network through an access point, follow the instructions in step 2.
+2) Or disconnect the device from the computer and connect it to the power supply. IR Remote will start and create Wi-Fi hotspot. To connect the IR Remote to your home Wi-Fi network through an hotspot, follow the instructions in Step 2.
 
 <robo-wiki-title :type="2" anchor="step2">
-Step 2 - Access Point
+Step 2 — Access Point
 </robo-wiki-title>
 
-If you take The IR Remote from the box and connect it to power supply, it will Set up access point with name "tasmota-XXXXXXX". Connect to it. Configuration window should open. 
-If not. open web-browser and go to `192.168.4.1` page.
+If you take IR Remote from the box and connect it to the power supply, it will create hotspot with name "tasmota-XXXXXXX". Connect to it. Configuration window should open. If not, open web-browser and go to `192.168.4.1` page.
 
 <robo-wiki-picture src="ir-controller/phone-wifi.jpg" />
 
-provide Wi-Fi credentials. After that the IR Remote will connect to Wi-Fi network. visit device via it's IP address in network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
+Provide Wi-Fi credentials. After that the IR Remote will connect to Wi-Fi network. Check the device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
 [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
 
@@ -96,27 +97,29 @@ Provide your MQTT credentials here:
 
 <robo-wiki-picture src="ir-controller/mqtt.jpg" />
 
-That's all with ESP for now. Next step is install Home Assistant integration.
+That's all with ESP for now. Next step is install the Home Assistant integration.
 
-## Step 4 - Integration Setup
+<robo-wiki-title :type="2" anchor="step4">
+Step 4 — Integration Setup
+</robo-wiki-title>
 
-This article assumes that you have Home Assistant and HACS. Go to HACS and add custom repository. 
+This article assumes, that you have Home Assistant and HACS. Go to HACS and add custom repository. 
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmSqvGpq5q9tHUsi45VkycQamR2o2hoDcyAgiz2dp279eF', type:'mp4'}]" />
 
-For this press three dots in upper right corner, choose "custom repositories"
-and insert this URL - `https://github.com/hristo-atanasov/Tasmota-IRHVAC`. in Category choose "Integration". After that find it in search and install it. Don't forget to restart Home Assistant after all.
+To do this, press three dots in upper right corner, choose **CUSTOM REPOSITORIES**
+and insert this URL: `https://github.com/hristo-atanasov/Tasmota-IRHVAC`. in Category choose "Integration". After that find it in search and install it. Don't forget to restart Home Assistant after that.
 
-Let's open logs of the IR remote. For this go to proper local URL, or open again [webflasher.robonomics.network](https://webflasher.robonomics.network/) and choose "Tasmota IR" and "ESP32". Press "Connect", choose port.
-Press visit device, and you will provide to device main page. Go to "Consoles" -> "console".
+Open logs of the IR remote. To do this go to proper local URL, or open again [webflasher.robonomics.network](https://webflasher.robonomics.network/) and choose "Tasmota IR" and "ESP32". Press "Connect" and choose port.
+Press **VISIT DEVICE**, and you will see the device main page. Go to "Consoles" -> "console".
 
-Point your IR remote control to the Robonomics IR remote and press buttons on your remote. You will get next log in console:
+Point your IR remote control (e.g. from an air conditioner) to the Robonomics IR Remote and press buttons on the remote. You will get next log in the console:
 ```
 10:08:06.925 MQT: tele/tasmota_F6CF74/RESULT = {"IrReceived":{"Protocol":"MITSUBISHI112","Bits":112,"Data":"0x23CB260100A003060D00000000CB","Repeat":0,"IRHVAC":{"Vendor":"MITSUBISHI112","Model":-1,"Mode":"Cool","Power":"Off","Celsius":"On","Temp":25,"FanSpeed":"Medium","SwingV":"Highest","SwingH":"Auto","Quiet":"Off","Turbo":"Off","Econo":"Off","Light":"Off","Filter":"Off","Clean":"Off","Beep":"Off","Sleep":-1}}}
 ```
-You need information from "IRHVAC" topic. 
+You need information from `IRHVAC` topic. 
 
-Open `configuration.yaml` file of our Home Assistant instance and insert next:
+Open `configuration.yaml` file of our Home Assistant instance and insert the following:
 
 <code-helper copy>
 
@@ -207,9 +210,7 @@ climate:
 </code-helper>
 
 
-Change all necessary statements in inserted part with values from console message. 
-
-as result part of your configuration file should look similar to this
+Change all necessary statements in inserted part with values from console message. As result, part of your configuration file should look similar to this
 (in example unused statement was deleted):
 ```
 tasmota_irhvac:
@@ -255,8 +256,8 @@ climate:
 
 ```
 
-Save "configuration.yaml" and restart Home Assistant.
-Once restarted you can add in LovelaceUI a new thermostat card and select the newly integrated AC.
+Save `configuration.yaml` and restart Home Assistant.
+After restarting you can add in UI a new thermostat card and select the newly integrated device.
 
 <robo-wiki-picture src="ir-controller/thermo.jpg" />
 

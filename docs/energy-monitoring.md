@@ -7,10 +7,10 @@ This page describes the operating instructions for the Energy Monitoring device 
 
 The device has a number of unique features such as:
 
-1. Monitor energy consumption, whether that's an individual estate or an entire building
-2. The included software provides vital insight that can help to control and save energy in the future
-3. Monitoring works on the local network and does not require access to the cloud
-4. Support of Home Assistant via the MQTT protocol
+1. Monitor energy consumption, whether that's an individual estate or an entire building.
+2. The included software provides vital insight that can help to control and save energy in the future.
+3. Monitoring works on the local network and does not require access to the cloud.
+4. Support of Home Assistant via the MQTT protocol.
 
 ## Hardware specification
 
@@ -23,7 +23,9 @@ The device has a number of unique features such as:
 
 # How to setup
 
-## Step 1 - Flashing
+<robo-wiki-title :type="2" anchor="step1">
+Step 1 — Flashing
+</robo-wiki-title>
 
 <robo-wiki-note type="warning">  
 
@@ -40,30 +42,29 @@ Take the device from the box and connect it to the computer. Then go the website
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmapJYTMqxVSzavJmWJg3rQjRoyCtdeFzYifgvDkXdzi8S', type:'mp4'}]" />
 
 In "Firmware" drop-box choose **"ENERGY MONITOR"** option and next in "SELECT CHIP" choose **"ESP32-S3"**. Press **"CONNECT"** button.
-A popup window will appear where you should select the serial port to which the device is connected(usually it's ttyUSBO). Then choose **"INSTALL ENERGY-MONITOR_EN"**. 
-On next window you can make "clear installation" by check "erase device". Next and install. Wait until firmware will be uploaded to the Energy Monitor.
+A popup window will appear where you should select the serial port to which the device is connected (usually it's ttyUSBO). Then choose **"INSTALL ENERGY-MONITOR_EN"**. 
+On next window you can make **CLEAR INSTALLATION** by check **ERASE DEVICE**. Press Next and then Install. Wait until firmware to upload to Energy Monitoring device.
 
 After finishing the installation process Wi-Fi configuration popup will appear. Provide Wi-Fi credentials.
 
-After setting up wi-fi you can visit device via "visit device" button. Later you can visit device via it's IP address in network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
+After setting up Wi-Fi you can visit device via **VISIT DEVICE** button. Later you can visit device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
 [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
-Skip **Step 2 - Access Point** and go to [**Step 3 - Configuration**](/docs/ir-controller/#step3).
+Skip **Step 2 — Access Point** and go to [**Step 3 — Configuration**](/docs/ir-controller/#step3).
 
 <robo-wiki-title :type="2" anchor="step2">
-Step 2 - Access Point
+Step 2 — Access Point
 </robo-wiki-title>
 
-If you take The Energy monitor from the box and connect it to power supply, it will Set up access point with name "robonomics-XXXXXXX". Connect to it. Configuration window should open. 
-If not. open web-browser and go to `192.168.4.1` page.
+If you take Energy monitor from the box and connect it to the power supply, it will create hotspot with name "robonomics-XXXXXXX". Connect to it. Configuration window should open. If not, open web-browser and go to `192.168.4.1` page.
 
 <robo-wiki-picture src="ir-controller/phone-wifi.jpg" />
 
-provide Wi-Fi credentials. After that the IR Remote will connect to Wi-Fi network. visit device via it's IP address in network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
+Provide Wi-Fi credentials. After that the Energy Monitoring device will connect to Wi-Fi network. Check the device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
 [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
 <robo-wiki-title :type="2" anchor="step3">
-Step 3 - Configuration
+Step 3 — Configuration
 </robo-wiki-title>
 
 The device's page will look similar to this:
@@ -88,11 +89,13 @@ Provide your MQTT credentials here:
 
 <robo-wiki-picture src="ir-controller/mqtt.jpg" />
 
-That's all with ESP for now. Next step is install Home Assistant integration.
+That's all with ESP for now. Next step is install the Home Assistant integration.
 
-## Integration setup
+<robo-wiki-title :type="2" anchor="step4">
+Step 4 — Integration setup
+</robo-wiki-title>
 
-This article assumes that you have Home Assistant. To connect Energy Monitoring to Home Assistant, you need to install "Tasmota" integration.
+This article assumes, that you have Home Assistant. To connect Energy Monitoring device to Home Assistant, you need to install "Tasmota" integration.
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmXzAFkgV2ZR4pmedhjSCwh9JvfUkmmKUqtHDuzhb6CQaH', type:'mp4'}]" />
 
@@ -100,4 +103,4 @@ Basically, Home Assistant will discover "Tasmota" integration automatically. But
 
 <robo-wiki-picture src="energymeter/HA.jpg" />
 
-That's all. Now you can add energy entities to dashboard.  
+That's all. Now you can add energy entities to the dashboard.
