@@ -15,15 +15,15 @@ Join with this air quality sensor to the decentralized opensource [sensors map](
 ## Hardware specification
 
 - SDS011 laser PM2.5/PM10 sensor
-- NodeMCU V3 CH340 based on ESP8266
-- DHT22 (AM2302) temperature/humidity sensor
-- 12V/2А power adapter
-- 5A DC-DC mini560 convertor
+- NodeMCU V3 CH340 based on ESP8266
+- DHT22 (AM2302) temperature/humidity sensor
+- 12V/2А power adapter
+- 5A DC-DC mini560 convertor
 - mounting box
 
 ## Software specification
 
-- For upgrading ESP firmware, an open source flasher is provided by Robonomics called airrohr-flasher (available on [Github](https://github.com/airalab/sensors-connectivity/releases))
+- For upgrading ESP firmware, an open source flasher is provided by Robonomics called airrohr-flasher (available on [Github](https://github.com/airalab/sensors-connectivity/releases))
 
 ## Other tutorials
 - [How to install sensor](https://wiki.robonomics.network/docs/sds-sensor-connect/)
