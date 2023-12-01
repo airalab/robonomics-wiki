@@ -3,9 +3,9 @@ title: IR Remote
 contributors: [nakata5321]
 ---
 
-Congratulations on acquiring the innovative infrared remote control! We are pleased that you have chosen our device to 
-enhance the comfort in your home. This device not only provides you with the ability to efficiently control air conditioners 
-but also boasts a range of unique features, such as:
+This page describes the operating instructions for the IR Remote device powered by Robonomics. Here you will find the hardware specification of the device and its basic configuration.
+
+The device has a number of unique features such as:
 
 - **Open Source Firmware:** Our remote is equipped with open-source firmware, meaning you have complete control over the device's functionality. Customize and reprogram it to suit your needs, making it the perfect companion for your comfort.
 
@@ -15,39 +15,72 @@ but also boasts a range of unique features, such as:
 
 Get ready for a new level of air conditioner management with our remote, and may your home always be set to maximum comfort!
 
-## Hardware specification
+# Hardware specification
 
 - Viewing angle 360°
-- CPU: ESP32 series of SoCs, Xtensa 32-­bit LX6 microprocessor, up to 240 MHz
+- CPU: ESP32 series of SoCs, Xtensa 32-bit LX6 microprocessor, up to 240 MHz
 - Memory: 448 KB ROM, 520 KB SRAM, 8 MB FLASH
 - Wireless protocol: IEEE 802.11b/g/n (2.4 GHz Wi-Fi)
 - Input voltage: DC 5V USB-C (QC2, QC3, PD)
 - Standby consumption: 95mA
-- Weight: 36g
+- Weight: 36g
 
 
-## How to setup
+# How to setup
 
-1) Take the device from the box and connect it to the computer. Then go the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). You will see next:
+## Step 1 - Flashing
+
+<robo-wiki-note type="warning">  
+
+All devices from Robonomics come pre-flashed out of the box. However, since all devices are development kits, the instructions will cover the option of flashing the device from scratch. If you do not wish to do this now, proceed to [**Step 2 - Access Point**](/docs/ir-controller/#step2).
+
+</robo-wiki-note>
+
+Take the device from the box and connect it to the computer. Then go the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). You will see next:
 
 <robo-wiki-picture src="ir-controller/web-interface.jpg" />
 
-<robo-wiki-note type="warning"> Note! web flasher is working only with Google Chrome or Microsoft Edge browser.</robo-wiki-note>
+<robo-wiki-note type="warning"> Note! Web flasher is working only with Google Chrome or Microsoft Edge browser.</robo-wiki-note>
 
-In "Firmware" drop-box choose "IR REMOTE" option and next in "SELECT CHIP" choose "ESP32". Press "CONNECT" button.
-A popup window will appear where you should select the serial port to which the device is connected. Then choose "INSTALL IR-REMOTE_EN". 
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmT6CDmmF8yahM1WTCwmAZBcrYUh6xxXpmvuboiYe42rEQ', type:'mp4'}]" />
+
+In "Firmware" drop-box choose **"IR REMOTE"** option and next in "SELECT CHIP" choose **"ESP32"**. Press **"CONNECT"** button.
+A popup window will appear where you should select the serial port to which the device is connected(usually it's ttyUSBO). Then choose **"INSTALL IR-REMOTE_EN"**. 
 On next window you can make "clear installation" by check "erase device". Next and install. Wait until firmware will be uploaded to the IR controller.
 
-## Configuration
+After finishing the installation process Wi-Fi configuration popup will appear. There you have an option:
 
-After finishing the installation process Wi-Fi configuration popup will appear. Provide your wi-fi credentials, for connect the device to your wi-fi network. 
+1) You can provide Wi-Fi credentials, skip **Step 2 - Access Point** and go to [**Step 3 - Configuration**](/docs/ir-controller/#step3).
+
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmVbCvncuEZFVDpxnpD3VyE4LCx8TN6xKCVs4MkrJGhGDx', type:'mp4'}]" />
 
 After setting up wi-fi you can visit device via "visit device" button. Later you can visit device via it's IP address in network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
 [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
+2) Or disconnect The device from the computer and connect it to the power supply. IR Remote will start and make Wi-Fi point. To connect the infrared remote control to your home Wi-Fi network through an access point, follow the instructions in step 2.
+
+<robo-wiki-title :type="2" anchor="step2">
+Step 2 - Access Point
+</robo-wiki-title>
+
+If you take The IR Remote from the box and connect it to power supply, it will Set up access point with name "tasmota-XXXXXXX". Connect to it. Configuration window should open. 
+If not. open web-browser and go to `192.168.4.1` page.
+
+<robo-wiki-picture src="ir-controller/phone-wifi.jpg" />
+
+provide Wi-Fi credentials. After that the IR Remote will connect to Wi-Fi network. visit device via it's IP address in network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
+[nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
+
+
+<robo-wiki-title :type="2" anchor="step3">
+Step 3 - Configuration
+</robo-wiki-title>
+
+The device's page will look similar to this:
+
 <robo-wiki-picture src="ir-controller/tasmota.jpg" />
 
-Go to "Configuration"->"Configure other". In "Template" string insert next:
+Go to **"Configuration"**->**"Configure other"**. In **"Template"** string insert next:
 
 <code-helper copy>
 
@@ -56,18 +89,22 @@ Go to "Configuration"->"Configure other". In "Template" string insert next:
 ```
 </code-helper>
 
-Verify that checkbox "Activate" and "MQTT Enable" is enabled. If not, enable it and press Save button.
+Verify that checkbox **"Activate"** and **"MQTT Enable"** is enabled. If not, enable it and press Save button.
 
-Return to "main menu" and go to "Configuration" -> "Configure MQTT".
+Return to **"Main Menu"** and go to **"Configuration"** -> **"Configure MQTT"**.
 Provide your MQTT credentials here:
 
 <robo-wiki-picture src="ir-controller/mqtt.jpg" />
 
 That's all with ESP for now. Next step is install Home Assistant integration.
 
-## Integration setup
+## Step 4 - Integration Setup
 
-This article assumes that you have Home Assistant and HACS. Go to HACS and add custom repository. For this press three dots in upper right corner, choose "custom repositories"
+This article assumes that you have Home Assistant and HACS. Go to HACS and add custom repository. 
+
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmSqvGpq5q9tHUsi45VkycQamR2o2hoDcyAgiz2dp279eF', type:'mp4'}]" />
+
+For this press three dots in upper right corner, choose "custom repositories"
 and insert this URL - `https://github.com/hristo-atanasov/Tasmota-IRHVAC`. in Category choose "Integration". After that find it in search and install it. Don't forget to restart Home Assistant after all.
 
 Let's open logs of the IR remote. For this go to proper local URL, or open again [webflasher.robonomics.network](https://webflasher.robonomics.network/) and choose "Tasmota IR" and "ESP32". Press "Connect", choose port.
