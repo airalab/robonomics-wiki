@@ -82,8 +82,8 @@
       items:
         - title_en: IR Remote
           link: /docs/ir-controller
-        - title_en: Energy Meter
-          link: /docs/energy-meter
+        - title_en: Energy Monitoring
+          link: /docs/energy-monitoring
 - title_en: Learn
   items:
     # - title_en: Introduction
