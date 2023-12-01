@@ -15,7 +15,7 @@ but also boasts a range of unique features, such as:
 
 Get ready for a new level of air conditioner management with our remote, and may your home always be set to maximum comfort!
 
-## Hardware specification:
+## Hardware specification
 
 - Viewing angle 360°
 - CPU: ESP32 series of SoCs, Xtensa 32-­bit LX6 microprocessor, up to 240 MHz
@@ -48,10 +48,15 @@ After setting up wi-fi you can visit device via "visit device" button. Later you
 <robo-wiki-picture src="ir-controller/tasmota.jpg" />
 
 Go to "Configuration"->"Configure other". In "Template" string insert next:
+
+<code-helper copy>
+
 ```shell
 {"NAME":"Robonomics IR remote","GPIO":[1,1,1,1,1056,1088,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,0,0,0,0,1,1,1,1,1,0,0,1],"FLAG":0,"BASE":1}
 ```
-If box "Activate" is disabled, enable it and press Save button.
+</code-helper>
+
+Verify that checkbox "Activate" and "MQTT Enable" is enabled. If not, enable it and press Save button.
 
 Return to "main menu" and go to "Configuration" -> "Configure MQTT".
 Provide your MQTT credentials here:
@@ -75,6 +80,9 @@ Point your IR remote control to the Robonomics IR remote and press buttons on yo
 You need information from "IRHVAC" topic. 
 
 Open `configuration.yaml` file of our Home Assistant instance and insert next:
+
+<code-helper copy>
+
 ```shell
 tasmota_irhvac:
 
@@ -159,6 +167,8 @@ climate:
       #- SwingV
       #- Turbo
 ```
+</code-helper>
+
 
 Change all necessary statements in inserted part with values from console message. 
 
