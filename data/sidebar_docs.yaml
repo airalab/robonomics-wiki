@@ -84,6 +84,11 @@
           link: /docs/ir-controller
         - title_en: Energy Monitoring
           link: /docs/energy-monitoring
+        - title_en: Smart Switches
+          link: /docs/smart-switches
+        - title_en: Air Quality Sensor
+          link: /docs/air-quality-sensor
+
 - title_en: Learn
   items:
     # - title_en: Introduction
