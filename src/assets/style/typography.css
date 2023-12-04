@@ -68,17 +68,17 @@ em {
 }
 
 ul { 
-  overflow: auto;
   list-style-type: disc; 
+  list-style-position: inside;
   hyphens: auto;
   margin-left: var(--space-text);
   margin-bottom: var(--space-text);
 }
 ul li {
+  overflow: auto;
   margin-bottom: .6rem;
 }
 ol { 
-  overflow: auto;
   list-style-type: decimal; 
   margin-left: var(--space-text);
   margin-bottom: var(--space-text);
