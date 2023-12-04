@@ -172,7 +172,7 @@ eval("module.exports = __webpack_require__.p + \"assets/img/launch-el.382f4609.p
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"assets/img/smart-switches-en.49acd724.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/smart-switches-en.png?");
+eval("module.exports = __webpack_require__.p + \"assets/img/smart-switches-en.baaa5476.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/smart-switches-en.png?");
 
 /***/ }),
 
@@ -5734,7 +5734,7 @@ eval("module.exports = __webpack_require__.p + \"assets/img/get-subscription-ko.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"assets/img/air-quality-sensor-en.2599ef15.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/air-quality-sensor-en.png?");
+eval("module.exports = __webpack_require__.p + \"assets/img/air-quality-sensor-en.8a4f7b08.png\";\n\n//# sourceURL=webpack:///./docs/docsCovers/air-quality-sensor-en.png?");
 
 /***/ }),
 
