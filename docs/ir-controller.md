@@ -266,3 +266,7 @@ If you have problem with GUI mode, switch to "CODE EDITOR" and write next:
 type: thermostat
 entity: climate.<your climate name>
 ```
+
+## Installation Example
+
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmUpSdy3oQbU7dx59sE3MMdL1kr6E2TKsPA5kmFeKHTgF4', type:'mp4'}]" />

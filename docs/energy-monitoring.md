@@ -104,3 +104,7 @@ Basically, Home Assistant will discover "Tasmota" integration automatically. But
 <robo-wiki-picture src="energymeter/HA.jpg" />
 
 That's all. Now you can add energy entities to the dashboard.
+
+## Installation Example
+
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmTNyEP12NA7PPjw5WJBwyGwMq9Pg3YHmgEeaFRgNaS5Lc', type:'mp4'}]" />
