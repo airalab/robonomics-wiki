@@ -190,6 +190,23 @@ module.exports = function (api) {
 
 
   api.createPages(({createPage}) => {
+
+    allPossiblePaths.forEach(node => {
+
+      const path = node.path.substring(5);
+    
+      locales.forEach(locale => {
+        if (fs.existsSync(`docs/${locale}/${path.slice(0,-1)}.md`)) {
+          console.log('exists');
+        } else {
+          createPage({
+            path: `/docs/${locale}/${path}`,
+            component: './src/templates/AvailableTranslations.vue',
+          })
+        }
+      })
+    })
+
     createPage({
         path: '/summary/:title',
         component: './src/templates/Summary.vue'
