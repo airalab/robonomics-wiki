@@ -15,7 +15,11 @@ The device has a number of unique features such as:
 
 Get ready for a new level of air conditioner management with our remote, and may your home always be set to maximum comfort!
 
-# Hardware specification
+## Installation Example
+
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmUpSdy3oQbU7dx59sE3MMdL1kr6E2TKsPA5kmFeKHTgF4', type:'mp4'}]" />
+
+## Hardware specification
 
 - Viewing angle 360°
 - CPU: ESP32 series of SoCs, Xtensa 32-bit LX6 microprocessor, up to 240 MHz
@@ -26,9 +30,9 @@ Get ready for a new level of air conditioner management with our remote, and may
 - Weight: 36g
 
 
-# How to setup
+## How to setup
 
-<robo-wiki-title :type="2" anchor="step1">
+<robo-wiki-title :type="3" anchor="step1">
 Step 1 — Flashing
 </robo-wiki-title>
 
@@ -61,7 +65,7 @@ After setting up Wi-Fi you can visit device via **VISIT DEVICE** button. Later y
 
 2) Or disconnect the device from the computer and connect it to the power supply. IR Remote will start and create Wi-Fi hotspot. To connect the IR Remote to your home Wi-Fi network through an hotspot, follow the instructions in Step 2.
 
-<robo-wiki-title :type="2" anchor="step2">
+<robo-wiki-title :type="3" anchor="step2">
 Step 2 — Access Point
 </robo-wiki-title>
 
@@ -73,7 +77,7 @@ Provide Wi-Fi credentials. After that the IR Remote will connect to Wi-Fi networ
 [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
 
-<robo-wiki-title :type="2" anchor="step3">
+<robo-wiki-title :type="3" anchor="step3">
 Step 3 - Configuration
 </robo-wiki-title>
 
@@ -99,7 +103,7 @@ Provide your MQTT credentials here:
 
 That's all with ESP for now. Next step is install the Home Assistant integration.
 
-<robo-wiki-title :type="2" anchor="step4">
+<robo-wiki-title :type="3" anchor="step4">
 Step 4 — Integration Setup
 </robo-wiki-title>
 
@@ -266,7 +270,3 @@ If you have problem with GUI mode, switch to "CODE EDITOR" and write next:
 type: thermostat
 entity: climate.<your climate name>
 ```
-
-## Installation Example
-
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmUpSdy3oQbU7dx59sE3MMdL1kr6E2TKsPA5kmFeKHTgF4', type:'mp4'}]" />
