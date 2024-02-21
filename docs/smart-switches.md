@@ -5,6 +5,12 @@ contributors: [nakata5321]
 
 Why should you install any corporate app for switching on/off your smart light?  Our wi-fi smart switches don’t require any cloud connection. We tried out many other switches from various manufactureres all over the world and know some important details to make comfortable device. As other smart devices from Robonomics it is fully compatible with Home Assistant, uses open-source upgradable firmware Tasmota.
 
+<robo-wiki-note type="warning">  
+
+All devices from Robonomics can be purchased on the official [website](https://robonomics.network/devices/).
+
+</robo-wiki-note>
+
 ## 1 Gang Switch
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmTWhDu1PdQgR1ZuLuGpEtYG8uMm8eiWLziK1zLupQwU2i', type:'mp4'}]" />

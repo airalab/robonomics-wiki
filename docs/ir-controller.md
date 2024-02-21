@@ -15,6 +15,12 @@ The device has a number of unique features such as:
 
 Get ready for a new level of air conditioner management with our remote, and may your home always be set to maximum comfort!
 
+<robo-wiki-note type="warning">  
+
+All devices from Robonomics can be purchased on the official [website](https://robonomics.network/devices/).
+
+</robo-wiki-note>
+
 ## Installation Example
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmUpSdy3oQbU7dx59sE3MMdL1kr6E2TKsPA5kmFeKHTgF4', type:'mp4'}]" />
@@ -270,3 +276,9 @@ If you have problem with GUI mode, switch to "CODE EDITOR" and write next:
 type: thermostat
 entity: climate.<your climate name>
 ```
+
+<robo-wiki-note type="warning">  
+
+All devices from Robonomics can be purchased on the official [website](https://robonomics.network/devices/).
+
+</robo-wiki-note>
