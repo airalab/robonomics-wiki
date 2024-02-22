@@ -12,6 +12,12 @@ The device has a number of unique features such as:
 3. Monitoring works on the local network and does not require access to the cloud.
 4. Support of Home Assistant via the MQTT protocol.
 
+<robo-wiki-note type="warning">  
+
+All devices from Robonomics can be purchased on the official [website](https://robonomics.network/devices/).
+
+</robo-wiki-note>
+
 ## Installation Example
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmTNyEP12NA7PPjw5WJBwyGwMq9Pg3YHmgEeaFRgNaS5Lc', type:'mp4'}]" />
@@ -108,3 +114,9 @@ Basically, Home Assistant will discover "Tasmota" integration automatically. But
 <robo-wiki-picture src="energymeter/HA.jpg" />
 
 That's all. Now you can add energy entities to the dashboard.
+
+<robo-wiki-note type="warning">  
+
+All devices from Robonomics can be purchased on the official [website](https://robonomics.network/devices/).
+
+</robo-wiki-note>

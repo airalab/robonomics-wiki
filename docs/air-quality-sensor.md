@@ -5,6 +5,12 @@ contributors: [nakata5321]
 
 Join with this air quality sensor to the decentralized opensource [sensors map](https://sensors.robonomics.network/#/) which operates with the sole intent of serving the free will of individuals. This sensor is ready to install, you will need wi-fi and a power socket, it can be installed both indoor and outdoor. Includes PM2.5/PM10 sensor and temperature/humidity sensor, can be expanded with several types of additional sensors (VOC, CO2, atmospheric pressure).
 
+<robo-wiki-note type="warning">  
+
+All devices from Robonomics can be purchased on the official [website](https://robonomics.network/devices/).
+
+</robo-wiki-note>
+
 ## Key features
 
 - Type-c for open-source firmware Tasmota upgrading
