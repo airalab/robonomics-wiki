@@ -46,13 +46,13 @@ module.exports = function (api) {
 
         // Using the same filename as the file for easy frontmatter
         const imgName = node.fileInfo.name;
-        // const imgLang = 'ar';
-        let locale = node.fileInfo.path.slice(0,2);
+        let locale = '';
 
-        if(!locales.includes(locale)) {
+        if (node.fileInfo.path.includes('/')) {
+          locale = node.fileInfo.path.slice(0,2);
+        } else {
           locale = "en";
         }
-
         
           const output = `${options.outputDir}${imgName}-${locale}.png`;
           // Only generate images for files that don't exist already
