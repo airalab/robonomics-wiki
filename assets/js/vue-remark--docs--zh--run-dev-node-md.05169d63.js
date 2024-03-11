@@ -1,0 +1,87 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vue-remark--docs--zh--run-dev-node-md"],{
+
+/***/ "dATL":
+/*!*************************************************************************************!*\
+  !*** ./docs/zh/run-dev-node.md?vue&type=custom&index=0&blockType=vue-remark-import ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_15_0_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_run_dev_node_md_vue_type_custom_index_0_blockType_vue_remark_import__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib??ref--15-0!../../node_modules/vue-loader/lib??ref--17-0!../../node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1!./run-dev-node.md?vue&type=custom&index=0&blockType=vue-remark-import */ \"meGq\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_babel_loader_lib_index_js_ref_15_0_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_run_dev_node_md_vue_type_custom_index_0_blockType_vue_remark_import__WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./docs/zh/run-dev-node.md?");
+
+/***/ }),
+
+/***/ "fC+p":
+/*!******************************************************************************************!*\
+  !*** ./docs/zh/run-dev-node.md?vue&type=custom&index=1&blockType=vue-remark-frontmatter ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_16_0_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_run_dev_node_md_vue_type_custom_index_1_blockType_vue_remark_frontmatter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib??ref--16-0!../../node_modules/vue-loader/lib??ref--17-0!../../node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1!./run-dev-node.md?vue&type=custom&index=1&blockType=vue-remark-frontmatter */ \"luU3\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_babel_loader_lib_index_js_ref_16_0_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_run_dev_node_md_vue_type_custom_index_1_blockType_vue_remark_frontmatter__WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./docs/zh/run-dev-node.md?");
+
+/***/ }),
+
+/***/ "if1F":
+/*!*********************************!*\
+  !*** ./docs/zh/run-dev-node.md ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _run_dev_node_md_vue_type_template_id_0825c2e0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./run-dev-node.md?vue&type=template&id=0825c2e0& */ \"j+Wb\");\n/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"KHd+\");\n/* harmony import */ var _run_dev_node_md_vue_type_custom_index_0_blockType_vue_remark_import__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./run-dev-node.md?vue&type=custom&index=0&blockType=vue-remark-import */ \"dATL\");\n/* harmony import */ var _run_dev_node_md_vue_type_custom_index_1_blockType_vue_remark_frontmatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./run-dev-node.md?vue&type=custom&index=1&blockType=vue-remark-frontmatter */ \"fC+p\");\n\nvar script = {}\n\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(\n  script,\n  _run_dev_node_md_vue_type_template_id_0825c2e0___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _run_dev_node_md_vue_type_template_id_0825c2e0___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* custom blocks */\n\nif (typeof _run_dev_node_md_vue_type_custom_index_0_blockType_vue_remark_import__WEBPACK_IMPORTED_MODULE_2__[\"default\"] === 'function') Object(_run_dev_node_md_vue_type_custom_index_0_blockType_vue_remark_import__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(component)\n\nif (typeof _run_dev_node_md_vue_type_custom_index_1_blockType_vue_remark_frontmatter__WEBPACK_IMPORTED_MODULE_3__[\"default\"] === 'function') Object(_run_dev_node_md_vue_type_custom_index_1_blockType_vue_remark_frontmatter__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(component)\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack:///./docs/zh/run-dev-node.md?");
+
+/***/ }),
+
+/***/ "j+Wb":
+/*!****************************************************************!*\
+  !*** ./docs/zh/run-dev-node.md?vue&type=template&id=0825c2e0& ***!
+  \****************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_cache_loader_dist_cjs_js_cacheDirectory_node_modules_cache_gridsome_cacheIdentifier_4964dc46_vue_loader_template_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_run_dev_node_md_vue_type_template_id_0825c2e0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/cache-loader/dist/cjs.js?{\"cacheDirectory\":\"node_modules/.cache/gridsome\",\"cacheIdentifier\":\"4964dc46-vue-loader-template\"}!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??ref--17-0!../../node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1!./run-dev-node.md?vue&type=template&id=0825c2e0& */ \"otbv\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_cache_loader_dist_cjs_js_cacheDirectory_node_modules_cache_gridsome_cacheIdentifier_4964dc46_vue_loader_template_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_run_dev_node_md_vue_type_template_id_0825c2e0___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_cache_loader_dist_cjs_js_cacheDirectory_node_modules_cache_gridsome_cacheIdentifier_4964dc46_vue_loader_template_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_ref_17_0_node_modules_gridsome_vue_remark_lib_loader_js_ref_17_1_run_dev_node_md_vue_type_template_id_0825c2e0___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./docs/zh/run-dev-node.md?");
+
+/***/ }),
+
+/***/ "luU3":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--16-0!./node_modules/vue-loader/lib??ref--17-0!./node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1!./docs/zh/run-dev-node.md?vue&type=custom&index=1&blockType=vue-remark-frontmatter ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initFrontMatter; });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"Kw5r\");\n\nvar strats = vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].config.optionMergeStrategies;\nvar key = '__vueRemarkFrontMatter';\nvar data = {\n  \"excerpt\": null,\n  \"title\": \"如何运行Robonomics Dev节点\",\n  \"contributors\": [\"LoSk-p\"],\n  \"tools\": [\"Robonomics 2.4.0 https://github.com/airalab/robonomics\"]\n};\nfunction initFrontMatter(Component) {\n  if (Component.options[key]) {\n    Component.options[key] = data;\n  }\n\n  vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].util.defineReactive(Component.options, key, data);\n  Component.options.computed = strats.computed({\n    $frontmatter: function $frontmatter() {\n      return Component.options[key];\n    }\n  }, Component.options.computed);\n}\n\n//# sourceURL=webpack:///./docs/zh/run-dev-node.md?./node_modules/babel-loader/lib??ref--16-0!./node_modules/vue-loader/lib??ref--17-0!./node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1");
+
+/***/ }),
+
+/***/ "meGq":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--15-0!./node_modules/vue-loader/lib??ref--17-0!./node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1!./docs/zh/run-dev-node.md?vue&type=custom&index=0&blockType=vue-remark-import ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_runner_work_robonomics_wiki_robonomics_wiki_node_modules_gridsome_vue_remark_src_VueRemarkRoot_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@gridsome/vue-remark/src/VueRemarkRoot.js */ \"UQSp\");\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ \"Kw5r\");\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\n\n\nvar strats = vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"].config.optionMergeStrategies;\nvar imported = {\n  VueRemarkRoot: _home_runner_work_robonomics_wiki_robonomics_wiki_node_modules_gridsome_vue_remark_src_VueRemarkRoot_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (Component) {\n  var components = Component.options.components = Component.options.components || {};\n  var computed = Component.options.computed = Component.options.computed || {};\n  Object.keys(imported).forEach(function (key) {\n    if (_typeof(imported[key]) === 'object' && typeof imported[key].render === 'function') {\n      components[key] = imported[key];\n    } else if (typeof imported[key] === 'function' && typeof imported[key].options.render === 'function') {\n      components[key] = imported[key];\n    } else {\n      computed[key] = function () {\n        return imported[key];\n      };\n    }\n  });\n});\n\n//# sourceURL=webpack:///./docs/zh/run-dev-node.md?./node_modules/babel-loader/lib??ref--15-0!./node_modules/vue-loader/lib??ref--17-0!./node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1");
+
+/***/ }),
+
+/***/ "otbv":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/gridsome","cacheIdentifier":"4964dc46-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??ref--17-0!./node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1!./docs/zh/run-dev-node.md?vue&type=template&id=0825c2e0& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('VueRemarkRoot',[_c('p',[_c('strong',[_vm._v(\"为了在Robonomics上测试您的应用程序，您可能希望以开发模式运行它。本文介绍了逐步说明\\n如何获得您自己的本地测试实例的Robonomics。\")])]),_c('h2',{attrs:{\"id\":\"获取节点二进制文件\"}},[_c('a',{attrs:{\"href\":\"#%E8%8E%B7%E5%8F%96%E8%8A%82%E7%82%B9%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6\",\"aria-hidden\":\"true\"}},[_vm._v(\"#\")]),_vm._v(\"获取节点二进制文件\")]),_c('ol',[_c('li',[_c('p',[_vm._v(\"首先，您需要一个二进制文件，从最新的\"),_c('a',{attrs:{\"href\":\"https://github.com/airalab/robonomics/releases\",\"target\":\"_blank\",\"rel\":\"nofollow noopener noreferrer\"}},[_vm._v(\"发布\")]),_vm._v(\"中下载它的存档。\")])]),_c('li',[_c('p',[_vm._v(\"导航到存档文件夹，解压缩二进制文件并更改权限：\")])])]),_c('pre',[_c('code',{pre:true,attrs:{\"class\":\"hljs language-bash\"}},[_vm._v(\"tar xf robonomics-2.4.0-x86_64-unknown-linux-gnu.tar.gz\\nchmod +x robonomics\")])]),_c('h2',{attrs:{\"id\":\"运行\"}},[_c('a',{attrs:{\"href\":\"#%E8%BF%90%E8%A1%8C\",\"aria-hidden\":\"true\"}},[_vm._v(\"#\")]),_vm._v(\"运行\")]),_c('p',[_vm._v(\"使用以下命令运行节点：\")]),_c('pre',[_c('code',{pre:true,attrs:{\"class\":\"hljs language-bash\"}},[_vm._v(\"./robonomics --dev\")])]),_c('p',[_vm._v(\"您将看到以下输出：\")]),_c('p',[_c('g-image',{attrs:{\"src\":__webpack_require__(/*! !assets-loader?alt=robonomics!../images/dev-node/robonomics.png */ \"d/83\"),\"alt\":\"robonomics\"}})],1),_c('robo-wiki-note',{attrs:{\"type\":\"note\",\"title\":\"From Scratch\"}},[_c('p',[_vm._v(\"  如果您想清除现有的区块，可以通过删除\"),_c('code',{pre:true},[_vm._v(\"/tmp/substrate******/chains/dev/db/full\")]),_vm._v(\"中的RocksDB来执行此操作。\\n  将\"),_c('code',{pre:true},[_vm._v(\"******\")]),_vm._v(\"替换为启动日志中显示的相应标识符。\")]),_c('p',[_vm._v(\"  如果您想每次从头开始启动节点，请使用\"),_c('code',{pre:true},[_vm._v(\"--tmp\")]),_vm._v(\"标志。\")])]),_c('h2',{attrs:{\"id\":\"连接\"}},[_c('a',{attrs:{\"href\":\"#%E8%BF%9E%E6%8E%A5\",\"aria-hidden\":\"true\"}},[_vm._v(\"#\")]),_vm._v(\"连接\")]),_c('p',[_vm._v(\"现在您可以通过\"),_c('a',{attrs:{\"href\":\"https://polkadot.js.org/apps/#/explorer\",\"target\":\"_blank\",\"rel\":\"nofollow noopener noreferrer\"}},[_vm._v(\"Polkadot Portal\")]),_vm._v(\"连接到本地节点。\")]),_c('p',[_vm._v(\"在左上角将网络更改为“Local Node”，然后点击“Switch”。\")]),_c('p',[_c('g-image',{attrs:{\"src\":__webpack_require__(/*! !assets-loader?alt=switch!../images/dev-node/portal.png */ \"jYCK\"),\"alt\":\"switch\"}})],1),_c('p',[_vm._v(\"欢迎来到Robonomics的本地实例！\")]),_c('p',[_c('g-image',{attrs:{\"src\":__webpack_require__(/*! !assets-loader?alt=local_node!../images/dev-node/dev-portal.png */ \"utua\"),\"alt\":\"local_node\"}})],1)],1)}\nvar staticRenderFns = []\n\n\n\n//# sourceURL=webpack:///./docs/zh/run-dev-node.md?./node_modules/cache-loader/dist/cjs.js?%7B%22cacheDirectory%22:%22node_modules/.cache/gridsome%22,%22cacheIdentifier%22:%224964dc46-vue-loader-template%22%7D!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??ref--17-0!./node_modules/@gridsome/vue-remark/lib/loader.js??ref--17-1");
+
+/***/ })
+
+}]);
