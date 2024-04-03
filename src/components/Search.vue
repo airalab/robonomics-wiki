@@ -140,7 +140,11 @@ query{
 
         if ( this.search.length > 2 ) {
           return this.$static.allDocPage.edges.filter(post => {
-            return (post.node.title.toLowerCase().includes(this.search.toLowerCase().trim()) || post.node.content.toLowerCase().includes(this.search.toLowerCase().trim())) & (post.node.path != this.$route.matched[0].path+'/')
+            if(this.$locale !== 'en') {
+              return (post.node.path.includes(`/${this.$locale}/`) && (post.node.title.toLowerCase().includes(this.search.toLowerCase().trim()) || post.node.content.toLowerCase().includes(this.search.toLowerCase().trim())) && (post.node.path != this.$route.matched[0].path+'/'))
+            } else {
+              return (post.node.path.split("/").length - 1 < 4 && (post.node.title.toLowerCase().includes(this.search.toLowerCase().trim()) || post.node.content.toLowerCase().includes(this.search.toLowerCase().trim())) && (post.node.path != this.$route.matched[0].path+'/'))
+            }
           })
         }
 
