@@ -22,19 +22,19 @@ All devices from Robonomics come pre-flashed out of the box. However, since all 
 
 </robo-wiki-note>
 
-Take the device from the box and connect it to the computer. Then go the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). This is The Web flasher.
+Take the device from the box and connect it to the computer. Then go to the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). This is the web flasher.
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmVWmGSnvGwQ3dQfZC8iM5KHBoGpaWVXXUjNuNesULQrGw', type:'mp4'}]" />
 
 <robo-wiki-note type="warning"> Note! Web flasher is working only with Google Chrome or Microsoft Edge browser.</robo-wiki-note>
 
 In "Firmware" drop-box choose **"SWS-1G-E-11-23"** option and next in "SELECT CHIP" choose **"ESP32"**. Press **"CONNECT"** button.
-A popup window will appear where you should select the serial port to which the device is connected (usually it's ttyUSBO). Then choose **"INSTALL SWS-1G-E-11-23"**. 
-On next window you can make **CLEAR INSTALLATION** by check **ERASE DEVICE**. Press Next and then Install. Wait until firmware to upload to Smart switch device.
+A popup window will appear where you should select the serial port to which the device is connected (usually it's `/ttyUSB0`). Then choose **"INSTALL SWS-1G-E-11-23"**. 
+On next window, you can make **CLEAR INSTALLATION** by check **ERASE DEVICE**. Press Next and then Install. Wait until firmware to upload to Smart switch device.
 
-After finishing the installation process Wi-Fi configuration popup will appear. Provide Wi-Fi credentials.
+After finishing the installation process, a Wi-Fi configuration popup will appear. Provide Wi-Fi credentials.
 
-After setting up Wi-Fi you can visit device via **VISIT DEVICE** button. Later you can visit device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
+After setting up Wi-Fi, you can visit the device via **VISIT DEVICE** button. Later, you can visit device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
 [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
 Skip **Step 2 — Access Point** and go to [**Step 3 — Configuration**](/docs/ir-controller/#step3).
@@ -43,12 +43,12 @@ Skip **Step 2 — Access Point** and go to [**Step 3 — Configuration**](/docs/
 Step 2 — Access Point
 </robo-wiki-title>
 
-If you take the Smart switch from the box and connect it to the power supply, it will create hotspot with name "robonomics-XXXXXXX". Connect to it. 
-Configuration window should open. If not, open web-browser and go to `192.168.4.1` page.
+If you take the Smart switch from the box and connect it to the power supply, it will create a hotspot with the name "robonomics-XXXXXXX". Connect to it. 
+A configuration window should open. If not, open a web-browser and go to `192.168.4.1` page.
 
 <robo-wiki-picture src="ir-controller/phone-wifi.jpg" />
 
-Provide Wi-Fi credentials. After that the Smart switch device will connect to Wi-Fi network. Check the device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
+Provide Wi-Fi credentials. After that, the Smart switch device will connect to Wi-Fi network. Check the device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
 [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
 <robo-wiki-title :type="2" anchor="step3">
@@ -68,7 +68,7 @@ Go to **"Configuration"**->**"Configure other"**. In **"Template"** string inser
 
 Verify that checkbox **"Activate"** and **"MQTT Enable"** is enabled. If not, enable it and press Save button.
 
-Return to "main menu" and go to **"Configuration"** -> **"Configure MQTT"**.
+Return to the main menu and go to **"Configuration"** -> **"Configure MQTT"**.
 Provide your MQTT credentials here:
 
 <robo-wiki-picture src="ir-controller/mqtt.jpg" />
@@ -79,11 +79,11 @@ That's all with ESP for now. Next step is install the Home Assistant integration
 Step 4 — Integration setup
 </robo-wiki-title>
 
-This article assumes, that you have Home Assistant. To connect Smart Switch device to Home Assistant, you need to install "Tasmota" integration.
+This article assumes, that you have Home Assistant. To connect Smart Switch device to Home Assistant, you need to install Tasmota integration.
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmQw6aA5e7UqT1hZrAV8m1UPq1rWCgLsWcVufuxitQm84p', type:'mp4'}]" />
 
-Basically, Home Assistant will discover "Tasmota" integration automatically. But if not, add it manually.
+Basically, Home Assistant will discover Tasmota integration automatically. But if not, add it manually.
 That's all. Now you can add switch entity to the dashboard.
 
 <robo-wiki-note type="warning">  

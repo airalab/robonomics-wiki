@@ -43,7 +43,7 @@ Once HACS is installed, navigate to HACS -> Integrations and search for the `Loc
 
 ### Option 2: Manual Installation
 
-Under the homeassistant user, clone the project repository:
+Under the `homeassistant` user, clone the project repository:
 
 <code-helper copy>
 
@@ -73,7 +73,7 @@ If you don't have any custom integrations, copy the whole `custom_components` di
 
 ## Configuration
 
-Create a new sensor entry in your `configuration.yaml` and adjust the host name or the ip address. To find the local ip address of you sensor you can use [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/). Name can be any.
+Create a new sensor entry in your `configuration.yaml` and adjust the host name or the IP address. To find the local IP address of your sensor, you can use [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/). Name can be any.
 
 |Parameter              |Type    | Necessity    | Description
 |:----------------------|:-------|:------------ |:------------
@@ -99,8 +99,8 @@ Create a new sensor entry in your `configuration.yaml` and adjust the host name 
   ```
 </code-helper>
 
-> List of all supported sensors can be found in the [repository](https://github.com/lichtteil/local_luftdaten).
+> A list of all supported sensors can be found in the [repository](https://github.com/lichtteil/local_luftdaten).
 
-Restart you Home Assistant.
-After that you can add sensor to your dashboard. Name of the entity will be the name you added to `configuration.yaml`.
+Restart your Home Assistant.
+After that, you can add a sensor to your dashboard. The name of the entity will be the name you added to `configuration.yaml`.
 <robo-wiki-picture src="sds-configuration-card.png"/>

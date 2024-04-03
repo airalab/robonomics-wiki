@@ -22,14 +22,14 @@ All devices from Robonomics come pre-flashed out of the box. However, since all 
 
 </robo-wiki-note>
 
-Take the device from the box and connect it to the computer. Then go the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). This is The Web flasher.
+Take the device from the box and connect it to the computer. Then go to the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). This is the web flasher.
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmT6CDmmF8yahM1WTCwmAZBcrYUh6xxXpmvuboiYe42rEQ', type:'mp4'}]" />
 
 <robo-wiki-note type="warning"> Note! Web flasher is working only with Google Chrome or Microsoft Edge browser.</robo-wiki-note>
 
 In "Firmware" drop-box choose **"IR REMOTE"** option and next in "SELECT CHIP" choose **"ESP32"**. Press **"CONNECT"** button.
-A popup window will appear where you should select the serial port to which the device is connected (usually it's ttyUSBO). Then choose **"INSTALL IR-REMOTE_EN"**. 
+A popup window will appear where you should select the serial port to which the device is connected (usually it's `/ttyUSB0`). Then choose **"INSTALL IR-REMOTE_EN"**. 
 On next window you can make **CLEAR INSTALLATION** by check **ERASE DEVICE**. Press Next and then Install. Wait until firmware to upload to the IR controller.
 
 After finishing the installation process Wi-Fi configuration popup will appear. There you have options:
@@ -41,7 +41,7 @@ After finishing the installation process Wi-Fi configuration popup will appear. 
 After setting up Wi-Fi you can visit device via **VISIT DEVICE** button. Later you can visit device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
 [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
-2) Or disconnect the device from the computer and connect it to the power supply. IR Remote will start and create Wi-Fi hotspot. To connect the IR Remote to your home Wi-Fi network through an hotspot, follow the instructions in Step 2.
+2) Or disconnect the device from the computer and connect it to the power supply. IR Remote will start and create a Wi-Fi hotspot. To connect the IR Remote to your home Wi-Fi network through a hotspot, follow the instructions in Step 2.
 
 <robo-wiki-title :type="2" anchor="step2">
 Step 2 — Access Point
@@ -56,7 +56,7 @@ Provide Wi-Fi credentials. After that the IR Remote will connect to Wi-Fi networ
 
 
 <robo-wiki-title :type="2" anchor="step3">
-Step 3 - Configuration
+Step 3 — Configuration
 </robo-wiki-title>
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmZokF8TnReLt4B6q8ixkBmpZwpiiU9PQCPdyJw9RcnYFn', type:'mp4'}]" />
@@ -77,7 +77,7 @@ Provide your MQTT credentials here:
 
 <robo-wiki-picture src="ir-controller/mqtt.jpg" />
 
-That's all with ESP for now. Next step is install the Home Assistant integration.
+That's all with ESP for now. The next step is to install the Home Assistant integration.
 
 <robo-wiki-title :type="2" anchor="step4">
 Step 4 — Integration Setup

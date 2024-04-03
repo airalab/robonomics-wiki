@@ -22,15 +22,15 @@ All devices from Robonomics come pre-flashed out of the box. However, since all 
 
 </robo-wiki-note>
 
-Take the device from the box and connect it to the computer. Then go the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). This is The Web flasher.
+Take the device from the box and connect it to the computer. Then go to the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). This is the web flasher.
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmapJYTMqxVSzavJmWJg3rQjRoyCtdeFzYifgvDkXdzi8S', type:'mp4'}]" />
 
 <robo-wiki-note type="warning"> Note! Web flasher is working only with Google Chrome or Microsoft Edge browser.</robo-wiki-note>
 
 In "Firmware" drop-box choose **"ENERGY MONITOR"** option and next in "SELECT CHIP" choose **"ESP32-S3"**. Press **"CONNECT"** button.
-A popup window will appear where you should select the serial port to which the device is connected (usually it's ttyUSBO). Then choose **"INSTALL ENERGY-MONITOR_EN"**. 
-On next window you can make **CLEAR INSTALLATION** by check **ERASE DEVICE**. Press Next and then Install. Wait until firmware to upload to Energy Monitoring device.
+A popup window will appear where you should select the serial port to which the device is connected (usually it's `/ttyUSB0`). Then choose **"INSTALL ENERGY-MONITOR_EN"**. 
+On next window, you can make **CLEAR INSTALLATION** by check **ERASE DEVICE**. Press Next and then Install. Wait until firmware to upload to Energy Monitoring device.
 
 After finishing the installation process Wi-Fi configuration popup will appear. Provide Wi-Fi credentials.
 
@@ -47,7 +47,7 @@ If you take Energy monitor from the box and connect it to the power supply, it w
 
 <robo-wiki-picture src="ir-controller/phone-wifi.jpg" />
 
-Provide Wi-Fi credentials. After that the Energy Monitoring device will connect to Wi-Fi network. Check the device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
+Provide Wi-Fi credentials. After that, the Energy Monitoring device will connect to the Wi-Fi network. Check the device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
 [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
 <robo-wiki-title :type="2" anchor="step3">
@@ -72,7 +72,7 @@ Provide your MQTT credentials here:
 
 <robo-wiki-picture src="ir-controller/mqtt.jpg" />
 
-That's all with ESP for now. Next step is install the Home Assistant integration.
+That's all with ESP for now. The next step is to install the Home Assistant integration.
 
 <robo-wiki-title :type="2" anchor="step4">
 Step 4 — Integration setup
