@@ -30,7 +30,7 @@ Take the device from the box and connect it to the computer. Then go to the webs
 
 In "Firmware" drop-box choose **"IR REMOTE"** option and next in "SELECT CHIP" choose **"ESP32"**. Press **"CONNECT"** button.
 A popup window will appear where you should select the serial port to which the device is connected (usually it's `/ttyUSB0`). Then choose **"INSTALL IR-REMOTE_EN"**. 
-On next window you can make **CLEAR INSTALLATION** by check **ERASE DEVICE**. Press Next and then Install. Wait until firmware to upload to the IR controller.
+On next window, you can make **CLEAR INSTALLATION** by check **ERASE DEVICE**. Press Next and then Install. Wait until firmware to upload to the IR controller.
 
 After finishing the installation process Wi-Fi configuration popup will appear. There you have options:
 

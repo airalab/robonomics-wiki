@@ -60,7 +60,9 @@ If you already have any custom integrations, copy the `custom_components/local_l
   cd local_luftdaten
   mv custom_components/local_luftdaten ~/.homeassistant/custom_components/
   ```
+
 </code-helper>
+
 If you don't have any custom integrations, copy the whole `custom_components` directory to your Home Assistant configuration directory. For example:
 
 <code-helper copy>
@@ -69,6 +71,7 @@ If you don't have any custom integrations, copy the whole `custom_components` di
   cd local_luftdaten
   mv custom_components/ ~/.homeassistant/
   ```
+
 </code-helper>
 
 ## Configuration

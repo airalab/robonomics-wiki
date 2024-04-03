@@ -73,7 +73,7 @@ Provide your MQTT credentials here:
 
 <robo-wiki-picture src="ir-controller/mqtt.jpg" />
 
-That's all with ESP for now. Next step is install the Home Assistant integration.
+That's all with ESP for now. The next step is to install the Home Assistant integration.
 
 <robo-wiki-title :type="2" anchor="step4">
 Step 4 — Integration setup
