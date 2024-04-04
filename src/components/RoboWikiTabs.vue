@@ -71,19 +71,21 @@ export default {
 
   .robo-wiki-tabs__item {
     position: relative;
-    padding: 0 5px;
+    padding: 0 5px; 
     margin-bottom: 0;
     font-weight: 600;
     text-align: center;
     transition: color 0.33s ease-in-out;
     cursor: pointer;
     white-space: nowrap;
+    overflow: unset;
   }
 
   .robo-wiki-tabs__item::after {
     content: '';
     position: absolute;
     display: inline-block;
+    bottom: 0;
     width: 5px;
     height: 5px;
     -moz-border-radius: 7.5px;
@@ -116,7 +118,7 @@ export default {
   }
 
   .robo-wiki-tabs--horizontal  .robo-wiki-tabs__item::after {
-    bottom: -2px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
    } 
