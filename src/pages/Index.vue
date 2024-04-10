@@ -97,7 +97,7 @@ export default {
         },
         {
           to: '/docs/ir-controller/',
-          name: 'Roboonmics smart devices'
+          name: 'Robonomics smart devices'
         },
         {
           to: '/docs/glossary/',
