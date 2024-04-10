@@ -1,4 +1,4 @@
-- title_en: Robonomics Smart Home
+- title_en: Robonomics Home Assistant Integration
   items:
     - title_en: Overview
       link: /docs/robonomics-smart-home-overview
@@ -78,18 +78,21 @@
           link: /docs/use-blueprints
         - title_en: Get Notified When Door Opens
           link: /docs/door-notification
-    - title_en: Devices
-      items:
-        - title_en: IR Remote
-          link: /docs/ir-controller
-        - title_en: Energy Monitoring
-          link: /docs/energy-monitoring
-        - title_en: Smart Switches
-          link: /docs/smart-switches
-        - title_en: Air Quality Sensor
-          link: /docs/air-quality-sensor
 
-- title_en: Learn
+- title_en: Robonomics Devices
+  items:
+    - title_en: IR Remote
+      link: /docs/ir-controller
+    - title_en: Energy Monitoring
+      link: /docs/energy-monitoring
+    - title_en: 1 Gang Smart Switch
+      link: /docs/1gang-smart-switch
+    - title_en: 2 Gang Smart Switch
+      link: /docs/2gang-smart-switch
+    - title_en: Air Quality Sensor
+      link: /docs/sds-sensor-connect
+
+- title_en: Robonomics Parachain Theory
   items:
     # - title_en: Introduction
     #   title_ru: Введение
@@ -121,18 +124,14 @@
     - title_en: 'Robonomics OpenGov'
       link: '/docs/robonomics-opengov'
 
-- title_en: Maintain
-  items:
+#- title_en: Maintain
+#  items:
     - title_en: How to build collator node from source
       link: /docs/how-to-build-collator-node
     - title_en: How to launch the Robonomics collator
       link: /docs/how-to-launch-the-robonomics-collator
     - title_en: How to Update Collator Node Version
       link: /docs/how-to-update-collator-node-version
-    - title_en: How to Connect SDS011 Sensor
-      link: /docs/sds-sensor-connect
-    - title_en: How to Add SDS011 Sensor to Home Assistant
-      link: /docs/sds-sensor-hass
     - title_en: How to send extrinsic from ESP
       link: /docs/esp32-datalog-demo
     #- title_en: Configure Metrics With Prometheus And Grafana

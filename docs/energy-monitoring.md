@@ -2,15 +2,7 @@
 title: Energy Monitoring
 contributors: [nakata5321]
 ---
-
-This page describes the operating instructions for the Energy Monitoring device powered by Robonomics. Here you will find the hardware specification of the device and its basic configuration.
-
-The device has a number of unique features such as:
-
-1. Monitor energy consumption, whether that's an individual estate or an entire building.
-2. The included software provides vital insight that can help to control and save energy in the future.
-3. Monitoring works on the local network and does not require access to the cloud.
-4. Support of Home Assistant via the MQTT protocol.
+This article will show you the process of setting up the Energy Monitoring.
 
 <robo-wiki-note type="warning">  
 
@@ -18,22 +10,9 @@ All devices from Robonomics can be purchased on the official [website](https://r
 
 </robo-wiki-note>
 
-## Installation Example
-
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmTNyEP12NA7PPjw5WJBwyGwMq9Pg3YHmgEeaFRgNaS5Lc', type:'mp4'}]" />
 
-## Hardware specification
-
-- Input Voltage: AC 100-240V 50/60Hz
-- Measuring Range: 0.1-80A
-- Wireless Protocol: IEEE 802.11b/g/n (2.4 GHz Wi-Fi)
-- CPU: ESP32-S3 MCU-based system on a chip (SoC) dual-core microprocessor (Xtensa 32-bit LX7), up to 240 MHz
-- Memory: 448 KB ROM, 520 KB SRAM, 8 MB FLASH
-- USB-C for development and updates
-
-## How to setup
-
-<robo-wiki-title :type="3" anchor="step1">
+<robo-wiki-title :type="2" anchor="step1">
 Step 1 — Flashing
 </robo-wiki-title>
 
@@ -43,17 +22,15 @@ All devices from Robonomics come pre-flashed out of the box. However, since all 
 
 </robo-wiki-note>
 
-Take the device from the box and connect it to the computer. Then go the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). You will see next:
-
-<robo-wiki-picture src="ir-controller/web-interface.jpg" />
-
-<robo-wiki-note type="warning"> Note! Web flasher is working only with Google Chrome or Microsoft Edge browser.</robo-wiki-note>
+Take the device from the box and connect it to the computer. Then go to the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). This is the web flasher.
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmapJYTMqxVSzavJmWJg3rQjRoyCtdeFzYifgvDkXdzi8S', type:'mp4'}]" />
 
+<robo-wiki-note type="warning"> Note! Web flasher is working only with Google Chrome or Microsoft Edge browser.</robo-wiki-note>
+
 In "Firmware" drop-box choose **"ENERGY MONITOR"** option and next in "SELECT CHIP" choose **"ESP32-S3"**. Press **"CONNECT"** button.
-A popup window will appear where you should select the serial port to which the device is connected (usually it's ttyUSBO). Then choose **"INSTALL ENERGY-MONITOR_EN"**. 
-On next window you can make **CLEAR INSTALLATION** by check **ERASE DEVICE**. Press Next and then Install. Wait until firmware to upload to Energy Monitoring device.
+A popup window will appear where you should select the serial port to which the device is connected (usually it's `/ttyUSB0`). Then choose **"INSTALL ENERGY-MONITOR_EN"**. 
+On next window, you can make **CLEAR INSTALLATION** by check **ERASE DEVICE**. Press Next and then Install. Wait until firmware to upload to Energy Monitoring device.
 
 After finishing the installation process Wi-Fi configuration popup will appear. Provide Wi-Fi credentials.
 
@@ -62,7 +39,7 @@ After setting up Wi-Fi you can visit device via **VISIT DEVICE** button. Later y
 
 Skip **Step 2 — Access Point** and go to [**Step 3 — Configuration**](/docs/ir-controller/#step3).
 
-<robo-wiki-title :type="3" anchor="step2">
+<robo-wiki-title :type="2" anchor="step2">
 Step 2 — Access Point
 </robo-wiki-title>
 
@@ -70,16 +47,12 @@ If you take Energy monitor from the box and connect it to the power supply, it w
 
 <robo-wiki-picture src="ir-controller/phone-wifi.jpg" />
 
-Provide Wi-Fi credentials. After that the Energy Monitoring device will connect to Wi-Fi network. Check the device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
+Provide Wi-Fi credentials. After that, the Energy Monitoring device will connect to the Wi-Fi network. Check the device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
 [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
 
-<robo-wiki-title :type="3" anchor="step3">
+<robo-wiki-title :type="2" anchor="step3">
 Step 3 — Configuration
 </robo-wiki-title>
-
-The device's page will look similar to this:
-
-<robo-wiki-picture src="energymeter/energymeter.jpg" />
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmZokF8TnReLt4B6q8ixkBmpZwpiiU9PQCPdyJw9RcnYFn', type:'mp4'}]" />
 
@@ -99,9 +72,9 @@ Provide your MQTT credentials here:
 
 <robo-wiki-picture src="ir-controller/mqtt.jpg" />
 
-That's all with ESP for now. Next step is install the Home Assistant integration.
+That's all with ESP for now. The next step is to install the Home Assistant integration.
 
-<robo-wiki-title :type="3" anchor="step4">
+<robo-wiki-title :type="2" anchor="step4">
 Step 4 — Integration setup
 </robo-wiki-title>
 
