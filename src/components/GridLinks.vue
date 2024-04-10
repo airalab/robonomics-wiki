@@ -29,7 +29,6 @@ export default {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: var(--space);
-        margin-top: var(--space);
         margin-bottom: var(--space);
 
         text-transform: uppercase;

@@ -5,8 +5,8 @@
       <div class="header-top">
 
         <g-link to="/" class="header-logo">
-          <g-image alt="Robonomics WIKI" src="~/assets/images/robonomics-logo-sign-sm.svg" class="inline-block"/>
-          <span class="inline-block">Robonomics WIKI</span>
+          <g-image alt="Robonomics logo" src="~/assets/images/robonomic-logo-robo.svg"/>
+          <span>Robonomics WIKI</span>
         </g-link>
 
         <div class="header-center">
@@ -49,7 +49,8 @@
 
   .header-top {
     display: grid;
-    grid-template-columns: minmax(0,var(--width-sidebar-left)) auto minmax(0,var( --width-sidebar-right));
+    /* grid-template-columns: minmax(0,var(--width-sidebar-left)) auto minmax(0,var( --width-sidebar-right)); */
+    grid-template-columns: 300px auto 200px;
     gap: var(--space);
     align-items: center;
     justify-items: stretch;
