@@ -20,6 +20,12 @@ tools:
 - Set the interval of data sending (by default it is 10 minutes).
 - (Optional) You can add credentials for pinning service Pinata or other custom gateway to spread your data wider over the IPFS network.
 
+<robo-wiki-note type="note" title="Note">
+
+  In [Pinata Setup section](/docs/pinata-setup) you can find more detailed information about using Pinata.
+
+</robo-wiki-note>
+
 3. Press `SUBMIT` after finishing the configuration. If you filled in everything correctly, you will see the success window.
 
 That's all! You have fully setup Robonomics Integration into Home Assistant. Now you can use all 
