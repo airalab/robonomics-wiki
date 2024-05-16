@@ -8,10 +8,12 @@ tools:
     https://github.com/home-assistant/core
   - HACS 1.34.0
     https://github.com/hacs/integration/
-  - Robonomics Home Assistant Integration 1.6.1
+  - Robonomics Home Assistant Integration 1.8.3
     https://github.com/airalab/homeassistant-robonomics-integration
-  - IPFS Home Assistant Addon 1.1.0
-    https://github.com/airalab/ipfs-addon
+  - IPFS Home Assistant Addon 1.3.2
+    https://github.com/PinoutLTD/ipfs-addon
+  - Libp2p <-> WS Proxy Add-on 0.0.1
+    https://github.com/PinoutLTD/addon-libp2p-ws-proxy
 ---
 
 **This article contains instructions to upgrade your existing Home Assistant OS with Robonomics integration.**
