@@ -2,44 +2,23 @@
 title: Upgrade Your Home Assistant OS
 contributors: [LoSk-p]
 tools:   
-  - Home Assistant OS 10.5 for RaspPi 
+  - Home Assistant OS 12.1 for RaspPi 
     https://github.com/home-assistant/operating-system
-  - HACS 1.32.1
+  - Home Assistant Core 2024.5.1
+    https://github.com/home-assistant/core
+  - HACS 1.34.0
     https://github.com/hacs/integration/
-  - Robonomics Home Assistant Integration 1.6.1
+  - Robonomics Home Assistant Integration 1.8.3
     https://github.com/airalab/homeassistant-robonomics-integration
-  - IPFS Home Assistant Addon 1.1.0
-    https://github.com/airalab/ipfs-addon
+  - IPFS Home Assistant Addon 1.3.2
+    https://github.com/PinoutLTD/ipfs-addon
+  - Libp2p <-> WS Proxy Add-on 0.0.1
+    https://github.com/PinoutLTD/addon-libp2p-ws-proxy
 ---
 
 **This article contains instructions to upgrade your existing Home Assistant OS with Robonomics integration.**
 
 <robo-wiki-picture src="home-assistant/homeassistant_os.png" />
-
-## Install IPFS Add-on
-
-
-Robonomics Integration stores the data using local IPFS daemon, so you need to install it first. 
-
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmdAmUHW9bpTU6sUwBYu4ai4DVJ6nZ5xerjM9exvooGKGq', type:'mp4'}]" />
-
-1. There is an [IPFS Add-on for Home Assistant](https://github.com/airalab/ipfs-addon). To install it go to `Settings` -> `Add-ons` and press the `ADD-ON STORE` button in the lower right corner.
-
-2. Press on three dots in the upper right corner and choose `Repositories`. Add there the following link:
-
-<code-helper copy>
-
-```
-https://github.com/airalab/ipfs-addon
-```
-
-</code-helper>
-
-3. Press `ADD` button.
-
-4. Close the repository manager and refresh the page. Now in the end of the page you can see IPFS Daemon Add-on.
-
-5. Open the addon and press `INSTALL`. After installation press `START`.
 
 ## Install HACS
 
@@ -59,7 +38,7 @@ https://github.com/airalab/ipfs-addon
 
 3. In the `Info` tab press `START`. If you want to see the addon in the sidebar, don't forget to enable `Show in sidebar`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmcijfJ45fmW9omB67xWyPKvHhZuwLMTTQ7DBqnyxHUXR1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmYfLWdLH3jTU2uQhr1pzZFsjUNSZ8wtbtEsCdpvmyn4YH', type:'mp4'}]" />
 
 4. Open SSH Add-on and run the following command:
 
@@ -83,10 +62,39 @@ wget -O - https://get.hacs.xyz | bash -
 
 7. Click on it and follow the installation instructions. 
 
+## Install IPFS Daemon and Libp2p <-> WS Proxy Add-Ons
+
+
+Robonomics Integration stores the data using local IPFS daemon and also use Libp2p for remote control, so you need to install it first. You can add the Robonomics Add-Ons repository using this button
+
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FPinoutLTD%2Frobonomics-addons)
+
+Or manually using the following steps:
+
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmZgXme4HSrBwDKekBEy5svpQNVWywrvmN7Zthfa27Gu2H', type:'mp4'}]" />
+
+1. There is an [Robonomics Addons Repository](https://github.com/PinoutLTD/robonomics-addons). To install it go to `Settings` -> `Add-Ons` and press the `ADD-ON STORE` button in the lower right corner.
+
+2. Press on three dots in the upper right corner and choose `Repositories`. Add there the following link:
+
+<code-helper copy>
+
+```
+https://github.com/PinoutLTD/robonomics-addons
+```
+
+</code-helper>
+
+3. Press `ADD` button.
+
+4. Close the repository manager and refresh the page. Now in the end of the page you can see Robonomics Add-Ons.
+
+Now you can install both addons. Open them and press `INSTALL`. After installation press `START`.
+
 ## Install Robonomics Integration
 
 Now you can install Robonomics Integration using HACS.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmUodGanHyTE8hCJdcCHzvdnmuyVVGvnfTuYvYTPVKhh5d', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmSsCYxp7xJ22RZEx3FtJBFfGASu1t4rmqhf78xasnMwt4', type:'mp4'}]" />
 
-Open HACS from the sidebar menu and navigate to `Integrations`. Click on `Explore & Download Repositories`, then search for `Robonomics` and click on the `Download` button located in the lower right corner. Once the download is complete, restart Home Assistant.
+Open HACS from the sidebar menu and search for `Robonomics`. Then click on the `Download` button located in the lower right corner. Once the download is complete, restart Home Assistant.
