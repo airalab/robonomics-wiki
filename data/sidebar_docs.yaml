@@ -11,7 +11,7 @@
           link: /docs/hass-init
         - title_en: Zigbee2MQTT Adapter
           link: /docs/zigbee-to-mqtt-image
-        - title_en: Buying a Subscription
+        - title_en: Subscription Activate
           link: /docs/sub-activate
           topic: Pre-installed Image For Raspberry Pi
         - title_en: Robonomics Integration Setup
@@ -22,7 +22,7 @@
               link: /docs/global-administration
     - title_en: Upgrade Home Assistant OS
       items:
-        - title_en: Buying a Subscription
+        - title_en: Subscription Activate
           link: /docs/sub-activate
           topic: Upgrade Home Assistant OS
         - title_en: Robonomics Installation
@@ -35,7 +35,7 @@
               link: /docs/global-administration
     - title_en: Upgrade Home Assistant Docker for Unix-like OS
       items: 
-        - title_en: Buying a Subscription
+        - title_en: Subscription Activate
           link: /docs/sub-activate
           topic: Upgrade Home Assistant Docker for Unix-like OS
         - title_en: Robonomics Installation
@@ -49,7 +49,7 @@
               link: /docs/global-administration
     - title_en: Upgrade Home Assistant Core
       items: 
-        - title_en: Buying a Subscription
+        - title_en: Subscription Activate
           link: /docs/sub-activate
           topic: Upgrade Home Assistant Core
         - title_en: Robonomics Installation
