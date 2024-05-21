@@ -72,6 +72,8 @@
           link: /docs/ptz-camera
         - title_en: Pinata Setup
           link: /docs/pinata-setup
+        - title_en: Оn-chain gov Experiment
+          link: /docs/on-chain-gov-experiment
     - title_en: Blueprints
       items:
         - title_en: How To Use Blueprints
