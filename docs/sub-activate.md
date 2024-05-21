@@ -5,7 +5,7 @@ tools:
   - Robonomics 2.7.0-1
     https://github.com/airalab/robonomics
   - Robonomics Dapp 
-    https://github.com/airalab/dapp.robonomics.network
+    https://github.com/airalab/robonomics.app
 ---
 
 In this article, you will create Robonomics parachain accounts and buy an IoT subscription. 
@@ -13,7 +13,7 @@ In this article, you will create Robonomics parachain accounts and buy an IoT su
 <robo-wiki-picture src="home-assistant/sub_activate.png" />
 
 
-To control Home Assistant with Robonomics, you need 2 accounts on the Robonomics parachain. For one of the accounts (`owner`), you will buy a Robonomics subscription. The second account (`controller`) will control all Home Assistant processes (such as telemetry) and will give access to other users. These accounts will provide security for your Home Assistant. 
+To control Home Assistant with Robonomics, you need 2 accounts on the Robonomics parachain. For one of the accounts (`OWNER`), you will buy a Robonomics subscription. The second account (`CONTROLLER`) will control all Home Assistant processes (such as telemetry) and will give access to other users. These accounts will provide security for your Home Assistant. 
 
 <robo-wiki-note type="warning" title="WARNING">
 
@@ -35,11 +35,11 @@ This feature is disabled by default in the Polkadot-JS UI. To enable it, navigat
 
 4. Save the mnemonic seed phrase securely and press `Next`.
 
-5. In the next menu, you need to set the account name and password. For convenience, name it  `owner`. Press `Next`.
+5. In the next menu, you need to set the account name and password. For convenience, name it  `OWNER`. Press `Next`.
 
 6. In the final window, click `Save` to complete the account creation. This will also generate a backup JSON-files that you should store safely. You can later use this file to recover your account if you remember the password.
 
-7. Repeat these steps to create an account with the name `controller`.
+7. Repeat these steps to create an account with the name `CONTROLLER`.
 
 
 ## Add Accounts to Polkadot.js
@@ -64,7 +64,7 @@ You can get these files again by creating a backup file of the account. Click on
 
 <robo-wiki-note type="okay">
 
-For this step, you must have a sufficient amount of XRT tokens (minimum of 2-3 XRT) in your `owner` account.
+For this step, you must have a sufficient amount of XRT tokens (minimum of 2-3 XRT) in your `OWNER` account.
 
 </robo-wiki-note>
 
@@ -74,14 +74,14 @@ For this step, you must have a sufficient amount of XRT tokens (minimum of 2-3 X
 
 2. In the following popup menu, connect the Polkadot.js extension. You will see your account address along with its balance.
 
-3. Before purchasing, ensure that you have selected the `owner` account. Click on the address profile icon, and you should see the `owner` account.
+3. Before purchasing, ensure that you have selected the `OWNER` account. Click on the address profile icon, and you should see the `OWNER` account.
 
 4. Finally, click the `BUY SUBSCRIPTION` button and enter the password for your account. Wait until the activation process is completed. You will see the state of your subscription after a while.
 
 
 ## Add Accounts to Subscription
 
-Now, you need to add your `controller` account to the **access list**. 
+Now, you need to add your `CONTROLLER` account to the **access list**. 
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/QmbjtjYBadWY7bxbnN7UkH8vUyG7dYxDRzMGQiReWgdRiz', type:'mp4'}]" />
 
@@ -89,4 +89,4 @@ Now, you need to add your `controller` account to the **access list**.
 
 2. Paste this address into the `Polkadot address` field in the **USERS IN SUBSCRIPTION** section and click the `+` button. 
 
-3. Enter the password for your `owner` account in the popup window, then wait for the activation process to be completed.
+3. Enter the password for your `OWNER` account in the popup window, then wait for the activation process to be completed.
