@@ -7,8 +7,12 @@
       link: /docs/hass-image-install
     - title_en: Home Assistant Init
       link: /docs/hass-init
-    - title_en: Zigbee2MQTT Adapter
-      link: /docs/zigbee-to-mqtt-image
+    - title_en: Add devices
+      items:
+        - title_en: Zigbee Devices
+          link: /docs/zigbee-to-mqtt-image
+        - title_en: Virtual Devices
+          link: /docs/virtual-devices
     - title_en: Subscription Activate
       link: /docs/sub-activate
       topic: Smart Home

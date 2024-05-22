@@ -70,8 +70,10 @@ sudo apt-get install wget unzip git
 
 Then you need to install Docker on PC. Installation instruction find on [the official website](https://docs.docker.com/engine/install/).
 
-<robo-wiki-note type="warning" title="Robonomics for you">
-  Add your user to docker group, to start docker containers without root permissions.
+<robo-wiki-note type="warning" title="Important information">
+
+  Add your user to docker group, to start docker containers without root permissions. Find [instruction here](https://docs.docker.com/engine/install/linux-postinstall/).
+
 </robo-wiki-note>
 
 ## 2. Configure
@@ -81,48 +83,66 @@ Download GitHub repository and go inside it:
 <code-helper copy>
 
 ```
-sudo apt-get install wget unzip git
+https://github.com/PinoutLTD/home-assistant-web3-build.git
+cd home-assistant-web3-build/
 ```
 </code-helper>
 
+then you have to create `.env` file. Convert it from `template.env` file:
 
-## 3. First Boot
+<code-helper copy>
 
-**Safely eject the SD card**, insert it into the Raspberry Pi. Then **insert Zigbee adapter** into the Raspberry Pi.
-
-<robo-wiki-note type="warning">It's important to insert Zigbee adapter before first start of raspberry Pi! 
-It's needed for autoconfiguration of zigbee network.</robo-wiki-note>
-
-**If you have the [JetHome USB JetStick Z2](https://jethome.ru/z2/?sl=en) (which has all the necessary firmware), you can simply proceed with these instructions. However, if you have another adapter, the first thing you need to do is to flash it with Zigbee2MQTT software. You can find instructions for your device [here](https://www.zigbee2mqtt.io/information/supported_adapters.html).**
-
-Next, connect the power cable to your device. It should connect to your Wi-Fi network. 
-
-<robo-wiki-picture src="home-assistant/first-start.gif" alt="first boot" />
-
-Once your Raspberry Pi is connected, the red LED will light up and the green LED will flash for some time. Wait up to 5 minutes for the Raspberry Pi to boot up and register on the network. 
-
-Now find the IP address of Raspberry Pi. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
-[nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/). Find the `robots-home` (optional name could be `Home(homeassistant)`) 
-name of the host machine in the IP list. 
-
-In this example the address is `192.168.43.56`. 
-
-To check that everything is working, open web browser and go to web page `http://%RASPBERRY_IP_ADDRESS%:8123`. In this example, it will be `192.168.43.56:8123`.
-If everything is fine, you will see Home Assistant web interface. If webpage doesn't open, wait up to 5 minutes for the Raspberry Pi to boot up and try again. 
-
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]"  cover="covers/cover-2.png" />
-
-
-## Troubleshooting
-
-1. To change Wi-Fi setting later you should login to your Raspberry Pi via `ssh` command. For this, open terminal on your computer
-and type ssh command with your username, which you create on "Configuring the Image" step(default one is "pi"). 
-
-<code-helper additionalLine="your_username@your_hostname">
-
-```bash
-ssh <YOUR_USERNAME>@<Raspberry_PI_IP_ADDRESS>
 ```
+mv template.env .env
+```
+
 </code-helper>
 
-and then use command `sudo raspi-config`. Find more information about this command on [the official site.](https://www.raspberrypi.com/documentation/computers/configuration.html)
+After that,You may open the file and edit default values such as: 
+- Versions of packages
+- path to repository where will be stored all configurations folders.
+- time zone in ["tz database name"](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+
+## 3. Start 
+
+Run bash script and wait until the script will install all required packages:
+
+<code-helper copy>
+
+```
+bash setup.sh
+```
+
+</code-helper>
+The script will check all required actions, which you did in previous steps, and throw the error if something is wrong.
+
+During the installation process the following situations may occur:
+- If you decide not to use the Zigbee coordinator, then you will see a dialog line confirming to continue the installation:
+
+<code-helper>
+
+```
+this script will create all necessary repositories and start docker containers
+Cannot find zigbee coordinator location. Please insert it and run script again. The directory /dev/serial/by-id/ does not exist
+Do you want to continue without zigbee coordinator? It will not start Zigbee2MQTT container.
+Do you want to proceed? (y/n) 
+```
+
+</code-helper>
+
+- if on your PC are several devices that use serial ports, the script will ask which device to use:
+
+<code-helper>
+
+```
+this script will create all necessary repositories and start docker containers
+the zigbee coordinator is installed
+You have more that 1 connected devices. Please choose one
+1) /dev/serial/by-id/usb-ITEAD_SONOFF_Zigbee_3.0_USB_Dongle_Plus_V2_20240123142833-if00
+2) /dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0
+#? 
+```
+
+</code-helper>
+
+That's all. Continue to the next article.

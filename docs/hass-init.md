@@ -2,7 +2,7 @@
 title: Home Assistant Initialization
 contributors: [nakata5321, PaTara43]
 tools:
-  - Home Assistant 2023.5.4
+  - Home Assistant 2024.5.4
     https://github.com/home-assistant/core
 ---
 
@@ -10,9 +10,11 @@ tools:
 
 <robo-wiki-picture src="home-assistant/ha_init.png" />
 
-You are starting with the creation of the owner account of Home Assistant. This account is an administrator and can make any changes. Open web browser and go to `http://%RASPBERRY_IP_ADDRESS%:8123`. You can find the IP address of Raspberry Pi using [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
+You are starting with the creation of the owner account of Home Assistant. This account is an administrator and can make any changes. 
+Open web browser and go to `http://%PC_IP_ADDRESS%:8123`. You can find the IP address of Raspberry Pi using [Fing mobile app](https://www.fing.com/products) or [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/). 
+If you set up everything on your PC use `http://localhost:8123`.
 
-<robo-wiki-note type="note">Raspberry Pi address may change in time, due router settings.</robo-wiki-note>
+<robo-wiki-note type="note">IP address may change in time, due router settings.</robo-wiki-note>
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
 
