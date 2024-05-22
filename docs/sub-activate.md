@@ -78,15 +78,30 @@ For this step, you must have a sufficient amount of XRT tokens (minimum of 2-3 X
 
 4. Finally, click the `BUY SUBSCRIPTION` button and enter the password for your account. Wait until the activation process is completed. You will see the state of your subscription after a while.
 
+## Setup your Subscription
+
+Now you need to setup you subscription by adding the `CONTROLLER` account to it.
+
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/Qmd5P356UE1yDLAd4uSdq1dERbyp5gk5wpWD3iENNt2mjV', type:'mp4'}]" />
+
+1. Go to the Robonomics dApp and navigate to the [setup a subscription page](https://robonomics.app/#/rws-setup). Navigate to the **GENERAL SETTINGS** section.
+
+2. Remove the seed phrase from the `Controller's seed phrase` field and enter the `CONTROLLER` account seed phrase into.
+
+3. Copy the `CONTROLLER` address: open the extension and click on the icon next to the account name.
+
+4. Paste this address into the `Controller` field and click the `SAVE` button.
 
 ## Add Accounts to Subscription
 
 Now, you need to add your `CONTROLLER` account to the **access list**. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/QmbjtjYBadWY7bxbnN7UkH8vUyG7dYxDRzMGQiReWgdRiz', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type:'mp4'}]" />
 
-1. Open the extension and click on the icon next to the account name. It will copy the account address.
+1. Go to the Robonomics dApp and navigate to the [setup a subscription page](https://robonomics.app/#/rws-setup). Ensure that you have selected the correct subscription and the `OWNER` account.
 
-2. Paste this address into the `Polkadot address` field in the **USERS IN SUBSCRIPTION** section and click the `+` button. 
+2. Copy the `CONTROLLER` address: open the extension and click on the icon next to the account name.
 
-3. Enter the password for your `OWNER` account in the popup window, then wait for the activation process to be completed.
+3. Paste this address into the `Polkadot address` field in the **USERS IN SUBSCRIPTION** section and click the `+` button. 
+
+4. Enter the password for your `OWNER` account in the popup window, then wait for the activation process to be completed.
