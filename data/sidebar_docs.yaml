@@ -1,63 +1,63 @@
-- title_en: Robonomics Home Assistant Integration
+- title_en: Smart Home
   items:
     - title_en: Overview
       link: /docs/robonomics-smart-home-overview
       withoutNav: true
-    - title_en: Pre-installed Image For Raspberry Pi
+    - title_en: Install Smart Home
+      link: /docs/hass-image-install
+    - title_en: Home Assistant Init
+      link: /docs/hass-init
+    - title_en: Zigbee2MQTT Adapter
+      link: /docs/zigbee-to-mqtt-image
+    - title_en: Subscription Activate
+      link: /docs/sub-activate
+      topic: Smart Home
+    - title_en: Robonomics Integration Setup
+      link: /docs/robonomics-hass-integration
+      topic: Smart Home
+      next:
+        - title: Global Administration
+          link: /docs/global-administration
+    - title_en: Advanced Setup
       items:
-        - title_en: Installation
-          link: /docs/hass-image-install
-        - title_en: Home Assistant Init
-          link: /docs/hass-init
-        - title_en: Zigbee2MQTT Adapter
-          link: /docs/zigbee-to-mqtt-image
-        - title_en: Subscription Activate
-          link: /docs/sub-activate
-          topic: Pre-installed Image For Raspberry Pi
-        - title_en: Robonomics Integration Setup
-          link: /docs/robonomics-hass-integration
-          topic: Pre-installed Image For Raspberry Pi
-          next:
-            - title: Global Administration
-              link: /docs/global-administration
-    - title_en: Upgrade Home Assistant OS
-      items:
-        - title_en: Subscription Activate
-          link: /docs/sub-activate
-          topic: Upgrade Home Assistant OS
-        - title_en: Robonomics Installation
-          link: /docs/hass-os-upgrade
-        - title_en: Robonomics Integration Setup
-          link: /docs/robonomics-hass-integration
-          topic: Upgrade Home Assistant OS
-          next:
-            - title: Global Administration
-              link: /docs/global-administration
-    - title_en: Upgrade Home Assistant Docker for Unix-like OS
-      items: 
-        - title_en: Subscription Activate
-          link: /docs/sub-activate
-          topic: Upgrade Home Assistant Docker for Unix-like OS
-        - title_en: Robonomics Installation
-          link: /docs/hass-docker-upgrade
-          topic: Upgrade Home Assistant Docker for Unix-like OS
-        - title_en: Robonomics Integration Setup
-          link: /docs/robonomics-hass-integration
-          topic: Upgrade Home Assistant Docker for Unix-like OS
-          next:
-            - title: Global Administration
-              link: /docs/global-administration
-    - title_en: Upgrade Home Assistant Core
-      items: 
-        - title_en: Subscription Activate
-          link: /docs/sub-activate
-          topic: Upgrade Home Assistant Core
-        - title_en: Robonomics Installation
-          link: /docs/hass-core-upgrade
-          topic: Upgrade Home Assistant Core
-        - title_en: Robonomics Integration Setup
-          link: /docs/robonomics-hass-integration
-          topic: Upgrade Home Assistant Core
+      - title_en: Upgrade Home Assistant OS
+        items:
+          - title_en: Subscription Activate
+            link: /docs/sub-activate
+            topic: Upgrade Home Assistant OS
+          - title_en: Robonomics Installation
+            link: /docs/hass-os-upgrade
+          - title_en: Robonomics Integration Setup
+            link: /docs/robonomics-hass-integration
+            topic: Upgrade Home Assistant OS
+            next:
+              - title: Global Administration
+                link: /docs/global-administration
+      - title_en: Upgrade Home Assistant Docker for Unix-like OS
+        items:
+          - title_en: Subscription Activate
+            link: /docs/sub-activate
+            topic: Upgrade Home Assistant Docker for Unix-like OS
+          - title_en: Robonomics Installation
+            link: /docs/hass-docker-upgrade
+            topic: Upgrade Home Assistant Docker for Unix-like OS
+          - title_en: Robonomics Integration Setup
+            link: /docs/robonomics-hass-integration
+            topic: Upgrade Home Assistant Docker for Unix-like OS
+            next:
+              - title: Global Administration
+                link: /docs/global-administration
+      - title_en: Upgrade Home Assistant Core
+        items:
+          - title_en: Subscription Activate
+            link: /docs/sub-activate
+            topic: Upgrade Home Assistant Core
+          - title_en: Robonomics Installation
+            link: /docs/hass-core-upgrade
+            topic: Upgrade Home Assistant Core
+          - title_en: Robonomics Integration Setup
+            link: /docs/robonomics-hass-integration
+            topic: Upgrade Home Assistant Core
     - title_en: Use
       items:
         - title_en: Global Administration
@@ -68,11 +68,11 @@
           link: /docs/backup-services
         - title_en: Robonomics Video Service
           link: /docs/robonomics-video
-        - title_en: RTZ camera control in Home Assistant
+        - title_en: Rtz Camera Control in Home Assistant
           link: /docs/ptz-camera
         - title_en: Pinata Setup
           link: /docs/pinata-setup
-        - title_en: Оn-chain gov Experiment
+        - title_en: ОN-Chain Gov Experiment
           link: /docs/on-chain-gov-experiment
     - title_en: Blueprints
       items:

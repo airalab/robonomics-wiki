@@ -1,26 +1,26 @@
 ---
-title: Pre-installed Image For Raspberry Pi
+title: Smart Home Installation
 contributors: [nakata5321, PaTara43]
 tools:
-  - Home Assistant 2023.5.4
+  - Home Assistant 2024.5.4
     https://github.com/home-assistant/core
-  - Robonomics Home Assistant Integration 1.6.1
+  - Robonomics Home Assistant Integration 1.8.3
     https://github.com/airalab/homeassistant-robonomics-integration
-  - robonomics-interface 1.6.1
-    https://github.com/Multi-Agent-io/robonomics-interface/
-  - IPFS 0.21.0
+  - IPFS 0.27.0
     https://docs.ipfs.tech/
-  - Zigbee2MQTT 1.32.2
+  - Zigbee2MQTT 1.37.1
     https://github.com/Koenkk/zigbee2mqtt
-  - Yggdrasil 0.4.7
-    https://github.com/yggdrasil-network/yggdrasil-go/
 ---
 
-**Welcome to the guide on installing Home Assistant with Robonomics integration on a Raspberry Pi. Home Assistant is an open-source home automation system that provides a centralized hub for controlling smart devices in your home network. By integrating with Robonomics, a decentralized cloud service, you can enhance the functionality and security of your smart home. In this article, we will provide step-by-step instructions on how to install Home Assistant with Robonomics on a Raspberry Pi, giving you the ability to automate and control various aspects of your home using a secure and decentralized solution. Let's get started!**
+**Welcome to the guide on installing Home Assistant with Robonomics integration. Home Assistant is an open-source home automation system that provides 
+a centralized hub for controlling smart devices in your home network. By integrating with Robonomics, a decentralized cloud service, you can enhance the functionality and
+security of your smart home. In this article, we will provide step-by-step instructions on how to install Home Assistant with Robonomics, giving you the ability to 
+automate and control various aspects of your home using a secure and decentralized solution. Let's get started!**
 
 ## Hardware you need for installation
 
-If you haven't already incorporated Home Assistant into your smart home setup, it's important to be aware of the equipment you'll need to establish a complete smart home system from the ground up.
+If you haven't already incorporated Home Assistant into your smart home setup, it's important to be aware of the equipment you'll need to establish a complete smart home 
+system from the ground up. The Robonomics team recommend to use Raspberry Pi 4 as smart home server. **But it's possible to set up everything on your PC.**
 
   <robo-wiki-grid-element-wrapper textAlign="center" :columns="3" flexible>
     <robo-wiki-grid-element>
@@ -33,14 +33,14 @@ If you haven't already incorporated Home Assistant into your smart home setup, i
     </robo-wiki-grid-element>
     <robo-wiki-grid-element>
       <robo-wiki-picture src="home-assistant/need_7.png" /> 
-      <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html" target="_blank"><b>Zigbee adapter</b></a>
+      <a href="https://www.zigbee2mqtt.io/information/supported_adapters.html" target="_blank"><b>Zigbee adapter(Optionally)</b></a>
     </robo-wiki-grid-element>
   </robo-wiki-grid-element-wrapper>
 
   <robo-wiki-grid-element-wrapper textAlign="center" :columns="2">
     <robo-wiki-grid-element>
       <robo-wiki-picture src="home-assistant/need_5.png" />
-      <a href="https://www.zigbee2mqtt.io/supported-devices/" target="_blank"><b>Zigbee smart devices</b></a>
+      <a href="https://www.zigbee2mqtt.io/supported-devices/" target="_blank"><b>Zigbee smart devices(Optionally)</b></a>
     </robo-wiki-grid-element>
     <robo-wiki-grid-element>
       <robo-wiki-picture src="home-assistant/need_9.png" />
@@ -49,43 +49,42 @@ If you haven't already incorporated Home Assistant into your smart home setup, i
   </robo-wiki-grid-element-wrapper>
 
 
-## 1. Download Robonomics pre-installed image
+## 1. Install Pre-requirements
 
-Robonomics pre-installed image contains:
-- Home Assistant Core
+Robonomics docker contains:
+- Home Assistant
 - IPFS
 - MQTT Broker and Integration
 - Zigbee2MQTT
+- libp2p proxy
 - Robonomics Integration
 
-<robo-wiki-button label="Download image (~528 Mb)" link="https://crustipfs.art/ipfs/QmeDPrNYLQKFCZgPmxyxDWSAXSjSaw7Dx46d9p3JSGM1hA?filename=robonomics_rpi.xz&download=true" />
+This article will show the installation process on ubuntu system. First you need to install next packages:
 
-<robo-wiki-note type="warning" title="For advanced users">
+<code-helper copy>
 
-You can check source code and download latest release of image on [GitHub](https://github.com/airalab/Robonomics-HomeAssistant-image/releases)
+```
+sudo apt-get install wget unzip git
+```
+</code-helper>
 
+Then you need to install Docker on PC. Installation instruction find on [the official website](https://docs.docker.com/engine/install/).
+
+<robo-wiki-note type="warning" title="Robonomics for you">
+  Add your user to docker group, to start docker containers without root permissions.
 </robo-wiki-note>
 
+## 2. Configure
 
-## 2. Configure the Image
+Download GitHub repository and go inside it:
 
-Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on your computer. Then, insert the SD card.
+<code-helper copy>
 
-<robo-wiki-picture src="home-assistant/insert-sd-card.gif" alt="insert SD card" />
+```
+sudo apt-get install wget unzip git
+```
+</code-helper>
 
-
-Run the Raspberry Pi Imager program. Choose required image as the operating system and ensure to select your SD card from the storage dropdown menu. 
-In settings:
-- Set username and password (save default username "pi" to be easy to remember),  
-- provide your Wi-Fi name and password, 
-- choose your country from drop-down list
-and then `Write` image. 
-                   
-<robo-wiki-note type="note">Save Username and Password carefully, because these credentials will be needed in case of Troubleshooting</robo-wiki-note>
-                        
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmSZM7uVizqQjLnKJy2kifs9uDZB91MgALDBARenkzU3mb', type:'mp4'}]" cover="covers/cover-1.png" />
-
-You can find country codes [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
 
 ## 3. First Boot
 
