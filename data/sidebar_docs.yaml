@@ -60,7 +60,7 @@
           topic: Upgrade Home Assistant Core
     - title_en: Use
       items:
-        - title_en: Global Administration
+        - title_en: Add User
           link: /docs/global-administration
         - title_en: Get Smart Home Telemetry
           link: /docs/smart-home-telemetry
