@@ -4,13 +4,13 @@
       link: /docs/robonomics-smart-home-overview
       withoutNav: true
     - title_en: Install Smart Home
-      link: /docs/hass-image-install
+      link: /docs/install-smart-home
     - title_en: Home Assistant Init
       link: /docs/hass-init
     - title_en: Add devices
       items:
         - title_en: Zigbee Devices
-          link: /docs/zigbee-to-mqtt-image
+          link: /docs/zigbee-devices
         - title_en: Virtual Devices
           link: /docs/virtual-devices
     - title_en: Subscription Activate
