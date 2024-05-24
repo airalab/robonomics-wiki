@@ -36,6 +36,6 @@ When the device connects, you will see them in web-interface:
 
 <robo-wiki-picture src="home-assistant/device_connected.jpg" />
 
-Now you should see this sensor in your Home Assistant WebUI. Go to `Settings` -> `Devices & Services` -> `Devices`. And open the mqtt integration.
+Now you should see this sensor in your Home Assistant WebUI. Go to `Settings` -> `Devices & Services` -> `Devices`.
 
 After adding all the sensors, you can close web-interface of Zigbee2MQTT.
