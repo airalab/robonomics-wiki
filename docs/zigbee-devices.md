@@ -8,7 +8,8 @@ tools:
 
 ---
 
-**If during the installation process, you insert a ZigBee coordinator, you can add ZigBee devices to your smart home and this article will explain how to do it.**
+**If, during the installation process, you insert a ZigBee coordinator, you can add ZigBee devices to your smart home. 
+This article will explain how to do it.**
 
 <robo-wiki-picture src="home-assistant/zigbee2mqtt.png" />
 
@@ -35,6 +36,6 @@ When the device connects, you will see them in web-interface:
 
 <robo-wiki-picture src="home-assistant/device_connected.jpg" />
 
-Now you should see this sensor in your Home Assistant WebUI. Go to `Settings` -> `Devices & Services` -> `Devices`. In mqtt integration.
+Now you should see this sensor in your Home Assistant WebUI. Go to `Settings` -> `Devices & Services` -> `Devices`. And open the mqtt integration.
 
 After adding all the sensors, you can close web-interface of Zigbee2MQTT.

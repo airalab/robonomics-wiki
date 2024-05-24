@@ -20,8 +20,8 @@
       link: /docs/robonomics-hass-integration
       topic: Smart Home
       next:
-        - title: Global Administration
-          link: /docs/global-administration
+        - title: Add User
+          link: /docs/add-user
     - title_en: Advanced Setup
       items:
       - title_en: Upgrade Home Assistant OS
@@ -35,8 +35,8 @@
             link: /docs/robonomics-hass-integration
             topic: Upgrade Home Assistant OS
             next:
-              - title: Global Administration
-                link: /docs/global-administration
+              - title: Add User
+                link: /docs/add-user
       - title_en: Upgrade Home Assistant Docker for Unix-like OS
         items:
           - title_en: Subscription Activate
@@ -49,8 +49,8 @@
             link: /docs/robonomics-hass-integration
             topic: Upgrade Home Assistant Docker for Unix-like OS
             next:
-              - title: Global Administration
-                link: /docs/global-administration
+              - title: Add User
+                link: /docs/add-user
       - title_en: Upgrade Home Assistant Core
         items:
           - title_en: Subscription Activate

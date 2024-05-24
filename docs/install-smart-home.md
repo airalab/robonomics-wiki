@@ -51,7 +51,7 @@ system from the ground up. The Robonomics team recommend to use Raspberry Pi 4 a
 
 ## 1. Install Pre-requirements
 
-Robonomics docker contains:
+Robonomics Docker contains:
 - Home Assistant
 - IPFS
 - MQTT Broker and Integration
@@ -59,7 +59,7 @@ Robonomics docker contains:
 - libp2p proxy
 - Robonomics Integration
 
-This article will show the installation process on ubuntu system. First you need to install next packages:
+This article will show the installation process on Ubuntu system. First you need to install next packages:
 
 <code-helper copy>
 
@@ -78,7 +78,7 @@ Then you need to install Docker on PC. Installation instruction find on [the off
 
 ## 2. Configure
 
-Download GitHub repository and go inside it:
+Download the GitHub repository and navigate inside it:
 
 <code-helper copy>
 
@@ -88,7 +88,7 @@ cd home-assistant-web3-build/
 ```
 </code-helper>
 
-then you have to create `.env` file. Convert it from `template.env` file:
+Then, create a `.env` file from the `template.env`:
 
 <code-helper copy>
 
@@ -98,14 +98,14 @@ mv template.env .env
 
 </code-helper>
 
-After that,You may open the file and edit default values such as: 
+After that, you may open the `.env` file and edit default values such as:  
 - Versions of packages
 - path to repository where will be stored all configurations folders.
 - time zone in ["tz database name"](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 ## 3. Start 
 
-Run bash script and wait until the script will install all required packages:
+Run the bash script and wait until it installs all required packages:
 
 <code-helper copy>
 
@@ -114,10 +114,10 @@ bash setup.sh
 ```
 
 </code-helper>
-The script will check all required actions, which you did in previous steps, and throw the error if something is wrong.
+The script will check all required actions that you completed in the previous steps and will throw an error if something is wrong.
 
 During the installation process the following situations may occur:
-- If you decide not to use the Zigbee coordinator, then you will see a dialog line confirming to continue the installation:
+- If you decide not to use the Zigbee coordinator, you will see a dialog line confirming whether to continue the installation:
 
 <code-helper>
 
@@ -130,7 +130,7 @@ Do you want to proceed? (y/n)
 
 </code-helper>
 
-- if on your PC are several devices that use serial ports, the script will ask which device to use:
+- If there are several devices on your PC that use serial ports, the script will ask which device to use:
 
 <code-helper>
 

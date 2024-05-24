@@ -9,11 +9,10 @@ contributors: [nakata5321]
 ## Install integration
 
 To use virtual devices you need to install ["demo" integration](https://www.home-assistant.io/integrations/demo/). 
-To do this, you should add next string to your configuration file:
+To do this, you should edit your configuration file.
 
-Go to configuration folder, which you provide due configuration process. 
-In this folder you will find folder with name "homeassistant". go inside it. 
-Open `configuration.yaml` file with text editor under **root** user and insert next string in it:
+Go to the configuration folder, which you provided during the configuration process. In this folder, you will find a folder 
+named "homeassistant". Go inside it. Open the `configuration.yaml` file with a text editor under the **root** user and insert the following line into it:
 
 <code-helper copy>
 
@@ -26,7 +25,7 @@ demo:
 
 </code-helper>
 
-After that restart Home Assistant via web interface. When smart home will start, you can find all virtual devices in "demo"
-entities. Find it in `Settings -> Devices & services -> Demo`. All this entities you can add to your dashboard.
+After that, restart Home Assistant via web interface. When the smart home restarts, you can find all virtual devices in the "demo" entities. 
+Find them in `Settings -> Devices & services -> Demo`. All these entities can be added to your dashboard.
 
 <robo-wiki-picture src="home-assistant/demo-entities.png" />
