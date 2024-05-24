@@ -3,7 +3,7 @@ title: Robonomics integration setup
 
 contributors: [LoSk-p, nakata5321, Fingerling42]
 tools:
-  - Robonomics Home Assistant Integration 1.6.1
+  - Robonomics Home Assistant Integration 1.8.3
     https://github.com/airalab/homeassistant-robonomics-integration
 ---
 
@@ -29,4 +29,4 @@ tools:
 3. Press `SUBMIT` after finishing the configuration. If you filled in everything correctly, you will see the success window.
 
 That's all! You have fully setup Robonomics Integration into Home Assistant. Now you can use all 
-Robonomics Web Services. To find out more about them, go to ["Use" section](/docs/global-administration).
+Robonomics Web Services. To find out more about them, go to ["Use" section](/docs/add-user).
