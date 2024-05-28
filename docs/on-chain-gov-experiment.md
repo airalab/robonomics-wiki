@@ -12,27 +12,27 @@ changes, and much more, into a typical smart home system.
 
 ---
 
-This article discusses smart home management through the Robonomics cloud as a result of any event in the Polkadot ecosystem.
+This article discusses smart home management through the Robonomics Cloud as a result of any event in the Polkadot ecosystem.
 
 ## Requirements
 
- - Installed Home Assistant image with Robonomics integration. Installation methods can be found [here](/docs/install-smart-home).
- - Polkadot node or gateway for interaction.
+ - Installed Home Assistant instance with Robonomics integration. Installation methods can be found [here](/docs/install-smart-home).
+ - Polkadot node or gateway for interaction. For example - wss://polkadot.api.onfinality.io 
  - Robonomics node or gateway for interaction.
  - Created account in ED25519 format. Information can be found [here](/docs/sub-activate).
- - Participation in the smart home subscription. Learn more [here](/docs/add-user).
- - Knowledge of the owner and controller addresses of the subscription.
+ - Having created account in a device list of the Robonomics subscription. Learn more [here](/docs/add-user).
+ - Subscription Owner and controller addresses.
 
 Python libraries:
-- substrate-interface
-- IPFS-Toolkit
-- robonomics-interface
+- [substrate-interface](https://pypi.org/project/substrate-interface/)
+- [IPFS-Toolkit](https://pypi.org/project/IPFS-Toolkit/)
+- [robonomics-interface](https://pypi.org/project/robonomics-interface/)
 
 ## Creating a Polkadot Listener
 
-First, you need to create a script that will listen for new events in the Polkadot network. In the example, we will track the creation of new referenda.
+First, you need to create a script that will listen for new events in the Polkadot network. In the example, we will track the creation of new Referenda.
 
-For testing convenience, a local Polkadot node in dev mode was used. The `substrate-interface` Python library is used for this task.
+For testing convenience, a local Polkadot node in dev mode was used. How to start it you can [find here](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot#hacking-on-polkadot).
 
 To connect to a public node, change the "POLKADOT_GATEWAY" variable.
 
@@ -95,9 +95,9 @@ For this, we need to know the following:
 - Service domain
 - Service name
 - Target entity
-- Data in dict format
+- Data  - should be type "dict"
 
-Let's see where to find them. Open the installed Home Assistant image. Go to "Developer Tools -> Services", select any service and switch to YAML mode. Let's consider the example of a switch.
+Let's see where to find them. Open the installed Home Assistant instance. Go to "Developer Tools -> Services", select any service and switch to YAML mode. Let's consider the example of a switch.
 
 <robo-wiki-picture src="gov-exp/service.png" />
 
@@ -109,7 +109,8 @@ Now that we know all the parameters, let's go through what will happen in the sc
 
 The script will connect to the local IPFS daemon. (If you followed the smart home setup instructions, you already have the IPFS daemon running.)
 
-First, we will form a command in JSON format. Next, the message is encrypted with the user's and controller's keys. Then the encrypted command is saved to a file and added to IPFS. After that, the resulting IPFS hash is sent to the Robonomics parachain through an extrinsic launch to the controller's address.
+First, we will form a command in JSON format. Next, the message is encrypted with the user's and controller's keys. 
+Then the encrypted command is saved to a file and added to IPFS. After that, the resulting IPFS hash is sent to the Robonomics parachain through an extrinsic `Launch` to the controller's address.
 When the controller receives the launch, it will download the file from IPFS, decrypt it, and call the service specified inside.
 
 The full code is as follows:
@@ -139,14 +140,10 @@ controller_address = "<CONTROLLER_ADDRESS>"
 sub_owner_address = "<OWNER_ADDRESS>"
 
 # Command
-service_domain = "<DOMAIN>"  # domain is what is before the dot in the name of the service
-service_name = "<NAME>"  # name - what comes after the dot in the name of the service
-target_entity = "<ENTITY_ID>"  #  entity_id
+service_domain = "<DOMAIN>"  # domain is what is before the dot in the name of the service. For example "switch"
+service_name = "<NAME>"  # name - what comes after the dot in the name of the service. For example "turn_on"
+target_entity = "<ENTITY_ID>"  #  entity_id. For example "switch.boiler"
 data = {}  # Must be dict
-
-# Format message to launch
-data['entity_id'] = target_entity
-command = {'platform': service_domain, 'name': service_name, 'params': data}
 
 
 def subscription_handler(data, update_nr, subscription_id):
@@ -174,6 +171,10 @@ def encrypt_message(
     return f"0x{encrypted.hex()}"
 
 
+# Format message to launch
+data['entity_id'] = target_entity
+command = {'platform': service_domain, 'name': service_name, 'params': data}
+
 message = json.dumps(command)
 print(f"Message: {message}")
 sender = Account(user_seed, crypto_type=KeypairType.ED25519)
@@ -200,3 +201,13 @@ substrate.query("Referenda", "ReferendumCount", subscription_handler=subscriptio
 
 </code-helper>
 
+if you did everything correctly, you will see the following logs:
+```
+Message: {"platform": "switch", "name": "turn_on", "params": {"entity_id": "switch.boiler"}}
+Ecrypted message: 0x33356b915e51e4c050180db0c3e39de86e946b6807ea83114978c848d016ab34a812e271dd1e5b40aa8632edd5acf4254090d2c2849daafcc46d2d4a4406a169a04edb4a668a268b3265e96ded0411398e3520fd5b676109752d24f12a7ece976bdc58da6a5b95d3c9e77aa59270bbc86c66c2ffe69ef7b10fae20
+IPFS hash: QmcrqSD3bBYmm4rpaDMUVNQwF8CSi5WWVnwPtuGJdzgWpK
+IPFS hash for launch 0xd7bf2b46baebf5556ac30fda97d7bf34a71558acdafde694c849521d01ccd8b4
+Refferenda count start: 0
+Refferenda count increased: 1
+Transaction result: 0xe07d43462d540a7312763349b362318c427ca9a61e7d5bfa3c890e8b1c0294c1
+```
