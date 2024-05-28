@@ -21,7 +21,7 @@ This article discusses smart home management through the Robonomics Cloud as a r
  - Robonomics node or gateway for interaction.
  - Created account in ED25519 format. Information can be found [here](/docs/sub-activate).
  - Having created account in a device list of the Robonomics subscription. Learn more [here](/docs/add-user).
- - Subscription Owner and controller addresses.
+ - Subscription owner and controller addresses.
 
 Python libraries:
 - [substrate-interface](https://pypi.org/project/substrate-interface/)
@@ -32,7 +32,7 @@ Python libraries:
 
 First, you need to create a script that will listen for new events in the Polkadot network. In the example, we will track the creation of new Referenda.
 
-For testing convenience, a local Polkadot node in dev mode was used. How to start it you can [find here](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot#hacking-on-polkadot).
+For testing convenience, a local Polkadot node in dev mode was used.You may find deployment [manual here](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot#hacking-on-polkadot).
 
 To connect to a public node, change the "POLKADOT_GATEWAY" variable.
 
@@ -148,10 +148,10 @@ data = {}  # Must be dict
 
 def subscription_handler(data, update_nr, subscription_id):
     if update_nr == 0:
-        print('Refferenda count start:', data.value)
+        print('Referenda count start:', data.value)
 
     if update_nr > 0:
-        print('Refferenda count increased:', data.value)
+        print('Referenda count increased:', data.value)
         # Send launch to controller address with ipfs hash
         launch = Launch(sender, rws_sub_owner=sub_owner_address)
         res = launch.launch(controller_address, result_ipfs)
@@ -207,7 +207,7 @@ Message: {"platform": "switch", "name": "turn_on", "params": {"entity_id": "swit
 Ecrypted message: 0x33356b915e51e4c050180db0c3e39de86e946b6807ea83114978c848d016ab34a812e271dd1e5b40aa8632edd5acf4254090d2c2849daafcc46d2d4a4406a169a04edb4a668a268b3265e96ded0411398e3520fd5b676109752d24f12a7ece976bdc58da6a5b95d3c9e77aa59270bbc86c66c2ffe69ef7b10fae20
 IPFS hash: QmcrqSD3bBYmm4rpaDMUVNQwF8CSi5WWVnwPtuGJdzgWpK
 IPFS hash for launch 0xd7bf2b46baebf5556ac30fda97d7bf34a71558acdafde694c849521d01ccd8b4
-Refferenda count start: 0
-Refferenda count increased: 1
+Referenda count start: 0
+Referenda count increased: 1
 Transaction result: 0xe07d43462d540a7312763349b362318c427ca9a61e7d5bfa3c890e8b1c0294c1
 ```
