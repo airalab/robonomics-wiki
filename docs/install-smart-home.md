@@ -2,7 +2,7 @@
 title: Smart Home Installation
 contributors: [nakata5321, PaTara43]
 tools:
-  - Home Assistant 2024.5.4
+  - Home Assistant 2024.4.4
     https://github.com/home-assistant/core
   - Robonomics Home Assistant Integration 1.8.3
     https://github.com/airalab/homeassistant-robonomics-integration
@@ -83,7 +83,7 @@ Download the GitHub repository and navigate inside it:
 <code-helper copy>
 
 ```
-git clone https://github.com/PinoutLTD/home-assistant-web3-build.git
+git clone https://github.com/airalab/home-assistant-web3-build.git
 cd home-assistant-web3-build/
 ```
 </code-helper>
