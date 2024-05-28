@@ -83,7 +83,7 @@ Download the GitHub repository and navigate inside it:
 <code-helper copy>
 
 ```
-https://github.com/PinoutLTD/home-assistant-web3-build.git
+git clone https://github.com/PinoutLTD/home-assistant-web3-build.git
 cd home-assistant-web3-build/
 ```
 </code-helper>
