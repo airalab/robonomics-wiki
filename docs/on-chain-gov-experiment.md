@@ -12,12 +12,14 @@ changes, and much more, into a typical smart home system.
 
 ---
 
-This article discusses smart home management through the Robonomics Cloud as a result of any event in the Polkadot ecosystem.
+This article discusses smart home management through the Robonomics Cloud as a result of any event in the Polkadot ecosystem. Here is an example of how a lamp can be turned on when a new referendum is being submitted in the Polkadot network.
+
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.io/ipfs/QmWARwfH8WSEjnWUEFSDn28ya8Xp93qyjmSdGkdkwFntWe', type:'mp4'}]" />
 
 ## Requirements
 
  - Installed Home Assistant instance with Robonomics integration. Installation methods can be found [here](/docs/install-smart-home).
- - Polkadot node or gateway for interaction. For example - wss://polkadot.api.onfinality.io 
+ - Polkadot node or gateway for interaction. For example - `wss://polkadot.api.onfinality.io`
  - Robonomics node or gateway for interaction.
  - Created account in ED25519 format. Information can be found [here](/docs/sub-activate).
  - Having created account in a device list of the Robonomics subscription. Learn more [here](/docs/add-user).

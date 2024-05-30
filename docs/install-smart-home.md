@@ -17,6 +17,12 @@ a centralized hub for controlling smart devices in your home network. By integra
 security of your smart home. In this article, we will provide step-by-step instructions on how to install Home Assistant with Robonomics, giving you the ability to 
 automate and control various aspects of your home using a secure and decentralized solution. Let's get started!**
 
+## Demo
+
+Here is an example of a complete Smart Home and Robonomics integration installation. Keep in mind that the time required may vary depending on the Internet connection.
+
+<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.io/ipfs/QmULXX4rjkuHuCF42c3V37MxEk6HpnFpJF4bZSQPR2c3Xo', type:'mp4'}]" />
+
 ## Hardware you need for installation
 
 If you haven't already incorporated Home Assistant into your smart home setup, it's important to be aware of the equipment you'll need to establish a complete smart home 
