@@ -43,7 +43,7 @@
             link: /docs/sub-activate
             topic: Upgrade Home Assistant Docker for Unix-like OS
           - title_en: Robonomics Installation
-            link: /docs/hass-docker-upgrade
+            link: /docs/hass-docker-core-upgrade
             topic: Upgrade Home Assistant Docker for Unix-like OS
           - title_en: Robonomics Integration Setup
             link: /docs/robonomics-hass-integration
@@ -57,7 +57,7 @@
             link: /docs/sub-activate
             topic: Upgrade Home Assistant Core
           - title_en: Robonomics Installation
-            link: /docs/hass-core-upgrade
+            link: /docs/hass-docker-core-upgrade
             topic: Upgrade Home Assistant Core
           - title_en: Robonomics Integration Setup
             link: /docs/robonomics-hass-integration
