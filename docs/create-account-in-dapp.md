@@ -24,11 +24,15 @@ Once you've opened the app, take a look at the top left corner. The name of the 
 
 ![Robonomics Parachain app](./images/creating-an-account/1.2-robonomics-app.png "Robonomics Parachain app")
 
-## 1.3. Update Extension Metadata
+## 1.3. Update Extension Metadata and In-Browser Account Creation
 
 It is very likely that the app will ask you to update the metadata for the extension to display the correct information about the chain you are connected to. Go to **Settings -> Metadata**, press `Update metadata` button and then, in the pop-up window, allow the extension to do it. 
 
 ![Updating metadata](./images/creating-an-account/1.3-metadata-update.png "Updating metadata")
+
+By default, the web application only works with external accounts. To allow creating new accounts directly in the browser go to **Settings -> General -> Account options -> in-browser account creation**, choose `Allow local in-browser account storage` and press `Save` button.
+
+![Settings in-browser account creation](./images/creating-an-account/1.3-in-browser-account-creation.png "Updating account creation in Browser")
 
 ## 1.4. Create Account in Extension
 
