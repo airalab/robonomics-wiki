@@ -40,10 +40,6 @@ export default {
   },
 
   watch: {
-    "$route.path": function() {
-      this.convertVideoLinks();
-      this.checkVideos();
-    },
     offsetTop (val) {
       this.toggleAutoplay()
     }
