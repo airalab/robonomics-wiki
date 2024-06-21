@@ -8,7 +8,7 @@ contributors: [Fingerling42, nakata5321]
 
 Para a sua casa inteligente, o mercado moderno de IoT oferece uma ampla gama de soluções. Mas você geralmente está preso a provedores de nuvem centralizados ou gateways proprietários caros. Como resultado, você, como usuário, está sempre dependente do fornecedor de hardware e infraestrutura para executar seu sistema inteligente. Ao mesmo tempo, sua casa inteligente não pode ser verdadeiramente inteligente sem estatísticas e análises em nuvem.
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
 
 **Vemos dois problemas principais com as casas inteligentes atuais:**
 

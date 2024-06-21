@@ -58,7 +58,7 @@ L'image pré-installée de Robonomics contient :
 - Zigbee2MQTT
 - Robonomics Integration
 
-<robo-wiki-button label="Download image (~528 Mb)" link="https://crustipfs.info/ipfs/QmeDPrNYLQKFCZgPmxyxDWSAXSjSaw7Dx46d9p3JSGM1hA?filename=robonomics_rpi.xz&download=true" />
+<robo-wiki-button label="Download image (~528 Mb)" link="QmeDPrNYLQKFCZgPmxyxDWSAXSjSaw7Dx46d9p3JSGM1hA?filename=robonomics_rpi.xz&download=true" />
 
 <robo-wiki-note type="warning" title="For advanced users">
 
@@ -83,7 +83,7 @@ puis `Écrire` l'image.
                    
 <robo-wiki-note type="note">Gardez précieusement le nom d'utilisateur et le mot de passe, car ces informations seront nécessaires en cas de dépannage</robo-wiki-note>
                         
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSZM7uVizqQjLnKJy2kifs9uDZB91MgALDBARenkzU3mb', type:'mp4'}]" cover="covers/cover-1.png" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSZM7uVizqQjLnKJy2kifs9uDZB91MgALDBARenkzU3mb', type:'mp4'}]" cover="covers/cover-1.png" />
 
 Vous pouvez trouver les codes de pays [ici](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
 
@@ -111,7 +111,7 @@ Dans cet exemple, l'adresse est `192.168.43.56`.
 Pour vérifier que tout fonctionne, ouvrez un navigateur web et accédez à la page web `http://%RASPBERRY_IP_ADDRESS%:8123`. Dans cet exemple, ce sera `192.168.43.56:8123`.
 Si tout va bien, vous verrez l'interface web de Home Assistant. Si la page web ne s'ouvre pas, attendez jusqu'à 5 minutes que le Raspberry Pi démarre et réessayez. 
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]"  cover="covers/cover-2.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]"  cover="covers/cover-2.png" />
 
 
 ## Dépannage

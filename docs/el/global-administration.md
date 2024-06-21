@@ -19,7 +19,7 @@ tools:
 
 2. Χρησιμοποιώντας τον λογαριασμό `SUB_OWNER` προσθέστε έναν νέο λογαριασμό χρήστη στη συνδρομή στην [εφαρμογή](https://dapp.robonomics.network/#/subscription/devices). Τώρα θα πρέπει να υπάρχουν τρεις διευθύνσεις στη λίστα πρόσβασης: `SUB_OWNER`, `SUB_CONTROLLER` και `USER`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSxzram7CF4SXpVgEyv98XetjYsxNFQY2GY4PfyhJak7H', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSxzram7CF4SXpVgEyv98XetjYsxNFQY2GY4PfyhJak7H', type:'mp4'}]" />
 
 
 ## Χορήγηση Πρόσβασης στον Χρήστη
@@ -32,7 +32,7 @@ tools:
 
 4. Μετά τη διαδικασία εγγραφής, συνδεθείτε στο Home Assistant με τη διεύθυνση του χρήστη σας ως σύνδεση και έναν νεοδημιουργημένο κωδικό πρόσβασης.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
 
 Τώρα μπορείτε να χρησιμοποιήσετε την εφαρμογή για να ελέγξετε το σπίτι σας μέσω του Robonomics, ελέγξτε το άρθρο [**"Λήψη Έξυπνης Οικιακής Τηλεμετρίας"**](/docs/smart-home-telemetry/).
 

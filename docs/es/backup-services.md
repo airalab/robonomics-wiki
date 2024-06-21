@@ -12,7 +12,7 @@ tools:
 
 Crear un respaldo te permite restaurar fácilmente la configuración de tu Home Assistant en caso de una falla.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="ADVERTENCIA">
 
@@ -38,7 +38,7 @@ Argumentos del servicio:
 
 Para restaurar tu configuración, necesitarás tener instalado Home Assistant y Robonomics Integration. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="ADVERTENCIA">
 
@@ -113,7 +113,7 @@ Ten en cuenta que las rutas predeterminadas para las configuraciones de Mosquitt
 
 Además de utilizar servicios para trabajar con respaldos, puedes simplificar el proceso utilizando los `button.create_backup` and `button.restore_from_backup` botones de la integración de Robonomics. Estos botones invocan los servicios respectivos con parámetros predeterminados (el botón de respaldo crea un respaldo sin historial).
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 Para agregar botones a tu panel de control, sigue estos pasos:
 

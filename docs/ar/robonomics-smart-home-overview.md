@@ -8,7 +8,7 @@ contributors: [Fingerling42, nakata5321]
 
 بالنسبة لمنزلك الذكي، يوفر سوق الإنترنت المتصل بالأشياء الحديثة مجموعة واسعة من الحلول. ولكنك عادة ما تكون مرتبطًا بمزودي السحابة المركزية أو بوابات الملكية المكلفة. ونتيجة لذلك، فأنت كمستخدم تعتمد دائمًا على الأجهزة ومزود البنية التحتية لتشغيل نظامك الذكي. في الوقت نفسه، لا يمكن أن يكون منزلك الذكي حقًا ذكيًا بدون إحصاءات وتحليلات السحابة.
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
 
 **نرى مشكلتين رئيسيتين في المنازل الذكية الحالية:**
 

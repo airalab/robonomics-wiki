@@ -8,7 +8,7 @@ contributors: [Fingerling42, nakata5321]
 
 Για το έξυπνο σπίτι σας, ο σύγχρονος αγορά IoT παρέχει μια μεγάλη ποικιλία λύσεων. Ωστόσο, συνήθως είστε δεμένοι με κεντρικούς παρόχους νέφους ή ακριβές ιδιόκτητες πύλες. Ως αποτέλεσμα, εσείς ως χρήστης εξαρτάστε πάντα από τον προμηθευτή υλικού και υποδομής για να λειτουργήσει το έξυπνο σας σύστημα. Ταυτόχρονα, το έξυπνο σπίτι σας δεν μπορεί να είναι πραγματικά έξυπνο χωρίς στατιστικά στοιχεία και αναλύσεις νέφους.
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
 
 **Βλέπουμε δύο κύρια προβλήματα με τα τρέχοντα έξυπνα σπίτια:**
 

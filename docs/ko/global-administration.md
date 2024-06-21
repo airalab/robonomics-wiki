@@ -19,7 +19,7 @@ Home Assistant를 처음 시작할 때 생성한 계정은 `SUB_OWNER` 및 `SUB_
 
 2. `SUB_OWNER` 계정을 사용하여 [dapp](https://dapp.robonomics.network/#/subscription/devices)에서 구독에 새 사용자 계정을 추가하세요. 이제 액세스 목록에는 `SUB_OWNER`, `SUB_CONTROLLER` 및 `USER` 세 개의 주소가 있어야 합니다.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSxzram7CF4SXpVgEyv98XetjYsxNFQY2GY4PfyhJak7H', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSxzram7CF4SXpVgEyv98XetjYsxNFQY2GY4PfyhJak7H', type:'mp4'}]" />
 
 
 ## 사용자에게 액세스 권한 부여하기
@@ -32,7 +32,7 @@ Home Assistant를 처음 시작할 때 생성한 계정은 `SUB_OWNER` 및 `SUB_
 
 4. 등록 프로세스가 완료되면 새로 생성한 비밀번호로 Home Assistant에 로그인하세요.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
 
 이제 Robonomics를 통해 집을 제어하기 위해 dapp을 사용할 수 있으며, [**"스마트 홈 텔레메트리 가져오기"**](/docs/smart-home-telemetry/) 문서를 확인하세요.
 

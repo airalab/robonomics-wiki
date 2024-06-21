@@ -25,7 +25,7 @@ Diese Funktion ist standardmäßig in der Polkadot-JS-Benutzeroberfläche deakti
 
 ## Erstellen Sie Eigentümer- und Controller-Konten
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
 
 1. Gehen Sie zur [Robonomics Parachain-App](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) auf dem Polkadot / Substrate-Portal. ** Überprüfen Sie die linke obere Ecke, um sicherzustellen, dass Sie mit Robonomics Parachain verbunden sind. **
 
@@ -49,7 +49,7 @@ Für Ihre Bequemlichkeit sollten Sie die [Polkadot.js-Erweiterung](https://polka
 
 Sie können diese Dateien erneut erhalten, indem Sie eine Sicherungsdatei des Kontos erstellen. Klicken Sie auf drei Punkte neben Ihrem Konto, wählen Sie `Create a backup file for this account` und geben Sie Ihr Passwort ein.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
 
 1. Öffnen Sie eine Erweiterung und klicken Sie oben rechts auf die Schaltfläche `+`, wählen Sie dann `Restore account from backup JSON file`.
 
@@ -59,7 +59,7 @@ Sie können diese Dateien erneut erhalten, indem Sie eine Sicherungsdatei des Ko
 
 4. Bestätigen Sie die Metadatenaktualisierung im Popup. Die Erweiterung zeigt nun das Netzwerketikett an, für das die Adresse verwendet wird.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
 
 ## Robonomics-Abonnement aktivieren 
 
@@ -69,7 +69,7 @@ Für diesen Schritt müssen Sie über ausreichend XRT-Token (mindestens 2-3 XRTs
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
 
 1. Gehen Sie zur Robonomics-Dapp zur [Abonnementseite](https://dapp.robonomics.network/#/subscription) und klicken Sie auf der rechten Seitenleiste auf `Konto verbinden`.
 
@@ -84,7 +84,7 @@ Für diesen Schritt müssen Sie über ausreichend XRT-Token (mindestens 2-3 XRTs
 
 Jetzt müssen Sie der **Zugriffsliste** ein `sub_controller`-Konto hinzufügen.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
 
 1. Öffnen Sie die Erweiterung und klicken Sie auf das Symbol neben dem Kontonamen. Dadurch wird die Kontoadresse kopiert.
 

@@ -16,7 +16,7 @@ If you set up everything on your PC use `http://localhost:8123`.
 
 <robo-wiki-note type="note">IP address may change in time, due router settings.</robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
 
 1. At the first page, enter a name, username, password and click on the `CREATE ACCOUNT` button.
 

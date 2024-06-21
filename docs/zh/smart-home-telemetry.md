@@ -13,7 +13,7 @@ tools:
 
 **在本文中，您将使用Robonomics服务查询智能家居设备的遥测数据。**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
 
 1. 进入dapp并选择[智能家居遥测](https://dapp.robonomics.network/#/smarthome-telemetry)服务。
 

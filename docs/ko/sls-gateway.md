@@ -88,13 +88,13 @@ sudo reboot
 
 5. `Wi-Fi Settings` 페이지가 표시됩니다. Wi-Fi를 선택하고 암호를 입력합니다. `Apply` 버튼을 누릅니다. 게이트웨이가 재시작되고 Wi-Fi 네트워크에 연결됩니다. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
 
 6. SLS 게이트웨이의 로컬 IP를 찾아 웹 인터페이스에 액세스합니다. [Fing 모바일 앱](https://www.fing.com/products) 또는 [nmap CLI 도구](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)를 사용하여 찾을 수 있습니다. 게이트웨이 이름은 `zgw****`와 같아야 합니다. 게이트웨이 IP를 브라우저에 붙여넣어 게이트웨이의 웹 인터페이스를 엽니다.
 
 7. `Setting` -> `Hardware`로 이동하여 설정이 이미지와 같은지 확인합니다. 필요한 경우 설정을 수정하고 `Save` 버튼을 클릭합니다:
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
 
 필요한 값이 있는 테이블:
 
@@ -125,7 +125,7 @@ sudo reboot
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
 
 ## SLS를 MQTT에 페어링
 
@@ -134,7 +134,7 @@ SLS 게이트웨이를 구성한 후 SLS 게이트웨이를 Home Assistant에 �
 
 브로커 주소(로컬 네트워크의 Home Assistant가 있는 Raspberry Pi의 주소, [Fing 모바일 앱](https://www.fing.com/products) 또는 [nmap CLI 도구](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)를 사용하여 찾을 수 있음), 포트(기본값은 `1883`), 브로커 사용 이름 및 암호(이전에 생성한 것) 및 토픽 이름(임의로 선택 가능)을 추가합니다. 또한 Raspberry Pi IP 주소는 정적이어야 합니다. `Enable` 및 `Retain states`를 클릭합니다.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
 
 변경 사항을 저장합니다. 이제 장치가 자동으로 Home Assistant에 표시됩니다.
 
@@ -144,7 +144,7 @@ SLS 게이트웨이를 구성한 후 SLS 게이트웨이를 Home Assistant에 �
 
 <robo-wiki-picture src="home-assistant/switch-device.gif" />
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
 
 
 이제 [**IoT Subscription**](/docs/sub-activate) 섹션으로 이동하여 Robonomics 구독을 활성화할 수 있습니다.

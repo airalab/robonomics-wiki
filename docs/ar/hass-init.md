@@ -14,7 +14,7 @@ tools:
 
 <robo-wiki-note type="note">قد يتغير عنوان Raspberry Pi مع مرور الوقت، بسبب إعدادات الموجه.</robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
 
 1. في الصفحة الأولى، أدخل اسمًا واسم مستخدم وكلمة مرور وانقر على زر `CREATE ACCOUNT`.
 

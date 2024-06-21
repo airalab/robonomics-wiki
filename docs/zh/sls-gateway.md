@@ -88,13 +88,13 @@ sudo reboot
 
 5. 您将看到 `Wi-Fi Settings` 页。选择您的 Wi-Fi 并输入密码。按下 `Apply` 按钮。网关将重新启动并连接到您的 Wi-Fi 网络。 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
 
 6. 找到 SLS 网关的本地 IP 以访问 Web 界面。您可以使用 [Fing 移动应用](https://www.fing.com/products) 或 [nmap CLI 工具](https://vitux.com/find-devices-connected-to-your-network-with-nmap/) 来查找它。网关名称应该类似于 `zgw****`。通过将网关 IP 粘贴到浏览器中，打开网关的 Web 界面。
 
 7. 转到 `Setting` -> `Hardware`，确保设置与图像上的设置相同。如有必要，请更正设置并单击 `Save` 按钮：
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
 
 所需值的表格：
 
@@ -125,7 +125,7 @@ sudo reboot
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
 
 ## 将 SLS 配对到 MQTT
 
@@ -134,7 +134,7 @@ sudo reboot
 
 添加您的代理地址（本地网络中具有 Home Assistant 的 Raspberry Pi 的地址，您可以使用 [Fing 移动应用](https://www.fing.com/products) 或 [nmap CLI 工具](https://vitux.com/find-devices-connected-to-your-network-with-nmap/) 找到它），端口（默认为 `1883`），代理用户名和密码（您之前创建的）以及主题名称（您可以选择任何）。此外，树莓派的 IP 地址必须是静态的。单击 `Enable` 和 `Retain states`。
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
 
 保存更改。现在设备将自动显示在 Home Assistant 中。
 
@@ -144,7 +144,7 @@ sudo reboot
 
 <robo-wiki-picture src="home-assistant/switch-device.gif" />
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
 
 
 现在您可以转到[**IoT订阅**](/docs/sub-activate)部分并开始激活Robonomics订阅。

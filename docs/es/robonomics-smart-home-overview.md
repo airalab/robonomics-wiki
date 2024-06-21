@@ -8,7 +8,7 @@ contributors: [Fingerling42, nakata5321]
 
 Para tu hogar inteligente, el mercado moderno de IoT ofrece una amplia gama de soluciones. Pero generalmente estás atado a proveedores de nube centralizados o costosos gateways propietarios. Como resultado, como usuario siempre dependes del proveedor de hardware e infraestructura para ejecutar tu sistema inteligente. Al mismo tiempo, tu hogar inteligente no puede ser verdaderamente inteligente sin estadísticas y análisis en la nube.
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
 
 **Vemos dos problemas principales con los hogares inteligentes actuales:**
 

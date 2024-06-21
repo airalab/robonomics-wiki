@@ -13,7 +13,7 @@ tools:
 أولاً، تحتاج إلى إنشاء روبوت تيليجرام شخصي. لهذا، انتقل إلى [روبوت تيليجرام الخاص @BotFather](https://t.me/botfather) واتبع التعليمات. 
 احفظ الرمز الخاص بك للوصول إلى واجهة برمجة التطبيقات HTTP.
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/bot-father.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/bot-father.mp4', type:'mp4'}]" />
 
 <robo-wiki-note type="warning">
 
@@ -23,13 +23,13 @@ tools:
 
 الخطوة التالية هي العثور على ***User Chat ID***. لهذا استخدم الخطوة التالية [GetIdsBot](https://t.me/getidsbot). 
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/get-id-bot.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/get-id-bot.mp4', type:'mp4'}]" />
 
 الآن دعنا نقوم بتثبيت تكامل "Telegram broadcast". سيقوم هذا التكامل بإرسال رسائل إلى تيليجرام الخاص بك.
 
 بالنسبة لصورة Robonomics المثبتة مسبقًا، أو Docker Home Assistant أو Home Assistant Core، يجب عليك تحرير `configuration.yaml`. قم بالاتصال بجهاز Raspberry Pi الخاص بك عبر `ssh`:
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/open-config.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/open-config.mp4', type:'mp4'}]" />
 
 <code-helper additionalLine="rasppi_username@rasppi_hostname" >
 
@@ -62,7 +62,7 @@ notify:
 
 </code-helper >
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/insert-config.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/insert-config.mp4', type:'mp4'}]" />
 
 **احفظ التكوين وأعد تحميل Home Assistant.**
 
@@ -70,7 +70,7 @@ notify:
 كنتيجة، سيتم إنشاء خدمة في Home Assistant، ستُرسل أي رسالة إلى محادثة تيليجرام معك. 
 يمكنك التحقق من ذلك في قائمة أدوات المطور في واجهة Home Assistant على الويب. 
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/telegram-result.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/telegram-result.mp4', type:'mp4'}]" />
 
 ##  إشعار فتح الباب
 
@@ -84,11 +84,11 @@ https://github.com/airalab/home-assistant-blueprints/blob/main/door-opened-notif
 
 </code-helper >
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/insert-blue.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/insert-blue.mp4', type:'mp4'}]" />
 
 ثم قم بإنشاء أتمتة:
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/create-automation.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/create-automation.mp4', type:'mp4'}]" />
 
 الآن ستتلقى رسالة من روبوت تيليجرام في كل مرة يتم فيها فتح الباب.
 

@@ -21,7 +21,7 @@ tools:
 
 Robonomics統合は、ローカルのIPFSデーモンを使用してデータを保存するため、まずインストールする必要があります。 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdAmUHW9bpTU6sUwBYu4ai4DVJ6nZ5xerjM9exvooGKGq', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdAmUHW9bpTU6sUwBYu4ai4DVJ6nZ5xerjM9exvooGKGq', type:'mp4'}]" />
 
 1. [Home Assistant用のIPFSアドオン](https://github.com/airalab/ipfs-addon)があります。インストールするには、`Settings` -> `Add-ons`に移動し、右下の`ADD-ON STORE`ボタンを押します。
 
@@ -45,7 +45,7 @@ https://github.com/airalab/ipfs-addon
 
 [Home Assistant Community Store（HACS）](https://hacs.xyz/)を使用すると、カスタムインテグレーションをインストールできます。
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmYJFpxrww9PRvcAUhdgKufeDbyUFoBZTREZHPgV452kzs', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYJFpxrww9PRvcAUhdgKufeDbyUFoBZTREZHPgV452kzs', type:'mp4'}]" />
 
 1. 開始する前に、SSHでHome Assistantデバイスに接続するためのアドオンをインストールする必要があります。アドオンストアで`ssh`を検索します。`SSH＆Web Terminal`アドオンをインストールすることをお勧めします。
 
@@ -59,7 +59,7 @@ https://github.com/airalab/ipfs-addon
 
 3. `Info`タブで`START`を押します。サイドバーにアドオンを表示するには、`Show in sidebar`を有効にするのを忘れないでください。
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmcijfJ45fmW9omB67xWyPKvHhZuwLMTTQ7DBqnyxHUXR1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmcijfJ45fmW9omB67xWyPKvHhZuwLMTTQ7DBqnyxHUXR1', type:'mp4'}]" />
 
 4. SSHアドオンを開き、次のコマンドを実行します。
 
@@ -87,6 +87,6 @@ wget -O - https://get.hacs.xyz | bash -
 
 HACSを使用してRobonomics統合をインストールできます。
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmUodGanHyTE8hCJdcCHzvdnmuyVVGvnfTuYvYTPVKhh5d', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmUodGanHyTE8hCJdcCHzvdnmuyVVGvnfTuYvYTPVKhh5d', type:'mp4'}]" />
 
 サイドバーメニューからHACSを開き、`Integrations`に移動します。`Explore & Download Repositories`をクリックし、`Robonomics`を検索して、右下の`Download`ボタンをクリックします。ダウンロードが完了したら、Home Assistantを再起動します。

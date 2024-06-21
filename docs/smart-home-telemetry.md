@@ -13,7 +13,7 @@ tools:
 
 **In this article, you will use the Robonomics service, which queries the telemetry of smart home devices.**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/Qmev1RwhsHNA7bvkNCMnpWKzTU7qKSJPBxbjTCJGpWcQUx', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmev1RwhsHNA7bvkNCMnpWKzTU7qKSJPBxbjTCJGpWcQUx', type:'mp4'}]" />
 
 1. Go to dApp and select [Devices & Control](https://robonomics.app/#/telemetry).
 

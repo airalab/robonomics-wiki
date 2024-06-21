@@ -25,7 +25,7 @@ tools:
 
 ## Створення облікових записів власника та контролера
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
 
 1. Перейдіть до [додатку Robonomics Parachain](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) на порталі Polkadot / Substrate. **Перевірте верхній лівий кут, щоб переконатися, що ви підключені до Robonomics Parachain.**
 
@@ -49,7 +49,7 @@ tools:
 
 Ви можете отримати ці файли знову, створивши резервну копію облікового запису. Натисніть на три крапки на своєму обліковому записі, виберіть `Create a backup file for this account`  та введіть свій пароль.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
 
 1. Відкрийте розширення та натисніть кнопку `+` у правому верхньому куті, потім виберіть `Restore account from backup JSON file`.
 
@@ -59,7 +59,7 @@ tools:
 
 4. Підтвердьте оновлення метаданих у спливаючому вікні. Тепер розширення буде показувати мітку мережі, для якої використовується адреса.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
 
 ## Активація підписки Robonomics 
 
@@ -69,7 +69,7 @@ tools:
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
 
 1. Перейдіть до додатку Robonomics на [сторінку підписк](https://dapp.robonomics.network/#/subscription) та натисніть кнопку підключення облікового запису у правій бічній панелі.
 
@@ -84,7 +84,7 @@ tools:
 
 Тепер вам потрібно додати обліковий запис `sub_controller` до **списку доступу**.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
 
 1. Відкрийте розширення та натисніть на значок поряд з ім'ям облікового запису. Він скопіює адресу облікового запису.
 

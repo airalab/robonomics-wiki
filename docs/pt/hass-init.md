@@ -14,7 +14,7 @@ Você está começando com a criação da conta do proprietário do Home Assista
 
 <robo-wiki-note type="note">O endereço do Raspberry Pi pode mudar com o tempo, devido às configurações do roteador.</robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
 
 1. Na primeira página, digite um nome, nome de usuário, senha e clique no botão `CREATE ACCOUNT`.
 

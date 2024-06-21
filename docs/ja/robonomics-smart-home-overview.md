@@ -8,7 +8,7 @@ contributors: [Fingerling42, nakata5321]
 
 スマートホームには、現代のIoT市場がさまざまなソリューションを提供しています。しかし、通常は中央集権型のクラウドプロバイダーまたは高価な専用ゲートウェイに縛られています。その結果、ユーザーとしては常にハードウェアやインフラストラクチャのベンダーに依存することになります。同時に、クラウドの統計データや分析なしでは、スマートホームは本当の意味でスマートではありません。
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
 
 現在のスマートホームには次の2つの主な問題があります：
 

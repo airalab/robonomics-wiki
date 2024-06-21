@@ -12,7 +12,7 @@ tools:
 
 يتيح لك إنشاء نسخة احتياطية استعادة تكوين Home Assistant الخاص بك بسهولة في حالة حدوث خطأ.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="WARNING">
 
@@ -38,7 +38,7 @@ tools:
 
 لكي تتمكن من استعادة التكوين الخاص بك، ستحتاج إلى Home Assistant و Robonomics Integration مثبتين. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="WARNING">
 
@@ -113,7 +113,7 @@ services:
 
 بالإضافة إلى استخدام الخدمات للعمل مع النسخ الاحتياطية ، يمكنك تبسيط العملية باستخدام أزرار `button.create_backup` و `button.restore_from_backup` من تكامل Robonomics. تُطلق هذه الأزرار الخدمات المعنية بالمعلمات الافتراضية (تنشئ زر النسخ الاحتياطي نسخة احتياطية بدون تاريخ).
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 لإضافة أزرار إلى لوحة التحكم الخاصة بك ، اتبع هذه الخطوات:
 

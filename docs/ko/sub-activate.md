@@ -25,7 +25,7 @@ Robonomics를 사용하여 Home Assistant를 제어하려면 Robonomics 파라�
 
 ## 소유자 및 컨트롤러 계정 생성
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
 
 1. [Robonomics Parachain 앱](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/)으로 이동하여 Polkadot / Substrate Portal에서 엽니다. **왼쪽 상단 모서리를 확인하여 Robonomics Parachain에 연결되었는지 확인하십시오.**
 
@@ -49,7 +49,7 @@ Robonomics를 사용하여 Home Assistant를 제어하려면 Robonomics 파라�
 
 계정의 백업 파일을 다시 얻으려면 계정의 세 개의 점을 클릭하고 `Create a backup file for this account`를 선택한 후 비밀번호를 입력하십시오.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
 
 1. 확장 프로그램을 열고 오른쪽 상단에 있는 `+` 버튼을 누르고 `Restore account from backup JSON file`을 선택합니다.
 
@@ -59,7 +59,7 @@ Robonomics를 사용하여 Home Assistant를 제어하려면 Robonomics 파라�
 
 4. 팝업에서 메타데이터 업데이트를 확인하십시오. 이제 확장 프로그램에서 주소가 사용되는 네트워크의 레이블이 표시됩니다.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
 
 ## Robonomics 구독 활성화 
 
@@ -69,7 +69,7 @@ Robonomics를 사용하여 Home Assistant를 제어하려면 Robonomics 파라�
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
 
 1. [구독 페이지](https://dapp.robonomics.network/#/subscription)로 이동하여 Robonomics dapp에 접속하고 오른쪽 사이드바에서 계정에 연결 버튼을 누릅니다.
 
@@ -84,7 +84,7 @@ Robonomics를 사용하여 Home Assistant를 제어하려면 Robonomics 파라�
 
 이제 **액세스 목록**에 `sub_controller` 계정을 추가해야 합니다.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
 
 1. 확장 프로그램을 열고 계정 이름 옆에 있는 아이콘을 클릭하십시오. 이렇게 하면 계정 주소가 복사됩니다.
 

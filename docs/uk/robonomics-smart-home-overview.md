@@ -8,7 +8,7 @@ contributors: [Fingerling42, nakata5321]
 
 Для вашого розумного будинку сучасний ринок Інтернету речей надає широкий спектр рішень. Але ви зазвичай завежите від централізованих хмарних постачальників або дорогих пропрієтарних шлюзів. В результаті ви, як користувач, завжди залежите від апаратного забезпечення та інфраструктури виробника для роботи вашої розумної системи. У той же час ваш розумний будинок не може бути дійсно розумним без хмарних статистичних даних та аналітики.
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
 
 **Ми бачимо дві основні проблеми з поточними розумними будинками:**
 

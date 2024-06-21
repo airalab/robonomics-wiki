@@ -19,7 +19,7 @@ No puedes utilizar cuentas creadas anteriormente porque `SUB_OWNER` y `SUB_CONTR
 
 2. Utilizando la cuenta `SUB_OWNER`, añade una nueva cuenta de usuario a la suscripción en la [dapp](https://dapp.robonomics.network/#/subscription/devices). Ahora debería haber tres direcciones en la lista de acceso: `SUB_OWNER`, `SUB_CONTROLLER` y `USER`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSxzram7CF4SXpVgEyv98XetjYsxNFQY2GY4PfyhJak7H', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSxzram7CF4SXpVgEyv98XetjYsxNFQY2GY4PfyhJak7H', type:'mp4'}]" />
 
 
 ## Conceder acceso al usuario
@@ -32,7 +32,7 @@ No puedes utilizar cuentas creadas anteriormente porque `SUB_OWNER` y `SUB_CONTR
 
 4. Después del proceso de registro, inicia sesión en Home Assistant con la dirección de tu usuario como inicio de sesión y la contraseña recién creada.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
 
 Ahora puedes utilizar la dapp para controlar tu hogar a través de Robonomics, consulta el artículo [**"Obtener Telemetría del Hogar Inteligente"**](/docs/smart-home-telemetry/).
 

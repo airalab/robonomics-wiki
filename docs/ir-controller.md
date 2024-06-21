@@ -10,7 +10,7 @@ All devices from Robonomics can be purchased on the official [website](https://r
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmUpSdy3oQbU7dx59sE3MMdL1kr6E2TKsPA5kmFeKHTgF4', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmUpSdy3oQbU7dx59sE3MMdL1kr6E2TKsPA5kmFeKHTgF4', type:'mp4'}]" />
 
 <robo-wiki-title :type="2" anchor="step1">
 Step 1 — Flashing
@@ -24,7 +24,7 @@ All devices from Robonomics come pre-flashed out of the box. However, since all 
 
 Take the device from the box and connect it to the computer. Then go to the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). This is the web flasher.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmT6CDmmF8yahM1WTCwmAZBcrYUh6xxXpmvuboiYe42rEQ', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmT6CDmmF8yahM1WTCwmAZBcrYUh6xxXpmvuboiYe42rEQ', type:'mp4'}]" />
 
 <robo-wiki-note type="warning"> Note! Web flasher is working only with Google Chrome or Microsoft Edge browser.</robo-wiki-note>
 
@@ -36,7 +36,7 @@ After finishing the installation process Wi-Fi configuration popup will appear. 
 
 1) You can provide Wi-Fi credentials, skip **Step 2 - Access Point** and go to [**Step 3 - Configuration**](/docs/ir-controller/#step3).
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmVbCvncuEZFVDpxnpD3VyE4LCx8TN6xKCVs4MkrJGhGDx', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmVbCvncuEZFVDpxnpD3VyE4LCx8TN6xKCVs4MkrJGhGDx', type:'mp4'}]" />
 
 After setting up Wi-Fi you can visit device via **VISIT DEVICE** button. Later you can visit device via it's IP address in the network. To find it you can use [Fing mobile app](https://www.fing.com/products) or 
 [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
@@ -59,7 +59,7 @@ Provide Wi-Fi credentials. After that the IR Remote will connect to Wi-Fi networ
 Step 3 — Configuration
 </robo-wiki-title>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmZokF8TnReLt4B6q8ixkBmpZwpiiU9PQCPdyJw9RcnYFn', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZokF8TnReLt4B6q8ixkBmpZwpiiU9PQCPdyJw9RcnYFn', type:'mp4'}]" />
 
 Go to **"Configuration"**->**"Configure other"**. In **"Template"** string insert next:
 
@@ -85,7 +85,7 @@ Step 4 — Integration Setup
 
 This article assumes, that you have Home Assistant and HACS. Go to HACS and add custom repository. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmSqvGpq5q9tHUsi45VkycQamR2o2hoDcyAgiz2dp279eF', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSqvGpq5q9tHUsi45VkycQamR2o2hoDcyAgiz2dp279eF', type:'mp4'}]" />
 
 To do this, press three dots in upper right corner, choose **CUSTOM REPOSITORIES**
 and insert this URL: `https://github.com/hristo-atanasov/Tasmota-IRHVAC`. in Category choose "Integration". After that find it in search and install it. Don't forget to restart Home Assistant after that.

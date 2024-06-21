@@ -14,7 +14,7 @@ tools:
 
 <robo-wiki-note type="note">Адрес Raspberry Pi может меняться со временем из-за настроек маршрутизатора.</robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
 
 1. На первой странице введите имя, имя пользователя, пароль и нажмите кнопку `CREATE ACCOUNT`.
 

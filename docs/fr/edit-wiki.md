@@ -418,8 +418,14 @@ Il est recommandé d'insérer des vidéos avec la balise intégrée `<robo-wiki-
 #### IPFS / Server
 Vous devez spécifier le format de la vidéo
 
+<robo-wiki-note type="warning" title="About gateways">
+
+Gateway for the link is chosen automatically from config file - `data/video_config.yaml`. You can add or remove some gateways by changing the file.
+
+</robo-wiki-note>
+
 ```c
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}, {src: 'https://cloudflare-ipfs.com/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}, {src: 'QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}]" />
 ```
 
 #### Local

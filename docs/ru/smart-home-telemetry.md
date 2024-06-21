@@ -13,7 +13,7 @@ tools:
 
 **В этой статье вы будете использовать сервис Robonomics, который запрашивает телеметрию устройств умного дома.**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
 
 1. Перейдите на dapp и выберите сервис [SmartHome Telemetry](https://dapp.robonomics.network/#/smarthome-telemetry).
 

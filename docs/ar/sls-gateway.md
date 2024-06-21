@@ -88,13 +88,13 @@ sudo reboot
 
 5. سترى صفحة `Wi-Fi Settings` . حدد شبكة Wi-Fi الخاصة بك وأدخل كلمة المرور. اضغط على زر `Apply`. ستعيد البوابة التشغيل وتتصل بشبكة Wi-Fi الخاصة بك. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
 
 6. ابحث عن عنوان IP المحلي لبوابة SLS للوصول إلى واجهة الويب. يمكنك استخدام تطبيق [Fing mobile app](https://www.fing.com/products) أو أداة [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/) للعثور على ذلك. يجب أن يكون اسم البوابة كما يلي: `zgw****`. افتح واجهة الويب للبوابة عن طريق لصق عنوان IP البوابة في المتصفح.
 
 7. انتقل إلى `Setting` -> `Hardware` وتأكد من أن الإعدادات تبدو كما هو موضح في الصورة. قم بتصحيح الإعدادات إذا لزم الأمر وانقر على زر `Save`:
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
 
 الجدول مع القيم المطلوبة:
 
@@ -125,7 +125,7 @@ sudo reboot
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
 
 ## ربط SLS بـ MQTT
 
@@ -134,7 +134,7 @@ sudo reboot
 
 أضف عنوان وسيطك (عنوان جهاز Raspberry Pi مع Home Assistant في الشبكة المحلية ، يمكنك العثور عليه باستخدام تطبيق [Fing mobile app](https://www.fing.com/products) أو أداة [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)) ، والمنفذ (الافتراضي هو `1883`) واسم مستخدم وكلمة مرور وسيطك (التي قمت بإنشائها سابقًا) واسم الموضوع (يمكنك اختيار أي اسم). كما يجب أن يكون عنوان IP لجهاز Raspberry Pi ثابتًا. انقر على `Enable` و `Retain states`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
 
 احفظ التغييرات. الآن ستظهر الأجهزة تلقائيًا في Home Assistant.
 
@@ -144,7 +144,7 @@ sudo reboot
 
 <robo-wiki-picture src="home-assistant/switch-device.gif" />
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
 
 
 الآن يمكنك الانتقال إلى قسم [**اشتراك IoT**](/docs/sub-activate) وبدء تفعيل اشتراك Robonomics.

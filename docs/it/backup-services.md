@@ -12,7 +12,7 @@ tools:
 
 Creare un backup consente di ripristinare facilmente la configurazione di Home Assistant in caso di guasto.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="ATTENZIONE">
 
@@ -38,7 +38,7 @@ Argomenti del servizio:
 
 Per ripristinare la configurazione, è necessario avere installato Home Assistant e Robonomics Integration. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="ATTENZIONE">
 
@@ -113,7 +113,7 @@ Si prega di notare che i percorsi predefiniti per le configurazioni di Mosquitto
 
 Oltre all'utilizzo dei servizi per lavorare con i backup, puoi semplificare il processo utilizzando i `Assicurati di essere connesso a Robonomics Parachain oracreate_backup` and `button.restore_from_backup` pulsanti dell'integrazione Robonomics. Questi pulsanti invocano i rispettivi servizi con parametri predefiniti (il pulsante di backup crea un backup senza cronologia).
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 Per aggiungere pulsanti al tuo dashboard, segui questi passaggi:
 

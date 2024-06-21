@@ -19,7 +19,7 @@ tools:
 
 2. باستخدام حساب `SUB_OWNER`، أضف حساب مستخدم جديد إلى الاشتراك في [التطبيق](https://dapp.robonomics.network/#/subscription/devices). الآن يجب أن يكون هناك ثلاثة عناوين في قائمة الوصول: `SUB_OWNER` و `SUB_CONTROLLER` و `USER`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSxzram7CF4SXpVgEyv98XetjYsxNFQY2GY4PfyhJak7H', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSxzram7CF4SXpVgEyv98XetjYsxNFQY2GY4PfyhJak7H', type:'mp4'}]" />
 
 
 ## منح الوصول للمستخدم
@@ -32,7 +32,7 @@ tools:
 
 4. بعد عملية التسجيل، قم بتسجيل الدخول إلى Home Assistant باستخدام عنوان المستخدم الخاص بك كاسم مستخدم وكلمة مرور جديدة.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
 
 الآن يمكنك استخدام التطبيق للتحكم في منزلك من خلال Robonomics، تحقق من المقالة [**"الحصول على بيانات تلميحات المنزل الذكي"**](/docs/smart-home-telemetry/).
 

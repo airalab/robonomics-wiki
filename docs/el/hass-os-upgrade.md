@@ -21,7 +21,7 @@ tools:
 
 Η ενσωμάτωση Robonomics αποθηκεύει τα δεδομένα χρησιμοποιώντας το τοπικό IPFS daemon, οπότε πρέπει να το εγκαταστήσετε πρώτα. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdAmUHW9bpTU6sUwBYu4ai4DVJ6nZ5xerjM9exvooGKGq', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdAmUHW9bpTU6sUwBYu4ai4DVJ6nZ5xerjM9exvooGKGq', type:'mp4'}]" />
 
 1. Υπάρχει ένα [IPFS Add-on για το Home Assistant](https://github.com/airalab/ipfs-addon). Για να το εγκαταστήσετε, πηγαίνετε στις `Settings` -> `Add-ons` και πατήστε το κουμπί `ADD-ON STORE` στην κάτω δεξιά γωνία.
 
@@ -45,7 +45,7 @@ https://github.com/airalab/ipfs-addon
 
 Το [Home Assistant Community Store (HACS)](https://hacs.xyz/) σας επιτρέπει να εγκαταστήσετε προσαρμοσμένες ενσωματώσεις.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmYJFpxrww9PRvcAUhdgKufeDbyUFoBZTREZHPgV452kzs', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYJFpxrww9PRvcAUhdgKufeDbyUFoBZTREZHPgV452kzs', type:'mp4'}]" />
 
 1. Πριν ξεκινήσετε, πρέπει να εγκαταστήσετε πρόσθετο για σύνδεση με τη συσκευή Home Assistant μέσω SSH. Στο Add-on Store αναζητήστε `ssh`. Συνιστούμε να εγκαταστήσετε το πρόσθετο `SSH & Web Terminal`.
 
@@ -59,7 +59,7 @@ https://github.com/airalab/ipfs-addon
 
 3. Στην καρτέλα `Info` πατήστε `START``. Αν θέλετε να δείτε το πρόσθετο στην πλαϊνή γραμμή, μην ξεχάσετε να ενεργοποιήσετε την επιλογή `Show in sidebar`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmcijfJ45fmW9omB67xWyPKvHhZuwLMTTQ7DBqnyxHUXR1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmcijfJ45fmW9omB67xWyPKvHhZuwLMTTQ7DBqnyxHUXR1', type:'mp4'}]" />
 
 4. Ανοίξτε το SSH Add-on και εκτελέστε την παρακάτω εντολή:
 
@@ -87,6 +87,6 @@ wget -O - https://get.hacs.xyz | bash -
 
 Τώρα μπορείτε να εγκαταστήσετε την ενσωμάτωση Robonomics χρησιμοποιώντας το HACS.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmUodGanHyTE8hCJdcCHzvdnmuyVVGvnfTuYvYTPVKhh5d', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmUodGanHyTE8hCJdcCHzvdnmuyVVGvnfTuYvYTPVKhh5d', type:'mp4'}]" />
 
 Ανοίξτε το HACS από το μενού της πλαϊνής γραμμής και μεταβείτε στην επιλογή `Integrations`. Κάντε κλικ στο `Εxplore & Download Repositories`, μετά αναζητήστε `Robonomics` και κάντε κλικ στο κουμπί `Download` που βρίσκεται στην κάτω δεξιά γωνία. Μόλις ολοκληρωθεί η λήψη, επανεκκινήστε το Home Assistant.

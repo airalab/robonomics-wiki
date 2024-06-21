@@ -9,7 +9,7 @@ tools:
 
 **En este artículo, agregarás Robonomics a Home Assistant. Esto permite que Home Assistant registre registros de datos con datos cifrados en Robonomics Parachain y escuche comandos de lanzamiento desde el parachain para controlar dispositivos inteligentes. La integración utiliza IPFS para almacenar datos y enviar hashes de IPFS a funciones de registro de datos o lanzamiento.**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
 
 1. En la interfaz web de Home Assistant, ve a `Settings` -> `Device & Services` y presiona `ADD INTEGRATION`. Busca `Robonomics`.
 

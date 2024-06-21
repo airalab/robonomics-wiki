@@ -58,7 +58,7 @@ Robonomics 사전 설치 이미지에는 다음이 포함되어 있습니다.
 - Zigbee2MQTT
 - Robonomics Integration
 
-<robo-wiki-button label="Download image (~528 Mb)" link="https://crustipfs.info/ipfs/QmeDPrNYLQKFCZgPmxyxDWSAXSjSaw7Dx46d9p3JSGM1hA?filename=robonomics_rpi.xz&download=true" />
+<robo-wiki-button label="Download image (~528 Mb)" link="QmeDPrNYLQKFCZgPmxyxDWSAXSjSaw7Dx46d9p3JSGM1hA?filename=robonomics_rpi.xz&download=true" />
 
 <robo-wiki-note type="warning" title="For advanced users">
 
@@ -83,7 +83,7 @@ Raspberry Pi Imager 프로그램을 실행합니다. 필요한 이미지를 운�
                    
 <robo-wiki-note type="note">사용자 이름과 비밀번호를 주의깊게 저장하세요. 문제 해결 시 이 자격 증명이 필요합니다.</robo-wiki-note>
                         
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSZM7uVizqQjLnKJy2kifs9uDZB91MgALDBARenkzU3mb', type:'mp4'}]" cover="covers/cover-1.png" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSZM7uVizqQjLnKJy2kifs9uDZB91MgALDBARenkzU3mb', type:'mp4'}]" cover="covers/cover-1.png" />
 
 국가 코드는 [여기](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)에서 확인할 수 있습니다.
 
@@ -111,7 +111,7 @@ Raspberry Pi가 연결되면 빨간색 LED가 켜지고 녹색 LED가 잠시 동
 모든 것이 작동하는지 확인하려면 웹 브라우저를 열고 웹 페이지 `http://%RASPBERRY_IP_ADDRESS%:8123`로 이동하세요. 이 예제에서는 `192.168.43.56:8123`입니다.
 모든 것이 정상이면 Home Assistant 웹 인터페이스가 표시됩니다. 웹 페이지가 열리지 않으면 라즈베리 파이가 부팅되기까지 최대 5분 동안 기다렸다가 다시 시도하세요. 
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]"  cover="covers/cover-2.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]"  cover="covers/cover-2.png" />
 
 
 ## 문제 해결

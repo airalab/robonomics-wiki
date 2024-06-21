@@ -10,7 +10,7 @@ All devices from Robonomics can be purchased on the official [website](https://r
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmTWhDu1PdQgR1ZuLuGpEtYG8uMm8eiWLziK1zLupQwU2i', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmTWhDu1PdQgR1ZuLuGpEtYG8uMm8eiWLziK1zLupQwU2i', type:'mp4'}]" />
 
 <robo-wiki-title :type="2" anchor="step1">
 Step 1 — Flashing
@@ -24,7 +24,7 @@ All devices from Robonomics come pre-flashed out of the box. However, since all 
 
 Take the device from the box and connect it to the computer. Then go to the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). This is the web flasher.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmVWmGSnvGwQ3dQfZC8iM5KHBoGpaWVXXUjNuNesULQrGw', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmVWmGSnvGwQ3dQfZC8iM5KHBoGpaWVXXUjNuNesULQrGw', type:'mp4'}]" />
 
 <robo-wiki-note type="warning"> Note! Web flasher is working only with Google Chrome or Microsoft Edge browser.</robo-wiki-note>
 
@@ -55,7 +55,7 @@ Provide Wi-Fi credentials. After that, the Smart switch device will connect to W
 Step 3 — Configuration
 </robo-wiki-title>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmZokF8TnReLt4B6q8ixkBmpZwpiiU9PQCPdyJw9RcnYFn', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZokF8TnReLt4B6q8ixkBmpZwpiiU9PQCPdyJw9RcnYFn', type:'mp4'}]" />
 
 Go to **"Configuration"**->**"Configure other"**. In **"Template"** string insert next:
 
@@ -81,7 +81,7 @@ Step 4 — Integration setup
 
 This article assumes, that you have Home Assistant. To connect Smart Switch device to Home Assistant, you need to install Tasmota integration.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.live/ipfs/QmQw6aA5e7UqT1hZrAV8m1UPq1rWCgLsWcVufuxitQm84p', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQw6aA5e7UqT1hZrAV8m1UPq1rWCgLsWcVufuxitQm84p', type:'mp4'}]" />
 
 Basically, Home Assistant will discover Tasmota integration automatically. But if not, add it manually.
 That's all. Now you can add switch entity to the dashboard.

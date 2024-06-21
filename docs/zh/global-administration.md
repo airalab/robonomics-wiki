@@ -19,7 +19,7 @@ tools:
 
 2. 使用`SUB_OWNER`帐户将新用户帐户添加到[dapp](https://dapp.robonomics.network/#/subscription/devices)的订阅中。现在访问列表中应该有三个地址：`SUB_OWNER`，`SUB_CONTROLLER`和`USER`。
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSxzram7CF4SXpVgEyv98XetjYsxNFQY2GY4PfyhJak7H', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSxzram7CF4SXpVgEyv98XetjYsxNFQY2GY4PfyhJak7H', type:'mp4'}]" />
 
 
 ## 授予用户访问权限
@@ -32,7 +32,7 @@ tools:
 
 4. 在注册过程完成后，使用您的用户地址作为登录名和新创建的密码登录Home Assistant。
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
 
 现在您可以使用dapp通过Robonomics控制您的家庭，查看[**"获取智能家居遥测"**](/docs/smart-home-telemetry/)文章。
 

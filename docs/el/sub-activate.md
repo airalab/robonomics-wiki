@@ -25,7 +25,7 @@ tools:
 
 ## Δημιουργήστε λογαριασμούς κατόχου και ελεγκτή
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
 
 1. Μεταβείτε στην εφαρμογή [Robonomics Parachain](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) στο Polkadot / Substrate Portal. **Ελέγξτε την πάνω αριστερή γωνία για να βεβαωθείτε ότι είστε συνδεδεμένοι με το Robonomics Parachain.**
 
@@ -49,7 +49,7 @@ tools:
 
 Μπορείτε να πάρετε αυτά τα αρχεία ξανά δημιουργώντας ένα αρχείο αντιγράφου ασφαλείας του λογαριασμού. Πατήστε στις τρεις τελείες στον λογαριασμό σας, επιλέξτε `Create a backup file for this account` και πληκτρολογήστε τον κωδικό πρόσβασής σας.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
 
 1. Ανοίξτε μια επέκταση και πατήστε το κουμπί `+` στην πάνω δεξιά γωνία, στη συνέχεια επιλέξτε `Restore account from backup JSON file`.
 
@@ -59,7 +59,7 @@ tools:
 
 4. Επιβεβαιώστε την ενημέρωση των μεταδεδομένων στο αναδυόμενο παράθυρο. Τώρα η επέκταση θα εμφανίζει την ετικέτα του δικτύου για το οποίο χρησιμοποιείται η διεύθυνση.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
 
 ## Ενεργοποίηση Συνδρομής Robonomics 
 
@@ -69,7 +69,7 @@ tools:
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
 
 1. Πηγαίνετε στην εφαρμογή Robonomics στη [σελίδα συνδρομής](https://dapp.robonomics.network/#/subscription) και πατήστε σύνδεση λογαριασμού στη δεξιά πλευρά.
 
@@ -84,7 +84,7 @@ tools:
 
 Τώρα πρέπει να προσθέσετε έναν λογαριασμό «sub_controller» στη **λίστα πρόσβασης**. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
 
 1. Ανοίξτε την επέκταση και κάντε κλικ στο εικονίδιο κοντά στο όνομα του λογαριασμού. Αυτό θα αντιγράψει τη διεύθυνση του λογαριασμού.
 

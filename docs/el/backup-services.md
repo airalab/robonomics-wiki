@@ -12,7 +12,7 @@ tools:
 
 Η δημιουργία ενός αντιγράφου ασφαλείας σας επιτρέπει να ανακτήσετε εύκολα τη διαμόρφωση του Home Assistant σε περίπτωση αποτυχίας.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="ΠΡΟΕΙΔΟΠΟΙΗΣΗ">
 
@@ -38,7 +38,7 @@ tools:
 
 Για να ανακτήσετε τη διαμόρφωσή σας, θα χρειαστεί να έχετε εγκατεστημένο το Home Assistant και την Ενσωμάτωση Robonomics. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="ΠΡΟΕΙΔΟΠΟΙΗΣΗ">
 
@@ -114,7 +114,7 @@ services:
 
 Εκτός από τη χρήση υπηρεσιών για την εργασία με αντίγραφα ασφαλείας, μπορείτε να απλοποιήσετε τη διαδικασία χρησιμοποιώντας τα κουμπιά από την ενσωμάτωση Robonomics. Αυτά τα κουμπιά καλούν τις αντίστοιχες υπηρεσίες με προεπιλεγμένες παραμέτρους (το κουμπί αντιγράφου ασφαλείας δημιουργεί ένα αντίγραφο ασφαλείας χωρίς ιστορικό). Βεβαιωθείτε ότι είστε συνδεδεμένοι με το Robonomics Parachain τώρα `create_backup` and `button.restore_from_backup`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 Για να προσθέσετε κουμπιά στον πίνακα ελέγχου σας, ακολουθήστε αυτά τα βήματα:
 

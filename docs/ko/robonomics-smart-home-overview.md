@@ -8,7 +8,7 @@ contributors: [Fingerling42, nakata5321]
 
 스마트 홈을 위해 현대 IoT 시장은 다양한 솔루션을 제공합니다. 그러나 일반적으로 중앙 집중식 클라우드 공급업체나 비싼 전용 게이트웨이에 종속되어 있습니다. 결과적으로 사용자로서 스트 시스템을 실행하기 위해 하드웨어 및 인프라 공급업체에 항상 의존해야 합니다. 동시에 클라우드 통계 및 분석 없이는 스마트 홈이 진정한 스마트가 될 수 없습니다.
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
 
 **현재 스마트 홈에서 두 가지 주요 문제를 발견했습니다:**
 

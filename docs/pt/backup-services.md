@@ -12,7 +12,7 @@ tools:
 
 Criar um backup permite que você restaure facilmente a configuração do seu Home Assistant em caso de falha.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="ATENÇÃO">
 
@@ -38,7 +38,7 @@ Argumentos do serviço:
 
 Para restaurar sua configuração, você precisará de um Home Assistant instalado e da integração Robonomics. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="ATENÇÃO">
 
@@ -113,7 +113,7 @@ Observe que os caminhos padrão para as configurações do Mosquitto e Zigbee2MQ
 
 Além de usar serviços para trabalhar com backups, você pode simplificar o processo usando os `botão.create_backup` and `button.restore_from_backup` botões da integração do Robonomics. Esses botões invocam os respectivos serviços com parâmetros padrão (o botão de backup cria um backup sem histórico).
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 Para adicionar botões ao seu painel, siga estas etapas:
 

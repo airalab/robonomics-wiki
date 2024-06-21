@@ -12,7 +12,7 @@ tools:
 
 La création d'une sauvegarde vous permet de restaurer facilement votre configuration Home Assistant en cas de panne.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="AVERTISSEMENT">
 
@@ -38,7 +38,7 @@ Arguments du service:
 
 Pour restaurer votre configuration, vous aurez besoin d'un Home Assistant installé et de Robonomics Integration. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="AVERTISSEMENT">
 
@@ -113,7 +113,7 @@ Veuillez noter que les chemins par défaut pour les configurations Mosquitto et 
 
 En plus d'utiliser des services pour travailler avec les sauvegardes, vous pouvez simplifier le processus en utilisant les `button.create_backup` and `button.restore_from_backup` boutons de l'intégration Robonomics. Ces boutons invoquent les services respectifs avec les paramètres par défaut (le bouton de sauvegarde crée une sauvegarde sans historique).
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 Pour ajouter des boutons à votre tableau de bord, suivez ces étapes:
 

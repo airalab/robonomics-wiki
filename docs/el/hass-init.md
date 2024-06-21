@@ -14,7 +14,7 @@ tools:
 
 <robo-wiki-note type="note">Η διεύθυνση του Raspberry Pi μπορεί να αλλάξει με τον χρόνο, λόγω ρυθμίσεων δρομολογητή.</robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
 
 1. Στην πρώτη σελίδα, εισαγάγετε ένα όνομα, όνομα χρήστη, κωδικό πρόσβασης και κάντε κλικ στο κουμπί `CREATE ACCOUNT`.
 

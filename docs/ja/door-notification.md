@@ -13,7 +13,7 @@ tools:
 最初に、個人用のTelegramボットを作成する必要があります。これには、 [特別なTelegramボット @BotFather](https://t.me/botfather) にアクセスし、指示に従ってください。 
 HTTP APIにアクセスするためのトークンを保存してください。
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/bot-father.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/bot-father.mp4', type:'mp4'}]" />
 
 <robo-wiki-note type="warning">
 
@@ -23,13 +23,13 @@ HTTP APIにアクセスするためのトークンを保存してください。
 
 次のステップは、***User Chat ID*** を見つけることです。 これには次のものを使用します [GetIdsBot](https://t.me/getidsbot). 
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/get-id-bot.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/get-id-bot.mp4', type:'mp4'}]" />
 
 次に、「Telegram broadcast」統合をインストールしましょう。 この統合により、メッセージが Telegram に送信されます。
 
 Robonomics のプリインストール イメージ、Home Assistant Docker または Home Assistant Core の場合は、`configuration.yaml` を編集する必要があります。 `ssh` 経由で Raspberry Pi に接続します。
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/open-config.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/open-config.mp4', type:'mp4'}]" />
 
 <code-helper additionalLine="rasppi_username@rasppi_hostname" >
 
@@ -62,14 +62,14 @@ notify:
 
 </code-helper >
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/insert-config.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/insert-config.mp4', type:'mp4'}]" />
 
 **設定を保存し、ホーム アシスタントをリロードします。**
 
 その結果、Home Assistant サービスに、あらゆるメッセージを Telegram チャットに送信するサービスが作成されます。
 ホーム アシスタント Web インターフェイスの 開発者ツール メニューで確認できます。
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/telegram-result.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/telegram-result.mp4', type:'mp4'}]" />
 
 ## ドアオープン通知
 
@@ -83,11 +83,11 @@ https://github.com/airalab/home-assistant-blueprints/blob/main/door-opened-notif
 
 </code-helper >
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/insert-blue.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/insert-blue.mp4', type:'mp4'}]" />
 
 そして自動化を作成します:
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/create-automation.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/create-automation.mp4', type:'mp4'}]" />
 
 これで、ドアが開くたびに Telegram ボットからメッセージを受信できるようになります。
 
