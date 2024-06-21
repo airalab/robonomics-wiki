@@ -13,7 +13,7 @@ tools:
 
 **En este artículo, utilizarás el servicio Robonomics, que consulta la telemetría de los dispositivos del hogar inteligente.**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
 
 1. Ve a la aplicación y elige el servicio [Telemetría del Hogar Inteligente](https://dapp.robonomics.network/#/smarthome-telemetry).
 

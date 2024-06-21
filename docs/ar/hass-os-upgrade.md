@@ -21,7 +21,7 @@ tools:
 
 يقوم دمج Robonomics بتخزين البيانات باستخدام خادم IPFS المحلي ، لذا يجب عليك تثبيته أولاً. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdAmUHW9bpTU6sUwBYu4ai4DVJ6nZ5xerjM9exvooGKGq', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdAmUHW9bpTU6sUwBYu4ai4DVJ6nZ5xerjM9exvooGKGq', type:'mp4'}]" />
 
 1. هناك [إضافة IPFS لمساعد المنزل](https://github.com/airalab/ipfs-addon). لتثبيتها ، انتقل إلى `Settings` -> `Add-ons` واضغط على زر `ADD-ON STORE` في الزاوية السفلى اليمنى.
 
@@ -45,7 +45,7 @@ https://github.com/airalab/ipfs-addon
 
 [متجر مجتمع مساعد المنزل (HACS)](https://hacs.xyz/) يتيح لك تثبيت التكاملات المخصصة.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmYJFpxrww9PRvcAUhdgKufeDbyUFoBZTREZHPgV452kzs', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYJFpxrww9PRvcAUhdgKufeDbyUFoBZTREZHPgV452kzs', type:'mp4'}]" />
 
 1. قبل البدء ، تحتاج إلى تثبيت إضافة للاتصال بجهاز مساعد المنزل باستخدام SSH. في متجر الإضافات ، ابحث عن `ssh`. نوصي بتثبيت إضافة `SSH & Web Terminal`.
 
@@ -59,7 +59,7 @@ https://github.com/airalab/ipfs-addon
 
 3. في علامة التبويب `Info` ، اضغط على `START`. إذا كنت ترغب في رؤية الإضافة في الشريط الجانبي ، لا تنسى تمكين `Show in sidebar`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmcijfJ45fmW9omB67xWyPKvHhZuwLMTTQ7DBqnyxHUXR1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmcijfJ45fmW9omB67xWyPKvHhZuwLMTTQ7DBqnyxHUXR1', type:'mp4'}]" />
 
 4. افتح إضافة SSH وقم بتشغيل الأمر التالي:
 
@@ -87,6 +87,6 @@ wget -O - https://get.hacs.xyz | bash -
 
 الآن يمكنك تثبيت دمج Robonomics باستخدام HACS.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmUodGanHyTE8hCJdcCHzvdnmuyVVGvnfTuYvYTPVKhh5d', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmUodGanHyTE8hCJdcCHzvdnmuyVVGvnfTuYvYTPVKhh5d', type:'mp4'}]" />
 
 افتح HACS من قائمة الشريط الجانبي وانتقل إلى `Integra1tions`. انقر فوق `Explore & Download Repositories`، ثم ابحث عن `Robonomics` وانقر فوق الزر `Download` الموجود في الزاوية اليمنى السفلية. بمجرد اكتمال التنزيل، قم بإعادة تشغيل Home Assistant.

@@ -9,7 +9,7 @@ tools:
 
 **في هذه المقالة، ستضيف Robonomics إلى Home Assistant. يتيح ذلك لـ Home Assistant تسجيل سجلات البيانات ببيانات مشفرة إلى Robonomics Parachain والاستماع إلى أوامر الإطلاق من الباراشين للتحكم في الأجهزة الذكية. يستخدم التكامل IPFS لتخزين البيانات وإرسال تجزئات IPFS إلى وظائف السجلات أو الإطلاق.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
 
 1. في واجهة الويب لـ Home Assistant، انتقل إلى `Settings` -> `Device & Services` واضغط على `ADD INTEGRATION`. ابحث عن `Robonomics`.
 

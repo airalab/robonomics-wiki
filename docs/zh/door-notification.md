@@ -13,7 +13,7 @@ tools:
 首先，您需要创建一个个人的Telegram机器人。为此，请转到 [特殊的Telegram机器人 @BotFather](https://t.me/botfather) 并按照说明进操作。 
 保存您的令牌以访问HTTP API。
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/bot-father.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/bot-father.mp4', type:'mp4'}]" />
 
 <robo-wiki-note type="warning">
 
@@ -23,13 +23,13 @@ tools:
 
 下一步是找到您的 ***User Chat ID***. 为此，请使用下一个 [GetIdsBot](https://t.me/getidsbot). 
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/get-id-bot.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/get-id-bot.mp4', type:'mp4'}]" />
 
 现在让我们安装"Telegram broadcast"集成。此集成将向您的Telegram发送消息。
 
 对于预安装了Robonomics镜像、Home Assistant Docker或Home Assistant Core的用户，您需要编辑`configuration.yaml`文件。通过`ssh`连接到您的Raspberry Pi：
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/open-config.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/open-config.mp4', type:'mp4'}]" />
 
 <code-helper additionalLine="rasppi_username@rasppi_hostname" >
 
@@ -62,7 +62,7 @@ notify:
 
 </code-helper >
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/insert-config.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/insert-config.mp4', type:'mp4'}]" />
 
 **保存配置并重新加载Home Assistant。**
 
@@ -70,7 +70,7 @@ notify:
 结果是，在您的Home Assistant服务中将创建一个服务，该服务将向您的Telegram聊天发送任何消息。 
 您可以在Home Assistant Web界面的开发者工具菜单中进行检查。 
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/telegram-result.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/telegram-result.mp4', type:'mp4'}]" />
 
 ##  门打开通知
 
@@ -84,11 +84,11 @@ https://github.com/airalab/home-assistant-blueprints/blob/main/door-opened-notif
 
 </code-helper >
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/insert-blue.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/insert-blue.mp4', type:'mp4'}]" />
 
 然后创建自动化：
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/create-automation.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/create-automation.mp4', type:'mp4'}]" />
 
 现在，每次门打开时，您都会收到来自Telegram机器人的消息。
 

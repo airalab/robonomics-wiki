@@ -8,7 +8,7 @@ contributors: [Fingerling42, nakata5321]
 
 对于您的智能家居，现代物联网市场提供了各种解决方案。但通常您会受限于集中式云供应商或昂贵的专有网关。因此，作为用户，您始终依赖于硬件和基础设施供应商来运行您的智能系统。与此时，如果没有云统计和分析，您的智能家居将无法真正智能。
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
 
 **我们认为当前智能家居存在两个主要问题：**
 

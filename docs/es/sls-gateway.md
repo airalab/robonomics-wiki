@@ -88,13 +88,13 @@ sudo reboot
 
 5. Verás la página `Wi-Fi Settings`. Selecciona tu Wi-Fi e ingresa la contraseña. Presiona el botón `Apply`. La puerta de enlace se reiniciará y se conectará a tu red Wi-Fi. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
 
 6. Encuentra la IP local de la puerta de enlace SLS para acceder a la interfaz web. Puedes usar la aplicación móvil [Fing](https://www.fing.com/products) o la herramienta de línea de comandos [nmap](https://vitux.com/find-devices-connected-to-your-network-with-nmap/) para encontrarla. El nombre de la puerta de enlace debe verse así: `zgw****`. Abre la interfaz web de la puerta de enlace pegando la IP de la puerta de enlace en un navegador.
 
 7. Ve a `Setting` -> `Hardware` y asegúrate de que la configuración se vea como en la imagen. Corrige la configuración si es necesario y haz clic en el botón `Save`:
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
 
 La tabla con los valores requeridos:
 
@@ -125,7 +125,7 @@ Si ya tienes una puerta de enlace SLS activa en tu hogar y ahora estás configur
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
 
 ## Emparejamiento de SLS con MQTT
 
@@ -134,7 +134,7 @@ Después de configurar la puerta de enlace SLS, debes conectarla a Home Assistan
 
 Agrega la dirección de tu broker (dirección de la Raspberry Pi con Home Assistant en la red local, puedes encontrarla con la aplicación móvil [Fing](https://www.fing.com/products) o la herramienta de línea de comandos [nmap](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)), el puerto (por defecto es `1883`), tu nombre de usuario y contraseña del broker (que creaste anteriormente) y el nombre del tema (puedes elegir cualquier nombre). Además, la dirección IP de la Raspberry Pi debe ser estática. Haz clic en `Enable` y `Retain states`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
 
 Guarda los cambios. Ahora los dispositivos se mostrarán automáticamente en Home Assistant.
 
@@ -144,7 +144,7 @@ Conecta tus dispositivos yendo a `Zigbee` -> `Join`. Pon tus sensores en modo de
 
 <robo-wiki-picture src="home-assistant/switch-device.gif" />
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
 
 
 Ahora puedes ir a la sección [**Suscripción IoT**](/docs/sub-activate) y comenzar a activar la suscripción de Robonomics.

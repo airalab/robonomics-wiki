@@ -58,7 +58,7 @@ Robonomics预装镜像包含：
 - Zigbee2MQTT
 - Robonomics Integration
 
-<robo-wiki-button label="Download image (~528 Mb)" link="https://crustipfs.info/ipfs/QmeDPrNYLQKFCZgPmxyxDWSAXSjSaw7Dx46d9p3JSGM1hA?filename=robonomics_rpi.xz&download=true" />
+<robo-wiki-button label="Download image (~528 Mb)" link="QmeDPrNYLQKFCZgPmxyxDWSAXSjSaw7Dx46d9p3JSGM1hA?filename=robonomics_rpi.xz&download=true" />
 
 <robo-wiki-note type="warning" title="For advanced users">
 
@@ -83,7 +83,7 @@ Robonomics预装镜像包含：
                    
 <robo-wiki-note type="note">仔细保存用户名和密码，因为在故障排除时将需要这些凭据</robo-wiki-note>
                         
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSZM7uVizqQjLnKJy2kifs9uDZB91MgALDBARenkzU3mb', type:'mp4'}]" cover="covers/cover-1.png" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSZM7uVizqQjLnKJy2kifs9uDZB91MgALDBARenkzU3mb', type:'mp4'}]" cover="covers/cover-1.png" />
 
 您可以在[这里](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)找到国家代码。
 
@@ -111,7 +111,7 @@ Robonomics预装镜像包含：
 要检查一切是否正常工作，请打开Web浏览器并转到网页`http://%RASPBERRY_IP_ADDRESS%:8123`。在这个例子中，它将是`192.168.43.56:8123`。
 如果一切正常，您将看到Home Assistant的Web界面。如果网页无法打开，请等待最多5分钟让树莓派启动，然后重试。 
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]"  cover="covers/cover-2.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]"  cover="covers/cover-2.png" />
 
 
 ## 故障排除

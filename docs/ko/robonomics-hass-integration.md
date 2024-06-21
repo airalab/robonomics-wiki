@@ -9,7 +9,7 @@ tools:
 
 **이 문서에서는 Robonomics를 Home Assistant에 추가합니다. 이를 통해 Home Assistant가 암호화된 데이터로 데이터 로그를 Robonomics Parachain에 기록하고, 파라체인으로부터 발사 명령을 수신하여 스마트 기기를 제어할 수 있습니다. 통합은 데터를 저장하고 IPFS 해시를 데이터 로그 또는 발사 기능으로 전송하기 위해 IPFS를 사용합니다.**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
 
 1. Home Assistant의 웹 인터페이스에서 `Settings` -> `Device & Services`로 이동하고 `ADD INTEGRATION`를 누릅니다. `Robonomics`를 검색합니다.
 

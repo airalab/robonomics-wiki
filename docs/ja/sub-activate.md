@@ -25,7 +25,7 @@ Robonomicsを使用してHome Assistantを制御するには、Robonomicsパラ�
 
 ## 所有者アカウントとコントローラーアカウントを作成する
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
 
 1. [Robonomics Parachainアプリ](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/)にアクセスします。**左上隅を確認して、Robonomics Parachainに接続されていることを確認してください。**
 
@@ -49,7 +49,7 @@ Robonomicsを使用してHome Assistantを制御するには、Robonomicsパラ�
 
 アカウントのバックアップファイを作成するには、アカウント上の3つのドットを押し、`Create a backup file for this account` を選択し、パスワードを入力します。
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
 
 1. 拡張機能を開き、右上の`+`ボタンを押し、`Restore account from backup JSON file` を選択します。
 
@@ -59,7 +59,7 @@ Robonomicsを使用してHome Assistantを制御するには、Robonomicsパラ�
 
 4. ポップアップでメタデータの更新を確認します。これで、拡張機能はアドレスが使用されるネットワークのラベルを表示します。
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
 
 ## Robonomicsサブスクリプションを有効にする 
 
@@ -69,7 +69,7 @@ Robonomicsを使用してHome Assistantを制御するには、Robonomicsパラ�
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
 
 1. RobonomicsのDappにアクセスし、[サブスクリプションページ](https://dapp.robonomics.network/#/subscription)に移動し、右サイドバーの「アカウントに接続」を押します。
 
@@ -84,7 +84,7 @@ Robonomicsを使用してHome Assistantを制御するには、Robonomicsパラ�
 
 次に、`sub_controller` アカウントを **アクセス リスト** に追加する必要があります。
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
 
 1. 拡張機能を開き、アカウント名の近くのアイコンをクリックします。これにより、アカウントアドレスがコピーされます。
 

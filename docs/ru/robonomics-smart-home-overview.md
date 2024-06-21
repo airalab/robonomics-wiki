@@ -8,7 +8,7 @@ contributors: [Fingerling42, nakata5321]
 
 Для вашего умного дома современный рынок IoT предлагает широкий спектр решений. Но вы обычно привязаны к централизованным облачным провайдерам или дорогостоящим собственным шлюзам. В результате вы, как пользователь, всегда зависите от поставщика оборудования и инфраструктуры для работы вашей умной системы. В то же время ваш умный дом не может быть по-настоящему умным без облачной статистики и аналитики.
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
 
 **Мы видим две основные проблемы с существующими умными домами:**
 

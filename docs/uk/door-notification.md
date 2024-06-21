@@ -13,7 +13,7 @@ tools:
 Спочатку вам потрібно створити особистого бота Telegram. Для цього перейдіть на [спеціального бота Telegram @BotFather](https://t.me/botfather) та слідуйте інструкціям. 
 Збережіть свій токен для доступу до HTTP API.
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/bot-father.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/bot-father.mp4', type:'mp4'}]" />
 
 <robo-wiki-note type="warning">
 
@@ -23,13 +23,13 @@ tools:
 
 Наступним кроком є знаходження вашого ***User Chat ID***. Для цього використовуйте наступне [GetIdsBot](https://t.me/getidsbot). 
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/get-id-bot.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/get-id-bot.mp4', type:'mp4'}]" />
 
 Тепер давайте встановимо інтеграцію "Telegram broadcast". Ця інтеграція буде надсилати повідомлення на ваш Telegram.
 
 Для попередньо встановленого зображення Robonomics, Docker Home Assistant або Home Assistant Core вам потрібно відредагувати `configuration.yaml`. Підключіться до Raspberry Pi через `ssh`:
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/open-config.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/open-config.mp4', type:'mp4'}]" />
 
 <code-helper additionalLine="rasppi_username@rasppi_hostname" >
 
@@ -62,7 +62,7 @@ notify:
 
 </code-helper >
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/insert-config.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/insert-config.mp4', type:'mp4'}]" />
 
 **Збережіть конфігурацію та перезавантажте Home Assistant.**
 
@@ -70,7 +70,7 @@ notify:
 В результаті в сервісі Home Assistant буде створено сервіс, який буде надсилати будь-яке повідомлення в чат Telegram з вами. 
 Ви можете перевірити це в меню Інструменти розробника на веб-інтерфейсі Home Assistant. 
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/telegram-result.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/telegram-result.mp4', type:'mp4'}]" />
 
 ##  Сповіщення про відкриття дверей
 
@@ -84,11 +84,11 @@ https://github.com/airalab/home-assistant-blueprints/blob/main/door-opened-notif
 
 </code-helper >
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/insert-blue.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/telegram-result.mp4', type:'mp4'}]" />
 
 І створіть автоматизацію:
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/create-automation.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/create-automation.mp4', type:'mp4'}]" />
 
 Тепер ви будете отримувати повідомлення від бота Telegram кожного разу, коли двері відкриті.
 

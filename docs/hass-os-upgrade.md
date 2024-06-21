@@ -24,7 +24,7 @@ tools:
 
 [Home Assistant Community Store (HACS)](https://hacs.xyz/) allows you to install custom integrations.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmYJFpxrww9PRvcAUhdgKufeDbyUFoBZTREZHPgV452kzs', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYJFpxrww9PRvcAUhdgKufeDbyUFoBZTREZHPgV452kzs', type:'mp4'}]" />
 
 1. Before start, you need to install add-on for connecting to the Home Assistant device with SSH. In Add-on Store search `ssh`. We recommend to install `SSH & Web Terminal` add-on.
 
@@ -38,7 +38,7 @@ tools:
 
 3. In the `Info` tab press `START`. If you want to see the addon in the sidebar, don't forget to enable `Show in sidebar`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmYfLWdLH3jTU2uQhr1pzZFsjUNSZ8wtbtEsCdpvmyn4YH', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYfLWdLH3jTU2uQhr1pzZFsjUNSZ8wtbtEsCdpvmyn4YH', type:'mp4'}]" />
 
 4. Open SSH Add-on and run the following command:
 
@@ -71,7 +71,7 @@ Robonomics Integration stores the data using local IPFS daemon and also use Libp
 
 Or manually using the following steps:
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmZgXme4HSrBwDKekBEy5svpQNVWywrvmN7Zthfa27Gu2H', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZgXme4HSrBwDKekBEy5svpQNVWywrvmN7Zthfa27Gu2H', type:'mp4'}]" />
 
 1. There is an [Robonomics Addons Repository](https://github.com/PinoutLTD/robonomics-addons). To install it go to `Settings` -> `Add-Ons` and press the `ADD-ON STORE` button in the lower right corner.
 
@@ -95,6 +95,6 @@ Now you can install both addons. Open them and press `INSTALL`. After installati
 
 Now you can install Robonomics Integration using HACS.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmSsCYxp7xJ22RZEx3FtJBFfGASu1t4rmqhf78xasnMwt4', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSsCYxp7xJ22RZEx3FtJBFfGASu1t4rmqhf78xasnMwt4', type:'mp4'}]" />
 
 Open HACS from the sidebar menu and search for `Robonomics`. Then click on the `Download` button located in the lower right corner. Once the download is complete, restart Home Assistant.

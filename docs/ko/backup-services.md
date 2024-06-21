@@ -12,7 +12,7 @@ tools:
 
 백업을 생성하면 장애 발생 시 Home Assistant 구성을 쉽게 복원할 수 있습니다.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="WARNING">
 
@@ -38,7 +38,7 @@ Home Assistant 및 Robonomics 통합을 로드 한 직후에는 즉시 백업을
 
 구성을 복원하려면 설치된 Home Assistant 및 Robonomics 통합이 필요합니다. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="WARNING">
 
@@ -113,7 +113,7 @@ services:
 
 백업 작업을 위해 서비스를 사용하는 것 외에도 Robonomics 통합에서 `button.create_backup` 및 `button.restore_from_backup` 버튼을 사용하여 프로세스를 간소화할 수 있습니다. 이러한 버튼은 기본 매개 변수 (백업 버튼은 히스토리없이 백업을 생성함)으로 해당 서비스를 호출합니다.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 대시보드에 버튼을 추가하려면 다음 단계를 따르십시오:
 

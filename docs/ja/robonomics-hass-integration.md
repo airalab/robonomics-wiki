@@ -9,7 +9,7 @@ tools:
 
 **この記事では、RobonomicsをHome Assistantに追加します。これにより、Home Assistantは暗号化されたデータをRobonomics Parachainに記録し、パラチェーンからの起動コマンドを受け取ってスマートデバイスを制御することができま。統合では、データを保存し、IPFSハッシュをデータログまたは起動関数に送信するためにIPFSを使用します。**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
 
 1. Home AssistantのWebインターフェースで、`Settings` -> `Device & Services` に移動し、`ADD INTEGRATION` をクリックします。Robonomicsを検索します。
 

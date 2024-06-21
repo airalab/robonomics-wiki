@@ -13,7 +13,7 @@ En este artículo instalarás la integración del bot de Telegram y configurará
 Primero, necesitas crear un bot personal de Telegram. Para ello, ve a [el bot de Telegram especial @BotFather](https://t.me/botfather) y sigue las instrucciones. 
 Guarda tu token para acceder a la API de HTTP.
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/bot-father.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/bot-father.mp4', type:'mp4'}]" />
 
 <robo-wiki-note type="warning">
 
@@ -23,13 +23,13 @@ Mantén tu token **seguro** y guárdalo **de forma segura**, cualquiera puede us
 
 El siguiente paso es encontrar tu ***User Chat ID***. Para ello, utiliza el siguiente [GetIdsBot](https://t.me/getidsbot). 
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/get-id-bot.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/get-id-bot.mp4', type:'mp4'}]" />
 
 Ahora vamos a instalar la integración de "Telegram broadcast". Esta integración enviará mensajes a tu Telegram.
 
 Para la imagen preinstalada de Robonomics, Docker de Home Assistant o Home Assistant Core, debes editar `configuration.yaml`. Conéctate a tu Raspberry Pi a través de `ssh`:
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/open-config.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/open-config.mp4', type:'mp4'}]" />
 
 <code-helper additionalLine="rasppi_username@rasppi_hostname" >
 
@@ -62,7 +62,7 @@ notify:
 
 </code-helper >
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/insert-config.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/insert-config.mp4', type:'mp4'}]" />
 
 **Guarda la configuración y reinicia Home Assistant.**
 
@@ -70,7 +70,7 @@ notify:
 Como resultado, se creará un servicio en tu Home Assistant que enviará cualquier mensaje al chat de Telegram contigo. 
 Puedes comprobarlo en el menú Herramientas para desarrolladores en la interfaz web de Home Assistant. 
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/telegram-result.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/telegram-result.mp4', type:'mp4'}]" />
 
 ##  Notificación de puerta abierta
 
@@ -84,11 +84,11 @@ https://github.com/airalab/home-assistant-blueprints/blob/main/door-opened-notif
 
 </code-helper >
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/insert-blue.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/insert-blue.mp4', type:'mp4'}]" />
 
 Y crea la automatización:
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/create-automation.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/create-automation.mp4', type:'mp4'}]" />
 
 Ahora recibirás un mensaje del bot de Telegram cada vez que se abra la puerta.
 

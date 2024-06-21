@@ -14,7 +14,7 @@ Estás comenzando con la creación de la cuenta de propietario de Home Assistant
 
 <robo-wiki-note type="note">La dirección de Raspberry Pi puede cambiar con el tiempo debido a la configuración del enrutador.</robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
 
 1. En la primera página, ingresa un nombre, nombre de usuario, contraseña y haz clic en el botón `CREATE ACCOUNT`.
 

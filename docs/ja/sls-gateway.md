@@ -88,13 +88,13 @@ sudo reboot
 
 5. `Wi-Fi Settings` ページが表示されます。Wi-Fi を選択し、パスワードを入力します。`Apply` ボタンを押します。ゲートウェイは再起動し、Wi-Fi ネットワークに接続します。 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
 
 6. SLS ゲートウェイのローカル IP を見つけて、Web インターフェースにアクセスします。[Fing モバイルアプリ](https://www.fing.com/products) または [nmap CLI ツール](https://vitux.com/find-devices-connected-to-your-network-with-nmap/) を使用して見つけることができます。ゲートウェイの名前は次のようになります: `zgw****`。ゲートウェイの IP をブラウザに貼り付けて、ゲートウェイの Web インターフェースを開きます。
 
 7. `Setting` -> `Hardware` に移動し、設定が画像のようになっていることを確認します。必要に応じて設定を修正し、`Save` ボタンをクリックします:
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
 
 必要な値のテーブル:
 
@@ -125,7 +125,7 @@ sudo reboot
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
 
 ## SLS を MQTT にペアリングする
 
@@ -134,7 +134,7 @@ SLS ゲートウェイの設定が完了したら、SLS ゲートウェイを Ho
 
 ブローカーアドレス（ローカルネットワーク内の Home Assistant を実行している Raspberry Pi のアドレス、[Fing モバイルアプリ](https://www.fing.com/products) または [nmap CLI ツール](https://vitux.com/find-devices-connected-to-your-network-with-nmap/) で見つけることができます）、ポート（デフォルトは `1883`）、ブローカーのユーザー名とパスワード（以前に作成したもの）、トピック名（任意の名前を選択できます）を追加します。また、Raspberry Pi の IP アドレスは静的である必要があります。`Enable` と `Retain states` をクリックします。
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
 
 変更を保存します。これでデバイスが自動的に Home Assistant に表示されます。
 
@@ -144,7 +144,7 @@ SLS ゲートウェイの設定が完了したら、SLS ゲートウェイを Ho
 
 <robo-wiki-picture src="home-assistant/switch-device.gif" />
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
 
 
 [**IoTサブスクリプション**](/docs/sub-activate)セクションに移動し、Robonomicsサブスクリプションのアクティベートを開始できます。

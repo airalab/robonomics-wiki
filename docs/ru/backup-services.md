@@ -12,7 +12,7 @@ tools:
 
 Создание резервной копии позволяет легко восстановить конфигурацию Home Assistant в случае сбоя.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="WARNING">
 
@@ -38,7 +38,7 @@ tools:
 
 Для восстановления конфигурации вам понадобится установленный Home Assistant и интеграция Robonomics. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="WARNING">
 
@@ -113,7 +113,7 @@ services:
 
 Помимо использования сервисов для работы с резервными копиями, вы можете упростить процесс, используя кнопки `button.create_backup` и `button.restore_from_backup` из интеграции Robonomics. Эти кнопки вызывают соответствующие сервисы с параметрами по умолчанию (кнопка резервного копирования создает резервную копию без истории).
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 Чтобы добавить кнопки на вашу панель управления, выполните следующие действия:
 

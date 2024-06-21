@@ -58,7 +58,7 @@ tools:
 - Zigbee2MQTT
 - Robonomics Integration
 
-<robo-wiki-button label="Download image (~528 Mb)" link="https://crustipfs.info/ipfs/QmeDPrNYLQKFCZgPmxyxDWSAXSjSaw7Dx46d9p3JSGM1hA?filename=robonomics_rpi.xz&download=true" />
+<robo-wiki-button label="Download image (~528 Mb)" link="QmeDPrNYLQKFCZgPmxyxDWSAXSjSaw7Dx46d9p3JSGM1hA?filename=robonomics_rpi.xz&download=true" />
 
 <robo-wiki-note type="warning" title="For advanced users">
 
@@ -83,7 +83,7 @@ tools:
                    
 <robo-wiki-note type="note">Уважно зберігайте ім'я користувача та пароль, оскільки ці облікові дані знадобляться у разі усунення неполадок</robo-wiki-note>
                         
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSZM7uVizqQjLnKJy2kifs9uDZB91MgALDBARenkzU3mb', type:'mp4'}]" cover="covers/cover-1.png" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSZM7uVizqQjLnKJy2kifs9uDZB91MgALDBARenkzU3mb', type:'mp4'}]" cover="covers/cover-1.png" />
 
 Ви можете знайти коди країн [тут](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes). 
 
@@ -111,7 +111,7 @@ tools:
 Щоб перевірити, що все працює, відкрийте веб-переглядач та перейдіть на веб-сторінку `http://%RASPBERRY_IP_ADDRESS%:8123`. У цьому прикладі це буде `192.168.43.56:8123`. 
 Якщо все гаразд, ви побачите веб-інтерфейс Home Assistant. Якщо веб-сторінка не відкривається, зачекайте до 5 хвилин, щоб Raspberry Pi завантажився і спробуйте знову.  
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]"  cover="covers/cover-2.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmXjFaTd81dLrMgADtENmSqbS2uJuLJUgQUrmDu2CsSuAq', type:'mp4'}]"  cover="covers/cover-2.png" />
 
 
 ## Усунення неполадок

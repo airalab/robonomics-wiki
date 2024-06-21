@@ -13,7 +13,7 @@ tools:
 
 **이 문서에서는 스마트 홈 장치의 텔레메트리를 조회하는 Robonomics 서비스를 사용합니다.**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
 
 1. Dapp으로 이동하여 [스마트홈 텔레메트리](https://dapp.robonomics.network/#/smarthome-telemetry) 서비스를 선택하십시오.
 

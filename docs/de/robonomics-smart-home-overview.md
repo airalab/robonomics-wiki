@@ -8,7 +8,7 @@ contributors: [Fingerling42, nakata5321]
 
 Für Ihr Smart Home bietet der moderne IoT-Markt eine Vielzahl von Lösungen. Aber in der Regel sind Sie an zentralisierte Cloud-Anbieter oder teure proprietäre Gateways gebunden. Als Benutzer sind Sie daher immer von der Hardware- und Infrastrukturanbieter abhängig, um Ihr intelligentes System zu betreiben. Gleichzeitig kann Ihr Smart Home ohne Cloud-Statistiken und -Analysen nicht wirklich intelligent sein.
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
 
 **Wir sehen zwei Hauptprobleme bei aktuellen Smart Homes:**
 

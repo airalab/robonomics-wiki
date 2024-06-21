@@ -88,13 +88,13 @@ sudo reboot
 
 5. Sie sehen die Seite `Wi-Fi Settings` . Wählen Sie Ihr Wi-Fi aus und geben Sie das Passwort ein. Drücken Sie die Schaltfläche `Apply`. Das Gateway wird neu gestartet und mit Ihrem Wi-Fi-Netzwerk verbunden. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
 
 6. Suchen Sie die lokale IP des SLS Gateways, um auf die Web-Benutzeroberfläche zuzugreifen. Sie können dazu die [Fing Mobile App](https://www.fing.com/products) oder das [nmap CLI-Tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/) verwenden. Der Gateway-Name sollte wie folgt aussehen: `zgw****`. Öffnen Sie die Web-Benutzeroberfläche des Gateways, indem Sie die Gateway-IP in einen Browser einfügen.
 
 7. Gehen Sie zu `Setting` -> `Hardware` und stellen Sie sicher, dass die Einstellungen wie auf dem Bild aussehen. Korrigieren Sie die Einstellungen bei Bedarf und klicken Sie auf die Schaltfläche `Save`:
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
 
 Die Tabelle mit den erforderlichen Werten:
 
@@ -125,7 +125,7 @@ Wenn Sie bereits ein aktives SLS Gateway in Ihrem Zuhause haben und nun ein weit
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
 
 ## Koppeln von SLS mit MQTT
 
@@ -134,7 +134,7 @@ Nachdem Sie das SLS Gateway konfiguriert haben, müssen Sie das SLS Gateway mit 
 
 Fügen Sie Ihre Broker-Adresse hinzu (Adresse des Raspberry Pi mit Home Assistant im lokalen Netzwerk, Sie können sie mit der [Fing Mobile App](https://www.fing.com/products) oder dem [nmap CLI-Tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/) finden), Port (Standard ist `1883`), Ihren Broker-Benutzernamen und Ihr Passwort (das Sie zuvor erstellt haben) sowie den Themen-Namen (Sie können beliebige wählen). Außerdem muss die IP-Adresse des Raspberry Pi statisch sein. Klicken Sie auf `Enable` und `Retain states`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
 
 Speichern Sie die Änderungen. Jetzt werden die Geräte automatisch in Home Assistant angezeigt.
 
@@ -144,7 +144,7 @@ Verbinden Sie Ihre Geräte, indem Sie zu `Zigbee` -> `Join` gehen. Setzen Sie Ih
 
 <robo-wiki-picture src="home-assistant/switch-device.gif" />
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
 
 
 Jetzt können Sie zum Abschnitt [**IoT-Abonnement**](/docs/sub-activate) gehen und das Robonomics-Abonnement aktivieren.

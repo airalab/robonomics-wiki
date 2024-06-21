@@ -19,7 +19,7 @@ tools:
 
 2. Використовуючи обліковий запис `SUB_OWNER`, додайте новий обліковий запис користувача до підписки в [dapp](https://dapp.robonomics.network/#/subscription/devices). Тепер у списку доступу повинно бути три адреси: `SUB_OWNER`, `SUB_CONTROLLER` та `USER`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSxzram7CF4SXpVgEyv98XetjYsxNFQY2GY4PfyhJak7H', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSxzram7CF4SXpVgEyv98XetjYsxNFQY2GY4PfyhJak7H', type:'mp4'}]" />
 
 
 ## Надання доступу користувачу
@@ -32,7 +32,7 @@ tools:
 
 4. Після процесу реєстрації увійдіть до Home Assistant за допомогою вашої адреси користувача як логіну та новоствореного пароля.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmW2TXuwCYXzgcRfEUx4imZU5ZerEzkuD5P53u9g2WnxDh', type:'mp4'}]" />
 
 Тепер ви можете використовувати dapp для керування вашим будинком через Robonomics, перегляньте статтю [**"Отримання телеметрії розумного будинку"**](/docs/smart-home-telemetry/).
 

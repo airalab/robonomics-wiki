@@ -15,7 +15,7 @@ tools:
 
 You cannot use previously created accounts because `OWNER` and `CONTROLLER` provide security, and the first user you created when you first started Home Assistant does not have a Robonomics Parachain account.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmRyYN7BBodS1VSy5Kq24Mj2zviA8y4m8eF9kUWoCW7CZu', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmRyYN7BBodS1VSy5Kq24Mj2zviA8y4m8eF9kUWoCW7CZu', type:'mp4'}]" />
 
 1. Create an account on Robonomics parachain, as you did in the [previous article](/docs/sub-activate/).
 
@@ -36,13 +36,13 @@ Administrator can create JSON file for his setup in [SETUP A SUBSCRIPTION](https
 
 Now with this JSON file user can import RWS setup using `IMPORT SETUP` button.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/QmYr9shCyFzMNLEeP8LC6ZRiEF2YpMaoDrrs587QpTvsgY', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYr9shCyFzMNLEeP8LC6ZRiEF2YpMaoDrrs587QpTvsgY', type:'mp4'}]" />
 
 ## Granting Access to User
 
 On the same page ([SETUP A SUBSCRIPTION](https://robonomics.app/#/rws-setup)) you can set the password for the new user.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.art/ipfs/Qme28Bq4qtHcqmndrDpUh5eQU5NbdnbHq76kxcS1HmvKQE', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qme28Bq4qtHcqmndrDpUh5eQU5NbdnbHq76kxcS1HmvKQE', type:'mp4'}]" />
 
 1. Choose the account you've just created at the right sidebar (check that you have chosen the intended account by pressing the profile icon).
 

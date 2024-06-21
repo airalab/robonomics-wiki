@@ -25,7 +25,7 @@ tools:
 
 ## إنشاء حسابات المالك والمراقب
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQiJYPYajUJXENX2PzSJMSKGSshyWyPNqugSYxP5eCNvm', type:'mp4'}]" />
 
 1. انتقل إلى [تطبيق Robonomics Parachain](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) على بوابة Polkadot / Substrate. **تحقق من الزاوية اليسرى العلوية للتأكد من أنك متصل بـ Robonomics Parachain.**
 
@@ -49,7 +49,7 @@ tools:
 
 يمكنك الحصول على هذه الملفات مرة أخرى عن طريق إنشاء ملف احتياطي للحساب. انقر على النقاط الثلاث في حسابك ، اختر Create a backup file for this account`  واكتب كلمة المرور الخاصة بك.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmRd7gztUjWkLF4W2XuJwy5aXBwzNV2aPCU6CQQLvUpSNj', type:'mp4'}]" />
 
 1. افتح الامتداد واضغط على زر `+` في الزاوية اليمنى العلوية ، ثم اختر `Restore account from backup JSON file`.
 
@@ -59,7 +59,7 @@ tools:
 
 4. قم بتأكيد تحديث البيانات الوصفية في النافذة المنبثقة. الآن سيعرض الامتداد تسمية الشبكة التي يتم استخدام العنوان لها.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmT5sTNP9t8gpbD4RJJw6ETwG4wiziiChAh2uHHBk9Zsyd', type:'mp4'}]" />
 
 ## تفعيل اشتراك Robonomics 
 
@@ -69,7 +69,7 @@ tools:
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmXrFCajmJgkRDSbshGD3QehjnoyS6jafEPSjHdYkoBHum', type:'mp4'}]" />
 
 1. انتقل إلى تطبيق Robonomics dapp إلى [صفحة الاشتراك](https://dapp.robonomics.network/#/subscription) واضغط على توصيل الحساب في الشريط الجانبي الأيمن.
 
@@ -84,7 +84,7 @@ tools:
 
 أنت الآن بحاجة إلى إضافة حساب "وحدة تحكم فرعية" إلى **قائمة الوصول**.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmV1gkwtcXsWv54ov9tuXfcHg7nqs1foM8cRwts4sqnqtX', type:'mp4'}]" />
 
 1. افتح الامتداد وانقر على الرمز بجوار اسم الحساب. سيتم نسخ عنوان الحساب.
 

@@ -12,7 +12,7 @@ tools:
 
 バックアップを作成することで、障害が発生した場合に簡単にHome Assistantの設定を復元することができます。
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="警告">
 
@@ -38,7 +38,7 @@ Home Assistant と Robonomics Integration をロードした直後に、バッ�
 
 構成を復元するには、ホーム アシスタントとロボノミクス統合がインストールされている必要があります。 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="警告">
 
@@ -113,7 +113,7 @@ services:
 
 バックアップを行うためのサービスを使用するだけでなく、Robonomics統合のボタンを使用することでプロセスを簡素化することができます。これらのボタンは、デフォルトのパラメータ（バックアップボタンは履歴なしでバックアップを作成）で対応するサービスを呼び出します。 `button.create_backup` と `button.restore_from_backup` ダッシュボードにボタンを追加するには、次の手順に従ってください。
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 1. ダッシュボードの右上隅にある3つの点をクリックします。
 2. 選択します `Edit Dashboard`.

@@ -21,7 +21,7 @@ automate and control various aspects of your home using a secure and decentraliz
 
 Here is an example of a complete Smart Home and Robonomics integration installation. Keep in mind that the time required may vary depending on the Internet connection.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/QmULXX4rjkuHuCF42c3V37MxEk6HpnFpJF4bZSQPR2c3Xo', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmULXX4rjkuHuCF42c3V37MxEk6HpnFpJF4bZSQPR2c3Xo', type:'mp4'}]" />
 
 ## Hardware you need for installation
 

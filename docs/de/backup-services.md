@@ -13,7 +13,7 @@ tools:
 
 Durch das Erstellen eines Backups können Sie Ihre Home Assistant-Konfiguration bei einem Ausfall problemlos wiederherstellen.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="WARNUNG">
 
@@ -39,7 +39,7 @@ Dienstargumente:
 
 Um Ihre Konfiguration wiederherzustellen, benötigen Sie eine installierte Home Assistant- und Robonomics-Integration. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="WARNUNG">
 
@@ -117,7 +117,7 @@ Bitte beachten Sie, dass die Standardpfade für die Mosquitto- und Zigbee2MQTT-K
 
 Zusätzlich zur Verwendung von Diensten zur Arbeit mit Backups können Sie den Vorgang vereinfachen, indem Sie die `button.create_backup` und  `button.restore_from_backup` Schaltflächen aus der Robonomics-Integration verwenden. Diese Schaltflächen rufen die entsprechenden Dienste mit den Standardparametern auf (die Backup-Schaltfläche erstellt ein Backup ohne Verlauf).
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 Um Schaltflächen zu Ihrem Dashboard hinzuzufügen, befolgen Sie diese Schritte:
 

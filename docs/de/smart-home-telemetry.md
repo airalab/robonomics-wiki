@@ -13,7 +13,7 @@ tools:
 
 **In diesem Artikel verwenden Sie den Robonomics-Dienst, der die Telemetrie von Smart-Home-Geräten abfragt.**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
 
 1. Gehen Sie zur Dapp und wählen Sie den [SmartHome Telemetrie](https://dapp.robonomics.network/#/smarthome-telemetry)-Dienst aus.
 

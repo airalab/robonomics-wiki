@@ -13,7 +13,7 @@ tools:
 
 **この記事では、スマートホームデバイスのテレメトリをクエリするRobonomicsサービスを使用します。**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
 
 1. dappに移動し、[スマートホームテレメトリ](https://dapp.robonomics.network/#/smarthome-telemetry)サービスを選択します。
 

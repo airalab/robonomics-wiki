@@ -25,7 +25,7 @@ This feature is disabled by default in the Polkadot-JS UI. To enable it, navigat
 
 ## Create Owner and Controller Accounts
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/QmajeEV4adqR2DCaBJPZhH6NR74eHaRmvCcbeQtnLm7Kcc', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmajeEV4adqR2DCaBJPZhH6NR74eHaRmvCcbeQtnLm7Kcc', type:'mp4'}]" />
 
 1. Go to [Robonomics Parachain app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/) on the Polkadot / Substrate Portal. **Check the top left corner to ensure that you are connected to Robonomics Parachain.**
 
@@ -48,7 +48,7 @@ For convenience, you should use the [Polkadot.js extension](https://polkadot.js.
 
 You can get these files again by creating a backup file of the account. Click on the three dots next to your account, choose `Create a backup file for this account` and type in your password.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/Qmc5LcbLSdVCUubLomUUo5Qxrxb2xaixpwUFqnpj2C9iM5', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmc5LcbLSdVCUubLomUUo5Qxrxb2xaixpwUFqnpj2C9iM5', type:'mp4'}]" />
 
 1. Open the extension and press the `+` button in the top right, then choose `Restore account from backup JSON file`.
 
@@ -58,7 +58,7 @@ You can get these files again by creating a backup file of the account. Click on
 
 4. Confirm the metadata update in the popup. The extension will now show the label of the network for which the address is used.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/QmXVhu17Qkx8VkAAVfm5mUBzSTq1BvaAF7MNdXLgZSvZcR', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmXVhu17Qkx8VkAAVfm5mUBzSTq1BvaAF7MNdXLgZSvZcR', type:'mp4'}]" />
 
 ## Activate Robonomics Subscription 
 
@@ -68,7 +68,7 @@ For this step, you must have a sufficient amount of XRT tokens (minimum of 2-3 X
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type:'mp4'}]" />
 
 1. Go to the Robonomics dApp and navigate to the [subscription page](https://robonomics.app/#/rws-buy). Then, click on `Connect Account` on the right sidebar.
 
@@ -82,7 +82,7 @@ For this step, you must have a sufficient amount of XRT tokens (minimum of 2-3 X
 
 Now you need to setup you subscription by adding the `CONTROLLER` account to it.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/Qmd5P356UE1yDLAd4uSdq1dERbyp5gk5wpWD3iENNt2mjV', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmd5P356UE1yDLAd4uSdq1dERbyp5gk5wpWD3iENNt2mjV', type:'mp4'}]" />
 
 1. Go to the Robonomics dApp and navigate to the [setup a subscription page](https://robonomics.app/#/rws-setup). Navigate to the **GENERAL SETTINGS** section.
 
@@ -96,7 +96,7 @@ Now you need to setup you subscription by adding the `CONTROLLER` account to it.
 
 Now, you need to add your `CONTROLLER` account to the **access list**. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type:'mp4'}]" />
 
 1. Go to the Robonomics dApp and navigate to the [setup a subscription page](https://robonomics.app/#/rws-setup). Ensure that you have selected the correct subscription and the `OWNER` account.
 

@@ -14,7 +14,7 @@ tools:
 
 <robo-wiki-note type="note">ルーターの設定により、Raspberry Piのアドレスは時間とともに変更される場合があります。</robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type:'mp4'}]" />
 
 1. 最初のページで、名前、ユーザー名、パスワードを入力し、「CREATE ACCOUNT」ボタンをクリックします。
 

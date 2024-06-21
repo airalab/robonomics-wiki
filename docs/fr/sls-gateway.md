@@ -88,13 +88,13 @@ sudo reboot
 
 5. Vous verrez la page `Wi-Fi Settings`. Sélectionnez votre Wi-Fi et entrez le mot de passe. Appuyez sur le bouton `Apply`. La passerelle redémarrera et se connectera à votre réseau Wi-Fi. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
 
 6. Trouvez l'adresse IP locale de la passerelle SLS pour accéder à l'interface Web. Pour le trouver, vous pouvez utiliser l'application mobile [Fing](https://www.fing.com/products) ou l'outil en ligne de commande [nmap](https://vitux.com/find-devices-connected-to-your-network-with-nmap/). Le nom de la passerelle doit ressembler à ceci: `zgw****`. Ouvrez l'interface Web de la passerelle en collant l'adresse IP de la passerelle dans un navigateur.
 
 7. Allez dans `Setting` -> `Hardware` et assurez-vous que les paramètres ressemblent à l'image. Corrigez les paramètres si nécessaire et cliquez sur le bouton `Save`:
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
 
 Le tableau avec les valeurs requises:
 
@@ -125,7 +125,7 @@ Si vous avez déjà une passerelle SLS active chez vous et que vous configurez m
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
 
 ## Association de SLS à MQTT
 
@@ -134,7 +134,7 @@ Après avoir configuré la passerelle SLS, vous devez connecter la passerelle SL
 
 Ajoutez l'adresse de votre courtier (adresse du Raspberry Pi avec Home Assistant dans le réseau local, vous pouvez la trouver avec l'application mobile [Fing](https://www.fing.com/products) ou l'outil en ligne de commande [nmap](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)), le port (par défaut est `1883`), votre nom d'utilisateur et mot de passe du courtier (que vous avez créé précédemment) et le nom du sujet (vous pouvez choisir n'importe lequel). De plus, l'adresse IP du Raspberry Pi doit être statique. Cliquez sur `Enable` et `Retain states`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
 
 Enregistrez les modifications. Maintenant, les appareils seront automatiquement affichés dans Home Assistant.
 
@@ -144,7 +144,7 @@ Connectez vos appareils en allant dans `Zigbee` -> `Join`. Mettez vos capteurs e
 
 <robo-wiki-picture src="home-assistant/switch-device.gif" />
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
 
 
 Maintenant, vous pouvez vous rendre dans la section [**Abonnement IoT**](/docs/sub-activate) et commencer à activer l'abonnement Robonomics.

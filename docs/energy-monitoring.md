@@ -10,7 +10,7 @@ All devices from Robonomics can be purchased on the official [website](https://r
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmTNyEP12NA7PPjw5WJBwyGwMq9Pg3YHmgEeaFRgNaS5Lc', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmTNyEP12NA7PPjw5WJBwyGwMq9Pg3YHmgEeaFRgNaS5Lc', type:'mp4'}]" />
 
 <robo-wiki-title :type="2" anchor="step1">
 Step 1 — Flashing
@@ -24,7 +24,7 @@ All devices from Robonomics come pre-flashed out of the box. However, since all 
 
 Take the device from the box and connect it to the computer. Then go to the website [webflasher.robonomics.network](https://webflasher.robonomics.network/). This is the web flasher.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmapJYTMqxVSzavJmWJg3rQjRoyCtdeFzYifgvDkXdzi8S', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmapJYTMqxVSzavJmWJg3rQjRoyCtdeFzYifgvDkXdzi8S', type:'mp4'}]" />
 
 <robo-wiki-note type="warning"> Note! Web flasher is working only with Google Chrome or Microsoft Edge browser.</robo-wiki-note>
 
@@ -54,7 +54,7 @@ Provide Wi-Fi credentials. After that, the Energy Monitoring device will connect
 Step 3 — Configuration
 </robo-wiki-title>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmZokF8TnReLt4B6q8ixkBmpZwpiiU9PQCPdyJw9RcnYFn', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZokF8TnReLt4B6q8ixkBmpZwpiiU9PQCPdyJw9RcnYFn', type:'mp4'}]" />
 
 Go to **"Configuration"**->**"Configure other"**. In **"Template"** string insert next:
 
@@ -80,7 +80,7 @@ Step 4 — Integration setup
 
 This article assumes, that you have Home Assistant. To connect Energy Monitoring device to Home Assistant, you need to install "Tasmota" integration.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmXzAFkgV2ZR4pmedhjSCwh9JvfUkmmKUqtHDuzhb6CQaH', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmXzAFkgV2ZR4pmedhjSCwh9JvfUkmmKUqtHDuzhb6CQaH', type:'mp4'}]" />
 
 Basically, Home Assistant will discover "Tasmota" integration automatically. But if not, add it manually.
 

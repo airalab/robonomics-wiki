@@ -13,7 +13,7 @@ tools:
 
 **Dans cet article, vous utiliserez le service Robonomics, qui interroge la télémétrie des appareils de la maison intelligente.**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
 
 1. Allez sur dapp et choisissez le service [Télémétrie de la maison intelligente](https://dapp.robonomics.network/#/smarthome-telemetry).
 

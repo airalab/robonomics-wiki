@@ -88,13 +88,13 @@ sudo reboot
 
 5. Вы увидите страницу `Wi-Fi Settings`. Выберите свою Wi-Fi и введите пароль. Нажмите кнопку `Apply`. Шлюз перезагрузится и подключится к вашей Wi-Fi сети. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
 
 6. Найдите локальный IP-адрес SLS шлюза для доступа к веб-интерфейсу. Чтобы найти его, вы можете использовать [мобильное приложение Fing](https://www.fing.com/products) или [инструмент командной строки nmap](https://vitux.com/find-devices-connected-to-your-network-with-nmap/). Имя шлюза должно выглядеть так: `zgw****`. Откройте веб-интерфейс шлюза, вставив IP-адрес шлюза в браузер.
 
 7. Перейдите в `Setting` -> `Hardware` и убедитесь, что настройки выглядят так, как на изображении. Исправьте настройки при необходимости и нажмите кнопку `Save`:
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
 
 Таблица с необходимыми значениями:
 
@@ -125,7 +125,7 @@ sudo reboot
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
 
 ## Сопряжение SLS с MQTT
 
@@ -134,7 +134,7 @@ sudo reboot
 
 Добавьте адрес вашего брокера (адрес Raspberry Pi с Home Assistant в локальной сети, вы можете найти его с помощью [мобильного приложения Fing](https://www.fing.com/products) или [инструмента командной строки nmap](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)), порт (по умолчанию `1883`), имя пользователя и пароль брокера (которые вы создали ранее) и имя темы (вы можете выбрать любое). Также IP-адрес Raspberry Pi должен быть статическим. Нажмите `Enable` и `Retain states`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
 
 Сохраните изменения. Теперь устройства будут автоматически отображаться в Home Assistant.
 
@@ -144,7 +144,7 @@ sudo reboot
 
 <robo-wiki-picture src="home-assistant/switch-device.gif" />
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
 
 
 Теперь вы можете перейти в раздел [**Подписка на IoT**](/docs/sub-activate) и начать активацию подписки Robonomics.

@@ -8,7 +8,7 @@ contributors: [Fingerling42, nakata5321]
 
 Pour votre maison intelligente, le marché moderne de l'IoT propose une large gamme de solutions. Mais vous êtes généralement lié à des fournisseurs de cloud centralisés ou à des passerelles propriétaires coûteuses. En conséquence, en tant qu'utilisateur, vous dépendez toujours du matériel et de l'infrastructure du fournisseur pour exécuter votre système intelligent. En même temps, votre maison intelligente ne peut pas être vraiment intelligente sans statistiques et analyses cloud.
 
-<robo-wiki-video loop controls :videos="[{src: 'https://crustipfs.info/ipfs/QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'https://crustipfs.info/ipfs/QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
+<robo-wiki-video loop controls :videos="[{src: 'QmStCDsEHCYwVYvnDdmZBMnobPmrgZx3iJLm65b8XNzKQa', type:'mp4'}, {src: 'QmdZKkPJCa9GEN43iUBX81jfrFTDxcn7J6wWURrwNVwcKx', type:'webm'}]"  cover="covers/cover-3.png" />
 
 **Nous identifions deux problèmes principaux avec les maisons intelligentes actuelles :**
 

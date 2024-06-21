@@ -13,7 +13,7 @@ tools:
 
 **Σε αυτό το άρθρο, θα χρησιμοποιήσετε την υπηρεσία Robonomics, η οποία επερωτά την τηλεμετρία των συσκευών έξυπνου σπιτιού.**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
 
 1. Πηγαίνετε στο dapp και επλέξτε την υπηρεσία [Τηλεμετρία Έξυπνου Σπιτιού](https://dapp.robonomics.network/#/smarthome-telemetry).
 

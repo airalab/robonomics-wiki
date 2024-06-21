@@ -13,7 +13,7 @@ tools:
 먼저 개인 텔레그램 봇을 만들어야 합니다. 이를 위해서는 [특수 텔레그램 봇 @BotFather](https://t.me/botfather)로 이동하여 지침을 따르세요. 
 HTTP API에 액세스하기 위한 토큰을 저장하세요.
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/bot-father.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/bot-father.mp4', type:'mp4'}]" />
 
 <robo-wiki-note type="warning">
 
@@ -23,13 +23,13 @@ HTTP API에 액세스하기 위한 토큰을 저장하세요.
 
 다음 단계는 ***사용자 채팅 ID***를 찾는 것입니다. 이를 위해 다음 [GetIdsBot](https://t.me/getidsbot)을 사용하세요. 
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/get-id-bot.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/get-id-bot.mp4', type:'mp4'}]" />
 
 이제 "텔레그램 방송" 통합을 설치해 보겠습니다. 이 통합은 텔레그램으로 메시지를 보냅니다.
 
 Robonomics 사전 설치된 이미지, Home Assistant Docker 또는 Home Assistant Core의 경우 `configuration.yaml`을 편집해야 합니다. `ssh`를 통해 Raspberry Pi에 연결하세요.
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/open-config.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/open-config.mp4', type:'mp4'}]" />
 
 <code-helper additionalLine="rasppi_username@rasppi_hostname" >
 
@@ -62,7 +62,7 @@ notify:
 
 </code-helper >
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/insert-config.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/insert-config.mp4', type:'mp4'}]" />
 
 **구성을 저장하고 Home Assistant를 다시 로드하세요.**
 
@@ -70,7 +70,7 @@ notify:
 결과적으로 Home Assistant 서비스에는 메시지를 텔레그램 채팅으로 보내는 서비스가 생성됩니다. 
 Home Assistant 웹 인터페이스의 개발자 도구 메뉴에서 확인할 수 있습니다. 
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/telegram-result.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/telegram-result.mp4', type:'mp4'}]" />
 
 ##  문이 열릴 때 알림
 
@@ -84,11 +84,11 @@ https://github.com/airalab/home-assistant-blueprints/blob/main/door-opened-notif
 
 </code-helper >
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/insert-blue.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/insert-blue.mp4', type:'mp4'}]" />
 
 그리고 자동화를 생성하세요:
 
-<robo-wiki-video controls src="https://static.robonomics.network/wiki/create-automation.mp4" />
+<robo-wiki-video controls :videos="[{src: 'https://static.robonomics.network/wiki/create-automation.mp4', type:'mp4'}]" />
 
 이제 문이 열릴 때마다 텔레그램 봇으로 메시지를 받게 됩니다.
 

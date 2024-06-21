@@ -9,7 +9,7 @@ tools:
 
 **在本文中，您将向Home Assistant添加Robonomics。这使得Home Assistant能够将加密数据的数据日志记录到Robonomics Parachain，并侦听来自Parachain的启动命令以控制智能设备。集成使用IPFS存储数据并将IPFS哈希发送到数据日志或启动函数。**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
 
 1. Home Assistant的Web界面中，转到`Settings` -> `Device & Services`，然后点击`ADD INTEGRATION`。搜索`Robonomics`。
 

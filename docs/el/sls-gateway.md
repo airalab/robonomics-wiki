@@ -88,13 +88,13 @@ sudo reboot
 
 5. Θα δείτε τη σελίδα `Wi-Fi Settings`. Επιλέξτε το Wi-Fi σας και εισαγάγετε τον κωδικό πρόσβασης. Πατήστε το κουμπί `Apply`. Η πύλη θα επανεκκινήσει και θα συνδεθεί στο δίκτυο Wi-Fi σας. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmSht6roENzrV6oqsQ1a5gp6GVCz54EDZdPAP8XVh9SCwH', type:'mp4'}]" />
 
 6. Βρείτε την τοπική IP της πύλης SLS για να αποκτήσετε πρόσβαση στη διεπαφή ιστού. Για να το βρείτε, μπορείτε να χρησιμοποιήσετε την εφαρμογή κινητού [Fing](https://www.fing.com/products) ή το εργαλείο γραμμής εντολών [nmap](https://vitux.com/find-devices-connected-to-your-network-with-nmap/). Το όνομα της πύλης πρέπει να φαίνεται όπως αυτό: `zgw****`. Ανοίξτε τη διεπαφή ιστού της πύλης επικολλώντας την IP της πύλης στον περιηγητή.
 
 7. Πηγαίνετε στο `Setting` -> `Hardware` και βεβαιωθείτε ότι οι ρυθμίσεις φαίνονται όπως στην εικόνα. Διορθώστε τις ρυθμίσεις αν είναι απαραίτητο και κάντε κλικ στο κουμπί `Save`:
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmeSksMxU9xkvvK7f81WDAYULiMFokK7P7KDVYEjv2MHjn', type:'mp4'}]" />
 
 Ο πίνακας με τις απαιτούμενες τιμές:
 
@@ -125,7 +125,7 @@ sudo reboot
 
 </robo-wiki-note>
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmVZMB1xQeB6ZLfSR6aUrN6cRSF296s8CMJt7E2jBJ5MjZ', type:'mp4'}]" />
 
 ## Σύζευξη SLS με MQTT
 
@@ -134,7 +134,7 @@ sudo reboot
 
 Προσθέστε τη διεύθυνση του μεσολαβητή (διεύθυνση του Raspberry Pi με το Home Assistant στο τοπικό δίκτυο, μπορείτε να το βρείτε με την εφαρμογή κινητού [Fing](https://www.fing.com/products) ή το εργαλείο γραμμής εντολών [nmap](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)), τη θύρα (η προεπιλεγμένη είναι `1883`), το όνομα χρήστη και ο κωδικός πρόσβασης του μεσολαβητή (το οποίο έχετε δημιουργήσει προηγουμένως) και το όνομα του θέματος (μπορείτε να επιλέξετε οποιοδήποτε). Επίσης, η IP διεύθυνση του Raspberry Pi πρέπει να είναι στατική. Κάντε κλικ στο  `Enable` και `Retain states`.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmdNKDqwwy87VQEDDVsX5kpaDQm9wKKPEJUNJnhnjx6e5y', type:'mp4'}]" />
 
 Αποθηκεύστε τις αλλαγές. Τώρα οι συσκευές θα εμφανίζονται αυτόματα στο Home Assistant.
 
@@ -144,7 +144,7 @@ sudo reboot
 
 <robo-wiki-picture src="home-assistant/switch-device.gif" />
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmdq3PBNY88QbYYqakwSLG2vn3mVUom3w3wsSWfTd1pzJA', type:'mp4'}]" />
 
 
 Τώρα μπορείτε να μεταβείτε στην ενότητα [**Συνδρομή IoT**](/docs/sub-activate) και να ξεκινήσετε την ενεργοποίηση της συνδρομής Robonomics.

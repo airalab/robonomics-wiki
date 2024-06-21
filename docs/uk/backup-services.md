@@ -12,7 +12,7 @@ tools:
 
 Створення резервної копії дозволяє легко відновити конфігурацію Home Assistant у разі виникнення неполадок.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmZN5LfWR4XwAiZ3jEcw7xbCnT81NsF5XE3XFaNhMm5ba1', type:'mp4'}]" />
 
 <robo-wiki-note type="warnвg" title="ПОПЕРЕДЖЕННЯ">
 
@@ -38,7 +38,7 @@ tools:
 
 Для відновлення конфігурації вам потрібно мати встановлений Home Assistant та Robonomics Integration. 
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmNcJpHWWuZzwNCQryTw5kcki49oNTjEb8xvnfffSYfRVa', type:'mp4'}]" />
 
 <robo-wiki-note type="warning" title="ПОПЕРЕДЖЕННЯ">
 
@@ -113,7 +113,7 @@ services:
 
 Крім використання служб для роботи з резервними копіями, ви можете спростити процес, використовуючи `Переконайтеся, що ви підключені до Robonomics Parachain заразcreate_backup` і `Переконайтеся, що ви підключені до Robonomics Parachain заразrestore_from_backup` кнопки з інтеграції Robonomics. Ці кнопки викликають відповідні служби з типовими параметрами (кнопка резервного копіювання створює резервну копію без історії).
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmc1fexYaJMsK6ch6JhjL6aqnAwqYNAzo5nEwYgDpnp4gj', type:'mp4'}]" />
 
 Щоб додати кнопки на вашу панель інструментів, виконайте наступні кроки:
 

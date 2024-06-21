@@ -9,7 +9,7 @@ tools:
 
 **In questo articolo, aggiungerai Robonomics a Home Assistant. Ciò consente a Home Assistant di registrare i datalog con dati crittografati su Robonomics Parachain e di ascoltare i comandi di avvio dal parachain per controllare i dispositivi intelligenti. L'integrazione utilizza IPFS per archiviare i dati e inviare gli hash IPFS alle funzioni di datalog o avvio.**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
 
 1. Nell'interfaccia web di Home Assistant vai su `Settings` -> `Device & Services` e premi `ADD INTEGRATION`. Cerca `Robonomics`.
 

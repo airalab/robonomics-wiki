@@ -14,7 +14,7 @@ changes, and much more, into a typical smart home system.
 
 This article discusses smart home management through the Robonomics Cloud as a result of any event in the Polkadot ecosystem. Here is an example of how a lamp can be turned on when a new referendum is being submitted in the Polkadot network.
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://ipfs.living/ipfs/QmWARwfH8WSEjnWUEFSDn28ya8Xp93qyjmSdGkdkwFntWe', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'QmWARwfH8WSEjnWUEFSDn28ya8Xp93qyjmSdGkdkwFntWe', type:'mp4'}]" />
 
 ## Requirements
 

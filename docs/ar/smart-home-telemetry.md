@@ -13,7 +13,7 @@ tools:
 
 **في هذه المقالة، ستستخدم خدمة Robonomics التي تستعلم عن بيانات تلميتري الأجهزة المنزلية الذكية.**
 
-<robo-wiki-video autoplay loop controls :videos="[{src: 'https://cloudflare-ipfs.com/ipfs/Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
+<robo-wiki-video autoplay loop controls :videos="[{src: 'Qmao9RoWcKo2qs4PAGtm5gqHzyAHJcpDqNLgciU35FJeVm', type:'mp4'}]" />
 
 1. اذهب إلى التطبيق واختر خدمة [بيانات تلميتري المنزل الذكي](https://dapp.robonomics.network/#/smarthome-telemetry).
 
