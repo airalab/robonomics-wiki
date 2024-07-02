@@ -15,6 +15,7 @@
 <script>
 import config from '../../data/video_config.yaml';  
 export default {
+  
   name: 'RoboWikiVideo',
 
   props: {
