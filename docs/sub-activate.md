@@ -47,9 +47,9 @@ Now you need to setup you subscription by adding the `CONTROLLER` account to it.
 
 2. In the `Controller's seed phrase` field press magic wand to create new `CONTROLLER` account.
 
-3. in the pop-up create password for the `CONTROLLER` account.
+3. In the pop-up create password for the `CONTROLLER` account.
 
-4. On the next pop-up, you will see the address of your new account and the mnemonic seed phrase. Save the mnemonic seed phrase securely because you will need it later 
+4. In the next pop-up, you will see the address of your new account and the mnemonic seed phrase. Save the mnemonic seed phrase securely because you will need it later 
 for integration setup. Additionally, the JSON file with the `CONTROLLER` account will be downloaded. You can import it to your wallet. 
 How to do it for Polkadot.js extension can be found [here](/docs/create-account-in-dapp/).
 

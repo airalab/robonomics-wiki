@@ -11,11 +11,12 @@ tools:
 
 <robo-wiki-picture src="home-assistant/integration-setup.png" />
 
-First of all you need to create config for your dashboard. For this open your Home Assistant dashboard and at the right top corner press "edit dashboard" button.
+First of all you need to create config for your dashboard. For this open your Home Assistant dashboard and at the right top corner press "Edit Dashboard" button (a pencil).
+In the opened pop-up, click on the three dots icon and select the "Take Control" button:
 
 <robo-wiki-picture src="home-assistant/take-control.png" />
 
-and then press "TAKE CONTROL".
+Press "Take Control" one more time:
 
 <robo-wiki-picture src="home-assistant/take-control2.png" />
 
