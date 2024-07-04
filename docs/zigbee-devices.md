@@ -30,8 +30,6 @@ First, press `Permit join (All)` button at the top of web-interface of Zigbee2MQ
 
 Then, start to pair devices. The most common way to switch a device to connect mode is to hold its power button or switch them on/off 5 times. Make sure Zigbee2MQTT is running.
 
-<robo-wiki-picture src="home-assistant/switch-device.gif" />
-
 When the device connects, you will see them in web-interface:
 
 <robo-wiki-picture src="home-assistant/device_connected.jpg" />
