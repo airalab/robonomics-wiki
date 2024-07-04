@@ -120,7 +120,7 @@ export default {
 
     setTimeout(() => {
       if(!this.startURL) {
-        this.startURL = 'https://ipfs.living/ipfs/';
+        this.startURL = config.gateways[0];
       }
     }, 10000);
   },
