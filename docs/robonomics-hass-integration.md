@@ -3,11 +3,23 @@ title: Robonomics integration setup
 
 contributors: [LoSk-p, nakata5321, Fingerling42]
 tools:
-  - Robonomics Home Assistant Integration 1.8.3
+  - Robonomics Home Assistant Integration 1.8.6
     https://github.com/airalab/homeassistant-robonomics-integration
 ---
 
 **In this article, you will add Robonomics to Home Assistant. This allows Home Assistant to record datalogs with encrypted data to Robonomics Parachain and listen to launch commands from the parachain to control smart devices. Integration uses IPFS to store data and send IPFS hashes to datalog or launch functions.**
+
+<robo-wiki-picture src="home-assistant/integration-setup.png" />
+
+First of all you need to create config for your dashboard. For this open your Home Assistant dashboard and at the right top corner press "edit dashboard" button.
+
+<robo-wiki-picture src="home-assistant/take-control.png" />
+
+and then press "TAKE CONTROL".
+
+<robo-wiki-picture src="home-assistant/take-control2.png" />
+
+Now you can install the Robonomics integration. To do so, follow these steps:
 
 <robo-wiki-video autoplay loop controls :videos="[{src: 'QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type:'mp4'}]" />
 
