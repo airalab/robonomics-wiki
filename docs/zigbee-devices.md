@@ -3,7 +3,7 @@ title: Zigbee Devices in Zigbee2MQTT
 
 contributors: [nakata5321, PaTara43]
 tools:
-  - Zigbee2MQTT 1.37.1
+  - Zigbee2MQTT 1.38.0
     https://github.com/Koenkk/zigbee2mqtt/
 
 ---
@@ -29,8 +29,6 @@ It's time to connect your smart device.
 First, press `Permit join (All)` button at the top of web-interface of Zigbee2MQTT. 
 
 Then, start to pair devices. The most common way to switch a device to connect mode is to hold its power button or switch them on/off 5 times. Make sure Zigbee2MQTT is running.
-
-<robo-wiki-picture src="home-assistant/switch-device.gif" />
 
 When the device connects, you will see them in web-interface:
 

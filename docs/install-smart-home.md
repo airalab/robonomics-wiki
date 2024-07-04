@@ -2,13 +2,13 @@
 title: Smart Home Installation
 contributors: [nakata5321, PaTara43]
 tools:
-  - Home Assistant 2024.4.4
+  - Home Assistant 2024.6.2
     https://github.com/home-assistant/core
-  - Robonomics Home Assistant Integration 1.8.3
+  - Robonomics Home Assistant Integration 1.8.6
     https://github.com/airalab/homeassistant-robonomics-integration
-  - IPFS 0.27.0
+  - IPFS 0.29.0
     https://docs.ipfs.tech/
-  - Zigbee2MQTT 1.37.1
+  - Zigbee2MQTT 1.38.0
     https://github.com/Koenkk/zigbee2mqtt
 ---
 
@@ -16,6 +16,8 @@ tools:
 a centralized hub for controlling smart devices in your home network. By integrating with Robonomics, a decentralized cloud service, you can enhance the functionality and
 security of your smart home. In this article, we will provide step-by-step instructions on how to install Home Assistant with Robonomics, giving you the ability to 
 automate and control various aspects of your home using a secure and decentralized solution. Let's get started!**
+
+<robo-wiki-picture src="home-assistant/INSTALLATION.png" />
 
 ## Demo
 
@@ -70,7 +72,7 @@ This article will show the installation process on Ubuntu system. First you need
 <code-helper copy>
 
 ```
-sudo apt-get install wget unzip git
+sudo apt-get install wget unzip git jq
 ```
 </code-helper>
 
@@ -99,15 +101,16 @@ Then, create a `.env` file from the `template.env`:
 <code-helper copy>
 
 ```
-mv template.env .env
+cp template.env .env
 ```
 
 </code-helper>
 
-After that, you may open the `.env` file and edit default values such as:  
-- Versions of packages
+After that, you may open the `.env` file and edit default values such as:
+
 - path to repository where will be stored all configurations folders.
 - time zone in ["tz database name"](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+- Zigbee channel.
 
 ## 3. Start 
 
@@ -131,7 +134,7 @@ During the installation process the following situations may occur:
 this script will create all necessary repositories and start docker containers
 Cannot find zigbee coordinator location. Please insert it and run script again. The directory /dev/serial/by-id/ does not exist
 Do you want to continue without zigbee coordinator? It will not start Zigbee2MQTT container.
-Do you want to proceed? (y/n) 
+Do you want to proceed? (Y/n) 
 ```
 
 </code-helper>
@@ -150,5 +153,12 @@ You have more that 1 connected devices. Please choose one
 ```
 
 </code-helper>
+
+## Post-installation
+
+After everything has started, you can use the `update.sh` script to update the version of Docker packages. This script will download new versions, 
+delete old versions of packages, and restart everything automatically, saving all your configurations.
+
+To stop everything, use the `stop.sh` script.
 
 That's all. Continue to the next article.

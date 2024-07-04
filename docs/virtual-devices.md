@@ -6,6 +6,8 @@ contributors: [nakata5321]
 
 **This article will tell you how to create virtual devices in a smart home, so you can see what the actual platform looks like.**
 
+<robo-wiki-picture src="home-assistant/virtual-sensors.png" />
+
 ## Install integration
 
 To use virtual devices you need to install ["demo" integration](https://www.home-assistant.io/integrations/demo/). 
