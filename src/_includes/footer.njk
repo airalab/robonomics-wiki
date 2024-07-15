@@ -1,0 +1,42 @@
+{% set classList = "footer__icon" %}
+{% set icon = icon | default('github') %}
+
+<footer class="footer">
+    <div class="layout__page">
+      <div class="footer-socials">
+        <a class="footer-socials__link" href="https://github.com/airalab">
+					{% set icon = "github" %}
+						{% include "./components/icon.njk" %}
+        </a>
+        <a class="footer-socials__link" href="https://discord.gg/JpaN2XAmqY">
+					{% set icon = "discord" %}
+				{% include "./components/icon.njk" %}
+        </a>
+        <a class="footer-socials__link" href="https://twitter.com/AIRA_Robonomics">
+					{% set icon = "twitter" %} {% include "./components/icon.njk" %}
+        </a>
+      </div>
+      <div class="footer__links">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="/docs/edit-wiki/">
+              How to edit Wiki
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="/privacy-policy/">
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+
+        <div class="footer-text">
+          <span class="">Translation was executed by AI so there may be some inaccuracies </span>
+           <a href="https://github.com/airalab/robonomics-wiki/issues">Inform us </a>, please, if you find any
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

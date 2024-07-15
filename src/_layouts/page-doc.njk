@@ -1,0 +1,57 @@
+{% include 'header.njk' %}
+<div class="all-content custom-scroll">
+	<main class="main post layout__page post">
+		<section class="section">
+			<div class="layout page">
+
+				<div id="sidebarDocs" popover class="sidebar page__sidebar custom-scroll">
+					{% include 'sidebar.njk' %}
+				</div>
+
+				<div class="page-content--withBC">
+					{% if page.url %}
+						{% include '../_includes/components/doc/breadcrumbs.njk' %}
+					{% endif %}
+					<div class="page-content">
+						<div class="page-title"><h1 class="page__title-main">{{title}}</h1></div>
+						<div class="docs-content" data-pagefind-body>
+							{{ content | safe }}
+						</div>
+						{% if page.url %}
+							{% include '../_includes/components/doc/navButtons.njk' %}
+							{# {% include '../_includes/components/doc/contribution.njk' %} #}
+						{% endif %}
+					</div>
+        </div>
+
+
+
+				<div id="sidebarContent" popover class="page__sidebar custom-scroll" >
+					{% if tools.length %}
+						{% roboWikiNote {title: "Tested for"} %}
+							{% for tool in tools %}
+								{% set toolLinkRegex = r/\bhttps?:\/\/\S+/gi %}
+								{% set toolLink = tool.match(toolLinkRegex)  %}
+								<a href="{{ toolLink or '#'}}" class="testedFor__link">
+									{{ tool | replace(toolLinkRegex, '') }}
+								</a>
+							{% endfor %}
+						{% endroboWikiNote %}
+					{% endif %}
+
+					{% if content is string %}
+						<aside>
+							{{ content | toc | safe }}
+						</aside>
+					{% endif %}
+
+					{%set ghTitleIssue = title | getTitleForIssue %}
+					{% roboWikiButton {label: "Create an issue", link: "https://github.com/airalab/robonomics-wiki/issues/new?" + ghTitleIssue,  size: "small"} %}{% endroboWikiButton %}
+        </div>
+
+			</div>
+			{% include 'components/support.njk' %}
+		</section>
+	</main>
+{% include 'footer.njk' %}
+</div>

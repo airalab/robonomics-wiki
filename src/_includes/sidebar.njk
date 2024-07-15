@@ -1,0 +1,46 @@
+{% set navPages = sidebar_docs %}
+
+{% macro renderNavListItem(entry) %}
+  {% if entry.children.length %}
+    <li>
+      <details
+			class="menu-details"
+        {%- for child in entry.children %}
+          {% if (child.url + '/' == page.url) or (child.url and child.url | locale_url + '/' == page.url) and not child.topic  %}
+            class="open"
+            open
+          {% endif %}
+					{% if child.children.length  %}
+						{%- for ch in child.children %}
+						{% if (ch.url + '/' == page.url or ch.url and ch.url | locale_url + '/' == page.url) and not ch.topic  %}
+							class="open"
+							open
+						{% endif %}
+						{% if ch.children.length  %}
+							{%- for c in ch.children %}
+							{% if  (c.url + '/' == page.url or c.url and c.url | locale_url + '/' == page.url) and not c.topic  %}
+								class="open"
+								open
+							{% endif %}
+							{% endfor %}
+						{% endif %}
+						{% endfor %}
+					{% endif %}
+        {% endfor %}
+      >
+        <summary class="menu-subtitle" >{{ entry.title }}</summary>
+        <ul class="menu" role="list">
+          {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+        </ul>
+    </li>
+  {% else %}
+		{% set newURL = ( entry.url + '/?topic=' + entry.topic | convertStringWithoutSpaces if entry.topic and not 'topic' in page.url  else entry.url) %}
+    <li {% if newURL  == page.url or newURL | locale_url + '/' == page.url %} class="with-active-link" {% endif %} {% if entry.topic%} data-topic="{{entry.topic}}" data-title="{{entry.title}}" {% endif %}>
+      <a class="menu-link" href="{{ newURL | locale_url  }}"{% if entry.url + '/' == page.url or entry.url | locale_url + '/' == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
+    </li>
+  {%- endif -%}
+{%- endmacro %}
+
+<ul class="nav-list menu" role="list">
+{%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+</ul>

@@ -1,0 +1,24 @@
+<div class="page-content__navigation-btns pageNextPrev">
+	{% if page.url and sidebar_docs %}
+	{% set pageIndex = sidebar_docs | getDocIndex(page.url) %}
+	{% set currTitle = sidebar_docs | currentPage(pageIndex)%}
+	{% set prevTitle = sidebar_docs | prevPage(pageIndex) %}
+	{% if not currTitle.topic %}
+		{%if prevTitle and not currTitle.withoutNav and not currTitle.withoutPrev %}
+			{% if currTitle.prev %}
+					{% roboWikiButton {link:  currTitle.prev[0].url , type: "secondary", additionalText: "previous"} %}{{'← ' +  currTitle.prev[0].title}}{% endroboWikiButton %}
+			{% else %}
+					{% roboWikiButton {link: prevTitle.url , type: "secondary", additionalText: "previous"} %}{{'← ' + prevTitle.title}}{% endroboWikiButton %}
+			{% endif %}
+		{% endif %}
+		{% set nextTitle = sidebar_docs | nextPage(pageIndex) %}
+		{%if nextTitle.url and not currTitle.withoutNav and not currTitle.withoutNext %}
+			{% if currTitle.next %}
+					{% roboWikiButton {link: currTitle.next[0].url , type: "secondary", additionalText: "next"} %} {{currTitle.next[0].title + ' →' }}{% endroboWikiButton %}
+			{% else %}
+					{% roboWikiButton {link: nextTitle.url , type: "secondary", additionalText: "next"} %} {{nextTitle.title + ' →' }}{% endroboWikiButton %}
+			{% endif %}
+		{% endif %}
+	{% endif %}
+{% endif %}
+</div>

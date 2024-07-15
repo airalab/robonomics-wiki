@@ -1,0 +1,39 @@
+{% set currentDoc = page.url | currentDoc %}
+
+{% set ghLink = currentDoc | githubLink %}
+
+{% set ghLastUpdate = currentDoc | githubLastUpdatedDoc %}
+
+
+{% if ghLink %}
+ <section class="docContribution">
+	{% if page.contributors && page.contributors.length > 0 %}
+	<div class="page-title-meta">
+		<span>Main contributors: </span>
+			{% for contributor in page.contributors %}
+				<a href="{{'https://github.com/'+contributor}}"> @{{contributor}}</a>
+				{% if !loop.last %}<span>, </span> {% endif %}
+			{% endfor %}
+	</div>
+
+		<div class="content">
+			<div class="github-title">
+				<div class="icon">
+					<Icon icon="github"/>
+				</div>
+				<h5>Make a contribution</h5>
+			</div>
+			<p> Robonomics wiki is open source. See something that's wrong or unclear?
+				<a href="{{ghLink}}" class="submit">Submit</a>  a pull request.
+			</p>
+		</div>
+
+		{% if ghLastUpdate.ghUpdateName %}
+		<div class="head">
+			Latest <a href="{{ghLastUpdate.ghUpdateUrl}}">commit</a> on {{ghLastUpdate.ghUpdateDate}} by {{ghLastUpdate.ghUpdateName}}
+		</div>
+		{%  endif %}
+
+	{%  endif %}
+ </section>
+{% endif %}

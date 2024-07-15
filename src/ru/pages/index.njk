@@ -1,0 +1,16 @@
+---
+layout: "home"
+title: "Изучите Робономику с гидами"
+description: "Изучите Робономику с помощью учебных пособий и практически полезных экспериментов. Эта документация предназначена для того, чтобы помочь вам подключить роботов или написать децентрализованные приложения в сети Робономики."
+permalink: '/ru/index.html'
+---
+
+<img alt="" class="intro-image" src="../assets/images/robonomics-lab.png"/>
+
+<div class="intro">
+	<h1>Изучите Робономику с гидами</h1>
+	<div class="intro-description">Изучите Робономику с помощью учебных пособий и практически полезных экспериментов. Эта документация предназначена для того, чтобы помочь вам подключить роботов или написать децентрализованные приложения в сети Робономики.</div>
+
+		{% set links = [{ to: '/docs/robonomics-smart-home-overview/', name: 'Home Assistant integration'}, {to: '/docs/ir-controller/', name: 'Robonomics smart devices'}, { to: '/docs/glossary/', name: 'Working with parachain' }]%}
+	{% include 'components/gridLinks.njk' %}
+</div>

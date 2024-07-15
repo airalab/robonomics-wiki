@@ -1,0 +1,34 @@
+---js
+{
+	"pagination": {
+		"data": "sidebar_docs",
+		"before": function(paginationData, fullData){
+			const filteredArr = []
+			this.flattenAll(paginationData).map(d => {
+				if (d.children) {
+					filteredArr.push(d)
+				}
+			})
+			return filteredArr
+		},
+		"size": 1,
+		"alias": "doc"
+	},
+	"permalink": "/summary/{{ doc.title | slugify }}/index.html",
+	"layout": "home"
+}
+---
+
+<h1><a href="/">Home</a> / {{doc.title}}</h1>
+
+{% set links = doc.children |	transformSummaryLinks%}
+
+<nav class="grid-navigation">
+	{% for item in links %}
+		{% if item.topic %}
+			<a href="{{item.url | toAbsoluteUrl}}/?topic={{item.topic}}">{{item.title}}</a>
+		{% else %}
+			<a href="{{item.url | toAbsoluteUrl}}">{{item.title}}</a>
+		{% endif %}
+	{% endfor %}
+</nav>

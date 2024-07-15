@@ -1,0 +1,154 @@
+pre, code {
+	font-family: Space Mono,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+	font-feature-settings: "liga" 0;
+	font-size: 0.85rem;
+	line-height: 1.5;
+
+	border-radius: 3px;
+	direction: ltr;
+	text-align: left;
+	word-spacing: normal;
+	word-break: normal;
+	tab-size: 2;
+	hyphens: none;
+	word-break: break-all;
+}
+
+
+pre{
+	padding: 1rem;
+	overflow: auto;
+	margin-bottom: var(--space-text);
+	background-color: var(--code-bg);
+	color: var(--code-text);
+}
+
+
+:not(pre)>code{
+	padding: 0 0.25rem;
+
+	color: var(--code-text-inline);
+	background: var(--code-bg-inline);
+}
+
+
+.language-html {
+  font-variant-ligatures: none;
+}
+
+.hljs-comment
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #585858;
+}
+
+.hljs-comment {
+  color: #8aa1b4;
+}
+
+.hljs-string {
+  color: #7ec699;
+}
+
+.token.entity,
+.token.url,
+.language-css .hljs-string,
+.style .hljs-string {
+  color: #86c1b9;
+}
+
+
+.hljs-keyword, .hljs-built_in {
+  color: #cc99cd;
+}
+
+.hljs-function {
+  color: #dd9a6d;
+}
+
+.hljs-attr {
+  color: lighten(#e2777a, 7);
+}
+.hljs-literal {
+  color: #7ec699;
+}
+
+.hljs-params {
+  color: #86c1b9;
+}
+
+.hljs-number{
+	color: #e2777a;
+}
+
+.code__additionalLine {
+	position: relative;
+	width: 100%;
+	padding: 0.5rem;
+	margin-bottom: -2px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #10161A;
+	color: #707070;
+	font-size: 0.9rem;
+	font-weight: 500;
+	font-family: var(--font-family-code);
+	border-radius: 3px;
+}
+
+.code__additionalLine--nobg {
+	background-color: var(--code-bg);
+	padding: 0;
+}
+
+.code-helper--only-copy .copy-btn {
+ position: absolute;
+ top: 5px;
+ right: 10px;
+ padding: 0.5rem;
+ background: #283740a1;
+}
+
+.code-helper--only-copy .copy-btn small {
+	top: -10px;
+	bottom: unset;
+}
+
+.copy-btn {
+	/* padding: 0.5rem; */
+	margin-left: auto;
+	border: 1px solid transparent;
+	cursor: pointer;
+	/* background: #283740a1; */
+	border-radius: 5px;
+}
+
+.code-helper small {
+	position: absolute;
+	right: 5px;
+	bottom: 2px;
+	margin-top: 5px;
+	font-size: 0.5rem;
+	color: #ececec;
+	/* opacity: 0.5; */
+	background-color: #10161a71;
+	font-family: var(--font-family-code);
+}
+
+.copy-btn:focus {
+	box-shadow: none;
+}
+
+svg path {
+	transition: fill 0.3s ease-in-out;
+}
+
+.copy-btn:focus svg path {
+	fill: rgb(59, 169, 248)
+}
+
+.code-helper pre[class*=language-] {
+	margin-top: 0;
+}

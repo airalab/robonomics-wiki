@@ -1,0 +1,11 @@
+.privacy-policy h1, .privacy-policy h2 {
+	text-align: left;
+}
+
+.privacy-policy ul {
+	padding-left: calc(var(--space) * 0.5);
+}
+
+.privacy-policy__subtitle {
+	margin-bottom: calc(var(--space) * 0.5);
+}

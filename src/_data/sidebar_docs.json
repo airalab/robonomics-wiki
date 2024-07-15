@@ -1,0 +1,277 @@
+[
+  {
+    "title": "Smart Home",
+    "children": [
+      {
+        "title": "Overview",
+        "url": "/docs/robonomics-smart-home-overview",
+        "withoutNav": true
+      },
+      {
+        "title": "Install Smart Home",
+        "url": "/docs/install-smart-home"
+      },
+      {
+        "title": "Home Assistant Init",
+        "url": "/docs/hass-init"
+      },
+      {
+        "title": "Add devices",
+        "children": [
+          {
+            "title": "Zigbee Devices",
+            "url": "/docs/zigbee-devices"
+          },
+          {
+            "title": "Virtual Devices",
+            "url": "/docs/virtual-devices"
+          }
+        ]
+      },
+      {
+        "title": "Subscription Activate",
+        "url": "/docs/sub-activate",
+        "topic": "Smart Home"
+      },
+      {
+        "title": "Robonomics Integration Setup",
+        "url": "/docs/robonomics-hass-integration",
+        "topic": "Smart Home",
+        "next": [
+          {
+            "title": "Add User",
+            "url": "/docs/add-user"
+          }
+        ]
+      },
+      {
+        "title": "Advanced Setup",
+        "children": [
+          {
+            "title": "Upgrade Home Assistant OS",
+            "children": [
+              {
+                "title": "Subscription Activate",
+                "url": "/docs/sub-activate",
+                "topic": "Upgrade Home Assistant OS"
+              },
+              {
+                "title": "Robonomics Installation",
+                "url": "/docs/hass-os-upgrade"
+              },
+              {
+                "title": "Robonomics Integration Setup",
+                "url": "/docs/robonomics-hass-integration",
+                "topic": "Upgrade Home Assistant OS",
+                "next": [
+                  {
+                    "title": "Add User",
+                    "url": "/docs/add-user"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Upgrade Home Assistant Docker for Unix-like OS",
+            "children": [
+              {
+                "title": "Subscription Activate",
+                "url": "/docs/sub-activate",
+                "topic": "Upgrade Home Assistant Docker for Unix-like OS"
+              },
+              {
+                "title": "Robonomics Installation",
+                "url": "/docs/hass-docker-core-upgrade",
+                "topic": "Upgrade Home Assistant Docker for Unix-like OS"
+              },
+              {
+                "title": "Robonomics Integration Setup",
+                "url": "/docs/robonomics-hass-integration",
+                "topic": "Upgrade Home Assistant Docker for Unix-like OS",
+                "next": [
+                  {
+                    "title": "Add User",
+                    "url": "/docs/add-user"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Upgrade Home Assistant Core",
+            "children": [
+              {
+                "title": "Subscription Activate",
+                "url": "/docs/sub-activate",
+                "topic": "Upgrade Home Assistant Core"
+              },
+              {
+                "title": "Robonomics Installation",
+                "url": "/docs/hass-docker-core-upgrade",
+                "topic": "Upgrade Home Assistant Core"
+              },
+              {
+                "title": "Robonomics Integration Setup",
+                "url": "/docs/robonomics-hass-integration",
+                "topic": "Upgrade Home Assistant Core"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Use",
+        "children": [
+          {
+            "title": "Add User",
+            "url": "/docs/add-user"
+          },
+          {
+            "title": "Get Smart Home Telemetry",
+            "url": "/docs/smart-home-telemetry"
+          },
+          {
+            "title": "Backup Services",
+            "url": "/docs/backup-services"
+          },
+          {
+            "title": "Robonomics Video Service",
+            "url": "/docs/robonomics-video"
+          },
+          {
+            "title": "Rtz Camera Control in Home Assistant",
+            "url": "/docs/ptz-camera"
+          },
+          {
+            "title": "Pinata Setup",
+            "url": "/docs/pinata-setup"
+          },
+          {
+            "title": "Оn-Chain Gov Experiment",
+            "url": "/docs/on-chain-gov-experiment"
+          }
+        ]
+      },
+      {
+        "title": "Blueprints",
+        "children": [
+          {
+            "title": "How To Use Blueprints",
+            "url": "/docs/use-blueprints"
+          },
+          {
+            "title": "Get Notified When Door Opens",
+            "url": "/docs/door-notification"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Robonomics Devices",
+    "children": [
+      {
+        "title": "IR Remote",
+        "url": "/docs/ir-controller"
+      },
+      {
+        "title": "Energy Monitoring",
+        "url": "/docs/energy-monitoring"
+      },
+      {
+        "title": "1 Gang Smart Switch",
+        "url": "/docs/1gang-smart-switch"
+      },
+      {
+        "title": "2 Gang Smart Switch",
+        "url": "/docs/2gang-smart-switch"
+      },
+      {
+        "title": "Air Quality Sensor",
+        "url": "/docs/sds-sensor-connect"
+      }
+    ]
+  },
+  {
+    "title": "Robonomics Parachain Theory",
+    "children": [
+      {
+        "title": "Glossary",
+        "url": "/docs/glossary"
+      },
+      {
+        "title": "Create Account for Robonomics Parachain",
+        "url": "/docs/create-account-in-dapp"
+      },
+      {
+        "title": "How to Run Robonomics Dev Node",
+        "url": "/docs/run-dev-node"
+      },
+      {
+        "title": "Adding Funds To Your Account on Robonomics Portal",
+        "url": "/docs/adding-funds-to-account-in-dapp"
+      },
+      {
+        "title": "Basics: Datalog",
+        "url": "/docs/datalog"
+      },
+      {
+        "title": "Basics: Launch",
+        "url": "/docs/launch"
+      },
+      {
+        "title": "Basics: Digital Twins",
+        "url": "/docs/digital-twins"
+      },
+      {
+        "title": "Basics: Liability",
+        "url": "/docs/liability"
+      },
+      {
+        "title": "Python interface and Robonomics IO",
+        "url": "/docs/rinterface"
+      },
+      {
+        "title": "RWS: How to Buy a Subscription",
+        "url": "/docs/get-subscription"
+      },
+      {
+        "title": "RWS: How to Send Launch with Subscription",
+        "url": "/docs/subscription-launch"
+      },
+      {
+        "title": "Robonomics on Ethereum",
+        "url": "/docs/robonomics-ethereum"
+      },
+      {
+        "title": "Robonomics OpenGov",
+        "url": "/docs/robonomics-opengov"
+      },
+      {
+        "title": "How to build collator node from source",
+        "url": "/docs/how-to-build-collator-node"
+      },
+      {
+        "title": "How to launch the Robonomics collator",
+        "url": "/docs/how-to-launch-the-robonomics-collator"
+      },
+      {
+        "title": "How to Update Collator Node Version",
+        "url": "/docs/how-to-update-collator-node-version"
+      },
+      {
+        "title": "How to send extrinsic from ESP",
+        "url": "/docs/esp32-datalog-demo"
+      },
+      {
+        "title": "How to Edit Wiki",
+        "url": "/docs/edit-wiki"
+      },
+      {
+        "title": "How to Contribute",
+        "url": "/docs/contributing"
+      }
+    ]
+  }
+]

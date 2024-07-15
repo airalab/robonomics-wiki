@@ -1,0 +1,16 @@
+<select class="inline-block language-switcher" tabindex="0">
+	{% for item in language.allLocales %}
+	{{page.lang}}
+   {% if item == page.lang %}
+			<option selected value="{{item}}">
+				{{item}}
+			</option>
+		{% else %}
+			<option value="{{item}}">
+				{{item}}
+			</option>
+		{% endif %}
+	{% endfor %}
+</select>
+
+
