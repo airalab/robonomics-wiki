@@ -21,12 +21,14 @@
 @import './components/header/headerNav.css';
 @import './components/sidebar.css';
 @import './components/breadcrumbs.css';
+@import './components/checkbox.css';
 
 /* pages */
 @import './pages/home.css';
 @import './pages/doc/doc.css';
 @import './pages/doc/post.css';
 @import './pages/privacy-policy.css';
+@import './pages/page-404.css';
 
 /* robo-wiki components */
 @import "./components/robo-wiki/note.css";
@@ -35,3 +37,4 @@
 @import "./components/robo-wiki/video.css";
 @import "./components/robo-wiki/tabs.css";
 @import "./components/robo-wiki/grid.css";
+@import "./components/robo-wiki/feedback.css";

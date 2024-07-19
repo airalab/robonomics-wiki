@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}" dir="{{ languages[page.lang].dir or 'ltr' }}">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{title}} || {{ metadata.title }}</title>
-  <meta name="title" content=" {{title}} || {{ metadata.title }}">
-  <meta name="description" content="{{ metadata.description }}">
+
+{% metagen
+	title = title or metadata.title,
+	desc = description or metadata.description,
+	url = url or metadata.url,
+	img = img or '../assets/og/wiki-og-image-index.png',
+	img_alt = alt or metadata.description,
+	twitter_card_type = 'summary_large_image',
+	twitter_handle = metadata.twitter,
+	generator='eleventy',
+	locale = page.lang or 'en'
+%}
 
 
   <!-- Favicon  -->
@@ -41,7 +47,7 @@
 
       </div>
 
-			{% if page.url.length <= 4 %}
+			{% if not 'docs' in page.url %}
 				<div id="sidebarDocs" popover class="sidebar page__sidebar custom-scroll sidebar--no-doc">
 					{% include "./sidebar.njk" %}
 				</div>

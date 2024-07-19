@@ -1,36 +1,35 @@
-{% set currentDoc = page.url | currentDoc %}
+{# retutn to main after tests #}
+{% set ghLink = "https://github.com/airalab/robonomics-wiki/blob/test-code/src" + page.filePathStem + ".md" %}
 
-{% set ghLink = currentDoc | githubLink %}
-
-{% set ghLastUpdate = currentDoc | githubLastUpdatedDoc %}
-
+{% set ghLastUpdate = github | getCommit(page.fileSlug + ".md")%}
 
 {% if ghLink %}
  <section class="docContribution">
-	{% if page.contributors && page.contributors.length > 0 %}
+	{% if contributors.length %}
 	<div class="page-title-meta">
 		<span>Main contributors: </span>
-			{% for contributor in page.contributors %}
-				<a href="{{'https://github.com/'+contributor}}"> @{{contributor}}</a>
-				{% if !loop.last %}<span>, </span> {% endif %}
+			{% for contributor in contributors %}
+				<a target="_blank" href="{{'https://github.com/'+contributor}}"> @{{contributor}}</a>
+				{% if not loop.last %}<span>, </span> {% endif %}
 			{% endfor %}
 	</div>
 
 		<div class="content">
 			<div class="github-title">
 				<div class="icon">
-					<Icon icon="github"/>
+				{% set icon = "github" %}
+					{% include "../icon.njk" %}
 				</div>
 				<h5>Make a contribution</h5>
 			</div>
 			<p> Robonomics wiki is open source. See something that's wrong or unclear?
-				<a href="{{ghLink}}" class="submit">Submit</a>  a pull request.
+				<a href="{{ghLink}}" class="submit" target="_blank">Submit</a>  a pull request.
 			</p>
 		</div>
 
-		{% if ghLastUpdate.ghUpdateName %}
+		{% if ghLastUpdate.length %}
 		<div class="head">
-			Latest <a href="{{ghLastUpdate.ghUpdateUrl}}">commit</a> on {{ghLastUpdate.ghUpdateDate}} by {{ghLastUpdate.ghUpdateName}}
+			Latest <a target="_blank" href="{{ghLastUpdate[0].url}}">commit</a> on {{ghLastUpdate[0].date | readableDate("dd.MM.yyyy")}} by {{ghLastUpdate[0].author}}
 		</div>
 		{%  endif %}
 

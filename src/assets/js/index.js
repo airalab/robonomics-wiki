@@ -5,4 +5,5 @@ import './components/tabs.js';
 import './components/video.js';
 import './components/breadcrumbs.js';
 import './components/navButtons.js';
+import './components/feedback.js';
 import './main.js';

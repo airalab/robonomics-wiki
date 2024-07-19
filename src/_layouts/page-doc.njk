@@ -4,6 +4,17 @@
 		<section class="section">
 			<div class="layout page">
 
+				{% if title %}
+					{% if page.lang == 'zh'%}
+						{% set fontFamily = "Noto Sans" %}
+					{% elif page.lang == 'ar' %}
+						{% set fontFamily = "Arabic" %}
+					{% else %}
+						{% set fontFamily = "Roboto" %}
+					{% endif %}
+					{% ogImage "./src/_includes/ogImage.og.njk", { title: title, fontFamily : fontFamily } %}
+				{% endif %}
+
 				<div id="sidebarDocs" popover class="sidebar page__sidebar custom-scroll">
 					{% include 'sidebar.njk' %}
 				</div>
@@ -18,13 +29,12 @@
 							{{ content | safe }}
 						</div>
 						{% if page.url %}
+							{% include '../_includes/feedback/roboWikiFeedback.njk' %}
 							{% include '../_includes/components/doc/navButtons.njk' %}
-							{# {% include '../_includes/components/doc/contribution.njk' %} #}
+							{% include '../_includes/components/doc/contribution.njk' %}
 						{% endif %}
 					</div>
         </div>
-
-
 
 				<div id="sidebarContent" popover class="page__sidebar custom-scroll" >
 					{% if tools.length %}

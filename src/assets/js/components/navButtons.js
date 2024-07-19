@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function ()  {
 		}
 	}
 
-	if(!navigationBlock.childElementCount) {
+	if(navigationBlock && !navigationBlock.childElementCount) {
 			const topic = new URL(document.location).searchParams.get("topic");
 
 			if(topic) {

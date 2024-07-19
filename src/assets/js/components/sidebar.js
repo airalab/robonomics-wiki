@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
 	}
 
 	const removeAllVisible = () => {
-		toc.querySelectorAll('a').forEach(el => {
+		toc?.querySelectorAll('a').forEach(el => {
 			el.classList.remove('visible')
 		})
 	}

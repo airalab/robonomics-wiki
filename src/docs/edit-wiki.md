@@ -37,15 +37,12 @@ yarn install
 
 ### 2. Serve locally (develop, develop-m1)
 
+`node must be >= v20`
+
 Then deploy the project locally:
 
 ```
-gridsome develop
-```
-
-> If you have the error `node: --openssl-legacy-provider is not allowed in NODE_OPTIONS`, run the following command:
-```
-gridsome develop-m1
+npm run start
 ```
 
 ### 3. Make PR

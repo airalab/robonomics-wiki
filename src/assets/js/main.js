@@ -1,5 +1,3 @@
-
-// nav buttons state
 document.addEventListener('DOMContentLoaded', () => {
 	const allPopovers = document?.querySelectorAll("[popover]");
   const mobileSidebarDocs = document?.querySelector(".header-nav__sidebar-docs");
@@ -16,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 
   mobileSidebarDocs?.addEventListener("click", (e) => {
-		mobileSidebarContent.classList.remove('open')
+		mobileSidebarContent?.classList.remove('open')
 		checkPopover(sidebarDocs, e.target)
   })
 

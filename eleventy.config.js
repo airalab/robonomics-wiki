@@ -1,5 +1,9 @@
 const { execSync } = require('child_process')
 const yaml = require('js-yaml');
+const fs = require('fs');
+require('dotenv').config();
+
+const NOT_FOUND_PATH = "dist/404.html";
 
 // config
 const {getDocs,
@@ -8,6 +12,7 @@ const {getDocs,
 	allDocs} = require('./config/collections/index.js');
 const {
 	imageShortcode,
+	svgShortcode,
 	codeHelper,
 	roboWikiNote,
 	roboWikiButton,
@@ -39,10 +44,9 @@ const {
 	prevPage,
 	nextPage,
 	currentPage,
-	currentDoc,
 	transformSummaryLinks,
-	github_lastupdated,
-	github_link,
+	trimFirstHundredCharacters,
+	getCommit,
 	getTitleForIssue
 } = require('./config/filters/index.js');
 const { htmlMinify } = require('./config/transformations/index.js');
@@ -57,11 +61,35 @@ const pluginNavigation = require("@11ty/eleventy-navigation"); // helps with nav
 const { EleventyHtmlBasePlugin, EleventyI18nPlugin, EleventyRenderPlugin } = require("@11ty/eleventy"); // base plugins + localization
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const relativeUrl = require('eleventy-filter-relative-url');
-const pluginTOC = require('eleventy-plugin-nesting-toc') // table of content
-const pluginWebc = require('@11ty/eleventy-plugin-webc') // table of content
+const pluginTOC = require('eleventy-plugin-nesting-toc'); // table of content
+const pluginWebc = require('@11ty/eleventy-plugin-webc'); // for webc
+const metagen = require('eleventy-plugin-metagen'); // for pages metadata
+const EleventyPluginOgImage = require('eleventy-plugin-og-image'); // for og images
 
 
 module.exports = function (eleventyConfig) {
+
+	// to get 404 page
+	eleventyConfig.setBrowserSyncConfig({
+		callbacks: {
+			ready: function (err, bs) {
+				bs.addMiddleware("*", (req, res) => {
+					if (!fs.existsSync(NOT_FOUND_PATH)) {
+						throw new Error(
+							`Expected a \`${NOT_FOUND_PATH}\` file but could not find one. Did you create a 404.html template?`
+						);
+					}
+
+					const content_404 = fs.readFileSync(NOT_FOUND_PATH);
+					// Add 404 http status code in request header.
+					res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
+					// Provides the 404 content without redirect.
+					res.write(content_404);
+					res.end();
+				});
+			},
+		},
+	});
 
 	// eleventy copy assets
 	eleventyConfig.addPassthroughCopy("_redirects");
@@ -109,6 +137,31 @@ module.exports = function (eleventyConfig) {
     components: ['./src/_components/**/*.webc'],
     useTransform: true
   });
+	eleventyConfig.addPlugin(metagen);
+	eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    satoriOptions: {
+      fonts: [
+				{
+          name: 'Noto Sans',
+          data: fs.readFileSync('./src/assets/fonts/NotoSans-Bold.ttf'),
+          weight: 700,
+          style: 'normal',
+        },
+				{
+          name: 'Roboto',
+          data: fs.readFileSync('./src/assets/fonts/roboto-bold-webfont.woff'),
+          weight: 700,
+          style: 'normal',
+        },
+				{
+          name: 'Arabic',
+          data: fs.readFileSync('./src/assets/fonts/NotoSansArabic-Bold.ttf'),
+          weight: 700,
+          style: 'normal',
+        },
+      ],
+    },
+  });
 
 	// assets
 	eleventyConfig.addPlugin(require('./config/css-config.js'));
@@ -149,17 +202,17 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter('nextPage', nextPage);
 	eleventyConfig.addFilter('currentPage', currentPage);
 	eleventyConfig.addFilter('transformSummaryLinks', 	transformSummaryLinks);
+	eleventyConfig.addFilter('trimFirstHundredCharacters', 	trimFirstHundredCharacters);
 	// filters for github data
-	eleventyConfig.addFilter('currentDoc', currentDoc);
-	eleventyConfig.addFilter('githubLastUpdatedDoc', github_lastupdated);
-	eleventyConfig.addFilter('githubLink', github_link);
 	eleventyConfig.addFilter('getTitleForIssue', getTitleForIssue);
+	eleventyConfig.addFilter('getCommit', getCommit);
 
 	// Customize Markdown library settings:
 	eleventyConfig.setLibrary('md', markdownLib);
 
 	// shortcodes
 	eleventyConfig.addShortcode("image", imageShortcode);
+	eleventyConfig.addShortcode("svg", svgShortcode);
 	eleventyConfig.addPairedShortcode('codeHelper', codeHelper);
 	eleventyConfig.addPairedShortcode('roboWikiNote', roboWikiNote);
 	eleventyConfig.addPairedShortcode('roboWikiButton', roboWikiButton);

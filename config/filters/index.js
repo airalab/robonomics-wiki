@@ -6,16 +6,14 @@ const {url} = require('../../src/_data/metadata');
 
 // other filters imports
 const {
-	currentDoc,
-	github_lastupdated,
-	github_link,
+	getCommit,
 	getTitleForIssue
 } = require('./github');
 
 const allLocales = ['en', 'ru', 'zh'];
 
 const readableDate = (dateObj, format, zone) => {
-	return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
+	return DateTime.fromISO(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
 };
 
 const htmlDateString = (dateObj) => {
@@ -199,6 +197,10 @@ const transformSummaryLinks = (links) => {
 	return newArr
 }
 
+const trimFirstHundredCharacters = (content) => {
+	return content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[/\{L}/]/g, " ").replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/\s+/g,' ').trim() + '...'
+}
+
 
 module.exports = {
   readableDate,
@@ -219,9 +221,8 @@ module.exports = {
 	prevPage,
 	nextPage,
 	currentPage,
-	currentDoc,
 	transformSummaryLinks,
-	github_lastupdated,
-	github_link,
+	trimFirstHundredCharacters,
+	getCommit,
 	getTitleForIssue
 };

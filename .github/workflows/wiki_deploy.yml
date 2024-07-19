@@ -20,15 +20,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "20.x"
+
       - name: Install and Build 🔧
         run: |
-          sudo yarn global add @gridsome/cli
-          yarn install
-          gridsome build
+          npm ci
+          npm run build
         env: 
-          GRIDSOME_PERSONAL_TOKEN: ${{ secrets.GRIDSOME_PERSONAL_TOKEN }}
-          GRIDSOME_GSCRIPTID: ${{ secrets.GRIDSOME_GSCRIPTID }}
-          GRIDSOME_CAPTCHAID: ${{ secrets.GRIDSOME_CAPTCHAID }}
+          GSCRIPT_ID: ${{ secrets.GSCRIPT_ID }}
+          CAPTCHA_ID: ${{ secrets.CAPTCHA_ID }}
 
       - name: Deploy
         #uses: JamesIves/github-pages-deploy-action@3.7.1
@@ -39,6 +42,6 @@ jobs:
         #  CLEAN: true # Automatically remove deleted files from the deploy branch
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           cname: wiki.robonomics.network

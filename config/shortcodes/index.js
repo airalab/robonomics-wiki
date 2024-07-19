@@ -1,4 +1,4 @@
-const imageShortcode = require('./image');
+const {imageShortcode, svgShortcode} = require('./image');
 const codeHelper = require('./code-helper');
 const roboWikiNote = require('./robo-wiki-note');
 const roboWikiButton = require('./robo-wiki-button');
@@ -14,6 +14,7 @@ const roboWikiGrid = require('./robo-wiki-grid');
 
 module.exports = {
   imageShortcode,
+	svgShortcode,
 	roboWikiNote,
 	roboWikiButton,
 	codeHelper,

@@ -1,0 +1,61 @@
+  <div class="robo-wiki-feedback-form__wrapper" data-form="{{text}}">
+
+    <div class="robo-wiki-feedback-form__header">
+      <div>
+        <span class="robo-wiki-feedback-form__check">
+        </span>
+        <h3>{{ text }}</h3>
+      </div>
+
+			{# close form btn #}
+      <span tabindex="0" class="robo-wiki-feedback-form__close">
+				{%svg 'xmark' %}
+      </span>
+    </div>
+
+    <form class="robo-wiki-feedback-form__form">
+
+			<h-captcha id="signupCaptcha"
+				site-key="{{vars.hcaptcha}}"
+				size="invisible"
+				tabindex="0"></h-captcha>
+
+      <div>
+        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+
+        <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
+
+        <input
+          type="hidden"
+          placeholder="location"
+					data-gsp-name="Location"
+					value="{{page.url | toAbsoluteUrl}}"
+        />
+
+        <input
+          type="hidden"
+          placeholder="reaction"
+					data-gsp-name="Reaction"
+					value="{{text}}"
+        />
+
+        <button class="robo-wiki-feedback-form__btn">
+          <div class="robo-wiki-feedback-form__btn-wrapper robo-wiki-feedback-form__btn-wrapper--init">
+            {%svg 'envelope' %}
+            <span>Tell us more</span>
+          </div>
+          <div class="robo-wiki-feedback-form__btn-wrapper robo-wiki-feedback-form__btn-wrapper--wait hide">
+						{% include '../components/loader.njk' %}
+            <span>Sending your info...</span>
+          </div>
+        </button>
+      </div>
+    </form>
+
+		{# success #}
+    <div class="robo-wiki-feedback-form__success hide">
+      {%svg 'envelope' %}
+      <div>Thanks,<br/> we'll keep in touch! </div>
+    </div>
+
+  </div>

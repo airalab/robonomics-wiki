@@ -167,7 +167,6 @@
 	padding: calc(var(--space) * 1.8);
 }
 
-
 @media screen and (max-width: 1080px) {
   .hiddenMobile {
     display: none;
