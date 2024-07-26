@@ -2,10 +2,10 @@ const captcha = require('@hcaptcha/vanilla-hcaptcha');
 
 document.addEventListener('DOMContentLoaded', function ()  {
 
-	const feedbackItems = document.querySelectorAll('.robo-wiki-feedback__item');
-	const feedbackForms = document.querySelectorAll('.robo-wiki-feedback-form__form');
-	const feedbackFormsCloseButton = document.querySelectorAll('.robo-wiki-feedback-form__close');
-	const signupCaptcha = document.getElementById('signupCaptcha');
+	const feedbackItems = document?.querySelectorAll('.robo-wiki-feedback__item');
+	const feedbackForms = document?.querySelectorAll('.robo-wiki-feedback-form__form');
+	const feedbackFormsCloseButton = document?.querySelectorAll('.robo-wiki-feedback-form__close');
+	const signupCaptcha = document?.getElementById('signupCaptcha');
 
 	let currForm = null;
 
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function ()  {
 		})
 	})
 
-	signupCaptcha.addEventListener('verified', async (e) => {
+	signupCaptcha?.addEventListener('verified', async (e) => {
 		let response = '',
 				data = currForm.querySelectorAll('[data-gsp-name]');
 
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function ()  {
 
 	});
 
-	signupCaptcha.addEventListener('error', (e) => {
+	signupCaptcha?.addEventListener('error', (e) => {
 			console.log('error event', {error: e.error});
 	});
 

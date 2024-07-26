@@ -57,7 +57,7 @@ body {
   }
 }
 
-body[data-theme="dark"] {
+html[data-theme="dark"] body {
   --body-bg: #213039;
   --text-color: #ced8de;
   --text-color-invert: var(--color-dark);

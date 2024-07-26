@@ -1,5 +1,6 @@
 import './helpers.js';
 import './components/languageSwitcher.js';
+import './components/themeSwitcher.js';
 import './components/sidebar.js';
 import './components/tabs.js';
 import './components/video.js';

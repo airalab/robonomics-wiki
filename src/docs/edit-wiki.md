@@ -37,7 +37,7 @@ yarn install
 
 ### 2. Serve locally (develop, develop-m1)
 
-`node must be >= v20`
+`node must be >= v18`
 
 Then deploy the project locally:
 
@@ -241,6 +241,7 @@ There are two ways for inserting pictures in your documents:
 | `caption` | `String`  | `false`  |         | align items on the inline axis:  <br/> - options: `start, center, end`                                                                                                                                               |
 | `alt`     | `String`  | `true`   | picture | provides alternative information for an image if a user for some reason cannot view it                                                                                                                               |
 | `zoom`    | `Boolean` | `false`  |         | zoom image                                                                                                                                                                                                           |
+| `loading` | `String`  | `false`  | lazy    | there are two options: lazy and eager                                                                                                                                                                                |
 
 ### Notes & warnings
 You can add notes and give them specific types:

@@ -5,7 +5,7 @@
 
 .post .heading-anchor {
 	position: relative;
-	color: var(--color-dark);
+	color: var(--text-color);
 	text-decoration: none;
 }
 

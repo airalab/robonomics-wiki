@@ -2,6 +2,32 @@
 <html lang="{{ page.lang }}" dir="{{ languages[page.lang].dir or 'ltr' }}">
 <head>
 
+	{# initialize dark theme #}
+	<script>
+		const calculateSettingAsThemeString = () => {
+			if (localStorage.getItem('theme') !== null) {
+				return localStorage.getItem('theme')
+			}
+
+			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+				return "dark";
+			}
+
+			return "light";
+		}
+
+			const initTheme = () => {
+			// init theme
+			if(calculateSettingAsThemeString() === 'light') {
+				document?.firstElementChild.setAttribute('data-theme', 'light')
+			} else {
+				document?.firstElementChild.setAttribute('data-theme', 'dark')
+			}
+		}
+
+		initTheme()
+  </script>
+
 {% metagen
 	title = title or metadata.title,
 	desc = description or metadata.description,
@@ -21,8 +47,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
 
   {# styles #}
-<link rel="stylesheet" href="/assets/css/main.css?{{ assetHash }}" />
-
+	<link rel="stylesheet" href="/assets/css/main.css?{{ assetHash }}" />
   {# js code #}
   <script defer type="module" src="/assets/js/index.js"></script>
 </head>
@@ -41,6 +66,7 @@
         </div>
 
         <div class="header-nav">
+          {% include "./components/themeSwitcher.njk" %}
 					{% include "./components/languageSwitcher.njk" %}
 					{% include "./components/headerNav.njk" %}
         </div>

@@ -1,7 +1,8 @@
-const { execSync } = require('child_process')
+const { execSync } = require('child_process');
 const yaml = require('js-yaml');
 const fs = require('fs');
 require('dotenv').config();
+
 
 const NOT_FOUND_PATH = "dist/404.html";
 
@@ -11,7 +12,6 @@ const {getDocs,
 	getZhDocs,
 	allDocs} = require('./config/collections/index.js');
 const {
-	imageShortcode,
 	svgShortcode,
 	codeHelper,
 	roboWikiNote,
@@ -95,7 +95,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("_redirects");
 
   // same path
-  ['src/assets/fonts/', 'src/assets/images/',,"_redirects"].forEach(
+  ['src/assets/fonts/', 'src/assets/images/', "_redirects"].forEach(
     path => eleventyConfig.addPassthroughCopy(path)
   );
 
@@ -211,7 +211,6 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.setLibrary('md', markdownLib);
 
 	// shortcodes
-	eleventyConfig.addShortcode("image", imageShortcode);
 	eleventyConfig.addShortcode("svg", svgShortcode);
 	eleventyConfig.addPairedShortcode('codeHelper', codeHelper);
 	eleventyConfig.addPairedShortcode('roboWikiNote', roboWikiNote);

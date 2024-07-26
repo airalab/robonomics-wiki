@@ -153,6 +153,7 @@
 	padding: var(--space);
 	border: 1px solid var(--border-color);
 	text-align: center;
+	color: var(--);
 	box-shadow: 0.2rem 0.2rem 0 0 var(--link-color);
 	border-color: var(--link-color);
 	background-color: var(--color-link-background-highlight);
@@ -165,6 +166,11 @@
 
 .nav-links .grid-navigation a {
 	padding: calc(var(--space) * 1.8);
+}
+
+html[data-theme="dark"] .grid-navigation a {
+	color: #fff;
+	box-shadow: 0.2rem 0.2rem 0 0 #fff;
 }
 
 @media screen and (max-width: 1080px) {

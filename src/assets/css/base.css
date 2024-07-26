@@ -16,6 +16,6 @@ body {
 img {
   max-width: 100%;
 }
-body[data-theme="dark"] .jCaptcha {
+html[data-theme="dark"] .jCaptcha {
   color: #fff;
 }

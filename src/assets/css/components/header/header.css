@@ -47,6 +47,30 @@
 	justify-content: flex-end;
 }
 
+/* theme switcher */
+.toggle-theme {
+  background-color: transparent;
+  border: 0;
+  color: var(--header-color-text);
+  cursor: pointer;
+}
+
+.toggle-theme:hover {
+  opacity: .8
+}
+
+.toggle-theme:focus {
+  outline: none;
+}
+
+html[data-theme="dark"] .dark-theme-icon {
+	display: inline-block !important;
+}
+
+html[data-theme="dark"] .light-theme-icon {
+	display: none !important;
+}
+
 
 @media screen and (max-width: 860px) {
 	.header-top {
@@ -81,7 +105,7 @@
 	.header-nav { font-size: 50%; }
 }
 
-body[data-theme="dark"] select {
+html[data-theme="dark"] select {
 		background-image: url("data:image/svg+xml;utf8,<svg fill='#ced8de' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
 }
 

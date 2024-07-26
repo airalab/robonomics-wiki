@@ -1,5 +1,4 @@
 // needs changes / updates
-
 document.addEventListener('DOMContentLoaded', async () => {
 	const config = require('../../../_data/video_config');
 
@@ -7,6 +6,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const videoLinks = [];
 	const readyLinks = [];
 	const readyLinksWithoutGateway = [];
+
+	const toggleAutoplay = (video) => {
+		video.muted = true;
+			let playPromise = video.play();
+			if (playPromise !== undefined) {
+				playPromise.then((_) => {
+					let observer = new IntersectionObserver(
+						(entries) => {
+							entries.forEach((entry) => {
+								video.pause();
+								if(entry.isIntersecting) {
+									if (entry.intersectionRatio !== 1 && !video.paused) {
+											video.pause();
+									} else  {
+											video.play();
+									}
+								}
+							});
+						},
+						{threshold: 0.8}
+					);
+					observer.observe(video);
+			});
+		}
+	}
 
 	async function fetchWithTimeout(resource, options = {}) {
 		const { timeout = 10000 } = options;
@@ -72,6 +96,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 				v.parentElement.nextSibling.classList.add('hide');
 				v.parentElement.load();
 			}
+
+			toggleAutoplay(v)
 		})
 	}
 

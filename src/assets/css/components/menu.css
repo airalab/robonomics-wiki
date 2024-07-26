@@ -6,12 +6,13 @@
 	font-weight: 700;
 	text-transform: none;
 	letter-spacing: 0;
+	color: var(--text-color);
 }
 
 .menu-subtitle:not(:first-child) { margin-top: 20px; }
 
 .menu-link{
-	color: currentColor !important;
+	color: var(--text-color)!important;
 	line-height: 1.6;
 	text-decoration: none;
 }
@@ -68,7 +69,7 @@ background-color: var(--color-focus-light);
 
 #sidebarContent .toc ol li a {
 	font-weight: 600;
-	color: currentColor;
+	color: var(--text-color);
 	text-decoration: none;
 }
 
