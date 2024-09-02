@@ -129,9 +129,6 @@
       link: /docs/robonomics-ethereum
     - title_en: 'Robonomics OpenGov'
       link: '/docs/robonomics-opengov'
-
-#- title_en: Maintain
-#  items:
     - title_en: How to build collator node from source
       link: /docs/how-to-build-collator-node
     - title_en: How to launch the Robonomics collator
@@ -140,12 +137,18 @@
       link: /docs/how-to-update-collator-node-version
     - title_en: How to send extrinsic from ESP
       link: /docs/esp32-datalog-demo
-    #- title_en: Configure Metrics With Prometheus And Grafana
-    #  link: /docs/robonomics-prometheus-grafana
+    - title_en: Configure Metrics With Prometheus And Grafana
+      link: /docs/robonomics-prometheus-grafana
     - title_en: How to Edit Wiki
       link: /docs/edit-wiki
     - title_en: How to Contribute
       link: /docs/contributing
+
+
+- title_en: Robotics & ROS 2
+  items:
+    - title_en: About Robonomics ROS 2 Wrapper
+      link: /docs/ros2-about-wrapper
 
 
 
