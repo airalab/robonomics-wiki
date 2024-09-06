@@ -1,16 +1,17 @@
 ---
 permalink: /index.html
 layout: "home"
-title: "Explore Robonomics with guides"
-description: "Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network."
+title: Explore Robonomics with guides
+description: Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.
 ---
 
 <img alt="Explore Robonomics with guides" class="intro-image" src="../assets/images/robonomics-lab.png"/>
 
 <div class="intro">
-	<h1>Explore Robonomics with guides</h1>
-	<div class="intro-description">Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.</div>
+	<h1>{{ 'Explore Robonomics with guides' | t }}</h1>
+	<div class="intro-description">{{ 'Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.' | t }}</div>
+	{# for translation - {{'Home Assistant integration' | t}} {{'Robonomics smart devices' | t}} {{'Working with parachain' | t}} #}
 
-	{% set links = [{ to: '/docs/robonomics-smart-home-overview/', name: 'Home Assistant integration'}, {to: '/docs/ir-controller/', name: 'Robonomics smart devices'}, { to: '/docs/glossary/', name: 'Working with parachain' }]%}
+	{% set links = [{ to: '/docs/robonomics-smart-home-overview/', name: 'Home Assistant integration' | t }, {to: '/docs/ir-controller/', name:'Robonomics smart devices' | t }, { to: '/docs/glossary/', name: 'Working with parachain' | t}]%}
 	{% include 'components/gridLinks.njk' %}
 </div>

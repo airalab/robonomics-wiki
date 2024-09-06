@@ -3,7 +3,7 @@
 	--header-padding: 1rem;
 	--width-logo-sign: 2rem;
 
-	padding: var(--header-padding) 0 ;
+	padding: var(--header-padding);
 	background-color: var(--header-color-bg);
 
 	position: sticky;

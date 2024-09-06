@@ -26,23 +26,24 @@
 				<li class="breadcrumbs__item">
 				{% if breadcrumbs[breadcrumbs.length - 1] !== breadcrumb %}
 				{% set bcLink = breadcrumb.title_en | getCleanTitleBC %}
+				{% set newURL = '/' + page.lang + '/summary/' + bcLink if page.lang != 'en' else '/summary/' + bcLink  %}
 					<a
-						href="{{'/summary/' + bcLink | locale_url }}"
+						href="{{newURL}}"
 						class="breadcrumbs__link"
 						aria-current="{{ 'location' if index === breadcrumbs.length-1 }}"
 					>
-						{{breadcrumb.title}}
+						{{breadcrumb.title | t}}
 					</a>
 				{% endif %}
 
 
 				{% if breadcrumb.link%}
 					<a
-						href="{{breadcrumb.link | locale_url}}"
+						href="{{'/' + page.lang + breadcrumb.link if page.lang != 'en' else breadcrumb.link }}"
 						class="breadcrumbs__link {% if breadcrumb.link == page.url | getCleanPathBC%} active {% endif %} "
 						aria-current="{{ 'location' if index === breadcrumbs.length-1 }}"
 					>
-						{{breadcrumb.title}}
+						{{breadcrumb.title | t}}
 					</a>
 
 				{% endif %}

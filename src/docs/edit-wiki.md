@@ -564,3 +564,42 @@ or
 	"withoutNext": true
 },
 ```
+
+
+## How to translate a document
+
+{% roboWikiNote {title: 'Important', type: 'warning'}%} You must create **.env** file and add *OPENAI_KEY* variable with your key {% endroboWikiNote %}
+
+If you wish to translate your md document you need to run the command: 
+ 
+```bash
+npm run translate-md
+```
+
+After running the command all you have to do is wait and maybe check the files (ai translations have some flaws).
+
+### Translations troubleshooting
+
+You may run into some troubles with translations.
+
+1. Try to run the command again and see if it worked.
+
+2. Sometimes tags in md files can be written incorrectly, for example: 
+
+```
+{%raw %}
+	[11ty] 1. Having trouble rendering njk template ./src/de/docs/edit-wiki.md (via TemplateContentRenderError)
+	[11ty] 2. (./src/de/docs/edit-wiki.md) [Line 168, Column 96]
+	[11ty]   unknown block tag: endroboWiki (via Template render error)
+{% endraw %}
+
+{%raw %}
+	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}{% endroboWikiPicture {% endroboWikiPicture %}
+{% endraw %}
+
+{%raw %}
+	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}endroboWikiPicture %}
+{% endraw %}
+```
+
+Then, you just need to fix the tag.

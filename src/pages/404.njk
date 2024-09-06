@@ -1,6 +1,6 @@
 ---
-title: This page not found
 permalink: 404.html
+title: This page not found
 ---
 
 	{% include 'header.njk' %}
@@ -19,10 +19,10 @@ permalink: 404.html
 
       <h1>404</h1>
 
-      <p>Page disappeared, we are sorry</p>
+      <p>{{ 'Page disappeared, we are sorry' | t }}</p>
 
       <div class="page-404__wrapper">
-        <p>Some content moved to <a href="https://robonomics.academy" target="_blank">academy</a> or try to find updated content here on <a href="https://wiki.robonomics.network" target="_blank">wiki</a>.</p>
+        <p>{{'Some content moved to' | t }} <a href="https://robonomics.academy" target="_blank">{{'academy' | t }}</a>{{'or try to find updated content here on' | t}} <a href="https://wiki.robonomics.network" target="_blank">{{ 'wiki' | t}}</a>.</p>
       </div>
     </div>
 

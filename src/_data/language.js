@@ -1,13 +1,9 @@
 module.exports = {
   en: {
     dir: '', // stands for the direction of the language set in the head, defaults to LTR (left to right)
-    availableText: 'This page is also available in:'
   },
-  zh: {
-    availableText: '此页面还可用于：'
+  ar: {
+    dir: 'RTL'
   },
-  ru: {
-    availableText: 'Эта страница также доступна на:'
-  },
-	allLocales: ['en', 'ru', 'zh'],
+	allLocales: ["ar","de","en","el","es","fr","it","ja","ko","pt","ru","uk","zh"],
 };

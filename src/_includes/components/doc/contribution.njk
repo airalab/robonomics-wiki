@@ -7,7 +7,7 @@
  <section class="docContribution">
 	{% if contributors.length %}
 	<div class="page-title-meta">
-		<span>Main contributors: </span>
+		<span> {{'Main contributors:' | t}} </span>
 			{% for contributor in contributors %}
 				<a target="_blank" href="{{'https://github.com/'+contributor}}"> @{{contributor}}</a>
 				{% if not loop.last %}<span>, </span> {% endif %}
@@ -20,16 +20,16 @@
 				{% set icon = "github" %}
 					{% include "../icon.njk" %}
 				</div>
-				<h5>Make a contribution</h5>
+				<h5>{{'Make a contribution' | t}}</h5>
 			</div>
-			<p> Robonomics wiki is open source. See something that's wrong or unclear?
-				<a href="{{ghLink}}" class="submit" target="_blank">Submit</a>  a pull request.
+			<p> {{"Robonomics wiki is open source. See something that's wrong or unclear?" | t}}
+				<a href="{{ghLink}}" class="submit" target="_blank">{{'Submit' | t}}</a> {{'a pull request.' | t}} 
 			</p>
 		</div>
 
 		{% if ghLastUpdate.length %}
 		<div class="head">
-			Latest <a target="_blank" href="{{ghLastUpdate[0].url}}">commit</a> on {{ghLastUpdate[0].date | readableDate("dd.MM.yyyy")}} by {{ghLastUpdate[0].author}}
+			Latest <a target="_blank" href="{{ghLastUpdate[0].url}}">{{'commit' | t}}</a> {{'on' | t}} {{ghLastUpdate[0].date | readableDate("dd.MM.yyyy")}} {{'by' | t}} {{ghLastUpdate[0].author}}
 		</div>
 		{%  endif %}
 

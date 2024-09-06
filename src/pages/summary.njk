@@ -21,16 +21,16 @@
 }
 ---
 
-<h1><a href="/">Home</a> / {{doc.title}}</h1>
+<h1><a href="/">{{'Home' | t}}</a> / {{doc.title | t}} </h1>
 
 {% set links = doc.children |	transformSummaryLinks%}
 
 <nav class="grid-navigation">
 	{% for item in links %}
 		{% if item.topic %}
-			<a href="{{item.url | toAbsoluteUrl}}/?topic={{item.topic}}">{{item.title}}</a>
+			<a href="{{item.url | toAbsoluteUrl}}/?topic={{item.topic}}">{{item.title | t}}</a>
 		{% else %}
-			<a href="{{item.url | toAbsoluteUrl}}">{{item.title}}</a>
+			<a href="{{item.url | toAbsoluteUrl}}">{{item.title | t}}</a>
 		{% endif %}
 	{% endfor %}
 </nav>

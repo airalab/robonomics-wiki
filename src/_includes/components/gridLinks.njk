@@ -1,5 +1,5 @@
 <nav class="grid-navigation">
 	{% for item in links %}
-		<a href="{{item.to | locale_url}}"> {{item.name}}</a>
+		<a href="{{item.to | locale_url}}"> {{item.name | t}}</a>
 	{% endfor %}
 </nav>

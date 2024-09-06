@@ -4,7 +4,7 @@
       <div>
         <span class="robo-wiki-feedback-form__check">
         </span>
-        <h3>{{ text }}</h3>
+        <h3>{{ text | t }}</h3>
       </div>
 
 			{# close form btn #}
@@ -42,11 +42,11 @@
         <button class="robo-wiki-feedback-form__btn">
           <div class="robo-wiki-feedback-form__btn-wrapper robo-wiki-feedback-form__btn-wrapper--init">
             {%svg 'envelope' %}
-            <span>Tell us more</span>
+            <span>{{'Tell us more' | t}}</span>
           </div>
           <div class="robo-wiki-feedback-form__btn-wrapper robo-wiki-feedback-form__btn-wrapper--wait hide">
 						{% include '../components/loader.njk' %}
-            <span>Sending your info...</span>
+            <span>{{'Sending your info...' | t}}</span>
           </div>
         </button>
       </div>
@@ -55,7 +55,7 @@
 		{# success #}
     <div class="robo-wiki-feedback-form__success hide">
       {%svg 'envelope' %}
-      <div>Thanks,<br/> we'll keep in touch! </div>
+      <div>{{'Thanks,' | t}}<br/> {{"we'll keep in touch!" | t}} </div>
     </div>
 
   </div>

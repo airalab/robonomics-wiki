@@ -19,20 +19,20 @@
       <div class="footer__links">
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__link" href="/docs/edit-wiki/">
-              How to edit Wiki
+            <a class="footer__link" href="{{'/docs/edit-wiki/' if page.lang == 'en' else '/' + page.lang + '/docs/edit-wiki/'}}">
+             {{'How to edit Wiki' | t}}
             </a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="/privacy-policy/">
-              Privacy Policy
+            <a class="footer__link" href="{{'/privacy-policy/' if page.lang == 'en' else '/' + page.lang + '/privacy-policy/'}}">
+              {{'Privacy Policy' | t}}
             </a>
           </li>
         </ul>
 
         <div class="footer-text">
-          <span class="">Translation was executed by AI so there may be some inaccuracies </span>
-           <a href="https://github.com/airalab/robonomics-wiki/issues">Inform us </a>, please, if you find any
+          <span class=""> {{'Translation was executed by AI so there may be some inaccuracies' | t}} </span>
+           <a href="https://github.com/airalab/robonomics-wiki/issues"> {{'Inform us' | t}} </a>, {{'please, if you find any' | t}}
         </div>
 
       </div>

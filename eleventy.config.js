@@ -6,6 +6,21 @@ require('dotenv').config();
 
 const NOT_FOUND_PATH = "dist/404.html";
 
+// all translation files
+const en = require("./translations/pages/en.json");
+const ar = require("./translations/pages/ar/ar.json");
+const de = require("./translations/pages/de/de.json");
+const el = require("./translations/pages/el/el.json");
+const es = require("./translations/pages/es/es.json");
+const fr = require("./translations/pages/fr/fr.json");
+const it = require("./translations/pages/it/it.json");
+const ja = require("./translations/pages/ja/ja.json");
+const ko = require("./translations/pages/ko/ko.json");
+const pt = require("./translations/pages/pt/pt.json");
+const ru = require("./translations/pages/ru/ru.json");
+const uk = require("./translations/pages/uk/uk.json");
+const zh = require("./translations/pages/zh/zh.json");
+
 // config
 const {getDocs,
 	getRuDocs,
@@ -59,6 +74,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight"); 
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation"); // helps with navigation and pagination as well
 const { EleventyHtmlBasePlugin, EleventyI18nPlugin, EleventyRenderPlugin } = require("@11ty/eleventy"); // base plugins + localization
+const i18n = require('eleventy-i18n'); // for translations
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const relativeUrl = require('eleventy-filter-relative-url');
 const pluginTOC = require('eleventy-plugin-nesting-toc'); // table of content
@@ -131,6 +147,11 @@ module.exports = function (eleventyConfig) {
 			links: "locale_links",
 		},
 		errorMode: "never"
+  });
+	eleventyConfig.addPlugin(i18n, {
+    translations: {
+			en, ar, de, el, es, fr, it, ja, ko, pt, ru, uk, zh 
+    },
   });
 	eleventyConfig.addPlugin(pluginTOC);
 	eleventyConfig.addPlugin(pluginWebc, {

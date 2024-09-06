@@ -1,11 +1,11 @@
 // language switcher
 document.addEventListener('DOMContentLoaded', () => {
 		const languageSwitcher = document?.querySelector('.language-switcher');
-		const allLanguages = 'en, ru, zh';
+		const allLanguages = "ar,de,el,en,es,fr,it,ja,ko,pt,ru,uk,zh";
 
 		languageSwitcher.addEventListener('change', (e) => {
 			const lang = e.target.value;
-			const path = window.location.href
+			const path = window.location.href;
 			let splitPath = path.split('/');
 			let newPath = '';
 

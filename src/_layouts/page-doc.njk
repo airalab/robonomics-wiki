@@ -12,7 +12,9 @@
 					{% else %}
 						{% set fontFamily = "Roboto" %}
 					{% endif %}
-					{% ogImage "./src/_includes/ogImage.og.njk", { title: title, fontFamily : fontFamily } %}
+					{% if vars.env == 'production' %}
+						{% ogImage "./src/_includes/ogImage.og.njk", { title: title, fontFamily : fontFamily } %}
+					{% endif %}
 				{% endif %}
 
 				<div id="sidebarDocs" popover class="sidebar page__sidebar custom-scroll">
@@ -55,10 +57,10 @@
 						</aside>
 					{% endif %}
 
+					{# {{'Create an issue' | t}} #}
 					{%set ghTitleIssue = title | getTitleForIssue %}
-					{% roboWikiButton {label: "Create an issue", link: "https://github.com/airalab/robonomics-wiki/issues/new?" + ghTitleIssue,  size: "small"} %}{% endroboWikiButton %}
+					{% roboWikiButton {label: "Create an issue" | t, link: "https://github.com/airalab/robonomics-wiki/issues/new?" + ghTitleIssue,  size: "small"} %}{% endroboWikiButton %}
         </div>
-
 			</div>
 			{% include 'components/support.njk' %}
 		</section>

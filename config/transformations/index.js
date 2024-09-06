@@ -1,7 +1,9 @@
 const htmlmin = require("html-minifier");
 
+const isProduction = process.env.ELEVENTY_ENV === 'production';
+
 const htmlMinify = function (content) {
-	if( this.page.outputPath && this.page.outputPath.endsWith(".html") ) {
+	if( (this.page.outputPath && this.page.outputPath.endsWith(".html")) && isProduction ) {
 		let minified = htmlmin.minify(content, {
 			useShortDoctype: true,
 			removeComments: true,

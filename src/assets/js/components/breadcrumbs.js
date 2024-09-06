@@ -1,8 +1,11 @@
 // same breadcrumbs code as in filters, as eleventy can't process client-side (query params, topic)
 
+const {translateLine} = require('../customLineTranslation.js');
+
 document.addEventListener('DOMContentLoaded', function ()  {
 	const config = require('../../../_data/sidebar_docs.json');
-	const allLocales = ['en', 'ru', 'zh'];
+	const allLocales = ["ar","de","el", "en", "es","fr","it","ja","ko","pt","ru","uk","zh"];
+	const language = document.getElementsByTagName("html")[0].getAttribute("lang");
 	const breadcrumbsBlock = document?.querySelector('.breadcrumbs');
 	const breadcrumbsExists = document?.querySelector('.breadcrumbs__list');
 
@@ -13,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function ()  {
 		const filteredPath = path.split('/').filter(el => !allLocales.includes(el))
 		return filteredPath.join('/')
 	}
+
 
 	const getBreadcrumbs =  (items, path, topic)  => {
 
@@ -114,8 +118,8 @@ document.addEventListener('DOMContentLoaded', function ()  {
 					</a>
 				</li>` +
 				`${breadcrumbs.map((breadcrumb, index) => {
-					return `<li class="breadcrumbs__item"> ${breadcrumbs[breadcrumbs.length - 1].title !== breadcrumb.title ? '<a href="/summary/' + breadcrumb.title_en.split(" ").join("-").toLowerCase() + '" class="breadcrumbs__link" aria-current=' + (index === breadcrumbs.length-1 ? 'location' : '') + '>' + breadcrumb.title + '</a>' : ''}
-					${ breadcrumb.link ? '<a href="' + breadcrumb.link + '" class="breadcrumbs__link active" aria-current="' + (index === breadcrumbs.length-1 ? 'location"' : '')  + '>' + breadcrumb.title + '</a>' : ''}</li>`
+					return `<li class="breadcrumbs__item"> ${breadcrumbs[breadcrumbs.length - 1].title !== breadcrumb.title ? '<a href="' + (language !== 'en' ? '/' + language :'') + '/summary/' + breadcrumb.title_en.split(" ").join("-").toLowerCase() + '" class="breadcrumbs__link" aria-current=' + (index === breadcrumbs.length-1 ? 'location' : '') + '>' + (translateLine(breadcrumb.title, language) ? translateLine(breadcrumb.title, language) : breadcrumb.title) + '</a>' : ''}
+					${ breadcrumb.link ? '<a href="' + (language !== 'en' ? language +  breadcrumb.link : breadcrumb.link) + '" class="breadcrumbs__link active" aria-current="' + (index === breadcrumbs.length-1 ? 'location"' : '')  + '>' + (translateLine(breadcrumb.title, language) ? translateLine(breadcrumb.title, language) : breadcrumb.title) + '</a>' : ''}</li>`
 				}).join("")}
 			</nav>`
 		}

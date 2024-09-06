@@ -10,7 +10,7 @@ const {
 	getTitleForIssue
 } = require('./github');
 
-const allLocales = ['en', 'ru', 'zh'];
+const allLocales = ["ar","de","el", "en", "es","fr","it","ja","ko","pt","ru","uk","zh"];
 
 const readableDate = (dateObj, format, zone) => {
 	return DateTime.fromISO(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");

@@ -53,8 +53,6 @@
 </head>
 <body>
   <header class="header">
-    <div class="layout__page">
-
       <div class="header-top">
 
         <a href="/{{ page.lang if page.lang !== 'en' }}" class="header-logo">
@@ -70,7 +68,6 @@
 					{% include "./components/languageSwitcher.njk" %}
 					{% include "./components/headerNav.njk" %}
         </div>
-
       </div>
 
 			{% if not 'docs' in page.url %}
