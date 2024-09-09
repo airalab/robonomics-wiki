@@ -8,6 +8,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
+    "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
     "dev:11ty": "cross-env ELEVENTY_ENV=development --max_old_space_size=10000 eleventy --serve --watch --incremental",
     "build:11ty": "cross-env ELEVENTY_ENV=production eleventy",
     "translate-md": "node translations/prompt-md.js",

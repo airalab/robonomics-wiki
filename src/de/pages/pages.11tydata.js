@@ -1,7 +1,14 @@
-// module.exports = {
-//   eleventyComputed: {
-//     title: function (data) {  // If you use in alias, data could be whatever the alias is
-//       return `${this.t(data.text)}`;
-//     },
-//   }
-// };
+module.exports = {
+  eleventyComputed: {
+    title: function (data) { 
+      if(data.title) {
+        return this.t(data.title, {}, 'de');
+      }
+    },
+    description: function (data) { 
+      if(data.description) {
+        return this.t(data.description, {}, 'de');
+      }
+    },
+  }
+};
