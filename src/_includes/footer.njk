@@ -30,10 +30,12 @@
           </li>
         </ul>
 
-        <div class="footer-text">
-          <span class=""> {{'Translation was executed by AI so there may be some inaccuracies' | t}} </span>
-           <a href="https://github.com/airalab/robonomics-wiki/issues"> {{'Inform us' | t}} </a>, {{'please, if you find any' | t}}
-        </div>
+        {% if not (page.lang == 'en') %}
+          <div class="footer-text">
+            <span class=""> {{'Translation was executed by AI so there may be some inaccuracies' | t}} </span>
+            <a href="https://github.com/airalab/robonomics-wiki/issues"> {{'Inform us' | t}} </a>, {{'please, if you find any' | t}}
+          </div>
+        {% endif %}
 
       </div>
     </div>
