@@ -8,15 +8,17 @@ const { encode, decode } = require('gpt-tokenizer');
 // Load environment variables from .env file
 dotenv.config();
 
-const key = process.env.OPENAI_KEY;
+const {config} = require('./tr-config');
+
+const key = config.key;
 
 // reference for ai translation
 const defaultReference = 'You can adjust the tone and style, taking into account the cultural connotations and regional differences of certain words. As a translator, you need to translate the original text into a translation that meets the standards of accuracy and elegance.';
 
 const url = 'https://api.openai.com/v1/chat/completions';
-const defaultLocale = 'en';
-const locales = ["ar","de","el","es","fr","it","ja","ko","pt","ru","uk","zh"]; // array with all locales
-const outputFolder = './translations/pages/' // endpoint translations folder
+const defaultLocale = config.defaultLocale;
+const locales = config.locales; // array with all locales
+const outputFolder = config.outputFolder; // endpoint translations folder
 const differences = []; // array to check deleted lines
 const isInProgress = []; // to notify when all jobs are complete
 
@@ -25,15 +27,15 @@ const readFile = (filePath) => {
   return data;
 };
 
-const writeFile = (filePath, data, translation=false, locale='en') => {
+const writeFile = (filePath, data, translation=false, locale=defaultLocale) => {
   const jsonStr = JSON.stringify(data, null, "\t").replace(/]|[[]/g, '');
 
   let path = filePath;
   if(!filePath) {
-    if(locale !== 'en') {
+    if(locale !== defaultLocale) {
       path = `${outputFolder}${locale}/${locale}.json`
     } else {
-      path = `${outputFolder}/en.json`
+      path = `${outputFolder}/${defaultLocale}.json`
     }
   }
 
@@ -45,18 +47,8 @@ const writeFile = (filePath, data, translation=false, locale='en') => {
 };
 
 const allFiles = async () => {
-  const files = await glob(['**/*.+(html|njk)', './src/_data/sidebar_docs.json'], { ignore: ['node_modules/**', 'dist/**', './src/_includes/ogImage.og.njk', './src/_includes/header.njk'] })
+  const files = await glob(config.allFiles, { ignore: config.excludeFiles })
   return files
-}
-
-const getCustomValues = (contents) => {
-  const allValues = [];
-  const customVal = readFile(contents);
-  for (const [, str] of customVal.matchAll(/\bt\(['"](.*?)['"]\)/g)) {
-    if(!allValues.includes(str)) allValues.push(str)
-  }
-
-  return allValues
 }
 
 const checkExistingFiles = (path) => {
@@ -265,7 +257,6 @@ const translationsSet = async () => {
   }
 }
 
-
 const getJsonValues = (data, keyToFind) => {
   return Object.entries(data)
   .reduce((acc, [key, value]) => (key === keyToFind)
@@ -281,7 +272,7 @@ const set = async () => {
   const data = [];
   // creating json files from all content (excluding markdown)
   res.forEach(item => {
-    if(item && !item.includes('sidebar_docs.json')) {
+    if(item && !item.includes(config.includeJSON)) {
       const dataArr = readFile(item).replace(/(<([^>]+)>)|\{(%.+?)\/(.+?%)\}|{%\/%}|/ig, '').trim().split(/\r\n|\n|\r|\t/);
       const frontmatter = [];
       // removing frontmatter from njk files
@@ -291,11 +282,6 @@ const set = async () => {
             frontmatter.push(index)
           }
         }
-      })
-
-      // looking for custom values
-      getCustomValues(item).forEach(customVal => {
-        data.push({[customVal]: customVal})
       })
 
       // get elements in translation functions
@@ -326,9 +312,9 @@ const set = async () => {
       });
     }
 
-    if(item.includes('sidebar_docs.json')) {
+    if(item.includes(config.includeJSON)) {
       const d = Object.entries(JSON.parse(readFile(item))).map(entry => entry[1]);
-      const res = getJsonValues(d, 'title');
+      const res = getJsonValues(d, config.JSONKey);
       res.map(item => {
         data.push({[item]: item})
       })
@@ -336,15 +322,15 @@ const set = async () => {
   })
 
 
-  if(!checkExistingFiles(`${outputFolder}en.json`)) {
-    writeFile(outputFolder + 'en.json', Object.assign({},...data))
+  if(!checkExistingFiles(`${outputFolder}${defaultLocale}.json`)) {
+    writeFile(outputFolder + defaultLocale + '.json', Object.assign({},...data))
   } else {
     // deleting unused keys
-    checkDeletedLine(outputFolder + 'en.json', data);
+    checkDeletedLine(outputFolder + defaultLocale + '.json', data);
     // checking if file was changed
     for await (const el of data) {
       isInProgress.push('+');
-      await updateFile(`${outputFolder}en.json`, Object.values(el)[0])
+      await updateFile(`${outputFolder}${defaultLocale}.json`, Object.values(el)[0])
     }
   }
 

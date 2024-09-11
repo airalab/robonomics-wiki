@@ -7,16 +7,18 @@ const { encode, decode } = require('gpt-tokenizer');
 // Load environment variables from .env file
 dotenv.config();
 
-const key = process.env.OPENAI_KEY;
+const {configMD} = require('./tr-config');
+
+const key = configMD.key;
 
 // reference for ai translation
 const defaultReference = 'You can adjust the tone and style, taking into account the cultural connotations and regional differences of certain words. As a translator, you need to translate the original text into a translation that meets the standards of accuracy and elegance.';
 
 const url = 'https://api.openai.com/v1/chat/completions';
-const defaultLocale = 'en';
-const locales = ["ar","de","el","es","fr","it","ja","ko","pt","ru","uk","zh"]; // array with all locales
-const inputFolder = './src/docs/'; // folder with default files
-const outputFolder = './src/' // endpoint translations folder
+const defaultLocale = configMD.defaultLocale;
+const locales = configMD.locales; // array with all locales
+const inputFolder = configMD.inputFolder; // folder with default files
+const outputFolder = configMD.outputFolder; // endpoint translations folder
 const isInProgress = []; // to notify when all jobs are completed
 
 const readMarkdown = (filePath) => {
@@ -37,8 +39,8 @@ const checkExistingFiles = (path) => {
 
 const deleteFile = (path) => {
   locales.map(locale => {
-    if(fs.existsSync(`${outputFolder}${locale}/docs/${path}`))
-    fs.unlinkSync(`${outputFolder}${locale}/docs/${path}`)
+    if(fs.existsSync(`${outputFolder}${locale}/${configMD.inputFolderName}/${path}`))
+    fs.unlinkSync(`${outputFolder}${locale}/${configMD.inputFolderName}/${path}`)
   })
 
 }
@@ -131,7 +133,7 @@ const translateMD = async(from, to, input, output, file, locale) => {
 // check if doc in default folder was removed and delete the doc from all the locales
 const checkDeletedFile = () => {
   const defaultDir = fs.readdirSync(inputFolder).filter(f => f.includes('md'));
-  const localeDir = fs.readdirSync(`${outputFolder}ru/docs/`).filter(f => f.includes('md'))
+  const localeDir = fs.readdirSync(`${outputFolder}${locales[0]}/${configMD.inputFolderName}/`).filter(f => f.includes('md'))
 
   if (JSON.stringify(defaultDir) !== JSON.stringify(localeDir)) {
     const res = localeDir.filter(x => !defaultDir.includes(x));
@@ -147,9 +149,9 @@ const set = async () => {
   for await (const locale of locales) {
     for await (const file of fs.readdirSync(inputFolder)) {
       if(file.includes('md')) {
-        if(!checkExistingFiles(`${outputFolder}${locale}/docs/${file}`)) {
+        if(!checkExistingFiles(`${outputFolder}${locale}/${configMD.inputFolderName}/${file}`)) {
           isInProgress.push('+');
-          await translateMD(defaultLocale, locale, readMarkdown(inputFolder + file), `${outputFolder}${locale}/docs/${file}`, file, locale)
+          await translateMD(defaultLocale, locale, readMarkdown(inputFolder + file), `${outputFolder}${locale}/${configMD.inputFolderName}/${file}`, file, locale)
         }
       }
     }
