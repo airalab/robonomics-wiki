@@ -18,7 +18,7 @@ The idea of ​​the package is to wrapping the Robonomics parachain API provid
 
 Available features include:
 
-* **Launch function** — launching a device to execute any command with a specified set of parameters passed as a file.
+* **Launch function** — launching a device to execute any command with a specified set of parameters passed as a string or a file.
 * **Datalog function** — publishing device telemetry in a form of hash to parachain.
 * **Usage of Robonomics subscription** — the ability to send transactions without a fee.
 * **Secure file storage** — to pack and unpack data, [InterPlanetary File System](https://ipfs.tech/) is used, which allows to access files by their unique hash. For convenient usage of IPFS, [Pinata](https://www.pinata.cloud/) support included, which allows to pin IPFS files for fast downloading.

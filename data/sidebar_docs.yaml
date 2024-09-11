@@ -149,6 +149,8 @@
   items:
     - title_en: About Robonomics ROS 2 Wrapper
       link: /docs/ros2-about-wrapper
+    - title_en: Launch Robot from Cloud
+      link: /docs/ros2-launch-robot-cloud
 
 
 
