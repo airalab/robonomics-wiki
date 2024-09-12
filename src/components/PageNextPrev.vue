@@ -2,8 +2,8 @@
 
     <section class="pageNextPrev">
 
-      <robo-wiki-button v-if="pagePrev && !itemsList[current].withoutNav && !itemsList[current].withoutPrev" :label="'← ' + (itemsList[current].prev ? $t(itemsList[current].prev[0].title) : ($t(pagePrev.title_en)))" :link=" itemsList[current].prev ? itemsList[current].prev[0].link : pagePrev.link" :additionalText="$t('previous')" type="secondary"/>
-      <robo-wiki-button class="second" v-if="pageNext && !itemsList[current].withoutNav && !itemsList[current].withoutNext" :label="(itemsList[this.current].next ? $t(itemsList[this.current].next[0].title) : ($t(pageNext.title_en))) + ' →'" :link="itemsList[this.current].next ? itemsList[this.current].next[0].link : pageNext.link" :additionalText="$t('next')" type="secondary"/>
+      <robo-wiki-button v-if="pagePrev.title_en && !itemsList[current].withoutNav && !itemsList[current].withoutPrev" :label="'← ' + (itemsList[current].prev ? $t(itemsList[current].prev[0].title) : ($t(pagePrev.title_en)))" :link=" itemsList[current].prev ? itemsList[current].prev[0].link : pagePrev.link" :additionalText="$t('previous')" type="secondary"/>
+      <robo-wiki-button class="second" v-if="pageNext.title_en && !itemsList[current].withoutNav && !itemsList[current].withoutNext" :label="(itemsList[this.current].next ? $t(itemsList[this.current].next[0].title) : ($t(pageNext.title_en))) + ' →'" :link="itemsList[this.current].next ? itemsList[this.current].next[0].link : pageNext.link" :additionalText="$t('next')" type="secondary"/>
 
     </section>
 
