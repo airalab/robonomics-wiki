@@ -66,6 +66,7 @@
     "markdown-it-link-attributes": "^4.0.1",
     "markdown-it-mark": "^4.0.0",
     "markdown-it-prism": "^2.3.0",
+    "ping-ipfs-gateway": "^1.0.0",
     "svgo": "^3.3.2"
   }
 }
