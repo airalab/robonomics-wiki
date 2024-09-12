@@ -13,7 +13,8 @@
 </template>
 
 <script>
-import config from '../../data/video_config.yaml';  
+import config from '../../data/video_config.yaml'; 
+import ipfs from 'ping-ipfs-gateway' ;
 export default {
   
   name: 'RoboWikiVideo',
@@ -78,35 +79,10 @@ export default {
         });
       }
     },
-
-    convertVideoLinks() {
-      this.videos.map(vid => {
-        config.gateways.map(v => {
-          this.videoLinks.push(v + vid.src)
-        })
-      })
-    },
-
-    async checkVideos() {
-      for (let i = 0; i < this.videoLinks.length; i++) {
-        if (!this.startURL) {
-          try {
-            const res =  await fetch(this.videoLinks[i])
-            if(res.ok) {
-              const url = res.url;
-              this.startURL = url.replace(url.substring(url.lastIndexOf('/') + 1), '');
-            }
-          } catch (err) {
-            // console.log(err, ' => video error');
-          }
-        }
-      }
-    }
   },
 
-  created() {
-    this.convertVideoLinks();
-    this.checkVideos();
+  async created() {
+    this.startURL = await ipfs(config.gateways);
   },
 
   
@@ -118,11 +94,12 @@ export default {
       })
     };
 
+
     setTimeout(() => {
       if(!this.startURL) {
         this.startURL = config.gateways[0];
       }
-    }, 10000);
+    }, 15000);
   },
 
   beforeDestroy () {
