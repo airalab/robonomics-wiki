@@ -42,4 +42,5 @@ jobs:
           publish_dir: ./dist
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          cname: wiki.robonomics.network
 
