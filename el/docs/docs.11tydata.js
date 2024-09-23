@@ -863,7 +863,7 @@
       </h-captcha>
 
       <div>
-        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+        <input type="email" placeholder="Your email" data-gsp-name="Email (optional)" required />
 
         <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
 
@@ -995,7 +995,7 @@
       </h-captcha>
 
       <div>
-        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+        <input type="email" placeholder="Your email" data-gsp-name="Email (optional)" required />
 
         <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
 
@@ -1127,7 +1127,7 @@
       </h-captcha>
 
       <div>
-        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+        <input type="email" placeholder="Your email" data-gsp-name="Email (optional)" required />
 
         <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
 
@@ -1259,7 +1259,7 @@
       </h-captcha>
 
       <div>
-        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+        <input type="email" placeholder="Your email" data-gsp-name="Email (optional)" required />
 
         <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
 

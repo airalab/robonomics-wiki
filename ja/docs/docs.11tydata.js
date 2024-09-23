@@ -863,7 +863,7 @@
       </h-captcha>
 
       <div>
-        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+        <input type="email" placeholder="Your email" data-gsp-name="Email (optional)" required />
 
         <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
 
@@ -995,7 +995,7 @@
       </h-captcha>
 
       <div>
-        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+        <input type="email" placeholder="Your email" data-gsp-name="Email (optional)" required />
 
         <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
 
@@ -1127,7 +1127,7 @@
       </h-captcha>
 
       <div>
-        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+        <input type="email" placeholder="Your email" data-gsp-name="Email (optional)" required />
 
         <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
 
@@ -1259,7 +1259,7 @@
       </h-captcha>
 
       <div>
-        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+        <input type="email" placeholder="Your email" data-gsp-name="Email (optional)" required />
 
         <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
 
@@ -1390,7 +1390,7 @@
 					
 					
 					
-		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+Ethereum%E3%81%A7%E9%81%8B%E5%96%B6%E3%81%95%E3%82%8C%E3%82%8B%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%A2%E3%82%A4%E3%83%87%E3%83%B3%E3%83%86%E3%82%A3%E3%83%86%E3%82%A3%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B"> 問題を作成する</a>
+		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+Datalog"> 問題を作成する</a>
         </div>
 			</div>
 			  <a class="question__link" href="https://discord.com/invite/JpaN2XAmqY">

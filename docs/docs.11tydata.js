@@ -863,7 +863,7 @@
       </h-captcha>
 
       <div>
-        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+        <input type="email" placeholder="Your email" data-gsp-name="Email (optional)" required />
 
         <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
 
@@ -995,7 +995,7 @@
       </h-captcha>
 
       <div>
-        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+        <input type="email" placeholder="Your email" data-gsp-name="Email (optional)" required />
 
         <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
 
@@ -1127,7 +1127,7 @@
       </h-captcha>
 
       <div>
-        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+        <input type="email" placeholder="Your email" data-gsp-name="Email (optional)" required />
 
         <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
 
@@ -1259,7 +1259,7 @@
       </h-captcha>
 
       <div>
-        <input type="email" placeholder="Your email" data-gsp-name="Email" required />
+        <input type="email" placeholder="Your email" data-gsp-name="Email (optional)" required />
 
         <textarea placeholder="Your comment" data-gsp-name="Feedback (optional)"></textarea>
 
@@ -1390,7 +1390,7 @@
 					
 					
 					
-		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+Datalog"> Create an issue</a>
+		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+Digital+Twins"> Create an issue</a>
         </div>
 			</div>
 			  <a class="question__link" href="https://discord.com/invite/JpaN2XAmqY">
