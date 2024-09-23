@@ -1381,7 +1381,7 @@
 					
 					
 					
-		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+Benachrichtigung+erhalten%2C+wenn+die+T%C3%BCr+ge%C3%B6ffnet+wird"> Erstellen Sie ein Problem</a>
+		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+Wie+man+zu+den+Ressourcen+von+Robonomics+beitr%C3%A4gt"> Erstellen Sie ein Problem</a>
         </div>
 			</div>
 			  <a class="question__link" href="https://discord.com/invite/JpaN2XAmqY">

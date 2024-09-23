@@ -1381,7 +1381,7 @@
 					
 					
 					
-		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+%E5%88%9B%E5%BB%BA%E7%94%B1%E4%BB%A5%E5%A4%AA%E5%9D%8A%E8%BF%90%E8%A1%8C%E7%9A%84%E6%95%B0%E5%AD%97%E8%BA%AB%E4%BB%BD"> 创建一个问题</a>
+		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+%E5%A6%82%E4%BD%95%E7%BC%96%E8%BE%91%E7%BB%B4%E5%9F%BA"> 创建一个问题</a>
         </div>
 			</div>
 			  <a class="question__link" href="https://discord.com/invite/JpaN2XAmqY">

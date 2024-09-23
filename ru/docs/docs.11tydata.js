@@ -1381,7 +1381,7 @@
 					
 					
 					
-		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+Datalog"> Создать проблему</a>
+		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+%D0%9A%D0%B0%D0%BA+%D0%B2%D0%BD%D0%B5%D1%81%D1%82%D0%B8+%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4+%D0%B2+%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B+Robonomics"> Создать проблему</a>
         </div>
 			</div>
 			  <a class="question__link" href="https://discord.com/invite/JpaN2XAmqY">
