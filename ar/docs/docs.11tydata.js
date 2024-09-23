@@ -1390,7 +1390,7 @@
 					
 					
 					
-		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+%D8%B1%D8%A8%D8%B7+%D8%AC%D9%87%D8%A7%D8%B2+Amazon+FreeRTOS+%D8%A8%D9%80+Robonomics+%D8%B9%D8%A8%D8%B1+MQTT"> إنشاء مشكلة</a>
+		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%A6%D9%85+%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9"> إنشاء مشكلة</a>
         </div>
 			</div>
 			  <a class="question__link" href="https://discord.com/invite/JpaN2XAmqY">
