@@ -62,6 +62,23 @@
 	<link rel="stylesheet" href="/assets/css/main.css?" />
   
   <script defer type="module" src="/assets/js/index.js"></script>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setExcludedReferrers", ["github.com\/kap2fox\/kusama.practice","kap2fox.github.io\/","localhost:8080\/","localhost:3000\/","localhost\/"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo.robonomics.network/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '4']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
 </head>
 <body>
   <header class="header">

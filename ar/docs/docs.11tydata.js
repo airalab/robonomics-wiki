@@ -62,6 +62,23 @@
 	<link rel="stylesheet" href="/assets/css/main.css?" />
   
   <script defer type="module" src="/assets/js/index.js"></script>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setExcludedReferrers", ["github.com\/kap2fox\/kusama.practice","kap2fox.github.io\/","localhost:8080\/","localhost:3000\/","localhost\/"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo.robonomics.network/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '4']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
 </head>
 <body>
   <header class="header">
@@ -1390,7 +1407,7 @@
 					
 					
 					
-		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%A6%D9%85+%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9"> إنشاء مشكلة</a>
+		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+%D8%A5%D9%86%D8%B4%D8%A7%D8%A1+%D9%87%D9%88%D9%8A%D8%A9+%D8%B1%D9%82%D9%85%D9%8A%D8%A9+%D8%AA%D8%B9%D9%85%D9%84+%D8%A8%D9%88%D8%A7%D8%B3%D8%B7%D8%A9+%D8%A5%D9%8A%D8%AB%D9%8A%D8%B1%D9%8A%D9%88%D9%85"> إنشاء مشكلة</a>
         </div>
 			</div>
 			  <a class="question__link" href="https://discord.com/invite/JpaN2XAmqY">
