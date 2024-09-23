@@ -1,0 +1,29 @@
+#search .pagefind-ui__results-area,
+#search .pagefind-ui__result-title a {
+	color: #fff
+}
+
+
+.pagefind-ui__drawer {
+	position: absolute !important;
+	width: 100% !important;
+	padding: 0 calc(var(--space) * 0.5) !important;
+	padding-bottom: calc(var(--space) * 0.5) !important;
+	background-color: var(--header-color-bg) !important;
+	height: 80vh !important;
+	overflow-y: scroll !important;
+}
+
+.pagefind-ui__search-input {
+	height: calc(40px* var(--pagefind-ui-scale)) !important;
+	border-radius: 4px !important;
+}
+
+.pagefind-ui__form:before {
+	top: calc(12px* var(--pagefind-ui-scale)) !important;
+}
+
+.pagefind-ui__search-clear {
+  height: calc(30px* var(--pagefind-ui-scale)) !important;
+	top: calc(4px* var(--pagefind-ui-scale)) !important;
+}

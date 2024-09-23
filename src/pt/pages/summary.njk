@@ -1,0 +1,36 @@
+---js
+{
+	"pagination": {
+		"data": "sidebar_docs",
+		"before": function(paginationData, fullData){
+			const filteredArr = []
+			this.flattenAll(paginationData).map(d => {
+				if (d.children) {
+					filteredArr.push(d)
+				}
+			})
+			return filteredArr
+		},
+		"size": 1,
+		"alias": "doc"
+	},
+	"permalink": "pt/summary/{{ doc.title | slugify }}/index.html",
+	"layout": "home",
+	"title": "Document summary  Explore Robonomics with guides",
+	"description": "Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network."
+}
+---
+
+<h1><a href="/">{{'Home' | t}}</a> / {{doc.title | t}} </h1>
+
+{% set links = doc.children |	transformSummaryLinks%}
+
+<nav class="grid-navigation">
+	{% for item in links %}
+		{% if item.topic %}
+			<a href="{{item.url | toAbsoluteUrl}}/?topic={{item.topic}}">{{item.title | t}}</a>
+		{% else %}
+			<a href="{{item.url | toAbsoluteUrl}}">{{item.title | t}}</a>
+		{% endif %}
+	{% endfor %}
+</nav>

@@ -1,0 +1,73 @@
+{% include 'header.njk' %}
+<div class="all-content custom-scroll">
+	<main class="main post layout__page post">
+		<section class="section doc-section">
+			<div class="layout page">
+
+				{% if title and vars.env == 'image' %}
+					{% if page.lang == 'zh' %}
+						{% set fontFamily = "Noto Sans" %}
+					{% elif page.lang == 'ar' %}
+						{% set fontFamily = "Arabic" %}
+					{% elif page.lang == 'ko' %}
+						{% set fontFamily = "Noto Sans KO" %}
+					{% elif page.lang == 'el' %}
+						{% set fontFamily = "Noto Sans EL" %}	
+					{% else %}
+						{% set fontFamily = "Roboto" %}
+					{% endif %}
+						{% if vars.env == 'image' %}
+							{% include 'ogImageWrapper.njk' %}
+						{% endif %}
+				{% endif %}
+
+				<div id="sidebarDocs" popover class="sidebar page__sidebar custom-scroll">
+					{% include 'sidebar.njk' %}
+				</div>
+
+				<div class="page-content--withBC">
+					{% if page.url %}
+						{% include '../_includes/components/doc/breadcrumbs.njk' %}
+					{% endif %}
+					<div class="page-content">
+						<div class="page-title"><h1 class="page__title-main">{{title}}</h1></div>
+						<div class="docs-content" data-pagefind-body>
+							{{ content | safe }}
+						</div>
+						{% if page.url %}
+							{% include '../_includes/feedback/roboWikiFeedback.njk' %}
+							{% include '../_includes/components/doc/navButtons.njk' %}
+							{% include '../_includes/components/doc/contribution.njk' %}
+						{% endif %}
+					</div>
+        </div>
+
+				<div id="sidebarContent" popover class="page__sidebar custom-scroll" >
+					{% if tools.length %}
+						{% roboWikiNote {title: "Tested for"} %}
+							{% for tool in tools %}
+								{% set toolLinkRegex = r/\bhttps?:\/\/\S+/gi %}
+								{% set toolLink = tool.match(toolLinkRegex)  %}
+								<a href="{{ toolLink or '#'}}" class="testedFor__link">
+									{{ tool | replace(toolLinkRegex, '') }}
+								</a>
+							{% endfor %}
+						{% endroboWikiNote %}
+					{% endif %}
+
+					{% if content is string %}
+						<aside>
+							{{ content | toc | safe }}
+						</aside>
+					{% endif %}
+
+					{# {{'Create an issue' | t}} #}
+					{%set ghTitleIssue = title | getTitleForIssue %}
+					{% roboWikiButton {label: "Create an issue" | t, link: "https://github.com/airalab/robonomics-wiki/issues/new?" + ghTitleIssue,  size: "small"} %}{% endroboWikiButton %}
+        </div>
+			</div>
+			{% include 'components/support.njk' %}
+		</section>
+	</main>
+{% include 'footer.njk' %}
+</div>

@@ -1,0 +1,9 @@
+import './components/languageSwitcher.js';
+import './components/themeSwitcher.js';
+import './components/sidebar.js';
+import './components/tabs.js';
+import './components/video.js';
+import './components/breadcrumbs.js';
+import './components/navButtons.js';
+import './components/feedback.js';
+import './main.js';

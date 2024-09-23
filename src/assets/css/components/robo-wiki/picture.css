@@ -1,0 +1,17 @@
+.robo-wiki-picture{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: var(--space);
+}
+
+.robo-wiki-picture__link[target=_blank]:after {
+	display: none !important;
+}
+
+.robo-wiki-picture__text {
+	margin-top: 10px;
+	font-style: italic;
+	font-weight: 300;
+	text-transform: lowercase;
+}
