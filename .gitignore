@@ -5,3 +5,6 @@ dist/
 .temp/
 .DS_Store
 .env
+.editorconfig
+gh-pages
+gh-pages.pub

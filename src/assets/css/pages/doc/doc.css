@@ -1,0 +1,163 @@
+.page-title-meta {
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: var(--border-color);
+	font-size: 90%;
+	font-family: monospace;
+
+	margin-left: 0;
+	display: flex;
+	padding: 1rem 0;
+	margin-bottom: var(--space);
+}
+
+.page-title-meta a:after {
+	display: none !important;
+}
+
+.page-title-meta li {
+	margin-right: var(--space);
+	margin-left: 1rem;
+	margin-bottom: 0;
+}
+
+.page-title-meta span {
+	margin-right: 5px;
+}
+
+.page-content {
+	max-width: var(--content-width);
+	width: 100%;
+}
+
+.page-content h2:first-child, .page-content h3:first-child {
+	padding-top: 0;
+}
+
+.page-content a[target=_blank]:after,
+.docContribution .head a[target=_blank]:after,
+.docContribution .content a[target=_blank]:after {
+	padding-left: .2rem;
+	display: inline-block;
+	content: "↗" ;
+}
+
+.page-content a[target=_blank]:hover:after,
+.docContribution .head a[target=_blank]:hover:after,
+.docContribution .content a[target=_blank]:hover:after {
+		transform: translateX(0.1rem) translateY(-0.1rem);
+	}
+
+.docContribution .head {
+	padding: calc(var(--space)/4);
+	padding-top: 0 !important;
+	font-weight: 600;
+}
+
+.docContribution .head a {
+	/* color: var(--text-color); */
+	text-decoration: none;
+}
+
+
+.docContribution .head a::after {
+	display: none;
+}
+
+.docs-content {
+	text-align: justify !important;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+
+.docs-content table td {
+	vertical-align: middle;
+}
+
+.content {
+	padding: calc(var(--space)/4);
+	font-weight: 600;
+}
+
+.content p {
+		margin-bottom: 0;
+}
+
+.content p .submit {
+	text-decoration: none;
+}
+
+.content p .submit::after {
+	display: none;
+}
+
+.github-title {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.github-title svg {
+	margin-right: 15px;
+	width: 32px;
+	height: 32px;
+	fill: transparent;
+}
+
+.github-title svg path {
+	fill: var(--ghLogo);
+}
+
+.github-title h5 {
+	margin: 0;
+	font-weight: 600;
+}
+
+.pageNextPrev {
+	padding: calc(var(--space)/2) 0;
+
+	display: grid;
+	gap: calc(var(--space)/2);
+
+	text-transform: uppercase;
+}
+
+.pageNextPrev a {
+	display: inline-flex;
+	height: 100%;
+	flex-direction: column;
+	text-align: right;
+	padding: 1rem;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.pageNextPrev a.second {
+	text-align: left;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	align-self: end;
+}
+
+
+@media screen and (max-width: 720px) {
+	.page-title {
+		width: 100%;
+	}
+	.page-title-meta { display: block; }
+	.page-content { grid-template-columns: minmax(0, 1fr) }
+}
+
+@media screen and (min-width:500px){
+	.pageNextPrev { grid-template-columns: 1fr 1fr; }
+}
+
+@media screen and (max-width: 520px) {
+	.doc-section {
+		margin-top: 0;
+	}
+}
+
+

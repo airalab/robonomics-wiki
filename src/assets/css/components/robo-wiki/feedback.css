@@ -1,0 +1,278 @@
+.robo-wiki-feedback {
+	position: relative;
+	padding-bottom: calc(var(--gap) * 3);
+}
+
+
+.robo-wiki-feedback .grid-4 {
+	display: grid;
+	gap: calc(var(--space) * 0.5);
+	grid-template-columns: repeat(auto-fill, minmax(calc(var(--content-width) / 4 - var(--grid-space)), 1fr));
+	grid-template-rows: 1fr min-content ;
+	align-items: center;
+}
+
+.robo-wiki-feedback__wrapper {
+	/* position: relative; */
+	width: 100%;
+	height: 224px;
+	background-color: var(--color-light);
+	border: 2px solid var(--link-color);
+	/* border-radius: 30px; */
+	transition:background-color 0.33s ease-in-out;
+	overflow: hidden;
+	transition: border-color 0.33s ease-in-out;
+}
+
+.robo-wiki-feedback__wrapper:hover {
+	border-color: var(--code-text-inline);
+}
+
+.robo-wiki-feedback__wrapper:focus {
+	box-shadow: 0.2rem 0.2rem 0 0 var(--link-color);
+}
+
+.robo-wiki-feedback__item {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-family: var(--font-family-code);
+	justify-content: center;
+	background-color: transparent;
+	border: 2px solid transparent;
+	border-radius: 0;
+	cursor: pointer;
+}
+
+.robo-wiki-feedback__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: transform 0.4s ease-in-out;
+}
+
+.robo-wiki-feedback__item:hover   .robo-wiki-feedback__content {
+	transform: scale(1.1);
+}
+
+.robo-wiki-feedback__item:focus {
+	box-shadow: none;
+}
+
+.robo-wiki-feedback__wrapper.active {
+	background-color: var(--color-link-background-highlight);
+}
+
+.robo-wiki-feedback__item.active:hover {
+	background-color:var(--color-link-background-highlight) !important;
+}
+
+.robo-wiki-feedback__item img {
+	display: inline-block;
+	margin-bottom: 1rem;
+	max-width: 108px;
+	width: 100%;
+}
+
+.robo-wiki-feedback__item label{
+	font-size: 1rem;
+	color: #000;
+}
+
+.robo-wiki-feedback__checkbox {
+	position: absolute;
+	top: 15px;
+	left: 10px;
+}
+
+.robo-wiki-feedback-form__wrapper {
+	position: absolute;
+	bottom: -270px;
+	right: 0;
+	width: 100%;
+	height: 244px;
+	padding: calc(var(--space) * 0.3) calc(var(--space) * 1);
+	background-color:  var(--color-link-background-highlight);
+	transform: translateY(-100%);
+	opacity: 0;
+	visibility: hidden;
+	/* overflow: hidden; */
+	overflow: auto;
+	z-index: 30;
+	transition: opacity 0.5s ease-in-out, visibility 0.33s ease-in-out;
+}
+
+.robo-wiki-feedback__wrapper.active .robo-wiki-feedback-form__wrapper  {
+	border: 2px solid var(--link-color);
+	/* border-radius: 30px; */
+	opacity: 1;
+	visibility: visible;
+	animation: moveToBottomForm 0.5s linear forwards;
+}
+
+.robo-wiki-feedback-form__header {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 10px;
+	/* margin-bottom: calc(var(--gap) * 0.3); */
+	margin-bottom: calc(var(--space) * 0.5);
+}
+
+.robo-wiki-feedback-form__header > div {
+	display: flex;
+	align-items: center;
+}
+
+.robo-wiki-feedback-form__header h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 1.3rem;
+	text-align: left;
+	font-weight: 600;
+}
+
+.robo-wiki-feedback-form__check  {
+	margin-right: 8px;
+	font-size: 1.4rem;
+}
+
+.robo-wiki-feedback-form__close {
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+}
+
+.robo-wiki-feedback-form__form input,
+.robo-wiki-feedback-form__form textarea {
+	width: 94%;
+	display: block;
+	padding-left: 5px;
+	margin-bottom: 15px;
+	border-color: var(--link-color);
+	font-size: 0.7rem;
+	font-weight: 400;
+	text-overflow: ellipsis;
+	color: var(--text-color);
+	background: transparent;
+	border-radius: 0;
+	border: solid var(--link-color);
+	border-width: 0 0 2px;
+}
+
+.robo-wiki-feedback-form__form textarea  {
+	resize: none;
+	max-width: 100%;
+	max-height: 35px;
+	padding: 10px 17px;
+	padding-bottom: 0;
+	padding-left: 5px;
+	margin-bottom: 1rem;
+	text-align: left;
+}
+
+.robo-wiki-feedback-form__form input::placeholder,
+.robo-wiki-feedback-form__form textarea::placeholder {
+	color : var(--color-note-accent);
+	font-size: 0.7rem;
+	font-family: var(--font-family-code);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.robo-wiki-feedback-form__form input {
+	padding-bottom: 10px;
+}
+
+.robo-wiki-feedback-form__form input:focus {
+	box-shadow: none;
+	border-color: var(--color-bg);
+}
+
+.robo-wiki-feedback-form__form textarea:focus {
+	box-shadow: none;
+	border-color: var(--color-bg);
+}
+
+.robo-wiki-feedback-form__btn {
+	color: var(--color-light);
+	padding: calc( var(--space) * 0.3) calc( var(--space) * 0.5);
+	font-size: 1.3rem;
+	background: var(--code-text-inline);
+	border: 1px solid var(--code-text-inline);
+	border-radius: 0;
+	transition: background-color 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.robo-wiki-feedback-form__btn:hover {
+	background-color: var(--color-emoji-pink);
+}
+
+.robo-wiki-feedback-form__btn:focus {
+	box-shadow: none;
+	color: var(--link-color)
+}
+
+.robo-wiki-feedback-form__form.wait .robo-wiki-feedback-form__btn {
+	padding: calc( var(--space) * 0.1) calc( var(--space) * 0.3);
+	font-size: 0.8rem;
+	opacity: 0.7;
+	cursor: none;
+	width: auto;
+}
+
+.robo-wiki-feedback-form__form .loader {
+	width: 30px;
+	height: 30px;
+}
+
+.robo-wiki-feedback-form__form.wait .robo-wiki-feedback-form__btn:hover {
+	color: var(--text-color);
+}
+
+
+.robo-wiki-feedback-form__btn-wrapper {
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+}
+
+.robo-wiki-feedback-form__btn span {
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 1rem;
+	font-family: var(--font-family-code);
+}
+
+.robo-wiki-feedback-form__success {
+	display: flex;
+	align-items: flex-start;
+	gap: 15px;
+	font-size: 1.3rem;
+	font-family: var(--font-family-code);
+}
+
+.robo-wiki-feedback-form__btn svg,
+.robo-wiki-feedback-form__success svg {
+	width: 25px;
+}
+
+.robo-wiki-feedback-form__success svg {
+	margin-top: 4px;
+}
+
+.robo-wiki-feedback-form__btn svg path {
+	fill: var(--color-light);
+}
+
+@keyframes moveToBottomForm {
+	from {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

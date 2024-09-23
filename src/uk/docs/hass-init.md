@@ -1,0 +1,32 @@
+---
+title: Ініціалізація додатка Home Assistant
+contributors: [nakata5321, PaTara43]
+tools:
+  - Home Assistant 2024.6.2
+    https://github.com/home-assistant/core
+---
+
+**Після встановлення додатка Home Assistant, його потрібно ініціалізувати.**
+
+{% roboWikiPicture {src:"docs/home-assistant/ha_init.png", alt:"ha_init"} %}{% endroboWikiPicture %}
+
+Ви починаєте з створення облікового запису власника Home Assistant. Цей обліковий запис є адміністратором і може вносити будь-які зміни.
+Відкрийте веб-переглядач та перейдіть за адресою `http://%PC_IP_ADDRESS%:8123`. Ви можете знайти IP-адресу Raspberry Pi за допомогою додатку [Fing mobile app](https://www.fing.com/products) або [nmap CLI tool](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
+Якщо ви все налаштували на своєму ПК, використовуйте `http://localhost:8123`.
+
+{% roboWikiNote {type: "note"}%} IP-адреса може змінюватися з часом через налаштування маршрутизатора {% endroboWikiNote %}
+
+{% roboWikiVideo {videos:[{src: 'QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type: 'mp4'}], attrs:['loop', 'controls', 'autoplay']} %}{% endroboWikiVideo %}
+
+1. На першій сторінці введіть ім'я, ім'я користувача, пароль та натисніть кнопку `CREATE ACCOUNT`.
+
+2. На наступному екрані введіть назву свого будинку, встановіть своє місцезнаходження та систему одиниць. Натисніть `DETECT`, щоб знайти своє місцезнаходження та встановити свій часовий пояс та систему одиниць на основі цього місця. Якщо ви не хочете надсилати своє місцезнаходження, ви можете встановити ці значення вручну.
+
+3. Після цього Home Assistant покаже будь-які пристрої, які він виявив у вашій мережі. Не хвилюйтеся, якщо ви бачите менше елементів, ніж показано нижче; ви завжди можете додати пристрої вручну пізніше. Наразі просто натисніть `FINISH`, і ви потрапите на головний екран Home Assistant.
+
+4. Нарешті, ви побачите веб-інтерфейс Home Assistant, який покаже всі ваші пристрої.
+
+
+## Усунення неполадок
+
+1. Якщо ви забули свій логін або пароль для локального користувача, [перевірте цю статтю](https://www.home-assistant.io/docs/locked_out/), щоб відновити свої облікові дані.

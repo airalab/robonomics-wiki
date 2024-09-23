@@ -1,0 +1,99 @@
+.post h1, .post h2, .post h3, .post h4, .post h5{
+
+	position: relative;
+}
+
+.post .heading-anchor {
+	position: relative;
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+.post .heading-anchor::after {
+	content: '#';
+	position: absolute;
+	left: -15px;
+	opacity: 0;
+	text-decoration: none;
+	color: var(--link-color);
+	transition: opacity 0.2s ease;
+}
+
+.post .heading-anchor:hover::after {
+	opacity: 1;
+}
+
+.post h1:hover a[aria-hidden="true"],
+.post h2:hover a[aria-hidden="true"],
+.post h3:hover a[aria-hidden="true"],
+.post h4:hover a[aria-hidden="true"],
+.post h5:hover a[aria-hidden="true"]
+{
+	opacity: 1;
+}
+
+.post h1 {
+	margin-bottom: calc(var(--space)/2);
+}
+
+.post h2 {
+	padding-top: calc(var(--space)/2);
+	margin-top: var(--space);
+	/* border-top: 1px solid var(--border-color); */
+}
+
+.post div > h2:first-child {
+	margin-top: 0;
+	border-top: 0;
+}
+
+.post table{
+	border-collapse: collapse;
+	border-spacing: 0;
+	display: block;
+	margin-top: 0;
+	max-width: var(--content-width);
+	width: 100%;
+	color: var(--text-color);
+	font-size: 90%;
+	background-color: var(--body-bg);
+	white-space: nowrap;
+	font-family: var(--font-family-code);
+	overflow-y: auto;
+
+	margin-bottom: var(--space-text);
+}
+
+.post table tr{
+	background-color: var(--table-bg);
+	border-top: 1px solid var(--border-color);
+}
+
+.post table td, .post table th{
+	border: 1px solid var(--border-color);
+	padding: .5rem .8rem;
+}
+
+.post table th{
+	text-align: left;
+	width: 100%
+}
+
+.post table tbody tr:hover{
+	background-color: var(--table-tr-hover);
+}
+
+.post table thead tr{
+	background-color: var(--table-thead-bg);
+}
+
+
+@media screen and (max-width: 520px) {
+	.page__title-main {
+		font-size:1.7rem;
+	}
+
+	.post div>h2:first-child {
+		font-size: 1.5rem;
+	}
+}

@@ -1,0 +1,56 @@
+{% set breadcrumbs = sidebar_docs | getBreadcrumbs(page.url) %}
+
+ <div class="breadcrumbs">
+	{% if breadcrumbs.length %}
+    <nav  aria-label="breadcrumbs" class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a href="https://wiki.robonomics.network" class="breadcrumbs__home-icon">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 50 44.4" style="enable-background:new 0 0 50 44.4;" xml:space="preserve">
+            <g>
+              <polygon class="st0" points="25.3,18.8 16.2,33.4 33.8,33.4 	"/>
+              <polygon class="st1" points="25.3,3.1 2.8,41.2 47.2,41.2 	"/>
+              <circle class="st0" cx="25" cy="3.1" r="3.1"/>
+              <g>
+                <circle class="st0" cx="46.9" cy="41.2" r="3.1"/>
+                <circle class="st0" cx="3.1" cy="41.2" r="3.1"/>
+              </g>
+            </g>
+          </svg>
+        </a>
+      </li>
+
+
+			{% for breadcrumb in breadcrumbs %}
+
+				<li class="breadcrumbs__item">
+				{% if breadcrumbs[breadcrumbs.length - 1] !== breadcrumb %}
+				{% set bcLink = breadcrumb.title_en | getCleanTitleBC %}
+				{% set newURL = '/' + page.lang + '/summary/' + bcLink if page.lang != 'en' else '/summary/' + bcLink  %}
+					<a
+						href="{{newURL}}"
+						class="breadcrumbs__link"
+						aria-current="{{ 'location' if index === breadcrumbs.length-1 }}"
+					>
+						{{breadcrumb.title | t}}
+					</a>
+				{% endif %}
+
+
+				{% if breadcrumb.link%}
+					<a
+						href="{{'/' + page.lang + breadcrumb.link if page.lang != 'en' else breadcrumb.link }}"
+						class="breadcrumbs__link {% if breadcrumb.link == page.url | getCleanPathBC%} active {% endif %} "
+						aria-current="{{ 'location' if index === breadcrumbs.length-1 }}"
+					>
+						{{breadcrumb.title | t}}
+					</a>
+
+				{% endif %}
+
+				</li>
+			{% endfor %}
+
+    </nav>
+		{% endif %}
+  </div>
