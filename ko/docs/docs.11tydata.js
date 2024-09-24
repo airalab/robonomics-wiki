@@ -1407,7 +1407,7 @@
 					
 					
 					
-		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+%EB%AC%B8%EC%9D%B4+%EC%97%B4%EB%A6%B4+%EB%95%8C+%EC%95%8C%EB%A6%BC+%EB%B0%9B%EA%B8%B0"> 문제를 생성하세요.</a>
+		<a class="button inline-block primary button__small  " href="https://github.com/airalab/robonomics-wiki/issues/new?assignees=&labels=documentation&template=doc-issue.md&title=issue+for+document+page+-+%EB%94%94%EC%A7%80%ED%84%B8+%ED%8A%B8%EC%9C%88"> 문제를 생성하세요.</a>
         </div>
 			</div>
 			  <a class="question__link" href="https://discord.com/invite/JpaN2XAmqY">
