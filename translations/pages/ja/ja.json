@@ -132,5 +132,17 @@
 	"by": "by",
 	"breadcrumb.title": "breadcrumb.title",
 	"Document summary  Explore Robonomics with guides": "ドキュメントの要約：Robonomicsをガイドとともに探索する",
-	"This page not found": "このページは見つかりません"
+	"This page not found": "このページは見つかりません",
+	"Opt-out complete; your visits to this website will not be recorded by the Web Analytics tool.": "オプトアウトが完了しました。このウェブサイトへの訪問はWebアナリティクスツールによって記録されません。",
+	"Note that if you clear your cookies, delete the opt-out cookie, or if you change computers or Web browsers, you will need to perform the opt-out procedure again.": "クッキーをクリアしたり、オプトアウトクッキーを削除したり、コンピューターやWebブラウザーを変更した場合、再度オプトアウト手続きを行う必要があります。",
+	"You may choose to prevent this website from aggregating and analyzing the actions you take here.": "このウェブサイトがここで行うアクションの集計と分析を防止することを選択することができます。",
+	"Doing so will protect your privacy, but will also prevent the owner from learning from your actions and creating a better experience for you and other users.": "これを行うことで、あなたのプライバシーを保護することができますが、同時に所有者があなたの行動から学び、あなたや他のユーザーのためにより良い体験を作ることを防ぎます。",
+	"The tracking opt-out feature requires cookies to be enabled.": "トラッキングのオプトアウト機能を利用するには、クッキーを有効にする必要があります。",
+	"The tracking opt-out feature may not work because this site was not loaded over HTTPS. Please reload the page to check if your opt out status changed;": "トラッキングのオプトアウト機能が機能しない可能性があります。なぜなら、このサイトがHTTPS経由で読み込まれていないからです。オプトアウトの状態が変わったかどうかを確認するために、ページを再読み込みしてください。",
+	"You are not opted out.": "あなたは選択肢から外れていません。",
+	"Uncheck this box to opt-out.": "オプトアウトするには、このボックスをオフにしてください。",
+	"You are currently opted out.": "現在、オプトアウトされています。",
+	"Check this box to opt-in.": "オプトインするには、このボックスをチェックしてください。",
+	"{# for tanslation": "{# 翻訳用",
+	"#}": "この文字列は意味がわかりません。他に翻訳が必要なテキストがあればお知らせください。"
 }

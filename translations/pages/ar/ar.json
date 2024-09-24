@@ -128,5 +128,17 @@
 	"by": "بواسطة",
 	"breadcrumb.title": "عنوان الفتات",
 	"Document summary  Explore Robonomics with guides": "ملخص الوثيقة: استكشاف روبونوميكس مع الدلائل",
-	"This page not found": "هذه الصفحة غير موجودة"
+	"This page not found": "هذه الصفحة غير موجودة",
+	"Opt-out complete; your visits to this website will not be recorded by the Web Analytics tool.": "تم إلغاء الاشتراك بنجاح؛ لن يتم تسجيل زياراتك إلى هذا الموقع عبر أداة تحليل الويب",
+	"Note that if you clear your cookies, delete the opt-out cookie, or if you change computers or Web browsers, you will need to perform the opt-out procedure again.": "يرجى ملاحظة أنه إذا قمت بمسح ملفات تعريف الارتباط الخاصة بك، أو حذف ملف تعريف الارتباط لإلغاء الاشتراك، أو إذا قمت بتغيير الحاسوب أو المتصفح الإلكتروني، فسيتعين عليك إجراء إجراء إلغاء الاشتراك مرة أخرى.",
+	"You may choose to prevent this website from aggregating and analyzing the actions you take here.": "قد تختار منع هذا الموقع من تجميع وتحليل الإجراءات التي تقوم بها هنا.",
+	"Doing so will protect your privacy, but will also prevent the owner from learning from your actions and creating a better experience for you and other users.": "بالقيام بذلك ستحمي خصوصيتك، ولكن ستمنع أيضًا المالك من التعلم من أفعالك وخلق تجربة أفضل لك وللمستخدمين الآخرين.",
+	"The tracking opt-out feature requires cookies to be enabled.": "يتطلب ميزة عدم التتبع تمكين ملفات تعريف الارتباط.",
+	"The tracking opt-out feature may not work because this site was not loaded over HTTPS. Please reload the page to check if your opt out status changed;": "قد لا يعمل ميزة عدم التتبع لأن هذا الموقع لم يتم تحميله عبر HTTPS. يرجى إعادة تحميل الصفحة للتحقق مما إذا كان حالة عدم التتبع الخاصة بك قد تغيرت؛",
+	"You are not opted out.": "أنت لم تختار الخروج.",
+	"Uncheck this box to opt-out.": "ألغِ تحديد هذه الخانة لإلغاء الاشتراك.",
+	"You are currently opted out.": "أنت حالياً مستبعد.",
+	"Check this box to opt-in.": "حدد هذه الخانة للموافقة.",
+	"{# for tanslation": "{# للترجمة",
+	"#}": "I'm sorry, but the string \"#}\" does not have a specific meaning in English. It appears to be a random combination of characters. Can you provide more context or clarify the meaning so I can assist you better?"
 }

@@ -132,5 +132,17 @@
 	"by": "通过",
 	"breadcrumb.title": "面包屑标题",
 	"Document summary  Explore Robonomics with guides": "探索Robonomics指南的文档摘要",
-	"This page not found": "找不到此页面"
+	"This page not found": "找不到此页面",
+	"Opt-out complete; your visits to this website will not be recorded by the Web Analytics tool.": "退出完成；您对该网站的访问将不会被网络分析工具记录。",
+	"Note that if you clear your cookies, delete the opt-out cookie, or if you change computers or Web browsers, you will need to perform the opt-out procedure again.": "请注意，如果您清除了浏览器的cookies、删除了选择退出的cookie，或者更换了电脑或网络浏览器，您将需要重新执行选择退出程序。",
+	"You may choose to prevent this website from aggregating and analyzing the actions you take here.": "您可以选择阻止该网站对您在此处采取的操作进行聚合和分析。",
+	"Doing so will protect your privacy, but will also prevent the owner from learning from your actions and creating a better experience for you and other users.": "这样做将保护您的隐私，但也会阻止所有者从您的操作中学习，并为您和其他用户创造更好的体验。",
+	"The tracking opt-out feature requires cookies to be enabled.": "跟踪退出功能需要启用 cookie。",
+	"The tracking opt-out feature may not work because this site was not loaded over HTTPS. Please reload the page to check if your opt out status changed;": "由于该网站未通过HTTPS加载，跟踪退出功能可能无法正常工作。请重新加载页面以检查您的退出状态是否已更改；",
+	"You are not opted out.": "您尚未选择退出。",
+	"Uncheck this box to opt-out.": "取消选中此框以选择退出。",
+	"You are currently opted out.": "您目前已选择退出。",
+	"Check this box to opt-in.": "勾选此框以选择加入。",
+	"{# for tanslation": "{# 用于翻译",
+	"#}": "#}"
 }

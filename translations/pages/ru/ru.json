@@ -135,5 +135,17 @@
 	"by": "по",
 	"breadcrumb.title": "название навигационной цепочки",
 	"Document summary  Explore Robonomics with guides": "Краткое описание документа: Исследуйте Робономику с помощью руководств",
-	"This page not found": "Эта страница не найдена"
+	"This page not found": "Эта страница не найдена",
+	"Opt-out complete; your visits to this website will not be recorded by the Web Analytics tool.": "Отказ завершен; ваши посещения этого веб-сайта не будут записываться с помощью инструмента веб-аналитики.",
+	"Note that if you clear your cookies, delete the opt-out cookie, or if you change computers or Web browsers, you will need to perform the opt-out procedure again.": "Обратите внимание, что если вы очистите файлы cookie, удалите файл cookie отказа от рекламы или измените компьютер или веб-браузер, вам придется выполнить процедуру отказа снова.",
+	"You may choose to prevent this website from aggregating and analyzing the actions you take here.": "Вы можете выбрать запретить этому веб-сайту агрегировать и анализировать действия, которые вы совершаете здесь.",
+	"Doing so will protect your privacy, but will also prevent the owner from learning from your actions and creating a better experience for you and other users.": "Это поможет защитить вашу конфиденциальность, но также помешает владельцу узнавать о ваших действиях и создавать лучший опыт для вас и других пользователей.",
+	"The tracking opt-out feature requires cookies to be enabled.": "Функция отказа от отслеживания требует включенных файлов cookie.",
+	"The tracking opt-out feature may not work because this site was not loaded over HTTPS. Please reload the page to check if your opt out status changed;": "Функция отказа от отслеживания может не работать, потому что этот сайт не был загружен через HTTPS. Пожалуйста, перезагрузите страницу, чтобы проверить, изменился ли ваш статус отказа от отслеживания.",
+	"You are not opted out.": "Вы не отказались.",
+	"Uncheck this box to opt-out.": "Снимите флажок, чтобы отказаться.",
+	"You are currently opted out.": "Вы в настоящее время отказались от участия.",
+	"Check this box to opt-in.": "Установите этот флажок, чтобы подписаться.",
+	"{# for tanslation": "{# для перевода",
+	"#}": "This string does not appear to be a complete sentence or phrase in English. It seems to be a fragment or a placeholder. If you provide more context or information, I would be happy to help translate it into Russian."
 }

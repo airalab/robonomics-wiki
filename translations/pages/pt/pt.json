@@ -132,5 +132,17 @@
 	"by": "por",
 	"breadcrumb.title": "título do breadcrumb",
 	"Document summary  Explore Robonomics with guides": "Resumo do documento: Explore Robonomics com guias",
-	"This page not found": "Página não encontrada"
+	"This page not found": "Página não encontrada",
+	"Opt-out complete; your visits to this website will not be recorded by the Web Analytics tool.": "Opt-out concluído; suas visitas a este site não serão registradas pela ferramenta de análise da web",
+	"Note that if you clear your cookies, delete the opt-out cookie, or if you change computers or Web browsers, you will need to perform the opt-out procedure again.": "Note que se limpar os cookies, apagar o cookie de exclusão ou se mudar de computador ou navegador da Web, será necessário realizar o procedimento de exclusão novamente.",
+	"You may choose to prevent this website from aggregating and analyzing the actions you take here.": "Você pode optar por impedir que este site agregue e analise as ações que você realiza aqui.",
+	"Doing so will protect your privacy, but will also prevent the owner from learning from your actions and creating a better experience for you and other users.": "Fazê-lo protegerá sua privacidade, mas também impedirá o proprietário de aprender com suas ações e criar uma experiência melhor para você e outros usuários.",
+	"The tracking opt-out feature requires cookies to be enabled.": "A funcionalidade de exclusão de rastreamento requer que os cookies estejam habilitados.",
+	"The tracking opt-out feature may not work because this site was not loaded over HTTPS. Please reload the page to check if your opt out status changed;": "A funcionalidade de exclusão de rastreamento pode não funcionar porque este site não foi carregado via HTTPS. Por favor, recarregue a página para verificar se o seu status de exclusão foi alterado;",
+	"You are not opted out.": "Você não está excluído.",
+	"Uncheck this box to opt-out.": "Desmarque esta caixa para cancelar a inscrição.",
+	"You are currently opted out.": "Você está atualmente excluído.",
+	"Check this box to opt-in.": "Marque esta caixa para optar por participar.",
+	"{# for tanslation": "{# para tradução",
+	"#}": "Desculpe, não consigo traduzir a string \"#}\". Poderia fornecer mais contexto ou outra frase para traduzir?"
 }

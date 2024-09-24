@@ -128,5 +128,17 @@
 	"by": "durch",
 	"breadcrumb.title": "breadcrumb.title",
 	"Document summary  Explore Robonomics with guides": "Dokumentenzusammenfassung: Entdecken Sie Robonomics mit Anleitungen",
-	"This page not found": "Diese Seite wurde nicht gefunden."
+	"This page not found": "Diese Seite wurde nicht gefunden.",
+	"Opt-out complete; your visits to this website will not be recorded by the Web Analytics tool.": "Opt-out abgeschlossen; Ihre Besuche auf dieser Website werden nicht vom Web-Analyse-Tool aufgezeichnet.",
+	"Note that if you clear your cookies, delete the opt-out cookie, or if you change computers or Web browsers, you will need to perform the opt-out procedure again.": "Bitte beachten Sie, dass Sie, wenn Sie Ihre Cookies löschen, das Opt-out-Cookie löschen oder wenn Sie Ihren Computer oder Webbrowser wechseln, das Opt-out-Verfahren erneut durchführen müssen.",
+	"You may choose to prevent this website from aggregating and analyzing the actions you take here.": "Sie können wählen, diese Website daran zu hindern, die Aktionen zu aggregieren und zu analysieren, die Sie hier ausführen.",
+	"Doing so will protect your privacy, but will also prevent the owner from learning from your actions and creating a better experience for you and other users.": "Indem du dies tust, schützt du deine Privatsphäre, verhinderst jedoch auch, dass der Besitzer aus deinen Handlungen lernt und ein besseres Erlebnis für dich und andere Benutzer schafft.",
+	"The tracking opt-out feature requires cookies to be enabled.": "Die Funktion zum Deaktivieren der Verfolgung erfordert, dass Cookies aktiviert sind.",
+	"The tracking opt-out feature may not work because this site was not loaded over HTTPS. Please reload the page to check if your opt out status changed;": "Die Tracking-Opt-Out-Funktion funktioniert möglicherweise nicht, da diese Website nicht über HTTPS geladen wurde. Bitte laden Sie die Seite erneut, um zu überprüfen, ob sich Ihr Opt-Out-Status geändert hat.",
+	"You are not opted out.": "Du hast nicht abgelehnt.",
+	"Uncheck this box to opt-out.": "Deaktivieren Sie dieses Kästchen, um sich abzumelden.",
+	"You are currently opted out.": "Sie sind derzeit abgemeldet.",
+	"Check this box to opt-in.": "Kreuzen Sie dieses Kästchen an, um zuzustimmen.",
+	"{# for tanslation": "{# für Übersetzung",
+	"#}": "This string does not contain any meaningful text in English."
 }
