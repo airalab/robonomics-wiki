@@ -22,6 +22,7 @@
 @import './components/sidebar.css';
 @import './components/breadcrumbs.css';
 @import './components/checkbox.css';
+@import "./components/matomo.css";
 
 /* pages */
 @import './pages/home.css';

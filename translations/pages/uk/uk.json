@@ -132,5 +132,17 @@
 	"by": "від",
 	"breadcrumb.title": "заголовок хлібних крихток",
 	"Document summary  Explore Robonomics with guides": "Підсумок документа: Дослідження Робономіки з посібниками",
-	"This page not found": "Цю сторінку не знайдено"
+	"This page not found": "Цю сторінку не знайдено",
+	"Opt-out complete; your visits to this website will not be recorded by the Web Analytics tool.": "Відмова від реєстрації завершена; ваші візити на цей веб-сайт не будуть записані інструментом веб-аналітики.",
+	"Note that if you clear your cookies, delete the opt-out cookie, or if you change computers or Web browsers, you will need to perform the opt-out procedure again.": "Зверніть увагу, що якщо ви очистите файли cookie, видалите файли cookie для відмови від реклами або зміните комп'ютери або веб-переглядачі, вам доведеться знову виконати процедуру відмови від реклами.",
+	"You may choose to prevent this website from aggregating and analyzing the actions you take here.": "Ви можете вибрати запобігти цьому веб-сайту агрегувати та аналізувати дії, які ви виконуєте тут.",
+	"Doing so will protect your privacy, but will also prevent the owner from learning from your actions and creating a better experience for you and other users.": "Це дія допоможе захистити вашу конфіденційність, але також завадить власнику вчитися на основі ваших дій та створювати кращий досвід для вас та інших користувачів.",
+	"The tracking opt-out feature requires cookies to be enabled.": "Функція відмови від відстеження потребує включених файлів cookie.",
+	"The tracking opt-out feature may not work because this site was not loaded over HTTPS. Please reload the page to check if your opt out status changed;": "Функція відмови від відстеження може не працювати, оскільки цей сайт не був завантажений через HTTPS. Будь ласка, перезавантажте сторінку, щоб перевірити, чи змінився ваш статус відмови.",
+	"You are not opted out.": "Ви не відмовилися.",
+	"Uncheck this box to opt-out.": "Зняти позначку з цієї клітинки, щоб відмовитися.",
+	"You are currently opted out.": "Ви зараз відмовилися.",
+	"Check this box to opt-in.": "Поставте позначку в цьому полі, щоб погодитися.",
+	"{# for tanslation": "{# для перекладу",
+	"#}": "#}"
 }

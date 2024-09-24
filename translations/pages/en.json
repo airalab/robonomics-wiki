@@ -127,5 +127,17 @@
 	"by": "by",
 	"breadcrumb.title": "breadcrumb.title",
 	"Document summary  Explore Robonomics with guides": "Document summary  Explore Robonomics with guides",
-	"This page not found": "This page not found"
+	"This page not found": "This page not found",
+	"Opt-out complete; your visits to this website will not be recorded by the Web Analytics tool.": "Opt-out complete; your visits to this website will not be recorded by the Web Analytics tool",
+	"Note that if you clear your cookies, delete the opt-out cookie, or if you change computers or Web browsers, you will need to perform the opt-out procedure again.": "Note that if you clear your cookies, delete the opt-out cookie, or if you change computers or Web browsers, you will need to perform the opt-out procedure again.",
+	"You may choose to prevent this website from aggregating and analyzing the actions you take here.": "You may choose to prevent this website from aggregating and analyzing the actions you take here.",
+	"Doing so will protect your privacy, but will also prevent the owner from learning from your actions and creating a better experience for you and other users.": "Doing so will protect your privacy, but will also prevent the owner from learning from your actions and creating a better experience for you and other users.",
+	"The tracking opt-out feature requires cookies to be enabled.": "The tracking opt-out feature requires cookies to be enabled.",
+	"The tracking opt-out feature may not work because this site was not loaded over HTTPS. Please reload the page to check if your opt out status changed;": "The tracking opt-out feature may not work because this site was not loaded over HTTPS. Please reload the page to check if your opt out status changed;",
+	"You are not opted out.": "You are not opted out.",
+	"Uncheck this box to opt-out.": "Uncheck this box to opt-out.",
+	"You are currently opted out.": "You are currently opted out.",
+	"Check this box to opt-in.": "Check this box to opt-in.",
+	"{# for tanslation": "{# for tanslation",
+	"#}": "#}"
 }

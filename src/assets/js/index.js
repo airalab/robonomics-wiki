@@ -6,4 +6,5 @@ import './components/video.js';
 import './components/breadcrumbs.js';
 import './components/navButtons.js';
 import './components/feedback.js';
+import './components/matomo.js';
 import './main.js';

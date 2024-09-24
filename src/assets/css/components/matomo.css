@@ -1,0 +1,23 @@
+#matomo-opt-out {
+  position: relative;
+  margin-bottom: var(--space);
+}
+
+#matomo-opt-out strong {
+  display: block;
+  padding-left: 40px;
+  font-size: var(--base-font-size);
+}
+
+#matomo-opt-out label {
+  position: relative;
+}
+
+#matomo-opt-out #trackVisits:checked + .custom-checkbox__content::after {
+  opacity: 1;
+}
+
+.custom-checkbox__content::after, .custom-checkbox__content::before {
+  top: unset;
+  bottom: 0;
+}

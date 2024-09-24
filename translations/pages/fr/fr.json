@@ -132,5 +132,17 @@
 	"by": "par",
 	"breadcrumb.title": "titre du fil d'Ariane",
 	"Document summary  Explore Robonomics with guides": "Résumé du document : Explorez Robonomics avec des guides",
-	"This page not found": "Cette page n'a pas été trouvée"
+	"This page not found": "Cette page n'a pas été trouvée",
+	"Opt-out complete; your visits to this website will not be recorded by the Web Analytics tool.": "Désinscription terminée ; vos visites sur ce site web ne seront pas enregistrées par l'outil d'analyse Web",
+	"Note that if you clear your cookies, delete the opt-out cookie, or if you change computers or Web browsers, you will need to perform the opt-out procedure again.": "Notez que si vous effacez vos cookies, supprimez le cookie de désactivation ou si vous changez d'ordinateur ou de navigateur Web, vous devrez effectuer à nouveau la procédure de désactivation.",
+	"You may choose to prevent this website from aggregating and analyzing the actions you take here.": "Vous pouvez choisir d'empêcher ce site web d'agréger et d'analyser les actions que vous effectuez ici.",
+	"Doing so will protect your privacy, but will also prevent the owner from learning from your actions and creating a better experience for you and other users.": "Ce faisant, vous protégerez votre vie privée, mais empêcherez également le propriétaire d'apprendre de vos actions et de créer une meilleure expérience pour vous et les autres utilisateurs.",
+	"The tracking opt-out feature requires cookies to be enabled.": "La fonction de désactivation du suivi nécessite que les cookies soient activés.",
+	"The tracking opt-out feature may not work because this site was not loaded over HTTPS. Please reload the page to check if your opt out status changed;": "La fonction de désactivation du suivi peut ne pas fonctionner car ce site n'a pas été chargé via HTTPS. Veuillez recharger la page pour vérifier si votre statut de désactivation a changé;",
+	"You are not opted out.": "Vous n'êtes pas désinscrit.",
+	"Uncheck this box to opt-out.": "Décochez cette case pour vous désinscrire.",
+	"You are currently opted out.": "Vous êtes actuellement désinscrit.",
+	"Check this box to opt-in.": "Cochez cette case pour vous inscrire.",
+	"{# for tanslation": "{# pour la traduction",
+	"#}": "I'm sorry, but the string \"#}\" does not have a clear meaning in English. Can you provide more context or clarify what you would like me to do with this string?"
 }
