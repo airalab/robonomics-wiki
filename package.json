@@ -1,6 +1,7 @@
 {
-  "name": "wiki-rework",
+  "name": "robonomics-wiki",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "main": "index.js",
   "engines": {
@@ -19,7 +20,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "BSD-3-Clause",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^4.0.2",

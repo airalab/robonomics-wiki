@@ -145,9 +145,9 @@ svg path {
 	transition: fill 0.3s ease-in-out;
 }
 
-.copy-btn:focus svg path {
+/* .copy-btn:focus svg path {
 	fill: rgb(59, 169, 248)
-}
+} */
 
 .code-helper pre[class*=language-] {
 	margin-top: 0;
