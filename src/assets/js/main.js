@@ -45,29 +45,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		const text = code.innerText
 
-		try {
-			await navigator.clipboard.writeText(text);
-				e.insertAdjacentHTML(
-				'afterend',
-				'<small>copied!</small>'
-			);
-			e.disabled = true
-			setTimeout(() => {
-				code.querySelector('small').remove()
-				e.disabled = false;
-				}, 3000)
-			} catch($e) {
-				code.querySelector('small').remove()
-				e.disabled = false;
+		if(!code.querySelector('small')) {
+			try {
+				await navigator.clipboard.writeText(text);
+					e.insertAdjacentHTML(
+					'afterend',
+					'<small>copied!</small>'
+				);
+	
+				e.disabled = true
+				setTimeout(() => {
+					code.querySelector('small').remove()
+					e.disabled = false;
+					}, 3000)
+				} catch($e) {
+					code.querySelector('small').remove()
+					e.disabled = false;
+				}
 			}
 		}
 
 		copyBtns.forEach(btn => {
 			btn.addEventListener('click', (e) => {
-				if(e.target === document.querySelector('button')) {
+				if(e.target.classList.contains('copy-btn')) {
 					copyCode(e.target)
 				} else {
-					copyCode(e.target.parentElement)
+					if(e.target.tagName.toLowerCase() === 'path') {
+					} else {
+						copyCode(e.target.parentElement)
+					}
 				}
 			})
 		})
