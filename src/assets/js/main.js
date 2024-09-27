@@ -25,9 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	document.addEventListener('click', (e) => {
 		allPopovers.forEach(popover => {
-			if (!popover.matches(":popover-open") && e.target !== mobileSidebarContent && !popover.matches(":popover-open") && e.target !== mobileSidebarDocs) {
-				mobileSidebarContent.classList.remove('open')
-				mobileSidebarDocs.classList.remove('open')
+			if (popover && !popover.matches(":popover-open") && e.target !== mobileSidebarContent && !popover.matches(":popover-open") && e.target !== mobileSidebarDocs) {
+				if(mobileSidebarContent && mobileSidebarContent.classList.contains('open')) {
+					mobileSidebarContent.classList.remove('open')
+				}
+
+				if(mobileSidebarDocs && mobileSidebarDocs.classList.contains('open')) {
+					mobileSidebarDocs.classList.remove('open')
+				}
 			}
 		})
 	})
