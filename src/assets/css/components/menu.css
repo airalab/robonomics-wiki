@@ -42,7 +42,7 @@ background-color: var(--color-focus-light);
   padding-left: calc( var(--space) / 4);
 }
 
-::selection {
+.menu::selection {
   background-color: transparent;
 }
 
