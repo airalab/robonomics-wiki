@@ -37,7 +37,7 @@ yarn install
 
 ### 2. Servir localmente (desenvolver, desenvolver-m1)
 
-`node deve ser >= v18`
+`node deve ser v20 || >=22`
 
 Em seguida, implante o projeto localmente:
 

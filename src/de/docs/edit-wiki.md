@@ -37,7 +37,7 @@ yarn install
 
 ### 2. Lokal bereitstellen (entwickeln, entwickeln-m1)
 
-`Node muss >= v18 sein`
+`Node muss v20 || >=22 sein`
 
 Deploye dann das Projekt lokal:
 
