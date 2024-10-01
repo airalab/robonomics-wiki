@@ -6,7 +6,7 @@ contributors: [nakata5321]
 يغطي هذا المقال عملية إعداد كاميرا PTZ في Home Assistant.
 سيتم استخدام بروتوكول ONVIF. وهذا يتطلب حساب كاميرا محلي.
 
-{% roboWikiNote {title:"test", type: "warning"}%} لم يتم تغطية عملية إعداد حساب الكاميرا المحلي في هذا المقال.
+{% roboWikiNote {type: "warning"}%} لم يتم تغطية عملية إعداد حساب الكاميرا المحلي في هذا المقال.
 {% endroboWikiNote %}
 
 
