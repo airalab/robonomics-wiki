@@ -16,6 +16,11 @@ module.exports = eleventyConfig => {
 	
 			// Load paths tagged with the "env-ns" namespace and behave as if
 			// they point to a JSON file containing the environment variables.
+
+			if(!process.env.GSCRIPT_ID) {
+				process.env.GSCRIPT_ID = '';
+			}
+			
 			build.onLoad({ filter: /.*/, namespace: 'env-ns' }, () => ({
 				contents: JSON.stringify(process.env),
 				loader: 'json',

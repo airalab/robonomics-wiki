@@ -37,7 +37,7 @@ yarn install
 
 ### 2. 本地服务（develop, develop-m1）
 
-`node 必须 >= v18`
+`node 必须 v20 || >=22`
 
 然后在本地部署项目：
 

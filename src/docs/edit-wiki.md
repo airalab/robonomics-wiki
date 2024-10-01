@@ -37,13 +37,15 @@ yarn install
 
 ### 2. Serve locally (develop, develop-m1)
 
-`node must be >= v18`
+`node version must be 20 || >=22`
 
 Then deploy the project locally:
 
 ```
 npm run start
 ```
+
+> may need to create .env file with the same variables as in .env.example file
 
 ### 3. Make PR
 
