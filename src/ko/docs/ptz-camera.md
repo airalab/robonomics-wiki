@@ -6,7 +6,7 @@ contributors: [nakata5321]
 이 문서는 홈 어시스턴트에서 PTZ 카메라 설정하는 과정을 다룹니다.
 ONVIF 프로토콜을 사용할 것입니다. 이를 위해서는 로컬 카메라 계정이 필요합니다.
 
-{% roboWikiNote {title:"test", type: "warning"}%} 이 문서에서는 로컬 카메라 계정 설정 과정을 다루지 않습니다.
+{% roboWikiNote {type: "warning"}%} 이 문서에서는 로컬 카메라 계정 설정 과정을 다루지 않습니다.
 {% endroboWikiNote %}
 
 

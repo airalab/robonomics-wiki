@@ -6,7 +6,7 @@ contributors: [nakata5321]
 本文涵盖了在Home Assistant中设置PTZ摄像头的过程。
 将使用ONVIF协议。这需要一个本地摄像头帐户。
 
-{% roboWikiNote {title:"test", type: "warning"}%} 本文不涵盖设置本地摄像头帐户的过程。
+{% roboWikiNote {type: "warning"}%} 本文不涵盖设置本地摄像头帐户的过程。
 {% endroboWikiNote %}
 
 

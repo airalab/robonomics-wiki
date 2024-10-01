@@ -6,7 +6,7 @@ contributors: [nakata5321]
 Dieser Artikel behandelt den Prozess der Einrichtung einer PTZ-Kamera in Home Assistant.
 Das ONVIF-Protokoll wird verwendet. Hierfür wird ein lokales Kamerakonto benötigt.
 
-{% roboWikiNote {title:"test", type: "warning"}%} Der Prozess der Einrichtung des lokalen Kamerakontos wird in diesem Artikel nicht behandelt.
+{% roboWikiNote {type: "warning"}%} Der Prozess der Einrichtung des lokalen Kamerakontos wird in diesem Artikel nicht behandelt.
 {% endroboWikiNote %}
 
 

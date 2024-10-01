@@ -6,7 +6,7 @@ contributors: [nakata5321]
 この記事では、Home AssistantでのPTZカメラの設定プロセスについて説明します。
 ONVIFプロトコルが使用されます。これにはローカルカメラアカウントが必要です。
 
-{% roboWikiNote {title:"test", type: "warning"}%} ローカルカメラアカウントの設定手順はこの記事ではカバーされていません。
+{% roboWikiNote {type: "warning"}%} ローカルカメラアカウントの設定手順はこの記事ではカバーされていません。
 {% endroboWikiNote %}
 
 必要なもの:
