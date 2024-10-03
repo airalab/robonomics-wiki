@@ -1,46 +1,47 @@
-const { execSync } = require('child_process');
-const yaml = require('js-yaml');
-const fs = require('fs');
-require('dotenv').config();
-
+import {execSync} from 'child_process';
+import fs from 'node:fs';
+import yaml from 'js-yaml';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const NOT_FOUND_PATH = "dist/404.html";
 
 // all translation files
-const en = require("./translations/pages/en.json");
-const ar = require("./translations/pages/ar/ar.json");
-const de = require("./translations/pages/de/de.json");
-const el = require("./translations/pages/el/el.json");
-const es = require("./translations/pages/es/es.json");
-const fr = require("./translations/pages/fr/fr.json");
-const it = require("./translations/pages/it/it.json");
-const ja = require("./translations/pages/ja/ja.json");
-const ko = require("./translations/pages/ko/ko.json");
-const pt = require("./translations/pages/pt/pt.json");
-const ru = require("./translations/pages/ru/ru.json");
-const uk = require("./translations/pages/uk/uk.json");
-const zh = require("./translations/pages/zh/zh.json");
+const en = JSON.parse(fs.readFileSync('./translations/pages/en.json'))
+const ar = JSON.parse(fs.readFileSync('./translations/pages/ar/ar.json'))
+const de = JSON.parse(fs.readFileSync('./translations/pages/de/de.json'))
+const el = JSON.parse(fs.readFileSync('./translations/pages/el/el.json'))
+const es = JSON.parse(fs.readFileSync('./translations/pages/es/es.json'))
+const fr = JSON.parse(fs.readFileSync('./translations/pages/fr/fr.json'))
+const it = JSON.parse(fs.readFileSync('./translations/pages/it/it.json'))
+const ja = JSON.parse(fs.readFileSync('./translations/pages/ja/ja.json'))
+const ko = JSON.parse(fs.readFileSync('./translations/pages/ko/ko.json'))
+const pt = JSON.parse(fs.readFileSync('./translations/pages/pt/pt.json'))
+const ru = JSON.parse(fs.readFileSync('./translations/pages/ru/ru.json'))
+const uk = JSON.parse(fs.readFileSync('./translations/pages/uk/uk.json'))
+const zh = JSON.parse(fs.readFileSync('./translations/pages/zh/zh.json'))
 
 // config
-const {getDocs,
-	getRuDocs,
-	getZhDocs,
-	allDocs} = require('./config/collections/index.js');
-const {
-	svgShortcode,
-	codeHelper,
-	roboWikiNote,
-	roboWikiButton,
-	roboWikiPicture,
-	roboWikiVideo,
-	roboWikiYoutube,
-	roboWikiTabs,
-	roboWikiTab,
-	roboWikiTitle,
-	roboWikiGridWrapper,
-	roboWikiGrid
-} = require('./config/shortcodes/index.js');
-const {
+import { 
+	getDocs,
+	allDocs 
+} from './config/collections/index.js';
+
+// shprtcodes
+import {svgShortcode} from './config/shortcodes/image/index.js';
+import {codeHelper} from './config/shortcodes/code-helper/index.js';
+import {roboWikiNote} from './config/shortcodes/robo-wiki-note/index.js';
+import {roboWikiButton} from './config/shortcodes/robo-wiki-button/index.js';
+import {roboWikiPicture} from './config/shortcodes/robo-wiki-picture/index.js';
+import {roboWikiVideo} from './config/shortcodes/robo-wiki-video/index.js';
+import {roboWikiYoutube} from './config/shortcodes/robo-wiki-youtube/index.js';
+import {roboWikiTabs} from './config/shortcodes/robo-wiki-tabs/index.js';
+import {roboWikiTab} from './config/shortcodes/robo-wiki-tab/index.js';
+import {roboWikiTitle} from './config/shortcodes/robo-wiki-title/index.js';
+import {roboWikiGridWrapper} from './config/shortcodes/robo-wiki-grid-wrapper/index.js';
+import {roboWikiGrid} from './config/shortcodes/robo-wiki-grid/index.js';
+
+import {
 	readableDate,
 	htmlDateString,
 	getAllTags,
@@ -60,30 +61,39 @@ const {
 	nextPage,
 	currentPage,
 	transformSummaryLinks,
-	trimFirstHundredCharacters,
+	trimFirstHundredCharacters
+} from './config/filters/index.js';
+
+
+import {	
 	getCommit,
 	getTitleForIssue
-} = require('./config/filters/index.js');
-const { htmlMinify } = require('./config/transformations/index.js');
-const { markdownLib } = require('./config/libs/index.js');
+} from './config/filters/github/index.js';
+
+
+import { htmlMinify } from './config/transformations/index.js';
+import { markdownLib } from './config/libs/index.js';
+
+import {cssConfig} from './config/css-config.js'
+import {jsConfig} from './config/js-config.js'
 
 
 // plugins
-const embedYouTube = require("eleventy-plugin-youtube-embed");
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight"); // code syntax highlighting
-const pluginBundle = require("@11ty/eleventy-plugin-bundle");
-const pluginNavigation = require("@11ty/eleventy-navigation"); // helps with navigation and pagination as well
-const { EleventyHtmlBasePlugin, EleventyI18nPlugin, EleventyRenderPlugin } = require("@11ty/eleventy"); // base plugins + localization
-const i18n = require('eleventy-i18n'); // for translations
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const relativeUrl = require('eleventy-filter-relative-url');
-const pluginTOC = require('eleventy-plugin-nesting-toc'); // table of content
-const pluginWebc = require('@11ty/eleventy-plugin-webc'); // for webc
-const metagen = require('eleventy-plugin-metagen'); // for pages metadata
-const EleventyPluginOgImage = require('eleventy-plugin-og-image'); // for og images
+import embedYouTube from "eleventy-plugin-youtube-embed";
+import  pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight"; // code syntax highlighting
+import  pluginBundle from  "@11ty/eleventy-plugin-bundle";
+import pluginNavigation from "@11ty/eleventy-navigation"; // helps with navigation and pagination as well
+import { EleventyHtmlBasePlugin, EleventyI18nPlugin, EleventyRenderPlugin } from "@11ty/eleventy"; // base plugins + localization
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import i18n from 'eleventy-i18n'; // for translations
+// import relativeUrl from 'eleventy-filter-relative-url';
+import pluginTOC from 'eleventy-plugin-nesting-toc'; // table of content
+import pluginWebc from '@11ty/eleventy-plugin-webc'; // for webc
+import metagen from 'eleventy-plugin-metagen'; // for pages metadata
+// import EleventyPluginOgImage from 'eleventy-plugin-og-image'; // for og images
 
 
-module.exports = function (eleventyConfig) {
+export default async function(eleventyConfig) {
 
 	// to get 404 page
 	eleventyConfig.setBrowserSyncConfig({
@@ -159,50 +169,50 @@ module.exports = function (eleventyConfig) {
     useTransform: true
   });
 	eleventyConfig.addPlugin(metagen);
-	if (!fs.existsSync('./src/assets/images/og-images') || process.env.ELEVENTY_ENV === 'image') {
-		eleventyConfig.addPlugin(EleventyPluginOgImage, {
-			outputDir: 'src/assets/images/og-images/',
-			urlPath: '/assets/images/og-images/',
-			satoriOptions: {
-				fonts: [
-					{
-						name: 'Noto Sans',
-						data: fs.readFileSync('./src/assets/fonts/NotoSans-SC.otf'),
-						weight: 700,
-						style: 'normal',
-					},
-					{
-						name: 'Noto Sans KO',
-						data: fs.readFileSync('./src/assets/fonts/NotoSans-KO.otf'),
-						weight: 700,
-						style: 'normal',
-					},
-					{
-						name: 'Noto Sans EL',
-						data: fs.readFileSync('./src/assets/fonts/NotoSans-EL.ttf'),
-						weight: 700,
-						style: 'normal',
-					},
-					{
-						name: 'Roboto',
-						data: fs.readFileSync('./src/assets/fonts/roboto-bold-webfont.woff'),
-						weight: 700,
-						style: 'normal',
-					},
-					{
-						name: 'Arabic',
-						data: fs.readFileSync('./src/assets/fonts/NotoSansArabic-Bold.ttf'),
-						weight: 700,
-						style: 'normal',
-					},
-				],
-			},
-		});
-	}	
+	// if (!fs.existsSync('./src/assets/images/og-images') || process.env.ELEVENTY_ENV === 'image') {
+	// 	eleventyConfig.addPlugin(EleventyPluginOgImage, {
+	// 		outputDir: 'src/assets/images/og-images/',
+	// 		urlPath: '/assets/images/og-images/',
+	// 		satoriOptions: {
+	// 			fonts: [
+	// 				{
+	// 					name: 'Noto Sans',
+	// 					data: fs.readFileSync('./src/assets/fonts/NotoSans-SC.otf'),
+	// 					weight: 700,
+	// 					style: 'normal',
+	// 				},
+	// 				{
+	// 					name: 'Noto Sans KO',
+	// 					data: fs.readFileSync('./src/assets/fonts/NotoSans-KO.otf'),
+	// 					weight: 700,
+	// 					style: 'normal',
+	// 				},
+	// 				{
+	// 					name: 'Noto Sans EL',
+	// 					data: fs.readFileSync('./src/assets/fonts/NotoSans-EL.ttf'),
+	// 					weight: 700,
+	// 					style: 'normal',
+	// 				},
+	// 				{
+	// 					name: 'Roboto',
+	// 					data: fs.readFileSync('./src/assets/fonts/roboto-bold-webfont.woff'),
+	// 					weight: 700,
+	// 					style: 'normal',
+	// 				},
+	// 				{
+	// 					name: 'Arabic',
+	// 					data: fs.readFileSync('./src/assets/fonts/NotoSansArabic-Bold.ttf'),
+	// 					weight: 700,
+	// 					style: 'normal',
+	// 				},
+	// 			],
+	// 		},
+	// 	});
+	// }	
 
 	// assets
-	eleventyConfig.addPlugin(require('./config/css-config.js'));
-	eleventyConfig.addPlugin(require('./config/js-config.js'));
+	eleventyConfig.addPlugin(cssConfig);
+	eleventyConfig.addPlugin(jsConfig);
 
 	// layout aliases
   eleventyConfig.addLayoutAlias('home', 'page-index.njk');
@@ -212,8 +222,6 @@ module.exports = function (eleventyConfig) {
 
 	// collections
 	eleventyConfig.addCollection('docs', getDocs);
-	eleventyConfig.addCollection('ruDocs', getRuDocs);
-	eleventyConfig.addCollection('zhDocs', getZhDocs);
   eleventyConfig.addCollection('allDocs', allDocs);
 	// transformations
 	eleventyConfig.addTransform("htmlmin", htmlMinify);
@@ -224,7 +232,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter("getAllTags", getAllTags);
 	eleventyConfig.addFilter("filterTagList", filterTagList);
 	eleventyConfig.addFilter("cssmin", cssMin);
-	eleventyConfig.addFilter('url', relativeUrl);
+	// eleventyConfig.addFilter('url', relativeUrl);
 	eleventyConfig.addFilter('slugify', slugifyString);
 	eleventyConfig.addFilter('toAbsoluteUrl', toAbsoluteUrl);
 	eleventyConfig.addFilter('getCleanPath', getCleanPath);
@@ -283,5 +291,4 @@ module.exports = function (eleventyConfig) {
 		},
 		pathPrefix: "/",
 	}
-
 }

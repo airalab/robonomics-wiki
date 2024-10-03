@@ -1,4 +1,4 @@
-module.exports = {
+export default  {
   eleventyComputed: {
     title: function (data) { 
       if(data.title) {

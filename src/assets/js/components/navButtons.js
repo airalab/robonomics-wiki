@@ -1,6 +1,6 @@
 // same prev/next doc buttons code as in filters, as eleventy can't process client-side (query params, topic that is needed here)
 
-const {translateLine} = require('../customLineTranslation.js');
+import {translateLine} from '../customLineTranslation.js';
 
 document.addEventListener('DOMContentLoaded', function ()  {
 	const config = require('../../../_data/sidebar_docs.json');

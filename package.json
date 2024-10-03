@@ -4,13 +4,14 @@
   "private": true,
   "description": "",
   "main": "index.js",
+  "type": "module",
   "engines": {
-    "node": ">=18.x.x"
+    "node": ">=20.x.x"
   },
   "scripts": {
     "clean": "rimraf dist",
     "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
-    "dev:11ty": "cross-env ELEVENTY_ENV=development --max_old_space_size=8000 eleventy --serve --watch --incremental",
+    "dev:11ty": "cross-env ELEVENTY_ENV=development eleventy --serve --watch --incremental",
     "build:11ty": "cross-env ELEVENTY_ENV=production eleventy",
     "build-image": "cross-env ELEVENTY_ENV=image eleventy --watch",
     "translate-md": "node translations/prompt-md.js",
@@ -22,7 +23,7 @@
   "author": "",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-bundle": "^1.0.5",
@@ -52,6 +53,7 @@
   "dependencies": {
     "@11ty/eleventy-fetch": "^4.0.1",
     "@11ty/eleventy-plugin-webc": "^0.11.2",
+    "@11ty/eleventy-upgrade-help": "^3.0.1",
     "@dotenvx/dotenvx": "^1.14.0",
     "@hcaptcha/vanilla-hcaptcha": "^1.1.0-alpha2",
     "@toycode/markdown-it-class": "^1.2.4",

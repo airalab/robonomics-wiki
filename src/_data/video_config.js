@@ -1,5 +1,5 @@
 // change gateway links in array below
-module.exports = {
+export default {
 	gateways: [
 		'https://ipfs.io/ipfs/',
 		'https://crustipfs.live/ipfs/',

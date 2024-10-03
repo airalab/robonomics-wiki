@@ -1,7 +1,7 @@
 /*
 	available args - columns, align, justify, textAlign, flexible
 */
-const roboWikiGridWrapper = (...args) => {
+export const roboWikiGridWrapper = (...args) => {
 	const content = args[0];
 	const columns = args[1] && args[1].columns ? args[1].columns : 4;
 	const align =  args[1] && args[1].align ? args[1].align : null;
@@ -11,5 +11,3 @@ const roboWikiGridWrapper = (...args) => {
 
 	return `<div class="robo-wiki-grid-container grid-${columns} grid-align-${align} grid-justify-${justify} grid-text-${textAlign} ${flexible ? 'grid-flexible' : ''}">${content}</div>`
 }
-
-module.exports = roboWikiGridWrapper;

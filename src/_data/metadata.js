@@ -1,4 +1,4 @@
-module.exports = {
+export const metadata = {
 	title: "Robonomics Wiki",
 	url: "https://wiki.robonomics.network/",
 	// url: "http://localhost:8080/", // local test

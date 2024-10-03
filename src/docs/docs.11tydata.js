@@ -1,6 +1,6 @@
-const fs = require('fs');
+import fs from 'node:fs';
 
-module.exports = {
+export default {
 	layout: "doc",
 	tags: ['docs'],
 	eleventyComputed: {

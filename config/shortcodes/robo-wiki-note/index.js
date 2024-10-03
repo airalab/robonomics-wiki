@@ -2,7 +2,7 @@
 	available args - content, title, type
 */
 
-const roboWikiNote = (...args) => {
+export const roboWikiNote = (...args) => {
 	let content = args[0];
 	let title =  args[1].title ? args[1].title : '';
 	let type = args[1].type ?  args[1].type : 'note';
@@ -22,4 +22,3 @@ const roboWikiNote = (...args) => {
 	}
 
 };
-module.exports = roboWikiNote;

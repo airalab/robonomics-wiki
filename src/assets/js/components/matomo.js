@@ -1,4 +1,4 @@
-const {translateLine} = require('../customLineTranslation.js');  
+import {translateLine} from '../customLineTranslation.js';
   
   
     document.addEventListener('DOMContentLoaded', function() {                             

@@ -1,6 +1,6 @@
-const esbuild = require('esbuild');
+import esbuild from 'esbuild';
 
-module.exports = eleventyConfig => {
+export const jsConfig = eleventyConfig => {
 	eleventyConfig.addTemplateFormats('js');
 
 	const envPlugin = {
