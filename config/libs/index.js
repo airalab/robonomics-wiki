@@ -1,15 +1,15 @@
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
-const markdownItClass = require('@toycode/markdown-it-class');
-const markdownItLinkAttributes = require('markdown-it-link-attributes');
-const markdownItEleventyImg = require('markdown-it-eleventy-img');
-const markdownItFootnote = require('markdown-it-footnote');
-const markdownitMark = require('markdown-it-mark');
-const markdownitAbbr = require('markdown-it-abbr');
-const {slugifyString} = require('../filters');
-const path = require('path');
+import markdownIt from 'markdown-it';
+import markdownItAnchor from 'markdown-it-anchor';
+import markdownItClass from '@toycode/markdown-it-class';
+import markdownItLinkAttributes from 'markdown-it-link-attributes';
+import markdownItEleventyImg from 'markdown-it-eleventy-img';
+import markdownItFootnote from 'markdown-it-footnote';
+import markdownitMark from 'markdown-it-mark';
+import markdownitAbbr from 'markdown-it-abbr';
+import {slugifyString} from '../filters/index.js';
+import path from 'node:path';
 
-const markdownLib = markdownIt({
+export const markdownLib = markdownIt({
 	html: true,
   breaks: true,
   linkify: true,
@@ -80,4 +80,3 @@ const markdownLib = markdownIt({
   .use(markdownitMark)
   .use(markdownitAbbr);
 
-module.exports = { markdownLib };

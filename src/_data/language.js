@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   en: {
     dir: '', // stands for the direction of the language set in the head, defaults to LTR (left to right)
   },

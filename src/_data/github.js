@@ -1,4 +1,6 @@
-const eleventyFetch = require("@11ty/eleventy-fetch");
+import eleventyFetch from "@11ty/eleventy-fetch";
+
+let github = '';
 
 if(process.env.GITHUB_TOKEN) {
 	const getDocs = async () => {
@@ -23,7 +25,7 @@ if(process.env.GITHUB_TOKEN) {
 		}
 	};
 	
-	module.exports = async function () {
+	github = async function () {
 		let user = "airalab";
 		let repo = "robonomics-wiki"
 		let url = `https://api.github.com/repos/${user}/${repo}/commits`;
@@ -56,5 +58,7 @@ if(process.env.GITHUB_TOKEN) {
 	
 	};
 }
+
+export default github;
 
 

@@ -1,7 +1,7 @@
 /*
 available args - type, anchor
 */
-const roboWikiTitle = (...args) => {
+export const roboWikiTitle = (...args) => {
 	const content = args[0];
 	const type = args[1].type;
 	const anchor = args[1].anchor;
@@ -10,5 +10,3 @@ const roboWikiTitle = (...args) => {
 
 	return `<h${type} class="robo-wiki-title heading-anchor" id="${id}">${anchor ? '<a href="' + link + '" aria-hidden="true"></a>' : ""}${content}</h${type}>`
 }
-
-module.exports = roboWikiTitle;

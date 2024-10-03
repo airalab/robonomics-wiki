@@ -1,8 +1,8 @@
-const htmlmin = require("html-minifier");
+import  htmlmin from "html-minifier";
 
 const isProduction = process.env.ELEVENTY_ENV === 'production';
 
-const htmlMinify = function (content) {
+export const htmlMinify = function (content) {
 	if( (this.page.outputPath && this.page.outputPath.endsWith(".html")) && isProduction ) {
 		let minified = htmlmin.minify(content, {
 			useShortDoctype: true,
@@ -17,6 +17,3 @@ const htmlMinify = function (content) {
 	return content;
 }
 
-module.exports = {
-	htmlMinify
-};

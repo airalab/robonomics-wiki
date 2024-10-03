@@ -1,27 +1,20 @@
-const { DateTime } = require("luxon");
-const CleanCSS = require("clean-css");
-const slugify = require('slugify');
-const {url} = require('../../src/_data/metadata');
-
-
-// other filters imports
-const {
-	getCommit,
-	getTitleForIssue
-} = require('./github');
+import { DateTime } from "luxon";
+import CleanCSS from "clean-css";
+import slugify from 'slugify';
+import {metadata} from '../../src/_data/metadata.js';
 
 const allLocales = ["ar","de","el", "en", "es","fr","it","ja","ko","pt","ru","uk","zh"];
 
-const readableDate = (dateObj, format, zone) => {
+export const readableDate = (dateObj, format, zone) => {
 	return DateTime.fromISO(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
 };
 
-const htmlDateString = (dateObj) => {
+export const htmlDateString = (dateObj) => {
 	return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
 }
 
 // Return all the tags used in a collection
-const getAllTags = collection => {
+export const getAllTags = collection => {
 	let tagSet = new Set();
 	for(let item of collection) {
 		(item.data.tags || []).forEach(tag => tagSet.add(tag));
@@ -30,15 +23,15 @@ const getAllTags = collection => {
 }
 
 // return docs
-const filterTagList = (tags) => {
+export const filterTagList = (tags) => {
 	return (tags || []).filter(tag => ["all", "docs"].indexOf(tag) === -1);
 }
 
-const cssMin = (code) => {
+export const cssMin = (code) => {
 	return new CleanCSS({}).minify(code).styles;
 }
 
-const slugifyString = str => {
+export const slugifyString = str => {
   return slugify(str, {
     replacement: '-',
     remove: /[#,&,+()$~%.'":*¿?¡!<>{}]/g,
@@ -47,9 +40,9 @@ const slugifyString = str => {
 };
 
 /** Formats the given string as an absolute url. */
-const toAbsoluteUrl = link => {
+export const toAbsoluteUrl = link => {
   // Replace trailing slash, e.g., site.com/ => site.com
-  const siteUrl = url.replace(/\/$/, '');
+  const siteUrl = metadata.url.replace(/\/$/, '');
   // Replace starting slash, e.g., /path/ => path/
   const relativeUrl = link.replace(/^\//, '');
 
@@ -58,13 +51,13 @@ const toAbsoluteUrl = link => {
 };
 
 // remove all locales from link
-const getCleanPath = (path) => {
+export const getCleanPath = (path) => {
 	const filteredPath = path.split('/').filter(el => !allLocales.includes(el))
 	return filteredPath.join('/')
 }
 
 // flatten array
-const flatten = (array) => {
+export const flatten = (array) => {
 	let result = [];
 		for (const item of array) {
 			if (item.url) {
@@ -77,7 +70,7 @@ const flatten = (array) => {
   return result;
 }
 
-const flattenAll = (array) => {
+export const flattenAll = (array) => {
 	let result = [];
 		for (const item of array) {
 			if (item) {
@@ -91,14 +84,14 @@ const flattenAll = (array) => {
 }
 
 // string without space
-const convertStringWithoutSpaces = (item) => {
+export const convertStringWithoutSpaces = (item) => {
 	return item.toLowerCase().replace(' ', '-');
 }
 
 // for breadcrumbs
 
 // crating array of breadcrumbs for current page
-const getBreadcrumbs =  (items, path, topic)  => {
+export const getBreadcrumbs =  (items, path, topic)  => {
 
 	const breadcrumbs = [];
 	let urlPath = '';
@@ -135,24 +128,24 @@ const getBreadcrumbs =  (items, path, topic)  => {
 	return breadcrumbs
 }
 
-const getCleanTitleLinkForBreadcrumbs = (title) => {
+export const getCleanTitleLinkForBreadcrumbs = (title) => {
 	return title.split(" ").join("-").toLowerCase();
 }
 
-const getCleanPathForBreadcrumbs = (path) => {
+export const getCleanPathForBreadcrumbs = (path) => {
 	return getCleanPath(path).slice(0, -1)
 }
 
 // end of breadcrumbs
 
 // next, prev page
-const getDocIndex = (items, path) => {
+export const getDocIndex = (items, path) => {
 	return flatten(items).findIndex(item => {
 			return item.url.replace(/\/$/, '') === getCleanPath(path).replace(/\/$/, '')
 	})
 }
 
-const prevPage = (items, index) => {
+export const prevPage = (items, index) => {
 	let prevObj = {...flatten(items)[index - 1]}
 	if(index > -1 && Object.entries(prevObj).length)  {
 		if(prevObj.topic) {
@@ -165,7 +158,7 @@ const prevPage = (items, index) => {
 	}
 }
 
-const nextPage = (items, index) => {
+export const nextPage = (items, index) => {
 	let nextObj = {...flatten(items)[index + 1]}
 	if(index > -1)  {
 		if(nextObj.topic) {
@@ -177,7 +170,7 @@ const nextPage = (items, index) => {
 	}
 }
 
-const currentPage = (items, index) => {
+export const currentPage = (items, index) => {
 	let currObj = {...flatten(items)[index]}
 	if(index > -1)  {
 		return currObj
@@ -185,7 +178,7 @@ const currentPage = (items, index) => {
 }
 // end of next, prev page
 
-const transformSummaryLinks = (links) => {
+export const transformSummaryLinks = (links) => {
 	const newArr = [];
 	links.map(l => {
 		if(l.children) {
@@ -197,32 +190,6 @@ const transformSummaryLinks = (links) => {
 	return newArr
 }
 
-const trimFirstHundredCharacters = (content) => {
+export const trimFirstHundredCharacters = (content) => {
 	return content.slice(0,100).replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)/, " ").replace(/[/\{L}/]/g, " ").replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/\s+/g,' ').trim() + '...'
 }
-
-
-module.exports = {
-  readableDate,
-	htmlDateString,
-	getAllTags,
-	filterTagList,
-	cssMin,
-	slugifyString,
-	toAbsoluteUrl,
-	getCleanPath,
-	flatten,
-	flattenAll,
-	convertStringWithoutSpaces,
-	getBreadcrumbs,
-	getCleanTitleLinkForBreadcrumbs,
-	getCleanPathForBreadcrumbs,
-	getDocIndex,
-	prevPage,
-	nextPage,
-	currentPage,
-	transformSummaryLinks,
-	trimFirstHundredCharacters,
-	getCommit,
-	getTitleForIssue
-};

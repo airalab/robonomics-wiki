@@ -2,8 +2,8 @@
 	available args - src, alt, caption, link, sizes, loading
 */
 
-const path = require("path");
-const eleventyImagePlugin = require("@11ty/eleventy-img");
+import path from 'node:path';
+import eleventyImagePlugin from "@11ty/eleventy-img";
 
 const getFormat = (src) => {
 	const dotIndex = src.lastIndexOf('.');
@@ -12,7 +12,7 @@ const getFormat = (src) => {
 	return format
 }
 
-const roboWikiPicture = async (...args) => {
+export const roboWikiPicture = async (...args) => {
 	let link = null;
 	let src = args[1].src && args[1].src;
 	let caption = args[1].caption ? args[1].caption : '';
@@ -95,5 +95,3 @@ const roboWikiPicture = async (...args) => {
 	</picture>${caption ? '<figcaption class="robo-wiki-picture__text">' + caption + '</figcaption>' : ''}</figure>`
 	}
 }
-
-module.exports = roboWikiPicture;

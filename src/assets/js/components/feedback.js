@@ -1,4 +1,4 @@
-const captcha = require('@hcaptcha/vanilla-hcaptcha');
+import  captcha from '@hcaptcha/vanilla-hcaptcha';
 import { GSCRIPT_ID } from 'env'
 
 document.addEventListener('DOMContentLoaded', function ()  {

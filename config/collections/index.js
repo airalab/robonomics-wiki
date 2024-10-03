@@ -1,18 +1,10 @@
-// docs
-const getDocs = collection => {
+// default (en) docs
+export const getDocs = collection => {
   return collection.getFilteredByGlob('./src/docs/**/*.md');
 };
 
-const getRuDocs = collection => {
-  return collection.getFilteredByGlob('./src/ru/docs/**/*.md');
-};
-
-const getZhDocs = collection => {
-  return collection.getFilteredByGlob('./src/zh/docs/**/*.md');
-};
-
 /** All docs from all locales as a collection. */
-const allDocs = collection => {
+export const allDocs = collection => {
   const tagsSet = new Set();
   collection.getAll().forEach(item => {
     if (!item.data.tags) return;
@@ -23,9 +15,3 @@ const allDocs = collection => {
   return Array.from(tagsSet).sort();
 };
 
-module.exports = {
-  getDocs,
-	getRuDocs,
-	getZhDocs,
-	allDocs,
-};

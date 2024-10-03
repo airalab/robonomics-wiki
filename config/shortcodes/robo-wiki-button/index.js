@@ -2,7 +2,7 @@
 	available arguments - label, link, type='primary', disabled=false, size='medium', additionalText, block=false, extraCls
 */
 
-const roboWikiButton = (...args) => {
+export const roboWikiButton = (...args) => {
 
 	let content = args[0];
 	let label = args[1].label;
@@ -22,5 +22,3 @@ const roboWikiButton = (...args) => {
 		<button type="button" class="button inline-block ${extraCls, type} button__${size} ${block ? 'button__block' : ''}"  :disabled="${disabled}"> ${label || content}</button>`
 	}
 }
-
-module.exports = roboWikiButton;

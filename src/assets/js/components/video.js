@@ -1,5 +1,5 @@
 // needs changes / updates
-const pingIPFS = require('ping-ipfs-gateway')
+import pingIPFS from 'ping-ipfs-gateway';
 document.addEventListener('DOMContentLoaded', async () => {
 
 	const videos = document?.querySelectorAll('.robo-wiki-video--s source');

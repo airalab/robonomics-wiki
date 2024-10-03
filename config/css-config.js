@@ -1,10 +1,10 @@
-const postcss = require('postcss');
-const postcssImport = require('postcss-import');
-const postcssMediaMinmax = require('postcss-media-minmax');
-const autoprefixer = require('autoprefixer');
-const postcssCsso = require('postcss-csso');
+import postcss from 'postcss';
+import postcssImport from 'postcss-import';
+import postcssMediaMinmax from 'postcss-media-minmax';
+import autoprefixer from 'autoprefixer';
+import postcssCsso from 'postcss-csso';
 
-module.exports = eleventyConfig => {
+export const cssConfig = eleventyConfig => {
 	eleventyConfig.addTemplateFormats('css');
 
 	eleventyConfig.addExtension('css', {
