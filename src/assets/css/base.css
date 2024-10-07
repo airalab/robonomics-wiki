@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  transition: color 0.6s, background-color 0.6s;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+}
+html[data-theme="dark"] .jCaptcha {
+  color: #fff;
+}

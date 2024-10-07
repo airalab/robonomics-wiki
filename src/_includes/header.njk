@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" dir="{{ languages[page.lang].dir or 'ltr' }}">
+<head>
+
+	{# initialize dark theme #}
+	<script>
+		const calculateSettingAsThemeString = () => {
+			if (localStorage.getItem('theme') !== null) {
+				return localStorage.getItem('theme')
+			}
+
+			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+				return "dark";
+			}
+
+			return "light";
+		}
+
+			const initTheme = () => {
+			// init theme
+			if(calculateSettingAsThemeString() === 'light') {
+				document?.firstElementChild.setAttribute('data-theme', 'light')
+			} else {
+				document?.firstElementChild.setAttribute('data-theme', 'dark')
+			}
+		}
+
+		initTheme()
+  </script>
+
+{% metagen
+	title = title or metadata.title,
+	desc = description or metadata.description,
+	url = url or metadata.url,
+	img = img or '../assets/og/wiki-og-image-index.png',
+	img_alt = alt or metadata.description,
+	twitter_card_type = 'summary_large_image',
+	twitter_handle = metadata.twitter,
+	generator='eleventy',
+	locale = page.lang or 'en'
+%}
+
+
+  <!-- Favicon  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+
+  {# styles #}
+	<link rel="stylesheet" href="/assets/css/main.css?{{ assetHash }}" />
+  {# js code #}
+  <script defer type="module" src="/assets/js/index.js"></script>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setExcludedReferrers", ["github.com\/kap2fox\/kusama.practice","kap2fox.github.io\/","localhost:8080\/","localhost:3000\/","localhost\/"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo.robonomics.network/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '4']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+</head>
+<body>
+  <header class="header">
+      <div class="header-top">
+
+        <a href="/{{ page.lang if page.lang !== 'en' }}" class="header-logo">
+          <img alt="Robonomics logo" src="/assets/images/robonomic-logo-robo.svg"/>
+          <span>Robonomics WIKI</span>
+        </a>
+        <div class="header-center">
+					{% include "./components/searchBar.njk" %}
+        </div>
+
+        <div class="header-nav">
+          {% include "./components/themeSwitcher.njk" %}
+					{% include "./components/languageSwitcher.njk" %}
+					{% include "./components/headerNav.njk" %}
+        </div>
+      </div>
+
+			{% if not 'docs' in page.url %}
+				<div id="sidebarDocs" popover class="sidebar page__sidebar custom-scroll sidebar--no-doc">
+					{% include "./sidebar.njk" %}
+				</div>
+			{% endif %}
+    </div>
+  </header>

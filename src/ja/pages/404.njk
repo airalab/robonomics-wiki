@@ -1,0 +1,30 @@
+---
+permalink: ja/404.html
+title: This page not found
+---
+
+	{% include 'header.njk' %}
+  <main>
+		<div class="page-404">
+      <div class="page-404__image">
+        <div class="page-404__image-wrapper">
+          <img class="page-404__main-img" aria-hidden="true" src="/assets/images/404/404-img-bg.png" />
+          <img class="page-404__sub-image code-img" aria-hidden="true" src="/assets/images/404/404-code.png" />
+          <img class="page-404__sub-image left-arm" aria-hidden="true" src="/assets/images/404/404-left-arm.png" />
+          <img class="page-404__sub-image left-hand" aria-hidden="true" src="/assets/images/404/404-left-hand.png" />
+          <img class="page-404__sub-image right-arm" aria-hidden="true" src="/assets/images/404/404-right-arm.png" />
+          <img class="page-404__sub-image right-hand" aria-hidden="true" src="/assets/images/404/404-right-hand.png" />
+        </div>
+      </div>
+
+      <h1>404</h1>
+
+      <p>{{ 'Page disappeared, we are sorry' | t }}</p>
+
+      <div class="page-404__wrapper">
+        <p>{{'Some content moved to' | t }} <a href="https://robonomics.academy" target="_blank">{{'academy' | t }}</a>{{'or try to find updated content here on' | t}} <a href="https://wiki.robonomics.network" target="_blank">{{ 'wiki' | t}}</a>.</p>
+      </div>
+    </div>
+
+  </main>
+{% include 'footer.njk' %}

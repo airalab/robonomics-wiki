@@ -1,0 +1,85 @@
+body {
+  --font-size: 1.2rem;
+  --font-family: "Roboto", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-family-code: "Roboto Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+
+
+  --color-dark: #162128;
+  --color-light: #ffffff;
+  --color-gray: #cfcfcf;
+  --body-bg: var(--color-light);
+  --text-color: var(--color-dark);
+  --text-color-invert: #fff;
+  --code-bg: var(--color-dark);
+  --code-bg-inline: rgba(179, 37, 133, 0.06);
+  --code-text: #fff;
+  --code-text-inline: rgb(179, 37, 133);
+  --title-color: #111;
+  --link-color: #5d9deb;
+  --border-color-light: rgba(0, 0, 0, 0.1);
+  --border-color: #dbdbdb;
+  --footer-border-color: #10161a;
+  --color-btn: var(--link-color);
+  --table-bg: transparent;
+  --table-thead-bg: #c5dfff;
+  --table-tr-hover: #e8f3ff;
+  --header-color-bg: #0e161a;
+  --header-color-text: #ced8de;
+  --color-focus: rgb(163, 221, 255);
+  --color-focus-light: rgb(238, 247, 255);
+  --color-link-background-highlight: #f0f7ff;
+  --color-note-accent: #90a4b7;
+  --color-note-pale: #f2f2f2;
+  --color-note-text: var(--text-color);
+  --color-note-accent--okay: #4ab85c;
+  --color-note-pale--okay: #e3fee4;
+  --color-note-accent--warning: #f4a434;
+  --color-note-pale--warning: #fff1dd;
+  --color-emoji-green: #5ecf71;
+  --color-emoji-pink: #cf64c6;
+  --color-emoji-orange: #dd9837;
+  --color-testedFor-text: #f2f2f2;
+  --ghLogo: #212121;
+  --space: 3.5rem;
+  --space-text: 1.6rem;
+  --grid-space: 2rem;
+  --content-width: 900px;
+  --page-width: 1920px;
+  --radius: 4px;
+  --width-sidebar-left: 250px;
+  --width-sidebar-right: 250px;
+}
+
+@media screen and (max-width: 1080px) {
+  body {
+    --space: 2rem;
+    --grid-space: 1rem;
+  }
+}
+
+html[data-theme="dark"] body {
+  --body-bg: #213039;
+  --text-color: #ced8de;
+  --text-color-invert: var(--color-dark);
+  --code-bg-inline: rgba(94, 23, 67, 0.288);
+  --code-text-inline: rgb(255, 60, 193);
+  --title-color: #fff;
+  --link-color: #76b4ff;
+  --border-color: #5f5f5f;
+  --footer-border-color: #fff;
+  --table-bg: var(--color-dark: );
+  --table-thead-bg: #0d1b26;
+  --table-tr-hover: #122636;
+  --color-focus: rgb(9, 61, 95);
+  --color-focus-light: rgb(5, 94, 153);
+  --color-link-background-highlight: #5d9deb;
+  --color-note-accent: #384856;
+  --color-note-pale: #7f8e9c;
+  --color-note-text: #ffffff;
+  --color-note-accent--okay: #234a2a;
+  --color-note-pale--okay: #559a61;
+  --color-note-accent--warning: #8b560c;
+  --color-note-pale--warning: #d19746;
+  --color-testedFor-text: #ececec;
+  --ghLogo: #fff;
+}
