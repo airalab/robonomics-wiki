@@ -55,8 +55,7 @@ The minimum requirements used for this article:
    - **%ROBONOMICS_ACCOUNT_ADDRESS%** — the account address in the Polkadot ecosystem in SS58 format, e.g., `4Gp3QpacQhp4ZReGhJ47pzExQiwoNPgqTWYqEQca9XAvrYsu`
 
 
-2. Note that you need to include *--state-cache-size=0* in the collator's service launch. This parameter is important for the stability of the collator.
-You can see more info in the related [issue](https://github.com/airalab/robonomics/issues/234) on github.
+2. Note that you need to include `--trie-cache-size=0` in the collator's service launch. This parameter is important for the stability of the collator.
 
 ## Easy to Start Collator for the First Time
 
@@ -74,6 +73,7 @@ robonomics \
   --base-path="%BASE_PATH%" \
   --trie-cache-size=0 \
   -- \
+  --chain=%CHAIN_NAME%
   --sync=warp
 ```
 
@@ -138,6 +138,7 @@ After doing this, it is strongly recommended to launch the Robonomics collator a
     --base-path="%BASE_PATH%" \
     --trie-cache-size=0 \
     -- \
+    --chain=%CHAIN_NAME%
     --sync=warp
 
   [Install]
@@ -188,64 +189,24 @@ Your node should start and show up in the telemetry stats: https://telemetry.par
 Once the Robonomics collator is launched, it will begin to sync with the Relay Chain. This process can take a considerable amount of time, depending on your network speed and system specifications, so we recommend downloading a snapshot.
 
 
-## Speeding Up the Sync using Snapshots
+## Troubleshooting
 
-Snapshots are compressed backups of the database directory of a Polkadot or Kusama node. If you download an up-to-date database snapshot, your node will be up and running more quickly—typically within an hour or a few hours, depending on network speed.
+### Error: "State Database error: Too many sibling blocks inserted"
 
-We recommend using it immediately after you've created and started the Robonomics service. You can find more info about snapshots and their usage instructions on [the page on the Polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#database-snapshot-services).
+To fix this error, you can launch your collator in archive mode.
 
-In this example, we will use the service https://snapshots.polkadot.io:
-
-1. Stop the Robonomics service and remove the current relay database directory.
+1. First, stop the Robonomics service:
 
   {% codeHelper { copy: true}%}
 
-  ```shell
+  ```
   sudo systemctl stop robonomics.service
-  sudo rm -rf %BASE_PATH%/polkadot/chains/%CHAIN_NAME%/db/
   ```
 
   {% endcodeHelper %}
 
-2. Download the latest snapshot using [rclone](https://rclone.org/downloads/) and extract it. Note the database type (`rocksdb` or `paritydb`):
 
-  {% roboWikiNote {type: "warning", title: "DB Pruning"}%}
-
-  Please note that the database is available in two variants: archive and pruned. The archive database retains the full history of blocks (and requires significant storage), while the pruned version keeps only the state of the past 256 or 1000 blocks.
-
-  {% endroboWikiNote %}
-
-  {% codeHelper { copy: true}%}
-
-  ```shell
-  export SNAPSHOT_URL="https://snapshots.polkadot.io/[snapshot_name]/[date]"
-  export PATH_TO_DB_FOLDER="%BASE_PATH%/polkadot/chains/%CHAIN_NAME%/db/"
-  rclone copyurl $SNAPSHOT_URL/files.txt files.txt
-  sudo rclone copy --progress --transfers 20 --http-url $SNAPSHOT_URL --no-traverse --http-no-head --disable-http2 --inplace --no-gzip-encoding --size-only --retries 6 --retries-sleep 10s --files-from files.txt :http: $PATH_TO_DB_FOLDER
-  rm files.txt
-  ```
-
-  {% endcodeHelper %}
-
-3. Set the correct ownership for the database folder.
-
-  {% codeHelper { copy: true}%}
-
-  ```shell
-  sudo chown -R robonomics:robonomics %BASE_PATH%/polkadot/chains/%CHAIN_NAME%
-  ```
-
-  {% endcodeHelper %}
-
-4. Add additional arguments to the Systemd service:
-
-  {% codeHelper { copy: true}%}
-
-  ```shell
-  sudo nano /etc/systemd/system/robonomics.service
-  ```
-
-  {% endcodeHelper %}
+2. Then add the parameter `--state-pruning=archive` to the parachain part of the service file. Example of the edited service file:
 
   {% codeHelper { copy: true}%}
 
@@ -268,9 +229,10 @@ In this example, we will use the service https://snapshots.polkadot.io:
     --telemetry-url="wss://telemetry.parachain.robonomics.network/submit/ 0" \
     --base-path="%BASE_PATH%" \
     --trie-cache-size=0 \
+    --state-pruning=archive
     -- \
-    --database=%DATABASE_TYPE%
-    --state-pruning=#256 or 1000, if you used pruned DB
+    --chain=%CHAIN_NAME%
+    --sync=warp
 
   [Install]
   WantedBy=multi-user.target
@@ -278,74 +240,41 @@ In this example, we will use the service https://snapshots.polkadot.io:
 
   {% endcodeHelper %}
 
-5. Start the Robonomics service again and check the service logs:
 
-  ```shell
-  sudo systemctl start robonomics.service
-  journalctl -u robonomics.service -f
+3. Reload the systemd manager configuration:
+
+  {% codeHelper { copy: true}%}
+
+  ```
+  sudo systemctl daemon-reload
   ```
 
-## Troubleshooting
+  {% endcodeHelper %}
 
-### Error: "State Database error: Too many sibling blocks inserted"
+4. Remove the existing parachain database:
 
+  {% codeHelper { copy: true}%}
 
-For fix this error you can just launch your collator in archive mode:
+  ```
+  sudo rm -rf %BASE_PATH%/chains/robonomics/db/
+  ```
 
-1) First, need to stop the Robonomics service:
+  {% endcodeHelper %}
 
-    root@robokusama-collator-screencast:~# systemctl stop robonomics.service
+5. Start the Robonomics service:
 
+  {% codeHelper { copy: true}%}
 
-2) Then add the parameter `--state-pruning=archive` to the parachain part of the service file. Example of the edited service file:
-    ```
-    [Unit]
-    Description=robonomics
-    After=network.target
+  ```
+  sudo systemctl start robonomics.service
+  ```
 
-    [Service]
-    User=robonomics
-    Group=robonomics
-    Type=simple
-    Restart=on-failure
+  {% endcodeHelper %}
 
-    ExecStart=/usr/local/bin/robonomics \
-    --parachain-id=2048 \
-    --name="%NODE_NAME%" \
-    --validator \
-    --lighthouse-account="%ROBONOMICS_ACCOUNT_ADDRESS%" \
-    --telemetry-url="wss://telemetry.parachain.robonomics.network/submit/ 0" \
-    --base-path="%BASE_PATH%" \
-    --state-cache-size=0 \
-    --execution=Wasm \
-    --state-pruning=archive \
-    -- \
-    --database=RocksDb \
-    --execution=Wasm
-
-    [Install]
-    WantedBy=multi-user.target
-    ```
-
-3) Reload the systemd manager configuration:
-    ```
-    root@robokusama-collator-screencast:~# systemctl daemon-reload
-    ```
-
-4) Remove the exists parachain database:
-    ```
-    root@robokusama-collator-screencast:~# rm -rf %BASE_PATH%/chains/robonomics/db/
-    ```
-
-5) Start the robonomics service:
-    ```
-    root@robokusama-collator-screencast:~# systemctl start robonomics.service
-    ```
-
-    After that need to wait for the synchronization of the parahain database.
+After that, wait for the synchronization of the parachain database.
 
 ### Error: "cannot create module: compilation settings are not compatible with the native host"
 
-This error related to the virtualization parameters. Need to use "host-model" type of the emulated processor. You can set up this on the virtualisation host.
+This error is related to virtualization parameters. You need to use the "host-model" type for the emulated processor. You can set this up on the virtualization host.
 
-But, if you catch this error on any hosting, you need to ask the technical support about this problem only.
+If you encounter this error on any hosting service, you need to contact technical support about this issue.
