@@ -1,36 +1,64 @@
 ---js
 {
-	"pagination": {
-		"data": "sidebar_docs",
-		"before": function(paginationData, fullData){
-			const filteredArr = []
-			this.flattenAll(paginationData).map(d => {
-				if (d.children) {
-					filteredArr.push(d)
+  "pagination": {
+    "data": "sidebar_docs",
+    "size": 1, // Keep size at 1 to limit pages being processed
+    "alias": "doc",
+    
+    // Lazy processing in 'before' hook to handle memory better
+    "before": function(paginationData, fullData) {
+      const filteredArr = [];
+			if(fullData.vars.env === 'production') {
+					this.flattenAll(paginationData).map(d => {
+						if (d.children) {
+							filteredArr.push(d);
+						}
+					});
+			} else {
+				// Use a for loop for better performance and lazy loading
+				for (let i = 0; i < paginationData.length; i++) {
+					const item = paginationData[i];
+
+					// Process only relevant parts of the data
+					if (item && item.children) {
+						filteredArr.push(item);
+					}
+					
+					// Early exit if filtered array reaches an optimal size for memory efficiency
+					if (filteredArr.length >= 2) {
+						break; // Adjust the chunk size based on your needs
+					}
 				}
-			})
-			return filteredArr
-		},
-		"size": 1,
-		"alias": "doc"
-	},
-	"permalink": "el/summary/{{ doc.title | slugify }}/index.html",
-	"layout": "home",
-	"title": "Document summary  Explore Robonomics with guides",
-	"description": "Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network."
+			}
+
+
+      
+      return filteredArr;
+    }
+  },
+  
+  "layout": "home",
+  "title": "Document summary  Explore Robonomics with guides",
+  "description": "Learn Robonomics through tutorials and practically useful experimenting. This documentation is designed to help you connect robots or code dApps within Robonomics Network.",
+  
+  "permalink": "el/summary/{{ doc.title | slugify }}/index.html"
 }
 ---
 
-<h1><a href="/">{{'Home' | t}}</a> / {{doc.title | t}} </h1>
 
-{% set links = doc.children |	transformSummaryLinks%}
+{% if vars.env == 'production' %}
 
-<nav class="grid-navigation">
-	{% for item in links %}
-		{% if item.topic %}
-			<a href="{{item.url | toAbsoluteUrl}}/?topic={{item.topic}}">{{item.title | t}}</a>
-		{% else %}
-			<a href="{{item.url | toAbsoluteUrl}}">{{item.title | t}}</a>
-		{% endif %}
-	{% endfor %}
-</nav>
+	<h1><a href="/">{{'Home' | t}}</a> / {{doc.title | t}} </h1>
+
+	{% set links = doc.children |	transformSummaryLinks%}
+
+	<nav class="grid-navigation">
+		{% for item in links %}
+			{% if item.topic %}
+				<a href="{{item.url | toAbsoluteUrl}}/?topic={{item.topic}}">{{item.title | t}}</a>
+			{% else %}
+				<a href="{{item.url | toAbsoluteUrl}}">{{item.title | t}}</a>
+			{% endif %}
+		{% endfor %}
+	</nav> 
+{% endif %}

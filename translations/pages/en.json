@@ -139,5 +139,9 @@
 	"You are currently opted out.": "You are currently opted out.",
 	"Check this box to opt-in.": "Check this box to opt-in.",
 	"{# for tanslation": "{# for tanslation",
-	"#}": "#}"
+	"#}": "#}",
+	"test": "test",
+	"Robotics and ROS 2": "Robotics and ROS 2",
+	"About Robonomics ROS 2 Wrapper": "About Robonomics ROS 2 Wrapper",
+	"Launch Robot from Cloud": "Launch Robot from Cloud"
 }

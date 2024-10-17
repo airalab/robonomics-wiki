@@ -86,12 +86,9 @@ import pluginNavigation from "@11ty/eleventy-navigation"; // helps with navigati
 import { EleventyHtmlBasePlugin, EleventyI18nPlugin, EleventyRenderPlugin } from "@11ty/eleventy"; // base plugins + localization
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import i18n from 'eleventy-i18n'; // for translations
-// import relativeUrl from 'eleventy-filter-relative-url';
 import pluginTOC from 'eleventy-plugin-nesting-toc'; // table of content
 import pluginWebc from '@11ty/eleventy-plugin-webc'; // for webc
 import metagen from 'eleventy-plugin-metagen'; // for pages metadata
-// import EleventyPluginOgImage from 'eleventy-plugin-og-image'; // for og images
-
 
 export default async function(eleventyConfig) {
 
@@ -115,6 +112,18 @@ export default async function(eleventyConfig) {
 				});
 			},
 		},
+		files: './_dist',
+		rewriteRules: [
+			{
+				match: /\/$/,
+				fn: function(req, res, match) {
+					if (req.url.endsWith('/')) {
+						req.url = req.url.slice(0, -1); // Remove trailing slash
+					}
+					return req.url;
+				}
+			}
+		]
 	});
 
 	// eleventy copy assets
@@ -162,6 +171,7 @@ export default async function(eleventyConfig) {
     translations: {
 			en, ar, de, el, es, fr, it, ja, ko, pt, ru, uk, zh 
     },
+		fallbackLanguageTag: 'en',
   });
 	eleventyConfig.addPlugin(pluginTOC);
 	eleventyConfig.addPlugin(pluginWebc, {
@@ -169,46 +179,6 @@ export default async function(eleventyConfig) {
     useTransform: true
   });
 	eleventyConfig.addPlugin(metagen);
-	// if (!fs.existsSync('./src/assets/images/og-images') || process.env.ELEVENTY_ENV === 'image') {
-	// 	eleventyConfig.addPlugin(EleventyPluginOgImage, {
-	// 		outputDir: 'src/assets/images/og-images/',
-	// 		urlPath: '/assets/images/og-images/',
-	// 		satoriOptions: {
-	// 			fonts: [
-	// 				{
-	// 					name: 'Noto Sans',
-	// 					data: fs.readFileSync('./src/assets/fonts/NotoSans-SC.otf'),
-	// 					weight: 700,
-	// 					style: 'normal',
-	// 				},
-	// 				{
-	// 					name: 'Noto Sans KO',
-	// 					data: fs.readFileSync('./src/assets/fonts/NotoSans-KO.otf'),
-	// 					weight: 700,
-	// 					style: 'normal',
-	// 				},
-	// 				{
-	// 					name: 'Noto Sans EL',
-	// 					data: fs.readFileSync('./src/assets/fonts/NotoSans-EL.ttf'),
-	// 					weight: 700,
-	// 					style: 'normal',
-	// 				},
-	// 				{
-	// 					name: 'Roboto',
-	// 					data: fs.readFileSync('./src/assets/fonts/roboto-bold-webfont.woff'),
-	// 					weight: 700,
-	// 					style: 'normal',
-	// 				},
-	// 				{
-	// 					name: 'Arabic',
-	// 					data: fs.readFileSync('./src/assets/fonts/NotoSansArabic-Bold.ttf'),
-	// 					weight: 700,
-	// 					style: 'normal',
-	// 				},
-	// 			],
-	// 		},
-	// 	});
-	// }	
 
 	// assets
 	eleventyConfig.addPlugin(cssConfig);

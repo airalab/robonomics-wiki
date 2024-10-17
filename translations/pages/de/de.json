@@ -140,5 +140,6 @@
 	"You are currently opted out.": "Sie sind derzeit abgemeldet.",
 	"Check this box to opt-in.": "Kreuzen Sie dieses Kästchen an, um zuzustimmen.",
 	"{# for tanslation": "{# für Übersetzung",
-	"#}": "This string does not contain any meaningful text in English."
+	"#}": "This string does not contain any meaningful text in English.",
+	"test": "Test"
 }

@@ -1,4 +1,7 @@
-const config = {
+import dotenv from "dotenv";
+dotenv.config();
+
+export const config = {
   key: process.env.OPENAI_KEY, // your OPENAI key
   allFiles: ['**/*.+(html|njk)', './src/_data/sidebar_docs.json'], // array of files for translation (with the help of glob)
   excludeFiles: ['node_modules/**', 'dist/**', './src/_includes/ogImage.og.njk', './src/_includes/header.njk'], // files to exclude from ai translation
@@ -9,17 +12,11 @@ const config = {
   JSONKey: 'title' // key to find values for translation in json file
 }
 
-const configMD = {
+export const configMD = {
   key: process.env.OPENAI_KEY, // your OPENAI key
   inputFolder: './src/docs/', // folder with markdown files
   inputFolderName: 'docs',
   outputFolder: './src/', // endpoint translations folder
   defaultLocale: 'en',
   locales: ["ar","de","el","es","fr","it","ja","ko","pt","ru","uk","zh"], // array with all locales
-}
-
-
-module.exports = {
-  config,
-  configMD
 }

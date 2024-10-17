@@ -147,5 +147,6 @@
 	"You are currently opted out.": "Вы в настоящее время отказались от участия.",
 	"Check this box to opt-in.": "Установите этот флажок, чтобы подписаться.",
 	"{# for tanslation": "{# для перевода",
-	"#}": "This string does not appear to be a complete sentence or phrase in English. It seems to be a fragment or a placeholder. If you provide more context or information, I would be happy to help translate it into Russian."
+	"#}": "This string does not appear to be a complete sentence or phrase in English. It seems to be a fragment or a placeholder. If you provide more context or information, I would be happy to help translate it into Russian.",
+	"test": "тест"
 }

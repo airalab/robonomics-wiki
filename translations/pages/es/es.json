@@ -146,5 +146,6 @@
 	"You are currently opted out.": "Actualmente estás excluido.",
 	"Check this box to opt-in.": "Marca esta casilla para optar por participar.",
 	"{# for tanslation": "{# para traducción",
-	"#}": "No puedo traducir este fragmento ya que no contiene texto. ¿Hay algo más con lo que pueda ayudarte?"
+	"#}": "No puedo traducir este fragmento ya que no contiene texto. ¿Hay algo más con lo que pueda ayudarte?",
+	"test": "prueba"
 }

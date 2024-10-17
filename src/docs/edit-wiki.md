@@ -454,6 +454,14 @@ If you need to edit sidebar navigation of Robonomics Wiki, please, follow these 
 
 * Use valid JSON for `src/_data/sidebar_docs.json` and rely on the existing file structure
 
+* You must add new lines to translation file `translations/pages/en.json` as well, if you are not translated new content before hand, e.g: 
+
+```json
+{"Launch Robot from Cloud": "Launch Robot from Cloud"}
+```
+
+</br>
+
 * **IMPORTANT NOTE:** if you're using the same doc in different sections/subsections e.g:
 
 ```
