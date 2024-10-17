@@ -253,7 +253,7 @@
         "url": "/docs/how-to-build-collator-node"
       },
       {
-        "title": "How to launch the Robonomics collator",
+        "title": "Launch of Robonomics Collator",
         "url": "/docs/how-to-launch-the-robonomics-collator"
       },
       {
@@ -271,6 +271,19 @@
       {
         "title": "How to Contribute",
         "url": "/docs/contributing"
+      }
+    ]
+  },
+  {
+    "title": "Robotics and ROS 2",
+    "children": [
+      {
+        "title": "About Robonomics ROS 2 Wrapper",
+        "url": "/docs/ros2-about-wrapper"
+      },
+      {
+        "title": "Launch Robot from Cloud",
+        "url": "/docs/ros2-launch-robot-cloud"
       }
     ]
   }

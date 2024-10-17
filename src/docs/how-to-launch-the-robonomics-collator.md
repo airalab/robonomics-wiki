@@ -1,244 +1,284 @@
 ---
-title: How to launch the Robonomics collator
-contributors: [dergudzon, Leemo94]
+title: Launch of Robonomics Collator
+contributors: [dergudzon, Leemo94, Fingerling42]
 tools:
-  - Ubuntu 22.04.1
+  - Ubuntu 22.04.4
     https://releases.ubuntu.com/22.04/
-  - Robonomics 2.6.0
+  - Robonomics 3.2.0
     https://github.com/airalab/robonomics
 ---
 
+**Anyone can maintain the Robonomics Network infrastructure. Every additional full node of the blockchain helps it to become more sustainable and fault-tolerant. Binaries of the Robonomics node are available in [release](https://github.com/airalab/robonomics/releases) assets, or it can be [built from source](/docs/how-to-build-collator-node/).**
 
-{% roboWikiNote {title:"note", type: "note"}%} In the screencast and screenshots of this article, we used version 1.4.0 of Robonomics. You need to use the same commands, but replace the version of Robonomics with the current one.{% endroboWikiNote %}
+*Screencast with the launch of the collator for version 1.4.0:*
 
 https://youtu.be/wUTDDLDbzTg
 
-Currently the Robonomics network is primarily maintained by the initial developers, but anyone can support the project. Every additional full node of the blockchain helps it to become more sustainable and fault tolerant. Robonomics node binaries are available in [release](https://github.com/airalab/robonomics/releases) assets or it can be [built from source](/docs/how-to-build-collator-node/).
+## What is a Collator
 
-## What is a collator
+A Collator is part of the Robonomics parachain. This type of node creates new blocks for the Robonomics chain on Polkadot and Kusama.
 
-A Collator is part of the Robonomics parachain. This type of node creates new blocks for the Robonomics chain.
+ {% roboWikiNote {type: "okay"}%}
 
->Collators maintain parachains by collecting parachain transactions from users and producing state transition proofs for Relay Chain validators. In other words, collators maintain parachains by aggregating parachain transactions into parachain block candidates and producing state transition proofs for validators based on those blocks.
+ Collators maintain parachains by collecting parachain transactions from users and producing state transition proofs for Relay Chain validators. In other words, collators maintain parachains by aggregating parachain transactions into parachain block candidates and producing state transition proofs for validators based on those blocks.
 
-You can learn more about collators on the related [Polkadot wiki page](https://wiki.polkadot.network/docs/learn-collator)
+ {% endroboWikiNote %}  
 
-In the Robonomics parachain every collator gets rewards of (**0.001598184 XRT**) for every block that the collator builds (rewards occur when blocks are sealed to the chain).
-Also the collator that builds the block gets **50% of transactions fees** contained within the block they create.
+You can learn more about collators on the related [Polkadot wiki page](https://wiki.polkadot.network/docs/learn-collator).
+
+In both Polkadot and Kusama parachains of Robonomics, every collator earns a reward of (**0.001598184 XRT**) for each block that they build (rewards are granted when blocks are sealed to the chain). You can check the reward amount by using the Polkadot portal: go to **Developer** -> **Chain state** -> **Constants** and make a query for `lighthouse` -> `blockReward`. Additionally, the collator that builds the block receives **50% of transaction fees** contained within the block they create.
 
 ## Requirements
 
 It is recommended that you launch a collator using the **standard hardware requirements** for [Polkadot validators](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#standard-hardware):
-+ x86-64 compatible.
-+ Intel Ice Lake, or newer (Xeon or Core series); AMD Zen3, or newer (EPYC or Ryzen).
-+ 4 physical cores @ 3.4GHz.
-+ Simultaneous multithreading disabled (Hyper-Threading on Intel, SMT on AMD).
-+ Storage - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth).
-+ Memory - 32 GB DDR4 ECC
+
+- x86-64 compatible
+- Intel Ice Lake, or newer (Xeon or Core series); AMD Zen3, or newer (EPYC or Ryzen)
+- 8 physical cores @ 3.4GHz
+- simultaneous multithreading disabled (Hyper-Threading on Intel, SMT on AMD)
+- storage — an NVMe SSD of 1 TB (reasonably sized to handle blockchain growth)
+- memory — 32 GB DDR4 ECC
+
+The minimum requirements used for this article:
+
+- 2 CPU or vCPU
+- 700 GB of NVMe space for the collator's databases with the ability to expand disk space
+- 8 GB RAM
+
+## Preliminary Information
+
+1. We use some variables in these instructions, and you'll need to replace the placeholder values with your own in all commands:
+
+   - **%CHAIN_NAME%** — name of the relay chain in which the parachain is connected, `polkadot` or `kusama`
+   - **%NODE_NAME%** — the node name, e.g., `my-robonomics-kusama-collator`
+   - **%BASE_PATH%** — the path to the mounted volume on storage, e.g., */mnt/HC_Volume_16056435/*
+   - **%ROBONOMICS_ACCOUNT_ADDRESS%** — the account address in the Polkadot ecosystem in SS58 format, e.g., `4Gp3QpacQhp4ZReGhJ47pzExQiwoNPgqTWYqEQca9XAvrYsu`
 
 
-In this article we use next specifications:
-+ 4 vCPU
-+ 700 GB of NVMe space for collator's databases. The ability to expand this disk space is required.
-+ 8GB RAM
+2. Note that you need to include `--trie-cache-size=0` in the collator's service launch. This parameter is important for the stability of the collator.
 
+## Easy to Start Collator for the First Time
 
-## Important information
-1. We use some variables in these instructions, and you'll need to replace the values for your own in all the commands:
-    + **%NODE_NAME%** is the node name. Example: *my-robonomics-kusama-collator*
-    + **%BASE_PATH%** is the path to mounted volume. Example: */mnt/HC_Volume_16056435/*
-    + **%POLKADOT_ACCOUNT_ADDRESS%** is the account address in the Polkadot ecosystem in SS58 format. Example: *4Gp3QpacQhp4ZReGhJ47pzExQiwoNPgqTWYqEQca9XAvrYsu*
+You can easily launch a collator directly in the command line to check for errors. Do not forget to specify the network you want to connect to in the `--chain` argument.
 
-2. Note that you need to include *--state-cache-size=0* in the collator's service launch. This parameter is important for the stability of the collator.
-You can see more info in the related [issue](https://github.com/airalab/robonomics/issues/234) on github.
+{% codeHelper { copy: true}%}
 
-## First time easily launch a Robonomics collator
-
-You can easily launch a collator directly in the command line to check for errors.
-After doing this it is strongly recommended to launch the Robonomics collator as a service (watch next step).
-
-```
-root@robokusama-collator-screencast:~# robonomics \
-  --parachain-id=2048 \
+```shell
+robonomics \
+  --chain=%CHAIN_NAME% \
   --name="%NODE_NAME%" \
-  --validator \
-  --lighthouse-account="%POLKADOT_ACCOUNT_ADDRESS%" \
+  --collator \
+  --lighthouse-account="%ROBONOMICS_ACCOUNT_ADDRESS%" \
   --telemetry-url="wss://telemetry.parachain.robonomics.network/submit/ 0" \
   --base-path="%BASE_PATH%" \
-  --state-cache-size=0 \
+  --trie-cache-size=0 \
   -- \
-  --database=RocksDb
+  --chain=%CHAIN_NAME%
+  --sync=warp
 ```
 
+{% endcodeHelper %}
 
-## Launch the Robonomics collator as a service
+After doing this, it is strongly recommended to launch the Robonomics collator as a service (see the next step).
 
-1. Create the user for the service with home directory
-    ```
-    root@robokusama-collator-screencast:~# useradd -m robonomics
-    ```
+## Launch the Robonomics Collator as a Systemd Service
 
-2. Download, extract and move the Robonomics binary to the */usr/local/bin/* directory. You need to replace *$ROBONOMICS_VERSION* with the current version of Robonomics in the commands in this section. You can find the current version on the [Releases page of the Robonomics repository on github](https://github.com/airalab/robonomics/releases).
-   ```
-   root@robokusama-collator-screencast:~# wget https://github.com/airalab/robonomics/releases/download/v$ROBONOMICS_VERSION/robonomics-$ROBONOMICS_VERSION-x86_64-unknown-linux-gnu.tar.gz
-   root@robokusama-collator-screencast:~# tar -xf robonomics-$ROBONOMICS_VERSION-x86_64-unknown-linux-gnu.tar.gz
-   root@robokusama-collator-screencast:~# mv robonomics /usr/local/bin/
-   ```
+1. Create a user for the service with a home directory:
 
-	 		{% roboWikiPicture {src:"docs/how-to-launch-the-robonomics-collator/wget_binary.png", alt:"Download Robonomics 1.4.0 binary"} %}{% endroboWikiPicture %}
+  {% codeHelper { copy: true}%}
 
+  ```shell
+  sudo useradd -m robonomics
+  ```
 
-3. Create the systemd service file named *robonomics.service*:
-    ```
-    root@robokusama-collator-screencast:~# nano /etc/systemd/system/robonomics.service
-    ```
+  {% endcodeHelper %}
 
-    And add the following lines in the service file:
-    ```
-    [Unit]
-    Description=robonomics
-    After=network.target
+2. Download, extract, and move the Robonomics binary to the `/usr/local/bin/` directory. You can find the current version of the Robonomics node on the releases page of the [Robonomics repository](https://github.com/airalab/robonomics/releases):
 
-    [Service]
-    User=robonomics
-    Group=robonomics
-    Type=simple
-    Restart=on-failure
+  {% codeHelper { copy: true}%}
 
-    ExecStart=/usr/local/bin/robonomics \
-      --parachain-id=2048 \
-      --name="%NODE_NAME%" \
-      --validator \
-      --lighthouse-account="%POLKADOT_ACCOUNT_ADDRESS%" \
-      --telemetry-url="wss://telemetry.parachain.robonomics.network/submit/ 0" \
-      --base-path="%BASE_PATH%" \
-      --state-cache-size=0 \
-      --execution=Wasm \
-      -- \
-      --database=RocksDb \
-      --execution=Wasm
+  ```shell
+  wget %ROBONOMICS_NODE_LINK%
+  tar -xvzf %ROBONOMICS_NODE_ARCHVIE%
+  sudo mv robonomics /usr/local/bin/
+  ```
+  {% endcodeHelper %}
 
-    [Install]
-    WantedBy=multi-user.target
-    ```
+3. Create the systemd service file named `robonomics.service`:
 
-		{% roboWikiPicture {src:"docs/how-to-launch-the-robonomics-collator/nano_robonomics_service.png", alt:"Create Robonomics service file"} %}{% endroboWikiPicture %}
+  {% codeHelper { copy: true}%}
 
+  ```shell
+  sudo nano /etc/systemd/system/robonomics.service
+  ```
 
-    ```
-    root@robokusama-collator-screencast:~# chown -R robonomics:robonomics %BASE_PATH%
-    ```
+  {% endcodeHelper %}
 
+  And add the following lines in the service file:
 
-4. Save this file, then enable and start the service:
-    ```
-    root@robokusama-collator-screencast:~# systemctl enable robonomics.service
-    root@robokusama-collator-screencast:~# systemctl start robonomics.service
-    ```
+  {% codeHelper { copy: true}%}
 
-Telemetry url: https://telemetry.parachain.robonomics.network/#/Robonomics
+  ```
+  [Unit]
+  Description=robonomics
+  After=network.target
 
-Collators logs can be monitored with: `journalctl -u robonomics.service -f`
+  [Service]
+  User=robonomics
+  Group=robonomics
+  Type=simple
+  Restart=on-failure
 
-Once the Robonomics collator is launched it will begin to sync with the Kusama Relay Chain, this can take a considerable amount of time, depending on your network speed and system specifications, so we recommend to download a Kusama snapshot.
-
-
-## Speeding up the sync process using a Kusama snapshot
-
-We recommend to do this immediately after you've created and started the Robonomics service. You can find more info about snapshots and usage instructions on the following page: https://ksm-rocksdb.polkashots.io/
-
-Instructions:
-
-1. Stop the Robonomics service and remove the current Kusama database directory:
-    ```
-    root@robokusama-collator-screencast:~# systemctl stop robonomics.service
-    root@robokusama-collator-screencast:~# rm -rf %BASE_PATH%/polkadot/chains/ksmcc3/db/
-    ```
-2. Download the actual snapshot and extract it:
-    ```
-    root@robokusama-collator-screencast:~# wget https://ksm-rocksdb.polkashots.io/snapshot -O kusama.RocksDb.tar.lz4
-    root@robokusama-collator-screencast:~# lz4 -c -d kusama.RocksDb.tar.lz4 | tar -x -C %BASE_PATH%/polkadot/chains/ksmcc3
-    ```
-
-		{% roboWikiPicture {src:"docs/how-to-launch-the-robonomics-collator/wget_kusama_snapshot.png", alt:"Download Kusama snapshot"} %}{% endroboWikiPicture %}
-
-    You can remove the downloaded archive after succesful unpacking:
-    ```
-    root@robokusama-collator-screencast:~# rm -v kusama.RocksDb.tar.lz4
-    ```
-
-3. Setting the right ownership for the database folder:
-    ```
-    root@robokusama-collator-screencast:~# chown -R robonomics:robonomics %BASE_PATH%/polkadot/chains/ksmcc3
-    ```
-4. Start the Robonomics service again:
-    ```
-    root@robokusama-collator-screencast:~# systemctl start robonomics.service
-    ```
-5. Check service logs:
-    ```
-    root@robokusama-collator-screencast:~# journalctl -u robonomics.service -f
-    ```
-
-		{% roboWikiPicture {src:"docs/how-to-launch-the-robonomics-collator/finish_journalctl.png", alt:"Check service logs"} %}{% endroboWikiPicture %}
-
-## Troubleshooting
-### Error: "State Database error: Too many sibling blocks inserted"
-For fix this error you can just launch your collator in archive mode:
-
-1) First, need to stop the Robonomics service:
-
-    root@robokusama-collator-screencast:~# systemctl stop robonomics.service
-
-
-2) Then add the parameter `--state-pruning=archive` to the parachain part of the service file. Example of the edited service file:
-    ```
-    [Unit]
-    Description=robonomics
-    After=network.target
-
-    [Service]
-    User=robonomics
-    Group=robonomics
-    Type=simple
-    Restart=on-failure
-
-    ExecStart=/usr/local/bin/robonomics \
-    --parachain-id=2048 \
+  ExecStart=/usr/local/bin/robonomics \
+    --chain=%CHAIN_NAME% \
     --name="%NODE_NAME%" \
-    --validator \
-    --lighthouse-account="%POLKADOT_ACCOUNT_ADDRESS%" \
+    --collator \
+    --lighthouse-account="%ROBONOMICS_ACCOUNT_ADDRESS%" \
     --telemetry-url="wss://telemetry.parachain.robonomics.network/submit/ 0" \
     --base-path="%BASE_PATH%" \
-    --state-cache-size=0 \
-    --execution=Wasm \
-    --state-pruning=archive \
+    --trie-cache-size=0 \
     -- \
-    --database=RocksDb \
-    --execution=Wasm
+    --chain=%CHAIN_NAME%
+    --sync=warp
 
-    [Install]
-    WantedBy=multi-user.target
-    ```
+  [Install]
+  WantedBy=multi-user.target
+  ```
 
-3) Reload the systemd manager configuration:
-    ```
-    root@robokusama-collator-screencast:~# systemctl daemon-reload
-    ```
+  {% endcodeHelper %}
 
-4) Remove the exists parachain database:
-    ```
-    root@robokusama-collator-screencast:~# rm -rf %BASE_PATH%/chains/robonomics/db/
-    ```
+  {% roboWikiNote {type: "okay", title: "Sync Argument"}%}
 
-5) Start the robonomics service:
-    ```
-    root@robokusama-collator-screencast:~# systemctl start robonomics.service
-    ```
+  Note the `--sync` argument — it specifies the blockchain syncing mode. By default, it is set to `full`, which means downloading all blocks and starting to build the database from scratch. This process can take a few days, depending on network speed. The `warp` sync option is more convenient; in this mode, the node will first download the finality proofs, making it ready to validate while it continues downloading the remaining blocks in the background.
 
-    After that need to wait for the synchronization of the parahain database.
+  {% endroboWikiNote %}  
+
+4. Give the created user access to the database directory:
+
+  {% codeHelper { copy: true}%}
+
+  ```shell
+  sudo chown -R robonomics:robonomics %BASE_PATH%
+  ```
+
+  {% endcodeHelper %}
+
+5. Save this file, then enable and start the service:
+
+  {% codeHelper { copy: true}%}
+
+  ```shell
+  sudo systemctl enable robonomics.service
+  sudo systemctl start robonomics.service
+  ```
+
+  {% endcodeHelper %}
+
+  Collator logs can be monitored with:
+
+  {% codeHelper { copy: true}%}
+
+  ```
+  journalctl -u robonomics.service -f
+  ```
+
+  {% endcodeHelper %}
+
+Your node should start and show up in the telemetry stats: https://telemetry.parachain.robonomics.network
+
+Once the Robonomics collator is launched, it will begin to sync with the Relay Chain. This process can take a considerable amount of time, depending on your network speed and system specifications, so we recommend downloading a snapshot.
+
+
+## Troubleshooting
+
+### Error: "State Database error: Too many sibling blocks inserted"
+
+To fix this error, you can launch your collator in archive mode.
+
+1. First, stop the Robonomics service:
+
+  {% codeHelper { copy: true}%}
+
+  ```
+  sudo systemctl stop robonomics.service
+  ```
+
+  {% endcodeHelper %}
+
+
+2. Then add the parameter `--state-pruning=archive` to the parachain part of the service file. Example of the edited service file:
+
+  {% codeHelper { copy: true}%}
+
+  ```
+  [Unit]
+  Description=robonomics
+  After=network.target
+
+  [Service]
+  User=robonomics
+  Group=robonomics
+  Type=simple
+  Restart=on-failure
+
+  ExecStart=/usr/local/bin/robonomics \
+    --chain=%CHAIN_NAME% \
+    --name="%NODE_NAME%" \
+    --collator \
+    --lighthouse-account="%ROBONOMICS_ACCOUNT_ADDRESS%" \
+    --telemetry-url="wss://telemetry.parachain.robonomics.network/submit/ 0" \
+    --base-path="%BASE_PATH%" \
+    --trie-cache-size=0 \
+    --state-pruning=archive
+    -- \
+    --chain=%CHAIN_NAME%
+    --sync=warp
+
+  [Install]
+  WantedBy=multi-user.target
+  ```
+
+  {% endcodeHelper %}
+
+
+3. Reload the systemd manager configuration:
+
+  {% codeHelper { copy: true}%}
+
+  ```
+  sudo systemctl daemon-reload
+  ```
+
+  {% endcodeHelper %}
+
+4. Remove the existing parachain database:
+
+  {% codeHelper { copy: true}%}
+
+  ```
+  sudo rm -rf %BASE_PATH%/chains/robonomics/db/
+  ```
+
+  {% endcodeHelper %}
+
+5. Start the Robonomics service:
+
+  {% codeHelper { copy: true}%}
+
+  ```
+  sudo systemctl start robonomics.service
+  ```
+
+  {% endcodeHelper %}
+
+After that, wait for the synchronization of the parachain database.
 
 ### Error: "cannot create module: compilation settings are not compatible with the native host"
-This error related to the virtualization parameters. Need to use "host-model" type of the emulated processor. You can set up this on the virtualisation host.
 
-But, if you catch this error on any hosting, you need to ask the technical support about this problem only.
+This error is related to virtualization parameters. You need to use the "host-model" type for the emulated processor. You can set this up on the virtualization host.
+
+If you encounter this error on any hosting service, you need to contact technical support about this issue.
+
+### Error: "Can't use warp sync mode with a partially synced database. Reverting to full sync mode."
+
+This error occurs if you first started the node in full mode and then switched to warp. To fix it, remove database from %BASE_PATH% completely and restart the node in warp mode.
