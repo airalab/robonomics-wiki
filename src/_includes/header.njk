@@ -87,7 +87,7 @@
         </div>
       </div>
 
-			{% if not 'docs' in page.url %}
+			{% if page.url and not 'docs' in page.url %}
 				<div id="sidebarDocs" popover class="sidebar page__sidebar custom-scroll sidebar--no-doc">
 					{% include "./sidebar.njk" %}
 				</div>

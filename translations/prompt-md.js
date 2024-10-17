@@ -1,13 +1,13 @@
-const dotenv = require("dotenv");
-const fs = require("fs");
-const axios = require("axios");
-const chalk = require('chalk');
-const { encode, decode } = require('gpt-tokenizer');
+import dotenv from "dotenv";
+import fs from "node:fs";
+import axios from"axios";
+import chalk from 'chalk';
+import { encode, decode } from 'gpt-tokenizer';
 
 // Load environment variables from .env file
 dotenv.config();
 
-const {configMD} = require('./tr-config');
+import {configMD} from './tr-config.js';
 
 const key = configMD.key;
 

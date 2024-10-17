@@ -144,5 +144,6 @@
 	"You are currently opted out.": "Vous êtes actuellement désinscrit.",
 	"Check this box to opt-in.": "Cochez cette case pour vous inscrire.",
 	"{# for tanslation": "{# pour la traduction",
-	"#}": "I'm sorry, but the string \"#}\" does not have a clear meaning in English. Can you provide more context or clarify what you would like me to do with this string?"
+	"#}": "I'm sorry, but the string \"#}\" does not have a clear meaning in English. Can you provide more context or clarify what you would like me to do with this string?",
+	"test": "test"
 }

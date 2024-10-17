@@ -1,13 +1,13 @@
 {# retutn to main after tests #}
 {% set ghLink = "https://github.com/airalab/robonomics-wiki/blob/main/src" + page.filePathStem + ".md" %}
 					        
-{% if github.length %}
+{% if github and github.length %}
 
 {% set ghLastUpdate = github | getCommit(page.fileSlug + ".md")%}
 
 {% if ghLink %}
  <section class="docContribution">
-	{% if contributors.length %}
+	{% if contributors and contributors.length %}
 	<div class="page-title-meta">
 		<span> {{'Main contributors:' | t}} </span>
 			{% for contributor in contributors %}
@@ -29,7 +29,7 @@
 			</p>
 		</div>
 
-		{% if ghLastUpdate.length %}
+		{% if ghLastUpdat and ghLastUpdate.length %}
 		<div class="head">
 			 <a target="_blank" class="submit" href="{{ghLastUpdate[0].url}}"> Latest {{'commit' | t}}</a> {{'on' | t}} {{ghLastUpdate[0].date | readableDate("dd.MM.yyyy")}} {{'by' | t}} {{ghLastUpdate[0].author}}
 		</div>

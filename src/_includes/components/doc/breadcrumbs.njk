@@ -1,7 +1,7 @@
 {% set breadcrumbs = sidebar_docs | getBreadcrumbs(page.url) %}
 
  <div class="breadcrumbs">
-	{% if breadcrumbs.length %}
+	{% if breadcrumbs and breadcrumbs.length %}
     <nav  aria-label="breadcrumbs" class="breadcrumbs__list">
       <li class="breadcrumbs__item">
         <a href="https://wiki.robonomics.network" class="breadcrumbs__home-icon">
@@ -32,7 +32,7 @@
 						class="breadcrumbs__link"
 						aria-current="{{ 'location' if index === breadcrumbs.length-1 }}"
 					>
-						{{breadcrumb.title | t}}
+						{{breadcrumb.title | t }}
 					</a>
 				{% endif %}
 

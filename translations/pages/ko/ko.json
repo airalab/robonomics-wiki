@@ -144,5 +144,6 @@
 	"You are currently opted out.": "현재 당신은 선택하지 않은 상태입니다.",
 	"Check this box to opt-in.": "이 상자를 선택하여 수신 동의를 선택하십시오.",
 	"{# for tanslation": "{# 번역을 위한",
-	"#}": "I'm sorry, but the string \"#}\" does not have a specific meaning in English. It appears to be a random combination of characters. Can you provide more context or clarify the meaning of the string?"
+	"#}": "I'm sorry, but the string \"#}\" does not have a specific meaning in English. It appears to be a random combination of characters. Can you provide more context or clarify the meaning of the string?",
+	"test": "시험"
 }
