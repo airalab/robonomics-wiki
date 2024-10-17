@@ -144,5 +144,6 @@
 	"You are currently opted out.": "Attualmente sei escluso.",
 	"Check this box to opt-in.": "Seleziona questa casella per accettare.",
 	"{# for tanslation": "{# per la traduzione",
-	"#}": "#}"
+	"#}": "#}",
+	"test": "test"
 }

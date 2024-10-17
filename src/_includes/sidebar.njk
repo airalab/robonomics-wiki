@@ -1,46 +1,55 @@
 {% set navPages = sidebar_docs %}
 
 {% macro renderNavListItem(entry) %}
-  {% if entry.children.length %}
+  {# Check if entry has children and children is an array #}
+  {% if entry.children and entry.children.length %}
     <li>
       <details
-			class="menu-details"
+        class="menu-details"
         {%- for child in entry.children %}
-          {% if (page.lang == 'en' and child.url + '/' == page.url) or (child.url and ('/' + page.lang + child.url + '/') == page.url) and not child.topic  %}
+          {% if (page.lang == 'en' and child.url + '/' == page.url) or (child.url and ('/' + page.lang + child.url + '/') == page.url) and not (child.topic or 'topic' in page.url) %}
             class="open"
             open
           {% endif %}
-					{% if child.children.length  %}
-						{%- for ch in child.children %}
-						{% if (page.lang == 'en' and ch.url + '/' == page.url or ch.url  and ('/' + page.lang + ch.url + '/') == page.url) and not ch.topic  %}
-							class="open"
-							open
-						{% endif %}
-						{% if ch.children.length  %}
-							{%- for c in ch.children %}
-							{% if  (page.lang == 'en' and c.url + '/' == page.url or c.url and ('/' + page.lang + c.url + '/') == page.url) and not c.topic  %}
-								class="open"
-								open
-							{% endif %}
-							{% endfor %}
-						{% endif %}
-						{% endfor %}
-					{% endif %}
+          {% if child.children and child.children.length %}
+            {%- for ch in child.children %}
+              {% if (page.lang == 'en' and ch.url + '/' == page.url) or (ch.url and ('/' + page.lang + ch.url + '/') == page.url) and not (ch.topic or 'topic' in page.url) %}
+                class="open"
+                open
+              {% endif %}
+              {% if ch.children and ch.children.length %}
+                {%- for c in ch.children %}
+                  {% if (page.lang == 'en' and c.url + '/' == page.url) or (c.url and ('/' + page.lang + c.url + '/') == page.url) and not (c.topic or 'topic' in page.url) %}
+                    class="open"
+                    open
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
         {% endfor %}
       >
-        <summary class="menu-subtitle" >{{ entry.title | t }}</summary>
+        <summary class="menu-subtitle">{{ entry.title | t }}</summary>
         <ul class="menu" role="list">
           {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
         </ul>
     </li>
   {% else %}
-		{% set newURL = ( entry.url + '/?topic=' + entry.topic | convertStringWithoutSpaces if entry.topic and not 'topic' in page.url  else entry.url) %}
-    <li {% if newURL + '/' == page.url or  '/' + page.lang +  entry.url + '/' == page.url %} class="with-active-link" {% endif %} {% if entry.topic%} data-topic="{{entry.topic}}" data-title="{{entry.title}}" {% endif %}>
-      <a class="menu-link" href="{{ (entry.url if page.lang == 'en' else '/' + page.lang + entry.url) + ('/?topic=' + entry.topic | convertStringWithoutSpaces if entry.topic and not 'topic' in page.url)  }}"{% if entry.url + '/' == page.url or  '/' + page.lang +  entry.url + '/' == page.url %} aria-current="page" {% endif %}>{{ entry.title | t }}</a>
+    {# Create a new URL, check if topic exists before accessing #}
+    {% set newURL = (entry.url + '/?topic=' + entry.topic | convertStringWithoutSpaces) if entry.topic and not ('topic' in (page.url or '')) else entry.url %}
+    <li {% if newURL + '/' == page.url or '/' + page.lang + entry.url + '/' == page.url %} class="with-active-link" {% endif %}
+        {% if entry.topic %} data-topic="{{entry.topic}}" data-title="{{entry.title}}" {% endif %}>
+      <a class="menu-link" href="{{ (entry.url if page.lang == 'en' else '/' + page.lang + entry.url) + ('/?topic=' + entry.topic | convertStringWithoutSpaces if entry.topic and not 'topic' in (page.url or '')) }}"
+         {% if entry.url + '/' == page.url or '/' + page.lang + entry.url + '/' == page.url %} aria-current="page" {% endif %}>
+        {{ entry.title | t }}
+      </a>
     </li>
-  {%- endif -%}
-{%- endmacro %}
+  {% endif %}
+{% endmacro %}
 
-<ul class="nav-list menu" role="list">
-{%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
-</ul>
+{# Check if navPages is an array and has length #}
+{% if navPages and navPages.length %}
+  <ul class="nav-list menu" role="list">
+    {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+  </ul>
+{% endif %}

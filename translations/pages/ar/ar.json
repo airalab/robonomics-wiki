@@ -140,5 +140,6 @@
 	"You are currently opted out.": "أنت حالياً مستبعد.",
 	"Check this box to opt-in.": "حدد هذه الخانة للموافقة.",
 	"{# for tanslation": "{# للترجمة",
-	"#}": "I'm sorry, but the string \"#}\" does not have a specific meaning in English. It appears to be a random combination of characters. Can you provide more context or clarify the meaning so I can assist you better?"
+	"#}": "I'm sorry, but the string \"#}\" does not have a specific meaning in English. It appears to be a random combination of characters. Can you provide more context or clarify the meaning so I can assist you better?",
+	"test": "اختبار"
 }

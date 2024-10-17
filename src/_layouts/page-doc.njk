@@ -3,24 +3,7 @@
 	<main class="main post layout__page post">
 		<section class="section doc-section">
 			<div class="layout page">
-
-				{% if title and vars.env == 'image' %}
-					{% if page.lang == 'zh' %}
-						{% set fontFamily = "Noto Sans" %}
-					{% elif page.lang == 'ar' %}
-						{% set fontFamily = "Arabic" %}
-					{% elif page.lang == 'ko' %}
-						{% set fontFamily = "Noto Sans KO" %}
-					{% elif page.lang == 'el' %}
-						{% set fontFamily = "Noto Sans EL" %}	
-					{% else %}
-						{% set fontFamily = "Roboto" %}
-					{% endif %}
-						{% if vars.env == 'image' %}
-							{% include 'ogImageWrapper.njk' %}
-						{% endif %}
-				{% endif %}
-
+				
 				<div id="sidebarDocs" popover class="sidebar page__sidebar custom-scroll">
 					{% include 'sidebar.njk' %}
 				</div>
@@ -43,7 +26,7 @@
         </div>
 
 				<div id="sidebarContent" popover class="page__sidebar custom-scroll" >
-					{% if tools.length %}
+					{% if tools and tools.length %}
 						{% roboWikiNote {title: "Tested for"} %}
 							{% for tool in tools %}
 								{% set toolLinkRegex = r/\bhttps?:\/\/\S+/gi %}

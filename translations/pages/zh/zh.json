@@ -144,5 +144,6 @@
 	"You are currently opted out.": "您目前已选择退出。",
 	"Check this box to opt-in.": "勾选此框以选择加入。",
 	"{# for tanslation": "{# 用于翻译",
-	"#}": "#}"
+	"#}": "#}",
+	"test": "测试"
 }

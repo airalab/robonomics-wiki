@@ -1,6 +1,6 @@
 <div class="sectionToggler">
 	<button class="btn header-nav__icon header-nav__sidebar-docs" popovertarget="sidebarDocs"></button>
-	{% if page.url.length > 4 and 'docs' in page.url %}
+	{% if page.url.length > 4 and (page.url and "docs" in page.url) %}
 		<button class="btn header-nav__icon header-nav__sidebar-content" popovertarget="sidebarContent"></button>
 	{% endif %}
 </div>
