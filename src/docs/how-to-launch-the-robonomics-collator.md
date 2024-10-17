@@ -278,3 +278,7 @@ After that, wait for the synchronization of the parachain database.
 This error is related to virtualization parameters. You need to use the "host-model" type for the emulated processor. You can set this up on the virtualization host.
 
 If you encounter this error on any hosting service, you need to contact technical support about this issue.
+
+### Error: "Can't use warp sync mode with a partially synced database. Reverting to full sync mode."
+
+This error occurs if you first started the node in full mode and then switched to warp. To fix it, remove database from %BASE_PATH% completely and restart the node in warp mode.

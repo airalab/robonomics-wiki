@@ -143,5 +143,6 @@
 	"test": "test",
 	"Robotics and ROS 2": "Robotics and ROS 2",
 	"About Robonomics ROS 2 Wrapper": "About Robonomics ROS 2 Wrapper",
-	"Launch Robot from Cloud": "Launch Robot from Cloud"
+	"Launch Robot from Cloud": "Launch Robot from Cloud",
+	"Launch of Robonomics Collator": "Launch of Robonomics Collator"
 }
