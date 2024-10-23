@@ -8,6 +8,12 @@
 					{% include 'sidebar.njk' %}
 				</div>
 
+				<div style="display: none">
+					{% if title %} 
+						{% getOGImage {title: title, locale: page.lang, slug: page.fileSlug} %}{% endgetOGImage%}
+					{% endif %}
+				</div>
+
 				<div class="page-content--withBC">
 					{% if page.url %}
 						{% include '../_includes/components/doc/breadcrumbs.njk' %}

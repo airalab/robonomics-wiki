@@ -12,8 +12,7 @@
     "clean": "rimraf dist",
     "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
     "dev:11ty": "cross-env ELEVENTY_ENV=development eleventy --serve --watch --incremental",
-    "build:11ty": "cross-env ELEVENTY_ENV=production eleventy",
-    "build-image": "cross-env ELEVENTY_ENV=image eleventy --watch",
+    "build:11ty": "cross-env ELEVENTY_ENV=production eleventy --serve --watch --incremental",
     "translate-md": "node translations/prompt-md.js",
     "translate": "node translations/prompt.js",
     "start": "run-p dev:*",
@@ -57,6 +56,7 @@
     "chalk": "^4.1.2",
     "dotenv": "^16.4.5",
     "eleventy-plugin-metagen": "^1.8.3",
+    "fs-extra": "^10.1.0",
     "glob": "^11.0.0",
     "gpt-tokenizer": "^2.2.1",
     "markdown-it": "^14.0.0",
@@ -65,6 +65,7 @@
     "markdown-it-link-attributes": "^4.0.1",
     "markdown-it-mark": "^4.0.0",
     "markdown-it-prism": "^2.3.0",
+    "node-html-to-image": "3.2.4",
     "ping-ipfs-gateway": "^1.0.1",
     "svgo": "^3.3.2"
   }
