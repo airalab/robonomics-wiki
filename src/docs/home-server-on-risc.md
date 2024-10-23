@@ -437,8 +437,3 @@ Open it and click `Download`  in the bottom right corner. Downloading the reposi
 {% roboWikiPicture {src:"docs/home-assistant/hacs-download-integration.png", alt:"hacs-download-integration"} %}{% endroboWikiPicture %}
 
 That's all. Now, you can continue to setup Robonomics Integration.
-
-
-{% roboWikiGridWrapper {columns: '1', textAlign: center, flexible: true} %}
-	{% roboWikiGrid %} 	{% roboWikiButton {label: "Subscription Activate", link: "/docs/sub-activate/?topic=smart-home", block: true} %}{% endroboWikiButton %} {% endroboWikiGrid %}
-{% endroboWikiGridWrapper %}
