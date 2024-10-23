@@ -145,5 +145,8 @@
 	"Launch of Robonomics Collator": "Запуск Робономіки Коллатор",
 	"Robotics and ROS 2": "Робототехніка та ROS 2",
 	"About Robonomics ROS 2 Wrapper": "Про обгортку Robonomics ROS 2",
-	"Launch Robot from Cloud": "Запустіть робота з хмари"
+	"Launch Robot from Cloud": "Запустіть робота з хмари",
+	"Home Assistant integration": "Інтеграція з додатком Home Assistant",
+	"Working with parachain": "Працюючи з парачейном",
+	"{# for translation": "{# для перекладу"
 }

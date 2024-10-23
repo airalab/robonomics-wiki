@@ -145,5 +145,8 @@
 	"Launch of Robonomics Collator": "ロボノミクスコレーターのローンチ",
 	"Robotics and ROS 2": "ロボティクスとROS 2",
 	"About Robonomics ROS 2 Wrapper": "Robonomics ROS 2 Wrapperについて",
-	"Launch Robot from Cloud": "クラウドからロボットを起動します"
+	"Launch Robot from Cloud": "クラウドからロボットを起動します",
+	"Home Assistant integration": "Home Assistant 統合",
+	"Working with parachain": "パラチェーンと協力しています",
+	"{# for translation": "{# 翻訳用"
 }
