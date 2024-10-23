@@ -81,7 +81,7 @@ In this case, you need to adjust your IPFS configuration file and confirm it.
 
 ## Download Robonomics Integration
 
-We will use [HACS](https://hacs.xyz/) to install the integration. If HACS is not installed on your Home Assistant yet, you need to [install](https://hacs.xyz/docs/setup/download/) it first.
+We will use [HACS](https://hacs.xyz/) to install the integration. If HACS is not installed on your Home Assistant yet, you need to [install](https://www.hacs.xyz/docs/use/download/download) it first.
 
 Next, in your Home Assistant, navigate to HACS and search for `Robonomics`:
 
