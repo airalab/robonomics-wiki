@@ -145,5 +145,8 @@
 	"Launch of Robonomics Collator": "Robonomics Collator的启动",
 	"Robotics and ROS 2": "机器人技术和ROS 2",
 	"About Robonomics ROS 2 Wrapper": "关于Robonomics ROS 2包装器",
-	"Launch Robot from Cloud": "从云端启动机器人"
+	"Launch Robot from Cloud": "从云端启动机器人",
+	"Home Assistant integration": "Home Assistant 集成",
+	"Working with parachain": "与平行链合作",
+	"{# for translation": "{# 用于翻译"
 }
