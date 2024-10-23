@@ -117,6 +117,14 @@
                 "topic": "Upgrade Home Assistant Core"
               }
             ]
+          },
+          {
+            "children": [
+              {
+                "title": "Home Server on RISC-V",
+                "url": "/docs/home-server-on-risc"
+              }
+            ]
           }
         ]
       },
