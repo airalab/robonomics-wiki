@@ -41,6 +41,8 @@ import {roboWikiTitle} from './config/shortcodes/robo-wiki-title/index.js';
 import {roboWikiGridWrapper} from './config/shortcodes/robo-wiki-grid-wrapper/index.js';
 import {roboWikiGrid} from './config/shortcodes/robo-wiki-grid/index.js';
 
+import {getOGImage} from './config/shortcodes/og-image/index.js';
+
 import {
 	readableDate,
 	htmlDateString,
@@ -238,6 +240,7 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPairedShortcode('roboWikiTitle', roboWikiTitle);
 	eleventyConfig.addPairedShortcode('roboWikiGridWrapper', roboWikiGridWrapper);
 	eleventyConfig.addPairedShortcode('roboWikiGrid', roboWikiGrid);
+	eleventyConfig.addPairedShortcode('getOGImage', getOGImage);
 
 
 	// Add support for YAML data files with .yaml extension

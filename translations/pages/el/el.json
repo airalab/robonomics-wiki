@@ -46,7 +46,6 @@
 	"Robonomics on Ethereum": "Robonomics στο Ethereum",
 	"Robonomics OpenGov": "Robonomics OpenGov",
 	"How to build collator node from source": "Πώς να Κατασκευάσετε τον Κόμβο Συλλέκτη από την Πηγή",
-	"How to launch the Robonomics collator": "Πώς να ξεκινήσετε τον Κόμβο Συλλέκτη Robonomics",
 	"How to Update Collator Node Version": "Πώς να Ενημερώσετε την Έκδοση του Κόμβου Συλλέκτη",
 	"How to send extrinsic from ESP": "Πώς να στείλετε εξωτερικό από ESP",
 	"How to Edit Wiki": "Πώς να Επεξεργαστείτε το Wiki",
@@ -110,8 +109,6 @@
 	"Inform us": "Ενημερώστε μας",
 	"please, if you find any": "παρακαλώ, αν βρείτε κάτι",
 	"Robonomics smart devices": "Έξυπνες συσκευές Robonomics",
-	"Working with parachain": "Εργασία με παρακολουθούμενη αλυσίδα",
-	"Home Assistant integration": "Ενσωμάτωση Home Assistant",
 	"Create an issue": "Δημιουργήστε ένα θέμα",
 	"entry.title": "Τίτλος καταχώρησης",
 	"text": "κείμενο",
@@ -145,5 +142,8 @@
 	"Check this box to opt-in.": "Επιλέξτε αυτό το πλαίσιο για να εγγραφείτε.",
 	"{# for tanslation": "{# για μετάφραση",
 	"#}": "#}",
-	"test": "δοκιμή"
+	"Launch of Robonomics Collator": "Έναρξη του Robonomics Collator",
+	"Robotics and ROS 2": "Ρομποτική και ROS 2",
+	"About Robonomics ROS 2 Wrapper": "Σχετικά με το Robonomics ROS 2 Wrapper",
+	"Launch Robot from Cloud": "Εκκίνηση ρομπότ από τον νέφος"
 }

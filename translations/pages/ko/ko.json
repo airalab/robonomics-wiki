@@ -46,7 +46,6 @@
 	"Robonomics on Ethereum": "이더리움에서의 로보노믹스",
 	"Robonomics OpenGov": "로보노믹스 오픈 정부",
 	"How to build collator node from source": "소스로부터 콜레이터 노드 빌드하는 방법",
-	"How to launch the Robonomics collator": "로보노믹스 콜레이터 실행하는 방법",
 	"How to Update Collator Node Version": "콜레이터 노드 버전 업데이트하는 방법",
 	"How to send extrinsic from ESP": "ESP에서 외부를 보내는 방법",
 	"How to Edit Wiki": "위키 편집하는 방법",
@@ -110,8 +109,6 @@
 	"Inform us": "알려주세요",
 	"please, if you find any": "찾으면 알려주세요.",
 	"Robonomics smart devices": "로보노믹스 스마트 기기",
-	"Working with parachain": "파라체인과 함께 작업하기",
-	"Home Assistant integration": "홈 어시스턴트 통합",
 	"Create an issue": "문제를 생성하세요.",
 	"entry.title": "entry.title",
 	"text": "텍스트",
@@ -145,5 +142,8 @@
 	"Check this box to opt-in.": "이 상자를 선택하여 수신 동의를 선택하십시오.",
 	"{# for tanslation": "{# 번역을 위한",
 	"#}": "I'm sorry, but the string \"#}\" does not have a specific meaning in English. It appears to be a random combination of characters. Can you provide more context or clarify the meaning of the string?",
-	"test": "시험"
+	"Launch of Robonomics Collator": "로보녜믹스 콜레이터 출시",
+	"Robotics and ROS 2": "로봇 공학 및 ROS 2",
+	"About Robonomics ROS 2 Wrapper": "로보노믹스 ROS 2 래퍼에 대해",
+	"Launch Robot from Cloud": "클라우드에서 로봇을 실행합니다."
 }

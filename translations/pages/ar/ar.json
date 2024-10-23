@@ -46,7 +46,6 @@
 	"Robonomics on Ethereum": "Robonomics على إيثيريوم",
 	"Robonomics OpenGov": "Robonomics OpenGov",
 	"How to build collator node from source": "كيفية بناء عقدة جامع من المصدر",
-	"How to launch the Robonomics collator": "كيفية تشغيل عقدة جامع Robonomics",
 	"How to Update Collator Node Version": "كيفية تحديث إصدار عقدة الجامع",
 	"How to send extrinsic from ESP": "كيفية إرسال خارجي من ESP",
 	"How to Edit Wiki": "كيفية تحرير الويكي",
@@ -106,8 +105,6 @@
 	"Inform us": "أخبرنا",
 	"please, if you find any": "من فضلك، إذا وجدت أي شيء",
 	"Robonomics smart devices": "أجهزة روبونوميكس الذكية",
-	"Working with parachain": "العمل مع سلسلة فرعية",
-	"Home Assistant integration": "دمج مساعد المنزل",
 	"Create an issue": "إنشاء مشكلة",
 	"entry.title": "عنوان الإدخال",
 	"text": "نص",
@@ -141,5 +138,8 @@
 	"Check this box to opt-in.": "حدد هذه الخانة للموافقة.",
 	"{# for tanslation": "{# للترجمة",
 	"#}": "I'm sorry, but the string \"#}\" does not have a specific meaning in English. It appears to be a random combination of characters. Can you provide more context or clarify the meaning so I can assist you better?",
-	"test": "اختبار"
+	"Launch of Robonomics Collator": "إطلاق Robonomics Collator",
+	"Robotics and ROS 2": "الروبوتيات وROS 2",
+	"About Robonomics ROS 2 Wrapper": "حول Robonomics ROS 2 Wrapper",
+	"Launch Robot from Cloud": "شغل الروبوت من السحابة"
 }

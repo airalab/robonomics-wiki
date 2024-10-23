@@ -46,7 +46,6 @@
 	"Robonomics on Ethereum": "Robonomics 在以太坊上",
 	"Robonomics OpenGov": "Robonomics 开放式治理",
 	"How to build collator node from source": "如何从源代码构建收集节点",
-	"How to launch the Robonomics collator": "如何启动 Robonomics 收集节点",
 	"How to Update Collator Node Version": "如何更新收集节点版本",
 	"How to send extrinsic from ESP": "如何从 ESP 发送外部数据",
 	"How to Edit Wiki": "如何编辑维基",
@@ -110,8 +109,6 @@
 	"Inform us": "请告知我们",
 	"please, if you find any": "请，如果你找到任何",
 	"Robonomics smart devices": "Robonomics智能设备",
-	"Working with parachain": "与平行链合作",
-	"Home Assistant integration": "Home Assistant 集成",
 	"Create an issue": "创建一个问题",
 	"entry.title": "entry.title",
 	"text": "文本",
@@ -145,5 +142,8 @@
 	"Check this box to opt-in.": "勾选此框以选择加入。",
 	"{# for tanslation": "{# 用于翻译",
 	"#}": "#}",
-	"test": "测试"
+	"Launch of Robonomics Collator": "Robonomics Collator的启动",
+	"Robotics and ROS 2": "机器人技术和ROS 2",
+	"About Robonomics ROS 2 Wrapper": "关于Robonomics ROS 2包装器",
+	"Launch Robot from Cloud": "从云端启动机器人"
 }

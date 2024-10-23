@@ -46,7 +46,6 @@
 	"Robonomics on Ethereum": "Ethereum上のRobonomics",
 	"Robonomics OpenGov": "Robonomics OpenGov",
 	"How to build collator node from source": "ソースからコレーターノードを構築する方法",
-	"How to launch the Robonomics collator": "Robonomicsコレーターの起動方法",
 	"How to Update Collator Node Version": "コレーターノードバージョンの更新方法",
 	"How to send extrinsic from ESP": "ESPから外部送信を行う方法",
 	"How to Edit Wiki": "ウィキの編集方法",
@@ -110,8 +109,6 @@
 	"Inform us": "お知らせください",
 	"please, if you find any": "お願いします、もし見つけたら",
 	"Robonomics smart devices": "ロボノミクススマートデバイス",
-	"Working with parachain": "パラチェーンと協力しています",
-	"Home Assistant integration": "Home Assistant 統合",
 	"Create an issue": "問題を作成する",
 	"entry.title": "entry.title",
 	"text": "テキスト",
@@ -145,5 +142,8 @@
 	"Check this box to opt-in.": "オプトインするには、このボックスをチェックしてください。",
 	"{# for tanslation": "{# 翻訳用",
 	"#}": "この文字列は意味がわかりません。他に翻訳が必要なテキストがあればお知らせください。",
-	"test": "テスト"
+	"Launch of Robonomics Collator": "ロボノミクスコレーターのローンチ",
+	"Robotics and ROS 2": "ロボティクスとROS 2",
+	"About Robonomics ROS 2 Wrapper": "Robonomics ROS 2 Wrapperについて",
+	"Launch Robot from Cloud": "クラウドからロボットを起動します"
 }

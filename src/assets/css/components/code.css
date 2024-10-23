@@ -82,6 +82,10 @@ pre{
 	color: #e2777a;
 }
 
+.code-helper {
+	margin: calc(var(--space)* 0.6) 0;
+}
+
 .code__additionalLine {
 	position: relative;
 	width: 100%;
