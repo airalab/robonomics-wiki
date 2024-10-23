@@ -46,7 +46,6 @@
 	"Robonomics on Ethereum": "Robonomics auf Ethereum",
 	"Robonomics OpenGov": "Robonomics OpenGov",
 	"How to build collator node from source": "Erstellen eines Collator-Knotens aus der Quelle",
-	"How to launch the Robonomics collator": "Starten des Robonomics-Collators",
 	"How to Update Collator Node Version": "Aktualisieren der Collator-Knoten-Version",
 	"How to send extrinsic from ESP": "Senden von Extrinsic von ESP",
 	"How to Edit Wiki": "Wiki bearbeiten",
@@ -106,8 +105,6 @@
 	"Inform us": "Bitte informieren Sie uns.",
 	"please, if you find any": "bitte, wenn du etwas findest",
 	"Robonomics smart devices": "Robonomics intelligente Geräte",
-	"Working with parachain": "Arbeiten mit einer Parachain",
-	"Home Assistant integration": "Home Assistant Integration",
 	"Create an issue": "Erstellen Sie ein Problem",
 	"entry.title": "entry.title",
 	"text": "Der Text",
@@ -141,5 +138,8 @@
 	"Check this box to opt-in.": "Kreuzen Sie dieses Kästchen an, um zuzustimmen.",
 	"{# for tanslation": "{# für Übersetzung",
 	"#}": "This string does not contain any meaningful text in English.",
-	"test": "Test"
+	"Launch of Robonomics Collator": "Start des Robonomics Collator",
+	"Robotics and ROS 2": "Robotik und ROS 2",
+	"About Robonomics ROS 2 Wrapper": "Über den Robonomics ROS 2 Wrapper",
+	"Launch Robot from Cloud": "Starte den Roboter aus der Cloud."
 }

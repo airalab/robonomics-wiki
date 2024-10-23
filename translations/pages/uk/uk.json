@@ -46,7 +46,6 @@
 	"Robonomics on Ethereum": "Robonomics на Ethereum",
 	"Robonomics OpenGov": "Robonomics OpenGov",
 	"How to build collator node from source": "Як побудувати вузол коллатора з вихідного коду",
-	"How to launch the Robonomics collator": "Як запустити коллатор Robonomics",
 	"How to Update Collator Node Version": "Як оновити версію вузла коллатора",
 	"How to send extrinsic from ESP": "Як надіслати екструзію з ESP",
 	"How to Edit Wiki": "Як редагувати вікі",
@@ -110,8 +109,6 @@
 	"Inform us": "Повідомте нас",
 	"please, if you find any": "будь ласка, якщо ви знайдете будь-що",
 	"Robonomics smart devices": "Робономіка розумних пристроїв",
-	"Working with parachain": "Працюючи з парачейном",
-	"Home Assistant integration": "Інтеграція додатку Home Assistant",
 	"Create an issue": "Створити проблему",
 	"entry.title": "entry.title",
 	"text": "текст",
@@ -145,5 +142,8 @@
 	"Check this box to opt-in.": "Поставте позначку в цьому полі, щоб погодитися.",
 	"{# for tanslation": "{# для перекладу",
 	"#}": "#}",
-	"test": "тест"
+	"Launch of Robonomics Collator": "Запуск Робономіки Коллатор",
+	"Robotics and ROS 2": "Робототехніка та ROS 2",
+	"About Robonomics ROS 2 Wrapper": "Про обгортку Robonomics ROS 2",
+	"Launch Robot from Cloud": "Запустіть робота з хмари"
 }
