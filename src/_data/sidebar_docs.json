@@ -114,7 +114,23 @@
               {
                 "title": "Robonomics Integration Setup",
                 "url": "/docs/robonomics-hass-integration",
-                "topic": "Upgrade Home Assistant Core"
+                "topic": "Upgrade Home Assistant Core",
+                "next": [
+                  {
+                    "title": "Add User",
+                    "url": "/docs/add-user"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Home Server on RISC-V",
+            "url": "/docs/home-server-on-risc",
+            "next": [
+              {
+                "title": "Add User",
+                "url": "/docs/add-user"
               }
             ]
           }
