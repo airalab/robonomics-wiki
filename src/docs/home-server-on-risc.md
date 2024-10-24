@@ -131,9 +131,13 @@ python3 -m pip install numpy==1.26.0 PyTurboJPEG==1.7.5
 
 Continue working under `homeassistant` user
 
+{% codeHelper {copy: true}%}
+
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
+
+{% endcodeHelper %}
 
 Logout and login again to make the `rust` packages available
 
@@ -141,25 +145,39 @@ Logout and login again to make the `rust` packages available
 
 Be patient, this step will take time because a lot of dependencies are built from source
 
+{% codeHelper {copy: true}%}
+
 ```bash
 pip3 install homeassistant==2024.9.3
 ```
+
+{% endcodeHelper %}
 
 ### HA Launch
 
 Under `homeassistant` user and inside venv run
 
+{% codeHelper {copy: true}%}
+
 ```bash
 hass
 ```
+
+{% endcodeHelper %}
 
 After Home Assistant starts, go to the dashboard with `http://[RISC-V IP ADDRESS]:8123/`
 
 Let's make a systemd service to make it run automatically. Stop `hass` and create a service file:
 
+{% codeHelper {copy: true}%}
+
 ```bash
 sudo nano /etc/systemd/system/homeassistant.service
 ```
+
+{% endcodeHelper %}
+
+{% codeHelper {copy: true}%}
 
 ```ini
 [Unit]
@@ -176,6 +194,8 @@ RestartForceExitStatus=100
 [Install]
 WantedBy=multi-user.target
 ```
+
+{% endcodeHelper %}
 
 ```bash
 sudo systemctl start homeassistant.service
@@ -236,6 +256,8 @@ nano /opt/zigbee2mqtt/data/configuration.yaml
 
 Put your mqtt login and password (if set) and zigbee adapter location:
 
+{% codeHelper {copy: true}%}
+
 ```yaml
 # Home Assistant integration (MQTT discovery)
 homeassistant: true
@@ -268,17 +290,30 @@ advanced:
   ext_pan_id: GENERATE
 ```
 
+{% endcodeHelper %}
+
 Launch zigbee2MQTT
+
+{% codeHelper {copy: true}%}
 
 ```bash
 npm start
 ```
 
+
+{% endcodeHelper %}
+
 If everything is ok, let's create a systemd service:
+
+{% codeHelper {copy: true}%}
 
 ```bash
 sudo nano /etc/systemd/system/zigbee2mqtt.service
 ```
+
+{% endcodeHelper %}
+
+{% codeHelper {copy: true}%}
 
 ```ini
 [Unit]
@@ -302,6 +337,8 @@ User=ubuntu
 WantedBy=multi-user.target
 ```
 
+{% endcodeHelper %}
+
 ```bash
 sudo systemctl start zigbee2mqtt.service
 sudo systemctl enable zigbee2mqtt.service
@@ -316,15 +353,23 @@ You can find the zigbee2mqtt dashboard at `http://[RISC-V IP ADDRESS]:8099/`
 
 The following command are run under `ubuntu` user:
 
+{% codeHelper {copy: true}%}
+
 ```bash
 cd
 nano .profile
 ```
 
+{% endcodeHelper %}
+
+{% codeHelper {copy: true}%}
+
 ```bash
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 ```
+
+{% endcodeHelper %}
 
 Relogin from user and build the package:
 
@@ -345,6 +390,8 @@ sudo nano /etc/systemd/system/ipfs-daemon.service
 
 Create a systemd service:
 
+{% codeHelper {copy: true}%}
+
 ```ini
 [Unit]
 Description=IPFS Daemon Service
@@ -357,6 +404,8 @@ User=ubuntu
 [Install]
 WantedBy=multi-user.target
 ```
+
+{% endcodeHelper %}
 
 ```bash
 sudo systemctl start ipfs-daemon.service
@@ -379,9 +428,15 @@ node src/index.js
 
 If everything is alright, let's create a service:
 
+{% codeHelper {copy: true}%}
+
 ```bash
 sudo nano /etc/systemd/system/lp2p-proxy.service
 ```
+
+{% endcodeHelper %}
+
+{% codeHelper {copy: true}%}
 
 ```ini
 [Unit]
@@ -398,6 +453,8 @@ RestartSec=5
 [Install]
 WantedBy=multi-user.target
 ```
+
+{% endcodeHelper %}
 
 ```bash
 sudo systemctl start lp2p-proxy.service
