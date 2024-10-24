@@ -130,8 +130,8 @@
 	flex-direction: column;
 	text-align: right;
 	padding: 1rem;
-	grid-column-start: 1;
-	grid-column-end: 2;
+	/* grid-column-start: 1;
+	grid-column-end: 2; */
 }
 
 .pageNextPrev a.second {
@@ -158,6 +158,19 @@
 	.doc-section {
 		margin-top: 0;
 	}
+}
+
+@media screen and (max-width: 460px) {
+	.pageNextPrev { 
+		display: flex;
+		flex-direction: column;
+	}
+
+	.pageNextPrev a {
+		display: flex;
+		width: 100%;
+	}
+	
 }
 
 
