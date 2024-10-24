@@ -70,10 +70,6 @@ document.addEventListener('DOMContentLoaded', function ()  {
 				let prev = prevPage(flatten(config), index)
 				let next = nextPage(flatten(config),index)
 
-				const translatedNext = translateLine(next.title, language);
-				const translatedPrev = translateLine(prev.title, language);
-
-
 				if(curr.next) {
 					next = curr.next[0]
 				}
@@ -82,10 +78,13 @@ document.addEventListener('DOMContentLoaded', function ()  {
 					prev = curr.prev[0]
 				}
 
+				const translatedNext = translateLine(next.title, language);
+				const translatedPrev = translateLine(prev.title, language);
+
 				const prevLink = prev.topic ? prev.url + '/?topic=' + prev.topic.replace(/\s+/g, '-').toLowerCase() : prev.url;
 				const nextLink = next.topic ? next.url + '/?topic=' + next.topic.replace(/\s+/g, '-').toLowerCase() : next.url;
 
-				navigationBlock.innerHTML =  `<a href="${language !== 'en' ? "/" + language + prevLink : prevLink}" class="button inline-block secondary button__medium custom"><span class="additional-text">${translateLine('previous', language)}</span> ← ${translatedPrev ? translatedPrev : prev.title}</a><a href="${language !== 'en' ? "/" + language + nextLink : nextLink}" class="button inline-block secondary button__medium"><span class="additional-text">${translateLine('next', language)}</span> ${translatedNext ? translatedNext : next.title} →</a>`
+				navigationBlock.innerHTML =  `<a href="${language !== 'en' ? "/" + language + prevLink : prevLink}" class="button inline-block secondary button__medium custom"><span class="additional-text">${translateLine('previous', language)}</span> ← ${translatedPrev ? translatedPrev : prev.title}</a><a href="${language !== 'en' ? "/" + language + nextLink : nextLink}" class="button inline-block secondary button__medium custom"><span class="additional-text">${translateLine('next', language)}</span> ${translatedNext ? translatedNext : next.title} →</a>`
 			}
 
 	}
