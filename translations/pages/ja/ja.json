@@ -146,7 +146,7 @@
 	"Robotics and ROS 2": "ロボティクスとROS 2",
 	"About Robonomics ROS 2 Wrapper": "Robonomics ROS 2 Wrapperについて",
 	"Launch Robot from Cloud": "クラウドからロボットを起動します",
+	"Home Server on RISC-V": "RISC-V上のホームサーバ",
 	"Home Assistant integration": "Home Assistant 統合",
-	"Working with parachain": "パラチェーンと協力しています",
-	"{# for translation": "{# 翻訳用"
+	"Working with parachain": "パラチェーンと協力しています"
 }
