@@ -146,7 +146,7 @@
 	"Robotics and ROS 2": "Ρομποτική και ROS 2",
 	"About Robonomics ROS 2 Wrapper": "Σχετικά με το Robonomics ROS 2 Wrapper",
 	"Launch Robot from Cloud": "Εκκίνηση ρομπότ από τον νέφος",
+	"Home Server on RISC-V": "Διακομιστής στο σπίτι σε RISC-V",
 	"Home Assistant integration": "Ενσωμάτωση Home Assistant",
-	"Working with parachain": "Εργασία με παρακολούθηση",
-	"{# for translation": "{# για μετάφραση"
+	"Working with parachain": "Εργασία με παρακολουθούμενη αλυσίδα"
 }

@@ -146,7 +146,7 @@
 	"Robotics and ROS 2": "로봇 공학 및 ROS 2",
 	"About Robonomics ROS 2 Wrapper": "로보노믹스 ROS 2 래퍼에 대해",
 	"Launch Robot from Cloud": "클라우드에서 로봇을 실행합니다.",
+	"Home Server on RISC-V": "RISC-V 아키텍처를 사용한 홈 서버",
 	"Home Assistant integration": "홈 어시스턴트 통합",
-	"Working with parachain": "파라체인과 함께 작업하기",
-	"{# for translation": "{# 번역을 위한"
+	"Working with parachain": "파라체인과 함께 작업하기"
 }
