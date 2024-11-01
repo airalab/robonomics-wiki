@@ -73,7 +73,7 @@ robonomics \
   --base-path="%BASE_PATH%" \
   --trie-cache-size=0 \
   -- \
-  --chain=%CHAIN_NAME%
+  --chain=%CHAIN_NAME% \
   --sync=warp
 ```
 
@@ -138,7 +138,7 @@ After doing this, it is strongly recommended to launch the Robonomics collator a
     --base-path="%BASE_PATH%" \
     --trie-cache-size=0 \
     -- \
-    --chain=%CHAIN_NAME%
+    --chain=%CHAIN_NAME% \
     --sync=warp
 
   [Install]
@@ -231,7 +231,7 @@ To fix this error, you can launch your collator in archive mode.
     --trie-cache-size=0 \
     --state-pruning=archive
     -- \
-    --chain=%CHAIN_NAME%
+    --chain=%CHAIN_NAME% \
     --sync=warp
 
   [Install]
