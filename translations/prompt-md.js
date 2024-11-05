@@ -20,6 +20,7 @@ const locales = configMD.locales; // array with all locales
 const inputFolder = configMD.inputFolder; // folder with default files
 const outputFolder = configMD.outputFolder; // endpoint translations folder
 const isInProgress = []; // to notify when all jobs are completed
+const changedFiles = []; // array of modified files to translate
 
 const readMarkdown = (filePath) => {
   return fs.readFileSync(filePath, 'utf8');
@@ -54,16 +55,18 @@ const translationData = (from, to, input) => {
     model: "gpt-3.5-turbo", // gpt model
     messages: [
       { role: "system", content: [
-        `Translate the markdown file from ${from} to ${to} according to the BCP 47 standard. DO NOT add markdown tags. Translate ONLY given prompt, do not add anything new`,
+        `Translate the markdown file from ${from} to ${to} according to the BCP 47 standard. DO NOT add anything new tags or additional markdown tags. DO NOT CHANGE custom tags that start or end with '{%' or add additional custom tags that start or end with '{%'.Translate ONLY given prompt, do not add anything new.`,
+        "ALSO make sure to remove - '```'" + to + "",
         `Here are some reference to help with better translation.  ---${defaultReference}---`,
         `Make sure the output remains a valid markdown file.`,
+        `REMEMBER do NOT add anything new, just return the same text but translated to specific language`,
       ]
         .filter(Boolean)
         .join('\n'), },
       { role: "user", content: input },
     ],
     temperature: 0,
-    max_tokens: 4000,
+    max_tokens: 4096,
     top_p: 1,
   };
 }
@@ -144,7 +147,42 @@ const checkDeletedFile = () => {
   }
 }
 
+const getFileUpdatedDate = (path) => {
+  const ago24 = new Date().getTime() - (24*3600*1000)
+  const stats = fs.statSync(path) 
+
+  let randomLocaleFile = 0;
+
+  if(fs.existsSync(`${outputFolder}ru/${configMD.inputFolderName}/${path.split("/").pop()}`)) {
+    randomLocaleFile = fs.statSync(`${outputFolder}ru/${configMD.inputFolderName}/${path.split("/").pop()}`);
+  }
+
+  if(stats.mtimeMs > ago24 && randomLocaleFile.mtimeMs < stats.mtimeMs && !changedFiles.includes(path.split("/").pop())) {
+    console.log(chalk.bgGreenBright('🤖 checking modified markdown files and preparing to translate 🤖 '))
+    changedFiles.push(path.split("/").pop())
+  } else {
+    return
+  }
+}
+
+
+const setChangedFiles = async () => {
+  
+  for await (const file of fs.readdirSync(inputFolder)) {
+    if (file.includes('md')) {
+      getFileUpdatedDate(`${outputFolder}${configMD.inputFolderName}/${file}`)
+    }
+  }
+
+  if(changedFiles.length) {
+    changedFiles.forEach(modFile => {
+      deleteFile(modFile)
+    })
+  }
+}
+
 const set = async () => {
+  await setChangedFiles();
   console.log(chalk.yellow('🤖 getting markdown files from 🤖 ', inputFolder))
   for await (const locale of locales) {
     for await (const file of fs.readdirSync(inputFolder)) {
@@ -156,10 +194,11 @@ const set = async () => {
       }
     }
   }
+
   if(!isInProgress.length) {
     console.log(chalk.magentaBright('all done 💠'))
   }
 }
 
 checkDeletedFile();
-set()
+set();

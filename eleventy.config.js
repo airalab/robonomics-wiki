@@ -4,8 +4,6 @@ import yaml from 'js-yaml';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const NOT_FOUND_PATH = "dist/404.html";
-
 // all translation files
 const en = JSON.parse(fs.readFileSync('./translations/pages/en.json'))
 const ar = JSON.parse(fs.readFileSync('./translations/pages/ar/ar.json'))
@@ -94,38 +92,9 @@ import metagen from 'eleventy-plugin-metagen'; // for pages metadata
 
 export default async function(eleventyConfig) {
 
-	// to get 404 page
-	eleventyConfig.setBrowserSyncConfig({
-		callbacks: {
-			ready: function (err, bs) {
-				bs.addMiddleware("*", (req, res) => {
-					if (!fs.existsSync(NOT_FOUND_PATH)) {
-						throw new Error(
-							`Expected a \`${NOT_FOUND_PATH}\` file but could not find one. Did you create a 404.html template?`
-						);
-					}
-
-					const content_404 = fs.readFileSync(NOT_FOUND_PATH);
-					// Add 404 http status code in request header.
-					res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
-					// Provides the 404 content without redirect.
-					res.write(content_404);
-					res.end();
-				});
-			},
-		},
-		files: './_dist',
-		rewriteRules: [
-			{
-				match: /\/$/,
-				fn: function(req, res, match) {
-					if (req.url.endsWith('/')) {
-						req.url = req.url.slice(0, -1); // Remove trailing slash
-					}
-					return req.url;
-				}
-			}
-		]
+	eleventyConfig.setServerOptions({
+		// Show local network IP addresses for device testing
+		showAllHosts: true,
 	});
 
 	// eleventy copy assets

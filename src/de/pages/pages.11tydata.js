@@ -2,12 +2,20 @@ export default  {
   eleventyComputed: {
     title: function (data) { 
       if(data.title) {
-        return this.t(data.title, {}, 'de');
+        try {
+          return this.t(data.title, {}, 'de');
+        } catch(e) {
+          // console.log(e)
+        }
       }
     },
     description: function (data) { 
       if(data.description) {
-        return this.t(data.description, {}, 'de');
+        try {
+          return this.t(data.description, {}, 'de');
+        } catch(e) {
+          // console.log(e)
+        }
       }
     },
   }

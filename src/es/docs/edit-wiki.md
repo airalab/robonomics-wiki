@@ -4,14 +4,14 @@ contributors: [positivecrash]
 description: Formas de ayudarnos a mejorar nuestra wiki
 ---
 
-**La Wiki de Robonomics es de código abierto. ¡Cualquier corrección es bienvenida: corregir errores, erratas, información confusa u obsoleta, traducción a cualquier idioma. Necesitarás una cuenta de [GitHub](https://github.com/).**
+**Robonomics Wiki es de código abierto. ¡Cualquier corrección es bienvenida: corregir errores, erratas, información confusa u obsoleta, traducción a cualquier idioma. Necesitarás una cuenta de [GitHub](https://github.com/).**
 
 
 ## Cómo editar
 
-Si necesitas editar documentos de la Wiki de Robonomics, por favor, sigue estos pasos
+Si necesitas editar documentos de Robonomics Wiki, por favor, sigue estos pasos
 
-Asegúrate de tener [Node.js](https://nodejs.org/en/download/package-manager/) instalados.
+Asegúrate de tener [Node.js](https://nodejs.org/en/download/package-manager/) instalado.
 
 ### 1. Clonar repositorio
 
@@ -37,7 +37,7 @@ yarn install
 
 ### 2. Servir localmente (desarrollar, desarrollar-m1)
 
-`node debe ser v20 || >=22`
+`la versión de node debe ser 20 || >=22`
 
 Luego despliega el proyecto localmente:
 
@@ -45,26 +45,27 @@ Luego despliega el proyecto localmente:
 npm run start
 ```
 
+> puede ser necesario crear un archivo .env con las mismas variables que en el archivo .env.example
+
 ### 3. Hacer PR
 
-[Hacer solicitud de extracción](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)a [wiki repo](https://github.com/airalab/robonomics-wiki)
+[Hacer solicitud de extracción](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)) a [wiki repo](https://github.com/airalab/robonomics-wiki)
 
 ## Componentes
 
 {% roboWikiNote {title:"COMPONENTES PERSONALIZADOS", type: "advertencia"}%} Un **consejo** al agregar componentes personalizados:
-Si hay algo mal con el diseño después de agregar un componente, es posible que desees revisar los espacios. Debería ayudar a **ELIMINAR** los espacios después de la etiqueta de apertura y de cierre (como en el ejemplo a continuación){% endroboWikiNote %}
+Si hay algo mal con el diseño después de agregar un componente, es posible que desee verificar los espacios. Debería ayudar a **ELIMINAR** los espacios después de la etiqueta de apertura y de cierre (como en el ejemplo a continuación){% endroboWikiNote %}
 
 
 ```c
-{% raw %}{% roboWikiNote {title:"test", type: "okay"}%}{% endraw %} Lorem ipsum dolor sit amet.{% raw %}{% endroboWikiNote %}{% endraw %}
-
+{% raw %}{% roboWikiNote {title:"prueba", type: "bien"}%}{% endraw %} Lorem ipsum dolor sit amet.{% raw %}{% endroboWikiNote %}{% endraw %}
 ```
 
 ### Código
 
-Puedes agregar extras útiles a tu código:
+Puede agregar extras útiles a su código:
 
-`código con botón de copiar`
+`código con botón de copia`
 
 ```bash
 {% raw %}{% codeHelper { copy: true}%}{% endraw %}
@@ -92,10 +93,10 @@ algún texto de código
 
 **Propiedades para code-helper**
 
-| Propiedad        | Tipo      | Requerido | Por defecto | Descripción                                               |
-|------------------|-----------|-----------|-------------|-----------------------------------------------------------|
-| `copy`           | `Boolean` | `false`   | `false`     | agregar un botón de copiar para tu código                 |
-| `additionalLine` | `String`  | `false`   | ''          | línea adicional para tu código que se mostrará arriba     |
+| Propiedad         | Tipo| Requerido | Predeterminado | Descripción                                               |
+|------------------|-----------|----------|----------|-----------------------------------------------------------|
+| `copy`           | `Boolean` | `false`  | `false`  | agregar un botón de copia para tu código                           |
+| `additionalLine` | `String`  | `false`  | ''       | línea adicional para tu código que se mostrará arriba |
 
 
 {% codeHelper { additionalLine: "línea adicional", copy: true}%}
@@ -106,98 +107,101 @@ algún texto de código
 		otra cosa
 ```
 
-{% endcodeHelper %}### Frontmatter
-Los documentos en Robonomics Wiki contienen un bloque de metadatos. Debe estar en la parte superior del archivo Markdown y debe tener la forma de YAML válido entre líneas de tres guiones. Entre las líneas de tres guiones, puedes establecer o editar las siguientes opciones:
+{% endcodeHelper %}
+
+
+### Frontmatter
+Los documentos en el Wiki de Robonomics contienen un bloque de frontmatter. Debe estar en la parte superior del archivo Markdown y debe tener la forma de YAML válido entre líneas de tres guiones. Entre las líneas de tres guiones, puedes establecer o editar las siguientes opciones:
 
 ```YAML
 ---
 title: Cómo contribuir # Título de la página, no es necesario duplicarlo en el texto
-contributors: [positivecrash] # Principales colaboradores (quienes curan activamente esta página). Se requiere el apodo de GitHub, sin símbolos adicionales
-tools:
+contribuyentes: [positivecrash] # Principales contribuyentes (quienes curan activamente esta página). Se requiere el apodo de GitHub, sin ningún símbolo adicional
+herramientas:
   - rust 1.62.0
     https://blog.rust-lang.org/2022/06/30/Rust-1.62.0.html
   - Robonomics 1.4.0
   - baxter
     http://wiki.ros.org/melodic/Installation
-    # Herramientas que se utilizaron para pruebas tecnológicas
+```    # Herramientas que se utilizaron para probar la tecnología
 ---
 ```
 
 ### Grid
 Ayuda a agregar un diseño de cuadrícula a los elementos:
 
-- Utiliza primero el componente de contenedor de cuadrícula:
+- Utilice primero el componente de contenedor de cuadrícula:
 
 ```c
 {% raw %} {% roboWikiGridWrapper %}{% endroboWikiGridWrapper %}{% endraw %}
 ```
 <br/>
 
-- Y luego usa tantos componentes de elementos de cuadrícula como desees dentro del contenedor:
+- Y luego use tantos componentes de elementos de cuadrícula como desee dentro del contenedor:
 
 ```c
 {% raw %}{% roboWikiGridWrapper {columns: '3', align: center} %}
 	{% roboWikiGrid %} primer elemento {% endroboWikiGrid %}
 	{% roboWikiGrid %} segundo elemento {% endroboWikiGrid %}
 	{% roboWikiGrid %} tercer elemento {% endroboWikiGrid %}
-{% endroboWikiGridWrapper %} 
+{% endroboWikiGridWrapper %} {% endraw %}
 ```
 
 <br/>
 
 **Propiedades para robo-wiki-grid-wrapper**
 
-| Propiedad    | Tipo      | Requerido | Por defecto | Descripción                                                            |
-|--------------|-----------|-----------|-------------|------------------------------------------------------------------------|
-| `columns`    | `Número`  | `false`   | 4           | puedes elegir el número de columnas:   <br/> - de `1 a 5`               |
-| `align`      | `Cadena`  | `false`   |             | alinea los elementos en el eje del bloque:   <br/> - opciones: `start, center, end` |
-| `justify`    | `Cadena`  | `false`   |             | alinea los elementos en el eje en línea:  <br/> - opciones: `start, center, end` |
-| `textAlign`  | `Cadena`  | `false`   | `left`      | alinea el texto dentro de la cuadrícula:  <br/> - opciones: `left, center, right` |
+| Propiedad   | Tipo      | Requerido | Predeterminado | Descripción                                                            |
+|-------------|-----------|-----------|----------------|------------------------------------------------------------------------|
+| `columns`   | `Número`  | `falso`   | 4              | puede elegir el número de columnas:   <br/> - de `1 a 5`               |
+| `align`     | `Cadena`  | `falso`   |                | alinea los elementos en el eje del bloque:   <br/> - opciones: `start, center, end` |
+| `justify`   | `Cadena`  | `falso`   |         | alinear elementos en el eje en línea:  <br/> - opciones: `inicio, centro, fin` |
+| `textAlign` | `String` | `falso`  | `izquierda`  | alinear texto dentro de la cuadrícula:  <br/> - opciones: `izquierda, centro, derecha`        |
 
-{% roboWikiGridWrapper {columns: '3', textAlign: 'center', flexible: true} %}
-	{% roboWikiGrid %} {% roboWikiPicture {src:"docs/home-assistant/need_2.png", alt:"need"} %}{% endroboWikiPicture %}
-	<b>Raspberry Pi 4 (al menos 2 GB de RAM)</b>
+{% roboWikiGridWrapper {columns: '3', textAlign: 'centro', flexible: true} %}
+	{% roboWikiGrid %} {% roboWikiPicture {src:"docs/home-assistant/need_2.png", alt:"necesidad"} %}{% endroboWikiPicture %}
+	<b>Raspberry Pi 4 (mínimo 2 GB de RAM)</b>
 	{% endroboWikiGrid %}
 	{% roboWikiGrid %} 	{% roboWikiPicture {src:"docs/home-assistant/need_3.png", alt:"necesidad"} %}{% endroboWikiPicture %}
 	<b>Tarjeta SD de 16 GB</b> {% endroboWikiGrid %}
 	{% roboWikiGrid %} 	{% roboWikiPicture {src:"docs/home-assistant/need_7.png", alt:"necesidad"} %}{% endroboWikiPicture %}
-	<a href="https://www.zigbee2mqtt.io/information/supported_adapters.html" target="_blank"> <b> Adaptador Zigbee (opcional) </b> </a>  {% endroboWikiGrid %}
-{% endroboWikiGridWrapper %}
+	<a href="https://www.zigbee2mqtt.io/information/supported_adapters.html" target="_blank"> <b> Adaptador Zigbee (Opcional) </b> </a>  {% endroboWikiGrid %}
+{%endroboWikiGridWrapper %}
 
 {% roboWikiGridWrapper {columns: '2', textAlign: 'center'} %}
-	{% roboWikiGrid %} {% roboWikiPicture {src:"docs/home-assistant/need_5.png", alt:"necesidad"} %}{% endroboWikiPicture %}
-	 <a href="https://www.zigbee2mqtt.io/supported-devices/" target="_blank"> <b> Dispositivos inteligentes Zigbee (opcional) </b> </a>  {% endroboWikiGrid %}
-	{% roboWikiGrid %}{% roboWikiPicture {src:"docs/home-assistant/need_9.png", alt:"necesidad"} %}{% endroboWikiPicture %}
-	<b>Escritorio para configuración</b>  {% endroboWikiGrid %}
+	{% roboWikiGrid %} {% roboWikiPicture {src:"docs/home-assistant/need_5.png", alt:"need"} %}{% endroboWikiPicture %}
+	 <a href="https://www.zigbee2mqtt.io/supported-devices/" target="_blank"> <b> Dispositivos inteligentes Zigbee (Opcionalmente) </b> </a>  {% endroboWikiGrid %}
+	{% roboWikiGrid %} 	{% roboWikiPicture {src:"docs/home-assistant/need_9.png", alt:"need"} %}{% endroboWikiPicture %}
+	<b>Escritorio para la configuración</b>  {% endroboWikiGrid %}
 {% endroboWikiGridWrapper %}
 
 
 ### Imágenes
 
-#### Cómo subir
-Sube la imagen en la carpeta `src/assets/docs/images/url-of-your-doc`
-* Si la imagen necesita ser localizada, insértalas todas en una carpeta
-* Utiliza un apéndice de localización en el nombre de las imágenes si está localizado, por ejemplo, `imagen_en.jpg`
-* Asegúrate de que tu imagen esté optimizada para la web y al mismo tiempo se vea bien
+#### Cómo cargar
+Cargue la imagen en la carpeta `src/assets/docs/images/url-of-your-doc`
+* Si la imagen necesita ser localizada, insértelas todas en una carpeta
+* Utilice un apéndice de localización en el nombre de las imágenes si está localizado, por ejemplo, `imagen_en.jpg`
+* Asegúrese de que su imagen esté optimizada para la web y al mismo tiempo se vea bien
 
 #### Cómo insertar
 
-Hay dos formas de insertar imágenes en tus documentos:
+Hay dos formas de insertar imágenes en sus documentos:
 
-{% roboWikiNote {type: 'warning'}%} Se recomienda insertar imágenes con la etiqueta integrada `<robo-wiki-picture>`, sin embargo, también puedes usar la forma estándar para archivos Markdown. {% endroboWikiNote %}
+{% roboWikiNote {type: 'warning'}%} Se recomienda insertar imágenes con la etiqueta incorporada `<robo-wiki- imagen>`, sin embargo, también puedes usar la forma estándar para archivos Markdown. {% endroboWikiNote %}
 
-`con leyenda`
+`con subtítulo`
 
 ```c
-{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"explorar wiki de robomómica", link: '/docs/overview', caption: "EXPLORAR"} %}{% endroboWikiPicture %} {% endraw %}
+{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"explorar wiki de robomomics", link: '/docs/overview', caption: "EXPLORAR"} %}{% endroboWikiPicture %} {% endraw %}
 ```
 
 <br/>
 
-`o sin leyenda`
+`o sin subtítulo`
 
 ```c
-{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"explorar wiki de robomómica", link: '/docs/overview'} %}{% endroboWikiPicture %} {% endraw %}
+{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"explorar wiki de robomomics", link: '/docs/overview'} %}{% endroboWikiPicture %} {% endraw %}
 ```
 
 <br/>
@@ -220,14 +224,13 @@ Hay dos formas de insertar imágenes en tus documentos:
 
 **Propiedades para robo-wiki-picture:**
 
-| Propiedad | Tipo      | Requerido | Predeterminado | Descripción                                                                                                                                                                                                          |
-|-----------|-----------|-----------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `src`     | `String`  | `true`    |                | ruta de la imagen:  <br/> - si subiste tu imagen directamente a `/src/assets/images/docs/` usa: `url-de-tu-doc` <br/> - si subiste la imagen en una de las carpetas, usa: `nombre-de-la-carpeta/url-de-tu-doc` |
-| `link`    | `String`  | `false`   |                | alinear elementos en el eje del bloque:   <br/> - opciones: `inicio, centro, fin`                                                                                                                                    |
-````caption` | `String` | `false` | | alinear elementos en el eje en línea: <br/> - opciones: `start, center, end`
-| `alt` | `String` | `true` | imagen | proporciona información alternativa para una imagen si por alguna razón un usuario no puede verla
-| `zoom` | `Boolean` | `false` | | hacer zoom en la imagen
-| `loading` | `String` | `false` | lazy | hay dos opciones: lazy y eager
+| Propiedad | Tipo | Requerido | Predeterminado | Descripción ||----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `src`     | `String`  | `true`   |         | ruta de la imagen:  <br/> - si subiste tu imagen directamente a `/src/assets/images/docs/` usa: `url-de-tu-doc` <br/> - si subiste la imagen en una de las carpetas, usa: `nombre-de-la-carpeta/url-de-tu-doc` |
+| `link`    | `String`  | `false`  |         | alinea los elementos en el eje del bloque:   <br/> - opciones: `inicio, centro, fin`                                                                                                                                  |
+| `caption` | `String`  | `false`  |         | alinea los elementos en el eje en línea:  <br/> - opciones: `inicio, centro, fin`                                                                                                                                     |
+| `alt`     | `String`  | `true`   | imagen  | proporciona información alternativa para una imagen si un usuario por alguna razón no puede verla                                                                                                                    |
+| `zoom`    | `Boolean` | `false`  |         | ampliar imagen                                                                                                                                         |
+| `loading` | `String`  | `false`  | lazy    | hay dos opciones: lazy y eager                                                                                                                         |
 
 ### Notas y advertencias
 Puedes agregar notas y darles tipos específicos:
@@ -238,7 +241,7 @@ Puedes agregar notas y darles tipos específicos:
 `nota con título`
 
 ```c
-{% raw %} {% roboWikiNote {title:"TÍTULO DE EJEMPLO", type: "bien"}%} {% endroboWikiNote %} {% endraw%}
+{% raw %} {% roboWikiNote {title:"TÍTULO DE EJEMPLO", type: "okay"}%} {% endroboWikiNote %} {% endraw%}
 ```
 
 <br/>
@@ -246,50 +249,49 @@ Puedes agregar notas y darles tipos específicos:
 `nota con contenido`
 
 ```c
-{% raw %} {% roboWikiNote {type: "bien"}%} Lorem ipsum dolor sit amet.  {% endroboWikiNote %}  {% endraw%}
-```
-
-<br>/>
-
-`nota con título y contenido`
-
-```c
-{% raw %} {% roboWikiNote {title: "TÍTULO", type: "bien"}%} Lorem ipsum dolor sit amet.  {% endroboWikiNote %} {% endraw%}
+{% raw %} {% roboWikiNote {type: "okay"}%} Lorem ipsum dolor sit amet.  {% endroboWikiNote %}  {% endraw%}
 ```
 
 <br/>
 
-{% roboWikiNote {title: "Únete a Discord", type: "bien"}%} [Únete a Discord de Desarrolladores de Robonomics](https://discord.gg/jTxqGeF5Qy) para conectarte con la comunidad y obtener soporte técnico. {% endroboWikiNote %}
+`nota con título y contenido`
+
+```c
+{% raw %} {% roboWikiNote {title: "TÍTULO", type: "okay"}%} Lorem ipsum dolor sit amet.  {% endroboWikiNote %} {% endraw%}
+```
+
+<br/>
+
+{% roboWikiNote {title: "Únete a Discord", type: "okay"}%} [Únete a Discord de Desarrolladores de Robonomics](https://discord.gg/jTxqGeF5Qy) para conectarte con la comunidad y obtener soporte técnico. {% endroboWikiNote %}
 
 {% roboWikiNote {title: "Únete a Discord"}%} [Únete a Discord de Desarrolladores de Robonomics](https://discord.gg/jTxqGeF5Qy) para conectarte con la comunidad y obtener soporte técnico. {% endroboWikiNote %}
 
-{% roboWikiNote {title: "Únete a Discord", type: "advertencia"}%} [Únete a Discord de Desarrolladores de Robonomics](https://discord.gg/jTxqGeF5Qy) para conectarte con la comunidad y obtener soporte técnico. {% endroboWikiNote %}
+{% roboWikiNote {title: "Únete a Discord", type: "warning"}%} [Únete a Discord de Desarrolladores de Robonomics](https://discord.gg/jTxqGeF5Qy) para conectarte con la comunidad y obtener soporte técnico. {% endroboWikiNote %}
 
-**Propiedades para la nota de la wiki de robots**
+**Propiedades para la nota de wiki de robots**
 
-| Propiedad | Tipo      | Requerido | Predeterminado | Descripción                                                 |
-|-----------|-----------|-----------|----------------|-------------------------------------------------------------|
-| `type`    | `String`  | `falso`   |                | - hay tres tipos en total: `nota`, `advertencia`, `bien`    |
-| `title`   | `String`` | `falso`  |         | agrega título a tu nota                                     |
+| Propiedad | Tipo     | Requerido | Por defecto | Descripción                                                 |
+|----------|----------|----------|---------|-------------------------------------------------------------|
+| `type`   | `String` | `false`  |         | - hay tres tipos en total: `nota`, `advertencia`, `bien` |
+| `title`  | `String` | `false`  |         | agrega un título a tu nota                                     |
 
 
 ### Pestañas
 Puedes agregar pestañas al documento:
 
-- Utiliza el componente de contenedor de pestañas:
+- Usa el componente de envoltura de pestañas:
 
 ```c
 {% raw %} {% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}]} %} {% endroboWikiTabs %} {% endraw %}
 ```
 
-- Y luego usa tantos componentes de elementos de pestañas como desees dentro del contenedor:
+- Y luego usa tantos componentes de elementos de pestaña como desees dentro del envoltorio:
 
 ```c
 {% raw %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}]} %}
 	{% roboWikiTab {border: true} %} ip a {% endroboWikiTab %}
 	{% roboWikiTab %} <pre>ifconfig </pre> {% endroboWikiTab %}
-{% endroboWikiTabs %}
-{% endraw %}
+{% endroboWikiTabs %}{% endraw %}
 ```
 
 <br/>
@@ -309,7 +311,7 @@ Puedes agregar pestañas al documento:
 `pestañas verticales`
 
 ```c
-{% raw %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}],modo: 'vertical'} %}
+{% raw %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}], mode: 'vertical'} %}
 	{% roboWikiTab %} ip a {% endroboWikiTab %}
 	{% roboWikiTab %} ifconfig {% endroboWikiTab %}
 {% endroboWikiTabs %}
@@ -333,15 +335,15 @@ Puedes agregar pestañas al documento:
 **Propiedades para robo-wiki-tabs (envoltorio)**
 
 | Propiedad | Tipo     | Requerido | Por defecto | Descripción                                                       |
-|-----------|----------|-----------|-------------|-------------------------------------------------------------------|
-| `tabs`    | `Array`  | `true`    |             | - Array con títulos para cada pestaña                             |
-| `mode`    | `String` | `false`   | horizontal  | Puedes elegir el modo de pestañas: <br/> - `horizontal` <br/> - `vertical` |
+|----------|----------|----------|------------|-------------------------------------------------------------------|
+| `tabs`   | `Array`  | `true`   |            | - Array con títulos para cada pestaña                              |
+| `mode`   | `String` | `false`  | horizontal | puedes elegir el modo de pestañas: <br/> - `horizontal` <br/> - `vertical` |
 
 **Propiedades para robo-wiki-tab (elemento)**
 
-| Propiedad | Tipo      | Requerido | Por defecto | Descripción                         |
-|-----------|-----------|-----------|-------------|-------------------------------------|
-| `border`  | `Boolean` | `false`   | `false`     |falso` | - agregar borde al contenedor de contenido |
+| Propiedad | Tipo      | Requerido | Predeterminado | Descripción                         |
+|----------|-----------|----------|---------|-------------------------------------|
+| `border` | `Boolean` | `false`  | `false` | - añadir borde al contenedor de contenido |
 
 
 {% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}]} %}
@@ -357,9 +359,7 @@ Puedes agregar pestañas al documento:
 
 
 ### Título con anclas
-Puedes crear títulos personalizados con anclas y darles cierto valor
-
-`título con ancla`
+Puedes crear títulos personalizados con anclas y asignarles un valor específico`Título con ancla`
 
 ```c
 {% raw %} {% roboWikiTitle { type: 2, anchor: 'test-anchor'} %} Robonomics Wiki {% endroboWikiTitle %} {% endraw %}
@@ -367,7 +367,7 @@ Puedes crear títulos personalizados con anclas y darles cierto valor
 
 <br/>
 
-o `título sin ancla`
+o `Título sin ancla`
 
 ```c
 {% raw %} {% roboWikiTitle { type: 5} %} Robonomics Wiki {% endroboWikiTitle %} {% endraw %}
@@ -375,16 +375,16 @@ o `título sin ancla`
 
 <br/>
 
-{% roboWikiTitle { type: 6} %} Robonomics Wiki (título personalizado) {% endroboWikiTitle%}
+{% roboWikiTitle { type: 6} %} Robonomics Wiki (título personalizado) {% endroboWikiTitle %}
 
 <br/>
 
-**Propiedades para el título del wiki del robot**
+**Propiedades para robo-wiki-title**
 
 | Propiedad | Tipo                   | Requerido | Predeterminado | Descripción          |
-|----------|------------------------|----------|---------|----------------------|
-| `type`   | `Número (de 2 a 6)` | `verdadero`   |         | elige el nivel del encabezado |
-| `anchor` | `Cadena`               | `falso`  |         | valor para el ancla |
+|-----------|------------------------|-----------|----------------|----------------------|
+| `type`    | `Número (de 2 a 6)`    | `verdadero`|                | elige el nivel del encabezado |
+| `anchor`  | `Cadena`               | `falso`   |                | valor para el ancla |
 
 ### Videos
 
@@ -400,7 +400,7 @@ Necesitas especificar el formato del video
 ```
 
 
-{% roboWikiNote {type: "warning", title:"Acerca de las pasarelas"}%} La pasarela para el enlace se elige automáticamente desde el archivo de configuración - `src/_data/video_config.js`. Puedes agregar o eliminar algunas pasarelas cambiando laarchivo. {% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title:"Acerca de las pasarelas"}%} La pasarela para el enlace se elige automáticamente desde el archivo de configuración - `src/_data/video_config.js`. Puedes agregar o eliminar algunas pasarelas cambiando el archivo. {% endroboWikiNote %}
 
 
 #### Local
@@ -411,11 +411,11 @@ Necesitas especificar el formato del video
 
 ##### Propiedades
 
-- Si estás agregando un archivo con un tamaño superior a <span style="color:#af1c1c">10MB</span>, por favor, súbelo al servidor, no al repositorio.
+- Si estás agregando un archivo con un tamaño de más de <span style="color:#af1c1c">10MB</span>, por favor, súbelo al servidor, no al repositorio.
 
-- Puedes utilizar cualquier propiedad para la [etiqueta de video de HTML5](https://www.w3schools.com/tags/tag_video.asp).
+- Puedes usar cualquier propiedad para la [etiqueta de video de HTML5](https://www.w3schools.com/tags/tag_video.asp).
 
-- Formatos aceptables: mp4, webm, ogg.
+- Formatos aceptables - mp4, webm, ogg.
 
 | Propiedad | Tipo | Requerido | Por defecto | Descripción |
 |---|---|---|---|---|
@@ -423,15 +423,15 @@ Necesitas especificar el formato del video
 
 
 #### YouTube
-Puedes incrustar cualquier video de YouTube en el documento insertando el enlace de compartir como un párrafo separado sin comillas adicionales o etiquetas, por ejemplo: `https://youtu.be/kQaSwNYHJQ8`
+Puedes incrustar cualquier video de YouTube en el documento insertando el enlace de compartir como un párrafo separado sin comillas ni etiquetas adicionales, por ejemplo: `https://youtu.be/kQaSwNYHJQ8`
 
-Sin embargo, si necesitas reproducción automática, debes utilizar un componente especial:
+Sin embargo, si necesitas que se reproduzca automáticamente, debes usar un componente especial:
 
 ```
-{% raw %}{% roboWikiYoutube { link:'https://www.youtube.com/watch?v=5s4-S_z4VYE', autoplay: true} %}{%```yaml
----
-title: Propiedades para robo-wiki-youtube
----
+{% raw %}{% roboWikiYoutube { link:'https://www.youtube.com/watch?v=5s4-S_z4VYE', autoplay: true} %}{% endroboWikiYoutube %}{% endraw %}
+```
+
+**Propiedades para robo-wiki-youtube**
 
 | Propiedad | Tipo | Requerido | Por defecto | Descripción |
 |---|---|---|---|---|
@@ -442,37 +442,48 @@ title: Propiedades para robo-wiki-youtube
 
 ## Cómo editar la navegación de la barra lateral
 
-Si necesita editar la navegación de la barra lateral de Robonomics Wiki, siga estos pasos:
+Si necesitas editar la navegación de la barra lateral de Robonomics Wiki, por favor, sigue estos pasos:
 
-* Edite el archivo `src/_data/sidebar_docs.json`.
+* Edita el archivo `src/_data/sidebar_docs.json`.
 
-* Decida dónde colocar su documento
+* Decide dónde colocar tu documento
 
-* Utilice JSON válido para `src/_data/sidebar_docs.json` y confíe en la estructura de archivos existente
+* Utiliza JSON válido para `src/_data/sidebar_docs.json` y confía en elestructura de archivo existente
+
+* Debe agregar nuevas líneas al archivo de traducción `translations/pages/en.json` también, si no ha traducido nuevo contenido previamente, por ejemplo:
+
+```json
+{"Lanzar Robot desde la Nube": "Lanzar Robot desde la Nube"}
+```
+
+</br>
 
 * **NOTA IMPORTANTE:** si está utilizando el mismo documento en diferentes secciones/subsecciones, por ejemplo:
 
-```yaml
+```
+
 {
 	"title": "Actualizar Home Assistant OS",
 	"children": [
 	{
-		"title": "Activar suscripción",
+		"title": "Activar Suscripción",
 		"url": "/docs/sub-activate",
 	}],
-	"title": "Actualizar Home Assistant Docker para sistemas operativos tipo Unix",
+	"title": "Actualizar Home Assistant Docker para OS tipo Unix",
 		"children": [
 	{
-		"title": "Activar suscripción",
+		"title": "Activar Suscripción",
 		"url": "/docs/sub-activate",
 	}],
 }
+
 ```
 
 ASEGÚRESE DE AGREGAR EL PARÁMETRO `topic` DE ESTA MANERA:
 
 (para que la navegación funcione correctamente)
-``````
+
+```
 {
 	"title": "Actualizar Home Assistant OS",
 	"children": [
@@ -481,12 +492,12 @@ ASEGÚRESE DE AGREGAR EL PARÁMETRO `topic` DE ESTA MANERA:
 		"url": "/docs/sub-activate",
 		"topic": "Actualizar Home Assistant OS"
 	}],
-	"title": "Actualizar Home Assistant Docker para sistemas operativos tipo Unix",
+	"title": "Actualizar Home Assistant Docker para OS tipo Unix",
 		"children": [
 	{
 		"title": "Activar Suscripción",
 		"url": "/docs/sub-activate",
-		"topic": "Actualizar Home Assistant Docker para sistemas operativos tipo Unix"
+		"topic": "Actualizar Home Assistant Docker para OS tipo Unix"
 	}],
 }
 
@@ -494,9 +505,9 @@ ASEGÚRESE DE AGREGAR EL PARÁMETRO `topic` DE ESTA MANERA:
 
 ## Cómo agregar navegación personalizada para documentos
 
-* Edite el archivo `src/_data/sidebar_docs.json`.
+* Editar archivo`src/_data/sidebar_docs.json`.
 
-* Encuentre el documento correcto y agregue los parámetros `prev` y `next` de esta manera:
+* Encuentra el documento correcto y agrega los parámetros `prev` y `next` de esta manera:
 
 ```
 	{
@@ -504,13 +515,13 @@ ASEGÚRESE DE AGREGAR EL PARÁMETRO `topic` DE ESTA MANERA:
 		"url": "/docs/robonomics-smart-home-overview",
 		"next": [
 			{
-				"title": "Agregar Usuario",
+				"title": "Agregar usuario",
 				"url": "/docs/add-user"
 			}
 		],
 		"prev": [
 			{
-				"title": "Agregar Usuario",
+				"title": "Agregar usuario",
 				"url": "/docs/add-user"
 			}
 		],
@@ -518,7 +529,7 @@ ASEGÚRESE DE AGREGAR EL PARÁMETRO `topic` DE ESTA MANERA:
 
 ```
 
-* Si desea eliminar la navegación por completo, agregue el parámetro `withoutNav`:
+* Si deseas eliminar la navegación por completo, agrega el parámetro `withoutNav`:
 
 ```
 {
@@ -528,7 +539,7 @@ ASEGÚRESE DE AGREGAR EL PARÁMETRO `topic` DE ESTA MANERA:
 },
 ```
 
-* Si desea eliminarSolo navegación de `página anterior` o `página siguiente` que agregar el parámetro `withoutPrev` o `withoutNext`:
+* Si deseas eliminar solo la navegación de `página anterior` o `página siguiente`, agrega los parámetros `withoutPrev` o `withoutNext`:
 
 ```
 {
@@ -551,15 +562,29 @@ o
 
 ## Cómo traducir un documento
 
-{% roboWikiNote {title: 'Importante', type: 'advertencia'}%} Debes crear el archivo **.env** y agregar la variable *OPENAI_KEY* con tu clave {% endroboWikiNote %}
+{% roboWikiNote {title: 'Importante', type: 'warning'}%} Debes crear ****.env** archivo y agregar la variable *OPENAI_KEY* con tu clave {% endroboWikiNote %}
 
-Si deseas traducir tu documento md, debes ejecutar el siguiente comando: 
- 
+Si deseas traducir tu documento md, necesitas ejecutar el comando:
+
 ```bash
 npm run translate-md
 ```
 
-Después de ejecutar el comando, todo lo que tienes que hacer es esperar y tal vez revisar los archivos (las traducciones de IA pueden tener algunos errores).
+{% roboWikiNote {title: 'Traducción fácil', type: 'warning'}%} Para traducir todo de una vez, cada nueva línea en páginas, nuevo documento o documento cambiado, ahora solo necesitas un comando {% endroboWikiNote %}
+
+{% codeHelper {copy: true} %}
+
+```bash
+npm run translate-all
+```
+
+{% endcodeHelper %}
+
+> Además, asegúrate de estar traduciendo solo los archivos modificados que son **necesarios** traducir. Por ejemplo, necesitas cambiar 5 archivos. Tres de ellos incluyen cambios de texto y eliminación de información obsoleta. Y los otros dos necesitan actualizar enlaces para algunas imágenes o simplemente cambiar un enlace externo. En este caso, sería prudente cambiar los primeros tres archivos y traducirlos y luego cambiar los enlaces en los otros dos.
+
+> La traducción se aplica a todos los archivos modificados, pero no es necesaria para los enlaces actualizados, especialmente si el archivo es grande y, por lo tanto, la traducción lleva algo de tiempo.
+
+Después de ejecutar el comando necesario, todo lo que tienes que hacer es esperar y tal vez verificar los archivos (las traducciones de IA tienen algunas fallas). Para verificar los archivos, ejecute `npm run build` y vea si hay algún error.
 
 ### Solución de problemas de traducción
 
@@ -567,22 +592,21 @@ Puedes encontrarte con algunos problemas con las traducciones.
 
 1. Intenta ejecutar el comando nuevamente y verifica si funcionó.
 
-2. A veces las etiquetas en los archivos md pueden estar escritas incorrectamente, por ejemplo: 
-
+2. A veces las etiquetasEn los archivos md se pueden escribir incorrectamente, por ejemplo:
 
 ```
 {%raw %}
-	[11ty] 1. Having trouble rendering njk template ./src/de/docs/edit-wiki.md (via TemplateContentRenderError)
-	[11ty] 2. (./src/de/docs/edit-wiki.md) [Line 168, Column 96]
-	[11ty]   unknown block tag: endroboWiki (via Template render error)
+	[11ty] 1. Teniendo problemas para renderizar la plantilla njk ./src/de/docs/edit-wiki.md (a través de TemplateContentRenderError)
+	[11ty] 2. (./src/de/docs/edit-wiki.md) [Línea 168, Columna 96]
+	[11ty]   etiqueta de bloque desconocida: endroboWiki (a través de error de renderización de plantilla)
 {% endraw %}
 
 {%raw %}
-	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}{% endroboWikiPicture {% endroboWikiPicture %}
+	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}{% endroboWikiPicture %}{% endroboWikiPicture %}
 {% endraw %}
 
 {%raw %}
-	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}endroboWikiPicture %}
+	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}{% endroboWikiPicture %}
 {% endraw %}
 ```
 

@@ -15,6 +15,7 @@
     "build:11ty": "cross-env ELEVENTY_ENV=production eleventy",
     "translate-md": "node translations/prompt-md.js",
     "translate": "node translations/prompt.js",
+    "translate-all": "node translations/prompt.js && node translations/prompt-md.js",
     "start": "run-p dev:*",
     "build": "run-s clean build:*"
   },

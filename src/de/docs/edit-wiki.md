@@ -4,7 +4,7 @@ contributors: [positivecrash]
 description: Wege, wie du uns helfen kannst, unser Wiki zu verbessern
 ---
 
-**Das Robonomics Wiki ist Open Source. Alle Korrekturen sind willkommen: Fehlerbehebungen, Rechtschreibfehler, unklare oder veraltete Informationen, Übersetzungen in jede Sprache. Du benötigst ein [GitHub](https://github.com/)-Konto.**
+**Das Robonomics Wiki ist Open Source. Alle Korrekturen sind willkommen: Fehlerbehebungen, Rechtschreibfehler, unklare oder veraltete Informationen, Übersetzungen in jede Sprache. Du benötigst ein [GitHub](https://github.com/) Konto.**
 
 
 ## Wie man bearbeitet
@@ -37,7 +37,7 @@ yarn install
 
 ### 2. Lokal bereitstellen (entwickeln, entwickeln-m1)
 
-`Node muss v20 || >=22 sein`
+`Node-Version muss 20 || >=22 sein`
 
 Deploye dann das Projekt lokal:
 
@@ -45,14 +45,16 @@ Deploye dann das Projekt lokal:
 npm run start
 ```
 
+> Es kann erforderlich sein, eine .env-Datei mit denselben Variablen wie in der .env.example-Datei zu erstellen
+
 ### 3. Pull Request erstellen
 
-[Pull Request erstellen](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)zu [Wiki-Repo](https://github.com/airalab/robonomics-wiki)
+[Pull Request erstellen](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)) zu [Wiki-Repo](https://github.com/airalab/robonomics-wiki)
 
 ## Komponenten
 
 {% roboWikiNote {title:"BENUTZERDEFINIERTE KOMPONENTEN", type: "warning"}%} Ein **Tipp** beim Hinzufügen benutzerdefinierter Komponenten:
-Wenn nach dem Hinzufügen einer Komponente etwas mit dem Layout nicht stimmt, sollten Sie die Leerzeichen überprüfen. Es sollte helfen, Leerzeichen nach dem Öffnen und Schließen des Tags zu **ENTFERNEN** (wie im folgenden Beispiel){% endroboWikiNote %}
+Wenn nach dem Hinzufügen einer Komponente etwas mit dem Layout nicht stimmt, sollten Sie Leerzeichen überprüfen. Es sollte helfen, Leerzeichen nach dem Öffnen und Schließen des Tags zu **ENTFERNEN** (wie im folgenden Beispiel){% endroboWikiNote %}
 
 
 ```c
@@ -91,10 +93,10 @@ some text code
 
 **Eigenschaften für Code-Helper**
 
-| Eigenschaft       | Typ        | Erforderlich | Standard   | Beschreibung                                               |
-|-------------------|------------|--------------|------------|------------------------------------------------------------|
-| `copy`            | `Boolean`  | `false`      | `false`    | fügt einen Kopierbutton für Ihren Code hinzu               |
-| `additionalLine`  | `String`   | `false`      | ''         | zusätzliche Zeile für Ihren Code, die über dem Code angezeigt wird |
+| Eigenschaft         | Typ| Erforderlich | Standard  | Beschreibung                                               |
+|------------------|-----------|----------|-----------------------------------------------------------|
+| `copy`           | `Boolean` | `false`  | `false`  | fügt einen Kopieren-Button für Ihren Code hinzu                           |
+| `additionalLine` | `String`  | `false`  | ''       | zusätzliche Zeile für Ihren Code, die über dem Code angezeigt wird |
 
 
 {% codeHelper { additionalLine: "zusätzliche Zeile", copy: true}%}
@@ -109,7 +111,7 @@ some text code
 
 
 ### Frontmatter
-Dokumente im Robonomics-Wiki enthalten einen Frontmatter-Block. Er muss oben in der Markdown-Datei stehen und muss in Form von gültigem YAML zwischen drei Bindestrichen stehen. Zwischen den drei Bindestrichen können Sie folgende Optionen festlegen oder bearbeiten:
+Dokumente im Robonomics-Wiki enthalten einen Frontmatter-Block. Er muss oben in der Markdown-Datei stehen und muss in Form von gültigem YAML zwischen drei Bindestrichen stehen. Zwischen den drei Bindestrichen können folgende Optionen festgelegt oder bearbeitet werden:
 
 ```YAML
 ---
@@ -121,12 +123,12 @@ tools:
   - Robonomics 1.4.0
   - baxter
     http://wiki.ros.org/melodic/Installation
-    # Tools, die für Technologie-Tests verwendet wurden
+```    # Werkzeuge, die für Technologie-Tests verwendet wurden
 ---
 ```
 
 ### Grid
-Hilft dabei, ein Rasterlayout für Elemente hinzuzufügen:
+Hilft, Rasterlayout zu Elementen hinzuzufügen:
 
 - Verwenden Sie zuerst das Raster-Wrapper-Komponente:
 
@@ -135,13 +137,12 @@ Hilft dabei, ein Rasterlayout für Elemente hinzuzufügen:
 ```
 <br/>
 
-- Und verwenden Sie dann so viele Raster-Element-Komponenten wie gewünscht innerhalb des Wrappers:
+- Verwenden Sie dann beliebig viele Raster-Element-Komponenten innerhalb des Wrappers:
 
 ```c
 {% raw %}{% roboWikiGridWrapper {columns: '3', align: center} %}
 	{% roboWikiGrid %} erstes Element {% endroboWikiGrid %}
-	{% ro...```de
-{% roboWikiGridWrapper %} zweites Element {% endroboWikiGrid %}
+	{% roboWikiGrid %} zweites Element {% endroboWikiGrid %}
 	{% roboWikiGrid %} drittes Element {% endroboWikiGrid %}
 {% endroboWikiGridWrapper %} {% endraw %}
 ```
@@ -151,11 +152,11 @@ Hilft dabei, ein Rasterlayout für Elemente hinzuzufügen:
 **Eigenschaften für robo-wiki-grid-wrapper**
 
 | Eigenschaft | Typ      | Erforderlich | Standard | Beschreibung                                                            |
-|-------------|----------|--------------|----------|------------------------------------------------------------------------|
-| `columns`   | `Nummer` | `false`      | 4        | Sie können die Spaltenanzahl wählen:   <br/> - von `1 bis 5`           |
-| `align`     | `String` | `false`      |          | Elemente auf der Blockachse ausrichten:   <br/> - Optionen: `start, center, end` |
-| `justify`   | `String` | `false`      |          | Elemente auf der Inline-Achse ausrichten:  <br/> - Optionen: `start, center, end` |
-| `textAlign` | `String` | `false`      | `left`   | Text innerhalb des Rasters ausrichten:  <br/> - Optionen: `left, center, right` |
+|-------------|----------|-------------|----------|------------------------------------------------------------------------|
+| `columns`   | `Nummer` | `false`     | 4        | Sie können die Spaltenzahl wählen:   <br/> - von `1 bis 5`             |
+| `align`     | `String` | `false`     |          | Elemente auf der Blockachse ausrichten:   <br/> - Optionen: `start, center, end` |
+| `justify`   | `String` | `false`     |         | align items on the inline axis:  <br/> - options: `start, center, end` |
+| `textAlign` | `String` | `false`  | `left`  | align text inside grid:  <br/> - options: `left, center, right`        |
 
 {% roboWikiGridWrapper {columns: '3', textAlign: 'center', flexible: true} %}
 	{% roboWikiGrid %} {% roboWikiPicture {src:"docs/home-assistant/need_2.png", alt:"need"} %}{% endroboWikiPicture %}
@@ -165,12 +166,12 @@ Hilft dabei, ein Rasterlayout für Elemente hinzuzufügen:
 	<b>SD-Karte 16 GB</b> {% endroboWikiGrid %}
 	{% roboWikiGrid %} 	{% roboWikiPicture {src:"docs/home-assistant/need_7.png", alt:"need"} %}{% endroboWikiPicture %}
 	<a href="https://www.zigbee2mqtt.io/information/supported_adapters.html" target="_blank"> <b> Zigbee-Adapter (optional) </b> </a>  {% endroboWikiGrid %}
-{% endroboWikiGridWrapper %}
+{%endroboWikiGridWrapper %}
 
 {% roboWikiGridWrapper {columns: '2', textAlign: 'center'} %}
 	{% roboWikiGrid %} {% roboWikiPicture {src:"docs/home-assistant/need_5.png", alt:"need"} %}{% endroboWikiPicture %}
-	 <a href="https://www.zigbee2mqtt.io/supported-devices/" target="_blank"> <b> Zigbee-Smart-Geräte (optional) </b> </a>  {% endroboWikiGrid %}
-	{% roboWikiGrid %}{% roboWikiPicture {src:"docs/home-assistant/need_9.png", alt:"need"} %}{% endroboWikiPicture %}
+	 <a href="https://www.zigbee2mqtt.io/supported-devices/" target="_blank"> <b> Zigbee smart devices (optional) </b> </a>  {% endroboWikiGrid %}
+	{% roboWikiGrid %} 	{% roboWikiPicture {src:"docs/home-assistant/need_9.png", alt:"need"} %}{% endroboWikiPicture %}
 	<b>Desktop für die Einrichtung</b>  {% endroboWikiGrid %}
 {% endroboWikiGridWrapper %}
 
@@ -180,14 +181,14 @@ Hilft dabei, ein Rasterlayout für Elemente hinzuzufügen:
 #### Wie man hochlädt
 Laden Sie das Bild in den Ordner `src/assets/docs/images/url-of-your-doc` hoch
 * Wenn das Bild lokalisiert werden muss, fügen Sie alle in einem Ordner ein
-* Verwenden Sie den Ländercode im Namen der Bilder, wenn es lokalisiert ist, z.B. `image_en.jpg`
+* Verwenden Sie eine Lokalisierungsergänzung im Namen der Bilder, wenn sie lokalisiert sind, z. B. `image_en.jpg`
 * Stellen Sie sicher, dass Ihr Bild für das Web optimiert ist und gleichzeitig gut aussieht
 
 #### Wie man einfügt
 
 Es gibt zwei Möglichkeiten, Bilder in Ihre Dokumente einzufügen:
 
-{% roboWikiNote {type: 'warning'}%} Es wird empfohlen, Bilder mit dem integrierten Tag `<robo-wiki-picture>` einzufügen, Sie können jedoch auch den Standardweg für Markdown-Dateien verwenden. {% endroboWikiNote %}
+{% roboWikiNote {type: 'warning'}%} Es wird empfohlen, Bilder mit dem integrierten Tag `<robo-wiki` einzufügen.-Bild>`, Sie können jedoch auch die Standardmethode für Markdown-Dateien verwenden. {% endroboWikiNote %}
 
 `mit Beschriftung`
 
@@ -200,7 +201,7 @@ Es gibt zwei Möglichkeiten, Bilder in Ihre Dokumente einzufügen:
 `oder ohne Beschriftung`
 
 ```c
-{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"robomomics wiki erkunden",link: '/docs/overview'} %}{% endroboWikiPicture %} {% endraw %}
+{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"robomomics wiki erkunden", link: '/docs/overview'} %}{% endroboWikiPicture %} {% endraw %}
 ```
 
 <br/>
@@ -213,7 +214,7 @@ Es gibt zwei Möglichkeiten, Bilder in Ihre Dokumente einzufügen:
 
 <br/>
 
-`oder einfaches Bild mit Untertitel`
+`oder einfaches Bild mit Beschriftung`
 
 ```c
 {% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"robomomics wiki erkunden", caption: "ERKUNDEN"} %}{% endroboWikiPicture %} {% endraw %}
@@ -221,13 +222,14 @@ Es gibt zwei Möglichkeiten, Bilder in Ihre Dokumente einzufügen:
 
 <br/>
 
-**Eigenschaften für Robo-Wiki-Bild:**
+**Eigenschaften für robo-wiki-bild:**
 
 | Eigenschaft | Typ       | Erforderlich | Standard | Beschreibung                                                                                                                                                                                                         |
-|-------------|-----------|--------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `src`       | `String`  | `true`       |          | Pfad zum Bild:  <br/> - Wenn Sie Ihr Bild direkt in den Ordner `/src/assets/images/docs/` hochgeladen haben, verwenden Sie: `url-of-your-doc` <br/> - Wenn Sie das Bild in einem der Ordner hochgeladen haben, verwenden Sie: `Ordnername/url-of-your-doc` |
-| `link`      | `String`  | `false`      |          | Elemente auf der Blockachse ausrichten:   <br/> - Optionen: `start, center, end`                                                                                                                                      |`Beschriftung` | `String`  | `false`  |         | Elemente auf der Inline-Achse ausrichten:  <br/> - Optionen: `start, center, end`                                                                                                                                               |
-| `alt`     | `String`  | `true`   | Bild | Bietet alternative Informationen für ein Bild, falls ein Benutzer es aus irgendeinem Grund nicht anzeigen kann                                                                                                                               |
+|------------|-----------|-------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `src`     | `String`  | `true`   |         | Pfad zum Bild:  <br/> - Wenn Sie Ihr Bild direkt in den Ordner `/src/assets/images/docs/` hochgeladen haben, verwenden Sie: `url-of-your-doc` <br/> - Wenn Sie das Bild in einem der Ordner hochgeladen haben, verwenden Sie: `folder-name/url-of-your-doc` |
+| `link`    | `String`  | `false`  |         | Ausrichtungselemente auf der Blockachse:   <br/> - Optionen: `start, center, end`                                                                                                                                               |
+| `caption` | `String`  | `false`  |         | Ausrichtungselemente auf der Inline-Achse:  <br/> - Optionen: `start, center, end`                                                                                                                                               |
+| `alt`     | `String`  | `true`   | picture | Bietet alternative Informationen für ein Bild, wenn ein Benutzer es aus irgendeinem Grund nicht anzeigen kann                                                                                                                               |
 | `zoom`    | `Boolean` | `false`  |         | Bild vergrößern                                                                                                                                                                                                           |
 | `loading` | `String`  | `false`  | lazy    | Es gibt zwei Optionen: lazy und eager                                                                                                                                                                                |
 
@@ -253,10 +255,10 @@ Sie können Hinweise hinzufügen und ihnen spezifische Typen zuweisen:
 
 <br/>
 
-`Notiz mit Titel und Inhalt`
+`Hinweis mit Titel und Inhalt`
 
 ```c
-{% raw %} {% roboWikiNote {title: "TITEL", type: "okay"}%} Lorem ipsum dolor sit amet.  {% endroboWikiNote %} {% endraw %}
+{% raw %} {% roboWikiNote {title: "TITEL", type: "okay"}%} Lorem ipsum dolor sit amet.  {% endroboWikiNote %} {% endraw%}
 ```
 
 <br/>
@@ -265,38 +267,37 @@ Sie können Hinweise hinzufügen und ihnen spezifische Typen zuweisen:
 
 {% roboWikiNote {title: "Discord beitreten"}%} [Treten Sie dem Robonomics Developers Discord bei](https://discord.gg/jTxqGeF5Qy), um sich mit der Community zu verbinden und technische Unterstützung zu erhalten. {% endroboWikiNote %}
 
-{% roboWikiNote {title: "Discord beitreten", type: "warning"}%} [Treten Sie dem Robonomics Developers Discord bei](https://discord.gg/jTxqGeF5Qy), um sich mit der Community zu verbinden und technische Unterstützung zu erhalten. {% endroboWikiNote %}
+{% roboWikiNote {title: "Schließe dich Discord an", type: "warning"}%} [Treten Sie dem Robonomics Developers Discord bei](https://discord.gg/jTxqGeF5Qy), um sich mit der Community zu verbinden und technische Unterstützung zu erhalten. {% endroboWikiNote %}
 
 **Eigenschaften für Robo-Wiki-Notiz**
 
 | Eigenschaft | Typ       | Erforderlich | Standard | Beschreibung                                                 |
 |-------------|-----------|--------------|----------|-------------------------------------------------------------|
-| `type`      | `String`  | `false`      |          | - Es gibt insgesamt drei Typen: `note`, `warning`, `okay`    |
-| `title`     | `String`` | `false`  |         | fügt dem Hinweis einen Titel hinzu                                     |
+| `type`      | `String`  | `false`      |          | - insgesamt gibt es drei Typen: `note`, `warning`, `okay`    |
+| `title`     | `String`  | `false`      |          | fügt Ihrer Notiz einen Titel hinzu                            |
 
 
 ### Registerkarten
 Sie können Registerkarten zum Dokument hinzufügen:
 
-- Verwenden Sie das Registerkarten-Umschlagkomponente:
+- Verwenden Sie das Registerkarten-Wrapper-Komponent:
 
 ```c
 {% raw %} {% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}]} %} {% endroboWikiTabs %} {% endraw %}
 ```
 
-- Und verwenden Sie dann so viele Registerkartenkomponenten wie gewünscht innerhalb des Umschlags:
+- Und verwenden Sie dann beliebig viele Registerkartenkomponenten innerhalb des Wrappers:
 
 ```c
 {% raw %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}]} %}
 	{% roboWikiTab {border: true} %} ip a {% endroboWikiTab %}
 	{% roboWikiTab %} <pre>ifconfig </pre> {% endroboWikiTab %}
-{% endroboWikiTabs %}
-{% endraw %}
+{% endroboWikiTabs %}{% endraw %}
 ```
 
 <br/>
 
-`Horizontale Registerkarten`
+`horizontale Registerkarten`
 
 ```c
 {% raw %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}]} %}
@@ -308,42 +309,42 @@ Sie können Registerkarten zum Dokument hinzufügen:
 
 <br/>
 
-`Vertikale Registerkarten`
+`vertikale Registerkarten`
 
 ```c
-{% raw %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}],Sprachumfang: 'vertikal'} %}
+{% raw %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}], mode: 'vertical'} %}
 	{% roboWikiTab %} ip a {% endroboWikiTab %}
 	{% roboWikiTab %} ifconfig {% endroboWikiTab %}
 {% endroboWikiTabs %}
-{% endroh %}
+{% endraw %}
 ```
 
 <br/>
 
-`Tab-Element mit Rahmen`
+`Registerkarten-Element mit Rand`
 
 ```c
-{% roh %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}] %}
+{% raw %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}] %}
 	{% roboWikiTab {border: true} %} ip a {% endroboWikiTab %}
 	{% roboWikiTab %} ifconfig {% endroboWikiTab %}
 {% endroboWikiTabs %}
-{% endroh %}
+{% endraw %}
 ```
 
 <br/>
 
 **Eigenschaften für Robo-Wiki-Tabs (Wrapper)**
 
-| Eigenschaft | Typ       | Erforderlich | Standardwert | Beschreibung                                                      |
-|-------------|-----------|--------------|--------------|-------------------------------------------------------------------|
-| `tabs`      | `Array`   | `true`       |              | - Array mit Titeln für jede Registerkarte                        |
-| `mode`      | `String`  | `false`      | horizontal   | Sie können den Registerkartenmodus wählen: <br/> - `horizontal` <br/> - `vertikal` |
+| Eigenschaft | Typ      | Erforderlich | Standard    | Beschreibung                                                      |
+|-------------|----------|----------|------------|-------------------------------------------------------------------|
+| `tabs`   | `Array`  | `true`   |            | - Array mit Titeln für jede Registerkarte                                  |
+| `mode`   | `String` | `false`  | horizontal | Sie können den Registerkartenmodus auswählen: <br/> - `horizontal` <br/> - `vertikal` |
 
-**Eigenschaften für Robo-Wiki-Tab (Element)**
+**Eigenschaften für robo-wiki-tab (Element)**
 
-| Eigenschaft | Typ        | Erforderlich | Standardwert | Beschreibung                         |
-|-------------|------------|--------------|--------------|-------------------------------------|
-| `border`    | `Boolean`  | `false`      | `false`      |false` | - Füge einen Rahmen um den Inhaltsbereich hinzu |
+| Eigenschaft | Typ      | Erforderlich | Standard | Beschreibung                         |
+|----------|-----------|----------|---------|-------------------------------------|
+| `border` | `Boolean` | `false`  | `false` | - fügt dem Inhaltscontainer einen Rahmen hinzu |
 
 
 {% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}]} %}
@@ -359,9 +360,7 @@ Sie können Registerkarten zum Dokument hinzufügen:
 
 
 ### Titel mit Anker
-Sie können benutzerdefinierte Titel mit Anker erstellen und ihnen einen bestimmten Wert zuweisen
-
-`Titel mit Anker`
+Sie können benutzerdefinierte Titel mit Anker erstellen und ihnen einen bestimmten Wert zuweisen`Titel mit Anker`
 
 ```c
 {% raw %} {% roboWikiTitle { type: 2, anchor: 'test-anchor'} %} Robonomics Wiki {% endroboWikiTitle %} {% endraw %}
@@ -386,13 +385,13 @@ oder `Titel ohne Anker`
 | Eigenschaft | Typ                     | Erforderlich | Standard | Beschreibung          |
 |-------------|-------------------------|--------------|----------|-----------------------|
 | `type`      | `Nummer (von 2 bis 6)`  | `true`       |          | wähle Überschriftsebene |
-| `anchor`    | `Zeichenkette`          | `false`      |          | Wert für das Ankerzeichen |
+| `anchor`    | `Zeichenkette`          | `false`      |          | Wert für den Anker |
 
 ### Videos
 
 Es gibt zwei Möglichkeiten, Videos in Ihre Dokumente einzufügen:
 
-{% roboWikiNote {type: "warning"}%} Es wird empfohlen, Videos mit dem integrierten Tag `<robo-wiki-video>` einzufügen, jedoch können Sie auch den Standardweg für Markdown-Dateien verwenden. {% endroboWikiNote %}
+{% roboWikiNote {type: "warning"}%} Es wird empfohlen, Videos mit dem integrierten Tag `<robo-wiki-video>` einzufügen, Sie können jedoch auch den Standardweg für Markdown-Dateien verwenden. {% endroboWikiNote %}
 
 #### IPFS / Server
 Sie müssen das Format des Videos angeben
@@ -402,7 +401,7 @@ Sie müssen das Format des Videos angeben
 ```
 
 
-{% roboWikiNote {type: "warning", title:"Über Gateways"}%} Das Gateway für den Link wird automatisch aus der Konfigurationsdatei ausgewählt - `src/_data/video_config.js`. Sie können einige Gateways hinzufügen oder entfernen, indem Sie dieDatei. {% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title:"Über Gateways"}%} Das Gateway für den Link wird automatisch aus der Konfigurationsdatei ausgewählt - `src/_data/video_config.js`. Sie können einige Gateways hinzufügen oder entfernen, indem Sie die Datei ändern. {% endroboWikiNote %}
 
 
 #### Lokal
@@ -421,16 +420,16 @@ Sie müssen das Format des Videos angeben
 
 | Eigenschaft | Typ | Erforderlich | Standard | Beschreibung |
 |---|---|---|---|---|
-| `videos` | `Array` | `true` |  | Array von Objekten [{src: `Pfad zum Video`, type: `Videotyp`}] |
+| `videos` |`Array` | `true` |  | Array von Objekten [{src: `Pfad zum Video`, Typ: `Videotyp`}] |
 
 
 #### YouTube
-Sie können jedes YouTube-Video im Dokument einbetten, indem Sie den Freigabelink als separaten Absatz ohne zusätzliche Anführungszeichen oder Tags einfügen, z. B.: `https://youtu.be/kQaSwNYHJQ8`
+Sie können jedes YouTube-Video in der Dokumentation einbetten, indem Sie den Freigabelink als separaten Absatz ohne zusätzliche Anführungszeichen oder Tags einfügen, z. B.: `https://youtu.be/kQaSwNYHJQ8`
 
 Wenn Sie jedoch ein Autoplay benötigen, müssen Sie ein spezielles Komponent verwenden:
 
 ```
-{% raw %}{% roboWikiYoutube { link:'https://www.youtube.com/watch?v=5s4-S_z4VYE', autoplay: true} %}{%endroboWikiYoutube %}{% endraw %}
+{% raw %}{% roboWikiYoutube { link:'https://www.youtube.com/watch?v=5s4-S_z4VYE', autoplay: true} %}{% endroboWikiYoutube %}{% endraw %}
 ```
 
 **Eigenschaften für robo-wiki-youtube**
@@ -439,20 +438,28 @@ Wenn Sie jedoch ein Autoplay benötigen, müssen Sie ein spezielles Komponent ve
 |---|---|---|---|---|
 | `link` | `String` | `true` |  | Link zum YouTube-Video |
 | `autoplay` | `Boolean` | `false` | `false` | Autoplay des YouTube-Videos |
-| `loop` | `Boolean` | `false` | `false` | Schleife des YouTube-Videos |
+| `loop` | `Boolean` | `false` | `false` | Schleifen des YouTube-Videos |
 
 
-## Wie man die Seitenleistennavigation bearbeitet
+## Bearbeiten der Seitenleistennavigation
 
-Wenn Sie die Seitenleistennavigation des Robonomics Wiki bearbeiten müssen, befolgen Sie bitte diese Schritte:
+Wenn Sie die Seitenleistennavigation des Robonomics-Wikis bearbeiten müssen, befolgen Sie bitte diese Schritte:
 
 * Bearbeiten Sie die Datei `src/_data/sidebar_docs.json`.
 
 * Entscheiden Sie, wo Sie Ihr Dokument platzieren möchten.
 
-* Verwenden Sie gültiges JSON für `src/_data/sidebar_docs.json` und verlassen Sie sich auf die vorhandene Dateistruktur.
+* Verwenden Sie gültiges JSON für `src/_data/sidebar_docs.json` und verlassen Sie sich auf diebestehende Dateistruktur
 
-* **WICHTIGER HINWEIS:** Wenn Sie dasselbe Dokument in verschiedenen Abschnitten/Unterabschnitten verwenden, z.B.:
+* Sie müssen neue Zeilen zur Übersetzungsdatei `translations/pages/en.json` hinzufügen, wenn Sie zuvor keinen neuen Inhalt übersetzt haben, z. B.:
+
+```json
+{"Launch Robot from Cloud": "Launch Robot from Cloud"}
+```
+
+</br>
+
+* **WICHTIGER HINWEIS:** Wenn Sie dasselbe Dokument in verschiedenen Abschnitten/Unterabschnitten verwenden, z. B.:
 
 ```
 
@@ -473,65 +480,67 @@ Wenn Sie die Seitenleistennavigation des Robonomics Wiki bearbeiten müssen, bef
 
 ```
 
-STELLEN SIE SICHER, DASS SIE DEN `topic`-PARAMETER WIE FOLGT HINZUFÜGEN:
+STELLEN SIE SICHER, DASS DER `topic` PARAMETER WIE FOLGT HINZUGEFÜGT WIRD:
 
-(damit die Navigation ordnungsgemäß funktioniert)```
+(damit die Navigation ordnungsgemäß funktioniert)
+
+```
 {
 	"title": "Upgrade Home Assistant OS",
 	"children": [
 	{
-		"title": "Aktivierung des Abonnements",
+		"title": "Subscription Activate",
 		"url": "/docs/sub-activate",
 		"topic": "Upgrade Home Assistant OS"
 	}],
-	"title": "Upgrade Home Assistant Docker für Unix-ähnliche Betriebssysteme",
+	"title": "Upgrade Home Assistant Docker for Unix-like OS",
 		"children": [
 	{
-		"title": "Aktivierung des Abonnements",
+		"title": "Subscription Activate",
 		"url": "/docs/sub-activate",
-		"topic": "Upgrade Home Assistant Docker für Unix-ähnliche Betriebssysteme"
+		"topic": "Upgrade Home Assistant Docker for Unix-like OS"
 	}],
 }
 
 ```
 
-## Wie man eine benutzerdefinierte Navigation für Dokumente hinzufügt
+## So fügen Sie eine benutzerdefinierte Navigation für Dokumente hinzu
 
-* Bearbeiten Sie die Datei `src/_data/sidebar_docs.json`.
+* Bearbeiten Sie die Datei`src/_data/sidebar_docs.json`.
 
-* Finden Sie das richtige Dokument und fügen Sie die Parameter `prev` und `next` wie folgt hinzu:
+* Finde das richtige Dokument und füge die Parameter `prev` und `next` wie folgt hinzu:
 
 ```
 	{
 		"title": "Übersicht",
-		"url": "/docs/robonomics-smart-home-overview",
+		"url": "/docs/robonomics-smart-home-übersicht",
 		"next": [
 			{
 				"title": "Benutzer hinzufügen",
-				"url": "/docs/add-user"
+				"url": "/docs/benutzer-hinzufügen"
 			}
 		],
 		"prev": [
 			{
 				"title": "Benutzer hinzufügen",
-				"url": "/docs/add-user"
+				"url": "/docs/benutzer-hinzufügen"
 			}
 		],
 	},
 
 ```
 
-* Wenn Sie die Navigation vollständig entfernen möchten, fügen Sie den Parameter `withoutNav` hinzu:
+* Wenn du die Navigation vollständig entfernen möchtest, füge den Parameter `withoutNav` hinzu:
 
 ```
 {
 	"title": "Übersicht",
-	"url": "/docs/robonomics-smart-home-overview",
+	"url": "/docs/robonomics-smart-home-übersicht",
 	"withoutNav": true
 },
 ```
 
-* Wenn Sie die Navigation entfernen möchtenNur `vorherige Seite` oder `nächste Seite` Navigation hinzufügen und dann den Parameter `withoutPrev` oder `withoutNext` hinzufügen:
+* Wenn du nur die Navigation für die `vorherige Seite` oder `nächste Seite` entfernen möchtest, füge den Parameter `withoutPrev` oder `withoutNext` hinzu:
 
 ```
 {
@@ -554,37 +563,51 @@ oder
 
 ## Wie man ein Dokument übersetzt
 
-{% roboWikiNote {title: 'Wichtig', type: 'warning'}%} Sie müssen die Datei **.env** erstellen und die Variable *OPENAI_KEY* mit Ihrem Schlüssel hinzufügen {% endroboWikiNote %}
+{% roboWikiNote {title: 'Wichtig', type: 'warning'}%} Du musst **.env**-Datei und fügen Sie die *OPENAI_KEY*-Variable mit Ihrem Schlüssel hinzu {% endroboWikiNote %}
 
-Wenn Sie Ihr md-Dokument übersetzen möchten, müssen Sie den Befehl ausführen: 
- 
+Wenn Sie Ihr md-Dokument übersetzen möchten, müssen Sie den Befehl ausführen:
+
 ```bash
 npm run translate-md
 ```
 
-Nach Ausführung des Befehls müssen Sie nur noch warten und vielleicht die Dateien überprüfen (KI-Übersetzungen haben einige Mängel).
+{% roboWikiNote {title: 'Einfach übersetzen', type: 'warning'}%} Um alles auf einmal zu übersetzen, jede neue Zeile in Seiten, neues Dokument oder geändertes Dokument müssen Sie jetzt nur noch einen Befehl ausführen {% endroboWikiNote %}
+
+{% codeHelper {copy: true} %}
+
+```bash
+npm run translate-all
+```
+
+{% endcodeHelper %}
+
+> Stellen Sie außerdem sicher, dass Sie nur die geänderten Dateien übersetzen, die **übersetzt werden müssen**. Zum Beispiel müssen Sie 5 Dateien ändern. Drei davon enthalten Textänderungen und das Entfernen einiger veralteter Informationen. Und die anderen beiden müssen Links für einige Bilder aktualisieren oder einfach einen externen Link ändern. In diesem Fall wäre es ratsam, die ersten drei Dateien zu ändern und zu übersetzen und erst dann die Links in den anderen beiden zu ändern.
+
+> Die Übersetzung erfolgt für alle geänderten Dateien, aber sie ist nicht unbedingt erforderlich für die aktualisierten Links, insbesondere wenn die Datei groß ist und die Übersetzung daher einige Zeit in Anspruch nimmt.
+
+Nach Ausführung des erforderlichen Befehls müssen Sie nur noch warten und möglicherweise die Dateien überprüfen (KI-Übersetzungen weisen einige Mängel auf). Um Dateien zu überprüfen, führen Sie `npm run build` aus und prüfen Sie, ob Fehler vorliegen.
 
 ### Übersetzungsprobleme
 
-Es kann zu Problemen mit Übersetzungen kommen.
+Es kann zu Problemen bei Übersetzungen kommen.
 
 1. Versuchen Sie, den Befehl erneut auszuführen und prüfen, ob er funktioniert hat.
 
-2. Manchmal können Tags in md-Dateien falsch geschrieben sein, zum Beispiel: 
+2. Manchmal können Tagsin md-Dateien können Fehler auftreten, zum Beispiel:
 
 ```
 {%raw %}
-	[11ty] 1. Having trouble rendering njk template ./src/de/docs/edit-wiki.md (via TemplateContentRenderError)
-	[11ty] 2. (./src/de/docs/edit-wiki.md) [Line 168, Column 96]
-	[11ty]   unknown block tag: endroboWiki (via Template render error)
+	[11ty] 1. Schwierigkeiten beim Rendern der njk-Vorlage ./src/de/docs/edit-wiki.md (über TemplateContentRenderError)
+	[11ty] 2. (./src/de/docs/edit-wiki.md) [Zeile 168, Spalte 96]
+	[11ty]   unbekannter Block-Tag: endroboWiki (über Template-Renderfehler)
 {% endraw %}
 
 {%raw %}
-	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}{% endroboWikiPicture {% endroboWikiPicture %}
+	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}{% endroboWikiPicture %}
 {% endraw %}
 
 {%raw %}
-	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}endroboWikiPicture %}
+	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}{% endroboWikiPicture %}
 {% endraw %}
 ```
 
