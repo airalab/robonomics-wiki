@@ -4,7 +4,7 @@ contributors: [positivecrash]
 description: 当Wikiを改善する方法
 ---
 
-**Robonomics Wikiはオープンソースです。修正は歓迎します：エラーの修正、誤字脱字の修正、不明瞭または古い情報の修正、あらゆる言語への翻訳。[GitHub](https://github.com/)アカウントが必要です。**
+**Robonomics Wikiはオープンソースです。修正は歓迎されます: エラーの修正、誤字脱字の修正、不明瞭または古い情報の修正、あらゆる言語への翻訳。[GitHub](https://github.com/)アカウントが必要です。**
 
 
 ## 編集方法
@@ -15,13 +15,13 @@ Robonomics Wikiのドキュメントを編集する必要がある場合は、�
 
 ### 1. リポジトリをクローン
 
-まず、Wikiリポジトリをクローンする必要があります：
+まず、Wikiリポジトリをクローンする必要があります:
 
 ```
 git clone https://github.com/airalab/robonomics-wiki.git
 ```
 
-リポジトリのディレクトリに移動し、次のコマンドを実行します：
+リポジトリのディレクトリに移動し、次のコマンドを実行します:
 
 `npmを使用`
 ```
@@ -37,22 +37,24 @@ yarn install
 
 ### 2. ローカルでサーブ（develop, develop-m1）
 
-`nodeはv20 || >=22以上である必要があります`
+`nodeのバージョンは20 || >=22である必要があります`
 
-次に、プロジェクトをローカルで展開します：
+次に、プロジェクトをローカルで展開します:
 
 ```
 npm run start
 ```
 
+> .envファイルを.env.exampleファイルと同じ変数で作成する必要があるかもしれません
+
 ### 3. PRを作成
 
-[プルリクエストを作成](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)[wikiリポジトリ](https://github.com/airalab/robonomics-wiki)
+[プルリクエストを作成](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)) to [wiki repo](https://github.com/airalab/robonomics-wiki)
 
 ## コンポーネント
 
 {% roboWikiNote {title:"カスタムコンポーネント", type: "warning"}%} カスタムコンポーネントを追加する際の**ヒント**：
-コンポーネントを追加した後にレイアウトに問題がある場合は、スペースを確認してみてください。開始タグと終了タグの後にスペースが**削除**されていることを確認すると役立ちます（以下の例のように）{% endroboWikiNote %}
+コンポーネントを追加した後にレイアウトに問題がある場合は、スペースを確認してみてください。開始タグと終了タグの後にスペースを**削除**すると役立ちます（以下の例のように）{% endroboWikiNote %}
 
 
 ```c
@@ -63,7 +65,7 @@ npm run start
 
 コードに便利な追加機能を追加できます：
 
-`コピー ボタン付きのコード`
+`コピーボタン付きコード`
 
 ```bash
 {% raw %}{% codeHelper { copy: true}%}{% endraw %}
@@ -76,7 +78,7 @@ some text code
 ```
 <br/>
 
-または `追加行付きのコード`
+または`追加行付きコード`
 
 ```bash
 {% raw %}{% codeHelper { additionalLine: "additional line"}%}{% endraw %}
@@ -91,10 +93,10 @@ some text code
 
 **コードヘルパーのプロパティ**
 
-| プロパティ         | タイプ      | 必須 | デフォルト  | 説明                                               |
+| プロパティ         | タイプ| 必須 | デフォルト | 説明 |
 |------------------|-----------|----------|----------|-----------------------------------------------------------|
-| `copy`           | `Boolean` | `false`  | `false`  | コードにコピー ボタンを追加する                           |
-| `additionalLine` | `String`  | `false`  | ''       | コードに表示される追加行 |
+| `copy`           | `Boolean` | `false`  | `false`  | コードにコピー ボタンを追加します                           |
+| `additionalLine` | `String`  | `false`  | ''       | コードの上に表示される追加行 |
 
 
 {% codeHelper { additionalLine: "additional line", copy: true}%}
@@ -109,7 +111,7 @@ some text code
 
 
 ### フロントマター
-Robonomics Wikiのドキュメントには、フロントマターブロックが含まれています。Markdownファイルの先頭に配置する必要があり、有効なYAML形式でトリプルダッシュで囲まれた間に配置する必要があります。トリプルダッシュで囲まれた間には、以下のオプションを設定または編集できます：
+Robonomics Wikiのドキュメントには、フロントマターブロックが含まれています。Markdownファイルの先頭に配置する必要があり、トリプルダッシュで囲まれた有効なYAML形式である必要があります。トリプルダッシュの間に、以下のオプションを設定または編集できます:
 
 ```YAML
 ---
@@ -121,14 +123,14 @@ tools:
   - Robonomics 1.4.0
   - baxter
     http://wiki.ros.org/melodic/Installation
-    # テクノロジーテストに使用されたツール
+```    # テクノロジーテストに使用されたツール
 ---
 ```
 
 ### グリッド
 要素にグリッドレイアウトを追加するのに役立ちます：
 
-- まず、グリッドラッパーコンポーネントを使用します：
+- まずグリッドラッパーコンポーネントを使用します：
 
 ```c
 {% raw %} {% roboWikiGridWrapper %}{% endroboWikiGridWrapper %}{% endraw %}
@@ -139,37 +141,37 @@ tools:
 
 ```c
 {% raw %}{% roboWikiGridWrapper {columns: '3', align: center} %}
-	{% roboWikiGrid %} first element {% endroboWikiGrid %}
-	{% roboWikiGrid %} second element {% endroboWikiGrid %}
-	{% roboWikiGrid %} third element {% endroboWikiGrid %}
-{% endroboWikiGridWrapper %}{% endraw %}
+	{% roboWikiGrid %} 最初の要素 {% endroboWikiGrid %}
+	{% roboWikiGrid %} 2番目の要素 {% endroboWikiGrid %}
+	{% roboWikiGrid %} 3番目の要素 {% endroboWikiGrid %}
+{% endroboWikiGridWrapper %} {% endraw %}
 ```
 
 <br/>
 
 **robo-wiki-grid-wrapperのプロパティ**
 
-| プロパティ    | タイプ     | 必須     | デフォルト | 説明                                                            |
+| プロパティ  | タイプ     | 必須     | デフォルト | 説明                                                                    |
 |-------------|----------|----------|---------|------------------------------------------------------------------------|
-| `columns`   | `Number` | `false`  | 4       | 列数を選択できます:   <br/> - `1 から 5`                  |
-| `align`     | `String` | `false`  |         | ブロック軸上のアイテムの配置:   <br/> - オプション: `start, center, end` |
-| `justify`   | `String` | `false`  |         | インライン軸上のアイテムの配置:  <br/> - オプション: `start, center, end` |
-| `textAlign` | `String` | `false`  | `left`  | グリッド内のテキストの配置:  <br/> - オプション: `left, center, right`        |
+| `columns`   | `Number` | `false`  | 4       | 列数を選択できます：   <br/> - `1から5`の範囲から選択可能                  |
+| `align`     | `String` | `false`  |         | ブロック軸上のアイテムの配置：   <br/> - オプション： `start, center, end` |
+| `justify`   | `String` | `false`  |         | インライン軸上のアイテムを整列する:  <br/> - オプション: `start, center, end` |
+| `textAlign` | `String` | `false`  | `left`  | グリッド内のテキストを整列する:  <br/> - オプション: `left, center, right`        |
 
 {% roboWikiGridWrapper {columns: '3', textAlign: 'center', flexible: true} %}
 	{% roboWikiGrid %} {% roboWikiPicture {src:"docs/home-assistant/need_2.png", alt:"need"} %}{% endroboWikiPicture %}
-	<b>Raspberry Pi 4（少なくとも2 GB RAM）</b>
+	<b>Raspberry Pi 4 (少なくとも2 GB RAM)</b>
 	{% endroboWikiGrid %}
 	{% roboWikiGrid %} 	{% roboWikiPicture {src:"docs/home-assistant/need_3.png", alt:"need"} %}{% endroboWikiPicture %}
 	<b>SDカード16GB</b> {% endroboWikiGrid %}
 	{% roboWikiGrid %} 	{% roboWikiPicture {src:"docs/home-assistant/need_7.png", alt:"need"} %}{% endroboWikiPicture %}
 	<a href="https://www.zigbee2mqtt.io/information/supported_adapters.html" target="_blank"> <b> Zigbeeアダプタ（オプション） </b> </a>  {% endroboWikiGrid %}
-{% endroboWikiGridWrapper %}
+{%endroboWikiGridWrapper %}
 
 {% roboWikiGridWrapper {columns: '2', textAlign: 'center'} %}
 	{% roboWikiGrid %} {% roboWikiPicture {src:"docs/home-assistant/need_5.png", alt:"need"} %}{% endroboWikiPicture %}
-	 <a href="https://www.zigbee2mqtt.io/supported-devices/" target="_blank"> <b> Zigbeeスマートデバイス（オプション） </b> </a>  {% endroboWikiGrid %}
-	{% roboWikiGrid %}{% roboWikiPicture {src:"docs/home-assistant/need_9.png", alt:"need"} %}{% endroboWikiPicture %}
+	 <a href="https://www.zigbee2mqtt.io/supported-devices/" target="_blank"> <b> Zigbee スマートデバイス（オプション） </b> </a>  {% endroboWikiGrid %}
+	{% roboWikiGrid %} 	{% roboWikiPicture {src:"docs/home-assistant/need_9.png", alt:"need"} %}{% endroboWikiPicture %}
 	<b>セットアップ用デスクトップ</b>  {% endroboWikiGrid %}
 {% endroboWikiGridWrapper %}
 
@@ -177,29 +179,29 @@ tools:
 ### 画像
 
 #### アップロード方法
-画像を`src/assets/docs/images/url-of-your-doc`フォルダにアップロードします
-* 画像をローカライズする必要がある場合は、すべてを1つのフォルダに挿入します
-* ローカライズされた場合は、画像の名前にロケールの付録を使用してください。例：`image_en.jpg`
+画像を `src/assets/docs/images/url-of-your-doc` フォルダにアップロードします
+* 画像をローカライズする必要がある場合は、すべての画像を1つのフォルダに挿入します
+* ローカライズされた場合は、画像の名前にロケールの付録を使用します。例：`image_en.jpg`
 * 画像がウェブ最適化されており、同時に見栄えが良いことを確認してください
 
 #### 挿入方法
 
 ドキュメントに画像を挿入する方法は2つあります：
 
-{% roboWikiNote {type: 'warning'}%} 画像は組み込みタグ `<robo-wiki-picture>` を使用して挿入することをお勧めしますが、Markdownファイルの標準的な方法も使用できます。 {% endroboWikiNote %}
+{% roboWikiNote {type: 'warning'}%} 画像を組み込みタグ `<robo-wiki` を使用して挿入することをお勧めします-画像>`を使用することもできますが、Markdownファイルの標準的な方法も使用できます。{% endroboWikiNote %}
 
 `キャプション付き`
 
 ```c
-{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"explore robomomics wiki", link: '/docs/overview', caption: "EXPLORE"} %}{% endroboWikiPicture %} {% endraw %}
+{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"robomomics wikiを探索", link: '/docs/overview', caption: "EXPLORE"} %}{% endroboWikiPicture %} {% endraw %}
 ```
 
 <br/>
 
-`またはキャプションなし`
+`キャプションなし`
 
 ```c
-{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"explore robomomics wiki",link: '/docs/overview'} %}{% endroboWikiPicture %} {% endraw %}
+{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"robomomics wikiを探索", link: '/docs/overview'} %}{% endroboWikiPicture %} {% endraw %}
 ```
 
 <br/>
@@ -207,7 +209,7 @@ tools:
 `またはシンプルな画像`
 
 ```c
-{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"explore robomomics wiki"} %}{% endroboWikiPicture %} {% endraw %}
+{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"robomomics wikiを探索"} %}{% endroboWikiPicture %} {% endraw %}
 ```
 
 <br/>
@@ -215,36 +217,36 @@ tools:
 `またはキャプション付きのシンプルな画像`
 
 ```c
-{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"explore robomomics wiki", caption: "EXPLORE"} %}{% endroboWikiPicture %} {% endraw %}
+{% raw %} {% roboWikiPicture {src:"robonomics-lab.png", alt:"robomomics wikiを探索", caption: "EXPLORE"} %}{% endroboWikiPicture %} {% endraw %}
 ```
 
 <br/>
 
 **robo-wiki-pictureのプロパティ:**
 
-| プロパティ | タイプ     | 必須     | デフォルト | 説明                                                                                                                                                   |
-|-----------|-----------|----------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `src`     | `String`  | `true`   |         | 画像へのパス:  <br/> - 画像を直接 `/src/assets/images/docs/` にアップロードした場合は、`url-of-your-doc` を使用 <br/> - 画像をフォルダにアップロードした場合は、`folder-name/url-of-your-doc` を使用 |
-| `link`    | `String`  | `false`  |         | ブロック軸上のアイテムの配置:   <br/> - オプション: `start, center, end`                                                                                   |`caption` | `String`  | `false`  |         | インライン軸上のアイテムを整列させます:  <br/> - オプション: `start, center, end`                                                                                                                                               |
-| `alt`     | `String`  | `true`   | picture | 画像を何らかの理由で表示できない場合の代替情報を提供します                                                                                                                               |
-| `zoom`    | `Boolean` | `false`  |         | 画像を拡大します                                                                                                                                                                                                           |
+| プロパティ | タイプ | 必須 | デフォルト | 説明 ||----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `src`     | `String`  | `true`   |         | 画像へのパス:  <br/> - 画像を直接 `/src/assets/images/docs/` にアップロードした場合は、`url-of-your-doc` を使用します <br/> - 画像をフォルダのいずれかにアップロードした場合は、`folder-name/url-of-your-doc` を使用します |
+| `link`    | `String`  | `false`  |         | ブロック軸上のアイテムの配置:   <br/> - オプション: `start, center, end`                                                                                                                                               |
+| `caption` | `String`  | `false`  |         | インライン軸上のアイテムの配置:  <br/> - オプション: `start, center, end`                                                                                                                                               |
+| `alt`     | `String`  | `true`   | picture | 画像が何らかの理由で表示できない場合の代替情報を提供します                                                                                                                               |
+| `zoom`    | `Boolean` | `false`  |         | 画像を拡大表示します                                                                                                                                                                                                           |
 | `loading` | `String`  | `false`  | lazy    | lazy と eager の2つのオプションがあります                                                                                                                                                                                |
 
 ### ノートと警告
 ノートを追加し、特定のタイプを指定できます:
-* 警告 (<span style="color:#f08432">**画像あり**</span>)
+* 警告 (<span style="color:#f08432">**画像付き**</span>)
 * OK (<span style="color:#3eaf7c">**緑色**</span>)
-* ノート (<span style="color:#90a4b7">**グレー**</span>)
+* ノート (<span style="color:#90a4b7">**グレー色**</span>)
 
-`タイトル付きノート`
+`タイトル付きのノート`
 
 ```c
-{% raw %} {% roboWikiNote {title:"EXAMPLE TITLE", type: "okay"}%} {% endroboWikiNote %} {% endraw%}
+{% raw %} {% roboWikiNote {title:"例のタイトル", type: "okay"}%} {% endroboWikiNote %} {% endraw%}
 ```
 
 <br/>
 
-`内容付きノート`
+`内容付きのノート`
 
 ```c
 {% raw %} {% roboWikiNote {type: "okay"}%} Lorem ipsum dolor sit amet.  {% endroboWikiNote %}  {% endraw%}
@@ -252,45 +254,45 @@ tools:
 
 <br/>
 
-`タイトルと内容を持つノート`
+`タイトルと内容付きのノート`
 
 ```c
-{% raw %} {% roboWikiNote {title: "TITLE", type: "okay"}%} Lorem ipsum dolor sit amet.  {% endroboWikiNote %} {% endraw%}
+{% raw %} {% roboWikiNote {title: "タイトル", type: "okay"}%} Lorem ipsum dolor sit amet.  {% endroboWikiNote %} {% endraw%}
 ```
 
 <br/>
 
-{% roboWikiNote {title: "Join Discord", type: "okay"}%} [Robonomics Developers Discordに参加](https://discord.gg/jTxqGeF5Qy) コミュニティと技術サポートを受けるために参加してください。 {% endroboWikiNote %}
+{% roboWikiNote {title: "Discordに参加", type: "okay"}%} [Robonomics Developers Discordに参加](https://discord.gg/jTxqGeF5Qy) コミュニティと技術サポートを受けるために参加してください。 {% endroboWikiNote %}
 
-{% roboWikiNote {title: "Join Discord"}%} [Robonomics Developers Discordに参加](https://discord.gg/jTxqGeF5Qy) コミュニティと技術サポートを受けるために参加してください。 {% endroboWikiNote %}
+{% roboWikiNote {title: "Discordに参加"}%} [Robonomics Developers Discordに参加](https://discord.gg/jTxqGeF5Qy) コミュニティと技術サポートを受けるために参加してください。 {% endroboWikiNote %}
 
-{% roboWikiNote {title: "Join Discord", type: "warning"}%} [Robonomics Developers Discordに参加](https://discord.gg/jTxqGeF5Qy) コミュニティと技術サポートを受けるために参加してください。 {% endroboWikiNote %}
+{% roboWikiNote {title: "```yaml
+Join Discord", type: "warning"}%} [Join Robonomics Developers Discord](https://discord.gg/jTxqGeF5Qy) to connect with community and get technical support. {% endroboWikiNote %}
 
-**robo-wiki-noteのプロパティ**
+**Properties for robo-wiki-note**
 
-| プロパティ | タイプ     | 必須 | デフォルト | 説明                                                 |
+| Property | Type     | Required | Default | Description                                                 |
 |----------|----------|----------|---------|-------------------------------------------------------------|
-| `type`   | `String` | `false`  |         | - `note`, `warning`, `okay` の3つのタイプがあります |
-| `title`  | `String``|`false`|` | ノートにタイトルを追加します。
+| `type`   | `String` | `false`  |         | - there are three types in total: `note`, `warning`, `okay` |
+| `title`  | `String` | `false`  |         | adds title to your note                                     |
 
 
-### タブ
-ドキュメントにタブを追加できます：
+### Tabs
+You can add tabs to the doc:
 
-- タブラッパーコンポーネントを使用します：
+- Use tabs wrapper component:
 
 ```c
 {% raw %} {% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}]} %} {% endroboWikiTabs %} {% endraw %}
 ```
 
-- そして、ラッパー内に好きなだけタブアイテムコンポーネントを使用します：
+- And then use as many tab items components as you like inside wrapper:
 
 ```c
 {% raw %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}]} %}
 	{% roboWikiTab {border: true} %} ip a {% endroboWikiTab %}
 	{% roboWikiTab %} <pre>ifconfig </pre> {% endroboWikiTab %}
-{% endroboWikiTabs %}
-{% endraw %}
+{% endroboWikiTabs %}{% endraw %}
 ```
 
 <br/>
@@ -310,7 +312,7 @@ tools:
 `垂直タブ`
 
 ```c
-{% raw %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}],mode: 'vertical'} %}
+{% raw %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}], mode: 'vertical'} %}
 	{% roboWikiTab %} ip a {% endroboWikiTab %}
 	{% roboWikiTab %} ifconfig {% endroboWikiTab %}
 {% endroboWikiTabs %}
@@ -319,7 +321,7 @@ tools:
 
 <br/>
 
-`tab item with border`
+`境界線付きのタブアイテム`
 
 ```c
 {% raw %}{% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}] %}
@@ -333,16 +335,16 @@ tools:
 
 **robo-wiki-tabs（ラッパー）のプロパティ**
 
-| プロパティ | タイプ     | 必須     | デフォルト | 説明                                                             |
-|------------|------------|----------|------------|------------------------------------------------------------------|
-| `tabs`     | `Array`    | `true`   |            | - 各タブのタイトルを含む配列                                      |
-| `mode`     | `String`   | `false`  | horizontal | タブモードを選択できます：<br/> - `horizontal` <br/> - `vertical` |
+| プロパティ | タイプ | 必須 | デフォルト | 説明 |
+|----------|----------|----------|------------|-------------------------------------------------------------------|
+| `tabs`   | `Array`  | `true`   |            | - 各タブのタイトルを含む配列                                  |
+| `mode`   | `String` | `false`  | horizontal | タブのモードを選択できます: <br/> - `horizontal` <br/> - `vertical` |
 
 **robo-wiki-tab（アイテム）のプロパティ**
 
-| プロパティ | タイプ      | 必須     | デフォルト | 説明                             |
-|------------|-------------|----------|-----------|---------------------------------|
-| `border`   | `Boolean`   | `false`  | `false`   |false` | - コンテンツラッパーにボーダーを追加します |
+| プロパティ | タイプ      | 必須 | デフォルト | 説明                         |
+|----------|-----------|----------|---------|-------------------------------------|
+| `border` | `Boolean` | `false`  | `false` | - コンテンツラッパーに境界線を追加する |
 
 
 {% roboWikiTabs {tabs: [{title: "Linux"}, {title: "OSX"}]} %}
@@ -357,10 +359,8 @@ tools:
 {% endroboWikiTabs %}
 
 
-### アンカー付きタイトル
-アンカーを持つカスタムタイトルを作成し、特定の値を付けることができます
-
-`アンカー付きタイトル`
+### アンカーを持つタイトル
+アンカーを持つカスタムタイトルを作成し、特定の値を付けることができます`アンカー付きタイトル`
 
 ```c
 {% raw %} {% roboWikiTitle { type: 2, anchor: 'test-anchor'} %} Robonomics Wiki {% endroboWikiTitle %} {% endraw %}
@@ -376,7 +376,7 @@ tools:
 
 <br/>
 
-{% roboWikiTitle { type: 6} %} Robonomics Wiki (カスタムタイトル) {% endroboWikiTitle %}%}
+{% roboWikiTitle { type: 6} %} Robonomics Wiki (カスタムタイトル) {% endroboWikiTitle %}
 
 <br/>
 
@@ -384,24 +384,24 @@ tools:
 
 | プロパティ | タイプ                   | 必須 | デフォルト | 説明          |
 |----------|------------------------|----------|---------|----------------------|
-| `type`   | `Number (2から6まで)` | `true`   |         | 見出しレベルを選択します |
+| `type`   | `Number (2から6まで)` | `true`   |         | 見出しレベルを選択 |
 | `anchor` | `String`               | `false`  |         | アンカーの値 |
 
 ### 動画
 
 ドキュメントに動画を挿入する方法は2つあります：
 
-{% roboWikiNote {type: "warning"}%} 動画は組み込みタグ `<robo-wiki-video>` を使用して挿入することをお勧めしますが、Markdownファイルの標準的な方法も使用できます。 {% endroboWikiNote %}
+{% roboWikiNote {type: "warning"}%} ビデオは組み込みタグ `<robo-wiki-video>` を使用して挿入することをお勧めしますが、Markdownファイルの標準的な方法も使用できます。 {% endroboWikiNote %}
 
 #### IPFS / サーバー
-動画の形式を指定する必要があります
+ビデオの形式を指定する必要があります
 
 ```
 {% raw %} {% roboWikiVideo {videos:[{src: 'QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type: 'mp4'}], attrs:['loop', 'controls']} %}{% endroboWikiVideo %} {% endraw %}
 ```
 
 
-{% roboWikiNote {type: "warning", title:"ゲートウェイについて"}%} リンクのためのゲートウェイは、`src/_data/video_config.js` の設定ファイルから自動的に選択されます。いくつかのゲートウェイを追加または削除することで、file. {% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title:"ゲートウェイについて"}%} リンクのゲートウェイは、`src/_data/video_config.js`ファイルから自動的に選択されます。ファイルを変更することで、いくつかのゲートウェイを追加または削除できます。 {% endroboWikiNote %}
 
 
 #### ローカル
@@ -412,24 +412,24 @@ tools:
 
 ##### プロパティ
 
-- サイズが<span style="color:#af1c1c">10MB</span>を超えるファイルを追加する場合は、リポジトリではなくサーバーにアップロードしてください。
+- <span style="color:#af1c1c">10MB</span> より大きいサイズのファイルを追加する場合は、リポジトリではなくサーバーにアップロードしてください。
 
-- [HTML5 video tag](https://www.w3schools.com/tags/tag_video.asp) には任意のプロパティを使用できます。
+- [HTML5 video tag](https://www.w3schools.com/tags/tag_video.asp)のために任意のプロパティを使用できます。
 
 - 受け入れ可能なフォーマット - mp4、webm、ogg。
 
 | プロパティ | タイプ | 必須 | デフォルト | 説明 |
 |---|---|---|---|---|
-| `videos` | `Array` | `true` |  | オブジェクトの配列 [{src: `ビデオのパス`, type: `ビデオの種類`}] |
+| `videos` |`Array` | `true` |  | オブジェクトの配列 [{src: `ビデオのパス`, type: `ビデオの種類`}] |
 
 
 #### YouTube
-共有リンクを別の段落として挿入することで、任意のYouTubeビデオをドキュメントに埋め込むことができます。追加の引用符やタグは不要です。例: `https://youtu.be/kQaSwNYHJQ8`
+ドキュメントにYouTubeのビデオを埋め込むには、共有リンクを追加の引用符やタグなしで別々の段落として挿入します。例: `https://youtu.be/kQaSwNYHJQ8`
 
 ただし、自動再生が必要な場合は、特別なコンポーネントを使用する必要があります:
 
 ```
-{% raw %}{% roboWikiYoutube { link:'https://www.youtube.com/watch?v=5s4-S_z4VYE', autoplay: true} %}{%endroboWikiYoutube %}{% endraw %}
+{% raw %}{% roboWikiYoutube { link:'https://www.youtube.com/watch?v=5s4-S_z4VYE', autoplay: true} %}{% endroboWikiYoutube %}{% endraw %}
 ```
 
 **robo-wiki-youtubeのプロパティ**
@@ -437,21 +437,29 @@ tools:
 | プロパティ | タイプ | 必須 | デフォルト | 説明 |
 |---|---|---|---|---|
 | `link` | `String` | `true` |  | YouTubeビデオへのリンク |
-| `autoplay` | `Boolean` | `false` | `false` | YouTubeビデオを自動再生します |
-| `loop` | `Boolean` | `false` | `false` | YouTubeビデオをループ再生します |
+| `autoplay` | `Boolean` | `false` | `false` | YouTubeビデオを自動再生 |
+| `loop` | `Boolean` | `false` | `false` | YouTubeビデオをループ再生 |
 
 
-## サイドバーのナビゲーションを編集する方法
+## サイドバーナビゲーションの編集方法
 
-Robonomics Wikiのサイドバーのナビゲーションを編集する必要がある場合は、次の手順に従ってください：
+Robonomics Wikiのサイドバーナビゲーションを編集する必要がある場合は、次の手順に従ってください:
 
 * ファイル `src/_data/sidebar_docs.json` を編集します。
 
 * ドキュメントを配置する場所を決定します。
 
-* `src/_data/sidebar_docs.json` に有効なJSONを使用し、既存のファイル構造に依存します。
+* `src/_data/sidebar_docs.json` に有効なJSONを使用し、それに依存します。既存のファイル構造
 
-* **重要な注意:** 同じドキュメントを異なるセクション/サブセクションで使用している場合は、例えば：
+* 新しいコンテンツを翻訳する場合は、`translations/pages/en.json` ファイルにも新しい行を追加する必要があります。例:
+
+```json
+{"Launch Robot from Cloud": "Launch Robot from Cloud"}
+```
+
+</br>
+
+* **重要な注意:** 同じドキュメントを異なるセクション/サブセクションで使用している場合、例:
 
 ```
 
@@ -472,21 +480,25 @@ Robonomics Wikiのサイドバーのナビゲーションを編集する必要�
 
 ```
 
-ナビゲーションが正常に機能するようにするために、次のように `topic` パラメータを追加してください：```
+`topic` パラメータを次のように追加してください:
+
+(ナビゲーションが正しく機能するようにするため)
+
+```
 {
-	"title": "ホームアシスタントOSのアップグレード",
+	"title": "Upgrade Home Assistant OS",
 	"children": [
 	{
-		"title": "サブスクリプションの有効化",
+		"title": "Subscription Activate",
 		"url": "/docs/sub-activate",
-		"topic": "ホームアシスタントOSのアップグレード"
+		"topic": "Upgrade Home Assistant OS"
 	}],
-	"title": "Unix系OS用のホームアシスタントDockerのアップグレード",
+	"title": "Upgrade Home Assistant Docker for Unix-like OS",
 		"children": [
 	{
-		"title": "サブスクリプションの有効化",
+		"title": "Subscription Activate",
 		"url": "/docs/sub-activate",
-		"topic": "Unix系OS用のホームアシスタントDockerのアップグレード"
+		"topic": "Upgrade Home Assistant Docker for Unix-like OS"
 	}],
 }
 
@@ -494,23 +506,23 @@ Robonomics Wikiのサイドバーのナビゲーションを編集する必要�
 
 ## ドキュメントにカスタムナビゲーションを追加する方法
 
-* ファイル `src/_data/sidebar_docs.json` を編集します。
+* ファイルを編集`src/_data/sidebar_docs.json`。
 
-* 適切なドキュメントを見つけ、次のように `prev` と `next` パラメータを追加します:
+* 適切なドキュメントを見つけ、次のように`prev`と`next`のパラメータを追加します：
 
 ```
 	{
-		"title": "概要",
+		"title": "Overview",
 		"url": "/docs/robonomics-smart-home-overview",
 		"next": [
 			{
-				"title": "ユーザーの追加",
+				"title": "Add User",
 				"url": "/docs/add-user"
 			}
 		],
 		"prev": [
 			{
-				"title": "ユーザーの追加",
+				"title": "Add User",
 				"url": "/docs/add-user"
 			}
 		],
@@ -518,21 +530,21 @@ Robonomics Wikiのサイドバーのナビゲーションを編集する必要�
 
 ```
 
-* ナビゲーションを完全に削除したい場合は、`withoutNav` パラメータを追加します:
+* ナビゲーションを完全に削除したい場合は、`withoutNav`パラメータを追加します：
 
 ```
 {
-	"title": "概要",
+	"title": "Overview",
 	"url": "/docs/robonomics-smart-home-overview",
 	"withoutNav": true
 },
 ```
 
-* ナビゲーションを削除したい場合単に `前のページ` または `次のページ` ナビゲーションを追加するだけでなく、`withoutPrev` または `withoutNext` パラメータを追加します：
+* `前のページ`または`次のページ`のナビゲーションを削除したい場合は、`withoutPrev`または`withoutNext`パラメータを追加します：
 
 ```
 {
-	"title": "概要",
+	"title": "Overview",
 	"url": "/docs/robonomics-smart-home-overview",
 	"withoutPrev": true
 },
@@ -542,7 +554,7 @@ Robonomics Wikiのサイドバーのナビゲーションを編集する必要�
 
 ```
 {
-	"title": "概要",
+	"title": "Overview",
 	"url": "/docs/robonomics-smart-home-overview",
 	"withoutNext": true
 },
@@ -551,24 +563,37 @@ Robonomics Wikiのサイドバーのナビゲーションを編集する必要�
 
 ## ドキュメントの翻訳方法
 
-{% roboWikiNote {title: '重要', type: 'warning'}%} **.env** ファイルを作成し、*OPENAI_KEY* 変数にキーを追加する必要があります {% endroboWikiNote %}
+{% roboWikiNote {title: '重要', type: 'warning'}%} **を作成する必要があります.env**ファイルに、*OPENAI_KEY*変数をキーとともに追加してください {% endroboWikiNote %}
 
-md ドキュメントを翻訳したい場合は、次のコマンドを実行する必要があります：
+mdドキュメントを翻訳したい場合は、次のコマンドを実行してください：
 
 ```bash
 npm run translate-md
 ```
 
-コマンドを実行した後は待つだけで、ファイルを確認することもできます（AI 翻訳にはいくつかの欠陥があります）。
+{% roboWikiNote {title: '簡単に翻訳する', type: 'warning'}%} すべてを一度に翻訳するには、ページ内のすべての新しい行、新しいドキュメント、または変更されたドキュメントを翻訳するには、今は1つのコマンドだけが必要です {% endroboWikiNote %}
+
+{% codeHelper {copy: true} %}
+
+```bash
+npm run translate-all
+```
+
+{% endcodeHelper %}
+
+> また、翻訳が必要な変更されたファイルのみを翻訳していることを確認してください。たとえば、5つのファイルを変更する必要があるとします。そのうち3つはテキストの変更と古い情報の削除が含まれております。残りの2つは、いくつかの画像のリンクを更新するか、外部リンクを変更する必要があるかだけです。この場合、最初の3つのファイルを変更して翻訳し、その後に他の2つのリンクを変更することが賢明です。
+
+> 翻訳はすべての変更されたファイルに適用されますが、更新されたリンクには必要ありません。特にファイルが大きい場合は、翻訳に時間がかかるためです。
+
+必要なコマンドを実行した後は、待つだけでよく、ファイルを確認することもできます（AI翻訳にはいくつかの欠陥があります）。ファイルをチェックするには、`npm run build` を実行し、エラーがないか確認します。
 
 ### 翻訳のトラブルシューティング
 
-翻訳に問題が発生することがあります。
+翻訳に関する問題が発生する可能性があります。
 
 1. コマンドを再度実行してみて、うまくいくかどうかを確認してください。
 
-2. 時々、md ファイル内のタグが正しく書かれていないことがあります。例えば：
-
+2. 時々、タグが消えることがあります。mdファイルには、次のように間違って書かれることがあります：
 
 ```
 {%raw %}
@@ -578,11 +603,11 @@ npm run translate-md
 {% endraw %}
 
 {%raw %}
-	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}{% endroboWikiPicture {% endroboWikiPicture %}
+	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}{% endroboWikiPicture %}
 {% endraw %}
 
 {%raw %}
-	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}endroboWikiPicture %}
+	{% roboWikiPicture {src:"docs/datalog/extrinsics.jpg", alt:"extrinsics"} %}{% endroboWikiPicture %}
 {% endraw %}
 ```
 

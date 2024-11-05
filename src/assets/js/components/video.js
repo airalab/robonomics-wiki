@@ -37,9 +37,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 		const changeSource = () => {
 			videos.forEach((v) => {
-				if(readyGateway && !v.src.includes(readyGateway)) {
-					const src = v.src.substring(v.src.lastIndexOf('/') + 1);
-					v.src = readyGateway + src;
+				if(readyGateway && !v.getAttribute('data-done')) {
+					const src = v.getAttribute('data-source');
+					v.src = readyGateway + src + '#t=0.001';
+					v.setAttribute('data-done', true);
 					v.parentElement.classList.remove('hide');
 					v.parentElement.nextSibling.classList.add('hide');
 					v.parentElement.load();

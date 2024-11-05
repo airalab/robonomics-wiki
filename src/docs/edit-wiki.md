@@ -574,7 +574,22 @@ If you wish to translate your md document you need to run the command:
 npm run translate-md
 ```
 
-After running the command all you have to do is wait and maybe check the files (ai translations have some flaws).
+
+{% roboWikiNote {title: 'Translate easily', type: 'warning'}%} To translate all at once, every new lines in pages, new document or changed document you need only one command now {% endroboWikiNote %}
+
+{% codeHelper {copy: true} %}
+
+```bash
+npm run translate-all
+```
+
+{% endcodeHelper %}
+
+> Also, make sure you are translating only the changed files that are **needed** to be translated. For example, you need to change 5 files. Three of them includes text changes and removing some outdated information. And the other two need to update links for some images or just change an external link. In this case, it would be wise to change the first three files and translate them and only then change links in the other two.
+
+> Translation happens to all changed files, but it's not necessary for the updated links, especially if the file large and therefore translation takes some time.
+
+After running the needed command all you have to do is wait and maybe check the files (ai translations have some flaws). To check files run `npm run build` and see if there are any errors.
 
 ### Translations troubleshooting
 

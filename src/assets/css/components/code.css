@@ -84,7 +84,9 @@ pre{
 
 .code-helper {
 	margin: calc(var(--space)* 0.6) 0;
+	margin-bottom: var(--space);
 }
+
 
 .code__additionalLine {
 	position: relative;
