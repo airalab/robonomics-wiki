@@ -16,6 +16,7 @@ Take the device from the box and connect it to the computer. Then go to the webs
 
 {% roboWikiVideo {videos:[{src: 'QmT6CDmmF8yahM1WTCwmAZBcrYUh6xxXpmvuboiYe42rEQ', type: 'mp4'}], attrs:['loop', 'controls', 'autoplay']} %}{% endroboWikiVideo %}
 
+
 {% roboWikiNote {type: "warning"}%} Note! Web flasher is working only with Google Chrome or Microsoft Edge browser. {% endroboWikiNote %}
 
 In "Firmware" drop-box choose **"IR REMOTE"** option and next in "SELECT CHIP" choose **"ESP32"**. Press **"CONNECT"** button.

@@ -26,7 +26,7 @@ Home AssistantをRobonomicsで制御するには、Robonomicsパラチェーン�
 
 {% endroboWikiNote %}
 
-{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay, loop, controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
 
 1. Robonomics dAppに移動し、[購読ページ](https://robonomics.app/#/rws-buy)に移動します。次に、右サイドバーの`Connect Account`をクリックします。
 
@@ -58,7 +58,7 @@ Home AssistantをRobonomicsで制御するには、Robonomicsパラチェーン�
 
 次に、`CONTROLLER`アカウントを**アクセスリスト**に追加する必要があります。
 
-{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay, loop, controls']} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls']} %}{% endroboWikiVideo %}
 
 1. RobonomicsのdAppに移動し、[サブスクリプション設定ページ](https://robonomics.app/#/rws-setup)に移動します。正しいサブスクリプションと`OWNER`アカウントが選択されていることを確認してください。
 

@@ -26,7 +26,7 @@ tools:
 
 {% endroboWikiNote %}
 
-{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay, loop, controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
 
 1. Μεταβείτε στην εφαρμογή Robonomics και πλοηγηθείτε στη [σελίδα συνδρομής](https://robonomics.app/#/rws-buy). Στη συνέχεια, κάντε κλικ στο `Σύνδεση Λογαριασμού` στη δεξιά πλευρά.
 
@@ -58,7 +58,7 @@ tools:
 
 Τώρα, πρέπει να προσθέσετε τον λογαριασμό `ΕΛΕΓΚΤΗ` στη **λίστα πρόσβασης**.
 
-{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay, loop, controls']} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls']} %}{% endroboWikiVideo %}
 
 Πηγαίνετε στην εφαρμογή Robonomics και πλοηγηθείτε στη [σελίδα δημιουργίας συνδρομής](https://robonomics.app/#/rws-setup). Βεβαιωθείτε ότι έχετε επιλέξει τη σωστή συνδρομή και τον λογαριασμό `OWNER`.
 

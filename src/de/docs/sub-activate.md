@@ -27,7 +27,7 @@ Für diesen Schritt müssen Sie eine ausreichende Menge an XRT-Token (mindestens
 {% endroboWikiNote %}
 
 
-{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay, loop, controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
 
 1. Gehen Sie zur Robonomics dApp und navigieren Sie zur [Abonnementseite](https://robonomics.app/#/rws-buy). Klicken Sie dann auf `Konto verbinden` in der rechten Seitenleiste.
 
@@ -59,7 +59,7 @@ Jetzt müssen Sie Ihr Abonnement einrichten, indem Sie das `CONTROLLER`-Konto hi
 
 Jetzt müssen Sie Ihr `CONTROLLER`-Konto zur **Zugriffsliste** hinzufügen.
 
-{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay, loop, controls']} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls']} %}{% endroboWikiVideo %}
 
 1. Gehe zur Robonomics dApp und navigiere zur [Einrichten einer Abonnementseite](https://robonomics.app/#/rws-setup). Stelle sicher, dass du das richtige Abonnement und das `OWNER`-Konto ausgewählt hast.
 

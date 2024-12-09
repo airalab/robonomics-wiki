@@ -1,11 +1,15 @@
 // needs changes / updates
 import pingIPFS from 'ping-ipfs-gateway';
+import gateways from '../../../_data/video_config.js';
+
 document.addEventListener('DOMContentLoaded', async () => {
 
 	const videos = document?.querySelectorAll('.robo-wiki-video--s source');
+	const defaultGateways = gateways.gateways;
+
 
 	if(videos.length) {
-		const readyGateway = await pingIPFS();
+		const readyGateway = await pingIPFS(defaultGateways);
 
 		const toggleAutoplay = (video) => {
 			video.muted = true;
@@ -45,7 +49,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 					v.parentElement.nextSibling.classList.add('hide');
 					v.parentElement.load();
 
+
 					if(v.src.includes(readyGateway)) {
+						v.parentElement.play();
 						toggleAutoplay(v.parentElement) 
 						return;
 					}

@@ -27,7 +27,7 @@ tools:
 {% endroboWikiNote %}
 
 
-{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay, loop, controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
 
 1. انتقل إلى تطبيق Robonomics وانتقل إلى [صفحة الاشتراك](https://robonomics.app/#/rws-buy). ثم، انقر على `Connect Account` في الشريط الجانبي الأيمن.
 
@@ -59,7 +59,7 @@ tools:
 
 الآن، تحتاج إلى إضافة حساب `CONTROLLER` الخاص بك إلى **قائمة الوصول**. 
 
-{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay, loop, controls']} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls']} %}{% endroboWikiVideo %}
 
 اذهب إلى تطبيق Robonomics وانتقل إلى [صفحة إعداد اشتراك](https://robonomics.app/#/rws-setup). تأكد من اختيار الاشتراك الصحيح وحساب `OWNER`.
 

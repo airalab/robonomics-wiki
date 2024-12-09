@@ -26,7 +26,7 @@ Pour cette étape, vous devez disposer d'une quantité suffisante de jetons XRT 
 
 {% endroboWikiNote %}
 
-{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay, loop, controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
 
 1. Allez sur l'application Robonomics et accédez à la [page d'abonnement](https://robonomics.app/#/rws-buy). Ensuite, cliquez sur `Connect Account` dans la barre latérale droite.
 
@@ -58,7 +58,7 @@ Maintenant, vous devez configurer votre abonnement en ajoutant le compte `CONTRO
 
 Maintenant, vous devez ajouter votre compte `CONTROLLER` à la **liste d'accès**.
 
-{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay, loop, controls']} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls']} %}{% endroboWikiVideo %}
 
 1. Accédez à l'application Robonomics et rendez-vous sur la [page de configuration d'un abonnement](https://robonomics.app/#/rws-setup). Assurez-vous d'avoir sélectionné le bon abonnement et le compte `OWNER`.
 

@@ -27,7 +27,7 @@ Home Assistant를 Robonomics로 제어하려면 Robonomics 파라체인에 2개�
 {% endroboWikiNote %}
 
 
-{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay, loop, controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
 
 1. Robonomics dApp으로 이동하여 [구독 페이지](https://robonomics.app/#/rws-buy)로 이동합니다. 그런 다음, 오른쪽 사이드바에서 `계정 연결`을 클릭합니다.
 
@@ -59,7 +59,7 @@ Home Assistant를 Robonomics로 제어하려면 Robonomics 파라체인에 2개�
 
 이제 `컨트롤러` 계정을 **액세스 목록**에 추가해야 합니다.
 
-{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay, loop, controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
 
 1. Robonomics dApp로 이동하여 [구독 설정 페이지](https://robonomics.app/#/rws-setup)로 이동합니다. 올바른 구독과 `OWNER` 계정을 선택했는지 확인합니다.
 
