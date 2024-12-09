@@ -26,7 +26,7 @@ Para este paso, debes tener una cantidad suficiente de tokens XRT (mínimo de 2-
 
 {% endroboWikiNote %}
 
-{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay, loop, controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
 
 1. Ve a la aplicación Robonomics y navega hasta la [página de suscripción](https://robonomics.app/#/rws-buy). Luego, haz clic en `Conectar cuenta` en la barra lateral derecha.
 
@@ -58,7 +58,7 @@ Ahora necesitas configurar tu suscripción agregando la cuenta `CONTROLLER` a el
 
 Ahora, necesitas agregar tu cuenta de `CONTROLADOR` a la **lista de acceso**. 
 
-{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay, loop, controls']} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls']} %}{% endroboWikiVideo %}
 
 Ve a la aplicación Robonomics y navega hasta la [página de configuración de suscripción](https://robonomics.app/#/rws-setup). Asegúrate de haber seleccionado la suscripción correcta y la cuenta `OWNER`.
 

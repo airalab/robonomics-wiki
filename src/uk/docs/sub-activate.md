@@ -26,7 +26,7 @@ tools:
 
 {% endroboWikiNote %}
 
-{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay, loop, controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
 
 1. Перейдіть на веб-сайт Robonomics dApp та перейдіть на [сторінку підписки](https://robonomics.app/#/rws-buy). Потім натисніть на `Підключити рахунок` у правій бічній панелі.
 
@@ -58,7 +58,7 @@ tools:
 
 Тепер вам потрібно додати свій обліковий запис `КОНТРОЛЕРА` до **списку доступу**. 
 
-{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay, loop, controls']} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls']} %}{% endroboWikiVideo %}
 
 1. Перейдіть на сторінку налаштування підписки в додатку Robonomics та перейдіть за посиланням [setup a subscription page](https://robonomics.app/#/rws-setup). Переконайтеся, що ви вибрали правильну підписку та обліковий запис `OWNER`.
 

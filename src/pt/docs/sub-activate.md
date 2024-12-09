@@ -26,7 +26,7 @@ Para esta etapa, você deve ter uma quantidade suficiente de tokens XRT (mínimo
 
 {% endroboWikiNote %}
 
-{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay, loop, controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
 
 1. Acesse o Robonomics dApp e vá para a [página de assinatura](https://robonomics.app/#/rws-buy). Em seguida, clique em `Conectar Conta` na barra lateral direita.
 
@@ -58,7 +58,7 @@ Agora você precisa configurar sua assinatura adicionando a conta `CONTROLLER` a
 
 Agora, você precisa adicionar sua conta `CONTROLADOR` à **lista de acesso**.
 
-{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay, loop, controls']} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls']} %}{% endroboWikiVideo %}
 
 1. Acesse o dApp Robonomics e vá para a [página de configuração de assinatura](https://robonomics.app/#/rws-setup). Certifique-se de ter selecionado a assinatura correta e a conta `OWNER`.
 
