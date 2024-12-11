@@ -93,19 +93,17 @@ some text code
 | Property         | Type      | Required | Default  | Description                                               |
 |------------------|-----------|----------|----------|-----------------------------------------------------------|
 | `copy`           | `Boolean` | `false`  | `false`  | add a copy button for your code                           |
-| `additionalLine` | `String`  | `false`  | ''       | additional line for you code that will be displayed above |
-
-
-{% codeHelper { additionalLine: "additional line", copy: true}%}
+| `additionalLine` | `String`  | `false`  |        | additional line for you code that will be displayed above |
 
 ```bash
+{% codeHelper { additionalLine: "additional line", copy: true}%}
+
 some text code
 	another test line
 		something else
-```
 
 {% endcodeHelper %}
-
+```
 
 ### Frontmatter
 
@@ -154,22 +152,15 @@ Helps to add grid layout to elements:
 | `justify`   | `String` | `false`  |         | align items on the inline axis:  <br/> - options: `start, center, end` |
 | `textAlign` | `String` | `false`  | `left`  | align text inside grid:  <br/> - options: `left, center, right`        |
 
-{% roboWikiGridWrapper {columns: '3', textAlign: 'center', flexible: true} %}
-	{% roboWikiGrid %} {% roboWikiPicture {src:"docs/home-assistant/need_2.png", alt:"need"} %}{% endroboWikiPicture %}
-	<b>Raspberry Pi 4 (at least 2 GB RAM)</b>
-	{% endroboWikiGrid %}
-	{% roboWikiGrid %} 	{% roboWikiPicture {src:"docs/home-assistant/need_3.png", alt:"need"} %}{% endroboWikiPicture %}
-	<b>SD card 16Gb</b> {% endroboWikiGrid %}
-	{% roboWikiGrid %} 	{% roboWikiPicture {src:"docs/home-assistant/need_7.png", alt:"need"} %}{% endroboWikiPicture %}
-	<a href="https://www.zigbee2mqtt.io/information/supported_adapters.html" target="_blank"> <b> Zigbee adapter(Optionally) </b> </a>  {% endroboWikiGrid %}
-{% endroboWikiGridWrapper %}
-
+Example:
+```bash
 {% roboWikiGridWrapper {columns: '2', textAlign: 'center'} %}
 	{% roboWikiGrid %} {% roboWikiPicture {src:"docs/home-assistant/need_5.png", alt:"need"} %}{% endroboWikiPicture %}
 	 <a href="https://www.zigbee2mqtt.io/supported-devices/" target="_blank"> <b> Zigbee smart devices(Optionally) </b> </a>  {% endroboWikiGrid %}
 	{% roboWikiGrid %} 	{% roboWikiPicture {src:"docs/home-assistant/need_9.png", alt:"need"} %}{% endroboWikiPicture %}
 	<b>Desktop for setup</b>  {% endroboWikiGrid %}
 {% endroboWikiGridWrapper %}
+```
 
 
 
