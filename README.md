@@ -178,7 +178,7 @@ Upload image in folder `src/assets/docs/images/url-of-your-doc`
 
 There are two ways for inserting pictures in your documents:
 
-{% roboWikiNote {type: 'warning'}%} It is recommended to insert pictures with built-in tag `<robo-wiki-picture>`, however you may also use standard way for Markdown files. {% endroboWikiNote %}
+> It is recommended to insert pictures with built-in tag `{% roboWikiPicture %}`, however you may also use standard way for Markdown files. 
 
 `with caption`
 
@@ -214,6 +214,48 @@ There are two ways for inserting pictures in your documents:
 | `alt`     | `String`  | `true`   | picture | provides alternative information for an image if a user for some reason cannot view it                                                                                                                               |
 | `zoom`    | `Boolean` | `false`  |         | zoom image                                                                                                                                                                                                           |
 | `loading` | `String`  | `false`  | lazy    | there are two options: lazy and eager                                                                                                                                                                                |
+
+
+### Notes & warnings
+
+You can add notes and give them specific types:
+
+* warning (<span style="color:#f08432">**with image**</span>)
+* okay (<span style="color:#3eaf7c">**green color**</span>)
+* note (<span style="color:#90a4b7">**grey color**</span>)
+
+`note with title`
+
+```c
+{% roboWikiNote {title:"EXAMPLE TITLE", type: "okay"}%} {% endroboWikiNote %}
+```
+
+`note with content`
+
+```c
+{% roboWikiNote {type: "okay"}%} Lorem ipsum dolor sit amet.  {% endroboWikiNote %}
+```
+
+`note with title and content`
+
+```c
+{% roboWikiNote {title: "TITLE", type: "okay"}%} Lorem ipsum dolor sit amet.  {% endroboWikiNote %}
+```
+
+***Example***
+
+```c
+{% roboWikiNote {title: "Join Discord", type: "okay"}%} [Join Robonomics Developers Discord](https://discord.gg/jTxqGeF5Qy) to connect with community and get technical support. {% endroboWikiNote %}
+```
+
+
+**Properties for robo-wiki-note**
+
+| Property | Type     | Required | Default | Description                                                 |
+|----------|----------|----------|---------|-------------------------------------------------------------|
+| `type`   | `String` | `false`  |         | - there are three types in total: `note`, `warning`, `okay` |
+| `title`  | `String` | `false`  |         | adds title to your note                                     |
+
 
 
 
