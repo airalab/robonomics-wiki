@@ -152,7 +152,8 @@ Helps to add grid layout to elements:
 | `justify`   | `String` | `false`  |         | align items on the inline axis:  <br/> - options: `start, center, end` |
 | `textAlign` | `String` | `false`  | `left`  | align text inside grid:  <br/> - options: `left, center, right`        |
 
-Example:
+***Example:***
+
 ```bash
 {% roboWikiGridWrapper {columns: '2', textAlign: 'center'} %}
 	{% roboWikiGrid %} {% roboWikiPicture {src:"docs/home-assistant/need_5.png", alt:"need"} %}{% endroboWikiPicture %}
@@ -161,6 +162,58 @@ Example:
 	<b>Desktop for setup</b>  {% endroboWikiGrid %}
 {% endroboWikiGridWrapper %}
 ```
+
+
+### Images
+
+#### How to upload
+
+Upload image in folder `src/assets/docs/images/url-of-your-doc`
+
+* If image needs to be localized, insert all of them in one folder
+* Use locale appendix in name of images if it's localized, e.g. `image_en.jpg`
+* Make sure your image is web optimized and at the same time it looks good
+
+#### How to insert
+
+There are two ways for inserting pictures in your documents:
+
+{% roboWikiNote {type: 'warning'}%} It is recommended to insert pictures with built-in tag `<robo-wiki-picture>`, however you may also use standard way for Markdown files. {% endroboWikiNote %}
+
+`with caption`
+
+```c
+{% roboWikiPicture {src:"robonomics-lab.png", alt:"explore robomomics wiki", link: '/docs/overview', caption: "EXPLORE"} %}{% endroboWikiPicture %}
+```
+
+`or without caption`
+
+```c
+{% roboWikiPicture {src:"robonomics-lab.png", alt:"explore robomomics wiki", link: '/docs/overview'} %}{% endroboWikiPicture %}
+```
+
+`or simple image`
+
+```c
+{% roboWikiPicture {src:"robonomics-lab.png", alt:"explore robomomics wiki"} %}{% endroboWikiPicture %}
+```
+
+`or simple image with caption`
+
+```c
+{% roboWikiPicture {src:"robonomics-lab.png", alt:"explore robomomics wiki", caption: "EXPLORE"} %}{% endroboWikiPicture %}
+```
+
+**Properties for robo-wiki-picture:**
+
+| Property  | Type      | Required | Default | Description                                                                                                                                                                                                          |
+|-----------|-----------|----------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `src`     | `String`  | `true`   |         | path to the image:  <br/> - if you uploaded your image directly to the `/src/assets/images/docs/` use: `url-of-your-doc` <br/> - if you uploaded image in one of the folders than use: `folder-name/url-of-your-doc` |
+| `link`    | `String`  | `false`  |         | align items on the block axis:   <br/> - options: `start, center, end`                                                                                                                                               |
+| `caption` | `String`  | `false`  |         | align items on the inline axis:  <br/> - options: `start, center, end`                                                                                                                                               |
+| `alt`     | `String`  | `true`   | picture | provides alternative information for an image if a user for some reason cannot view it                                                                                                                               |
+| `zoom`    | `Boolean` | `false`  |         | zoom image                                                                                                                                                                                                           |
+| `loading` | `String`  | `false`  | lazy    | there are two options: lazy and eager                                                                                                                                                                                |
 
 
 
