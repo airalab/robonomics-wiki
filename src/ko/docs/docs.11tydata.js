@@ -54,7 +54,7 @@ export default {
 				// Example: Only render pages inside the "docs/production-only" directory in production
 				return `/ko/docs/${ data.page.fileSlug }/index.html`;
 			} else {
-				if (data.page && data.page.inputPath.includes('/docs/edit-wiki')) {
+				if (data.page && data.page.inputPath.includes('/docs/robonomics-smart-home-overview')) {
 					return `/ko/docs/${ data.page.fileSlug }/index.html`;
 				} else {
 					return false; // Skip rendering these pages in non-production environments
