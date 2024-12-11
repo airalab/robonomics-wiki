@@ -388,7 +388,7 @@ You can embed any YouTube video in doc by inserting share link as separate parag
 However, if you need an autoplay you must use special component:
 
 ```c
-{% roboWikiYoutube { link:'https://www.youtube.com/watch?v=5s4-S_z4VYE', autoplay: true} %}{% endroboWikiYoutube %}
+{% roboWikiYoutube { link:'https:\//www.youtube.com/watch?v=5s4-S_z4VYE', autoplay: true} %}{% endroboWikiYoutube %}
 ```
 
 **Properties for robo-wiki-youtube**
@@ -558,3 +558,6 @@ You may run into some troubles with translations.
 ```
 
 Then, you just need to fix the tag.
+
+
+If you have any specific questions, that are not covered in docs below, please, open an Issue and describe your suggestion. It is preferred to open Issue in English, so that as many people as possible have the opportunity to understand it. 
