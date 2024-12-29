@@ -2,11 +2,11 @@
 title: Smart Home Installation
 contributors: [nakata5321, PaTara43]
 tools:
-  - Home-assistant-web3-build 0.0.4
+  - Home-assistant-web3-build 0.0.5
     https://github.com/airalab/home-assistant-web3-build
-  - Home Assistant 2024.9.1
+  - Home Assistant 2024.11.3
     https://github.com/home-assistant/core
-  - Robonomics Home Assistant Integration 2.0.1
+  - Robonomics Home Assistant Integration 2.0.2
     https://github.com/airalab/homeassistant-robonomics-integration
   - IPFS 0.29.0
     https://docs.ipfs.tech/
