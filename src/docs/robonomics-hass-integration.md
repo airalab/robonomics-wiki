@@ -25,7 +25,7 @@ Now you can install the Robonomics integration. To do so, follow these steps:
 
 1. In the web interface of Home Assistant go to `Settings` -> `Device & Services` and press `ADD INTEGRATION`. Search for `Robonomics`.
 
-2. Click on Robonomics, upload your setup file, and enter password for the `CONTROLLER` account. Instructions on how to create the setup file can be found [here](/docs/sub-activate/?topic=smart-home#setup-your-subscription)
+2. Click on Robonomics, upload your setup file (named `robonomics.app-settings-<subscirption-name>-server.json`, where `<subscirption-name>` is the name of your subscription), and enter password for the `CONTROLLER` account. Instructions on how to create the setup file can be found [here](/docs/sub-activate/?topic=smart-home#setup-your-subscription).
 
 {% roboWikiPicture {src:"docs/home-assistant/integraion-setup.png", alt:"controller create"} %}{% endroboWikiPicture %}
 

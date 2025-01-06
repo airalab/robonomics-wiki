@@ -3,8 +3,8 @@ title: Zigbee Devices in Zigbee2MQTT
 
 contributors: [nakata5321, PaTara43]
 tools:
-  - Zigbee2MQTT 1.38.0
-    https://github.com/Koenkk/zigbee2mqtt/
+  - Zigbee2MQTT 1.40.1
+    https://github.com/Koenkk/zigbee2mqtt
 
 ---
 

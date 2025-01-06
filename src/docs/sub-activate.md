@@ -54,11 +54,15 @@ Now you need to setup you subscription by adding the `CONTROLLER` account to it.
 
 4. In the next pop-up, you will see the address of your new account and the mnemonic seed phrase. Save the mnemonic seed phrase securely. In the downloads folder, you will find two JSON files: the first file is named `Controller-<address>.json`, where `<address>` is the address of your newly generated controller. The second file is named `robonomics.app-settings-<subscirption-name>-server.json`, where `<subscirption-name>` is the name of your subscription. Save these files securely, as they will be needed later for the integration setup. Additionally, you can import your controller account into your wallet. Instructions for importing it into the Polkadot.js extension can be found [here](/docs/create-account-in-dapp/).
 
+{% roboWikiPicture {src:"docs/home-assistant/controller-acc.png", alt:"sub_setup"} %}{% endroboWikiPicture %}
+
 5. (Optional) You can add credentials for pinning service Pinata or other custom gateway to spread your data wider over the IPFS network.
 
 {% roboWikiNote {title:"Note", type: "Note"}%} In [Pinata Setup section](/docs/pinata-setup) you can find more detailed information about using Pinata.{% endroboWikiNote %}
 
 6. Close pop-up and click the `SAVE` button.
+
+{% roboWikiPicture {src:"docs/home-assistant/save-setup.png", alt:"sub_setup"} %}{% endroboWikiPicture %}
 
 ## Add Controller Account to Subscription
 
