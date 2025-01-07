@@ -20,7 +20,7 @@ tools:
 
 ## Demo
 
-Here is an example of a complete Smart Home and Robonomics integration installation. Keep in mind that the time required may vary depending on the Internet connection.
+Here is an example of a complete Smart Home and Robonomics integration installation. Keep in mind that the time required may vary depending on the Internet connection. 
 
 {% roboWikiVideo {videos:[{src: 'QmULXX4rjkuHuCF42c3V37MxEk6HpnFpJF4bZSQPR2c3Xo', type: 'mp4'}], attrs:['loop', 'controls', 'autoplay']} %}{% endroboWikiVideo %}
 

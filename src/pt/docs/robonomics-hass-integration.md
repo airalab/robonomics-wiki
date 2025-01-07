@@ -3,7 +3,7 @@ title: Configuração de integração do Robonomics
 
 contribuidores: [LoSk-p, nakata5321, Fingerling42]
 ferramentas:
-  - Robonomics Home Assistant Integration 1.8.6
+  - Robonomics Home Assistant Integration 2.0.2
     https://github.com/airalab/homeassistant-robonomics-integration
 ---
 
@@ -21,20 +21,19 @@ Clique em "Assumir Controle" mais uma vez:
 {% roboWikiPicture {src: 'docs/home-assistant/take-control2.png', alt: 'configuração de integração'}%} {% endroboWikiPicture %}
 
 Agora você pode instalar a integração do Robonomics. Para fazer isso, siga estes passos:
-
-{% roboWikiVideo {videos:[{src: 'QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type: 'mp4'}], attrs:['loop', 'controls', 'autoplay']} %}{% endroboWikiVideo %}
+ 
 
 1. Na interface web do Home Assistant, vá para `Configurações` -> `Dispositivos e Serviços` e clique em `ADICIONAR INTEGRAÇÃO`. Procure por `Robonomics`.
 
-2. Clique em Robonomics e preencha a configuração:
+2. Clique em Robonomics, faça o upload do seu arquivo de configuração (nomeado `robonomics.app-settings-<nome-da-assinatura>-servidor.json`, onde `<nome-da-assinatura>` é o nome da sua assinatura) e insira a senha para a conta `CONTROLADOR`. Instruções sobre como criar o arquivo de configuração podem ser encontradas [aqui](/docs/sub-activate/?topic=smart-home#setup-your-subscription).
 
-- Adicione a semente da conta `SUB_CONTROLLER` à semente da conta do controlador.
-- Adicione o endereço público da conta `SUB_OWNER` ao endereço do proprietário da assinatura.
-- Defina o intervalo de envio de dados (por padrão, são 10 minutos).
-- (Opcional) Você pode adicionar credenciais para o serviço de pinagem Pinata ou outro gateway personalizado para espalhar seus dados de forma mais ampla pela rede IPFS.
+{% roboWikiPicture {src:"docs/home-assistant/integraion-setup.png", alt:"criar controlador"} %}{% endroboWikiPicture %}
 
-{% roboWikiNote {title:"Nota", type: "Nota"}%} Na seção [Configuração do Pinata](/docs/pinata-setup), você pode encontrar informações mais detalhadas sobre o uso do Pinata.{% endroboWikiNote %}
+3. Opcional: Você pode escolher qual rede usar.
 
-3. Clique em `ENVIAR` após terminar a configuração. Se você preencheu tudo corretamente, verá a janela de sucesso.
+4. Clique em `ENVIAR` após concluir a configuração. Se preencheu tudo corretamente, verá a janela de sucesso. 
 
-É isso! Você configurou completamente a Integração do Robonomics no Home Assistant. Agora você pode usar todos os Serviços Web do Robonomics. Para saber mais sobre eles, vá para a seção ["Uso"](docs/add-user).
+{% roboWikiNote {type: "okay", title: "" }%} A instalação pode levar aproximadamente 10–15 minutos, dependendo da sua conexão com a internet. {% endroboWikiNote %}
+
+É isso! Você configurou completamente a Integração do Robonomics no Home Assistant. Agora você pode usar todos os
+Serviços Web do Robonomics. Para saber mais sobre eles, vá para a seção ["Uso"](/docs/add-user).

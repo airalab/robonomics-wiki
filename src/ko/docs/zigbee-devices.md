@@ -3,8 +3,8 @@ title: Zigbee2MQTT에서 Zigbee 장치
 
 contributors: [nakata5321, PaTara43]
 tools:
-  - Zigbee2MQTT 1.38.0
-    https://github.com/Koenkk/zigbee2mqtt/
+  - Zigbee2MQTT 1.40.1
+    https://github.com/Koenkk/zigbee2mqtt
 
 ---
 
@@ -14,7 +14,7 @@ tools:
 
 ## 장치 페어링
 
-웹 브라우저를 열고 `http://%PC_IP_ADDRESS%:8099`로 이동합니다. 라즈베리 파이의 IP 주소는 [Fing 모바일 앱](https://www.fing.com/products)이나 [nmap CLI 도구](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)를 사용하여 찾을 수 있습니다. PC에서 모든 것을 설정했다면 `http://localhost:8099`를 사용하세요.
+웹 브라우저를 열고 `http://%PC_IP_ADDRESS%:8099`로 이동합니다. Raspberry Pi의 IP 주소는 [Fing 모바일 앱](https://www.fing.com/products)이나 [nmap CLI 도구](https://vitux.com/find-devices-connected-to-your-network-with-nmap/)를 사용하여 찾을 수 있습니다. PC에서 모든 것을 설정했다면 `http://localhost:8099`를 사용하세요.
 
 Zigbee2MQTT의 웹 인터페이스가 표시됩니다:
 

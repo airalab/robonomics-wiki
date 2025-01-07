@@ -3,39 +3,35 @@ title: إعداد تكامل Robonomics
 
 contributors: [LoSk-p, nakata5321, Fingerling42]
 tools:
-  - Robonomics Home Assistant Integration 1.8.6
+  - تكامل Robonomics Home Assistant 2.0.2
     https://github.com/airalab/homeassistant-robonomics-integration
 ---
 
-**في هذا المقال، ستقوم بإضافة Robonomics إلى Home Assistant. وهذا يتيح لـ Home Assistant تسجيل سجلات البيانات ببيانات مشفرة إلى Robonomics Parachain والاستماع إلى أوامر الإطلاق من الباراشين للتحكم في الأجهزة الذكية. يستخدم التكامل IPFS لتخزين البيانات وإرسال تجزئات IPFS إلى وظائف السجلات البيانية أو الإطلاق.**
+**في هذه المقالة، ستقوم بإضافة Robonomics إلى Home Assistant. يتيح هذا لـ Home Assistant تسجيل سجلات البيانات ببيانات مشفرة إلى Robonomics Parachain والاستماع إلى أوامر الإطلاق من الباراشين للتحكم في الأجهزة الذكية. يستخدم التكامل IPFS لتخزين البيانات وإرسال تجزئة IPFS إلى وظائف سجلات البيانات أو الإطلاق.**
 
-{% roboWikiPicture {src: 'docs/home-assistant/integration-setup.png', alt: 'integration setup'}%} {% endroboWikiPicture %}
+{% roboWikiPicture {src: 'docs/home-assistant/integration-setup.png', alt: 'إعداد التكامل'}%} {% endroboWikiPicture %}
 
-أولاً، تحتاج إلى إنشاء تكوين لوحة التحكم الخاصة بك. للقيام بذلك، افتح لوحة التحكم الخاصة بـ Home Assistant الخاصة بك واضغط على زر "تحرير اللوحة" (قلم).
+أولاً، تحتاج إلى إنشاء تكوين لوحة التحكم الخاصة بك. للقيام بذلك، افتح لوحة التحكم الخاصة بـ Home Assistant واضغط على زر "تحرير اللوحة" (قلم) في الزاوية العلوية اليمنى.
+في النافذة المنبثقة، انقر على أيقونة النقاط الثلاث واختر زر "تحكم":
 
-في النافذة المنبثقة، انقر على أيقونة النقاط الثلاث واختر زر "تحمل التحكم":
+{% roboWikiPicture {src: 'docs/home-assistant/take-control.png', alt: 'إعداد التكامل'}%} {% endroboWikiPicture %}
 
-{% roboWikiPicture {src: 'docs/home-assistant/take-control.png', alt: 'integration setup'}%} {% endroboWikiPicture %}
+اضغط على "تحكم" مرة أخرى:
 
-اضغط على "تحمل التحكم" مرة أخرى:
-
-{% roboWikiPicture {src: 'docs/home-assistant/take-control2.png', alt: 'integration setup'}%} {% endroboWikiPicture %}
+{% roboWikiPicture {src: 'docs/home-assistant/take-control2.png', alt: 'إعداد التكامل'}%} {% endroboWikiPicture %}
 
 الآن يمكنك تثبيت تكامل Robonomics. للقيام بذلك، اتبع هذه الخطوات:
 
-{% roboWikiVideo {videos:[{src: 'QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type: 'mp4'}], attrs:['loop', 'controls', 'autoplay']} %}{% endroboWikiVideo %}
+1. في واجهة الويب لـ Home Assistant، انتقل إلى `الإعدادات` -> `الأجهزة والخدمات` واضغط `إضافة تكامل`. ابحث عن `Robonomics`.
 
-1. في واجهة Home Assistant على الويب، انتقل إلى `الإعدادات` -> `الجهاز والخدمات` واضغط على `إضافة تكامل`. ابحث عن `Robonomics`.
+2. انقر على Robonomics، قم بتحميل ملف الإعداد الخاص بك (المسمى `robonomics.app-settings-<subscirption-name>-server.json`، حيث `<subscirption-name>` هو اسم اشتراكك)، وأدخل كلمة مرور لحساب `CONTROLLER`. يمكن العثور على تعليمات حول كيفية إنشاء ملف الإعداد [هنا](/docs/sub-activate/?topic=smart-home#setup-your-subscription).
 
-2. انقر على Robonomics واملأ التكوين:
+{% roboWikiPicture {src:"docs/home-assistant/integraion-setup.png", alt:"إنشاء تحكم"} %}{% endroboWikiPicture %}
 
-- أضف البذرة من حساب `SUB_CONTROLLER` إلى بذرة حساب المتحكم.
-- أضف العنوان العام لحساب `SUB_OWNER` إلى عنوان مالك الاشتراك.
-- قم بتعيين فترة إرسال البيانات (افتراضيًا هي 10 دقائق).
-- (اختياري) يمكنك إضافة بيانات اعتماد لخدمة التعليق Pinata أو بوابة مخصصة أخرى لنشر بياناتك بشكل أوسع عبر شبكة IPFS.
+3. اختياري: يمكنك اختيار الشبكة التي ترغب في استخدامها.
 
-{% roboWikiNote {title:"ملاحظة", type: "ملاحظة"}%} في [قسم إعداد Pinata](/docs/pinata-setup) يمكنك العثور على معلومات أكثر تفصيلاً حول استخدام Pinata. {% endroboWikiNote %}
+4. اضغط `إرسال` بعد الانتهاء من التكوين. إذا قمت بملء كل شيء بشكل صحيح، سترى نافذة النجاح.
 
-3. اضغط على `إرسال` بعد الانتهاء من التكوين. إذا قمت بملء كل شيء بشكل صحيح، سترى نافذة النجاح.
+{% roboWikiNote {type: "okay", title: "" }%} قد يستغرق التثبيت حوالي 10-15 دقيقة، اعتمادًا على اتصال الإنترنت الخاص بك. {% endroboWikiNote %}
 
-هذا كل شيء! لقد قمت بإعداد تكامل Robonomics بالكامل في Home Assistant. الآن يمكنك استخدام جميع خدمات Robonomics عبر الويب. لمعرفة المزيد عنها، انتقل إلى ["قسم الاستخدام"](docs/add-user).
+هذا كل شيء! لقد قمت بإعداد تكامل Robonomics بالكامل في Home Assistant. الآن يمكنك استخدام جميع خدمات Robonomics عبر الويب. لمعرفة المزيد عنها، انتقل إلى ["قسم الاستخدام"](/docs/add-user).

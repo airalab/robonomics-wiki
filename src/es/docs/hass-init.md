@@ -2,7 +2,7 @@
 title: Inicialización de Home Assistant
 contributors: [nakata5321, PaTara43]
 tools:
-  - Home Assistant 2024.6.2
+  - Home Assistant 2024.11.3
     https://github.com/home-assistant/core
 ---
 
@@ -12,9 +12,9 @@ tools:
 
 Comienza creando la cuenta de propietario de Home Assistant. Esta cuenta es de administrador y puede realizar cualquier cambio.
 Abre un navegador web y ve a `http://%PC_IP_ADDRESS%:8123`. Puedes encontrar la dirección IP de Raspberry Pi usando la [aplicación móvil Fing](https://www.fing.com/products) o la [herramienta de línea de comandos nmap](https://vitux.com/find-devices-connected-to-your-network-with-nmap/).
-Si configuraste todo en tu PC, usa `http://localhost:8123`.
+Si configuraste todo en tu PC, utiliza `http://localhost:8123`.
 
-{% roboWikiNote {type: "note"}%} La dirección IP puede cambiar con el tiempo debido a la configuración del enrutador {% endroboWikiNote %}
+{% roboWikiNote {type: "note"}%} La dirección IP puede cambiar con el tiempo, debido a la configuración del enrutador {% endroboWikiNote %}
 
 {% roboWikiVideo {videos:[{src: 'QmYd1Mh2VHVyF3WgvFsN3NFkozXscnCVmEV2YG86UKtK3C', type: 'mp4'}], attrs:['loop', 'controls', 'autoplay']} %}{% endroboWikiVideo %}
 
@@ -24,9 +24,9 @@ Si configuraste todo en tu PC, usa `http://localhost:8123`.
 
 3. Después de eso, Home Assistant mostrará los dispositivos que ha descubierto en tu red. No te preocupes si ves menos elementos de los que se muestran a continuación; siempre puedes agregar dispositivos manualmente más tarde. Por ahora, simplemente haz clic en `FINALIZAR` y estarás en la pantalla principal de Home Assistant.
 
-4. Por último, verás la interfaz web de Home Assistant, que mostrará todos tus dispositivos.
+4. Finalmente, verás la interfaz web de Home Assistant, que mostrará todos tus dispositivos.
 
 
 ## Solución de problemas
 
-1. Si olvidas tu inicio de sesión o contraseña para el usuario local, [consulta este artículo](https://www.home-assistant.io/docs/locked_out/) para restaurar tus credenciales.
+1. Si olvidas tu inicio de sesión o contraseña de usuario local, [consulta este artículo](https://www.home-assistant.io/docs/locked_out/) para restaurar tus credenciales.

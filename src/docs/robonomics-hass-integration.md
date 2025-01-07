@@ -31,7 +31,7 @@ Now you can install the Robonomics integration. To do so, follow these steps:
 
 3. Optional: You can choose which network to use.
 
-4. Press `SUBMIT` after finishing the configuration. If you filled in everything correctly, you will see the success window.
+4. Press `SUBMIT` after finishing the configuration. If you filled in everything correctly, you will see the success window. 
 
 {% roboWikiNote {type: "okay", title: "" }%} The installation may take approximately 10–15 minutes, depending on your internet connection. {% endroboWikiNote %}
 

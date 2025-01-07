@@ -2,11 +2,11 @@
 title: Home Assistant 初始化
 contributors: [nakata5321, PaTara43]
 tools:
-  - Home Assistant 2024.6.2
+  - Home Assistant 2024.11.3
     https://github.com/home-assistant/core
 ---
 
-**安装 Home Assistant 后，需要进行初始化。**
+**安装完 Home Assistant 后，需要进行初始化。**
 
 {% roboWikiPicture {src:"docs/home-assistant/ha_init.png", alt:"ha_init"} %}{% endroboWikiPicture %}
 
@@ -22,7 +22,7 @@ tools:
 
 2. 在下一个屏幕上，为您的家庭输入名称，并设置您的位置和单位制度。点击 `DETECT` 来查找您的位置，并根据该位置设置您的时区和单位制度。如果您不想发送您的位置信息，您可以手动设置这些值。
 
-3. 之后，Home Assistant 将显示在您的网络上发现的任何设备。如果您看到的项目比下面显示的少，不要担心；您随时可以稍后手动添加设备。现在，只需点击 `FINISH`，您将进入主 Home Assistant 屏幕。
+3. 然后，Home Assistant 将显示在您的网络上发现的任何设备。如果您看到的项目比下面显示的少，不要担心；您随时可以稍后手动添加设备。现在，只需点击 `FINISH`，您将进入主 Home Assistant 屏幕。
 
 4. 最后，您将看到 Home Assistant 网页界面，其中将显示所有您的设备。
 
