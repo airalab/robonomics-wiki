@@ -1,12 +1,12 @@
 ---
 title: Initialisation de Home Assistant
 contributors: [nakata5321, PaTara43]
-tools:
-  - Home Assistant 2024.6.2
+outils:
+  - Home Assistant 2024.11.3
     https://github.com/home-assistant/core
 ---
 
-**Après avoir installé Home Assistant, il doit être initialisé.**
+**Après l'installation de Home Assistant, il doit être initialisé.**
 
 {% roboWikiPicture {src:"docs/home-assistant/ha_init.png", alt:"ha_init"} %}{% endroboWikiPicture %}
 
@@ -22,11 +22,11 @@ Si vous avez configuré tout sur votre PC, utilisez `http://localhost:8123`.
 
 2. À l'écran suivant, saisissez un nom pour votre domicile, définissez votre emplacement et votre système d'unités. Cliquez sur `DÉTECTER` pour trouver votre emplacement et définir votre fuseau horaire et votre système d'unités en fonction de cet emplacement. Si vous ne souhaitez pas partager votre emplacement, vous pouvez définir ces valeurs manuellement.
 
-3. Ensuite, Home Assistant affichera tous les appareils qu'il a découverts sur votre réseau. Ne vous inquiétez pas si vous voyez moins d'éléments que ce qui est montré ci-dessous ; vous pouvez toujours ajouter des appareils manuellement plus tard. Pour l'instant, cliquez simplement sur `TERMINER` et vous serez sur l'écran principal de Home Assistant.
+3. Ensuite, Home Assistant affichera les appareils qu'il a découverts sur votre réseau. Ne vous inquiétez pas si vous voyez moins d'éléments que ce qui est montré ci-dessous ; vous pouvez toujours ajouter des appareils manuellement plus tard. Pour l'instant, cliquez simplement sur `TERMINER` et vous serez sur l'écran principal de Home Assistant.
 
 4. Enfin, vous verrez l'interface web de Home Assistant, qui affichera tous vos appareils.
 
 
 ## Dépannage
 
-1. Si vous oubliez votre nom d'utilisateur ou votre mot de passe pour l'utilisateur local, [consultez cet article](https://www.home-assistant.io/docs/locked_out/) pour restaurer vos identifiants.
+1. Si vous oubliez vos identifiants de connexion pour l'utilisateur local, [consultez cet article](https://www.home-assistant.io/docs/locked_out/) pour restaurer vos informations d'identification.

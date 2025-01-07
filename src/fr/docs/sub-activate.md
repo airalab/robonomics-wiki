@@ -4,7 +4,7 @@ contributors: [nakata5321, Fingerling42]
 tools:
   - Robonomics 2.7.0-1
     https://github.com/airalab/robonomics
-  - Robonomics Dapp v0.7.0
+  - Robonomics Dapp v0.8.2
     https://github.com/airalab/robonomics.app
 ---
 
@@ -20,13 +20,13 @@ Dans l'article, un portefeuille [extension Polkadot.js](https://polkadot.js.org/
 
 ## Activer l'abonnement Robonomics
 
-{% roboWikiNote {type:"ok"}%}
+{% roboWikiNote {type:"ok"} %}
 
 Pour cette étape, vous devez disposer d'une quantité suffisante de jetons XRT (minimum de 2 à 3 XRT) sur votre compte `OWNER`.
 
 {% endroboWikiNote %}
 
-{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
+{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['loop', 'controls', 'autoplay']} %}{% endroboWikiVideo %}
 
 1. Allez sur l'application Robonomics et accédez à la [page d'abonnement](https://robonomics.app/#/rws-buy). Ensuite, cliquez sur `Connect Account` dans la barre latérale droite.
 
@@ -34,25 +34,35 @@ Pour cette étape, vous devez disposer d'une quantité suffisante de jetons XRT 
 
 3. Avant d'acheter, assurez-vous d'avoir sélectionné le compte `OWNER`. Cliquez sur l'icône de profil d'adresse, et vous devriez voir le compte `OWNER`.
 
-4. Enfin, cliquez sur le bouton `ACHETER UN ABONNEMENT` et saisissez le mot de passe de votre compte. Attendez que le processus d'activation soit terminé. Vous verrez l'état de votre abonnement après un moment.
+4. Enfin, cliquez sur le bouton `ACHETER UN ABONNEMENT` et saisissez le mot de passe de votre compte. Attendez que le processus d'activation soit terminé. Vous verrez l'état de votre abonnement après un certain temps.
 
 ## Configurez votre abonnement
 
 Maintenant, vous devez configurer votre abonnement en ajoutant le compte `CONTROLLER` à celui-ci.
 
-{% roboWikiPicture {src:"docs/home-assistant/sub-setup.png", alt:"sub_setup"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/home-assistant/sub-download-backup.png",alt: "sub_setup"} %}{% endroboWikiPicture %}
 
 1. Accédez à l'application Robonomics et rendez-vous sur la [page de configuration d'un abonnement](https://robonomics.app/#/rws-setup). Naviguez jusqu'à la section **Paramètres d'abonnement**.
 
-2. Dans le champ `Phrase de récupération du contrôleur`, appuyez sur la baguette magique pour créer un nouveau compte `CONTROLLER`.
+2. Cliquez sur `TÉLÉCHARGER LA SAUVEGARDE` et sélectionnez l'option `POUR LE SERVEUR`.
 
-3. Dans la fenêtre contextuelle, créez un mot de passe pour le compte `CONTROLLER`.
+{% roboWikiNote {type: "warning", title: "Informations importantes" }%} Cette action créera un nouveau contrôleur pour votre abonnement. N'oubliez pas de l'ajouter à l'abonnement. {% endroboWikiNote %}
 
-4. Dans la fenêtre contextuelle suivante, vous verrez l'adresse de votre nouveau compte et la phrase mnémonique de récupération. Conservez la phrase mnémonique de récupération en toute sécurité car vous en aurez besoin ultérieurement pour la configuration de l'intégration. De plus, le fichier JSON avec le compte `CONTROLLER` sera téléchargé. Vous pouvez l'importer dans votre portefeuille. Comment le faire pour l'extension Polkadot.js peut être trouvé [ici](/docs/create-account-in-dapp/).
+3. Dans la fenêtre contextuelle, créez un mot de passe pour le compte `CONTRÔLEUR`.
 
-{% roboWikiPicture {src:"docs/home-assistant/controller-create.jpg", alt:"controller create"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/home-assistant/server-new-settings.png", alt:"créer un contrôleur"} %}{% endroboWikiPicture %}
 
-5. Fermez la fenêtre contextuelle et cliquez sur le bouton `ENREGISTRER`.
+4. Dans la fenêtre contextuelle suivante, vous verrez l'adresse de votre nouveau compte et la phrase mnémonique de récupération. Conservez la phrase mnémonique en toute sécurité. Dans le dossier de téléchargements, vous trouverez deux fichiers JSON : le premier fichier est nommé `Controller-<adresse>.json`, où `<adresse>` est l'adresse de votre contrôleur nouvellement généré. Le deuxième fichier est nommé `robonomics.app-settings-<nom-de-l'abonnement>-serveur.json`, où `<nom-de-l'abonnement>` est le nom de votre abonnement. Conservez ces fichiers en toute sécurité, car ils seront nécessaires ultérieurement pour la configuration de l'intégration. De plus, vous pouvez importer votre contrôleur.compte dans votre portefeuille. Les instructions pour l'importer dans l'extension Polkadot.js peuvent être trouvées [ici](/docs/create-account-in-dapp/).
+
+{% roboWikiPicture {src:"docs/home-assistant/controller-acc.png", alt:"sub_setup"} %}{% endroboWikiPicture %}
+
+5. (Facultatif) Vous pouvez ajouter des informations d'identification pour le service d'épinglage Pinata ou un autre portail personnalisé pour diffuser vos données plus largement sur le réseau IPFS.
+
+{% roboWikiNote {title:"Note", type: "Note"}%} Dans la section [Configuration de Pinata](/docs/pinata-setup), vous trouverez des informations plus détaillées sur l'utilisation de Pinata.{% endroboWikiNote %}
+
+6. Fermez la fenêtre contextuelle et cliquez sur le bouton `ENREGISTRER`.
+
+{% roboWikiPicture {src:"docs/home-assistant/save-setup.png", alt:"sub_setup"} %}{% endroboWikiPicture %}
 
 ## Ajouter un compte de contrôleur à l'abonnement
 
@@ -60,7 +70,7 @@ Maintenant, vous devez ajouter votre compte `CONTROLLER` à la **liste d'accès*
 
 {% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls']} %}{% endroboWikiVideo %}
 
-1. Accédez à l'application Robonomics et rendez-vous sur la [page de configuration d'un abonnement](https://robonomics.app/#/rws-setup). Assurez-vous d'avoir sélectionné le bon abonnement et le compte `OWNER`.
+1. Allez sur l'application Robonomics etAccédez à la [page de configuration d'un abonnement](https://robonomics.app/#/rws-setup). Assurez-vous d'avoir sélectionné le bon abonnement et le compte `OWNER`.
 
 2. Copiez l'adresse du `CONTROLLER` : ouvrez l'extension et cliquez sur l'icône à côté du nom du compte ou copiez l'adresse depuis la section **Paramètres d'abonnement**.
 

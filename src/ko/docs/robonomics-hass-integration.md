@@ -3,11 +3,11 @@ title: Robonomics 통합 설정
 
 contributors: [LoSk-p, nakata5321, Fingerling42]
 tools:
-  - Robonomics Home Assistant Integration 1.8.6
+  - Robonomics Home Assistant Integration 2.0.2
     https://github.com/airalab/homeassistant-robonomics-integration
 ---
 
-**이 문서에서는 Robonomics를 Home Assistant에 추가합니다. 이를 통해 Home Assistant가 암호화된 데이터로 데이터 로그를 Robonomics Parachain에 기록하고, 파라체인에서 스마트 기기를 제어하기 위해 발사 명령을 수신할 수 있습니다. 통합은 데이터를 저장하고 IPFS를 사용하여 데이터를 전송하고 IPFS 해시를 데이터 로그 또는 발사 기능에 보냅니다.**
+**이 문서에서는 Home Assistant에 Robonomics를 추가하는 방법을 알아봅니다. 이를 통해 Home Assistant가 암호화된 데이터로 데이터 로그를 Robonomics Parachain에 기록하고, 파라체인으로부터 스마트 기기를 제어하기 위한 실행 명령을 수신할 수 있습니다. 이 통합은 데이터를 저장하고 데이터 로그 또는 실행 기능으로 IPFS 해시를 전송하는 데 IPFS를 사용합니다.**
 
 {% roboWikiPicture {src: 'docs/home-assistant/integration-setup.png', alt: 'integration setup'}%} {% endroboWikiPicture %}
 
@@ -21,20 +21,18 @@ tools:
 {% roboWikiPicture {src: 'docs/home-assistant/take-control2.png', alt: 'integration setup'}%} {% endroboWikiPicture %}
 
 이제 Robonomics 통합을 설치할 수 있습니다. 다음 단계를 따라 진행하십시오:
+ 
 
-{% roboWikiVideo {videos:[{src: 'QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type: 'mp4'}], attrs:['loop', 'controls', 'autoplay']} %}{% endroboWikiVideo %}
+1. Home Assistant 웹 인터페이스에서 `Settings` -> `Device & Services`로 이동하고 `ADD INTEGRATION`을 누릅니다. `Robonomics`를 검색합니다.
 
-1. Home Assistant의 웹 인터페이스에서 `Settings` -> `Device & Services`로 이동하여 `ADD INTEGRATION`을 누릅니다. `Robonomics`를 검색합니다.
+2. Robonomics를 클릭하고 설정 파일을 업로드합니다 (`robonomics.app-settings-<subscirption-name>-server.json`이라는 이름의 설정 파일, `<subscirption-name>`은 구독 이름입니다) 그리고 `CONTROLLER` 계정의 비밀번호를 입력합니다. 설정 파일을 만드는 방법은 [여기](/docs/sub-activate/?topic=smart-home#setup-your-subscription)에서 확인할 수 있습니다.
 
-2. Robonomics를 클릭하고 구성을 입력합니다:
+{% roboWikiPicture {src:"docs/home-assistant/integraion-setup.png", alt:"controller create"} %}{% endroboWikiPicture %}
 
-- `SUB_CONTROLLER` 계정의 시드를 컨트롤러 계정 시드에 추가합니다.
-- `SUB_OWNER` 계정의 공개 주소를 구독 소유자 주소에 추가합니다.
-- 데이터 전송 간격을 설정합니다 (기본값은 10분).
-- (선택 사항) Pinata 또는 기타 사용자 정의 게이트웨이에 대한 자격 증명을 추가하여 데이터를 IPFS 네트워크 전체에 퍼뜨릴 수 있습니다.
+3. 선택 사항: 사용할 네트워크를 선택할 수 있습니다.
 
-{% roboWikiNote {title:"참고", type: "Note"}%} [Pinata 설정 섹션](/docs/pinata-setup)에서 Pinata 사용에 대한 자세한 정보를 찾을 수 있습니다.{% endroboWikiNote %}
+4. 구성을 마친 후 `SUBMIT`을 누릅니다. 모든 항목을 올바르게 입력했다면 성공 창이 표시됩니다.
 
-3. 구성을 완료한 후 `SUBMIT`을 누릅니다. 모든 것을 올바르게 입력했다면 성공 창이 표시됩니다.
+{% roboWikiNote {type: "okay", title: "" }%} 설치는 인터넷 연결 상태에 따라 약 10~15분이 소요될 수 있습니다. {% endroboWikiNote %}
 
-이것으로 Robonomics 통합을 Home Assistant에 완전히 설정했습니다. 이제 모든 Robonomics 웹 서비스를 사용할 수 있습니다. 더 자세한 정보를 알아보려면 ["사용" 섹션](/docs/add-user)으로 이동하세요.
+이것으로 Robonomics 통합을 Home Assistant에 완전히 설정했습니다. 이제 모든 Robonomics 웹 서비스를 사용할 수 있습니다. 더 자세한 내용은 ["사용" 섹션](/docs/add-user)을 참조하십시오.

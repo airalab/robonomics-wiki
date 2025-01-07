@@ -3,8 +3,8 @@ title: Zigbee Devices in Zigbee2MQTT
 
 contributors: [nakata5321, PaTara43]
 tools:
-  - Zigbee2MQTT 1.38.0
-    https://github.com/Koenkk/zigbee2mqtt/
+  - Zigbee2MQTT 1.40.1
+    https://github.com/Koenkk/zigbee2mqtt
 
 ---
 
@@ -32,6 +32,6 @@ When the device connects, you will see them in web-interface:
 
 {% roboWikiPicture {src:"docs/home-assistant/device_connected.jpg", alt:"device_connected"} %}{% endroboWikiPicture %}
 
-Now you should see this sensor in your Home Assistant WebUI. Go to `Settings` -> `Devices & Services` -> `Devices`.
+Now you should see this sensor in your Home Assistant WebUI. Go to `Settings` -> `Devices & Services` -> `Devices`. 
 
 After adding all the sensors, you can close web-interface of Zigbee2MQTT.

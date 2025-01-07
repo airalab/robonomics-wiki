@@ -4,7 +4,7 @@ contributors: [nakata5321, Fingerling42]
 tools:
   - Robonomics 2.7.0-1
     https://github.com/airalab/robonomics
-  - Robonomics Dapp v0.7.0
+  - Robonomics Dapp v0.8.2
     https://github.com/airalab/robonomics.app
 ---
 
@@ -40,21 +40,29 @@ For this step, you must have a sufficient amount of XRT tokens (minimum of 2-3 X
 
 Now you need to setup you subscription by adding the `CONTROLLER` account to it.
 
-{% roboWikiPicture {src:"docs/home-assistant/sub-setup.png", alt:"sub_setup"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/home-assistant/sub-download-backup.png", alt:"sub_setup"} %}{% endroboWikiPicture %}
 
 1. Go to the Robonomics dApp and navigate to the [setup a subscription page](https://robonomics.app/#/rws-setup). Navigate to the **Subscription settings** section.
 
-2. In the `Controller's seed phrase` field press magic wand to create new `CONTROLLER` account.
+2. Click on `DOWNLOAD BACKUP` and select `FOR THE SERVER` option. 
+
+{% roboWikiNote {type: "warning", title: "Important information" }%} This action will create a new controller for your subscription. Do not forget to add it to the subscription. {% endroboWikiNote %}
 
 3. In the pop-up create password for the `CONTROLLER` account.
 
-4. On the next pop-up, you will see the address of your new account and the mnemonic seed phrase. Save the mnemonic seed phrase securely because you will need it later 
-for integration setup. Additionally, the JSON file with the `CONTROLLER` account will be downloaded. You can import it to your wallet. 
-How to do it for Polkadot.js extension can be found [here](/docs/create-account-in-dapp/).
+{% roboWikiPicture {src:"docs/home-assistant/server-new-settings.png", alt:"controller create"} %}{% endroboWikiPicture %}
 
-{% roboWikiPicture {src:"docs/home-assistant/controller-create.jpg", alt:"controller create"} %}{% endroboWikiPicture %}
+4. In the next pop-up, you will see the address of your new account and the mnemonic seed phrase. Save the mnemonic seed phrase securely. In the downloads folder, you will find two JSON files: the first file is named `Controller-<address>.json`, where `<address>` is the address of your newly generated controller. The second file is named `robonomics.app-settings-<subscirption-name>-server.json`, where `<subscirption-name>` is the name of your subscription. Save these files securely, as they will be needed later for the integration setup. Additionally, you can import your controller account into your wallet. Instructions for importing it into the Polkadot.js extension can be found [here](/docs/create-account-in-dapp/).
 
-5. Close pop-up and click the `SAVE` button.
+{% roboWikiPicture {src:"docs/home-assistant/controller-acc.png", alt:"sub_setup"} %}{% endroboWikiPicture %}
+
+5. (Optional) You can add credentials for pinning service Pinata or other custom gateway to spread your data wider over the IPFS network.
+
+{% roboWikiNote {title:"Note", type: "Note"}%} In [Pinata Setup section](/docs/pinata-setup) you can find more detailed information about using Pinata.{% endroboWikiNote %}
+
+6. Close pop-up and click the `SAVE` button.
+
+{% roboWikiPicture {src:"docs/home-assistant/save-setup.png", alt:"sub_setup"} %}{% endroboWikiPicture %}
 
 ## Add Controller Account to Subscription
 
@@ -63,7 +71,7 @@ Now, you need to add your `CONTROLLER` account to the **access list**.
 
 {% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls']} %}{% endroboWikiVideo %}
 
-1. Go to the Robonomics dApp and navigate to the [setup a subscription page](https://robonomics.app/#/rws-setup). Ensure that you have selected the correct subscription and the `OWNER` account.
+1. Go to the Robonomics dApp and navigate to the [setup a subscription page](https://robonomics.app/#/rws-setup). Ensure that you have selected the correct subscription and the `OWNER` account. 
 
 2. Copy the `CONTROLLER` address: open the extension and click on the icon next to the account name or copy the address from **Subscription settings** section.
 

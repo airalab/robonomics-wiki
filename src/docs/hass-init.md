@@ -2,7 +2,7 @@
 title: Home Assistant Initialization
 contributors: [nakata5321, PaTara43]
 tools:
-  - Home Assistant 2024.6.2
+  - Home Assistant 2024.11.3
     https://github.com/home-assistant/core
 ---
 
@@ -24,7 +24,7 @@ If you set up everything on your PC use `http://localhost:8123`.
 
 3. After that, Home Assistant will show any devices that it has discovered on your network. Don’t worry if you see fewer items than what is shown below; you can always manually add devices later. For now, just click `FINISH` and you will be on the main Home Assistant screen.
 
-4. Finally, you will see the Home Assistant web interface, which will show all of your devices.
+4. Finally, you will see the Home Assistant web interface, which will show all of your devices. 
 
 
 ## Troubleshooting

@@ -3,11 +3,11 @@ title: Настройка интеграции Robonomics
 
 contributors: [LoSk-p, nakata5321, Fingerling42]
 tools:
-  - Robonomics Home Assistant Integration 1.8.6
+  - Robonomics Home Assistant Integration 2.0.2
     https://github.com/airalab/homeassistant-robonomics-integration
 ---
 
-**В этой статье вы добавите Robonomics в Home Assistant. Это позволит Home Assistant записывать журналы данных с зашифрованными данными на Robonomics Parachain и принимать команды запуска с парачейна для управления умными устройствами. Интеграция использует IPFS для хранения данных и отправки хешей IPFS в функции журнала данных или запуска.**
+**В этой статье вы добавите Robonomics в Home Assistant. Это позволит Home Assistant записывать журналы данных с зашифрованными данными в Robonomics Parachain и принимать команды на запуск с парачейна для управления умными устройствами. Интеграция использует IPFS для хранения данных и отправки хешей IPFS в функции журнала данных или запуска.**
 
 {% roboWikiPicture {src: 'docs/home-assistant/integration-setup.png', alt: 'настройка интеграции'}%} {% endroboWikiPicture %}
 
@@ -22,20 +22,18 @@ tools:
 
 Теперь вы можете установить интеграцию Robonomics. Для этого выполните следующие шаги:
  
-{% roboWikiVideo {videos:[{src: 'QmQp66J943zbF6iFdkKQpBikSbm9jV9La25bivKd7cz6fD', type: 'mp4'}], attrs:['loop', 'controls', 'autoplay']} %}{% endroboWikiVideo %}
 
 1. В веб-интерфейсе Home Assistant перейдите в `Настройки` -> `Устройства и сервисы` и нажмите `ДОБАВИТЬ ИНТЕГРАЦИЮ`. Найдите `Robonomics`.
 
-2. Нажмите на Robonomics и заполните конфигурацию:
+2. Нажмите на Robonomics, загрузите ваш файл настройки (названный `robonomics.app-settings-<subscirption-name>-server.json`, где `<subscirption-name>` - это название вашей подписки) и введите пароль для учетной записи `CONTROLLER`. Инструкции по созданию файла настройки можно найти [здесь](/docs/sub-activate/?topic=smart-home#setup-your-subscription).
 
-- Добавьте seed из аккаунта `SUB_CONTROLLER` в seed учетной записи контроллера.
-- Добавьте публичный адрес аккаунта `SUB_OWNER` в адрес владельца подписки.
-- Установите интервал отправки данных (по умолчанию 10 минут).
-- (По желанию) Вы можете добавить учетные данные для сервиса Pinata или другого пользовательского шлюза для распространения ваших данных по широкой сети IPFS.
+{% roboWikiPicture {src:"docs/home-assistant/integraion-setup.png", alt:"создание контроллера"} %}{% endroboWikiPicture %}
 
-{% roboWikiNote {title:"Примечание", type: "Note"}%} В разделе [Настройка Pinata](/docs/pinata-setup) вы можете найти более подробную информацию об использовании Pinata.{% endroboWikiNote %}
+3. По желанию: Вы можете выбрать, какую сеть использовать.
 
-3. Нажмите `ПОДТВЕРДИТЬ` после завершения конфигурации. Если вы все заполнили правильно, вы увидите окно успешного завершения.
+4. Нажмите `ПОДТВЕРДИТЬ` после завершения конфигурации. Если вы все заполнили правильно, вы увидите окно успешного завершения. 
+
+{% roboWikiNote {type: "okay", title: "" }%} Установка может занять примерно 10–15 минут, в зависимости от вашего интернет-соединения. {% endroboWikiNote %}
 
 Вот и все! Вы полностью настроили интеграцию Robonomics в Home Assistant. Теперь вы можете использовать все
-веб-сервисы Robonomics. Чтобы узнать больше о них, перейдите в раздел ["Использование"](docs/add-user).
+веб-сервисы Robonomics. Чтобы узнать больше о них, перейдите в раздел ["Использование"](/docs/add-user).

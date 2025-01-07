@@ -4,7 +4,7 @@ contributors: [nakata5321, Fingerling42]
 tools:
   - Robonomics 2.7.0-1
     https://github.com/airalab/robonomics
-  - Robonomics Dapp v0.7.0
+  - Robonomics Dapp v0.8.2
     https://github.com/airalab/robonomics.app
 ---
 
@@ -26,12 +26,11 @@ Für diesen Schritt müssen Sie eine ausreichende Menge an XRT-Token (mindestens
 
 {% endroboWikiNote %}
 
+{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['loop', 'controls', 'autoplay']} %}{% endroboWikiVideo %}
 
-{% roboWikiVideo {videos:[{src: 'QmXA7WgScwjt1re34BMEqX9CUYLrYQKqqvigDNU6TALQah', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls'], cover: "cover-3.png"} %}{% endroboWikiVideo %}
+1. Gehen Sie zur Robonomics-dApp und navigieren Sie zur [Abonnementseite](https://robonomics.app/#/rws-buy). Klicken Sie dann auf `Konto verbinden` in der rechten Seitenleiste.
 
-1. Gehen Sie zur Robonomics dApp und navigieren Sie zur [Abonnementseite](https://robonomics.app/#/rws-buy). Klicken Sie dann auf `Konto verbinden` in der rechten Seitenleiste.
-
-2. Verbinden Sie im folgenden Popup-Fenster die Polkadot.js-Erweiterung. Sie sehen Ihre Kontoadresse zusammen mit dem Kontostand.
+2. Verbinden Sie im folgenden Popup-Menü die Polkadot.js-Erweiterung. Sie sehen Ihre Kontoadresse zusammen mit dem Kontostand.
 
 3. Stellen Sie vor dem Kauf sicher, dass Sie das `OWNER`-Konto ausgewählt haben. Klicken Sie auf das Adressprofil-Symbol, und Sie sollten das `OWNER`-Konto sehen.
 
@@ -41,32 +40,42 @@ Für diesen Schritt müssen Sie eine ausreichende Menge an XRT-Token (mindestens
 
 Jetzt müssen Sie Ihr Abonnement einrichten, indem Sie das `CONTROLLER`-Konto hinzufügen.
 
-{% roboWikiPicture {src:"docs/home-assistant/sub-setup.png", alt:"sub_setup"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/home-assistant/sub-download-backup.png",alt:"sub_setup"} %}{% endroboWikiPicture %}
 
 1. Gehen Sie zur Robonomics dApp und navigieren Sie zur [Einrichtung einer Abonnementseite](https://robonomics.app/#/rws-setup). Navigieren Sie zum Abschnitt **Abonnementeinstellungen**.
 
-2. Drücken Sie im Feld `Controller's seed phrase` auf den Zauberstab, um ein neues `CONTROLLER`-Konto zu erstellen.
+2. Klicken Sie auf `BACKUP HERUNTERLADEN` und wählen Sie die Option `FÜR DEN SERVER`.
 
-3. Erstellen Sie im Pop-up ein Passwort für das `CONTROLLER`-Konto.
+{% roboWikiNote {type: "warning", title: "Wichtige Information" }%} Diese Aktion erstellt einen neuen Controller für Ihr Abonnement. Vergessen Sie nicht, ihn dem Abonnement hinzuzufügen. {% endroboWikiNote %}
 
-4. Im nächsten Pop-up sehen Sie die Adresse Ihres neuen Kontos und die mnemonische Seed-Phrase. Speichern Sie die mnemonische Seed-Phrase sicher, da Sie sie später für die Integrationseinrichtung benötigen. Zusätzlich wird die JSON-Datei mit dem `CONTROLLER`-Konto heruntergeladen. Sie können sie in Ihre Brieftasche importieren. Wie das für die Polkadot.js-Erweiterung funktioniert, finden Sie [hier](/docs/create-account-in-dapp/).
+3. Erstellen Sie im Popup ein Passwort für das `CONTROLLER`-Konto.
 
-{% roboWikiPicture {src:"docs/home-assistant/controller-create.jpg", alt:"controller create"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/home-assistant/server-new-settings.png", alt:"Controller erstellen"} %}{% endroboWikiPicture %}
 
-5. Schließen Sie das Pop-up und klicken Sie auf die Schaltfläche `SPEICHERN`.
+4. Im nächsten Popup sehen Sie die Adresse Ihres neuen Kontos und die mnemonische Seed-Phrase. Speichern Sie die mnemonische Seed-Phrase sicher. Im Download-Ordner finden Sie zwei JSON-Dateien: Die erste Datei ist `Controller-<Adresse>.json`, wobei `<Adresse>` die Adresse Ihres neu generierten Controllers ist. Die zweite Datei heißt `robonomics.app-settings-<Abonnement-Name>-server.json`, wobei `<Abonnement-Name>` der Name Ihres Abonnements ist. Speichern Sie diese Dateien sicher, da sie später für die Integrationseinrichtung benötigt werden. Darüber hinaus können Sie Ihren Controller importieren.Konto in Ihre Brieftasche importieren. Anweisungen zum Importieren in die Polkadot.js-Erweiterung finden Sie [hier](/docs/create-account-in-dapp/).
 
-## Fügen Sie das Controller-Konto dem Abonnement hinzu
+{% roboWikiPicture {src:"docs/home-assistant/controller-acc.png", alt:"sub_setup"} %}{% endroboWikiPicture %}
+
+5. (Optional) Sie können Anmeldeinformationen für den Pinning-Dienst Pinata oder ein anderes benutzerdefiniertes Gateway hinzufügen, um Ihre Daten breiter über das IPFS-Netzwerk zu verteilen.
+
+{% roboWikiNote {title:"Hinweis", type: "Hinweis"}%} Im Abschnitt [Pinata Setup](/docs/pinata-setup) finden Sie ausführlichere Informationen zur Verwendung von Pinata.{% endroboWikiNote %}
+
+6. Popup schließen und auf die Schaltfläche `SPEICHERN` klicken.
+
+{% roboWikiPicture {src:"docs/home-assistant/save-setup.png", alt:"sub_setup"} %}{% endroboWikiPicture %}
+
+## Controller-Konto zur Abonnement hinzufügen
 
 Jetzt müssen Sie Ihr `CONTROLLER`-Konto zur **Zugriffsliste** hinzufügen.
 
 {% roboWikiVideo {videos:[{src: 'QmVvPSxWm8s9YAogGqDFgxyXjuM9bW3qs8kwDg3PgTWinz', type: 'mp4'}], attrs:['autoplay', 'loop', 'controls']} %}{% endroboWikiVideo %}
 
-1. Gehe zur Robonomics dApp und navigiere zur [Einrichten einer Abonnementseite](https://robonomics.app/#/rws-setup). Stelle sicher, dass du das richtige Abonnement und das `OWNER`-Konto ausgewählt hast.
+1. Gehen Sie zur Robonomics dApp undNavigieren Sie zur [Einrichten einer Abonnementseite](https://robonomics.app/#/rws-setup). Stellen Sie sicher, dass Sie das richtige Abonnement und das `OWNER`-Konto ausgewählt haben.
 
-2. Kopiere die `CONTROLLER`-Adresse: Öffne die Erweiterung und klicke auf das Symbol neben dem Kontonamen oder kopiere die Adresse aus dem Abschnitt **Abonnementeinstellungen**.
+2. Kopieren Sie die `CONTROLLER`-Adresse: Öffnen Sie die Erweiterung und klicken Sie auf das Symbol neben dem Kontonamen oder kopieren Sie die Adresse aus dem Abschnitt **Abonnementeinstellungen**.
 
-3. Füge diese Adresse in das Feld `Polkadot-Adresse` im Abschnitt **BENUTZER IM ABONNEMENT** ein und klicke auf die `+`-Schaltfläche.
+3. Fügen Sie diese Adresse in das Feld `Polkadot-Adresse` im Abschnitt **BENUTZER IM ABONNEMENT** ein und klicken Sie auf die Schaltfläche `+`.
 
-4. Gib das Passwort für dein `OWNER`-Konto im Popup-Fenster ein und warte dann auf den Abschluss des Aktivierungsprozesses.
+4. Geben Sie das Passwort für Ihr `OWNER`-Konto im Popup-Fenster ein und warten Sie dann auf den Abschluss des Aktivierungsprozesses.
 
-Das war's. Gehe zum nächsten Artikel.
+Das war's. Gehen Sie zum nächsten Artikel.

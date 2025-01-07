@@ -3,8 +3,8 @@ title: Dispositivos Zigbee en Zigbee2MQTT
 
 contributors: [nakata5321, PaTara43]
 tools:
-  - Zigbee2MQTT 1.38.0
-    https://github.com/Koenkk/zigbee2mqtt/
+  - Zigbee2MQTT 1.40.1
+    https://github.com/Koenkk/zigbee2mqtt
 
 ---
 
@@ -24,7 +24,7 @@ Verás la interfaz web de Zigbee2MQTT:
 
 
 Es hora de conectar tu dispositivo inteligente.
-Primero, presiona el botón `Permitir unirse (Todos)` en la parte superior de la interfaz web de Zigbee2MQTT.
+Primero, presiona el botón `Permitir unirse (Todo)` en la parte superior de la interfaz web de Zigbee2MQTT.
 
 Luego, comienza a emparejar dispositivos. La forma más común de poner un dispositivo en modo de conexión es mantener presionado su botón de encendido o encenderlos/apagarlos 5 veces. Asegúrate de que Zigbee2MQTT esté en funcionamiento.
 
@@ -32,6 +32,6 @@ Cuando el dispositivo se conecte, los verás en la interfaz web:
 
 {% roboWikiPicture {src:"docs/home-assistant/device_connected.jpg", alt:"device_connected"} %}{% endroboWikiPicture %}
 
-Ahora deberías ver este sensor en tu interfaz web de Home Assistant. Ve a `Configuración` -> `Dispositivos y Servicios` -> `Dispositivos`.
+Ahora deberías ver este sensor en tu interfaz web de Home Assistant. Ve a `Configuración` -> `Dispositivos y Servicios` -> `Dispositivos`. 
 
 Después de agregar todos los sensores, puedes cerrar la interfaz web de Zigbee2MQTT.

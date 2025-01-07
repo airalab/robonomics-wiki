@@ -3,12 +3,12 @@ title: أجهزة Zigbee في Zigbee2MQTT
 
 contributors: [nakata5321, PaTara43]
 tools:
-  - Zigbee2MQTT 1.38.0
-    https://github.com/Koenkk/zigbee2mqtt/
+  - Zigbee2MQTT 1.40.1
+    https://github.com/Koenkk/zigbee2mqtt
 
 ---
 
-**إذا أدخلت جهاز ZigBee coordinator أثناء عملية التثبيت، يمكنك إضافة أجهزة ZigBee إلى منزلك الذكي. ستشرح هذه المقالة كيفية القيام بذلك.**
+**إذا قمت بإدراج منسق ZigBee أثناء عملية التثبيت، يمكنك إضافة أجهزة ZigBee إلى منزلك الذكي. ستشرح هذه المقالة كيفية القيام بذلك.**
 
 {% roboWikiPicture {src:"docs/home-assistant/zigbee2mqtt.png", alt:"zigbee2mqt"} %}{% endroboWikiPicture %}
 
@@ -25,12 +25,12 @@ tools:
 حان الوقت لربط جهازك الذكي.
 أولاً، اضغط على زر `Permit join (All)` في أعلى واجهة الويب لـ Zigbee2MQTT.
 
-ثم، ابدأ في إقران الأجهزة. أكثر الطرق شيوعًا لتبديل جهاز إلى وضع الاتصال هو الضغط على زر الطاقة الخاص به أو تشغيله/إيقافه 5 مرات. تأكد من أن Zigbee2MQTT يعمل.
+ثم، ابدأ في إقران الأجهزة. أكثر الطرق شيوعًا لتبديل جهاز إلى وضع الاتصال هو الضغط على زر الطاقة الخاص به أو تشغيله/إيقافه 5 مرات. تأكد من تشغيل Zigbee2MQTT.
 
-عندما يتم الاتصال بالجهاز، ستراهم في واجهة الويب:
+عندما يتم الاتصال بالجهاز، ستراه في واجهة الويب:
 
 {% roboWikiPicture {src:"docs/home-assistant/device_connected.jpg", alt:"device_connected"} %}{% endroboWikiPicture %}
 
-الآن يجب أن ترى هذا المستشعر في واجهة مستخدم Home Assistant الخاصة بك. اذهب إلى `Settings` -> `Devices & Services` -> `Devices`.
+الآن يجب أن ترى هذا المستشعر في واجهة مستخدم Home Assistant الخاصة بك. اذهب إلى `الإعدادات` -> `الأجهزة والخدمات` -> `الأجهزة`.
 
 بعد إضافة جميع المستشعرات، يمكنك إغلاق واجهة الويب لـ Zigbee2MQTT.
