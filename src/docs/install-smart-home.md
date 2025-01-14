@@ -2,6 +2,8 @@
 title: Smart Home Installation
 contributors: [nakata5321, PaTara43]
 tools:
+  - Ubuntu Server 24.04.1 LTS (64-bit)
+    https://releases.ubuntu.com/noble/
   - Home-assistant-web3-build 0.0.5
     https://github.com/airalab/home-assistant-web3-build
   - Home Assistant 2024.11.3
@@ -20,7 +22,7 @@ tools:
 
 ## Demo
 
-Here is an example of a complete Smart Home and Robonomics integration installation. Keep in mind that the time required may vary depending on the Internet connection. 
+Here is an example of a complete Smart Home and Robonomics integration installation. Keep in mind that the time required may vary depending on the Internet connection.
 
 {% roboWikiVideo {videos:[{src: 'QmULXX4rjkuHuCF42c3V37MxEk6HpnFpJF4bZSQPR2c3Xo', type: 'mp4'}], attrs:['loop', 'controls', 'autoplay']} %}{% endroboWikiVideo %}
 
@@ -42,14 +44,18 @@ If you haven't already incorporated Home Assistant into your smart home setup, i
 	 <a href="https://www.zigbee2mqtt.io/supported-devices/" target="_blank"> <b> Zigbee smart devices(Optionally) </b> </a>  {% endroboWikiGrid %}
 	{% roboWikiGrid %} 	{% roboWikiPicture {src:"docs/home-assistant/need_7.png", alt:"need"} %}{% endroboWikiPicture %}
 	<a href="https://www.zigbee2mqtt.io/information/supported_adapters.html" target="_blank"> <b> Zigbee adapter(Optionally) </b> </a>  {% endroboWikiGrid %}
-	
+
 {% endroboWikiGridWrapper %}
 
+
+## Software you need for installation
+
+Your Raspberry Pi must have [Ubuntu Server 24.04.1 LTS (64-bit)](https://releases.ubuntu.com/noble/) or [Ubuntu Server 22.04.5 LTS (64-bit)](https://releases.ubuntu.com/jammy/) installed. The best way to install an image for Raspberry Pi is to use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) utility.
 
 ## 1. Install Pre-requirements
 
 
-{% roboWikiNote {type: "warning", title: "Important information" }%} All these steps should be done on Raspberry Pi 4 with Ubuntu sytem. {% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title: "Important information" }%} All these steps should be done on Raspberry Pi 4 with Ubuntu system. {% endroboWikiNote %}
 
 Robonomics Docker contains:
 - Home Assistant
@@ -149,14 +155,14 @@ You have more that 1 connected devices. Please choose one
 
 ## Post-installation
 
-After everything has started, you can use the `update.sh` script to update the version of Docker packages: 
+After everything has started, you can use the `update.sh` script to update the version of Docker packages:
 {% codeHelper {copy: true}%}
 
 ```
 bash update.sh
 ```
 
-{% endcodeHelper %} 
+{% endcodeHelper %}
 This script will download new versions, delete old versions of packages, and restart everything automatically, saving all your configurations.
 
 To stop everything, use the `stop.sh` script:
