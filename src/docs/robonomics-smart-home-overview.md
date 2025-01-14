@@ -32,6 +32,6 @@ Here are some simple steps to create an affordable smart home using Home Assista
 We have prepared detailed guides on setting up a smart home on Robonomics. The steps may vary depending on your specific situation: whether you already have an operational Home Assistant with paired devices, or if you are starting from scratch to establish your smart home.
 
 {% roboWikiGridWrapper {columns: '2', textAlign: center, flexible: true} %}
-	{% roboWikiGrid %} 	{% roboWikiButton {label: "For Home Assistant users", link: "/docs/sub-activate/?topic=Upgrade Home Assistant OS", block: true} %}{% endroboWikiButton %} {% endroboWikiGrid %}
 	{% roboWikiGrid %} 	{% roboWikiButton {label: "For new users", link: "/docs/install-smart-home", block: true} %}{% endroboWikiButton %} {% endroboWikiGrid %}
+	{% roboWikiGrid %} 	{% roboWikiButton {label: "For Home Assistant users", link: "/docs/sub-activate/?topic=Upgrade Home Assistant OS", block: true} %}{% endroboWikiButton %} {% endroboWikiGrid %}
 {% endroboWikiGridWrapper %}
