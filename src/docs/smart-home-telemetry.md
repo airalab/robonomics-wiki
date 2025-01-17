@@ -19,4 +19,4 @@ tools:
 
 2. Make sure that you have selected the right subscription.
 
-3. Telemetry will be downloaded using the Libp2p protocol, this will take a few seconds. Once it finishes, you will see the information from your devices and sensors.
+3. Telemetry will be securely downloaded from Robonomics parachain, this will take a while. Once it finishes, you will see the information from your devices and sensors. Then, the Libp2p protocol will be used for faster connection to the smart home.
