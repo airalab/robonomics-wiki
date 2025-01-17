@@ -19,4 +19,4 @@ tools:
 
 2. Make sure that you have selected the right subscription.
 
-3. Telemetry downloading could take some time. Once it finishes, you will see the information from your devices and sensors. You can select either Parachain or Libp2p Provider.
+3. Telemetry will be downloaded using the Libp2p protocol, this will take a few seconds. Once it finishes, you will see the information from your devices and sensors.
