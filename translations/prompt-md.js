@@ -52,7 +52,7 @@ const countTokens = (str) => {
 
 const translationData = (from, to, input) => {
   return {
-    model: "gpt-3.5-turbo", // gpt model
+    model: "gpt-4o", // gpt model
     messages: [
       { role: "system", content: [
         `Translate the markdown file from ${from} to ${to} according to the BCP 47 standard. DO NOT add anything new tags or additional markdown tags. DO NOT CHANGE custom tags that start or end with '{%' or add additional custom tags that start or end with '{%'.Translate ONLY given prompt, do not add anything new.`,
@@ -84,12 +84,12 @@ const translateMD = async(from, to, input, output, file, locale) => {
   // setting 1000 token because greek takes way more than other locales and outputs incorrect document
   if(countTokens(input) > 1000) {
     // if it's a big doc than we cut text in chunks for correct output in all locales (greek especially)
-    const parts =  Math.ceil(countTokens(input) / 300);
+    const parts =  Math.ceil(countTokens(input) / 350);
     let sliceAmount = 0;
 
     for (let i = 0; i < parts; i++) {
-      chunksOfDoc.push(decode(encode(input).slice(sliceAmount, sliceAmount + 300)))
-      sliceAmount += 300;
+      chunksOfDoc.push(decode(encode(input).slice(sliceAmount, sliceAmount + 350)))
+      sliceAmount += 350;
     }
   }  
 
