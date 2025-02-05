@@ -1,68 +1,239 @@
-<section class="privacy-policy container__narrow">
+<action class="privacy-policy container__narrow">
 	<div class="layout__content">
 		<h1>{{'Privacy Policy' | t}}</h1>
+		<span class="privacy-policy__updated"><em>{{ 'Last updated: February 05, 2025' | t }}</em></span>
 
-			<p class="privacy-policy__descr">{{'This Policy describes the information we collect from you, how we use that information and our legal basis for doing so. It also covers whether and how that information may be shared and your rights and choices regarding the information you provide to us.' | t}}</p>
+		<p class="privacy-policy__descr">{{'This Policy describes the information we collect from you, how we use that information and our legal basis for doing so. It also covers whether and how that information may be shared and your rights and choices regarding the information you provide to us.' | t}}</p>
 
-			<div class="privacy-policy__wrapper">
-				<h2 class="privacy-policy__subtitle">
-					{{'Where are those annoying cookie consent pop-ups?' | t}}
-				</h2>
-				<p class="privacy-policy__descr">{{"We don't need cookie consent is needed because:" | t}}</p>
-				<ul>
-					<li>{{'Tracking cookies are not used' | t}}</li>
-					<li>{{'The data is not used for any other purpose than analytics' | t}}</li>
-					<li>{{"Visitors aren't tracked across websites" | t}}</li>
-					<li>{{ 'A user cannot be tracked across days within the same website' | t}}</li>
-				</ul>
-			</div>
+		<p class="privacy-policy__descr">{{'This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.' | t}}</p>
 
-			<div class="privacy-policy__wrapper">
-				<h2 class="privacy-policy__subtitle">
-					{{'What We Collect and Receive' | t}}
-				</h2>
-				<p class="privacy-policy__descr">{{'In order for us to provide you the best possible experience on our websites, we need to collect and process certain information. Depending on your use of the Services, that may include:' | t}}</p>
+		<p class="privacy-policy__descr">{{'We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.' | t}}</p>
 
-				<ul>
-					<li> <b>{{'Contact us via email' | t}}</b> — {{'for example, when you submit our forms, send us questions or comments, or report a problem, we will collect your name, email address, message, etc. We use this data solely in connection with answering the queries we receive.' | t}}</li>
-					<li>
-						<b>{{'Usage data' | t}}</b> — {{'when you visit our website, we will store: the URL from which you visited us from, web pages of our website you visit, the date and duration of your visit, your anonymized IP address, the device specifications (device type, operating system, screen resolution, language, country you are located in, and web browser type) you used during your visit, and' | t}} <a href="https://matomo.org/faq/general/faq_18254/" target="_blank">{{'other' | t}}</a> {{'non-personal data. We process this usage data only on our server, not passing it to third-parties with' | t}} <a href="https://matomo.org/privacy-policy/#:~:text=usage%20data%20in-,Matomo%20Analytics,-for%20statistical%20purposes" targer="_blank"> {{'Matomo' | t}} </a> {{'web analytics platform that gives us 100% data ownership. This analytics helps us to improve user experience with our website and to recognize and stop any misuse.' | t}}
-					</li>
-					<li>
-						<b>{{'Non-personalized cookies' | t}}</b>  — {{'we use non-tracking cookies (small data files transferred onto computers or devices by sites) for record-keeping purposes and to enhance functionality on our website. You may deactivate or restrict the transmission of these cookies by changing the settings of your web browser or by opt-out on this page in the form below. Cookies that are already stored may be deleted at any time.' | t}}
-					</li>
-				</ul>
-			</div>
+		<div class="privacy-policy__wrapper">
+			<h2 class="privacy-policy__subtitle">
+				<span>{{'Interpretation and Definitions' | t}}</span>
+			</h2>
+			<h3>{{'Interpretation' | t}}</h3>
+			<p class="privacy-policy__descr">{{"The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural." | t}}</p>
 
-			<div class="privacy-policy__wrapper">
-				<h2 class="privacy-policy__subtitle">{{'Opt-out of website tracking' | t}}</h2>
-				<p class="privacy-police__descr">{{'You can opt out of being tracked by our Matomo Analytics instance below:' | t}}</p>
-				{% include "./components/matomoOptOut.njk" %}
-      
-			</div>
+			<h3>{{'Definitions' | t}}</h3>
+			<p class="privacy-policy__descr">{{'For the purposes of this Privacy Policy:' | t }}</p>
+			<ul>
+				<li>
+					<strong>{{'DAO' | t}}</strong> {{"(referred to as either 'the DAO', 'We', 'Us' or 'Our' in this Agreement) refers to decentralized autonomous organization Robonomics Network, an operator for website" | t}} <a href="https://robonomics.network/" aria-label="see our main website - robonomcis network" target="_blank">robonomics.network </a> {{'(referred to as' | t }} <strong>{{ 'Website' | t}}</strong> {{'in this Agreement). For the purpose of the GDPR, the DAO is the Data Controller.' | t}}
+				</li>
+				<li><strong>{{'Cookies' | t}}</strong> {{ 'are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses. More detailed information on cookies and how they work can be found at:' | t }} <a href="https://allaboutcookies.org/" aria-label="learn more about cookies" target="_blank">https://allaboutcookies.org/</a></li>
+				<li><strong>{{'Country' | t}}</strong> {{ 'refers to: Cyprus.' | t }}</li>
+				<li><strong>{{ 'Data Controller' | t}}</strong>, {{ 'for the purposes of the GDPR (General Data Protection Regulation), refers to the DAO as the legal person which alone or jointly with others determines the purposes and means of the processing of Personal Data.' | t}}</li>
+				<li><strong>{{ 'Device' | t}}</strong> {{'means any device that can access the Service such as a computer, a cellphone or a digital tablet.' | t}}</li>
+				<li><strong>{{ 'GDPR' | t}}</strong> {{'refers to EU General Data Protection Regulation.' | t }}</li>
+				<li>
+					<strong>{{ 'Personal Data' | t}}</strong> {{ 'is any information that relates to an identified or identifiable individual.' | t }}
+					<p class="privacy-policy__descr">{{ 'For the purposes of GDPR, Personal Data means any information relating to You such as a name, an identification number, location data, online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity.' | t }}</p>
+				</li>
+				<li><strong>{{ 'Service' | t}}</strong> {{'refers to the Website' | t}}.</li>
+				<li><strong>{{ 'Service Provider' | t }}</strong> {{'means any natural or legal person who processes the data on behalf of the DAO. It refers to third-party companies or individuals employed by the DAO to facilitate the Service, to provide the Service on behalf of the DAO, to perform services related to the Service or to assist the DAO in analyzing how the Service is used. For the purpose of the GDPR, Service Providers are considered Data Processors.' | t }}</li>
+				<li><strong>{{'Usage Data' | t}}</strong> {{ 'refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).' | t}}</li>
+				<li>
+					<strong>{{ 'You' | t}}</strong> {{"(referred to as either 'Your' in this Agreement) means the individual accessing or using the Service, or the DAO, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable." | t}}
+					<p class="privacy-policy__descr">{{'Under GDPR, You can be referred to as the Data Subject or as the User as you are the individual using the Service.' | t}}</p>
+				</li>
+			</ul>
+		</div>
 
-			<div class="privacy-policy__wrapper">
-				<h2 class="privacy-policy__subtitle">{{'Your Rights' | t}}</h2>
-				<p class="privacy-police__descr">
-					{{'You have the right to be informed of Personal Data processed by Matomo, a right to rectification/correction, erasure and restriction of processing. You also have the right to ask from us a structured, common and machine-readable format of Personal Data you provided to us.' | t}}
-				</p>
-				<p class="privacy-police__descr">
-					{{'We can only identify you via your email address and we can only adhere to your request and provide information if we have Personal Data about you through you having made contact with us directly and/or you using our site and/or service. We cannot provide, rectify or delete any data that we store on behalf of our users or customers.' | t}}
-				</p>
-				<p class="privacy-police__descr">
-					{{'To exercise any of the rights mentioned in this Privacy Policy and/or in the event of questions or comments relating to the use of Personal Data you may contact us.' | t}}
-				</p>
-				<p class="privacy-police__descr">
-					{{'In addition, you have the right to lodge a complaint with the data protection authority in your jurisdiction.' | t}}
-				</p>
-			</div>
+		<div class="privacy-policy__wrapper">
+			<h2 class="privacy-policy__subtitle title-lined">
+				<span>{{'Collecting and Using Your Personal Data' | t}}</span>
+			</h2>
+			<h3>{{'Types of Data Collected' | t}}</h3>
+			<h4>{{'Personal Data' | t}}</h4>
+			<p class="privacy-policy__descr">{{'While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:' | t}}:</p>
 
-			<div class="privacy-policy__wrapper">
-				<h2 class="privacy-policy__subtitle">{{'Retention of data' | t}}</h2>
-				<p class="privacy-police__descr">
-					{{'We will retain your information as long as necessary to provide you with the services or as otherwise set forth in this Policy. We will also retain and use this information as necessary for the purposes set out in this Policy and to the extent necessary to comply with our legal obligations, resolve disputes, enforce our agreements and protect Robonomics Wiki legal rights.' | t}}
-				</p>
-				<p class="privacy-police__descr">{{'We also collect and maintain aggregated, anonymized or pseudonymized information which we may retain indefinitely to protect the safety and security of our Site, improve our Services or comply with legal obligations.' | t}}</p>
-			</div>
+			<ul>
+				<li>{{'Email address' | t}}</li>
+				<li>{{'First name and last name' | t}}</li>
+				<li>{{'Usage Data' | t}}</li>
+			</ul>
+
+			<h4>{{'Usage Data' | t}}</h4>
+			<p class="privacy-policy__descr">{{'Usage Data is collected automatically when using the Service.' | t}}</p>
+			<p class="privacy-policy__descr">{{"Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data." | t}}</p>
+			<p class="privacy-policy__descr">{{'When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.' | t}}</p>
+			<p class="privacy-policy__descr">{{'We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.' | t}}</p>
+
+			<h4>{{'Cookies & Browser Storage' | t}}</h4>
+			<p class="policy-privacy__descr">{{'The Websites may use cookies. We use cookies and browser storage only for essential settings to improve your experience—not for tracking. These help remember your preferences, such as language settings or consent choices, so you don’t have to reset them each time you visit.' | t}}</p>
+			<p>{{'We do not use cookies for tracking or personalized advertising. You can manage or disable cookies in your browser settings, but some features may not work properly without them.' | t}}</p>
+
+			<h3 class="privacy-policy__subtitle">{{'Matomo Analytics' | t}}</h3>
+			<p class="privacy-policy__descr">{{'Our website may use Matomo, an open-source analytics platform, to gather insights into website usage. This includes anonymized data such as:' | t}}</p>
+
+			<ul>
+				<li>{{'Pages visited and navigation paths' | t}}</li>
+				<li>{{'Time spent on our website' | t}}</li>
+				<li>{{'Whether you’re a returning or new visitor' | t}}</li>
+				<li>{{'Your device type (desktop, mobile, etc.)' | t}}</li>
+			</ul>
+
+			<p class="privacy-policy__descr">{{'To protect your privacy, your IP address is anonymized before being stored. The data we collect is only used to improve the website and is not used for personal identification.' | t}}</p>
+
+			<p class="policy-privacy__descr">
+				<strong>{{'Under Art. 6(1)(f) GDPR' | t }}</strong>, {{'we process this data based on our legitimate interest in enhancing our services.' | t}}
+			</p>
+
+			<h4>{{'Opt-Out Option' | t}}</h4>
+			<p>{{'You can disable Matomo tracking at any time:' | t}}</p>
+
+			{% include "./components/matomoOptOut.njk" %}
+
+			<h3 class="privacy-policy__subtitle">{{'Use of Your Personal Data' | t}}</h3>
+			<p class="privacy-policy__descr">
+				{{'The DAO may use Personal Data for the following purposes:' | t }}
+			</p>
+			<ul>
+				<li><strong>{{'To provide and maintain our Service' | t}}</strong>, {{'including to monitor the usage of our Service.' | t}}</li>
+				<li><strong>{{'For the performance of a contract' | t}}</strong>: {{'the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.' | t}}</li>
+				<li><strong>{{'To contact You' | t}}</strong>: {{"To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation." | t}}</li>
+				<li><strong>{{'To provide You' | t}}</strong> {{"with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information." | t}}</li>
+				<li><strong>{{'To manage Your requests' | t}}</strong>: {{"To attend and manage Your requests to Us." | t}}</li>
+				<li><strong>{{'For other purposes' | t}}</strong>: {{"We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience." | t}}</li>
+			</ul>
+			<p class="policy-privacy__descr">
+				{{'We may share Your personal information in the following situations:' | t}}
+			</p>
+			<ul>
+				<li><strong>{{'With Service Providers' | t}}</strong>: {{'We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.' | t}}</li>
+				<li><strong>{{'With Your consent' | t}}</strong>: {{'We may disclose Your personal information for any other purpose with Your consent.' | t}}</li>
+			</ul>
+
+			<h3 class="privacy-policy__subtitle">{{'Retention of Your Personal Data' | t}}</h3>
+			<p class="privacy-policy__descr">
+				{{ 'The DAO will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.' | t}}
+			</p>
+			<p class="privacy-policy__descr">{{'The DAO will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.' | t}}</p>
+
+			<h3>{{'Security of Your Personal Data' | t}}</h3>
+			<p class="privacy-policy__descr">{{'The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.' | t}}</p>
+		</div>
+
+		<div class="privacy-policy__wrapper">
+			<h2 class="privacy-policy__subtitle title-lined">
+				<span>{{'Detailed Information on the Processing of Your Personal Data' | t}}</span>
+			</h2>
+			<p class="privacy-policy__descr">
+				{{"Your information, including Personal Data, is processed is processed at the DAO's website service provider(s) and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction." | t}}
+			</p>
+			<p class="privacy-policy__descr">{{'Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.' | t}}
+			</p>
+			<p class="privacy-policy__descr">{{'The DAO will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.' | t}}</p>
+			<p class="privacy-policy__descr">{{'Please note that any data transmission on the Internet (e.g. communication by e-mail) is generally not secure and we accept no liability for data transmitted to us via the Internet. Unfortunately, absolute protection is not technically possible. This information does not apply to the Website of third parties and the corresponding links given on our Website. The DAO assumes no responsibility and liability for these.' | t}}</p>
+
+			<p class="privacy-policy__descr">{{"The Service Providers We use may have access to Your Personal Data. These third-party vendors collect, store, use, process and transfer information about Your activity on Our Service in accordance with their Privacy Policies." | t}}</p>
+
+			<h3>{{'Email Marketing' | t}}</h3>
+			<p class="privacy-policy__descr">{{'We may use Your Personal Data to contact You with newsletters, marketing or promotional materials and other information that may be of interest to You. You may opt-out of receiving any, or all, of these communications from Us by following the unsubscribe link or instructions provided in any email We send or by contacting Us.' | t}}</p>
+			<p class="privacy-policy__descr">{{'We may use Email Marketing Service Providers to manage and send emails to You;' | t}}</p>
+			<ul>
+				<li>
+					<strong>{{'Unisender' | t}}</strong> 
+					<p class="privacy-policy__descr">{{'Their Privacy Policy can be viewed at' | t}} <a href="https://www.unisender.com/ru/privacy-notice" aria-label="find out more about unisender privacy policy">https://www.unisender.com/ru/privacy-notice/</a></p>
+				</li>
+			</ul>
+
+			<h3>{{'Usage, Performance and Miscellaneous' | t}}</h3>
+			<p class="privacy-policy__descr">{{'We may use third-party Service Providers to maintain and improve our Service.' | t}}</p>
+			<ul>
+				<li>
+					<strong>{{'hcaptcha' | t}}</strong> 
+					<p class="privacy-policy__descr">{{'Their Privacy Policy can be viewed at' | t}} <a href="https://www.hcaptcha.com/privacy" aria-label="find out more about hcaptcha privacy policy"> https://www.hcaptcha.com/privacy</a></p>
+				</li>
+			</ul>
+		</div>
+
+	 <div class="privacy-policy__wrapper">
+			<h2 class="privacy-policy__subtitle title-lined">
+				<span>{{'GDPR Privacy' | t}}</span>
+			</h2>
+			<h3>{{'Legal Basis for Processing Personal Data under GDPR' | t}}</h3>
+			<p class="privacy-policy__descr">{{"We may process Personal Data under the following conditions:" | t}}</p>
+			<ul>
+				<li>
+					<strong>{{'Consent:' | t}}</strong> {{'You have given Your consent for processing Personal Data for one or more specific purposes.' | t}}
+				</li>
+				<li>
+					<strong>{{'Performance of a contract:' | t}}</strong> {{'Provision of Personal Data is necessary for the performance of an agreement with You and/or for any pre-contractual obligations thereof.' | t}}
+				</li>
+				<li>
+					<strong>{{'Legal obligations:' | t}}</strong> {{'Processing Personal Data is necessary for compliance with a legal obligation to which the DAO is subject.' | t}}
+				</li>
+				<li>
+					<strong>{{'Vital interests:' | t}}</strong> {{'Processing Personal Data is necessary in order to protect Your vital interests or of another natural person.' | t}}
+				</li>
+				<li>
+					<strong>{{'Public interests:' | t}}</strong> {{'Processing Personal Data is related to a task that is carried out in the public interest or in the exercise of official authority vested in the DAO.' | t}}
+				</li>
+				<li>
+					<strong>{{'Legitimate interests:' | t}}</strong> {{'Processing Personal Data is necessary for the purposes of the legitimate interests pursued by the DAO.' | t}}
+				</li>
+			</ul>
+			<p class="privacy-policy__descr">{{'In any case, the DAO will gladly help to clarify the specific legal basis that applies to the processing, and in particular whether the provision of Personal Data is a statutory or contractual requirement, or a requirement necessary to enter into a contract.' | t}}</p>
+
+			<h3>{{'Your Rights under the GDPR' | t}}</h3>
+			<p class="privacy-policy__descr">{{'The DAO undertakes to respect the confidentiality of Your Personal Data and to guarantee You can exercise Your rights.' | t}}</p>
+			<p class="privacy-policy__descr">{{'You have the right under this Privacy Policy, and by law if You are within the EU, to:' | t}}</p>
+			<ul>
+				<li><strong>{{'Request access to Your Personal Data.' | t}}</strong> {{'The right to access, update or delete the information We have on You. Whenever made possible, you can access, update or request deletion of Your Personal Data directly within Your account settings section. If you are unable to perform these actions yourself, please contact Us to assist You. This also enables You to receive a copy of the Personal Data We hold about You.' | t}}</li>
+				<li><strong>{{'Request correction of the Personal Data that We hold about You.' | t}}</strong> {{'You have the right to have any incomplete or inaccurate information We hold about You corrected.' | t}}</li>
+				<li><strong>{{'Object to processing of Your Personal Data.' | t}}</strong> {{'This right exists where We are relying on a legitimate interest as the legal basis for Our processing and there is something about Your particular situation, which makes You want to object to our processing of Your Personal Data on this ground. You also have the right to object where We are processing Your Personal Data for direct marketing purposes.' | t}}</li>
+				<li><strong>{{'Request erasure of Your Personal Data.' | t}}</strong> {{'You have the right to ask Us to delete or remove Personal Data when there is no good reason for Us to continue processing it.' | t}}</li>
+				<li><strong>{{'Request the transfer of Your Personal Data.' | t}}</strong> {{'We will provide to You, or to a third-party You have chosen, Your Personal Data in a structured, commonly used, machine-readable format. Please note that this right only applies to automated information which You initially provided consent for Us to use or where We used the information to perform a contract with You.' | t}}</li>
+				<li><strong>{{'Withdraw Your consent.' | t}}</strong> {{'You have the right to withdraw Your consent on using your Personal Data. If You withdraw Your consent, We may not be able to provide You with access to certain specific functionalities of the Service.' | t}}</li>
+			</ul>
+
+			<h3>{{'Exercising of Your GDPR Data Protection Rights' | t}}</h3>
+			<p class="privacy-policy__descr">{{'You may exercise Your rights of access, rectification, cancellation and opposition by contacting Us. Please note that we may ask You to verify Your identity before responding to such requests. If You make a request, We will try our best to respond to You as soon as possible.' | t}}</p>
+			<p class="privacy-policy__descr">{{'You have the right to complain to a Data Protection Authority about Our collection and use of Your Personal Data. For more information, if You are in the European Economic Area (EEA), please contact Your local data protection authority in the EEA.' | t}}</p>
+		</div>
+
+		<div class="privacy-policy__wrapper">
+			<h2 class="privacy-policy__subtitle title-lined">
+				<span>{{"Children's Privacy" | t}}</span>
+			</h2>
+			<p class="privacy-policy__descr">{{"Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers." | t}}</p>
+			<p class="privacy-policy__descr">{{"If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information." | t}}</p>
+		</div>
+
+		<div class="privacy-policy__wrapper">
+			<h2 class="privacy-policy__subtitle title-lined">
+				<span>{{"Links to Other Websites" | t}}</span>
+			</h2>
+			<p class="privacy-policy__descr">{{"Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit." | t}}</p>
+			<p class="privacy-policy__descr">{{"We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services." | t}}</p>
+		</div>
+
+		<div class="privacy-policy__wrapper">
+			<h2 class="privacy-policy__subtitle title-lined">
+				<span>{{"Changes to this Privacy Policy" | t}}</span>
+			</h2>
+			<p class="privacy-policy__descr">{{"We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page." | t}}</p>
+			<p class="privacy-policy__descr">{{"We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the 'Last updated' date at the top of this Privacy Policy." | t}}</p>
+			<p class="privacy-policy__descr">{{'You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.' | t}}</p>
+		</div>
+
+		<div class="privacy-policy__wrapper">
+			<h2 class="privacy-policy__subtitle title-lined">
+				<span>{{"Contact Us" | t}}</span>
+			</h2>
+			<p class="privacy-policy__descr">{{"If you have any questions about this Privacy Policy, You can contact us:" | t}}</p>
+			<ul>
+				<li>{{'By visiting this page on our website:' | t}} <a href="https://robonomics.network/contact/" aria-label="contact us through this page">https://robonomics.network/contact/</a></li>
+			</ul>
+		</div>
 	</div>
-</section>
+
+	<div class="layout layout__content text-small policy-privacy__ai">
+		<p>{{'This Agreement is originally written in English. This AI translation is provided for your reference only.' | t}}</p>
+	</div>
+
+	</div>
+</action>

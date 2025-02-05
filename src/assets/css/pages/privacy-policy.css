@@ -9,3 +9,13 @@
 .privacy-policy__subtitle {
 	margin-bottom: calc(var(--space) * 0.5);
 }
+
+.privacy-policy__updated {
+	display: block;
+	margin-bottom: calc(var(--space) * 0.5);
+}
+
+.policy-privacy__ai {
+	margin-top: calc(var(--space) * 1.5);
+	font-style: italic;
+}
