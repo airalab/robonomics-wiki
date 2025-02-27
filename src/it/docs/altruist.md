@@ -12,7 +12,7 @@ contributors: [tubleronchik]
 {% roboWikiNote {type: "okay"} %}Per completare questo passaggio, assicurati di avere almeno 2-3 token XRT nel tuo account `Robonomics Polkadot`.{% endroboWikiNote %}
 
 1) Vai alla [pagina di abbonamento](https://robonomics.app/#/rws-buy) del dApp di Robonomics. 
-2) Clicca su **Account** e connetti il tuo portafoglio. Verranno visualizzati l'indirizzo del tuo account e il saldo.
+2) Clicca su **Account** e collega il tuo portafoglio. Verranno visualizzati l'indirizzo del tuo account e il saldo.
 Se non hai un account, segui [questa guida](https://wiki.robonomics.network/docs/create-account-in-dapp/) per crearne uno.
 
 {% roboWikiPicture {src:"docs/altruist/altruist_syb_buy.jpg", alt:"pagina di abbonamento"} %}{% endroboWikiPicture %}
@@ -45,21 +45,23 @@ Se non hai un account, segui [questa guida](https://wiki.robonomics.network/docs
 - Inserisci le coordinate del sito di installazione del sensore.
 - Puoi trovare le coordinate utilizzando mappe online o convertire un indirizzo in latitudine/longitudine usando [questo link.](https://www.latlong.net/convert-address-to-lat)-long.html)
 
-{% roboWikiNote {type: "warning", title: "ATTENZIONE"}%}Le coordinate del sensore verranno visualizzate su una mappa pubblicamente disponibile. Se non vuoi mostrare le tue informazioni private, scrivi coordinate vicine, ma non esatte.{% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title: "ATTENZIONE"}%}Le coordinate del sensore verranno quindi visualizzate su una mappa pubblicamente disponibile. Se non vuoi mostrare le tue informazioni private, scrivi coordinate vicine, ma non esatte.{% endroboWikiNote %}
 
 {% roboWikiPicture {src:"docs/altruist/sensor_setup.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
 
 6) **Copia l'"Indirizzo Robonomics" di Altruist**:
 - Lo troverai in cima alla pagina. Salvalo per il passaggio finale.
 
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"indirizzo altruist"} %}{% endroboWikiPicture %}
+
 7) Clicca su "**Salva configurazione e riavvia**" in fondo alla pagina. La scheda si riavvierà e si connetterà alla rete Wi-Fi specificata.
 
 ## Attivazione di Altruist
-L'ultimo passaggio nel processo di configurazione è aggiungere l'**indirizzo Altruist** al tuo **Abbonamento Robonomics**.
+L'ultimo passaggio nel processo di configurazione è aggiungere l'**indirizzo Altruist** alla tua **Sottoscrizione Robonomics**.
 
 1) Torna alla [pagina di configurazione](https://robonomics.app/#/rws-setup).
 
-2) Scorri verso il basso fino alla sezione "**Utenti nell'abbonamento**".
+2) Scorri verso il basso fino alla sezione "**Utenti nella sottoscrizione**".
 
 3) Nel campo "**Aggiungi un utente**", incolla l'**indirizzo Robonomics di Altruist** che hai copiato in precedenza.
 
@@ -69,11 +71,11 @@ L'ultimo passaggio nel processo di configurazione è aggiungere l'**indirizzo Al
 
 5) Attendi il completamento dell'operazione.
 
-Ecco fatto! La tua configurazione è ora completa. 🎉
+Ecco fatto! La tua configurazione è ora completo. 🎉
 
-Ora puoi trovare il tuo Altruist su [Robonomics Sensors Social](https://sensors.social/#) mappa. 🚀
+Ora puoi trovare il tuo Altruist sulla mappa [Robonomics Sensors Social](https://sensors.social/#). 🚀
 
-{% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"mappa del sensore"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"mappa sensori"} %}{% endroboWikiPicture %}
 
 ## Home Assistant
 
@@ -86,7 +88,7 @@ Il modo più semplice per aggiungere **Altruist** è tramite **HACS**. Puoi trov
 **Passaggi**:
 1) Una volta installato HACS, aprilo.
 
-2) Clicca sui **tre punti** nell'angolo in alto a destra e seleziona "**Custom repositories**".
+2) Clicca sui **tre puntini** nell'angolo in alto a destra e seleziona "**Custom repositories**".
 
 3) Nella finestra pop-up, inserisci il seguente URL:
 
@@ -100,7 +102,6 @@ https://github.com/airalab/altruist-homeassistant-integration
 5) Cerca l'integrazione **Altruist Sensor**.
 
 6) Clicca sul pulsante **Download**, quindi riavvia **Home Assistant** una volta installata l'integrazione.
-
 
 {% roboWikiPicture {src:"docs/altruist/integration.jpg", alt:"altruist-hacs"} %}{% endroboWikiPicture %}
 

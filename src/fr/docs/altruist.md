@@ -1,9 +1,9 @@
 ---
-title: Configuration d'Altruist
+title: Configuration de l'Altruist
 contributors: [tubleronchik]
 ---
 
-**Ce guide vous guide à travers la configuration et l'activation d'un capteur extérieur Altruist. Vous connecterez le capteur au Wi-Fi, configurerez son emplacement et activerez un abonnement en utilisant des jetons XRT. De plus, des instructions pour intégrer le capteur avec Home Assistant via HACS ou une installation manuelle sont fournies.**
+**Ce guide vous guide à travers la configuration et l'activation d'un capteur Altruist Outdoor. Vous connecterez le capteur au Wi-Fi, configurerez son emplacement et activerez un abonnement en utilisant des jetons XRT. De plus, des instructions pour intégrer le capteur avec Home Assistant via HACS ou une installation manuelle sont fournies.**
 
 {% roboWikiNote {type: "warning"}%} Tous les appareils de Robonomics peuvent être achetés sur le [site officiel](https://robonomics.network/devices/).{% endroboWikiNote %}
 
@@ -26,24 +26,24 @@ Si vous n'avez pas de compte, suivez [ce guide](https://wiki.robonomics.network/
 
 ## Configuration du capteur
 
-{% roboWikiNote {type: "warning", title: "INFO"}%} Le capteur ne peut être connecté qu'à un réseau Wi-Fi de 2,4 GHz.{% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title: "INFO"}%} Le capteur ne peut être connecté qu'à un réseau Wi-Fi 2,4 GHz.{% endroboWikiNote %}
 
 1) **Branchez le capteur** à une prise électrique.
-2) La carte créera un réseau Wi-Fi nommé Altruist-xxxxxxxxx. Connectez-vous à celui-ci depuis votre téléphone ou ordinateur. Vous devriez être automatiquement invité à ouvrir la fenêtre d'autorisation.
+2) La carte créera un réseau Wi-Fi nommé Altruist-xxxxxxxxx. Connectez-vous à celui-ci depuis votre téléphone ou votre ordinateur. Vous devriez être automatiquement invité à ouvrir la fenêtre d'autorisation. 
 - Si ce n'est pas le cas, ouvrez un navigateur et allez à 192.168.4.1.
 
-{% roboWikiPicture {src:"docs/altruist/on_board.png", alt:"capteur-altruiste"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/on_board.png", alt:"altruist-capteur"} %}{% endroboWikiPicture %}
 
 3) **Configurez les paramètres Wi-Fi** :
 - Sélectionnez votre réseau Wi-Fi dans la liste ou entrez-le manuellement s'il n'apparaît pas.
 - Entrez le mot de passe dans le champ "PARAMÈTRES WI-FI".
 
 4) **Entrez vos détails Robonomics** :
-- Collez l'adresse du propriétaire RWS que vous avez copiée précédemment dans le champ désigné.
+- Collez l'adresse du propriétaire RWS que vous avez copiée précédemment dans le champ désigné. 
 
 5) **Définissez l'emplacement du capteur** :
 - Entrez les coordonnées du site d'installation du capteur.
-- Vous pouvez trouver les coordonnées en utilisant des cartes en ligne ou convertir une adresse en latitude/longitude en utilisant [ce lien.](https://www.latlong.net/convert-address-to-lat)-long.html)
+- Vous pouvez trouver les coordonnées en utilisant des cartes en ligne ou convertir une adresse en latitude/longitude en utilisant [ce lien.](https://www.latlong.net/convert-address-to-lat-long.html)
 
 {% roboWikiNote {type: "warning", title: "AVERTISSEMENT"}%}Les coordonnées du capteur seront ensuite affichées sur une carte accessible au public. Si vous ne souhaitez pas montrer vos informations privées, indiquez des coordonnées proches, mais pas exactes.{% endroboWikiNote %}
 
@@ -51,6 +51,8 @@ Si vous n'avez pas de compte, suivez [ce guide](https://wiki.robonomics.network/
 
 6) **Copiez l'"Adresse Robonomics" d'Altruist** :
 - Vous la trouverez en haut de la page. Enregistrez-la pour l'étape finale.
+
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"adresse altruist"} %}{% endroboWikiPicture %}
 
 7) Cliquez sur "**Enregistrer la configuration et redémarrer**" en bas de la page. La carte redémarrera et se connectera au réseau Wi-Fi spécifié.
 
@@ -69,41 +71,41 @@ La dernière étape du processus de configuration consiste à ajouter l'**adress
 
 5) Attendez que l'opération soit terminée.
 
-C'est tout ! Votre configuration est maintenant terminée. 🎉
+C'est tout ! Votre configurationest maintenant terminé. 🎉
 
-Vous pouvez maintenant trouver votre Altruist sur le [Robonomics Sensors Social](https://sensors.social/#)map. 🚀
+Vous pouvez maintenant trouver votre Altruiste sur la carte [Robonomics Sensors Social](https://sensors.social/#). 🚀
 
 {% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"carte des capteurs"} %}{% endroboWikiPicture %}
 
 ## Home Assistant
 
-Il existe deux façons d'ajouter **Altruist** à **Home Assistant** :
+Il existe deux façons d'ajouter **Altruiste** à **Home Assistant** :
 
 ### Option 1 : HACS (Recommandé)
 
-La façon la plus simple d'ajouter **Altruist** est via **HACS**. Vous pouvez trouver un guide d'installation rapide [ici](https://hacs.xyz/docs/use/)
+La façon la plus simple d'ajouter **Altruiste** est via **HACS**. Vous pouvez trouver un guide d'installation rapide [ici](https://hacs.xyz/docs/use/)
 
 **Étapes** :
 1) Une fois HACS installé, ouvrez-le.
 
-2) Cliquez sur les **trois points** dans le coin supérieur droit et sélectionnez "**Custom repositories**".
+2) Cliquez sur les **trois points** dans le coin supérieur droit et sélectionnez "**Dépôts personnalisés**".
 
 3) Dans la fenêtre pop-up, entrez l'URL suivante :
 
 ```
 https://github.com/airalab/altruist-homeassistant-integration
 ```
-4) Définissez le type sur "**Integration**" et cliquez sur "**ADD**".
+4) Définissez le type sur "**Intégration**" et cliquez sur "**AJOUTER**".
 
-{% roboWikiPicture {src:"docs/altruist/hacs.jpg", alt:"altruist-ajouter"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/hacs.jpg", alt:"ajout altruiste"} %}{% endroboWikiPicture %}
 
 5) Recherchez l'intégration **Altruist Sensor**.
 
-6) Cliquez sur le bouton **Download**, puis redémarrez **Home Assistant** une fois l'intégration installée.
+6) Cliquez sur le bouton **Télécharger**, puis redémarrez **Home Assistant** une fois l'intégration installée.
 
-{% roboWikiPicture {src:"docs/altruist/integration.jpg", alt:"altruist-hacs"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/integration.jpg", alt:"altruiste-hacs"} %}{% endroboWikiPicture %}
 
-### Option 2 : Installation Manuelle
+### Option 2 : Installation manuelle
 
 1) Sous l'utilisateur `homeassistant`, clonez le dépôt du projet :
 
@@ -111,7 +113,7 @@ https://github.com/airalab/altruist-homeassistant-integration
 
 ```shell
   git clone https://github.com/airalab/altruist-homeassistant-integration.git
-``` 
+```
 
 {% endcodeHelper %}
 
@@ -130,7 +132,7 @@ mv custom_components/altruist ~/.homeassistant/custom_components/
 
 {% codeHelper { copy: true}%}
 
-```
+ ```
 cd altruist-homeassistant-integration
 mv custom_components/ ~/.homeassistant/
 ```

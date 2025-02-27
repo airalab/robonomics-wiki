@@ -39,7 +39,7 @@ Si no tienes una cuenta, sigue [esta guía](https://wiki.robonomics.network/docs
 - Introduce la contraseña en el campo "WI-FI SETTINGS".
 
 4) **Introduce tus detalles de Robonomics**:
-- Pega la Dirección del Propietario de RWS que copiaste anteriormente en el campo designado.
+- Pega la Dirección del Propietario RWS que copiaste anteriormente en el campo designado.
 
 5) **Establece la ubicación del sensor**:
 - Introduce las coordenadas del sitio de instalación del sensor.
@@ -51,6 +51,8 @@ Si no tienes una cuenta, sigue [esta guía](https://wiki.robonomics.network/docs
 
 6) **Copia la "Dirección Robonomics" de Altruist**:
 - La encontrarás en la parte superior de la página. Guárdala para el paso final.
+
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"dirección altruist"} %}{% endroboWikiPicture %}
 
 7) Haz clic en "**Guardar configuración y reiniciar**" en la parte inferior de la página. La placa se reiniciará y se conectará a la red Wi-Fi especificada.
 
@@ -69,26 +71,26 @@ El paso final en el proceso de configuración es agregar la **dirección de Altr
 
 5) Espera a que la operación se complete.
 
-¡Eso es todo! Tu configuración ahora está completa. 🎉
+¡Eso es todo! Tu configuración está completo. 🎉
 
-Ahora puedes encontrar tu Altruist en el [Robonomics Sensors Social](https://sensors.social/#)mapa. 🚀
+Ahora puedes encontrar tu Altruist en el mapa de [Robonomics Sensors Social](https://sensors.social/#). 🚀
 
 {% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"mapa de sensores"} %}{% endroboWikiPicture %}
 
 ## Home Assistant
 
-Hay dos maneras de añadir **Altruist** a **Home Assistant**:
+Hay dos maneras de agregar **Altruist** a **Home Assistant**:
 
 ### Opción 1: HACS (Recomendado)
 
-La forma más fácil de añadir **Altruist** es a través de **HACS**. Puedes encontrar una breve guía de configuración [aquí](https://hacs.xyz/docs/use/)
+La forma más fácil de agregar **Altruist** es a través de **HACS**. Puedes encontrar una breve guía de configuración [aquí](https://hacs.xyz/docs/use/)
 
 **Pasos**:
 1) Una vez que HACS esté instalado, ábrelo.
 
 2) Haz clic en los **tres puntos** en la esquina superior derecha y selecciona "**Custom repositories**".
 
-3) En la ventana emergente, introduce la siguiente URL:
+3) En la ventana emergente, ingresa la siguiente URL:
 
 ```
 https://github.com/airalab/altruist-homeassistant-integration
@@ -130,7 +132,7 @@ mv custom_components/altruist ~/.homeassistant/custom_components/
 
 {% codeHelper { copy: true}%}
 
-```
+ ```
 cd altruist-homeassistant-integration
 mv custom_components/ ~/.homeassistant/
 ```

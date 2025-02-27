@@ -22,7 +22,7 @@ Se você não tiver uma conta, siga [este guia](https://wiki.robonomics.network/
 
 {% roboWikiPicture {src:"docs/altruist/altruist_setup_page.jpg", alt:"página de configuração de assinatura"} %}{% endroboWikiPicture %}
 
-5) **Salve o endereço da sua conta** — você precisará dele durante a configuração do sensor. Você pode copiá-lo da seção "PROPRIETÁRIO" ou clicando no nome da sua conta no canto superior direito e selecionando o botão de copiar.
+5) **Salve o endereço da sua conta** — você precisará dele durante a configuração do sensor. Você pode copiá-lo da seção "PROPRIETÁRIO" ou clicando no nome da sua conta no canto superior direito e selecionando o botão de cópia.
 
 ## Configuração do Sensor
 
@@ -43,7 +43,7 @@ Se você não tiver uma conta, siga [este guia](https://wiki.robonomics.network/
 
 5) **Defina a localização do sensor**:
 - Insira as coordenadas do local de instalação do sensor.
-- Você pode encontrar coordenadas usando mapas online ou converter um endereço para latitude/longitude usando [este link.](https://www.latlong.net/convert-address-to-lat)-long.html)
+- Você pode encontrar coordenadas usando mapas online ou converter um endereço para latitude/longitude usando [este link.](https://www.latlong.net/convert-address-to-lat-long.html)
 
 {% roboWikiNote {type: "warning", title: "AVISO"}%}As coordenadas do sensor serão exibidas em um mapa disponível publicamente. Se você não quiser mostrar suas informações privadas, escreva coordenadas próximas, mas não exatas.{% endroboWikiNote %}
 
@@ -52,7 +52,9 @@ Se você não tiver uma conta, siga [este guia](https://wiki.robonomics.network/
 6) **Copie o "Endereço Robonomics" do Altruist**:
 - Você o encontrará no topo da página. Salve-o para a etapa final.
 
-7) Clique em "**Salvar configuração e reiniciar**" na parte inferior da página. A placa irá reiniciar e se conectar à rede Wi-Fi especificada.
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"endereço altruist"} %}{% endroboWikiPicture %}
+
+7) Clique em "**Salvar configuração e reiniciar**" na parte inferior da página. A placa irá reiniciar e conectar-se à rede Wi-Fi especificada.
 
 ## Ativar Altruist
 A etapa final no processo de configuração é adicionar o **endereço Altruist** à sua **Assinatura Robonomics**.
@@ -69,9 +71,9 @@ A etapa final no processo de configuração é adicionar o **endereço Altruist*
 
 5) Aguarde a conclusão da operação.
 
-É isso! Sua configuração está completa. 🎉
+É isso! Sua configuração está agora completo. 🎉
 
-Agora você pode encontrar seu Altruist no [Robonomics Sensors Social](https://sensors.social/#) mapa. 🚀
+Você pode encontrar seu Altruist no mapa do [Robonomics Sensors Social](https://sensors.social/#). 🚀
 
 {% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"mapa de sensores"} %}{% endroboWikiPicture %}
 
@@ -115,21 +117,25 @@ https://github.com/airalab/altruist-homeassistant-integration
 
 {% endcodeHelper %}
 
-2) Se você já tiver alguma integração personalizada, mova a pasta `altruist` para o seu diretório `custom_components`:
+2) Se você já possui alguma integração personalizada, mova a pasta `altruist` para o seu diretório `custom_components`:
 
 {% codeHelper { copy: true}%}
 
+```
 cd altruist-homeassistant-integration
 mv custom_components/altruist ~/.homeassistant/custom_components/
+```
 
 {% endcodeHelper %}
 
-3) Se você **não** tiver nenhuma integração personalizada, mova todo o diretório custom_components:
+3) Se você **não** possui nenhuma integração personalizada, mova todo o diretório custom_components:
 
 {% codeHelper { copy: true}%}
 
+ ```
 cd altruist-homeassistant-integration
 mv custom_components/ ~/.homeassistant/
+```
 
 {% endcodeHelper %}
 

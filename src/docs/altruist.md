@@ -52,6 +52,8 @@ If you don’t have an account, follow [this guide](https://wiki.robonomics.netw
 6) **Copy the Altruist "Robonomics Address"**:
 - You will find it at the top of the page. Save it for the final step.
 
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address"} %}{% endroboWikiPicture %}
+
 7) Click "**Save configuration and restart**" at the bottom of the page. The board will reboot and connect to the specified Wi-Fi network.
 
 ## Altruist activate

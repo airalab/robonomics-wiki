@@ -11,7 +11,7 @@ contributors: [tubleronchik]
 
 {% roboWikiNote {type: "okay"} %}Για να ολοκληρώσετε αυτό το βήμα, βεβαιωθείτε ότι έχετε τουλάχιστον 2-3 XRT tokens στον λογαριασμό σας `Robonomics Polkadot`.{% endroboWikiNote %}
 
-1) Μεταβείτε στη [σελίδα συνδρομής](https://robonomics.app/#/rws-buy) του Robonomics dApp. 
+1) Μεταβείτε στη σελίδα [συνδρομής](https://robonomics.app/#/rws-buy) του Robonomics dApp. 
 2) Κάντε κλικ στο **Λογαριασμός** και συνδέστε το πορτοφόλι σας. Η διεύθυνση και το υπόλοιπο του λογαριασμού σας θα εμφανιστούν.
 Αν δεν έχετε λογαριασμό, ακολουθήστε [αυτόν τον οδηγό](https://wiki.robonomics.network/docs/create-account-in-dapp/) για να δημιουργήσετε έναν.
 
@@ -45,43 +45,45 @@ contributors: [tubleronchik]
 - Εισάγετε τις συντεταγμένες του σημείου εγκατάστασης του αισθητήρα.
 - Μπορείτε να βρείτε συντεταγμένες χρησιμοποιώντας διαδικτυακούς χάρτες ή να μετατρέψετε μια διεύθυνση σε γεωγραφικό πλάτος/μήκος χρησιμοποιώντας [αυτόν τον σύνδεσμο.](https://www.latlong.net/convert-address-to-lat-long.html)
 
-{% roboWikiNote {type: "warning", title: "ΠΡΟΕΙΔΟΠΟΙΗΣΗ"}%}Οι συντεταγμένες του αισθητήρα θα εμφανιστούν σε έναν δημόσια διαθέσιμο χάρτη. Εάν δεν θέλετε να εμφανίσετε τις προσωπικές σας πληροφορίες, γράψτε κοντινές, αλλά όχι ακριβείς συντεταγμένες.{% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title: "ΠΡΟΕΙΔΟΠΟΙΗΣΗ"}%}Οι συντεταγμένες του αισθητήρα θα εμφανιστούν στη συνέχεια σε έναν δημόσια διαθέσιμο χάρτη. Εάν δεν θέλετε να εμφανίσετε τις προσωπικές σας πληροφορίες, γράψτε κοντινές, αλλά όχι ακριβείς συντεταγμένες.{% endroboWikiNote %}
 
 {% roboWikiPicture {src:"docs/altruist/sensor_setup.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
 
 6) **Αντιγράψτε τη "Διεύθυνση Robonomics" του Altruist**:
 - Θα τη βρείτε στην κορυφή της σελίδας. Αποθηκεύστε την για το τελικό βήμα.
 
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address"} %}{% endroboWikiPicture %}
+
 7) Κάντε κλικ στο "**Αποθήκευση ρυθμίσεων και επανεκκίνηση**" στο κάτω μέρος της σελίδας. Η πλακέτα θα επανεκκινήσει και θα συνδεθεί στο καθορισμένο δίκτυο Wi-Fi.
 
 ## Ενεργοποίηση Altruist
 Το τελικό βήμα στη διαδικασία ρύθμισης είναι η προσθήκη της **διεύθυνσης Altruist** στη **Συνδρομή Robonomics** σας.
 
-1) Επιστρέψτε στη [Σελίδα ρύθμισης](https://robonomics.app/#/rws-setup).
+1) Επιστρέψτε στη [σελίδα Ρύθμισης](https://robonomics.app/#/rws-setup).
 
 2) Κάντε κύλιση προς τα κάτω στην ενότητα "**Χρήστες στη συνδρομή**".
 
 3) Στο πεδίο "**Προσθήκη χρήστη**", επικολλήστε τη **διεύθυνση Robonomics του Altruist** που αντιγράψατε νωρίτερα.
 
-{% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"προσθήκη χρήστη"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"add user"} %}{% endroboWikiPicture %}
 
 4) Κάντε κλικ στο **κουμπί συν (+)** και υπογράψτε το μήνυμα.
 
 5) Περιμένετε να ολοκληρωθεί η λειτουργία.
 
-Αυτό ήταν! Η ρύθμισή σας είναι τώρα ολοκληρωμένη. 🎉
+Αυτό είναι! Η ρύθμισή σας ολοκληρώθηκε. 🎉
 
-Μπορείτε τώρα να βρείτε το Altruist σας στο [Robonomics Sensors Social](https://sensors.social/#) map. 🚀
+Μπορείτε τώρα να βρείτε τον Altruist σας στον χάρτη [Robonomics Sensors Social](https://sensors.social/#). 🚀
 
 {% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"sensor map"} %}{% endroboWikiPicture %}
 
 ## Home Assistant
 
-Υπάρχουν δύο τρόποι για να προσθέσετε το **Altruist** στο **Home Assistant**:
+Υπάρχουν δύο τρόποι για να προσθέσετε τον **Altruist** στο **Home Assistant**:
 
 ### Επιλογή 1: HACS (Συνιστάται)
 
-Ο πιο εύκολος τρόπος για να προσθέσετε το **Altruist** είναι μέσω του **HACS**. Μπορείτε να βρείτε έναν σύντομο οδηγό ρύθμισης [εδώ](https://hacs.xyz/docs/use/) 
+Ο πιο εύκολος τρόπος για να προσθέσετε τον **Altruist** είναι μέσω του **HACS**. Μπορείτε να βρείτε έναν σύντομο οδηγό ρύθμισης [εδώ](https://hacs.xyz/docs/use/)
 
 **Βήματα**:
 1) Μόλις εγκατασταθεί το HACS, ανοίξτε το.
@@ -148,4 +150,4 @@ mv custom_components/ ~/.homeassistant/
 
 {% roboWikiPicture {src:"docs/altruist/add_altruist.jpg", alt:"discover altruist"} %}{% endroboWikiPicture %}
 
-Αυτό ήταν! 🚀 Ο Αισθητήρας Altruist είναι τώρα ενσωματωμένος με το Home Assistant.
+Αυτό είναι! 🚀 Ο Αισθητήρας Altruist είναι τώρα ενσωματωμένος με το Home Assistant.

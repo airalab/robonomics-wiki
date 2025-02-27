@@ -11,18 +11,18 @@ contributors: [tubleronchik]
 
 {% roboWikiNote {type: "okay"} %}完成此步骤，请确保您的 `Robonomics Polkadot` 账户中至少有 2-3 个 XRT 代币。{% endroboWikiNote %}
 
-1) 导航到 Robonomics dApp [订阅页面](https://robonomics.app/#/rws-buy)。
-2) 点击 **账户** 并连接您的钱包。您的账户地址和余额将显示。
+1) 导航到 Robonomics dApp [订阅页面](https://robonomics.app/#/rws-buy)。 
+2) 点击 **账户** 并连接您的钱包。您的账户地址和余额将显示出来。
 如果您没有账户，请按照[本指南](https://wiki.robonomics.network/docs/create-account-in-dapp/)创建一个。
 
 {% roboWikiPicture {src:"docs/altruist/altruist_syb_buy.jpg", alt:"订阅页面"} %}{% endroboWikiPicture %}
 
-3) 点击 `购买订阅` 并签署交易。**等待激活过程完成**。
+3) 点击 `购买订阅` 并签署交易。**等待激活过程完成**。 
 4) 激活后，您将被重定向到**设置页面**，在这里您可以看到您的订阅名称和到期日期。
 
 {% roboWikiPicture {src:"docs/altruist/altruist_setup_page.jpg", alt:"订阅设置页面"} %}{% endroboWikiPicture %}
 
-5) **保存您的账户地址** — 在传感器设置过程中您将需要它。您可以从“OWNER”部分复制它，或者点击右上角的账户名称并选择复制按钮。
+5) **保存您的账户地址** — 您将在传感器设置过程中需要它。您可以从“OWNER”部分复制它，或者通过点击右上角的账户名称并选择复制按钮来获取。
 
 ## 传感器设置
 
@@ -45,17 +45,19 @@ contributors: [tubleronchik]
 - 输入传感器安装地点的坐标。
 - 您可以使用在线地图查找坐标，或使用[此链接](https://www.latlong.net/convert-address-to-lat)将地址转换为纬度/经度。-long.html)
 
-{% roboWikiNote {type: "warning", title: "警告"}%}传感器坐标将显示在公开可用的地图上。如果您不想显示您的私人信息，请填写接近但不准确的坐标。{% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title: "警告"}%}传感器坐标将显示在公开可用的地图上。如果您不想显示您的私人信息，请写下接近但不精确的坐标。{% endroboWikiNote %}
 
 {% roboWikiPicture {src:"docs/altruist/sensor_setup.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
 
 6) **复制 Altruist "Robonomics 地址"**：
 - 您会在页面顶部找到它。保存以便在最后一步使用。
 
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address"} %}{% endroboWikiPicture %}
+
 7) 点击页面底部的“**保存配置并重启**”。板子将重启并连接到指定的 Wi-Fi 网络。
 
-## 激活 Altruist
-设置过程的最后一步是将 **Altruist 地址** 添加到您的 **Robonomics 订阅**中。
+## Altruist 激活
+设置过程的最后一步是将 **Altruist 地址** 添加到您的 **Robonomics 订阅** 中。
 
 1) 返回到 [设置页面](https://robonomics.app/#/rws-setup)。
 
@@ -69,9 +71,9 @@ contributors: [tubleronchik]
 
 5) 等待操作完成。
 
-就是这样！您的设置现已完成。🎉
+就是这样！您的设置现已完成。 🎉
 
-您现在可以在 [Robonomics Sensors Social](https://sensors.social/#) 上找到您的 Altruist。 map. 🚀
+您现在可以在 [Robonomics Sensors Social](https://sensors.social/#) 地图上找到您的 Altruist。 🚀
 
 {% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"传感器地图"} %}{% endroboWikiPicture %}
 
@@ -86,20 +88,20 @@ contributors: [tubleronchik]
 **步骤**：
 1) 安装 HACS 后，打开它。
 
-2) 点击右上角的 **三个点**，选择“**自定义仓库**”。
+2) 点击右上角的 **三个点**，选择“**Custom repositories**”。
 
 3) 在弹出窗口中，输入以下 URL：
 
 ```
 https://github.com/airalab/altruist-homeassistant-integration
 ```
-4) 将类型设置为“**集成**”，然后点击“**添加**”。
+4) 将类型设置为“**Integration**”并点击“**ADD**”。
 
 {% roboWikiPicture {src:"docs/altruist/hacs.jpg", alt:"altruist-add"} %}{% endroboWikiPicture %}
 
-5) 搜索 **Altruist 传感器**集成。
+5) 搜索 **Altruist Sensor** 集成。
 
-6) 点击 **下载**按钮，安装集成后重启 **Home Assistant**。
+6) 点击 **Download** 按钮，然后在安装集成后重启 **Home Assistant**。
 
 {% roboWikiPicture {src:"docs/altruist/integration.jpg", alt:"altruist-hacs"} %}{% endroboWikiPicture %}
 
@@ -130,7 +132,7 @@ mv custom_components/altruist ~/.homeassistant/custom_components/
 
 {% codeHelper { copy: true}%}
 
-```
+ ```
 cd altruist-homeassistant-integration
 mv custom_components/ ~/.homeassistant/
 ```

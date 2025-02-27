@@ -29,7 +29,7 @@ contributors: [tubleronchik]
 {% roboWikiNote {type: "warning", title: "INFO"}%} 센서는 2.4GHz Wi-Fi 네트워크에만 연결할 수 있습니다.{% endroboWikiNote %}
 
 1) **센서를 전원 소켓에 연결**합니다.
-2) 보드는 Altruist-xxxxxxxxx라는 Wi-Fi 네트워크를 생성합니다. 휴대폰이나 컴퓨터에서 연결하세요. 인증 창이 자동으로 열리도록 요청됩니다.
+2) 보드는 Altruist-xxxxxxxxx라는 Wi-Fi 네트워크를 생성합니다. 휴대폰이나 컴퓨터에서 연결하세요. 인증 창이 자동으로 열리도록 요청받을 것입니다.
 - 그렇지 않은 경우, 브라우저를 열고 192.168.4.1로 이동하세요.
 
 {% roboWikiPicture {src:"docs/altruist/on_board.png", alt:"이타주의자-센서"} %}{% endroboWikiPicture %}
@@ -50,9 +50,11 @@ contributors: [tubleronchik]
 {% roboWikiPicture {src:"docs/altruist/sensor_setup.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
 
 6) **Altruist "Robonomics 주소" 복사**:
-- 페이지 상단에서 찾을 수 있습니다. 마지막 단계에 사용할 수 있도록 저장하세요.
+- 페이지 상단에서 찾을 수 있습니다. 마지막 단계에서 사용하기 위해 저장하세요.
 
-7) 페이지 하단의 "**구성 저장 및 재시작**"을 클릭하세요. 보드는 재부팅되고 지정된 Wi-Fi 네트워크에 연결됩니다.
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address"} %}{% endroboWikiPicture %}
+
+7) 페이지 하단의 "**구성 저장 및 재시작**"을 클릭하세요. 보드가 재부팅되고 지정된 Wi-Fi 네트워크에 연결됩니다.
 
 ## Altruist 활성화
 설정 과정의 마지막 단계는 **Altruist 주소**를 **Robonomics 구독**에 추가하는 것입니다.
@@ -63,23 +65,23 @@ contributors: [tubleronchik]
 
 3) "**사용자 추가**" 필드에 이전에 복사한 **Altruist Robonomics 주소**를 붙여넣습니다.
 
-{% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"사용자 추가"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"add user"} %}{% endroboWikiPicture %}
 
-4) **플러스 (+) 버튼**을 클릭하고 메시지를 서명합니다.
+4) **플러스 (+) 버튼**을 클릭하고 메시지에 서명합니다.
 
 5) 작업이 완료될 때까지 기다립니다.
 
-이제 설정이 완료되었습니다! 🎉
+이제 완료되었습니다! 설정이이제 완료되었습니다. 🎉
 
-이제 [Robonomics Sensors Social](https://sensors.social/#)에서 Altruist를 찾을 수 있습니다.지도. 🚀
+이제 [Robonomics Sensors Social](https://sensors.social/#) 지도에서 Altruist를 찾을 수 있습니다. 🚀
 
-{% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"센서 지도"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"sensor map"} %}{% endroboWikiPicture %}
 
-## 홈 어시스턴트
+## Home Assistant
 
-**Altruist**를 **홈 어시스턴트**에 추가하는 방법은 두 가지가 있습니다:
+**Altruist**를 **Home Assistant**에 추가하는 방법은 두 가지가 있습니다:
 
-### 옵션 1: HACS (추천)
+### 옵션 1: HACS (권장)
 
 **Altruist**를 추가하는 가장 쉬운 방법은 **HACS**를 통해서입니다. 간단한 설정 가이드는 [여기](https://hacs.xyz/docs/use/)에서 찾을 수 있습니다.
 
@@ -99,7 +101,7 @@ https://github.com/airalab/altruist-homeassistant-integration
 
 5) **Altruist Sensor** 통합을 검색합니다.
 
-6) **다운로드** 버튼을 클릭한 후, 통합이 설치되면 **홈 어시스턴트**를 다시 시작합니다.
+6) **다운로드** 버튼을 클릭한 후, 통합이 설치되면 **Home Assistant**를 다시 시작합니다.
 
 {% roboWikiPicture {src:"docs/altruist/integration.jpg", alt:"altruist-hacs"} %}{% endroboWikiPicture %}
 
@@ -111,11 +113,11 @@ https://github.com/airalab/altruist-homeassistant-integration
 
 ```shell
   git clone https://github.com/airalab/altruist-homeassistant-integration.git
-``` 
+```
 
-{% endcodeHelper %}}
+{% endcodeHelper %}
 
-2) 이미 사용자 정의 통합이 있는 경우 `altruist` 폴더를 `custom_components` 디렉토리로 이동합니다:
+2) 이미 사용자 정의 통합이 있는 경우, `altruist` 폴더를 `custom_components` 디렉토리로 이동하세요:
 
 {% codeHelper { copy: true}%}
 
@@ -126,7 +128,7 @@ mv custom_components/altruist ~/.homeassistant/custom_components/
 
 {% endcodeHelper %}
 
-3) 사용자 정의 통합이 **없는** 경우 전체 custom_components 디렉토리를 이동합니다:
+3) 사용자 정의 통합이 **없는** 경우, 전체 custom_components 디렉토리를 이동하세요:
 
 {% codeHelper { copy: true}%}
 
