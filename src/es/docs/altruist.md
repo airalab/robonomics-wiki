@@ -11,13 +11,13 @@ contributors: [tubleronchik]
 
 {% roboWikiNote {type: "okay"} %}Para completar este paso, asegúrate de tener al menos 2-3 tokens XRT en tu cuenta de `Robonomics Polkadot`.{% endroboWikiNote %}
 
-1) Navega a la [página de suscripción](https://robonomics.app/#/rws-buy) de la dApp de Robonomics. 
+1) Navega a la [página de suscripción](https://robonomics.app/#/rws-buy) de la dApp de Robonomics.
 2) Haz clic en **Cuenta** y conecta tu billetera. Se mostrarán la dirección de tu cuenta y el saldo.
 Si no tienes una cuenta, sigue [esta guía](https://wiki.robonomics.network/docs/create-account-in-dapp/) para crear una.
 
 {% roboWikiPicture {src:"docs/altruist/altruist_syb_buy.jpg", alt:"página de suscripción"} %}{% endroboWikiPicture %}
 
-3) Haz clic en `COMPRAR SUSCRIPCIÓN` y firma la transacción. **Espera a que se complete el proceso de activación**. 
+3) Haz clic en `COMPRAR SUSCRIPCIÓN` y firma la transacción. **Espera a que se complete el proceso de activación**.
 4) Una vez activado, serás redirigido a la **página de configuración**, donde podrás ver el nombre de tu suscripción y la fecha de expiración.
 
 {% roboWikiPicture {src:"docs/altruist/altruist_setup_page.jpg", alt:"página de configuración de suscripción"} %}{% endroboWikiPicture %}
@@ -39,7 +39,7 @@ Si no tienes una cuenta, sigue [esta guía](https://wiki.robonomics.network/docs
 - Introduce la contraseña en el campo "WI-FI SETTINGS".
 
 4) **Introduce tus detalles de Robonomics**:
-- Pega la Dirección del Propietario RWS que copiaste anteriormente en el campo designado.
+- Pega la Dirección del Propietario de RWS que copiaste anteriormente en el campo designado.
 
 5) **Establece la ubicación del sensor**:
 - Introduce las coordenadas del sitio de instalación del sensor.
@@ -52,7 +52,7 @@ Si no tienes una cuenta, sigue [esta guía](https://wiki.robonomics.network/docs
 6) **Copia la "Dirección Robonomics" de Altruist**:
 - La encontrarás en la parte superior de la página. Guárdala para el paso final.
 
-{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"dirección altruist"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address"} %}{% endroboWikiPicture %}
 
 7) Haz clic en "**Guardar configuración y reiniciar**" en la parte inferior de la página. La placa se reiniciará y se conectará a la red Wi-Fi especificada.
 
@@ -63,9 +63,9 @@ El paso final en el proceso de configuración es agregar la **dirección de Altr
 
 2) Desplázate hacia abajo hasta la sección "**Usuarios en suscripción**".
 
-3) En el campo "**Agregar un usuario**", pega la **dirección Robonomics de Altruist** que copiaste anteriormente.
+3) En el campo "**Agregar un usuario**", pega la **dirección de Robonomics de Altruist** que copiaste anteriormente.
 
-{% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"agregar usuario"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"add user"} %}{% endroboWikiPicture %}
 
 4) Haz clic en el **botón más (+)** y firma el mensaje.
 

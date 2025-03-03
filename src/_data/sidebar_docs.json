@@ -205,7 +205,16 @@
       },
       {
         "title": "Altruist",
-        "url": "/docs/altruist"
+        "children": [
+          {
+            "title": "Altruist",
+            "url": "/docs/altruist"
+          },
+          {
+            "title": "Renew Subscription",
+            "url": "/docs/renew-subscription"
+          }
+        ]
       }
     ]
   },

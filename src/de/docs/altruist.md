@@ -39,7 +39,7 @@ Wenn Sie kein Konto haben, folgen Sie [dieser Anleitung](https://wiki.robonomics
 - Geben Sie das Passwort im Feld "WI-FI SETTINGS" ein.
 
 4) **Geben Sie Ihre Robonomics-Daten ein**:
-- Fügen Sie die RWS-Besitzeradresse, die Sie zuvor kopiert haben, in das dafür vorgesehene Feld ein.
+- Fügen Sie die RWS-Eigentümeradresse, die Sie zuvor kopiert haben, in das dafür vorgesehene Feld ein.
 
 5) **Legen Sie den Sensorstandort fest**:
 - Geben Sie die Koordinaten des Installationsortes des Sensors ein.
@@ -49,7 +49,7 @@ Wenn Sie kein Konto haben, folgen Sie [dieser Anleitung](https://wiki.robonomics
 
 {% roboWikiPicture {src:"docs/altruist/sensor_setup.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
 
-6) **Kopieren Sie die Altruist "Robonomics Adresse"**:
+6) **Kopieren Sie die Altruist "Robonomics-Adresse"**:
 - Sie finden sie oben auf der Seite. Speichern Sie sie für den letzten Schritt.
 
 {% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address"} %}{% endroboWikiPicture %}
@@ -57,21 +57,21 @@ Wenn Sie kein Konto haben, folgen Sie [dieser Anleitung](https://wiki.robonomics
 7) Klicken Sie unten auf der Seite auf "**Konfiguration speichern und neu starten**". Das Board wird neu gestartet und verbindet sich mit dem angegebenen Wi-Fi-Netzwerk.
 
 ## Altruist aktivieren
-Der letzte Schritt im Einrichtungsprozess besteht darin, die **Altruist-Adresse** zu Ihrem **Robonomics-Abonnement** hinzuzufügen.
+Der letzte Schritt im Einrichtungsprozess ist das Hinzufügen der **Altruist-Adresse** zu Ihrem **Robonomics-Abonnement**.
 
-1) Gehen Sie zurück zur [Einrichtungsseite](https://robonomics.app/#/rws-setup).
+1) Gehen Sie zurück zur [Setup-Seite](https://robonomics.app/#/rws-setup).
 
 2) Scrollen Sie nach unten zum Abschnitt "**Benutzer im Abonnement**".
 
-3) Fügen Sie im Feld "**Einen Benutzer hinzufügen**" die **Altruist Robonomics Adresse** ein, die Sie zuvor kopiert haben.
+3) Fügen Sie im Feld "**Einen Benutzer hinzufügen**" die **Altruist Robonomics-Adresse** ein, die Sie zuvor kopiert haben.
 
 {% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"add user"} %}{% endroboWikiPicture %}
 
-4) Klicken Sie auf die **Plus (+) Taste** und signieren Sie die Nachricht.
+4) Klicken Sie auf die **Plus (+) Schaltfläche** und signieren Sie die Nachricht.
 
 5) Warten Sie, bis der Vorgang abgeschlossen ist.
 
-Das war's! Ihre Einrichtungist jetzt abgeschlossen. 🎉
+Das war's! Ihre Einrichtung ist jetzt abgeschlossen. 🎉
 
 Sie können Ihren Altruist jetzt auf der [Robonomics Sensors Social](https://sensors.social/#) Karte finden. 🚀
 
@@ -83,7 +83,7 @@ Es gibt zwei Möglichkeiten, **Altruist** zu **Home Assistant** hinzuzufügen:
 
 ### Option 1: HACS (Empfohlen)
 
-Der einfachste Weg, **Altruist** hinzuzufügen, ist über **HACS**. Eine kurze Installationsanleitung finden Sie [hier](https://hacs.xyz/docs/use/).
+Der einfachste Weg, **Altruist** hinzuzufügen, ist über **HACS**. Eine kurze Anleitung zur Einrichtung finden Sie [hier](https://hacs.xyz/docs/use/).
 
 **Schritte**:
 1) Sobald HACS installiert ist, öffnen Sie es.
@@ -107,7 +107,7 @@ https://github.com/airalab/altruist-homeassistant-integration
 
 ### Option 2: Manuelle Installation
 
-1) Klonen Sie das Projekt-Repository unter dem `homeassistant`-Benutzer:
+1) Unter dem `homeassistant`-Benutzer das Projekt-Repository klonen:
 
 {% codeHelper { copy: true}%}
 
@@ -117,7 +117,7 @@ https://github.com/airalab/altruist-homeassistant-integration
 
 {% endcodeHelper %}
 
-2) Wenn Sie bereits benutzerdefinierte Integrationen haben, verschieben Sie den `altruist` Ordner in Ihr `custom_components` Verzeichnis:
+2) Wenn Sie bereits benutzerdefinierte Integrationen haben, verschieben Sie den Ordner `altruist` in Ihr Verzeichnis `custom_components`:
 
 {% codeHelper { copy: true}%}
 
@@ -128,7 +128,7 @@ mv custom_components/altruist ~/.homeassistant/custom_components/
 
 {% endcodeHelper %}
 
-3) Wenn Sie **keine** benutzerdefinierten Integrationen haben, verschieben Sie das gesamte custom_components Verzeichnis:
+3) Wenn Sie **keine** benutzerdefinierten Integrationen haben, verschieben Sie das gesamte Verzeichnis custom_components:
 
 {% codeHelper { copy: true}%}
 

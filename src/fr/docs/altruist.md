@@ -1,9 +1,9 @@
 ---
-title: Configuration de l'Altruist
+title: Configuration d'Altruist
 contributors: [tubleronchik]
 ---
 
-**Ce guide vous guide à travers la configuration et l'activation d'un capteur Altruist Outdoor. Vous connecterez le capteur au Wi-Fi, configurerez son emplacement et activerez un abonnement en utilisant des jetons XRT. De plus, des instructions pour intégrer le capteur avec Home Assistant via HACS ou une installation manuelle sont fournies.**
+**Ce guide vous guide à travers la configuration et l'activation d'un capteur Altruist Outdoor. Vous connecterez le capteur au Wi-Fi, configurerez son emplacement et activerez un abonnement à l'aide de jetons XRT. De plus, des instructions pour intégrer le capteur avec Home Assistant via HACS ou une installation manuelle sont fournies.**
 
 {% roboWikiNote {type: "warning"}%} Tous les appareils de Robonomics peuvent être achetés sur le [site officiel](https://robonomics.network/devices/).{% endroboWikiNote %}
 
@@ -26,26 +26,26 @@ Si vous n'avez pas de compte, suivez [ce guide](https://wiki.robonomics.network/
 
 ## Configuration du capteur
 
-{% roboWikiNote {type: "warning", title: "INFO"}%} Le capteur ne peut être connecté qu'à un réseau Wi-Fi 2,4 GHz.{% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title: "INFO"}%} Le capteur ne peut être connecté qu'à un réseau Wi-Fi de 2,4 GHz.{% endroboWikiNote %}
 
 1) **Branchez le capteur** à une prise électrique.
-2) La carte créera un réseau Wi-Fi nommé Altruist-xxxxxxxxx. Connectez-vous à celui-ci depuis votre téléphone ou votre ordinateur. Vous devriez être automatiquement invité à ouvrir la fenêtre d'autorisation. 
+2) La carte créera un réseau Wi-Fi nommé Altruist-xxxxxxxxx. Connectez-vous à celui-ci depuis votre téléphone ou votre ordinateur. Vous devriez être automatiquement invité à ouvrir la fenêtre d'autorisation.
 - Si ce n'est pas le cas, ouvrez un navigateur et allez à 192.168.4.1.
 
-{% roboWikiPicture {src:"docs/altruist/on_board.png", alt:"altruist-capteur"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/on_board.png", alt:"capteur-altruiste"} %}{% endroboWikiPicture %}
 
 3) **Configurez les paramètres Wi-Fi** :
 - Sélectionnez votre réseau Wi-Fi dans la liste ou entrez-le manuellement s'il n'apparaît pas.
 - Entrez le mot de passe dans le champ "PARAMÈTRES WI-FI".
 
 4) **Entrez vos détails Robonomics** :
-- Collez l'adresse du propriétaire RWS que vous avez copiée précédemment dans le champ désigné. 
+- Collez l'adresse du propriétaire RWS que vous avez copiée précédemment dans le champ désigné.
 
 5) **Définissez l'emplacement du capteur** :
 - Entrez les coordonnées du site d'installation du capteur.
-- Vous pouvez trouver les coordonnées en utilisant des cartes en ligne ou convertir une adresse en latitude/longitude en utilisant [ce lien.](https://www.latlong.net/convert-address-to-lat-long.html)
+- Vous pouvez trouver les coordonnées en utilisant des cartes en ligne ou convertir une adresse en latitude/longitude en utilisant [ce lien.](https://www.latlong.net/convert-address-to-lat)-long.html)
 
-{% roboWikiNote {type: "warning", title: "AVERTISSEMENT"}%}Les coordonnées du capteur seront ensuite affichées sur une carte accessible au public. Si vous ne souhaitez pas montrer vos informations privées, indiquez des coordonnées proches, mais pas exactes.{% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title: "AVERTISSEMENT"}%}Les coordonnées du capteur seront ensuite affichées sur une carte accessible au public. Si vous ne souhaitez pas montrer vos informations privées, écrivez des coordonnées proches, mais pas exactes.{% endroboWikiNote %}
 
 {% roboWikiPicture {src:"docs/altruist/sensor_setup.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
 
@@ -79,7 +79,7 @@ Vous pouvez maintenant trouver votre Altruiste sur la carte [Robonomics Sensors 
 
 ## Home Assistant
 
-Il existe deux façons d'ajouter **Altruiste** à **Home Assistant** :
+Il y a deux façons d'ajouter **Altruiste** à **Home Assistant** :
 
 ### Option 1 : HACS (Recommandé)
 
@@ -128,7 +128,7 @@ mv custom_components/altruist ~/.homeassistant/custom_components/
 
 {% endcodeHelper %}
 
-3) Si vous **n'avez pas** d'intégrations personnalisées, déplacez l'intégralité du répertoire custom_components :
+3) Si vous **n'avez pas** d'intégrations personnalisées, déplacez l'ensemble du répertoire custom_components :
 
 {% codeHelper { copy: true}%}
 

@@ -5,15 +5,15 @@ contributors: [tubleronchik]
 
 **このガイドでは、アルトルイストアウトドアセンサーの設定とアクティベーションの手順を説明します。センサーをWi-Fiに接続し、その位置を設定し、XRTトークンを使用してサブスクリプションをアクティベートします。さらに、HACSまたは手動インストールを介してHome Assistantとセンサーを統合する手順も提供されています。**
 
-{% roboWikiNote {type: "warning"}%} Robonomicsのすべてのデバイスは公式[ウェブサイト](https://robonomics.network/devices/)で購入できます。{% endroboWikiNote %}
+{% roboWikiNote {type: "warning"}%} Robonomicsのすべてのデバイスは、公式[ウェブサイト](https://robonomics.network/devices/)で購入できます。{% endroboWikiNote %}
 
 ## Robonomicsサブスクリプションのアクティベート
 
-{% roboWikiNote {type: "okay"} %}このステップを完了するには、`Robonomics Polkadot`アカウントに少なくとも2〜3 XRTトークンがあることを確認してください。{% endroboWikiNote %}
+{% roboWikiNote {type: "okay"} %}このステップを完了するには、`Robonomics Polkadot`アカウントに少なくとも2〜3 XRTトークンが必要です。{% endroboWikiNote %}
 
 1) Robonomics dAppの[サブスクリプションページ](https://robonomics.app/#/rws-buy)に移動します。
 2) **アカウント**をクリックしてウォレットを接続します。アカウントアドレスと残高が表示されます。
-アカウントを持っていない場合は、[このガイド](https://wiki.robonomics.network/docs/create-account-in-dapp/)に従って作成してください。
+アカウントをお持ちでない場合は、[このガイド](https://wiki.robonomics.network/docs/create-account-in-dapp/)に従って作成してください。
 
 {% roboWikiPicture {src:"docs/altruist/altruist_syb_buy.jpg", alt:"サブスクリプションページ"} %}{% endroboWikiPicture %}
 
@@ -45,11 +45,11 @@ contributors: [tubleronchik]
 - センサーの設置場所の座標を入力してください。
 - オンラインマップを使用して座標を見つけるか、[このリンク](https://www.latlong.net/convert-address-to-lat)を使用して住所を緯度/経度に変換できます。-long.html)
 
-{% roboWikiNote {type: "warning", title: "警告"}%}センサーの座標は、公開されている地図上に表示されます。プライベート情報を表示したくない場合は、正確ではなく近い座標を記入してください。{% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title: "警告"}%}センサーの座標は、公開されている地図上に表示されます。プライベート情報を表示したくない場合は、正確ではないが近い座標を記入してください。{% endroboWikiNote %}
 
 {% roboWikiPicture {src:"docs/altruist/sensor_setup.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
 
-6) **Altruistの「Robonomicsアドレス」をコピー**:
+6) **Altruistの「Robonomicsアドレス」をコピーする**:
 - ページの上部に表示されます。最終ステップのために保存してください。
 
 {% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address"} %}{% endroboWikiPicture %}
@@ -143,9 +143,9 @@ mv custom_components/ ~/.homeassistant/
 
 インストールとHome Assistantの再起動後、ネットワーク上のAltruistが自動的に検出されます。
 
-1) **設定 → デバイスとサービス** に移動します。
+1) **設定 → デバイス & サービス** に移動します。
 
-2) **Altruistセンサー** を追加します。
+2) **Altruist センサー** を追加します。
 
 {% roboWikiPicture {src:"docs/altruist/add_altruist.jpg", alt:"discover altruist"} %}{% endroboWikiPicture %}
 
