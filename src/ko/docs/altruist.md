@@ -29,20 +29,20 @@ contributors: [tubleronchik]
 {% roboWikiNote {type: "warning", title: "INFO"}%} 센서는 2.4GHz Wi-Fi 네트워크에만 연결할 수 있습니다.{% endroboWikiNote %}
 
 1) **센서를 전원 소켓에 연결**합니다.
-2) 보드는 Altruist-xxxxxxxxx라는 Wi-Fi 네트워크를 생성합니다. 휴대폰이나 컴퓨터에서 연결하세요. 인증 창이 자동으로 열리도록 요청받을 것입니다.
+2) 보드는 Altruist-xxxxxxxxx라는 Wi-Fi 네트워크를 생성합니다. 휴대폰이나 컴퓨터에서 연결하세요. 인증 창이 자동으로 열리도록 요청됩니다.
 - 그렇지 않은 경우, 브라우저를 열고 192.168.4.1로 이동하세요.
 
-{% roboWikiPicture {src:"docs/altruist/on_board.png", alt:"이타주의자-센서"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/on_board.png", alt:"altruist-센서"} %}{% endroboWikiPicture %}
 
 3) **Wi-Fi 설정 구성**:
 - 목록에서 Wi-Fi 네트워크를 선택하거나 나타나지 않으면 수동으로 입력하세요.
 - "WI-FI SETTINGS" 필드에 비밀번호를 입력하세요.
 
-4) **로보노믹스 세부 정보 입력**:
+4) **Robonomics 세부 정보 입력**:
 - 이전에 복사한 RWS 소유자 주소를 지정된 필드에 붙여넣으세요.
 
 5) **센서 위치 설정**:
-- 센서 설치 사이트의 좌표를 입력하세요.
+- 센서 설치 위치의 좌표를 입력하세요.
 - 온라인 지도를 사용하여 좌표를 찾거나 [이 링크](https://www.latlong.net/convert-address-to-lat)를 사용하여 주소를 위도/경도로 변환할 수 있습니다.-long.html)
 
 {% roboWikiNote {type: "warning", title: "경고"}%}센서 좌표는 공개적으로 사용 가능한 지도에 표시됩니다. 개인 정보를 표시하고 싶지 않다면 정확하지 않은 좌표를 작성하세요.{% endroboWikiNote %}
@@ -50,7 +50,7 @@ contributors: [tubleronchik]
 {% roboWikiPicture {src:"docs/altruist/sensor_setup.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
 
 6) **Altruist "Robonomics 주소" 복사**:
-- 페이지 상단에서 찾을 수 있습니다. 마지막 단계에서 사용하기 위해 저장하세요.
+- 페이지 상단에서 찾을 수 있습니다. 마지막 단계에 사용할 수 있도록 저장하세요.
 
 {% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address"} %}{% endroboWikiPicture %}
 
@@ -67,7 +67,7 @@ contributors: [tubleronchik]
 
 {% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"add user"} %}{% endroboWikiPicture %}
 
-4) **플러스 (+) 버튼**을 클릭하고 메시지에 서명합니다.
+4) **플러스 (+) 버튼**을 클릭하고 메시지를 서명합니다.
 
 5) 작업이 완료될 때까지 기다립니다.
 
@@ -143,10 +143,10 @@ mv custom_components/ ~/.homeassistant/
 
 설치 및 Home Assistant를 재시작한 후, 통합은 네트워크에서 Altruist를 자동으로 감지합니다.
 
-1) **설정 → 장치 및 서비스**로 이동합니다.
+1) **설정 → 장치 및 서비스**로 이동하세요.
 
-2) **Altruist 센서**를 추가합니다.
+2) **Altruist 센서**를 추가하세요.
 
 {% roboWikiPicture {src:"docs/altruist/add_altruist.jpg", alt:"discover altruist"} %}{% endroboWikiPicture %}
 
-이제 완료되었습니다! 🚀 Altruist 센서가 Home Assistant와 통합되었습니다.
+이제 완료입니다! 🚀 Altruist 센서가 Home Assistant와 통합되었습니다.

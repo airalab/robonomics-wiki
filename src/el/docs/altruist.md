@@ -11,7 +11,7 @@ contributors: [tubleronchik]
 
 {% roboWikiNote {type: "okay"} %}Για να ολοκληρώσετε αυτό το βήμα, βεβαιωθείτε ότι έχετε τουλάχιστον 2-3 XRT tokens στον λογαριασμό σας `Robonomics Polkadot`.{% endroboWikiNote %}
 
-1) Μεταβείτε στη σελίδα [συνδρομής](https://robonomics.app/#/rws-buy) του Robonomics dApp. 
+1) Μεταβείτε στη [σελίδα συνδρομής](https://robonomics.app/#/rws-buy) του Robonomics dApp. 
 2) Κάντε κλικ στο **Λογαριασμός** και συνδέστε το πορτοφόλι σας. Η διεύθυνση και το υπόλοιπο του λογαριασμού σας θα εμφανιστούν.
 Αν δεν έχετε λογαριασμό, ακολουθήστε [αυτόν τον οδηγό](https://wiki.robonomics.network/docs/create-account-in-dapp/) για να δημιουργήσετε έναν.
 
@@ -59,7 +59,7 @@ contributors: [tubleronchik]
 ## Ενεργοποίηση Altruist
 Το τελικό βήμα στη διαδικασία ρύθμισης είναι η προσθήκη της **διεύθυνσης Altruist** στη **Συνδρομή Robonomics** σας.
 
-1) Επιστρέψτε στη [σελίδα Ρύθμισης](https://robonomics.app/#/rws-setup).
+1) Επιστρέψτε στη [Σελίδα ρύθμισης](https://robonomics.app/#/rws-setup).
 
 2) Κάντε κύλιση προς τα κάτω στην ενότητα "**Χρήστες στη συνδρομή**".
 
@@ -71,7 +71,7 @@ contributors: [tubleronchik]
 
 5) Περιμένετε να ολοκληρωθεί η λειτουργία.
 
-Αυτό είναι! Η ρύθμισή σας ολοκληρώθηκε. 🎉
+Αυτό ήταν! Η ρύθμισή σας ολοκληρώθηκε. 🎉
 
 Μπορείτε τώρα να βρείτε τον Altruist σας στον χάρτη [Robonomics Sensors Social](https://sensors.social/#). 🚀
 

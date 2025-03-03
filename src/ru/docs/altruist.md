@@ -9,7 +9,7 @@ contributors: [tubleronchik]
 
 ## Активация подписки Robonomics
 
-{% roboWikiNote {type: "okay"} %}Для выполнения этого шага убедитесь, что у вас есть как минимум 2-3 XRT токена на вашем `Robonomics Polkadot` аккаунте.{% endroboWikiNote %}
+{% roboWikiNote {type: "okay"} %}Для выполнения этого шага убедитесь, что у вас есть как минимум 2-3 XRT токена на вашем аккаунте `Robonomics Polkadot`.{% endroboWikiNote %}
 
 1) Перейдите на [страницу подписки](https://robonomics.app/#/rws-buy) Robonomics dApp. 
 2) Нажмите на **Аккаунт** и подключите ваш кошелек. Ваш адрес аккаунта и баланс будут отображены.
@@ -81,7 +81,7 @@ contributors: [tubleronchik]
 
 Есть два способа добавить **Altruist** в **Home Assistant**:
 
-### Вариант 1: HACS (рекомендуется)
+### Вариант 1: HACS (Рекомендуется)
 
 Самый простой способ добавить **Altruist** — через **HACS**. Краткое руководство по настройке можно найти [здесь](https://hacs.xyz/docs/use/)
 
@@ -143,7 +143,7 @@ mv custom_components/ ~/.homeassistant/
 
 После установки и перезапуска Home Assistant интеграция автоматически обнаружит Altruist в вашей сети.
 
-1) Перейдите в **Настройки → Устройства и Сервисы**.
+1) Перейдите в **Настройки → Устройства и службы**.
 
 2) Добавьте **Датчик Altruist**.
 

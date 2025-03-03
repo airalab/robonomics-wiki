@@ -17,7 +17,7 @@ contributors: [tubleronchik]
 
 {% roboWikiPicture {src:"docs/altruist/altruist_syb_buy.jpg", alt:"صفحة الاشتراك"} %}{% endroboWikiPicture %}
 
-3) انقر على `BUY SUBSCRIPTION` ووقع المعاملة. **انتظر حتى يكتمل عملية التفعيل**.
+3) انقر على `شراء الاشتراك` ووقع المعاملة. **انتظر حتى تكتمل عملية التفعيل**.
 4) بمجرد التفعيل، سيتم توجيهك إلى **صفحة الإعداد**، حيث يمكنك رؤية اسم اشتراكك وتاريخ انتهاء صلاحيته.
 
 {% roboWikiPicture {src:"docs/altruist/altruist_setup_page.jpg", alt:"صفحة إعداد الاشتراك"} %}{% endroboWikiPicture %}
@@ -26,13 +26,13 @@ contributors: [tubleronchik]
 
 ## إعداد المستشعر
 
-{% roboWikiNote {type: "warning", title: "معلومات"}%} يمكن توصيل المستشعر فقط بشبكة Wi-Fi بتردد 2.4GHz.{% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title: "معلومة"}%} يمكن توصيل المستشعر فقط بشبكة Wi-Fi بتردد 2.4GHz.{% endroboWikiNote %}
 
 1) **قم بتوصيل المستشعر** بمقبس الطاقة.
 2) ستقوم اللوحة بإنشاء شبكة Wi-Fi باسم Altruist-xxxxxxxxx. اتصل بها من هاتفك أو جهاز الكمبيوتر الخاص بك. يجب أن يتم توجيهك تلقائيًا لفتح نافذة التفويض.
-- إذا لم يحدث ذلك، افتح متصفحًا وانتقل إلى 192.168.4.1.
+- إذا لم يحدث ذلك، افتح المتصفح وانتقل إلى 192.168.4.1.
 
-{% roboWikiPicture {src:"docs/altruist/on_board.png", alt:"مستشعر-الخير"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/on_board.png", alt:"مستشعر-المحسن"} %}{% endroboWikiPicture %}
 
 3) **قم بتكوين إعدادات Wi-Fi**:
 - اختر شبكتك من القائمة أو أدخلها يدويًا إذا لم تظهر.
@@ -52,7 +52,7 @@ contributors: [tubleronchik]
 6) **انسخ "عنوان روبونوميكس" الخاص بـ Altruist**:
 - ستجده في أعلى الصفحة. احفظه للخطوة النهائية.
 
-{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"عنوان altruist"} %}{% endroboWikiPicture %}
 
 7) انقر على "**حفظ التكوين وإعادة التشغيل**" في أسفل الصفحة. ستعيد اللوحة التشغيل وتتصل بشبكة Wi-Fi المحددة.
 
@@ -65,7 +65,7 @@ contributors: [tubleronchik]
 
 3) في حقل "**إضافة مستخدم**"، الصق **عنوان روبونوميكس Altruist** الذي نسخته سابقًا.
 
-{% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"add user"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"إضافة مستخدم"} %}{% endroboWikiPicture %}
 
 4) انقر على **زر الزائد (+)** ووقع الرسالة.
 
@@ -101,7 +101,7 @@ https://github.com/airalab/altruist-homeassistant-integration
 
 5) ابحث عن تكامل **مستشعر Altruist**.
 
-6) انقر على زر **تنزيل**، ثم أعد تشغيل **مساعد المنزل** بمجرد تثبيت التكامل.
+6) انقر على زر **التنزيل**، ثم أعد تشغيل **مساعد المنزل** بمجرد تثبيت التكامل.
 
 {% roboWikiPicture {src:"docs/altruist/integration.jpg", alt:"altruist-hacs"} %}{% endroboWikiPicture %}
 
@@ -117,7 +117,7 @@ https://github.com/airalab/altruist-homeassistant-integration
 
 {% endcodeHelper %}
 
-2) إذا كان لديك أي تكاملات مخصصة بالفعل، انقل مجلد `altruist` إلى دليل `custom_components` الخاص بك:
+2) إذا كان لديك أي تكاملات مخصصة بالفعل، قم بنقل مجلد `altruist` إلى دليل `custom_components` الخاص بك:
 
 {% codeHelper { copy: true}%}
 
@@ -128,7 +128,7 @@ mv custom_components/altruist ~/.homeassistant/custom_components/
 
 {% endcodeHelper %}
 
-3) إذا كنت **لا** تملك أي تكاملات مخصصة، انقل دليل custom_components بالكامل:
+3) إذا كنت **لا** تملك أي تكاملات مخصصة، قم بنقل دليل custom_components بالكامل:
 
 {% codeHelper { copy: true}%}
 
@@ -141,7 +141,7 @@ mv custom_components/ ~/.homeassistant/
 
 ## التكوين
 
-بعد التثبيت وإعادة تشغيل Home Assistant، سيكتشف التكامل تلقائيًا Altruist على شبكتك.
+بعد التثبيت وإعادة تشغيل Home Assistant، سيقوم التكامل بالكشف تلقائيًا عن Altruist على شبكتك.
 
 1) اذهب إلى **الإعدادات → الأجهزة والخدمات**.
 
