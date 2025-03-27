@@ -3,9 +3,9 @@ title: アルトルイストのセットアップ
 contributors: [tubleronchik]
 ---
 
-**このガイドでは、アルトルイストアウトドアセンサーの設定とアクティベーションの手順を説明します。センサーをWi-Fiに接続し、その位置を設定し、XRTトークンを使用してサブスクリプションをアクティベートします。さらに、HACSまたは手動インストールを介してHome Assistantとセンサーを統合する手順も提供されています。**
+**このガイドでは、Altruist Outdoorセンサーのセットアップとアクティベーションの手順を説明します。センサーをWi-Fiに接続し、位置を設定し、XRTトークンを使用してサブスクリプションをアクティベートします。さらに、HACSまたは手動インストールを介してHome Assistantとセンサーを統合する手順も提供されています。**
 
-{% roboWikiNote {type: "warning"}%} Robonomicsのすべてのデバイスは、公式[ウェブサイト](https://robonomics.network/devices/)で購入できます。{% endroboWikiNote %}
+{% roboWikiNote {type: "warning"}%} Robonomicsのすべてのデバイスは、公式の[ウェブサイト](https://robonomics.network/devices/)で購入できます。{% endroboWikiNote %}
 
 ## Robonomicsサブスクリプションのアクティベート
 
@@ -29,32 +29,41 @@ contributors: [tubleronchik]
 {% roboWikiNote {type: "warning", title: "INFO"}%} センサーは2.4GHzのWi-Fiネットワークにのみ接続できます。{% endroboWikiNote %}
 
 1) **センサーを電源ソケットに接続する**。
-2) ボードはAltruist-xxxxxxxxxという名前のWi-Fiネットワークを作成します。スマートフォンまたはコンピュータから接続してください。自動的に認証ウィンドウが開くはずです。
-- 開かない場合は、ブラウザを開いて192.168.4.1にアクセスしてください。
+2) ボードはAltruist-xxxxxxxxxという名前のWi-Fiネットワークを作成します。携帯電話またはコンピュータから接続してください。自動的に認証ウィンドウが開くように促されます。
+- そうでない場合は、ブラウザを開いて192.168.4.1にアクセスしてください。
 
-{% roboWikiPicture {src:"docs/altruist/on_board.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/networks.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
 
 3) **Wi-Fi設定を構成する**:
 - リストからWi-Fiネットワークを選択するか、表示されない場合は手動で入力してください。
 - 「WI-FI SETTINGS」フィールドにパスワードを入力してください。
+- 同じネットワークに複数のAltruistデバイスがある場合は、ローカルホスト名を変更してください。WiFiを設定した後、このホスト名を使用してセンサーに接続できます。
 
-4) **Robonomicsの詳細を入力する**:
-- 先ほどコピーしたRWSオーナーアドレスを指定されたフィールドに貼り付けてください。
+{% roboWikiPicture {src:"docs/altruist/wifi_creds.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
 
-5) **センサーの位置を設定する**:
-- センサーの設置場所の座標を入力してください。
-- オンラインマップを使用して座標を見つけるか、[このリンク](https://www.latlong.net/convert-address-to-lat)を使用して住所を緯度/経度に変換できます。-long.html)
+4) **設定を保存する**
+- クリックして`設定を保存して再起動`ボタンを押し、センサーがWiFiに接続されるのを待ちます。接続されると、新しいIPアドレスが表示されますので、それをコピーしてください。これは、セットアップ後にセンサーに接続するための代替方法です。
 
-{% roboWikiNote {type: "warning", title: "警告"}%}センサーの座標は、公開されている地図上に表示されます。プライベート情報を表示したくない場合は、正確ではないが近い座標を記入してください。{% endroboWikiNote %}
+{% roboWikiPicture {src:"docs/altruist/connected.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
 
-{% roboWikiPicture {src:"docs/altruist/sensor_setup.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
+5) **Robonomicsの詳細を入力する**:
+- http://altruist.local でAltruistのウェブインターフェースを開きます（カスタムのローカルホスト名を使用している場合は、`.local`を付けてください）。次に、`設定`ページに移動します。
+- `Robonomics`セクションで、先ほどコピーしたRWSオーナーアドレスを指定されたフィールドに貼り付けます。
 
-6) **Altruistの「Robonomicsアドレス」をコピーする**:
-- ページの上部に表示されます。最終ステップのために保存してください。
+6) **センサーの位置を設定する**:
+- `GPS & Temperature Correction`セクションで、センサーの設置場所の座標を入力します。
+- オンラインマップを使用して座標を見つけるか、[このリンク](https://www.latlong.net/convert-address-to-lat-long.html)を使用して住所を緯度/経度に変換できます。
+
+{% roboWikiNote {type: "warning", title: "警告"}%}センサーの座標は公開されている地図に表示されます。プライベート情報を表示したくない場合は、正確ではないが近い座標を記入してください。{% endroboWikiNote %}
+
+{% roboWikiPicture {src:"docs/altruist/robo-gps.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
+
+7) **Altruistの「Robonomicsアドレス」をコピーする**:
+- ページの上部に表示されます。それを保存しておいてください。最終ステップ。
 
 {% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address"} %}{% endroboWikiPicture %}
 
-7) ページの下部にある「**設定を保存して再起動**」をクリックします。ボードは再起動し、指定されたWi-Fiネットワークに接続します。
+8) ページの下部にある「**設定を保存して再起動**」をクリックします。ボードが再起動します。
 
 ## Altruistの有効化
 セットアッププロセスの最終ステップは、**Altruistアドレス**を**Robonomicsサブスクリプション**に追加することです。
@@ -71,22 +80,22 @@ contributors: [tubleronchik]
 
 5) 操作が完了するのを待ちます。
 
-これで完了です！セットアップが完了しました。は完了しました。🎉
+これで完了です！セットアップが完了しました。🎉
 
-[Robonomics Sensors Social](https://sensors.social/#) マップであなたのAltruistを見つけることができます。🚀
+これで、[Robonomics Sensors Social](https://sensors.social/#)マップでAltruistを見つけることができます。🚀
 
-{% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"センサーマップ"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"sensor map"} %}{% endroboWikiPicture %}
 
 ## Home Assistant
 
 **Altruist**を**Home Assistant**に追加する方法は2つあります：
 
-### オプション1: HACS (推奨)
+### オプション1: HACS（推奨）
 
-**Altruist**を追加する最も簡単な方法は**HACS**を通じてです。簡単なセットアップガイドは[こちら](https://hacs.xyz/docs/use/)で見つけることができます。
+**Altruist**を追加する最も簡単な方法は、**HACS**を通じて行うことです。簡単なセットアップガイドは[こちら](https://hacs.xyz/docs/use/)にあります。
 
 **手順**:
-1) HACSがインストールされたら、それを開きます。
+1) HACSをインストールしたら、開いてください。
 
 2) 右上の**三つの点**をクリックし、"**Custom repositories**"を選択します。
 
@@ -101,7 +110,7 @@ https://github.com/airalab/altruist-homeassistant-integration
 
 5) **Altruist Sensor**インテグレーションを検索します。
 
-6) **ダウンロード**ボタンをクリックし、インテグレーションがインストールされたら**Home Assistant**を再起動します。
+6) **Download**ボタンをクリックし、インテグレーションがインストールされたら**Home Assistant**を再起動します。
 
 {% roboWikiPicture {src:"docs/altruist/integration.jpg", alt:"altruist-hacs"} %}{% endroboWikiPicture %}
 
@@ -117,7 +126,7 @@ https://github.com/airalab/altruist-homeassistant-integration
 
 {% endcodeHelper %}
 
-2) すでにカスタム統合がある場合は、`altruist` フォルダを `custom_components` ディレクトリに移動します:
+2) すでにカスタムインテグレーションがある場合は、`altruist`フォルダを`custom_components`ディレクトリに移動します：
 
 {% codeHelper { copy: true}%}
 
@@ -128,25 +137,23 @@ mv custom_components/altruist ~/.homeassistant/custom_components/
 
 {% endcodeHelper %}
 
-3) カスタム統合が**ない**場合は、カスタムコンポーネントディレクトリ全体を移動します:
+3) カスタムインテグレーションが**ない**場合は、カスタムコンポーネントディレクトリ全体を移動します：
 
 {% codeHelper { copy: true}%}
 
  ```
-cd altruist-homeassistant-integration
-mv custom_components/ ~/.homeassistant/
-```
+cd altruist-homeassistant-integrationmv custom_components/ ~/.homeassistant/
 
 {% endcodeHelper %}
 
 ## 設定
 
-インストールとHome Assistantの再起動後、ネットワーク上のAltruistが自動的に検出されます。
+インストールとHome Assistantの再起動後、統合はネットワーク上のAltruistを自動的に検出します。
 
-1) **設定 → デバイス & サービス** に移動します。
+1) **設定 → デバイスとサービス** に移動します。
 
-2) **Altruist センサー** を追加します。
+2) **Altruistセンサー** を追加します。
 
 {% roboWikiPicture {src:"docs/altruist/add_altruist.jpg", alt:"discover altruist"} %}{% endroboWikiPicture %}
 
-これで完了です！🚀 あなたのAltruistセンサーはHome Assistantと統合されました。
+以上です！🚀 あなたのAltruistセンサーはHome Assistantと統合されました。

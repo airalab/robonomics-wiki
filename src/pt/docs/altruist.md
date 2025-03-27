@@ -32,38 +32,47 @@ Se você não tiver uma conta, siga [este guia](https://wiki.robonomics.network/
 2) A placa criará uma rede Wi-Fi chamada Altruist-xxxxxxxxx. Conecte-se a ela a partir do seu telefone ou computador. Você deve ser automaticamente solicitado a abrir a janela de autorização.
 - Se não, abra um navegador e vá para 192.168.4.1.
 
-{% roboWikiPicture {src:"docs/altruist/on_board.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/networks.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
 
 3) **Configure as configurações de Wi-Fi**:
 - Selecione sua rede Wi-Fi da lista ou insira-a manualmente se não aparecer.
 - Insira a senha no campo "CONFIGURAÇÕES DE WI-FI".
+- Se você tiver vários dispositivos Altruist na mesma rede, altere o Nome de Host Local. Após configurar o WiFi, você pode se conectar ao seu sensor usando este nome de host.
 
-4) **Insira seus detalhes do Robonomics**:
-- Cole o Endereço do Proprietário RWS que você copiou anteriormente no campo designado.
+{% roboWikiPicture {src:"docs/altruist/wifi_creds.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
 
-5) **Defina a localização do sensor**:
-- Insira as coordenadas do local de instalação do sensor.
-- Você pode encontrar coordenadas usando mapas online ou converter um endereço para latitude/longitude usando [este link.](https://www.latlong.net/convert-address-to-lat)-long.html)
+4) **Salvar Configuração**
+- Clique no`Salvar Configuração e Reiniciar` e aguarde o sensor conectar ao WiFi. Uma vez conectado, ele exibirá seu novo endereço IP — copie-o, pois esta é uma maneira alternativa de conectar aos seus sensores após a configuração.
+
+{% roboWikiPicture {src:"docs/altruist/connected.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
+
+5) **Insira seus detalhes do Robonomics**:
+- Abra a interface web do Altruist em http://altruist.local (ou use seu Nome de Host Local personalizado seguido de `.local` se você o alterou). Em seguida, navegue até a página `Configuração`.
+- Na seção `Robonomics`, cole o Endereço do Proprietário RWS que você copiou anteriormente no campo designado.
+
+6) **Defina a localização do sensor**:
+- Na seção `Correção de GPS e Temperatura`, insira as coordenadas do local de instalação do sensor.
+- Você pode encontrar coordenadas usando mapas online ou converter um endereço para latitude/longitude usando [este link.](https://www.latlong.net/convert-address-to-lat-long.html)
 
 {% roboWikiNote {type: "warning", title: "AVISO"}%}As coordenadas do sensor serão exibidas em um mapa disponível publicamente. Se você não quiser mostrar suas informações privadas, escreva coordenadas próximas, mas não exatas.{% endroboWikiNote %}
 
-{% roboWikiPicture {src:"docs/altruist/sensor_setup.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/robo-gps.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
 
-6) **Copie o "Endereço Robonomics" do Altruist**:
-- Você o encontrará no topo da página. Salve-o para a etapa final.
+7) **Copie o "Endereço Robonomics" do Altruist**:
+- Você o encontrará no topo da página. Salve-o paraa etapa final.
 
-{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"endereço altruist"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"endereço do altruísta"} %}{% endroboWikiPicture %}
 
-7) Clique em "**Salvar configuração e reiniciar**" na parte inferior da página. A placa irá reiniciar e se conectar à rede Wi-Fi especificada.
+8) Clique em "**Salvar configuração e reiniciar**" na parte inferior da página. A placa será reiniciada.
 
 ## Ativar Altruist
-A etapa final no processo de configuração é adicionar o **endereço Altruist** à sua **Assinatura Robonomics**.
+A etapa final no processo de configuração é adicionar o **endereço do Altruist** à sua **Assinatura Robonomics**.
 
 1) Volte para a [página de Configuração](https://robonomics.app/#/rws-setup).
 
 2) Role para baixo até a seção "**Usuários na assinatura**".
 
-3) No campo "**Adicionar um usuário**", cole o **endereço Robonomics do Altruist** que você copiou anteriormente.
+3) No campo "**Adicionar um usuário**", cole o **endereço Altruist Robonomics** que você copiou anteriormente.
 
 {% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"adicionar usuário"} %}{% endroboWikiPicture %}
 
@@ -71,9 +80,9 @@ A etapa final no processo de configuração é adicionar o **endereço Altruist*
 
 5) Aguarde a conclusão da operação.
 
-É isso! Sua configuração está agora completo. 🎉
+É isso! Sua configuração está agora completa. 🎉
 
-Você pode encontrar seu Altruist no mapa do [Robonomics Sensors Social](https://sensors.social/#). 🚀
+Agora você pode encontrar seu Altruist no mapa do [Robonomics Sensors Social](https://sensors.social/#). 🚀
 
 {% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"mapa do sensor"} %}{% endroboWikiPicture %}
 
@@ -83,7 +92,7 @@ Existem duas maneiras de adicionar o **Altruist** ao **Home Assistant**:
 
 ### Opção 1: HACS (Recomendado)
 
-A maneira mais fácil de adicionar o **Altruist** é através do **HACS**. Você pode encontrar um breve guia de configuração [aqui](https://hacs.xyz/docs/use/)
+A maneira mais fácil de adicionar o **Altruist** é através do **HACS**. Você pode encontrar um breve guia de configuração [aqui](https://hacs.xyz/docs/use/) 
 
 **Passos**:
 1) Uma vez que o HACS esteja instalado, abra-o.
@@ -102,6 +111,7 @@ https://github.com/airalab/altruist-homeassistant-integration
 5) Procure pela integração **Altruist Sensor**.
 
 6) Clique no botão **Download**, depois reinicie o **Home Assistant** assim que a integração estiver instalada.
+
 
 {% roboWikiPicture {src:"docs/altruist/integration.jpg", alt:"altruist-hacs"} %}{% endroboWikiPicture %}
 
@@ -133,9 +143,7 @@ mv custom_components/altruist ~/.homeassistant/custom_components/
 {% codeHelper { copy: true}%}
 
  ```
-cd altruist-homeassistant-integration
-mv custom_components/ ~/.homeassistant/
-```
+cd altruist-homeassistant-integrationmv custom_components/ ~/.homeassistant/
 
 {% endcodeHelper %}
 
