@@ -83,7 +83,7 @@ const double BRUSH_WIDTH = 0.01;
 
 سترى ما يلي:
 
-&lt;figure class="robo-wiki-picture"&gt;&lt;picture&gt;
+&lt;figure class="robo-wiki-picture "&gt;&lt;picture&gt;
 		&lt;img
 			src="/assets/images/docs/kuka-real/kuka_rviz.png"
 			alt="KUKA in RViz"
@@ -98,7 +98,7 @@ const double BRUSH_WIDTH = 0.01;
 عندما تتم المعايرة، يجب اختبار Gaka-Chu عن طريق رسم حدود القماش. لجعله يقوم بذلك، قم بتنفيذ كل من الأوامر التالية في نافذة الطرفية الجديدة:
 </code></pre><p>roslaunch kuka_eki_hw_interface test_hardware_interface.launch<br>roslaunch kuka_moveit_config demo.launch<br>rosrun fake_painter_enviroment_tf tf_broadcaster<br>rosrun local_task_planner draw_workspace</p><pre><code>بعد ذلك، يجب أن ترى حدود قماش في RViz:
 
-&lt;figure class="robo-wiki-picture"&gt;&lt;picture&gt;
+&lt;figure class="robo-wiki-picture "&gt;&lt;picture&gt;
 		&lt;img
 			src="/assets/images/docs/kuka-real/kuka_rviz_canvas.png"
 			alt="KUKA in RViz canvas"
