@@ -7,11 +7,19 @@ body {
 p {
   margin-bottom: var(--space-text);
 }
-a:not(.button) {
+a:not(.button, .breadcrumbs__link) {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
   color: var(--link-color);
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, text-decoration-color 0.3s ease-in-out;
   word-break: break-word;
 }
+
+a:not(:is(:hover, :focus)) {
+  text-decoration-color: color-mix(in srgb, currentColor, transparent 85%);
+}
+
 a[href^=http].testedFor__link {
 	cursor: pointer;
 }
