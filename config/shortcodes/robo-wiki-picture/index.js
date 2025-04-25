@@ -8,6 +8,7 @@ export const roboWikiPicture = async (...args) => {
 	let caption = args[1].caption ? args[1].caption : '';
 	let alt = args[1].alt && args[1].alt ? args[1].alt : '';
 	let loading = args[1].loading && args[1].loading ? args[1].loading  : 'lazy'; // other option is eager
+	let small = args[1].small && args[1].small ? 'mobile-picture' : false;
 
 	if(args[1].link) {
 		link = 'https://wiki.robonomics.network/assets/images/' + args[1].link
@@ -18,7 +19,7 @@ export const roboWikiPicture = async (...args) => {
 	}
 
 	if (link) {
-		return `<figure class="robo-wiki-picture"><a href="${link}" class="robo-wiki-picture__link" target="_blank"><picture>
+		return `<figure class="robo-wiki-picture ${small ? small : ''}"><a href="${link}" class="robo-wiki-picture__link" target="_blank"><picture>
 		<img
 			src="/assets/images/${src}"
 			alt="${alt}"
@@ -26,7 +27,7 @@ export const roboWikiPicture = async (...args) => {
 			decoding="async">
 	</picture></a>${caption ? '<figcaption class="robo-wiki-picture__text">' + caption + '</figcaption>' : ''}</figure>`
 	} else {
-		return `<figure class="robo-wiki-picture"><picture>
+		return `<figure class="robo-wiki-picture ${small ? small : ''}"><picture>
 		<img
 			src="/assets/images/${src}"
 			alt="${alt}"

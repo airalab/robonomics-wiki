@@ -3,7 +3,7 @@ title: Altruist Einrichtung
 contributors: [tubleronchik]
 ---
 
-**Diese Anleitung führt Sie durch die Einrichtung und Aktivierung eines Altruist Outdoor-Sensors. Sie verbinden den Sensor mit Wi-Fi, konfigurieren seinen Standort und aktivieren ein Abonnement mit XRT-Token. Zusätzlich werden Anweisungen zur Integration des Sensors in Home Assistant über HACS oder manuelle Installation bereitgestellt.**
+**Diese Anleitung führt Sie durch die Einrichtung und Aktivierung eines Altruist Outdoor-Sensors. Sie verbinden den Sensor mit Wi-Fi, konfigurieren seinen Standort und aktivieren ein Abonnement mit XRT-Token. Zusätzlich werden Anweisungen zur Integration des Sensors mit Home Assistant über HACS oder manuelle Installation bereitgestellt.**
 
 {% roboWikiNote {type: "warning"}%} Alle Geräte von Robonomics können auf der offiziellen [Website](https://robonomics.network/devices/) erworben werden.{% endroboWikiNote %}
 
@@ -22,7 +22,7 @@ Wenn Sie kein Konto haben, folgen Sie [dieser Anleitung](https://wiki.robonomics
 
 {% roboWikiPicture {src:"docs/altruist/altruist_setup_page.jpg", alt:"Abonnement-Einrichtungsseite"} %}{% endroboWikiPicture %}
 
-5) **Speichern Sie Ihre Kontoadresse** — Sie benötigen sie während der Sensoreinrichtung. Sie können sie aus dem Abschnitt "EIGENTÜMER" kopieren oder indem Sie auf Ihren Kontonamen in der oberen rechten Ecke klicken und die Kopiertaste auswählen.
+5) **Speichern Sie Ihre Kontoadresse** — Sie benötigen sie während der Sensoreinrichtung. Sie können sie aus dem Abschnitt "OWNER" kopieren oder indem Sie auf Ihren Kontonamen in der oberen rechten Ecke klicken und die Kopiertaste auswählen.
 
 ## Sensoreinrichtung
 
@@ -32,19 +32,19 @@ Wenn Sie kein Konto haben, folgen Sie [dieser Anleitung](https://wiki.robonomics
 2) Die Platine erstellt ein WLAN-Netzwerk namens Altruist-xxxxxxxxx. Verbinden Sie sich von Ihrem Telefon oder Computer damit. Sie sollten automatisch aufgefordert werden, das Autorisierungsfenster zu öffnen. 
 - Falls nicht, öffnen Sie einen Browser und gehen Sie zu 192.168.4.1.
 
-{% roboWikiPicture {src:"docs/altruist/networks.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/networks.png", alt:"altruist-sensor", small: true} %}{% endroboWikiPicture %}
 
 3) **Konfigurieren Sie die WLAN-Einstellungen**:
 - Wählen Sie Ihr WLAN-Netzwerk aus der Liste aus oder geben Sie es manuell ein, falls es nicht angezeigt wird.
-- Geben Sie das Passwort im Feld "WI-FI-EINSTELLUNGEN" ein.
-- Wenn Sie mehrere Altruist-Geräte im selben Netzwerk haben, ändern Sie den lokalen Hostnamen. Nach der Einrichtung des WLANs können Sie sich mit diesem Hostnamen mit Ihrem Sensor verbinden.
+- Geben Sie das Passwort im Feld "WI-FI SETTINGS" ein.
+- Wenn Sie mehrere Altruist-Geräte im selben Netzwerk haben, ändern Sie den lokalen Hostnamen. Nach der Einrichtung des WLANs können Sie über diesen Hostnamen eine Verbindung zu Ihrem Sensor herstellen.
 
-{% roboWikiPicture {src:"docs/altruist/wifi_creds.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/wifi_creds.png", alt:"altruist-sensor", small: true} %}{% endroboWikiPicture %}
 
 4) **Konfiguration speichern**
-- Klicken Sie auf den`Konfiguration speichern und neu starten`-Taste und warten Sie, bis der Sensor eine Verbindung zum WLAN herstellt. Sobald die Verbindung hergestellt ist, wird die neue IP-Adresse angezeigt – kopieren Sie diese, da dies eine alternative Möglichkeit ist, nach der Einrichtung eine Verbindung zu Ihren Sensoren herzustellen.
+- Klicken Sie auf die Schaltfläche `Konfiguration speichern und neu starten` und warten Sie, bis der Sensor eine Verbindung zum WLAN herstellt. Sobald die Verbindung hergestellt ist, wird die neue IP-Adresse angezeigt – kopieren Sie diese, da dies eine alternative Möglichkeit ist, nach der Einrichtung eine Verbindung zu Ihren Sensoren herzustellen.
 
-{% roboWikiPicture {src:"docs/altruist/connected.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/connected.png", alt:"altruist-sensor", small: true} %}{% endroboWikiPicture %}
 
 5) **Geben Sie Ihre Robonomics-Daten ein**:
 - Öffnen Sie die Altruist-Weboberfläche unter http://altruist.local (oder verwenden Sie Ihren benutzerdefinierten lokalen Hostnamen, gefolgt von `.local`, wenn Sie ihn geändert haben). Navigieren Sie dann zur Seite `Konfiguration`.
@@ -56,12 +56,12 @@ Wenn Sie kein Konto haben, folgen Sie [dieser Anleitung](https://wiki.robonomics
 
 {% roboWikiNote {type: "warning", title: "WARNUNG"}%}Die Sensor-Koordinaten werden dann auf einer öffentlich zugänglichen Karte angezeigt. Wenn Sie Ihre privaten Informationen nicht anzeigen möchten, geben Sie nahe, aber nicht genaue Koordinaten an.{% endroboWikiNote %}
 
-{% roboWikiPicture {src:"docs/altruist/robo-gps.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/robo-gps.png", alt:"altruist-sensor-wifi", small: true} %}{% endroboWikiPicture %}
 
 7) **Kopieren Sie die Altruist "Robonomics-Adresse"**:
-- Sie finden sie oben auf der Seite. Speichern Sie sie fürder letzte Schritt.
+- Sie finden es oben auf der Seite. Speichern Sie es für den letzten Schritt.
 
-{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address", small: true} %}{% endroboWikiPicture %}
 
 8) Klicken Sie unten auf der Seite auf "**Konfiguration speichern und neu starten**". Das Board wird neu gestartet.
 
@@ -76,7 +76,7 @@ Der letzte Schritt im Einrichtungsprozess besteht darin, die **Altruist-Adresse*
 
 {% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"add user"} %}{% endroboWikiPicture %}
 
-4) Klicken Sie auf die **Plus (+) Schaltfläche** und signieren Sie die Nachricht.
+4) Klicken Sie auf die **Plus (+) Taste** und signieren Sie die Nachricht.
 
 5) Warten Sie, bis der Vorgang abgeschlossen ist.
 
@@ -92,32 +92,31 @@ Es gibt zwei Möglichkeiten, **Altruist** zu **Home Assistant** hinzuzufügen:
 
 ### Option 1: HACS (Empfohlen)
 
-Der einfachste Weg, **Altruist** hinzuzufügen, ist über **HACS**. Eine kurze Anleitung zur Einrichtung finden Sie [hier](https://hacs.xyz/docs/use/) 
+Der einfachste Weg, **Altruist** hinzuzufügen, ist über **HACS**.Du kannst eine kurze Installationsanleitung [hier](https://hacs.xyz/docs/use/) finden.
 
 **Schritte**:
-1) Sobald HACS installiert ist, öffnen Sie es.
+1) Sobald HACS installiert ist, öffne es.
 
-2) Klicken Sie auf die **drei Punkte** in der oberen rechten Ecke und wählen Sie "**Benutzerdefinierte Repositories**".
+2) Klicke auf die **drei Punkte** in der oberen rechten Ecke und wähle "**Custom repositories**".
 
-3) Geben Sie im Popup-Fenster die folgende URL ein:
+3) Gib im Pop-up-Fenster die folgende URL ein:
 
 ```
 https://github.com/airalab/altruist-homeassistant-integration
 ```
-4) Setzen Sie den Typ auf "**Integration**" und klicken Sie auf "**HINZUFÜGEN**".
+4) Setze den Typ auf "**Integration**" und klicke auf "**ADD**".
 
 {% roboWikiPicture {src:"docs/altruist/hacs.jpg", alt:"altruist-add"} %}{% endroboWikiPicture %}
 
-5) Suchen Sie nach der **Altruist Sensor**-Integration.
+5) Suche nach der **Altruist Sensor** Integration.
 
-6) Klicken Sie auf die **Download**-Schaltfläche und starten Sie **Home Assistant** neu, sobald die Integration installiert ist.
-
+6) Klicke auf den **Download**-Button und starte **Home Assistant** neu, sobald die Integration installiert ist.
 
 {% roboWikiPicture {src:"docs/altruist/integration.jpg", alt:"altruist-hacs"} %}{% endroboWikiPicture %}
 
 ### Option 2: Manuelle Installation
 
-1) Klonen Sie das Projekt-Repository unter dem `homeassistant`-Benutzer:
+1) Klone das Projekt-Repository unter dem `homeassistant` Benutzer:
 
 {% codeHelper { copy: true}%}
 
@@ -127,7 +126,7 @@ https://github.com/airalab/altruist-homeassistant-integration
 
 {% endcodeHelper %}
 
-2) Wenn Sie bereits benutzerdefinierte Integrationen haben, verschieben Sie den `altruist`-Ordner in Ihr `custom_components`-Verzeichnis:
+2) Wenn du bereits benutzerdefinierte Integrationen hast, verschiebe den `altruist` Ordner in dein `custom_components` Verzeichnis:
 
 {% codeHelper { copy: true}%}
 
@@ -138,12 +137,14 @@ mv custom_components/altruist ~/.homeassistant/custom_components/
 
 {% endcodeHelper %}
 
-3) Wenn Sie **keine** benutzerdefinierten Integrationen haben, verschieben Sie das gesamte custom_components-Verzeichnis:
+3) Wenn du **keine** benutzerdefinierten Integrationen hast, verschiebe das gesamte custom_components Verzeichnis:
 
 {% codeHelper { copy: true}%}
 
  ```
-cd altruist-homeassistant-integrationmv custom_components/ ~/.homeassistant/
+cd altruist-homeassistant-integration
+mv custom_components/ ~/.homeassistant/
+```
 
 {% endcodeHelper %}
 
@@ -155,6 +156,6 @@ Nach der Installation und dem Neustart von Home Assistant wird die Integration A
 
 2) Fügen Sie den **Altruist Sensor** hinzu.
 
-{% roboWikiPicture {src:"docs/altruist/add_altruist.jpg", alt:"altruist entdecken"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/add_altruist.jpg", alt:"discover altruist"} %}{% endroboWikiPicture %}
 
 Das war's! 🚀 Ihr Altruist Sensor ist jetzt in Home Assistant integriert.

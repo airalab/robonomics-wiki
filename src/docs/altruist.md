@@ -32,19 +32,19 @@ If you don’t have an account, follow [this guide](https://wiki.robonomics.netw
 2) The board will create a Wi-Fi network named Altruist-xxxxxxxxx. Connect to it from your phone or computer. You should be automatically prompted to open the authorization window. 
 - If not, open a browser and go to 192.168.4.1.
 
-{% roboWikiPicture {src:"docs/altruist/networks.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/networks.png", alt:"altruist-sensor", small: true} %}{% endroboWikiPicture %}
 
 3) **Configure the Wi-Fi settings**:
 - Select your Wi-Fi network from the list or enter it manually if it doesn't appear.
 - Enter the password in the "WI-FI SETTINGS" field.
 - If you have multiple Altruist devices on the same network, change the Local Hostname. After setting up WiFi, you can connect to your sensor using this hostname.
 
-{% roboWikiPicture {src:"docs/altruist/wifi_creds.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/wifi_creds.png", alt:"altruist-sensor", small: true} %}{% endroboWikiPicture %}
 
 4) **Save Configuration**
 - Click the `Save Configuration and Restart` button and wait for the sensor to connect to WiFi. Once connected, it will display its new IP address — copy it, as this is an alternative way to connect to your sensors after setup.
 
-{% roboWikiPicture {src:"docs/altruist/connected.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/connected.png", alt:"altruist-sensor", small: true} %}{% endroboWikiPicture %}
 
 5) **Enter your Robonomics details**:
 - Open the Altruist web interface at http://altruist.local (or use your custom Local Hostname followed by `.local` if you changed it). Then, navigate to the `Configuration` page.
@@ -57,12 +57,12 @@ If you don’t have an account, follow [this guide](https://wiki.robonomics.netw
 
 {% roboWikiNote {type: "warning", title: "WARNING"}%}The sensor coordinates will then be displayed on a publicly available map. If you do not want to show your private information, write close, but not exact coordinates.{% endroboWikiNote %}
 
-{% roboWikiPicture {src:"docs/altruist/robo-gps.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/robo-gps.png", alt:"altruist-sensor-wifi", small: true} %}{% endroboWikiPicture %}
 
 7) **Copy the Altruist "Robonomics Address"**:
 - You will find it at the top of the page. Save it for the final step.
 
-{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"altruist address",  small: true} %}{% endroboWikiPicture %}
 
 8) Click "**Save configuration and restart**" at the bottom of the page. The board will reboot.
 

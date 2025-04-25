@@ -12,7 +12,7 @@ contributors: [tubleronchik]
 {% roboWikiNote {type: "okay"} %}Pour compléter cette étape, assurez-vous d'avoir au moins 2-3 jetons XRT dans votre compte `Robonomics Polkadot`.{% endroboWikiNote %}
 
 1) Accédez à la [page d'abonnement](https://robonomics.app/#/rws-buy) de l'application Robonomics. 
-2) Cliquez sur **Compte** et connectez votre portefeuille. Votre adresse de compte et votre solde seront affichés.
+2) Cliquez sur **Compte** et connectez votre portefeuille. L'adresse de votre compte et votre solde seront affichés.
 Si vous n'avez pas de compte, suivez [ce guide](https://wiki.robonomics.network/docs/create-account-in-dapp/) pour en créer un.
 
 {% roboWikiPicture {src:"docs/altruist/altruist_syb_buy.jpg", alt:"page d'abonnement"} %}{% endroboWikiPicture %}
@@ -32,19 +32,19 @@ Si vous n'avez pas de compte, suivez [ce guide](https://wiki.robonomics.network/
 2) La carte créera un réseau Wi-Fi nommé Altruist-xxxxxxxxx. Connectez-vous à celui-ci depuis votre téléphone ou votre ordinateur. Vous devriez être automatiquement invité à ouvrir la fenêtre d'autorisation.
 - Si ce n'est pas le cas, ouvrez un navigateur et allez à 192.168.4.1.
 
-{% roboWikiPicture {src:"docs/altruist/networks.png", alt:"altruist-capteur"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/networks.png", alt:"altruist-capteur", small: true} %}{% endroboWikiPicture %}
 
 3) **Configurez les paramètres Wi-Fi** :
 - Sélectionnez votre réseau Wi-Fi dans la liste ou entrez-le manuellement s'il n'apparaît pas.
 - Entrez le mot de passe dans le champ "PARAMÈTRES WI-FI".
-- Si vous avez plusieurs appareils Altruist sur le même réseau, changez le Nom d'Hôte Local. Après avoir configuré le WiFi, vous pouvez vous connecter à votre capteur en utilisant ce nom d'hôte.
+- Si vous avez plusieurs appareils Altruist sur le même réseau, changez le nom d'hôte local. Après avoir configuré le WiFi, vous pouvez vous connecter à votre capteur en utilisant ce nom d'hôte.
 
-{% roboWikiPicture {src:"docs/altruist/wifi_creds.png", alt:"altruist-capteur"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/wifi_creds.png", alt:"altruist-capteur", small: true} %}{% endroboWikiPicture %}
 
-4) **Enregistrez la Configuration**
-- Cliquez sur le`Enregistrer la configuration et redémarrer` et attendez que le capteur se connecte au WiFi. Une fois connecté, il affichera sa nouvelle adresse IP — copiez-la, car c'est une méthode alternative pour vous connecter à vos capteurs après la configuration.
+4) **Enregistrer la configuration**
+- Cliquez sur le bouton `Enregistrer la configuration et redémarrer` et attendez que le capteur se connecte au WiFi. Une fois connecté, il affichera sa nouvelle adresse IP — copiez-la, car c'est une méthode alternative pour vous connecter à vos capteurs après la configuration.
 
-{% roboWikiPicture {src:"docs/altruist/connected.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/connected.png", alt:"altruist-sensor", small: true} %}{% endroboWikiPicture %}
 
 5) **Entrez vos détails Robonomics** :
 - Ouvrez l'interface web Altruist à l'adresse http://altruist.local (ou utilisez votre nom d'hôte local personnalisé suivi de `.local` si vous l'avez modifié). Ensuite, accédez à la page `Configuration`.
@@ -54,25 +54,25 @@ Si vous n'avez pas de compte, suivez [ce guide](https://wiki.robonomics.network/
 - Dans la section `Correction GPS & Température`, entrez les coordonnées du site d'installation du capteur.
 - Vous pouvez trouver des coordonnées en utilisant des cartes en ligne ou convertir une adresse en latitude/longitude en utilisant [ce lien.](https://www.latlong.net/convert-address-to-lat-long.html)
 
-{% roboWikiNote {type: "warning", title: "AVERTISSEMENT"}%}Les coordonnées du capteur seront alors affichées sur une carte accessible au public. Si vous ne souhaitez pas montrer vos informations privées, indiquez des coordonnées proches, mais pas exactes.{% endroboWikiNote %}
+{% roboWikiNote {type: "warning", title: "AVERTISSEMENT"}%}Les coordonnées du capteur seront alors affichées sur une carte accessible au public. Si vous ne souhaitez pas montrer vos informations privées, écrivez des coordonnées proches, mais pas exactes.{% endroboWikiNote %}
 
-{% roboWikiPicture {src:"docs/altruist/robo-gps.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/robo-gps.png", alt:"altruist-sensor-wifi", small: true} %}{% endroboWikiPicture %}
 
-7) **Copiez l'"Adresse Robonomics" d'Altruist** :
-- Vous la trouverez en haut de la page. Enregistrez-la pourla dernière étape.
+7) **Copiez l'"Adresse Robonomics" de l'Altruist**:
+- Vous le trouverez en haut de la page. Enregistrez-le pour l'étape finale.
 
-{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"adresse de l'altruiste"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"adresse altruist", small: true} %}{% endroboWikiPicture %}
 
 8) Cliquez sur "**Enregistrer la configuration et redémarrer**" en bas de la page. La carte redémarrera.
 
-## Activation de l'Altruiste
-La dernière étape du processus de configuration consiste à ajouter l'**adresse Altruiste** à votre **Abonnement Robonomics**.
+## Activation d'Altruist
+La dernière étape du processus de configuration consiste à ajouter l'**adresse Altruist** à votre **Abonnement Robonomics**.
 
 1) Retournez à la [page de configuration](https://robonomics.app/#/rws-setup).
 
 2) Faites défiler jusqu'à la section "**Utilisateurs dans l'abonnement**".
 
-3) Dans le champ "**Ajouter un utilisateur**", collez l'**adresse Altruiste Robonomics** que vous avez copiée précédemment.
+3) Dans le champ "**Ajouter un utilisateur**", collez l'**adresse Altruist Robonomics** que vous avez copiée plus tôt.
 
 {% roboWikiPicture {src:"docs/altruist/add_user.jpg", alt:"ajouter un utilisateur"} %}{% endroboWikiPicture %}
 
@@ -82,19 +82,19 @@ La dernière étape du processus de configuration consiste à ajouter l'**adress
 
 C'est tout ! Votre configuration est maintenant terminée. 🎉
 
-Vous pouvez maintenant trouver votre Altruiste sur la carte [Robonomics Sensors Social](https://sensors.social/#). 🚀
+Vous pouvez maintenant trouver votre Altruist sur la carte [Robonomics Sensors Social](https://sensors.social/#). 🚀
 
 {% roboWikiPicture {src:"docs/altruist/map.jpg", alt:"carte des capteurs"} %}{% endroboWikiPicture %}
 
 ## Home Assistant
 
-Il existe deux façons d'ajouter **Altruiste** à **Home Assistant** :
+Il existe deux façons d'ajouter **Altruist** à **Home Assistant** :
 
 ### Option 1 : HACS (Recommandé)
 
-La façon la plus simple d'ajouter **Altruiste** est via **HACS**. Vous pouvez trouver un guide de configuration rapide [ici](https://hacs.xyz/docs/use/) 
+La façon la plus simple d'ajouter **Altruist** est via **HACS**.Vous pouvez trouver un guide d'installation rapide [ici](https://hacs.xyz/docs/use/)
 
-**Étapes****:
+**Étapes** :
 1) Une fois HACS installé, ouvrez-le.
 
 2) Cliquez sur les **trois points** dans le coin supérieur droit et sélectionnez "**Dépôts personnalisés**".
@@ -111,7 +111,6 @@ https://github.com/airalab/altruist-homeassistant-integration
 5) Recherchez l'intégration **Altruist Sensor**.
 
 6) Cliquez sur le bouton **Télécharger**, puis redémarrez **Home Assistant** une fois l'intégration installée.
-
 
 {% roboWikiPicture {src:"docs/altruist/integration.jpg", alt:"altruist-hacs"} %}{% endroboWikiPicture %}
 
@@ -138,12 +137,14 @@ mv custom_components/altruist ~/.homeassistant/custom_components/
 
 {% endcodeHelper %}
 
-3) Si vous **n'avez pas** d'intégrations personnalisées, déplacez l'intégralité du répertoire custom_components :
+3) Si vous **n'avez pas** d'intégrations personnalisées, déplacez l'ensemblerépertoire custom_components :
 
 {% codeHelper { copy: true}%}
 
  ```
-cd altruist-homeassistant-integrationmv custom_components/ ~/.homeassistant/
+cd altruist-homeassistant-integration
+mv custom_components/ ~/.homeassistant/
+```
 
 {% endcodeHelper %}
 

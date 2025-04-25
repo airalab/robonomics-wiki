@@ -3,7 +3,7 @@ title: Настройка Altruist
 contributors: [tubleronchik]
 ---
 
-**Это руководство проведет вас через процесс настройки и активации датчика Altruist Outdoor. Вы подключите датчик к Wi-Fi, настроите его местоположение и активируете подписку с использованием XRT токенов. Также предоставлены инструкции по интеграции датчика с Home Assistant через HACS или ручной установкой.**
+**Это руководство проведет вас через процесс настройки и активации датчика Altruist Outdoor. Вы подключите датчик к Wi-Fi, настроите его местоположение и активируете подписку с использованием XRT токенов. Также предоставлены инструкции по интеграции датчика с Home Assistant через HACS или ручную установку.**
 
 {% roboWikiNote {type: "warning"}%} Все устройства от Robonomics можно приобрести на официальном [веб-сайте](https://robonomics.network/devices/).{% endroboWikiNote %}
 
@@ -18,7 +18,7 @@ contributors: [tubleronchik]
 {% roboWikiPicture {src:"docs/altruist/altruist_syb_buy.jpg", alt:"страница подписки"} %}{% endroboWikiPicture %}
 
 3) Нажмите `КУПИТЬ ПОДПИСКУ` и подпишите транзакцию. **Дождитесь завершения процесса активации**. 
-4) После активации вы будете перенаправлены на **страницу настройки**, где сможете увидеть название вашей подписки и дату истечения срока действия.
+4) После активации вы будете перенаправлены на **страницу настройки**, где сможете увидеть название вашей подписки и дату ее истечения.
 
 {% roboWikiPicture {src:"docs/altruist/altruist_setup_page.jpg", alt:"страница настройки подписки"} %}{% endroboWikiPicture %}
 
@@ -32,36 +32,36 @@ contributors: [tubleronchik]
 2) Плата создаст сеть Wi-Fi с именем Altruist-xxxxxxxxx. Подключитесь к ней с вашего телефона или компьютера. Вам должно автоматически предложить открыть окно авторизации. 
 - Если нет, откройте браузер и перейдите на 192.168.4.1.
 
-{% roboWikiPicture {src:"docs/altruist/networks.png", alt:"altruist-сенсор"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/networks.png", alt:"altruist-сенсор", small: true} %}{% endroboWikiPicture %}
 
 3) **Настройте параметры Wi-Fi**:
 - Выберите вашу сеть Wi-Fi из списка или введите её вручную, если она не отображается.
 - Введите пароль в поле "НАСТРОЙКИ WI-FI".
 - Если у вас несколько устройств Altruist в одной сети, измените локальное имя хоста. После настройки WiFi вы сможете подключиться к вашему датчику, используя это имя хоста.
 
-{% roboWikiPicture {src:"docs/altruist/wifi_creds.png", alt:"altruist-сенсор"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/wifi_creds.png", alt:"altruist-сенсор", small: true} %}{% endroboWikiPicture %}
 
-4) **Сохраните конфигурацию**
-- Нажмите на`Сохраните конфигурацию и перезапустите` кнопку и дождитесь подключения датчика к WiFi. После подключения он отобразит свой новый IP-адрес — скопируйте его, так как это альтернативный способ подключения к вашим датчикам после настройки.
+4) **Сохранить конфигурацию**
+- Нажмите кнопку `Сохранить конфигурацию и перезапустить` и дождитесь подключения датчика к WiFi. После подключения он отобразит свой новый IP-адрес — скопируйте его, так как это альтернативный способ подключения к вашим датчикам после настройки.
 
-{% roboWikiPicture {src:"docs/altruist/connected.png", alt:"altruist-sensor"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/connected.png", alt:"altruist-sensor", small: true} %}{% endroboWikiPicture %}
 
 5) **Введите ваши данные Robonomics**:
-- Откройте веб-интерфейс Altruist по адресу http://altruist.local (или используйте ваше пользовательское локальное имя хоста, если вы его изменили, добавив `.local`). Затем перейдите на страницу `Конфигурация`.
+- Откройте веб-интерфейс Altruist по адресу http://altruist.local (или используйте ваше пользовательское локальное имя хоста, добавив `.local`, если вы его изменили). Затем перейдите на страницу `Конфигурация`.
 - В разделе `Robonomics` вставьте адрес владельца RWS, который вы скопировали ранее, в соответствующее поле.
 
 6) **Установите местоположение датчика**:
-- В разделе `Коррекция GPS и температуры` введите координаты места установки датчика.
+- В разделе `GPS и коррекция температуры` введите координаты места установки датчика.
 - Вы можете найти координаты, используя онлайн-карты, или преобразовать адрес в широту/долготу, используя [эту ссылку.](https://www.latlong.net/convert-address-to-lat-long.html)
 
 {% roboWikiNote {type: "warning", title: "ПРЕДУПРЕЖДЕНИЕ"}%}Координаты датчика будут отображаться на общедоступной карте. Если вы не хотите показывать вашу личную информацию, укажите близкие, но не точные координаты.{% endroboWikiNote %}
 
-{% roboWikiPicture {src:"docs/altruist/robo-gps.png", alt:"altruist-sensor-wifi"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/robo-gps.png", alt:"altruist-sensor-wifi", small: true} %}{% endroboWikiPicture %}
 
-7) **Скопируйте "Адрес Robonomics" Altruist**:
-- Вы найдете его в верхней части страницы. Сохраните его для последний шаг.
+7) **Скопируйте "Robonomics Address" Altruist**:
+- Вы найдете это в верхней части страницы. Сохраните для последнего шага.
 
-{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"адрес альтруиста"} %}{% endroboWikiPicture %}
+{% roboWikiPicture {src:"docs/altruist/address.jpg", alt:"адрес альтруиста", small: true} %}{% endroboWikiPicture %}
 
 8) Нажмите "**Сохранить конфигурацию и перезагрузить**" внизу страницы. Плата перезагрузится.
 
@@ -92,7 +92,7 @@ contributors: [tubleronchik]
 
 ### Вариант 1: HACS (рекомендуется)
 
-Самый простой способ добавить **Altruist** — через **HACS**. Краткое руководство по настройке можно найти [здесь](https://hacs.xyz/docs/use/) 
+Самый простой способ добавить **Altruist** — через **HACS**.Вы можете найти краткое руководство по настройке [здесь](https://hacs.xyz/docs/use/)
 
 **Шаги**:
 1) После установки HACS откройте его.
@@ -111,7 +111,6 @@ https://github.com/airalab/altruist-homeassistant-integration
 5) Найдите интеграцию **Altruist Sensor**.
 
 6) Нажмите кнопку **Download**, затем перезапустите **Home Assistant** после установки интеграции.
-
 
 {% roboWikiPicture {src:"docs/altruist/integration.jpg", alt:"altruist-hacs"} %}{% endroboWikiPicture %}
 
@@ -138,12 +137,14 @@ mv custom_components/altruist ~/.homeassistant/custom_components/
 
 {% endcodeHelper %}
 
-3) Если у вас **нет** пользовательских интеграций, переместите весь каталог custom_components:
+3) Если у вас **нет** пользовательских интеграций, переместите всю custom_components каталог:
 
 {% codeHelper { copy: true}%}
 
  ```
-cd altruist-homeassistant-integrationmv custom_components/ ~/.homeassistant/
+cd altruist-homeassistant-integration
+mv custom_components/ ~/.homeassistant/
+```
 
 {% endcodeHelper %}
 
