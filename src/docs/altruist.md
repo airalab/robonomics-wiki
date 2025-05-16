@@ -7,17 +7,21 @@ contributors: [tubleronchik]
 
 {% roboWikiNote {type: "warning"}%} All devices from Robonomics can be purchased on the official [website](https://robonomics.network/devices/).{% endroboWikiNote %}
 
+{% roboWikiVideo {videos:[{src: 'QmSG9AAJJhNtzXiXcA16TnjXUBDbjPc2X5H9W7hjR2p73f', type: 'mp4'}], attrs:['loop', 'controls', 'autoplay']} %}{% endroboWikiVideo %}
+
+*Full setup of Altruist (dapp v0.8.2) + its integration with RISC-V Home Server*
+
 ## Activate Robonomics Subscription
 
 {% roboWikiNote {type: "okay"} %}To complete this step, ensure you have at least 2-3 XRT tokens in your `Robonomics Polkadot` account.{% endroboWikiNote %}
 
-1) Navigate to the Robonomics dApp [subscription page](https://robonomics.app/#/rws-buy). 
+1) Navigate to the Robonomics dApp [subscription page](https://robonomics.app/#/rws-buy).
 2) Click on **Account** and connect your wallet. Your account address and balance will be displayed.
 If you don’t have an account, follow [this guide](https://wiki.robonomics.network/docs/create-account-in-dapp/) to create one.
 
 {% roboWikiPicture {src:"docs/altruist/altruist_syb_buy.jpg", alt:"subscription page"} %}{% endroboWikiPicture %}
 
-3) Сlick `BUY SUBSCRIPTION` and sign the transaction. **Wait for the activation process to complete**. 
+3) Сlick `BUY SUBSCRIPTION` and sign the transaction. **Wait for the activation process to complete**.
 4) Once activated, you will be redirected to the **setup page**, where you can see your subscription name and expiration date.
 
 {% roboWikiPicture {src:"docs/altruist/altruist_setup_page.jpg", alt:"subscription setup page"} %}{% endroboWikiPicture %}
@@ -29,7 +33,7 @@ If you don’t have an account, follow [this guide](https://wiki.robonomics.netw
 {% roboWikiNote {type: "warning", title: "INFO"}%} The sensor can only be connected to a 2.4GHz Wi-Fi network.{% endroboWikiNote %}
 
 1) **Plug in the sensor** to a power socket.
-2) The board will create a Wi-Fi network named Altruist-xxxxxxxxx. Connect to it from your phone or computer. You should be automatically prompted to open the authorization window. 
+2) The board will create a Wi-Fi network named Altruist-xxxxxxxxx. Connect to it from your phone or computer. You should be automatically prompted to open the authorization window.
 - If not, open a browser and go to 192.168.4.1.
 
 {% roboWikiPicture {src:"docs/altruist/networks.png", alt:"altruist-sensor", small: true} %}{% endroboWikiPicture %}
@@ -48,7 +52,7 @@ If you don’t have an account, follow [this guide](https://wiki.robonomics.netw
 
 5) **Enter your Robonomics details**:
 - Open the Altruist web interface at http://altruist.local (or use your custom Local Hostname followed by `.local` if you changed it). Then, navigate to the `Configuration` page.
-- In the `Robonomics` section paste the RWS Owner Address you copied earlier into the designated field. 
+- In the `Robonomics` section paste the RWS Owner Address you copied earlier into the designated field.
 
 6) **Set the sensor location**:
 - In the `GPS & Temperature Correction` section enter the coordinates of the sensor's installation site.
@@ -93,7 +97,7 @@ There are two ways to add **Altruist** to **Home Assistant**:
 
 ### Option 1: HACS (Recommended)
 
-The easiest way to add **Altruist** is through **HACS**. You can find a brief setup guide [here](https://hacs.xyz/docs/use/) 
+The easiest way to add **Altruist** is through **HACS**. You can find a brief setup guide [here](https://hacs.xyz/docs/use/)
 
 **Steps**:
 1) Once HACS is installed, open it.
@@ -161,4 +165,3 @@ After installation and restarting Home Assistant, the integration will automatic
 {% roboWikiPicture {src:"docs/altruist/add_altruist.jpg", alt:"discover altruist"} %}{% endroboWikiPicture %}
 
 That’s it! 🚀 Your Altruist Sensor is now integrated with Home Assistant.
-
