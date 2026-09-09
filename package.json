@@ -68,6 +68,6 @@
     "markdown-it-prism": "^2.3.0",
     "node-html-to-image": "3.2.4",
     "ping-ipfs-gateway": "^1.0.1",
-    "svgo": "^3.3.2"
+    "svgo": "^3.3.5"
   }
 }
