@@ -1,44 +1,52 @@
 ---
-title: Começando
-
-contributors: [Vourhey, positivecrash]
+title: Primeiros passos
+contributors: [Vourhey, positivecrash, ensrationis]
 ---
 
-## O que é Robonomics
+Esta página leva você do zero ao seu primeiro registro na rede Robonomics. Você precisa de um navegador, uma extensão de carteira e um pouco de XRT.
 
-A plataforma Robonomics fornece ferramentas para trabalhar com a rede de economia de robôs. Robonomics permite que os designers de cidades inteligentes e zonas da indústria 4.0 construam confiança entre os [serviços de robôs autônomos](/docs/glossary#cyber-physical-system), forneçam [acesso direto ao usuário via dapp](/docs/glossary#dapp) para encomendar produtos de fábricas autônomas e serviços de redes de sensores urbanos. Isso, por sua vez, nos permitirá implementar um sistema descentralizado que monitora globalmente as atividades de sistemas cibernéticos físicos.
+## 1. Crie uma conta
 
-O gráfico a seguir descreve o lugar que o Robonomics ocupa no cenário:
+1. Instale a [extensão Polkadot.js](https://polkadot.js.org/extension/) ou outra carteira Polkadot que funcione com redes personalizadas.
+2. Crie uma conta na carteira. Anote a frase de recuperação e guarde-a offline.
+3. A mesma conta funciona no Robonomics. O Robonomics mostra os endereços no seu próprio formato (prefixo SS58 32), então lá o seu endereço começa com `4`.
 
-{% roboWikiPicture {src:"docs/robonomics_network_basic_scheme.jpg", alt:"Cenário da Rede Robonomics"} %}{% endroboWikiPicture %}
+Uma conta só existe on-chain quando tem pelo menos o depósito existencial, 0.000001 XRT.
 
-Saiba mais em [Construindo dApps no deck Robonomics](https://gateway.pinata.cloud/ipfs/QmNNdLG3vuTsJtZtNByWaDTKRYPcBZSZcsJ1FY6rTYCixQ/Robonomics_keypoint_March_2021.pdf)
+## 2. Consiga XRT
 
-## Início rápido da Rede Robonomics
-**Para a conveniência dos recém-chegados, os desenvolvedores principais do Robonomics criaram uma [curva de aprendizado de 6 lições](/docs/wschool2021-intro/)!**
+Você precisa de muito pouco. No momento em que escrevemos, um registro de datalog custa bem menos de 0.001 XRT em taxas.
 
-Você explorará a arquitetura de IoT sem servidor! Os Serviços Web Robonomics (RWS) são o serviço infraestrutural básico para Robótica e IoT em cima do Polkadot && IPFS.
+Onde o XRT é negociado hoje:
 
-Os graduados do curso podem lançar uma cadeia de relé local e controlar um dispositivo compatível com ROS por meio de transações entre cadeias.
+- **Uniswap no Ethereum.** O XRT de produção no Ethereum é XRT transferido do Polkadot pela Snowbridge. O contrato é `0x1F752250f518e419f2F03804E25728c5C6DfF73f`. [Trocar na Uniswap](https://app.uniswap.org/swap?chain=mainnet&inputCurrency=NATIVE&outputCurrency=0x1f752250f518e419f2f03804e25728c5c6dff73f). A [Snowbridge](https://app.snowbridge.network/send) move tokens entre o Ethereum e o Polkadot.
+- **Polkadot Asset Hub.** O XRT existe no Asset Hub, e lá há um pool de troca DOT–XRT.
 
-**[Junte-se ao Discord dos Desenvolvedores Robonomics](https://discord.gg/jTxqGeF5Qy) para se conectar com a comunidade e obter suporte técnico.**
+Mover XRT do Asset Hub para a sua conta na parachain Robonomics é uma transferência entre chains. Ainda não foi publicado um guia passo a passo para isso. Se você travar, pergunte no grupo do Telegram [XRT Traders](https://t.me/xrt_trade).
 
-### Benefícios para os graduados da Academia Robonomics
-- Estágio para os melhores alunos   Torne-se membro da equipe Robonomics e contribua para o desenvolvimento do produto escolhido.
-- Comunidade ativa && eventos regulares   Faça parte da comunidade de aprendizes, discuta seus casos de uso com especialistas do setor. Junte-se e participe de hackathons!
-- Certificado de conclusão   Adicione um certificado por concluir o curso de construção de DAPPs para IoT ao seu portfólio.
-- Assistência na admissão à universidade ITMO. Seja você um bacharel ou mestre, receberá assistência em sua admissão na universidade.
-- Oportunidades de financiamento && aceleração: 1)Candidate-se a uma bolsa de apoio Academia de até $50.000; 2)Participe do programa de aceleração de construtores Robonomics apoiado pela Web3 Foundation; 3)Implante seu DAPP independente em cima do Robonomics; 4)Monetize-o && obtenha suporte de marketing da equipe Robonomics.
+{% roboWikiNote {type: "warning", title: "Links antigos"}%} Algumas páginas antigas ainda apontam para exchanges que não listam mais o XRT e para o token legado no Ethereum `0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7`. O token legado não é o XRT de produção. {% endroboWikiNote %}
 
+## 3. Conecte o Polkadot.js Apps
 
-## O que a documentação contém
+Abra o [Polkadot.js Apps com o RPC do Robonomics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot.rpc.robonomics.network%2F#/explorer). Ele se conecta ao endpoint público `wss://polkadot.rpc.robonomics.network/`. Autorize o site na extensão da carteira para que a sua conta apareça.
 
-### Sou um desenvolvedor de Dapp
+Para ver blocos, contas e transferências, você também pode usar o explorador de blocos em [scan.robonomics.network](https://scan.robonomics.network).
 
-- [Robonomics-js no GitHub](https://github.com/airalab/robonomics-js) - SDK simples em Javascript para desenvolvedores de Dapp da Rede Robonomics.
-- [Modelo de Dapp](https://github.com/airalab/vue-dapp-robonomics-template) - usa Vue.js
-- [Documentação Wiki](/docs/robonomics-js/)
+<a id="4-send-your-first-record"></a>
 
-### Sou um engenheiro de robótica
+## 4. Envie o seu primeiro registro
 
-Confira a seção de [casos](/docs/iot-sensors-connectivity/) e comece a desenvolver por meio de [exemplos](/docs/agent-development-examples).
+O primeiro passo mais simples é um registro de datalog: um pequeno dado guardado on-chain na sua conta.
+
+1. No Polkadot.js Apps, abra **Developer → Extrinsics**.
+2. Escolha a sua conta, depois `datalog` e `record`.
+3. Digite os dados, até 512 bytes. Texto simples serve.
+4. Envie a transação e assine na carteira.
+
+Para ler de volta, abra **Developer → Chain state**, escolha `datalog` e `datalogIndex` e consulte a sua conta. Você vê quais slots guardam os seus registros. Depois consulte `datalogItem` com a sua conta e o número de um slot. Cada registro vem com um timestamp.
+
+O Datalog é um dos [pallets legados](/docs/legacy-pallets/#datalog). Ele ainda funciona e é um bom primeiro teste, mas projetos novos devem usar a árvore de dispositivos.
+
+## 5. Próximo passo: descreva os seus dispositivos
+
+O núcleo do Robonomics é a árvore de dispositivos. Você cria um nó para a sua instalação, adiciona nós para as partes e os dispositivos e decide quem pode atualizá-los. Veja [Árvore de dispositivos (CPS)](/docs/device-tree/) e depois [Conectar dispositivos](/docs/connect-devices/).

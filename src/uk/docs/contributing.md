@@ -1,41 +1,46 @@
 ---
-title: Як внести внесок у ресурси Robonomics
-
-contributors: [positivecrash]
+title: Як долучитися
+contributors: [positivecrash, ensrationis]
 ---
 
-Мережа Robonomics є проектом з відкритим вихідним кодом, і ми хочемо, щоб кожен міг внести свій внесок. Ви можете створювати статті, пропонувати зміни, покращувати документацію або запускати тести. Якщо ви хочете внести свій внесок, будь ласка, відкрийте нове питання або створіть запит на злиття в тому ж репозиторії.
+Robonomics — проєкт із відкритим кодом, і ми хочемо, щоб долучитися міг будь-хто. Можна повідомити про проблему, запропонувати зміну, покращити код або цю документацію. Відкрийте issue або pull request у тому репозиторії, до якого належить зміна.
 
-## Основні репозиторії Robonomics
+## Основні репозиторії
 
-- [Robonomics Wiki](https://github.com/airalab/robonomics-wiki) — Основний проект вікі
-- [Robonomics Main](https://github.com/airalab/robonomics.network) — Офіційний веб-сайт мережі Robonomics
-- [Robonomics.cloud](https://github.com/airalab/robonomics.cloud) — Домашня сторінка для веб-сервісів Robonomics
-- [Robonomics Dapp](https://github.com/airalab/dapp.robonomics.network) — Офіційний додаток
-- [Robonomics Academy](https://github.com/airalab/robonomics.academy) — Офіційний веб-сайт Академії Robonomics
+- [airalab/robonomics](https://github.com/airalab/robonomics): рантайм і його палети. Там є власні CONTRIBUTING.md і SECURITY.md.
+- [airalab/robins](https://github.com/airalab/robins): інструменти, зокрема консольна утиліта `cps` і шлюзи для пристроїв.
+- [airalab/robonomics-interface](https://github.com/airalab/robonomics-interface): бібліотека для Python.
+- [airalab/robonomics.app](https://github.com/airalab/robonomics.app): вебзастосунок [robonomics.app](https://robonomics.app).
+- [airalab/robonomics-wiki](https://github.com/airalab/robonomics-wiki): ця вікі.
+- [airalab/robonomics.network](https://github.com/airalab/robonomics.network): основний сайт.
+- [airalab/robonomics.academy](https://github.com/airalab/robonomics.academy): сайт Robonomics Academy.
 
-### Правила для звітності
+## Як повідомити про проблему
 
-При відкритті нового питання не забудьте про кілька основних правил для звітності:
+1. Виберіть репозиторій, до якого належить проблема.
+2. Якщо це помилка, перевірте, що про неї ще не повідомляли.
+3. Дайте зрозумілий заголовок і опис, з якомога більшою кількістю корисних подробиць.
+4. Для цієї вікі використовуйте шаблон issue і вкажіть сторінку, яку треба виправити.
 
-1. Виберіть точний репозиторій, до якого ви хочете подати питання.
+Не повідомляйте про вразливості в публічних issue. Дотримуйтеся SECURITY.md в [airalab/robonomics](https://github.com/airalab/robonomics): там описано закритий канал через GitHub Security Advisories.
 
-2. Якщо ви повідомляєте про помилку, переконайтеся, що цю помилку ще не повідомлено.
+## Як запропонувати зміну в мережі
 
-3. Обов'язково включіть заголовок і чіткий опис, якомога більше відповідної інформації.
+Про зміни рантайму та його параметрів вирішують власники XRT. Спершу опишіть ідею в issue в [airalab/robonomics](https://github.com/airalab/robonomics/issues), потім винесіть її на референдум. Див. [XRT та управління](/docs/xrt-and-governance/#how-to-propose-a-change).
 
-4. Будь ласка, позначте ваше питання одним із наступних: `[BUG]`, `[PROPOSAL]`, `[QUESTION]`.
+## Pull request
 
-## Запити на злиття
+1. Дрібні виправлення на кшталт одруківок краще одразу надсилати як pull request, а не issue.
+2. Опишіть у pull request проблему та рішення. Якщо є пов'язаний issue, дайте на нього посилання.
+3. Не надсилайте pull request, які виправляють лише пробіли чи форматування.
+4. Дотримуйтеся стилю, мови й оформлення навколишнього тексту.
 
-Будь-який репозиторій Robonomics може бути предметом запитів на злиття або змін від учасників, якщо ви вважаєте, що маєте щось цінне для додавання або зміни. Будь ласка, не забувайте про основні правила для учасників.
+## Як редагувати цю вікі
 
-### Правила для внеску
+Вікі збирається на Eleventy. Потрібен Node.js 20 або 22 і новіший.
 
-1. Запити на злиття бажані до питань, якщо у вас є які-небудь виправлення, особливо для невеликих змін, таких як помилки в тексті.
+1. Склонуйте [airalab/robonomics-wiki](https://github.com/airalab/robonomics-wiki), потім виконайте `npm install` і `npm run start`, щоб запустити сайт локально.
+2. Сторінки — це файли Markdown у `src/docs/`. Кожен починається з frontmatter: `title`, `contributors` (імена користувачів GitHub) і, за бажанням, `tools`.
+3. Бічне меню задається в `src/_data/sidebar_docs.json`. Додаючи пункт, додайте його заголовок і в `translations/pages/en.json`.
 
-2. Переконайтеся, що опис PR чітко описує проблему та рішення. Вкажіть номер відповідного питання, якщо це можливо.
-
-3. Будь ласка, не виправляйте пробіли, форматуйте код або робіть виключно косметичні патчі.
-
-4. Будь ласка, намагайтеся дотримуватися пануючого стилю, мови та макету Markdown.
+[README](https://github.com/airalab/robonomics-wiki#readme) розповідає про компоненти сторінок і про те, як влаштовано переклад.

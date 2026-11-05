@@ -1,41 +1,46 @@
 ---
-title: Как внести вклад в ресурсы Robonomics
-
-contributors: [positivecrash]
+title: Как внести вклад
+contributors: [positivecrash, ensrationis]
 ---
 
-Сеть Robonomics - это проект с открытым исходным кодом, и мы хотим, чтобы каждый мог внести свой вклад. Вы можете создавать статьи, предлагать изменения, улучшать документацию или запускать тесты. Если вы хотите внести свой вклад, пожалуйста, откройте новую проблему или создайте запрос на включение изменений в тот же репозиторий.
+Robonomics — проект с открытым кодом, и мы хотим, чтобы внести вклад мог любой. Можно сообщить о проблеме, предложить изменение, улучшить код или эту документацию. Откройте issue или pull request в том репозитории, к которому относится изменение.
 
-## Основные репозитории Robonomics
+## Основные репозитории
 
-- [Robonomics Wiki](https://github.com/airalab/robonomics-wiki) — Основной проект вики
-- [Robonomics Main](https://github.com/airalab/robonomics.network) — Официальный веб-сайт сети Robonomics
-- [Robonomics.cloud](https://github.com/airalab/robonomics.cloud) — Домашняя страница для веб-сервисов Robonomics
-- [Robonomics Dapp](https://github.com/airalab/dapp.robonomics.network) — Официальное приложение
-- [Robonomics Academy](https://github.com/airalab/robonomics.academy) — Официальный веб-сайт Академии Robonomics
+- [airalab/robonomics](https://github.com/airalab/robonomics): рантайм и его паллеты. Там есть свои CONTRIBUTING.md и SECURITY.md.
+- [airalab/robins](https://github.com/airalab/robins): инструменты, в том числе консольная утилита `cps` и шлюзы для устройств.
+- [airalab/robonomics-interface](https://github.com/airalab/robonomics-interface): библиотека для Python.
+- [airalab/robonomics.app](https://github.com/airalab/robonomics.app): веб-приложение [robonomics.app](https://robonomics.app).
+- [airalab/robonomics-wiki](https://github.com/airalab/robonomics-wiki): эта вики.
+- [airalab/robonomics.network](https://github.com/airalab/robonomics.network): основной сайт.
+- [airalab/robonomics.academy](https://github.com/airalab/robonomics.academy): сайт Robonomics Academy.
 
-### Правила для сообщений
+## Как сообщить о проблеме
 
-При открытии новой проблемы не забудьте о нескольких основных правилах для сообщений:
+1. Выберите репозиторий, к которому относится проблема.
+2. Если это ошибка, проверьте, что о ней ещё не сообщали.
+3. Дайте понятный заголовок и описание, с максимумом полезных подробностей.
+4. Для этой вики используйте шаблон issue и укажите страницу, которую нужно исправить.
 
-1. Выберите точный репозиторий, в который вы хотите отправить проблему.
+Не сообщайте об уязвимостях в публичных issue. Следуйте SECURITY.md в [airalab/robonomics](https://github.com/airalab/robonomics): там описан закрытый канал через GitHub Security Advisories.
 
-2. Если вы сообщаете о баге, убедитесь, что этот баг еще не был сообщен.
+## Как предложить изменение в сети
 
-3. Обязательно включите заголовок и четкое описание, а также как можно больше соответствующей информации.
+Об изменениях рантайма и его параметров решают держатели XRT. Сначала опишите идею в issue в [airalab/robonomics](https://github.com/airalab/robonomics/issues), затем вынесите её на референдум. См. [XRT и управление](/docs/xrt-and-governance/#how-to-propose-a-change).
 
-4. Пожалуйста, добавьте префикс к вашей проблеме один из следующих: `[BUG]`, `[PROPOSAL]`, `[QUESTION]`.
+## Pull request
 
-## Запросы на включение изменений
+1. Мелкие правки вроде опечаток лучше сразу присылать pull request, а не issue.
+2. Опишите в pull request проблему и решение. Если есть связанный issue, дайте на него ссылку.
+3. Не присылайте pull request, которые правят только пробелы или форматирование.
+4. Следуйте стилю, языку и оформлению окружающего текста.
 
-Любой репозиторий Robonomics может быть предметом запросов на включение изменений или изменений со стороны участников, если вы считаете, что у вас есть что-то ценное для добавления или изменения. Пожалуйста, не забывайте о базовых правилах для участников.
+## Как править эту вики
 
-### Правила для участия
+Вики собирается на Eleventy. Нужен Node.js 20 или 22 и новее.
 
-1. Запросы на включение изменений предпочтительнее проблем, если у вас есть какие-то исправления, особенно для небольших изменений, таких как опечатки.
+1. Склонируйте [airalab/robonomics-wiki](https://github.com/airalab/robonomics-wiki), затем выполните `npm install` и `npm run start`, чтобы запустить сайт локально.
+2. Страницы — это файлы Markdown в `src/docs/`. Каждый начинается с frontmatter: `title`, `contributors` (имена пользователей GitHub) и, по желанию, `tools`.
+3. Боковое меню задаётся в `src/_data/sidebar_docs.json`. Добавляя пункт, добавьте его заголовок и в `translations/pages/en.json`.
 
-2. Убедитесь, что описание запроса на включение изменений четко описывает проблему и решение. Укажите номер соответствующей проблемы, если применимо.
-
-3. Пожалуйста, не исправляйте пробелы, форматируйте код или делайте чисто косметические патчи.
-
-4. Пожалуйста, старайтесь придерживаться преобладающего стиля, языка и макета Markdown.
+[README](https://github.com/airalab/robonomics-wiki#readme) рассказывает о компонентах страниц и о том, как устроен перевод.

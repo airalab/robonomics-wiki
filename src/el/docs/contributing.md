@@ -1,41 +1,46 @@
 ---
-title: Πώς να Συνεισφέρετε στους Πόρους του Robonomics
-
-contributors: [positivecrash]
+title: Συνεισφορά
+contributors: [positivecrash, ensrationis]
 ---
 
-Το Δίκτυο Robonomics είναι ένα έργο ανοικτού κώδικα και θέλουμε να κάνουμε εύκολη τη συνεισφορά οποιουδήποτε. Μπορείτε να δημιουργήσετε άρθρα, να προτείνετε αλλαγές, να βελτιώσετε την τεκμηρίωση ή να εκτελέσετε δοκιμές. Αν θέλετε να συνεισφέρετε, παρακαλούμε, ανοίξτε ένα νέο θέμα ή δημιουργήστε ένα αίτημα ενσωμάτωσης (pull request) στον ίδιο αποθετήριο.
+Το Robonomics είναι έργο ανοιχτού κώδικα, και θέλουμε να μπορεί ο καθένας να συνεισφέρει εύκολα. Μπορείτε να αναφέρετε ένα πρόβλημα, να προτείνετε μια αλλαγή, να βελτιώσετε τον κώδικα ή αυτή την τεκμηρίωση. Ανοίξτε ένα issue ή ένα pull request στο αποθετήριο όπου ανήκει η αλλαγή.
 
-## Κύρια Αποθετήρια του Robonomics
+## Κύρια αποθετήρια
 
-- [Robonomics Wiki](https://github.com/airalab/robonomics-wiki) — Κύριο έργο wiki
-- [Robonomics Main](https://github.com/airalab/robonomics.network) — Επίσημη κύρια ιστοσελίδα του Δικτύου Robonomics
-- [Robonomics.cloud](https://github.com/airalab/robonomics.cloud) — Σπίτι για τις Υπηρεσίες Ιστού του Robonomics
-- [Robonomics Dapp](https://github.com/airalab/dapp.robonomics.network) — Επίσημη εφαρμογή dapp
-- [Robonomics Academy](https://github.com/airalab/robonomics.academy) — Επίσημη ιστοσελίδα της Ακαδημίας Robonomics
+- [airalab/robonomics](https://github.com/airalab/robonomics): το runtime και τα pallets του. Έχει δικά του CONTRIBUTING.md και SECURITY.md.
+- [airalab/robins](https://github.com/airalab/robins): εργαλεία, μεταξύ των οποίων το εργαλείο γραμμής εντολών `cps` και gateways για συσκευές.
+- [airalab/robonomics-interface](https://github.com/airalab/robonomics-interface): η βιβλιοθήκη Python.
+- [airalab/robonomics.app](https://github.com/airalab/robonomics.app): η web εφαρμογή στο [robonomics.app](https://robonomics.app).
+- [airalab/robonomics-wiki](https://github.com/airalab/robonomics-wiki): αυτό το wiki.
+- [airalab/robonomics.network](https://github.com/airalab/robonomics.network): ο κύριος ιστότοπος.
+- [airalab/robonomics.academy](https://github.com/airalab/robonomics.academy): ο ιστότοπος της Robonomics Academy.
 
-### Κανόνες για την Αναφορά
+## Αναφορά προβλημάτων
 
-Όταν ανοίγετε ένα νέο θέμα, μην ξεχνάτε μερικούς βασικούς κανόνες για την αναφορά:
+1. Επιλέξτε το αποθετήριο όπου ανήκει το issue.
+2. Αν πρόκειται για σφάλμα, ελέγξτε ότι δεν έχει ήδη αναφερθεί.
+3. Δώστε σαφή τίτλο και περιγραφή, με όσο περισσότερες σχετικές πληροφορίες μπορείτε.
+4. Για αυτό το wiki, χρησιμοποιήστε το πρότυπο issue και αναφέρετε τη σελίδα που χρειάζεται διόρθωση.
 
-1. Επιλέξτε το ακριβές αποθετήριο στο οποίο θέλετε να υποβάλετε ένα θέμα.
+Μην αναφέρετε ευπάθειες ασφαλείας σε δημόσια issues. Ακολουθήστε το SECURITY.md στο [airalab/robonomics](https://github.com/airalab/robonomics): προβλέπει ιδιωτική αναφορά μέσω των GitHub Security Advisories.
 
-2. Αν αναφέρετε ένα σφάλμα, βεβαιωθείτε ότι το σφάλμα δεν έχει ήδη αναφερθεί.
+## Προτάσεις αλλαγών στο δίκτυο
 
-3. Βεβαιωθείτε ότι περιλαμβάνετε τίτλο και σαφή περιγραφή, όσο το δυνατόν περισσότερες σχετικές πληροφορίες.
+Για τις αλλαγές στο runtime και στις παραμέτρους του αποφασίζουν οι κάτοχοι XRT. Πρώτα περιγράψτε την ιδέα σε ένα issue στο [airalab/robonomics](https://github.com/airalab/robonomics/issues) και μετά φέρτε την σε δημοψήφισμα. Δείτε [XRT και διακυβέρνηση](/docs/xrt-and-governance/#how-to-propose-a-change).
 
-4. Παρακαλώ, προσθέστε πρόθεμα στο θέμα σας με ένα από τα παρακάτω: `[BUG]`, `[PROPOSAL]`, `[QUESTION]`.
+## Pull requests
 
-## Αιτήματα Ενσωμάτωσης
+1. Για μικρές διορθώσεις, όπως τυπογραφικά λάθη, ένα pull request είναι καλύτερο από ένα issue.
+2. Περιγράψτε το πρόβλημα και τη λύση στο pull request. Συνδέστε το σχετικό issue, αν υπάρχει.
+3. Μη στέλνετε pull requests που διορθώνουν μόνο κενά ή μορφοποίηση.
+4. Ακολουθήστε το ύφος, τη γλώσσα και τη διάταξη του γύρω κειμένου.
 
-Οποιοδήποτε αποθετήριο του Robonomics μπορεί να υπόκειται σε αιτήματα ενσωμάτωσης ή αλλαγές από συνεισφέροντες, όπου πιστεύετε ότι έχετε κάτι αξιόλογο να προσθέσετε ή να αλλάξετε. Παρακαλώ, μην ξεχνάτε τους βασικούς κανόνες για τους συνεισφέροντες.
+## Επεξεργασία αυτού του wiki
 
-### Κανόνες για την Συνεισφορά
+Το wiki χτίζεται με το Eleventy. Χρειάζεστε Node.js 20, ή 22 και νεότερο.
 
-1. Τα αιτήματα ενσωμάτωσης προτιμώνται από τα θέματα, αν έχετε κάποιες διορθώσεις, ιδίως για μικρές αλλαγές όπως τυπογραφικά λάθη.
+1. Κάντε clone το [airalab/robonomics-wiki](https://github.com/airalab/robonomics-wiki) και μετά τρέξτε `npm install` και `npm run start` για να το σερβίρετε τοπικά.
+2. Οι σελίδες είναι αρχεία Markdown στο `src/docs/`. Η καθεμία ξεκινά με frontmatter: `title`, `contributors` (ονόματα χρηστών GitHub) και, προαιρετικά, `tools`.
+3. Η πλαϊνή μπάρα είναι το `src/_data/sidebar_docs.json`. Όταν προσθέτετε μια καταχώριση, προσθέστε τον τίτλο της και στο `translations/pages/en.json`.
 
-2. Βεβαιωθείτε ότι η περιγραφή του αιτήματος ενσωμάτωσης περιγράφει σαφώς το πρόβλημα και τη λύση. Συμπεριλάβετε τον αντίστοιχο αριθμό θέματος αν είναι εφαρμόσιμο.
-
-3. Παρακαλώ, μην διορθώνετε τα κενά, μορφοποιήστε τον κώδικα ή κάνετε μια αποκλειστικά κοσμητική επέμβαση.
-
-4. Παρακαλώ, προσπαθήστε να τηρήσετε τον επικρατούντα στυλ, τη γλώσσα και τη διάταξη του Markdown.
+Το [README](https://github.com/airalab/robonomics-wiki#readme) εξηγεί τα δομικά στοιχεία των σελίδων και τη διαδικασία μετάφρασης.

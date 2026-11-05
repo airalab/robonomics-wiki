@@ -1,41 +1,46 @@
 ---
-title: كيفية المساهمة في موارد Robonomics
-
-contributors: [positivecrash]
+title: المساهمة
+contributors: [positivecrash, ensrationis]
 ---
 
-شبكة Robonomics هي مشروع مفتوح المصدر ونرغب في تسهيل عملية المساهمة للجميع. يمكنك إنشاء مقالات، اقتراح تغييرات، تحسين الوثائق أو تشغيل الاختبارات. إذا كنت ترغب في المساهمة، يرجى فتح مشكلة جديدة أو إنشاء طلب سحب في نفس المستودع.
+Robonomics مشروع مفتوح المصدر، ونريد أن نجعل المساهمة فيه سهلة على الجميع. يمكنك الإبلاغ عن مشكلة، أو اقتراح تغيير، أو تحسين الكود أو هذا التوثيق. افتح issue أو pull request في المستودع الذي ينتمي إليه التغيير.
 
-## المستودعات الرئيسية لـ Robonomics
+## المستودعات الرئيسية
 
-- [Robonomics Wiki](https://github.com/airalab/robonomics-wiki) — المشروع الرئيسي للويكي
-- [Robonomics Main](https://github.com/airalab/robonomics.network) — الموقع الرسمي لشبكة Robonomics
-- [Robonomics.cloud](https://github.com/airalab/robonomics.cloud) — الموقع الرئيسي لخدمات الويب Robonomics
-- [Robonomics Dapp](https://github.com/airalab/dapp.robonomics.network) — التطبيق الرسمي
-- [Robonomics Academy](https://github.com/airalab/robonomics.academy) — الموقع الرسمي لأكاديمية Robonomics
+- [airalab/robonomics](https://github.com/airalab/robonomics): وقت التشغيل ووحداته. فيه ملفا CONTRIBUTING.md وSECURITY.md خاصان به.
+- [airalab/robins](https://github.com/airalab/robins): أدوات، منها أداة سطر الأوامر `cps` وبوابات الأجهزة.
+- [airalab/robonomics-interface](https://github.com/airalab/robonomics-interface): مكتبة Python.
+- [airalab/robonomics.app](https://github.com/airalab/robonomics.app): تطبيق الويب على [robonomics.app](https://robonomics.app).
+- [airalab/robonomics-wiki](https://github.com/airalab/robonomics-wiki): هذا الويكي.
+- [airalab/robonomics.network](https://github.com/airalab/robonomics.network): الموقع الرئيسي.
+- [airalab/robonomics.academy](https://github.com/airalab/robonomics.academy): موقع Robonomics Academy.
 
-### قواعد التقارير
+## الإبلاغ عن المشكلات
 
-عند فتح مشكلة جديدة، لا تنسى بعض القواعد الأساسية للتقارير:
+1. اختر المستودع الذي تنتمي إليه المشكلة.
+2. إذا كانت خطأً برمجيًا، فتحقق من أنه لم يُبلَّغ عنه من قبل.
+3. اكتب عنوانًا ووصفًا واضحين، مع أكبر قدر ممكن من المعلومات ذات الصلة.
+4. لهذا الويكي، استخدم قالب الـ issue واذكر الصفحة التي تحتاج إلى إصلاح.
 
-1. اختر المستودع الدقيق الذي ترغب في تقديم مشكلة له.
+لا تبلّغ عن الثغرات الأمنية في issues علنية. اتبع ملف SECURITY.md في [airalab/robonomics](https://github.com/airalab/robonomics): فهو يعتمد الإبلاغ الخاص عبر GitHub Security Advisories.
 
-2. إذا كنت تقوم بالإبلاغ عن خطأ، تأكد من أن الخطأ لم يتم الإبلاغ عنه بالفعل.
+## اقتراح تغييرات على الشبكة
 
-3. تأكد من تضمين عنوان ووصف واضح، بقدر الإمكان من المعلومات ذات الصلة.
+يقرر حاملو XRT التغييرات على وقت التشغيل ومعاملاته. صِف الفكرة أولًا في issue على [airalab/robonomics](https://github.com/airalab/robonomics/issues)، ثم اطرحها في استفتاء. راجع [XRT والحوكمة](/docs/xrt-and-governance/#how-to-propose-a-change).
 
-4. يرجى تسبيق مشكلتك بأحد العبارات التالية: `[BUG]`, `[PROPOSAL]`, `[QUESTION]`.
+## طلبات الدمج (Pull requests)
 
-## طلبات السحب
+1. للإصلاحات الصغيرة مثل الأخطاء الإملائية، الـ pull request أفضل من الـ issue.
+2. صِف المشكلة والحل في الـ pull request. وأرفق رابط الـ issue المرتبط إن وُجد.
+3. لا ترسل pull requests تقتصر على إصلاح المسافات أو التنسيق.
+4. اتبع أسلوب النص المحيط ولغته وتخطيطه.
 
-يمكن أن يكون أي مستودع Robonomics معرضًا لطلبات السحب أو التغييرات من قبل المساهمين، حيث تعتقد أن لديك شيئًا قيمًا لإضافته أو تغييره. يرجى عدم نسيان القواعد الأساسية للمساهمين.
+## تحرير هذا الويكي
 
-### قواعد المساهمة
+يُبنى الويكي باستخدام Eleventy. تحتاج إلى Node.js 20، أو 22 وما بعده.
 
-1. يفضل طلبات السحب على المشاكل، إذا كان لديك بعض التصحيحات، خاصة للتغييرات الصغيرة مثل الأخطاء الإملائية.
+1. استنسخ [airalab/robonomics-wiki](https://github.com/airalab/robonomics-wiki)، ثم شغّل `npm install` و`npm run start` لعرضه محليًا.
+2. الصفحات ملفات Markdown في `src/docs/`. يبدأ كل منها بـ frontmatter: `title`، و`contributors` (أسماء مستخدمي GitHub)، و`tools` اختياريًا.
+3. الشريط الجانبي هو `src/_data/sidebar_docs.json`. عندما تضيف مُدخلًا، أضف عنوانه إلى `translations/pages/en.json` أيضًا.
 
-2. تأكد من أن وصف طلب السحب يصف بوضوح المشكلة والحل. قم بتضمين رقم المشكلة ذات الصلة إذا كان ذلك مناسبًا.
-
-3. يرجى عدم إصلاح المسافات البيضاء، تنسيق الشفرة، أو إجراء تصحيح جمالي فقط.
-
-4. يرجى المحاولة للالتزام بأسلوب Markdown السائد، واللغة، والتخطيط.
+يشرح [ملف README](https://github.com/airalab/robonomics-wiki#readme) مكونات الصفحات وطريقة العمل على الترجمة.

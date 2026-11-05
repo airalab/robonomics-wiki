@@ -1,41 +1,46 @@
 ---
-title: Como Contribuir para os Recursos do Robonomics
-
-contributors: [positivecrash]
+title: Contribuir
+contributors: [positivecrash, ensrationis]
 ---
 
-A Rede Robonomics é um projeto de código aberto e queremos tornar fácil para qualquer pessoa contribuir. Você pode criar artigos, sugerir alterações, melhorar a documentação ou executar testes. Se deseja contribuir, por favor, abra um novo problema ou crie um pull request no mesmo repositório.
+O Robonomics é um projeto de código aberto, e queremos que qualquer pessoa possa contribuir com facilidade. Você pode relatar um problema, sugerir uma mudança, melhorar o código ou esta documentação. Abra uma issue ou um pull request no repositório ao qual a mudança pertence.
 
-## Principais Repositórios do Robonomics
+## Repositórios principais
 
-- [Robonomics Wiki](https://github.com/airalab/robonomics-wiki) — Projeto principal da wiki
-- [Robonomics Main](https://github.com/airalab/robonomics.network) — Site oficial principal da Rede Robonomics
-- [Robonomics.cloud](https://github.com/airalab/robonomics.cloud) — Casa dos Serviços Web do Robonomics
-- [Robonomics Dapp](https://github.com/airalab/dapp.robonomics.network) — Dapp oficial
-- [Robonomics Academy](https://github.com/airalab/robonomics.academy) — Site oficial da Academia Robonomics
+- [airalab/robonomics](https://github.com/airalab/robonomics): o runtime e seus pallets. Tem os próprios CONTRIBUTING.md e SECURITY.md.
+- [airalab/robins](https://github.com/airalab/robins): ferramentas, incluindo a ferramenta de linha de comando `cps` e gateways para dispositivos.
+- [airalab/robonomics-interface](https://github.com/airalab/robonomics-interface): a biblioteca Python.
+- [airalab/robonomics.app](https://github.com/airalab/robonomics.app): o app web em [robonomics.app](https://robonomics.app).
+- [airalab/robonomics-wiki](https://github.com/airalab/robonomics-wiki): esta wiki.
+- [airalab/robonomics.network](https://github.com/airalab/robonomics.network): o site principal.
+- [airalab/robonomics.academy](https://github.com/airalab/robonomics.academy): o site da Robonomics Academy.
 
-### Regras para Relatar
+## Relatando problemas
 
-Ao abrir um novo problema, não se esqueça de algumas regras básicas para relatar:
+1. Escolha o repositório ao qual a issue pertence.
+2. Se for um bug, confira se ele ainda não foi relatado.
+3. Escreva um título e uma descrição claros, com o máximo de informação relevante que puder.
+4. Para esta wiki, use o modelo de issue e diga qual página precisa de correção.
 
-1. Escolha o repositório exato para o qual deseja enviar um problema.
+Não relate vulnerabilidades de segurança em issues públicas. Siga o SECURITY.md do [airalab/robonomics](https://github.com/airalab/robonomics): ele usa relatos privados pelo GitHub Security Advisories.
 
-2. Se estiver relatando um bug, certifique-se de que o bug ainda não foi relatado.
+## Propondo mudanças na rede
 
-3. Certifique-se de incluir um título e uma descrição clara, com o máximo de informações relevantes possível.
+Mudanças no runtime e nos seus parâmetros são decididas por quem tem XRT. Primeiro descreva a ideia em uma issue no [airalab/robonomics](https://github.com/airalab/robonomics/issues), depois leve-a a um referendo. Veja [XRT e governança](/docs/xrt-and-governance/#how-to-propose-a-change).
 
-4. Por favor, adicione um prefixo ao seu problema com um dos seguintes: `[BUG]`, `[PROPOSTA]`, `[PERGUNTA]`.
+## Pull requests
 
-## Pull Requests
+1. Para correções pequenas, como erros de digitação, um pull request é melhor que uma issue.
+2. Descreva o problema e a solução no pull request. Inclua o link da issue relacionada, se houver.
+3. Não envie pull requests que só corrigem espaços em branco ou formatação.
+4. Siga o estilo, o idioma e a estrutura do texto ao redor.
 
-Qualquer repositório do Robonomics pode estar sujeito a pull requests ou alterações por contribuidores, caso acredite ter algo valioso para adicionar ou alterar. Por favor, não se esqueça das regras básicas para contribuidores.
+## Editando esta wiki
 
-### Regras para Contribuir
+A wiki é feita com Eleventy. Você precisa do Node.js 20, ou 22 e mais recentes.
 
-1. Pull requests são preferíveis a problemas, se você tiver correções, especialmente para pequenas alterações como erros de digitação.
+1. Clone o [airalab/robonomics-wiki](https://github.com/airalab/robonomics-wiki) e rode `npm install` e `npm run start` para servir a wiki localmente.
+2. As páginas são arquivos Markdown em `src/docs/`. Cada uma começa com um frontmatter: `title`, `contributors` (nomes de usuário do GitHub) e, opcionalmente, `tools`.
+3. A barra lateral é `src/_data/sidebar_docs.json`. Ao adicionar uma entrada, adicione também o título dela em `translations/pages/en.json`.
 
-2. Certifique-se de que a descrição do PR descreva claramente o problema e a solução. Inclua o número do problema relevante, se aplicável.
-
-3. Por favor, não corrija espaços em branco, formate o código ou faça uma correção puramente cosmética.
-
-4. Por favor, tente aderir ao estilo, idioma e layout predominantes do Markdown.
+O [README](https://github.com/airalab/robonomics-wiki#readme) explica os componentes das páginas e o fluxo de tradução.

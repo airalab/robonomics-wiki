@@ -18,6 +18,8 @@ In the runtime the device tree is the `CPS` pallet (cyber-physical systems). Ful
 - A node's parent never changes. To move a node, create a new one and delete the old one.
 - A node can have at most 100 children. Only a node without children can be deleted.
 
+<!-- -->
+
 {% roboWikiNote {type: "warning", title: "Data is public"}%} Everything in the device tree can be read by anyone. Encrypt data before you write it if it must stay private. The `cps` tool from [airalab/robins](https://github.com/airalab/robins) can encrypt for you. {% endroboWikiNote %}
 
 ## Scope

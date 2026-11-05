@@ -1,51 +1,74 @@
 ---
-title: 如何运行Robonomics Dev节点
-contributors: [LoSk-p]
-tools:
-  - Robonomics 2.4.0
-    https://github.com/airalab/robonomics
+title: 运行开发节点
+contributors: [LoSk-p, ensrationis]
 ---
 
-**为了在Robonomics上测试您的应用程序，您可能希望在开发模式下运行。本文展示了如何逐步获取您自己的本地测试实例的Robonomics的说明。**
+开发节点是一条只有单个节点的本地 Robonomics 链，用来测试你的代码。区块即时产出，测试账户自带资金，而且不会触及主网。
 
+现在已经没有 `robonomics --dev` 二进制文件了。你需要从 [airalab/robonomics](https://github.com/airalab/robonomics) 构建运行时，用它生成链规范，然后用这个规范运行 Parity 的通用 `polkadot-omni-node`。
 
-## 获取节点二进制文件
+## 一条命令（Nix）
 
-1. 首先，您需要一个二进制文件，请从最新的[发布版本](https://github.com/airalab/robonomics/releases)中下载包含它的存档。
+在仓库的克隆目录中运行：
 
-2. 转到存档文件夹，解压二进制文件并更改权限：
-
-```bash
-tar xf robonomics-2.4.0-x86_64-unknown-linux-gnu.tar.gz
-chmod +x robonomics
-```
-
-## 运行
-
-使用以下命令运行节点：
+{% codeHelper {copy: true} %}
 
 ```bash
-./robonomics --dev
+nix develop -c ./scripts/development-chain.sh run
 ```
-您将看到以下输出：
 
-{% roboWikiPicture {src:"docs/dev-node/robonomics.png", alt:"robonomics"} %}{% endroboWikiPicture %}
+{% endcodeHelper %}
 
-{% roboWikiNote {title:"从头开始", type: "note"}%} 如果您想清除现有的区块，可以通过删除位于`/tmp/substrate******/chains/dev/db/full`的RocksDB来实现。
-将`******`替换为在启动时日志中显示的相应标识符。
+脚本会在需要时用 `dev-runtime` feature 构建运行时，生成一个临时链规范，然后启动 `polkadot-omni-node --chain <spec> --dev`。
 
-如果您想每次从头开始启动节点，请使用`--tmp`标志。
-{% endroboWikiNote %}
+## 不用 Nix
 
+用 Cargo 安装这两个工具，然后运行同一个脚本：
 
-## 连接
+{% codeHelper {copy: true} %}
 
-现在，您可以通过[Polkadot Portal](https://polkadot.js.org/apps/#/explorer)连接到本地节点。
+```bash
+cargo install staging-chain-spec-builder polkadot-omni-node
+./scripts/development-chain.sh run
+```
 
-在左上角将网络更改为`Local Node`，然后点击`Switch`。
+{% endcodeHelper %}
 
-{% roboWikiPicture {src:"docs/dev-node/portal.png", alt:"switch"} %}{% endroboWikiPicture %}
+## 手动执行
 
-欢迎来到Robonomics的本地实例！
+如果想保留链规范或修改节点参数，可以自己逐步执行：
 
-{% roboWikiPicture {src:"docs/dev-node/dev-portal.png", alt:"local node"} %}{% endroboWikiPicture %}
+{% codeHelper {copy: true} %}
+
+```bash
+cargo build --release -p robonomics-runtime --features dev-runtime
+
+chain-spec-builder -c ./chain_spec.json create \
+  -n "Robonomics Dev" -i robonomics-dev -t development \
+  -r ./target/release/wbuild/robonomics-runtime/robonomics_runtime.compact.compressed.wasm \
+  --para-id 2000 --relay-chain westend-local \
+  --properties tokenSymbol=XRT,tokenDecimals=9 \
+  named-preset development
+
+polkadot-omni-node --chain ./chain_spec.json --dev
+```
+
+{% endcodeHelper %}
+
+没有内置的 `--chain dev`：每次都要传入生成的链规范，再加上 `--dev`。加上 `--base-path <dir>` 可以在重启之间保留链状态。
+
+## 你会得到什么
+
+- RPC 和 WebSocket 地址 `ws://127.0.0.1:9944`。
+- 链 ID `robonomics-dev`，para ID 2000，中继链 `westend-local`，代币 XRT，9 位小数。
+- 预先充值的开发账户：Alice、Bob、Charlie 以及其他常用的测试密钥。
+- Alice 是 Sudo。Sudo 只存在于 `dev-runtime` 构建中，主网上永远没有。
+- 每次启动都是全新状态，除非你设置了 `--base-path`。
+
+把 [Polkadot.js Apps](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer) 连接到 `ws://127.0.0.1:9944` 就可以四处看看。使用 `cps` 工具时，设置 `ROBONOMICS_WS_URL=ws://127.0.0.1:9944` 和 `ROBONOMICS_SURI=//Alice`。
+
+## 在开发链上使用 RWS
+
+RWS 拍卖由 Root 创建。测试 RWS 代码时如果想跳过这一步，可以用 `robonomics-interface` 仓库中的 `scripts/devchain.sh`，它启动的开发链在创世区块中就已经包含 RWS 拍卖。
+
+更多选项，包括 Docker 镜像，见[开发者指南](https://github.com/airalab/robonomics/blob/master/DEVELOPER_GUIDE.md#running-a-development-chain)。
