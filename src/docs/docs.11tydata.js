@@ -45,7 +45,7 @@ export default {
 				return '/assets/images/og-images/' + data.page.url.slice(1, -1).toLowerCase().replace(/\//g, '-') + '.png';
 			} else {
 				// console.error(`No page URL found: ${data.page}`);
-				return '/assets/images/og-images/docs-ptz-camera.png'; // Fallback image
+				return '/assets/images/og-images/docs-robonomics-overview.png'; // Fallback image
 			}
 		},
 		permalink: function (data) {

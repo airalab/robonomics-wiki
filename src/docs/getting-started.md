@@ -1,45 +1,50 @@
 ---
-title: Getting Started
-
-contributors: [Vourhey, positivecrash]
+title: Getting started
+contributors: [Vourhey, positivecrash, ensrationis]
 ---
 
-## What is Robonomics
+This page takes you from nothing to your first record on the Robonomics network. You need a browser, a wallet extension and a small amount of XRT.
 
-Robonomics platform provides tools for working with the robot economy network. Robonomics allow designers of smart cities and industry 4.0 zones to build trust among the [autonomous robots services](/docs/glossary#cyber-physical-system), provide [direct user access via dapp](/docs/glossary#dapp) for ordering products from autonomous factories and services of urban sensor networks. This in turn will allow us to put in place a decentralized system that globally monitors the activities of cyber physical systems.
+## 1. Create an account
 
-The following chart describes what place Robonomics takes in the scenario:
+1. Install the [Polkadot.js extension](https://polkadot.js.org/extension/) or another Polkadot wallet that can work with a custom network.
+2. Create an account in the wallet. Write the recovery phrase down and keep it offline.
+3. The same account works on Robonomics. Robonomics shows addresses in its own format (SS58 prefix 32), so your address there starts with `4`.
 
-{% roboWikiPicture {src:"docs/robonomics_network_basic_scheme.jpg", alt:"Robonomics Network scenario"} %}{% endroboWikiPicture %}
+An account exists on chain only once it holds at least the existential deposit, 0.000001 XRT.
 
-Find more in [Building dApps on Robonomics deck](https://gateway.pinata.cloud/ipfs/QmNNdLG3vuTsJtZtNByWaDTKRYPcBZSZcsJ1FY6rTYCixQ/Robonomics_keypoint_March_2021.pdf)
+## 2. Get XRT
 
-## Robonomics Network quick start
-**For newcomer's convenience core Robonomics developers came up with a [6 lessons learning curve](/docs/wschool2021-intro/)!**
+You need very little. At the time of writing, a datalog record costs well under 0.001 XRT in fees.
 
-You'll explore the serverless IoT architecture! Robonomics Web Services (RWS) is the basic infrastructural service for Robotics and IoT on top of Polkadot && IPFS.
+Where XRT is traded today:
 
-Course graduates can launch a local relay chain and control a ROS-compatible device through cross-chain transaction.
+- **Uniswap on Ethereum.** Production XRT on Ethereum is XRT bridged from Polkadot through Snowbridge. Its contract is `0x1F752250f518e419f2F03804E25728c5C6DfF73f`. [Swap on Uniswap](https://app.uniswap.org/swap?chain=mainnet&inputCurrency=NATIVE&outputCurrency=0x1f752250f518e419f2f03804e25728c5c6dff73f). [Snowbridge](https://app.snowbridge.network/send) moves tokens between Ethereum and Polkadot.
+- **Polkadot Asset Hub.** XRT exists on Asset Hub, and there is a DOT–XRT swap pool there.
 
-**[Join Robonomics Developers Discord](https://discord.gg/jTxqGeF5Qy) to connect with community and get technical support.**
+Moving XRT from Asset Hub to your account on the Robonomics parachain is a cross-chain transfer. No step-by-step guide for it has been published yet. If you get stuck, ask in the [XRT Traders](https://t.me/xrt_trade) Telegram group.
 
-### Benefits for Robonomics Academy graduates
-- Intership for best students   Become a Robonomics team member and contribute to the development of the chosen product.
-- Active community && regular events   Become a part of the learner's community, discuss your use-cases with industry experts. Team-up and participate in hackathons!
-- Certificate of completion   Add a certificate for completing the course on building DAPPs for IoT to your portfolio.
-- Assistance in admission to the ITMO university. Whether you are a bachelor or master, you'll get assistance in your admission to the university.
-- Funding && acceleration opportunities: 1)Apply for up to $50.000 Academia - support grant; 2)Participate in Robonomics builders acceleration program supported by Web3 Foundation; 3)Deploy your stand-alone DAPP on top of Robonomics; 4)Monetize it && get marketing support from Robonomics team.
+{% roboWikiNote {type: "warning", title: "Old links"}%} Some older pages still link to exchanges that no longer list XRT, and to the legacy Ethereum token `0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7`. The legacy token is not production XRT. {% endroboWikiNote %}
 
+## 3. Connect Polkadot.js Apps
 
-## What the documentation contains
+Open [Polkadot.js Apps with the Robonomics RPC](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot.rpc.robonomics.network%2F#/explorer). It connects to the public endpoint `wss://polkadot.rpc.robonomics.network/`. Allow the site in your wallet extension so that your account appears.
 
-### I'm a Dapp developer
+To look at blocks, accounts and transfers, you can also use the block explorer at [scan.robonomics.network](https://scan.robonomics.network).
 
-- [Robonomics-js on GitHub](https://github.com/airalab/robonomics-js) - simple Javascript SDK for Robonomics Network dApp developers.
-- [dApp template](https://github.com/airalab/vue-dapp-robonomics-template) - uses Vue.js
-- [Wiki documentation](/docs/robonomics-js/)
+## 4. Send your first record
 
-### I'm a robotics engineer
+The simplest first step is a datalog record: a short piece of data stored on chain under your account.
 
-Check out [cases](/docs/iot-sensors-connectivity/) section and start developing by [examples](/docs/agent-development-examples).
+1. In Polkadot.js Apps, open **Developer → Extrinsics**.
+2. Choose your account, then `datalog` and `record`.
+3. Enter your data, up to 512 bytes. Plain text is fine.
+4. Submit the transaction and sign it in the wallet.
 
+To read it back, open **Developer → Chain state**, choose `datalog` and `datalogIndex`, and query your account. It shows which slots hold your records. Then query `datalogItem` with your account and a slot number. Each record comes with a timestamp.
+
+Datalog is one of the [legacy pallets](/docs/legacy-pallets/#datalog). It still works and is a good first test, but new projects should use the device tree.
+
+## 5. Next: describe your devices
+
+The core of Robonomics is the device tree. You create a node for your installation, add nodes for its parts and devices, and decide who may update them. See [Device tree (CPS)](/docs/device-tree/), then [Connect devices](/docs/connect-devices/).

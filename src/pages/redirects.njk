@@ -1,0 +1,22 @@
+---
+pagination:
+  data: redirects
+  size: 1
+  alias: redirect
+permalink: "{{ redirect.from }}index.html"
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Moved</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://wiki.robonomics.network{{ redirect.to }}">
+<meta http-equiv="refresh" content="0; url={{ redirect.to }}">
+<script>location.replace({{ redirect.to | dump | safe }} + location.hash);</script>
+</head>
+<body>
+<p>This page has moved to <a href="{{ redirect.to }}">{{ redirect.to }}</a>.</p>
+</body>
+</html>

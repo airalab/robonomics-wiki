@@ -1,53 +1,74 @@
 ---
-title: How to Run Robonomics Dev Node
-contributors: [LoSk-p]
-tools:
-  - Robonomics 2.4.0
-    https://github.com/airalab/robonomics
+title: Run a dev node
+contributors: [LoSk-p, ensrationis]
 ---
 
-**For testing your applications on Robonomics you may want to run it in the dev mode. This article shows step-by-step instructions how to get your own local testing instance of Robonomics.**
+A dev node is a local, single-node Robonomics chain for testing your code. Blocks are produced at once, test accounts have funds, and nothing touches the live network.
 
+There is no `robonomics --dev` binary any more. You build the runtime from [airalab/robonomics](https://github.com/airalab/robonomics), generate a chain spec from it, and run Parity's generic `polkadot-omni-node` with that spec.
 
-## Get Node Binary
+## One command (Nix)
 
-1. First, you need a binary file, download the archive with it from the latest [release](https://github.com/airalab/robonomics/releases).
+From a clone of the repository:
 
-2. Navigate to the archive folder, unpack the binary and change permissions:
-
-```bash
-tar xf robonomics-2.4.0-x86_64-unknown-linux-gnu.tar.gz
-chmod +x robonomics
-```
-
-## Run
-
-Run the node with:
+{% codeHelper {copy: true} %}
 
 ```bash
-./robonomics --dev
+nix develop -c ./scripts/development-chain.sh run
 ```
-You will see the following output:
 
-{% roboWikiPicture {src:"docs/dev-node/robonomics.png", alt:"robonomics"} %}{% endroboWikiPicture %}
+{% endcodeHelper %}
 
-{% roboWikiNote {title:"From Scratch", type: "note"}%} If you want to purge existing blocks you may do this with removing RocksDB at `/tmp/substrate******/chains/dev/db/full`.
-Replace `******` with a corresponding identifier displayed in logs on launch.
+The script builds the runtime with the `dev-runtime` feature if needed, generates a temporary chain spec, and starts `polkadot-omni-node --chain <spec> --dev`.
 
-If you want to start the node from scratch every time use `--tmp` flag.
-{% endroboWikiNote %}
+## Without Nix
 
+Install the two tools with Cargo, then run the same script:
 
-## Connect
+{% codeHelper {copy: true} %}
 
-Now you can connect to your local node through the [Polkadot Portal](https://polkadot.js.org/apps/#/explorer).
+```bash
+cargo install staging-chain-spec-builder polkadot-omni-node
+./scripts/development-chain.sh run
+```
 
-Change the network to `Local Node` in the upper left corner and press `Switch`.
+{% endcodeHelper %}
 
-{% roboWikiPicture {src:"docs/dev-node/portal.png", alt:"switch"} %}{% endroboWikiPicture %}
+## By hand
 
-Welcome to the local instance of Robonomics!
+To keep the chain spec or change node flags, run the steps yourself:
 
-{% roboWikiPicture {src:"docs/dev-node/dev-portal.png", alt:"local node"} %}{% endroboWikiPicture %}
+{% codeHelper {copy: true} %}
 
+```bash
+cargo build --release -p robonomics-runtime --features dev-runtime
 
+chain-spec-builder -c ./chain_spec.json create \
+  -n "Robonomics Dev" -i robonomics-dev -t development \
+  -r ./target/release/wbuild/robonomics-runtime/robonomics_runtime.compact.compressed.wasm \
+  --para-id 2000 --relay-chain westend-local \
+  --properties tokenSymbol=XRT,tokenDecimals=9 \
+  named-preset development
+
+polkadot-omni-node --chain ./chain_spec.json --dev
+```
+
+{% endcodeHelper %}
+
+There is no built-in `--chain dev`: you always pass the generated spec plus `--dev`. Add `--base-path <dir>` to keep the chain state between restarts.
+
+## What you get
+
+- RPC and WebSocket on `ws://127.0.0.1:9944`.
+- Chain id `robonomics-dev`, para ID 2000, relay chain `westend-local`, token XRT with 9 decimals.
+- Pre-funded dev accounts: Alice, Bob, Charlie and the other well-known test keys.
+- Alice is Sudo. Sudo exists only in `dev-runtime` builds, never on the live network.
+- A fresh state on every start, unless you set `--base-path`.
+
+Connect [Polkadot.js Apps](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer) to `ws://127.0.0.1:9944` to look around. With the `cps` tool, use `ROBONOMICS_WS_URL=ws://127.0.0.1:9944` and `ROBONOMICS_SURI=//Alice`.
+
+## RWS on a dev chain
+
+RWS auctions are created by Root. To skip that step when you test RWS code, the `robonomics-interface` repository has a `scripts/devchain.sh` that starts a dev chain with RWS auctions already in genesis.
+
+More options, including a Docker image, are in the [developer guide](https://github.com/airalab/robonomics/blob/master/DEVELOPER_GUIDE.md#running-a-development-chain).
