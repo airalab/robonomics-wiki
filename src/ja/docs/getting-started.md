@@ -1,44 +1,52 @@
 ---
 title: はじめに
-
-contributors: [Vourhey, positivecrash]
+contributors: [Vourhey, positivecrash, ensrationis]
 ---
 
-## Robonomicsとは
+このページでは、何もない状態から Robonomics ネットワークに最初の記録を書き込むまでを説明します。必要なのはブラウザ、ウォレット拡張機能、少量の XRT です。
 
-Robonomicsプラットフォームは、ロボット経済ネットワークと連携するためのツールを提供します。 Robonomicsは、スマートシティや産業4.0ゾーンの設計者が、[自律ロボットサービス](/docs/glossary#cyber-physical-system)間で信頼を築き、自律工場や都市センサーネットワークのサービスから製品を注文するための[Dappを介した直接ユーザーアクセス](/docs/glossary#dapp)を提供することを可能にします。これにより、サイバーフィジカルシステムの活動をグローバルに監視する分散システムを構築することができます。
+## 1. アカウントを作成する
 
-以下のチャートは、Robonomicsがシナリオでどのような位置を占めるかを示しています：
+1. [Polkadot.js 拡張機能](https://polkadot.js.org/extension/)、またはカスタムネットワークに対応した別の Polkadot ウォレットをインストールします。
+2. ウォレットでアカウントを作成します。リカバリーフレーズを書き留め、オフラインで保管してください。
+3. 同じアカウントが Robonomics でも使えます。Robonomics は独自の形式 (SS58 プレフィックス 32) でアドレスを表示するため、アドレスは `4` で始まります。
 
-{% roboWikiPicture {src:"docs/robonomics_network_basic_scheme.jpg", alt:"Robonomics Network scenario"} %}{% endroboWikiPicture %}
+アカウントがチェーン上に存在するのは、最低でも存在デポジットの 0.000001 XRT を保有している間だけです。
 
-[RobonomicsでのDapp構築についての詳細はこちら](https://gateway.pinata.cloud/ipfs/QmNNdLG3vuTsJtZtNByWaDTKRYPcBZSZcsJ1FY6rTYCixQ/Robonomics_keypoint_March_2021.pdf)
+## 2. XRT を入手する
 
-## Robonomics Networkクイックスタート
-**初心者の利便性のために、コアRobonomics開発者が[6つのレッスン学習カーブ](/docs/wschool2021-intro/)を考案しました！**
+必要な量はごくわずかです。執筆時点では、datalog の記録 1 件の手数料は 0.001 XRT を大きく下回ります。
 
-サーバーレスIoTアーキテクチャを探求します！ Robonomics Web Services（RWS）は、Polkadot && IPFSの上でのロボティクスとIoTの基本的なインフラサービスです。
+現在 XRT が取引されている場所:
 
-コース修了生は、ローカルリレーチェーンを起動し、ROS互換デバイスをクロスチェーントランザクションを介して制御できます。
+- **Ethereum 上の Uniswap。** Ethereum 上の正規の XRT は、Polkadot から Snowbridge 経由でブリッジされた XRT です。コントラクトは `0x1F752250f518e419f2F03804E25728c5C6DfF73f` です。[Uniswap でスワップ](https://app.uniswap.org/swap?chain=mainnet&inputCurrency=NATIVE&outputCurrency=0x1f752250f518e419f2f03804e25728c5c6dff73f)。[Snowbridge](https://app.snowbridge.network/send) で Ethereum と Polkadot の間でトークンを移動できます。
+- **Polkadot Asset Hub。** Asset Hub にも XRT があり、DOT–XRT のスワッププールがあります。
 
-**[Robonomics Developers Discordに参加](https://discord.gg/jTxqGeF5Qy)して、コミュニティと技術サポートを受けましょう。**
+Asset Hub から Robonomics パラチェーン上のアカウントへ XRT を移すのは、クロスチェーン送金です。その手順書はまだ公開されていません。困ったときは Telegram グループ [XRT Traders](https://t.me/xrt_trade) で質問してください。
 
-### Robonomics Academy卒業生のメリット
-- 優秀な学生のためのインターンシップ   Robonomicsチームメンバーとなり、選択した製品の開発に貢献します。
-- アクティブなコミュニティ && 定期的なイベント   学習者コミュニティの一員となり、業界の専門家とユースケースを議論します。チームを組んでハッカソンに参加しましょう！
-- 完了証明書   IoT向けDAPP構築コース修了証明書をポートフォリオに追加します。
-- ITMO大学への入学支援   学士または修士であるかに関わらず、大学への入学支援を受けることができます。
-- 資金調達 && 加速の機会: 1)最大$50,000のアカデミアサポート助成金に申請; 2)Web3 Foundationの支援を受けたRobonomicsビルダーアクセラレーションプログラムに参加; 3)Robonomicsの上に独立したDAPPを展開; 4)それを収益化し、Robonomicsチームからマーケティングサポートを受けましょう。
+{% roboWikiNote {type: "warning", title: "古いリンク"}%} 古いページの一部には、すでに XRT を扱っていない取引所や、Ethereum 上のレガシートークン `0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7` へのリンクが残っています。レガシートークンは正規の XRT ではありません。 {% endroboWikiNote %}
 
+## 3. Polkadot.js Apps に接続する
 
-## ドキュメントに含まれる内容
+[Robonomics の RPC で Polkadot.js Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot.rpc.robonomics.network%2F#/explorer) を開きます。パブリックエンドポイント `wss://polkadot.rpc.robonomics.network/` に接続されます。アカウントが表示されるよう、ウォレット拡張機能でこのサイトを許可してください。
 
-### Dapp開発者の場合
+ブロック、アカウント、送金はブロックエクスプローラー [scan.robonomics.network](https://scan.robonomics.network) でも確認できます。
 
-- [GitHubのRobonomics-js](https://github.com/airalab/robonomics-js) - Robonomics Network Dapp開発者向けのシンプルなJavascript SDK。
-- [Dappテンプレート](https://github.com/airalab/vue-dapp-robonomics-template) - Vue.jsを使用
-- [Wikiドキュメント](/docs/robonomics-js/)
+<a id="4-send-your-first-record"></a>
 
-### ロボティクスエンジニアの場合
+## 4. 最初の記録を送る
 
-[ケース](/docs/iot-sensors-connectivity/)セクションをチェックし、[例](/docs/agent-development-examples)から開発を開始してください。
+最も簡単な第一歩は datalog の記録です。これは、あなたのアカウントの下でチェーンに保存される短いデータです。
+
+1. Polkadot.js Apps で **Developer → Extrinsics** を開きます。
+2. アカウントを選び、`datalog` と `record` を選びます。
+3. データを最大 512 バイトまで入力します。普通のテキストで構いません。
+4. トランザクションを送信し、ウォレットで署名します。
+
+読み出すには **Developer → Chain state** を開き、`datalog` と `datalogIndex` を選んで自分のアカウントを照会します。記録がどのスロットにあるかがわかります。次に、アカウントとスロット番号を指定して `datalogItem` を照会します。各記録にはタイムスタンプが付いています。
+
+Datalog は [レガシーパレット](/docs/legacy-pallets/#datalog) の一つです。現在も動作し、最初のテストには向いていますが、新しいプロジェクトではデバイスツリーを使ってください。
+
+## 5. 次に: デバイスを記述する
+
+Robonomics の中核はデバイスツリーです。設備のノードを作り、その部分やデバイスのノードを追加し、誰が更新できるかを決めます。[デバイスツリー (CPS)](/docs/device-tree/)、続いて [デバイスの接続](/docs/connect-devices/) を参照してください。

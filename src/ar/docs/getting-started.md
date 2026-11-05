@@ -1,44 +1,52 @@
 ---
 title: البدء
-
-contributors: [Vourhey, positivecrash]
+contributors: [Vourhey, positivecrash, ensrationis]
 ---
 
-## ما هو Robonomics
+تأخذك هذه الصفحة من الصفر إلى أول سجل لك على شبكة Robonomics. تحتاج إلى متصفح، وإضافة محفظة، وكمية صغيرة من XRT.
 
-توفر منصة Robonomics أدوات للعمل مع شبكة الاقتصاد الروبوتي. تسمح Robonomics لمصممي المدن الذكية ومناطق الصناعة 4.0 ببناء الثقة بين [خدمات الروبوتات الذاتية](/docs/glossary#cyber-physical-system)، وتوفير [وصول المستخدم المباشر عبر تطبيق الويب اللامركزي](/docs/glossary#dapp) لطلب المنتجات من المصانع الذاتية وخدمات شبكات الاستشعار الحضرية. وسيتيح ذلك بدوره لنا وضع نظام لامركزي يراقب عالميًا أنشطة الأنظمة الفيزيائية السيبرانية.
+## 1. أنشئ حسابًا
 
-الرسم البياني التالي يصف المكان الذي يحتله Robonomics في السيناريو:
+1. ثبّت [إضافة Polkadot.js](https://polkadot.js.org/extension/) أو أي محفظة Polkadot أخرى تدعم الشبكات المخصصة.
+2. أنشئ حسابًا في المحفظة. دوّن عبارة الاسترداد واحفظها بعيدًا عن الإنترنت.
+3. الحساب نفسه يعمل على Robonomics. تعرض Robonomics العناوين بصيغتها الخاصة (بادئة SS58 رقم 32)، لذلك يبدأ عنوانك فيها بـ `4`.
 
-{% roboWikiPicture {src:"docs/robonomics_network_basic_scheme.jpg", alt:"سيناريو شبكة Robonomics"} %}{% endroboWikiPicture %}
+لا يظهر الحساب على السلسلة إلا بعد أن يحمل الإيداع الوجودي (existential deposit) على الأقل، وهو 0.000001 XRT.
 
-ابحث عن المزيد في [بناء تطبيقات الويب اللامركزية على منصة Robonomics](https://gateway.pinata.cloud/ipfs/QmNNdLG3vuTsJtZtNByWaDTKRYPcBZSZcsJ1FY6rTYCixQ/Robonomics_keypoint_March_2021.pdf)
+## 2. احصل على XRT
 
-## بدء سريع في شبكة Robonomics
-**لراحة المبتدئين، ابتكر مطورو Robonomics النواة مع [منحنى تعلم مكون من 6 دروس](/docs/wschool2021-intro/)!**
+تحتاج إلى كمية قليلة جدًا. عند كتابة هذه الصفحة، كانت رسوم سجل datalog الواحد أقل بكثير من 0.001 XRT.
 
-ستكتشف هنا الهندسة المعمارية لإنترنت الأشياء بدون خادم! خدمات الويب Robonomics (RWS) هي الخدمة الأساسية للبنية التحتية للروبوتات وإنترنت الأشياء على رأس Polkadot && IPFS.
+أماكن تداول XRT اليوم:
 
-يمكن لخريجي الدورة تشغيل سلسلة تحويل محلية والتحكم في جهاز متوافق مع ROS من خلال معاملة عبر السلاسل.
+- **Uniswap على Ethereum.** عملة XRT الرسمية على Ethereum هي XRT منقولة من Polkadot عبر Snowbridge. عقدها هو `0x1F752250f518e419f2F03804E25728c5C6DfF73f`. [المبادلة على Uniswap](https://app.uniswap.org/swap?chain=mainnet&inputCurrency=NATIVE&outputCurrency=0x1f752250f518e419f2f03804e25728c5c6dff73f). ينقل [Snowbridge](https://app.snowbridge.network/send) الرموز بين Ethereum وPolkadot.
+- **Polkadot Asset Hub.** توجد XRT على Asset Hub، وهناك مجمّع مبادلة DOT–XRT.
 
-**[انضم إلى Discord لمطوري Robonomics](https://discord.gg/jTxqGeF5Qy) للتواصل مع المجتمع والحصول على الدعم الفني.**
+نقل XRT من Asset Hub إلى حسابك على السلسلة الموازية Robonomics هو تحويل بين سلاسل. لم يُنشر دليل خطوة بخطوة لذلك بعد. إذا واجهتك مشكلة، فاسأل في مجموعة Telegram [XRT Traders](https://t.me/xrt_trade).
 
-### فوائد لخريجي أكاديمية Robonomics
-- تدريب لأفضل الطلاب   كن عضوًا في فريق Robonomics وساهم في تطوير المنتج المختار.
-- مجتمع نشط && أحداث منتظمة   كن جزءًا من مجتمع المتعلمين، ناقش حالات الاستخدام الخاصة بك مع خبراء الصناعة. انضم وشارك في الهاكاثون!
-- شهادة الانتهاء   أضف شهادة لإكمال الدورة في بناء تطبيقات الويب اللامركزية لإنترنت الأشياء إلى سيرتك الذاتية.
-- المساعدة في القبول في جامعة ITMO. سواء كنت طالبًا جامعيًا أو ماجستيرًا، ستحصل على مساعدة في قبولك في الجامعة.
-- فرص التمويل && التسريع: 1)قدم طلب للحصول على منحة دعم تصل إلى 50.000 دولار أمريكي؛ 2)شارك في برنامج تسريع مطوري Robonomics بدعم من مؤسسة Web3؛ 3)نشر تطبيقك المستقل على رأس Robonomics؛ 4)استفد منه && احصل على دعم تسويقي من فريق Robonomics.
+{% roboWikiNote {type: "warning", title: "روابط قديمة"}%} ما زالت بعض الصفحات القديمة تشير إلى منصات تداول لم تعد تدرج XRT، وإلى الرمز القديم على Ethereum `0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7`. الرمز القديم ليس XRT الرسمية. {% endroboWikiNote %}
 
+## 3. اتصل بـ Polkadot.js Apps
 
-## ما يحتويه الوثائق
+افتح [Polkadot.js Apps مع RPC الخاص بـ Robonomics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot.rpc.robonomics.network%2F#/explorer). يتصل بالنقطة العامة `wss://polkadot.rpc.robonomics.network/`. اسمح للموقع في إضافة المحفظة حتى يظهر حسابك.
 
-### أنا مطور تطبيقات Dapp
+لتصفح الكتل والحسابات والتحويلات، يمكنك أيضًا استخدام مستكشف الكتل [scan.robonomics.network](https://scan.robonomics.network).
 
-- [Robonomics-js على GitHub](https://github.com/airalab/robonomics-js) - مجموعة أدوات بسيطة بلغة جافا سكريبت لمطوري تطبيقات الويب اللامركزية على شبكة Robonomics.
-- [قالب التطبيق](https://github.com/airalab/vue-dapp-robonomics-template) - يستخدم Vue.js
-- [وثائق الويكي](/docs/robonomics-js/)
+<div id="4-send-your-first-record"></div>
 
-### أنا مهندس روبوتيات
+## 4. أرسل سجلك الأول
 
-تحقق من القسم [الحالات](/docs/iot-sensors-connectivity/) وابدأ في التطوير من خلال [الأمثلة](/docs/agent-development-examples).
+أبسط خطوة أولى هي سجل datalog: قطعة بيانات قصيرة تُخزَّن على السلسلة باسم حسابك.
+
+1. في Polkadot.js Apps، افتح **Developer → Extrinsics**.
+2. اختر حسابك، ثم `datalog` و`record`.
+3. أدخل بياناتك، بحد أقصى 512 بايت. النص العادي يكفي.
+4. أرسل المعاملة ووقّعها في المحفظة.
+
+لقراءة السجل، افتح **Developer → Chain state**، واختر `datalog` و`datalogIndex`، واستعلم عن حسابك. ستظهر لك الخانات التي تحتوي على سجلاتك. ثم استعلم عن `datalogItem` بحسابك ورقم الخانة. يأتي كل سجل مع طابع زمني.
+
+Datalog إحدى [الوحدات القديمة](/docs/legacy-pallets/#datalog). ما زالت تعمل وتصلح لتجربة أولى، لكن المشاريع الجديدة ينبغي أن تستخدم شجرة الأجهزة.
+
+## 5. الخطوة التالية: صِف أجهزتك
+
+نواة Robonomics هي شجرة الأجهزة. تنشئ عقدة لمنشأتك، وتضيف عقدًا لأجزائها وأجهزتها، وتحدد من يحق له تحديثها. راجع [شجرة الأجهزة (CPS)](/docs/device-tree/)، ثم [ربط الأجهزة](/docs/connect-devices/).
