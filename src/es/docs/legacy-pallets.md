@@ -59,6 +59,8 @@ RWS (Robonomics Web Services) da a una cuenta transacciones sin comisión.
 - Las suscripciones se venden en subasta. `bid(index, amount)`: la primera puja debe superar 1 XRT. Las pujas quedan reservadas. Las subastas con alguna puja se cierran cada 10 bloques. La puja ganadora se quema y la suscripción queda registrada.
 - La página **Buy a subscription** de [robonomics.app](https://robonomics.app) puja en una subasta libre y añade tu propia cuenta como dispositivo en una sola transacción. Necesitas un saldo superior al precio más 0,01 XRT. La aplicación se niega si no hay ninguna subasta libre.
 
+<div id="current-state"></div>
+
 ### Estado actual
 
 - Solo Root puede iniciar subastas nuevas. Como no hay Sudo, cada nueva tanda de subastas necesita un referéndum Root. Las subastas libres pueden agotarse hasta que se apruebe uno.

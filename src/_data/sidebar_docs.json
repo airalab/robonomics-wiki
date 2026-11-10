@@ -9,6 +9,10 @@
       {
         "title": "Getting started",
         "url": "/docs/getting-started"
+      },
+      {
+        "title": "Using robonomics.app",
+        "url": "/docs/robonomics-app"
       }
     ]
   },

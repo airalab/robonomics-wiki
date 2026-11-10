@@ -59,6 +59,8 @@ RWS（Robonomics Web Services）为账户提供免手续费交易。
 - 订阅通过拍卖出售。`bid(index, amount)`：首次出价必须高于 1 XRT。出价会被冻结。有出价的拍卖每 10 个区块结束一次。中标出价会被销毁，订阅随即登记生效。
 - [robonomics.app](https://robonomics.app) 中的 **Buy a subscription** 页面在一笔交易里完成两件事：对一个空闲拍卖出价，并把你自己的账户添加为设备。你的余额需要高于价格加 0.01 XRT。没有空闲拍卖时，应用会拒绝操作。
 
+<div id="current-state"></div>
+
 ### 当前状态
 
 - 只有 Root 才能发起新的拍卖。由于没有 Sudo，每一批新拍卖都需要一次 Root 公投。在公投通过之前，空闲拍卖可能会用完。

@@ -59,6 +59,8 @@ RWS (Robonomics Web Services) gibt einem Konto gebührenfreie Transaktionen.
 - Abonnements werden versteigert. `bid(index, amount)`: Das erste Gebot muss über 1 XRT liegen. Gebote werden reserviert. Auktionen mit einem Gebot schließen alle 10 Blöcke. Das Gewinnergebot wird verbrannt und das Abonnement registriert.
 - Die Seite **Buy a subscription** in [robonomics.app](https://robonomics.app) bietet auf eine freie Auktion und trägt Ihr eigenes Konto in einer einzigen Transaktion als Gerät ein. Ihr Guthaben muss über dem Preis plus 0,01 XRT liegen. Gibt es keine freie Auktion, bricht die App ab.
 
+<div id="current-state"></div>
+
 ### Aktueller Stand
 
 - Neue Auktionen kann nur Root starten. Da es kein Sudo gibt, braucht jede neue Runde von Auktionen ein Root-Referendum. Bis eines angenommen ist, können die freien Auktionen ausgehen.

@@ -213,6 +213,7 @@
 	"Device tree (CPS)": "شجرة الأجهزة (CPS)",
 	"Devices": "الأجهزة",
 	"Getting started": "البدء",
+	"Using robonomics.app": "استخدام robonomics.app",
 	"Guides": "الأدلة",
 	"Legacy pallets": "الوحدات القديمة",
 	"Robonomics is a cloud for devices on Polkadot. This wiki explains how it works, how to connect your devices and how to run and build on the network.": "Robonomics سحابة للأجهزة تعمل على Polkadot. يشرح هذا الويكي كيف تعمل، وكيف تربط أجهزتك، وكيف تشغّل عقدة على الشبكة وتبني عليها.",
