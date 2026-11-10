@@ -59,6 +59,8 @@ O RWS (Robonomics Web Services) dá a uma conta transações sem taxa.
 - As assinaturas são vendidas em leilão. `bid(index, amount)`: o primeiro lance precisa ser maior que 1 XRT. Os lances ficam reservados. Leilões com lance fecham a cada 10 blocos. O lance vencedor é queimado e a assinatura é registrada.
 - A página **Buy a subscription** no [robonomics.app](https://robonomics.app) dá um lance em um leilão livre e adiciona a sua própria conta como dispositivo em uma única transação. Você precisa de um saldo acima do preço mais 0.01 XRT. O app recusa se não houver leilão livre.
 
+<a id="current-state"></a>
+
 ### Situação atual
 
 - Novos leilões só podem ser abertos pelo Root. Como não há Sudo, cada novo lote de leilões precisa de um referendo Root. Os leilões livres podem acabar até que um seja aprovado.

@@ -59,6 +59,8 @@ RWS (Robonomics Web Services) dà a un account transazioni senza commissioni.
 - Gli abbonamenti si vendono all'asta. `bid(index, amount)`: la prima offerta deve superare 1 XRT. Le offerte vengono riservate. Le aste con un'offerta si chiudono ogni 10 blocchi. L'offerta vincente viene bruciata e l'abbonamento viene registrato.
 - La pagina **Buy a subscription** di [robonomics.app](https://robonomics.app) fa un'offerta su un'asta libera e aggiunge il tuo account come dispositivo in un'unica transazione. Ti serve un saldo superiore al prezzo più 0.01 XRT. L'app si rifiuta se non c'è un'asta libera.
 
+<a id="current-state"></a>
+
 ### Stato attuale
 
 - Le nuove aste può avviarle solo Root. Dato che non c'è Sudo, ogni nuovo lotto di aste richiede un referendum Root. Finché non ne passa uno, le aste libere possono esaurirsi.

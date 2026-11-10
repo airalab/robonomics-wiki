@@ -213,6 +213,7 @@
 	"Device tree (CPS)": "디바이스 트리(CPS)",
 	"Devices": "디바이스",
 	"Getting started": "시작하기",
+	"Using robonomics.app": "robonomics.app 사용하기",
 	"Guides": "가이드",
 	"Legacy pallets": "레거시 팔레트",
 	"Robonomics is a cloud for devices on Polkadot. This wiki explains how it works, how to connect your devices and how to run and build on the network.": "Robonomics는 Polkadot 위에서 동작하는 디바이스용 클라우드입니다. 이 위키에서는 Robonomics의 동작 방식, 디바이스 연결 방법, 그리고 네트워크에서 노드를 운영하고 개발하는 방법을 설명합니다.",

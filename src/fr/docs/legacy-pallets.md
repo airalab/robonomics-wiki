@@ -59,6 +59,8 @@ RWS (Robonomics Web Services) donne à un compte des transactions sans frais.
 - Les abonnements sont vendus aux enchères. `bid(index, amount)` : la première offre doit dépasser 1 XRT. Les offres sont réservées. Les enchères qui ont reçu une offre se clôturent tous les 10 blocs. L'offre gagnante est brûlée et l'abonnement enregistré.
 - La page **Buy a subscription** de [robonomics.app](https://robonomics.app) enchérit sur une enchère libre et ajoute votre propre compte comme appareil, en une seule transaction. Il vous faut un solde supérieur au prix plus 0,01 XRT. L'application refuse s'il n'y a pas d'enchère libre.
 
+<div id="current-state"></div>
+
 ### État actuel
 
 - Seul Root peut lancer de nouvelles enchères. Comme il n'y a pas de Sudo, chaque nouvelle série d'enchères demande un référendum Root. Les enchères libres peuvent s'épuiser d'ici là.
