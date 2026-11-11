@@ -82,5 +82,5 @@ Datalog — [устаревший паллет](/docs/legacy-pallets/#datalog). 
 
 - **Приложение подключается не к той сети.** Приложение запоминает адрес сети, который однажды пришёл в ссылке. Откройте один раз `https://robonomics.app/?rpc=wss://polkadot.rpc.robonomics.network/`, чтобы вернуться.
 - **Ссылка на Uniswap показывает другой токен.** Рабочий XRT в Ethereum — `0x1F752250f518e419f2F03804E25728c5C6DfF73f`. Старый токен `0x7dE9…1cb7` рабочим XRT не является. См. [XRT в других сетях](/docs/xrt-migration/).
-- **Не сохраняется контроллер или пользователь, или нельзя управлять подпиской Kusama.** Это известная проблема, она заведена в [issues robonomics.app](https://github.com/airalab/robonomics.app/issues) под номерами #213 и #223.
+- **Не получается управлять подпиской в Kusama.** Robonomics в Kusama остановлен, приложение работает только с подписками в Polkadot. См. [XRT в других сетях](/docs/xrt-migration/).
 - **Что-то другое.** Заведите issue на [github.com/airalab/robonomics.app](https://github.com/airalab/robonomics.app/issues). Приложите версию сборки из консоли браузера: приложение печатает её при запуске.
