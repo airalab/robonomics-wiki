@@ -82,5 +82,5 @@ Se um endereço não tem leituras, a página avisa em vez de ficar carregando pa
 
 - **O app se conecta à rede errada.** O app lembra um endereço de rede que veio uma vez em um link. Abra `https://robonomics.app/?rpc=wss://polkadot.rpc.robonomics.network/` uma vez para voltar.
 - **Um link da Uniswap mostra outro token.** O XRT de produção no Ethereum é `0x1F752250f518e419f2F03804E25728c5C6DfF73f`. O token antigo `0x7dE9…1cb7` não é o XRT de produção. Veja [XRT em outras redes](/docs/xrt-migration/).
-- **O controller ou um usuário não é salvo, ou uma assinatura da Kusama não pode ser gerenciada.** É um problema conhecido, acompanhado nas [issues do robonomics.app](https://github.com/airalab/robonomics.app/issues) #213 e #223.
+- **Uma assinatura da Kusama não pode ser gerenciada.** O Robonomics na Kusama foi encerrado, então o app trabalha apenas com assinaturas na Polkadot. Veja [XRT em outras redes](/docs/xrt-migration/).
 - **Qualquer outra coisa.** Abra uma issue em [github.com/airalab/robonomics.app](https://github.com/airalab/robonomics.app/issues). Inclua a versão do build que aparece no console do navegador. Ela é impressa quando o app inicia.

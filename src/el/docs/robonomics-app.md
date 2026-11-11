@@ -82,5 +82,5 @@ contributors: [vol4tim, positivecrash, ensrationis]
 
 - **Η εφαρμογή συνδέεται σε λάθος δίκτυο.** Η εφαρμογή θυμάται μια διεύθυνση δικτύου που δόθηκε κάποτε σε σύνδεσμο. Ανοίξτε μία φορά `https://robonomics.app/?rpc=wss://polkadot.rpc.robonomics.network/` για να επιστρέψετε.
 - **Ένας σύνδεσμος Uniswap δείχνει άλλο token.** Το XRT παραγωγής στο Ethereum είναι `0x1F752250f518e419f2F03804E25728c5C6DfF73f`. Το παλιό token `0x7dE9…1cb7` δεν είναι το XRT παραγωγής. Δείτε [Το XRT σε άλλα δίκτυα](/docs/xrt-migration/).
-- **Ο controller ή ένας χρήστης δεν αποθηκεύεται, ή δεν γίνεται διαχείριση μιας συνδρομής του Kusama.** Είναι γνωστό πρόβλημα, που παρακολουθείται στα [issues του robonomics.app](https://github.com/airalab/robonomics.app/issues) #213 και #223.
+- **Δεν γίνεται διαχείριση μιας συνδρομής του Kusama.** Το Robonomics στο Kusama έχει σταματήσει, οπότε η εφαρμογή δουλεύει μόνο με συνδρομές στο Polkadot. Δείτε [XRT σε άλλα δίκτυα](/docs/xrt-migration/).
 - **Οτιδήποτε άλλο.** Ανοίξτε ένα issue στο [github.com/airalab/robonomics.app](https://github.com/airalab/robonomics.app/issues). Προσθέστε την έκδοση του build από την κονσόλα του browser. Εμφανίζεται όταν ξεκινά η εφαρμογή.
