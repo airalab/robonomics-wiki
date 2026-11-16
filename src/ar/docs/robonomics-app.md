@@ -82,5 +82,5 @@ Datalog [وحدة قديمة](/docs/legacy-pallets/#datalog). وهو تجربة 
 
 - **يتصل التطبيق بشبكة خاطئة.** يتذكر التطبيق عنوان شبكة أُعطي له مرة في رابط. افتح `https://robonomics.app/?rpc=wss://polkadot.rpc.robonomics.network/` مرة واحدة للعودة.
 - **رابط Uniswap يعرض رمزًا مختلفًا.** XRT الرسمية على Ethereum هي `0x1F752250f518e419f2F03804E25728c5C6DfF73f`. الرمز القديم `0x7dE9…1cb7` ليس XRT الرسمية. راجع [XRT على الشبكات الأخرى](/docs/xrt-migration/).
-- **لا يُحفظ الـ controller أو أحد المستخدمين، أو لا يمكن إدارة اشتراك على Kusama.** هذه مشكلة معروفة، تُتابَع في [مشكلات robonomics.app](https://github.com/airalab/robonomics.app/issues) رقم #213 و#223.
+- **لا يمكن إدارة اشتراك على Kusama.** توقّف Robonomics على Kusama، لذلك يعمل التطبيق مع اشتراكات Polkadot فقط. راجع [XRT على شبكات أخرى](/docs/xrt-migration/).
 - **أي شيء آخر.** افتح issue في [github.com/airalab/robonomics.app](https://github.com/airalab/robonomics.app/issues). أضف رقم إصدار البناء من وحدة تحكم المتصفح. يُطبع عند بدء تشغيل التطبيق.

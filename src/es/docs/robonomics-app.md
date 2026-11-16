@@ -82,5 +82,5 @@ Si una dirección no tiene lecturas, la página lo indica en lugar de quedarse c
 
 - **La aplicación se conecta a la red equivocada.** La aplicación recuerda una dirección de red que se pasó una vez en un enlace. Abre una vez `https://robonomics.app/?rpc=wss://polkadot.rpc.robonomics.network/` para volver.
 - **Un enlace de Uniswap muestra otro token.** El XRT de producción en Ethereum es `0x1F752250f518e419f2F03804E25728c5C6DfF73f`. El token antiguo `0x7dE9…1cb7` no es XRT de producción. Consulta [XRT en otras redes](/docs/xrt-migration/).
-- **El controller o un usuario no se guarda, o no se puede gestionar una suscripción de Kusama.** Es un problema conocido, registrado en los [issues de robonomics.app](https://github.com/airalab/robonomics.app/issues) #213 y #223.
+- **No se puede gestionar una suscripción de Kusama.** Robonomics en Kusama se ha detenido, así que la app solo trabaja con suscripciones en Polkadot. Consulta [XRT en otras redes](/docs/xrt-migration/).
 - **Cualquier otra cosa.** Abre un issue en [github.com/airalab/robonomics.app](https://github.com/airalab/robonomics.app/issues). Añade la versión de compilación que aparece en la consola del navegador. Se imprime al arrancar la aplicación.

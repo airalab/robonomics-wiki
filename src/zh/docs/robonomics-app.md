@@ -82,5 +82,5 @@ Datalog 是[旧版 pallet](/docs/legacy-pallets/#datalog) 之一。它适合做�
 
 - **应用连接到了错误的网络。** 应用会记住曾经通过链接传入的网络地址。打开一次 `https://robonomics.app/?rpc=wss://polkadot.rpc.robonomics.network/` 即可切换回来。
 - **Uniswap 链接显示的是另一种代币。** 以太坊上的正式 XRT 是 `0x1F752250f518e419f2F03804E25728c5C6DfF73f`。旧代币 `0x7dE9…1cb7` 不是正式 XRT。见[其他网络上的 XRT](/docs/xrt-migration/)。
-- **Controller 或用户没有保存，或者无法管理 Kusama 订阅。** 这是已知问题，在 [robonomics.app issues](https://github.com/airalab/robonomics.app/issues) 的 #213 和 #223 中跟踪。
+- **无法管理 Kusama 订阅。** Kusama 上的 Robonomics 已停止运行，应用只支持 Polkadot 上的订阅。参见 [其他网络上的 XRT](/docs/xrt-migration/)。
 - **其他问题。** 在 [github.com/airalab/robonomics.app](https://github.com/airalab/robonomics.app/issues) 提交 issue。附上浏览器控制台中的构建版本号，它会在应用启动时打印出来。

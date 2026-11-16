@@ -82,5 +82,5 @@ Datalog는 [레거시 팔레트](/docs/legacy-pallets/#datalog) 중 하나입니
 
 - **앱이 잘못된 네트워크에 연결됩니다.** 앱은 예전에 링크로 받은 네트워크 주소를 기억합니다. 되돌리려면 `https://robonomics.app/?rpc=wss://polkadot.rpc.robonomics.network/`를 한 번 여세요.
 - **Uniswap 링크에 다른 토큰이 표시됩니다.** Ethereum의 정식 XRT는 `0x1F752250f518e419f2F03804E25728c5C6DfF73f`입니다. 예전 토큰 `0x7dE9…1cb7`은 정식 XRT가 아닙니다. [다른 네트워크의 XRT](/docs/xrt-migration/)를 참고하세요.
-- **Controller나 사용자가 저장되지 않거나, Kusama 구독을 관리할 수 없습니다.** 알려진 문제이며, [robonomics.app issues](https://github.com/airalab/robonomics.app/issues)의 #213과 #223에서 추적하고 있습니다.
+- **Kusama 구독을 관리할 수 없습니다.** Kusama의 Robonomics는 중단되었으므로 앱은 Polkadot 구독만 다룹니다. [다른 네트워크의 XRT](/docs/xrt-migration/)를 참고하세요.
 - **그 밖의 문제.** [github.com/airalab/robonomics.app](https://github.com/airalab/robonomics.app/issues)에 이슈를 등록하세요. 브라우저 콘솔에 나오는 빌드 버전을 함께 적어 주세요. 버전은 앱이 시작될 때 출력됩니다.

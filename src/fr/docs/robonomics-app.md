@@ -82,5 +82,5 @@ Si une adresse n'a pas de mesures, la page l'indique au lieu de charger indéfin
 
 - **L'application se connecte au mauvais réseau.** L'application retient une adresse de réseau transmise un jour dans un lien. Ouvrez une fois `https://robonomics.app/?rpc=wss://polkadot.rpc.robonomics.network/` pour revenir au bon réseau.
 - **Un lien Uniswap affiche un autre jeton.** Le XRT de production sur Ethereum est `0x1F752250f518e419f2F03804E25728c5C6DfF73f`. L'ancien jeton `0x7dE9…1cb7` n'est pas le XRT de production. Voir [XRT sur d'autres réseaux](/docs/xrt-migration/).
-- **Le controller ou un utilisateur n'est pas enregistré, ou un abonnement Kusama ne peut pas être géré.** C'est un problème connu, suivi dans les [issues de robonomics.app](https://github.com/airalab/robonomics.app/issues) #213 et #223.
+- **Un abonnement Kusama ne peut pas être géré.** Robonomics sur Kusama est arrêté ; l'application ne gère que les abonnements sur Polkadot. Voir [XRT sur d'autres réseaux](/docs/xrt-migration/).
 - **Tout le reste.** Ouvrez une issue sur [github.com/airalab/robonomics.app](https://github.com/airalab/robonomics.app/issues). Indiquez la version du build affichée dans la console du navigateur. Elle s'affiche au démarrage de l'application.

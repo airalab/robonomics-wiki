@@ -82,5 +82,5 @@ Datalog は [レガシーパレット](/docs/legacy-pallets/#datalog) の一つ�
 
 - **アプリが違うネットワークに接続する。** アプリは、以前にリンクで渡されたネットワークのアドレスを覚えています。元に戻すには、`https://robonomics.app/?rpc=wss://polkadot.rpc.robonomics.network/` を一度開いてください。
 - **Uniswap のリンクで別のトークンが表示される。** Ethereum 上の正規の XRT は `0x1F752250f518e419f2F03804E25728c5C6DfF73f` です。古いトークン `0x7dE9…1cb7` は正規の XRT ではありません。[他のネットワークの XRT](/docs/xrt-migration/) を参照してください。
-- **コントローラーやユーザーが保存されない、または Kusama のサブスクリプションを管理できない。** これは既知の問題で、[robonomics.app の issues](https://github.com/airalab/robonomics.app/issues) の #213 と #223 で追跡されています。
+- **Kusama のサブスクリプションを管理できない。** Kusama 上の Robonomics は停止したため、アプリは Polkadot のサブスクリプションだけを扱います。[他のネットワークの XRT](/docs/xrt-migration/) を参照してください。
 - **その他。** [github.com/airalab/robonomics.app](https://github.com/airalab/robonomics.app/issues) で issue を作成してください。ブラウザのコンソールに出るビルドバージョンを添えてください。バージョンはアプリの起動時に表示されます。
